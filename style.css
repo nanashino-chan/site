@@ -237,6 +237,16 @@ footer {
     height: 450px;
     border-radius: 12px;
 }
-   
+@media (max-width:600px){
+
+.nav{
+flex-wrap:wrap;
+gap:12px;
 }
+
+.nav a{
+font-size:13px;
+}
+
+}   
 
