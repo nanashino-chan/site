@@ -247,6 +247,17 @@ gap:12px;
 .nav a{
 font-size:13px;
 }
+@media (max-width:600px){
+
+.nav{
+gap:10px;
+padding:12px 5px;
+}
+
+.nav a{
+font-size:13px;
+}
+
 
 }   
 
