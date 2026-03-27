@@ -205,6 +205,13 @@ footer {
 .google-form iframe {
     height: 850px;
 }
-
+/* YouTube動画専用 */
+.youtube-video iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 394px;
+    border: none;
+}
+   
 }
 
