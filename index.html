@@ -70,31 +70,229 @@ Over 2000+ tracks released and trusted by listeners around the world.
 </section>
 
 
-<!-- 本日のおすすめトラック -->
+<!-- ==================================================
+6 GENRE RANDOM TRACK GENERATORS (Topic動画専用)
+index.html にそのまま追加して使えます
+CSSはあとで自由に調整してください
+================================================== -->
 
 <section class="container">
 
-<h2>🎧 Today's Recommended Track</h2>
+<h2>🎧 Discover Music by Genre</h2>
 
-<button id="recommendBtn">Get a Random Track</button>
+<div class="generator-grid">
 
-<div id="trackBox" style="display:none; margin-top:20px;">
+<!-- =====================
+1. JAZZHOP
+===================== -->
+<div class="generator">
+<h3>Jazzhop</h3>
+<button id="btnJazzhop">Get a Track</button>
 
-<h3 id="trackTitle"></h3>
-
-<a id="trackLink" href="#" target="_blank">
-<img id="trackThumb" src="" alt="YouTube thumbnail" style="width:320px; margin-top:10px;">
+<div id="boxJazzhop" style="display:none; margin-top:15px;">
+<h4 id="titleJazzhop"></h4>
+<a id="linkJazzhop" href="#" target="_blank">
+<img id="thumbJazzhop" src="" style="width:280px;">
 </a>
-
 <br>
-
-<a id="listenBtn" href="#" class="btn" target="_blank">
-▶ Listen on YouTube
-</a>
-
+<a id="listenJazzhop" href="#" class="btn" target="_blank">▶ Listen on YouTube</a>
+</div>
 </div>
 
+
+<!-- =====================
+2. CHILL LO-FI
+===================== -->
+<div class="generator">
+<h3>Chill Lo‑Fi</h3>
+<button id="btnChill">Get a Track</button>
+
+<div id="boxChill" style="display:none; margin-top:15px;">
+<h4 id="titleChill"></h4>
+<a id="linkChill" href="#" target="_blank">
+<img id="thumbChill" src="" style="width:280px;">
+</a>
+<br>
+<a id="listenChill" href="#" class="btn" target="_blank">▶ Listen on YouTube</a>
+</div>
+</div>
+
+
+<!-- =====================
+3. SLEEP / RELAX
+===================== -->
+<div class="generator">
+<h3>Sleep / Relax</h3>
+<button id="btnSleep">Get a Track</button>
+
+<div id="boxSleep" style="display:none; margin-top:15px;">
+<h4 id="titleSleep"></h4>
+<a id="linkSleep" href="#" target="_blank">
+<img id="thumbSleep" src="" style="width:280px;">
+</a>
+<br>
+<a id="listenSleep" href="#" class="btn" target="_blank">▶ Listen on YouTube</a>
+</div>
+</div>
+
+
+<!-- =====================
+4. PIANO LO-FI
+===================== -->
+<div class="generator">
+<h3>Piano Lo‑Fi</h3>
+<button id="btnPiano">Get a Track</button>
+
+<div id="boxPiano" style="display:none; margin-top:15px;">
+<h4 id="titlePiano"></h4>
+<a id="linkPiano" href="#" target="_blank">
+<img id="thumbPiano" src="" style="width:280px;">
+</a>
+<br>
+<a id="listenPiano" href="#" class="btn" target="_blank">▶ Listen on YouTube</a>
+</div>
+</div>
+
+
+<!-- =====================
+5. RAINY NIGHT LO-FI
+===================== -->
+<div class="generator">
+<h3>Rainy Night Lo‑Fi</h3>
+<button id="btnRain">Get a Track</button>
+
+<div id="boxRain" style="display:none; margin-top:15px;">
+<h4 id="titleRain"></h4>
+<a id="linkRain" href="#" target="_blank">
+<img id="thumbRain" src="" style="width:280px;">
+</a>
+<br>
+<a id="listenRain" href="#" class="btn" target="_blank">▶ Listen on YouTube</a>
+</div>
+</div>
+
+
+<!-- =====================
+6. SYNTH LO-FI
+===================== -->
+<div class="generator">
+<h3>Synth Lo‑Fi</h3>
+<button id="btnSynth">Get a Track</button>
+
+<div id="boxSynth" style="display:none; margin-top:15px;">
+<h4 id="titleSynth"></h4>
+<a id="linkSynth" href="#" target="_blank">
+<img id="thumbSynth" src="" style="width:280px;">
+</a>
+<br>
+<a id="listenSynth" href="#" class="btn" target="_blank">▶ Listen on YouTube</a>
+</div>
+</div>
+
+</div>
 </section>
+
+
+<!-- ==================================================
+JAVASCRIPT（bodyの一番下に追加）
+================================================== -->
+
+<script>
+
+// =============================
+// 各ジャンルのTopic動画リスト
+// （まずは3曲ずつ入れればOK）
+// =============================
+
+const jazzhop = [
+{title:"Jazzhop Track 1", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_1", thumb:"https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg"},
+{title:"Jazzhop Track 2", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_2", thumb:"https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg"},
+{title:"Jazzhop Track 3", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_3", thumb:"https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg"}
+];
+
+const chill = [
+{title:"Chill Lo‑Fi Track 1", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_4", thumb:"https://img.youtube.com/vi/VIDEO_ID_4/hqdefault.jpg"},
+{title:"Chill Lo‑Fi Track 2", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_5", thumb:"https://img.youtube.com/vi/VIDEO_ID_5/hqdefault.jpg"},
+{title:"Chill Lo‑Fi Track 3", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_6", thumb:"https://img.youtube.com/vi/VIDEO_ID_6/hqdefault.jpg"}
+];
+
+const sleep = [
+{title:"Sleep Lo‑Fi Track 1", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_7", thumb:"https://img.youtube.com/vi/VIDEO_ID_7/hqdefault.jpg"},
+{title:"Sleep Lo‑Fi Track 2", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_8", thumb:"https://img.youtube.com/vi/VIDEO_ID_8/hqdefault.jpg"},
+{title:"Sleep Lo‑Fi Track 3", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_9", thumb:"https://img.youtube.com/vi/VIDEO_ID_9/hqdefault.jpg"}
+];
+
+const piano = [
+{title:"Piano Lo‑Fi Track 1", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_10", thumb:"https://img.youtube.com/vi/VIDEO_ID_10/hqdefault.jpg"},
+{title:"Piano Lo‑Fi Track 2", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_11", thumb:"https://img.youtube.com/vi/VIDEO_ID_11/hqdefault.jpg"},
+{title:"Piano Lo‑Fi Track 3", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_12", thumb:"https://img.youtube.com/vi/VIDEO_ID_12/hqdefault.jpg"}
+];
+
+const rain = [
+{title:"Rainy Night Track 1", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_13", thumb:"https://img.youtube.com/vi/VIDEO_ID_13/hqdefault.jpg"},
+{title:"Rainy Night Track 2", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_14", thumb:"https://img.youtube.com/vi/VIDEO_ID_14/hqdefault.jpg"},
+{title:"Rainy Night Track 3", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_15", thumb:"https://img.youtube.com/vi/VIDEO_ID_15/hqdefault.jpg"}
+];
+
+const synth = [
+{title:"Synth Lo‑Fi Track 1", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_16", thumb:"https://img.youtube.com/vi/VIDEO_ID_16/hqdefault.jpg"},
+{title:"Synth Lo‑Fi Track 2", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_17", thumb:"https://img.youtube.com/vi/VIDEO_ID_17/hqdefault.jpg"},
+{title:"Synth Lo‑Fi Track 3", youtube:"https://www.youtube.com/watch?v=VIDEO_ID_18", thumb:"https://img.youtube.com/vi/VIDEO_ID_18/hqdefault.jpg"}
+];
+
+
+// =============================
+// 共通ランダム関数
+// =============================
+
+function randomTrack(list, titleId, thumbId, linkId, listenId, boxId){
+
+const randomIndex = Math.floor(Math.random() * list.length);
+const track = list[randomIndex];
+
+ document.getElementById(titleId).textContent = track.title;
+ document.getElementById(thumbId).src = track.thumb;
+ document.getElementById(linkId).href = track.youtube;
+ document.getElementById(listenId).href = track.youtube;
+ document.getElementById(boxId).style.display = "block";
+}
+
+
+// =============================
+// 各ジャンルのボタン
+// =============================
+
+document.getElementById("btnJazzhop").onclick = function(){
+randomTrack(jazzhop,"titleJazzhop","thumbJazzhop","linkJazzhop","listenJazzhop","boxJazzhop");
+};
+
+
+document.getElementById("btnChill").onclick = function(){
+randomTrack(chill,"titleChill","thumbChill","linkChill","listenChill","boxChill");
+};
+
+
+document.getElementById("btnSleep").onclick = function(){
+randomTrack(sleep,"titleSleep","thumbSleep","linkSleep","listenSleep","boxSleep");
+};
+
+
+document.getElementById("btnPiano").onclick = function(){
+randomTrack(piano,"titlePiano","thumbPiano","linkPiano","listenPiano","boxPiano");
+};
+
+
+document.getElementById("btnRain").onclick = function(){
+randomTrack(rain,"titleRain","thumbRain","linkRain","listenRain","boxRain");
+};
+
+
+document.getElementById("btnSynth").onclick = function(){
+randomTrack(synth,"titleSynth","thumbSynth","linkSynth","listenSynth","boxSynth");
+};
+
+</script>
+
 
 
 <!-- 人気動画 -->
