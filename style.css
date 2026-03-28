@@ -259,7 +259,13 @@ footer {
 /* ===================================
    スマホ対応（全ページ共通）
 =================================== */
+@media (max-width: 768px){
 
+.generator-grid{
+    grid-template-columns:1fr;
+}
+
+}
 @media (max-width: 600px) {
 
     .hero h1 {
@@ -385,4 +391,9 @@ footer {
   text-decoration: none;
   border-radius: 8px;
   font-size: 14px;
+}
+.generator-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
 }
