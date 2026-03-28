@@ -4,13 +4,12 @@
 
 body {
     margin: 0;
-    font-family:'Inter', 'Noto Sans JP', sans-serif;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
     background-color: #0f0f0f;
     color: white;
     text-align: center;
 }
-body{
-font-f
+
 nav {
     background-color: #111;
     padding: 15px;
@@ -22,28 +21,31 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 }
+
 /* ナビのフォント統一 */
 
-.nav{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:16px;
-padding:14px 10px;
-background:#000;
-flex-wrap:wrap;
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 10px;
+    background: #000;
+    flex-wrap: wrap;
 }
 
-.nav a{
-color:#fff;
-text-decoration:none;
-font-size:14px;
-letter-spacing:1px;
-white-space:nowrap;
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    white-space: nowrap;
 }
-.nav a:hover{
-opacity:0.7;
+
+.nav a:hover {
+    opacity: 0.7;
 }
+
 footer {
     margin-top: 80px;
     padding: 30px;
@@ -55,33 +57,31 @@ footer {
    SNSボタン
 ============================== */
 
-.social{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:14px;
-margin-top:20px;
+.social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 20px;
 }
 
-.social a{
-background:#111;
-padding:14px;
-border-radius:12px;
-transition:0.3s;
+.social a {
+    background: #111;
+    padding: 14px;
+    border-radius: 12px;
+    transition: 0.3s;
 }
 
-.social a:hover{
-transform:translateY(-4px);
-background:#1c1c1c;
+.social a:hover {
+    transform: translateY(-4px);
+    background: #1c1c1c;
 }
 
-.social img{
-width:28px;
-height:28px;
-display:block;
+.social img {
+    width: 28px;
+    height: 28px;
+    display: block;
 }
-
-
 
 /* ===================================
    TOPページ
@@ -102,7 +102,6 @@ display:block;
     margin: auto;
     line-height: 1.6;
 }
-
 
 /* 動画カード */
 
@@ -148,6 +147,18 @@ display:block;
     opacity: 0.7;
 }
 
+/* 動画メイン表示 */
+
+.video-main {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.video-main iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+}
 
 /* 音楽リンクボタン */
 
@@ -173,8 +184,6 @@ display:block;
 .btn.ytmusic:hover {
     background: #ff3333;
 }
-
-
 
 /* ===================================
    ABOUTページ
@@ -209,8 +218,6 @@ display:block;
     margin-bottom: 20px;
 }
 
-
-
 /* ===================================
    CONTACTページ
 =================================== */
@@ -226,68 +233,44 @@ display:block;
     background: white;
 }
 
-
-
 /* ===================================
    スマホ対応（全ページ共通）
 =================================== */
 
 @media (max-width: 600px) {
 
-.hero h1 {
-    font-size: 30px;
-}
+    .hero h1 {
+        font-size: 30px;
+    }
 
-.hero-sub {
-    font-size: 15px;
-}
+    .hero-sub {
+        font-size: 15px;
+    }
 
-.about-title {
-    font-size: 28px;
-}
+    .about-title {
+        font-size: 28px;
+    }
 
-.about-subtitle {
-    font-size: 18px;
-}
+    .about-subtitle {
+        font-size: 18px;
+    }
 
-.about-content p {
-    font-size: 15px;
-}
+    .about-content p {
+        font-size: 15px;
+    }
 
-.google-form iframe {
-    height: 850px;
-}
-.video-main {
-    max-width: 800px;
-    margin: 40px auto;
-}
+    .google-form iframe {
+        height: 850px;
+    }
 
-.video-main iframe {
-    width: 100%;
-    height: 450px;
-    border-radius: 12px;
+    .nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 5px;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
 }
-@media (max-width:600px){
-
-.nav{
-flex-wrap:wrap;
-gap:12px;
-}
-
-.nav a{
-font-size:13px;
-}
-@media (max-width:600px){
-
-.nav{
-gap:10px;
-padding:12px 5px;
-}
-
-.nav a{
-font-size:13px;
-}
-
-
-}   
 
