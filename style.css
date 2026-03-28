@@ -65,22 +65,23 @@ footer {
     margin-top: 20px;
 }
 
-.social a {
-    background: #111;
-    padding: 14px;
-    border-radius: 12px;
-    transition: 0.3s;
+.social a{
+background:#111;
+padding:18px;
+border-radius:14px;
+transition:0.3s;
+box-shadow:0 6px 18px rgba(0,0,0,0.5);
 }
 
-.social a:hover {
-    transform: translateY(-4px);
-    background: #1c1c1c;
+.social a:hover{
+transform:translateY(-5px) scale(1.05);
+background:#1c1c1c;
 }
 
-.social img {
-    width: 28px;
-    height: 28px;
-    display: block;
+.social img{
+width:36px;
+height:36px;
+display:block;
 }
 
 
