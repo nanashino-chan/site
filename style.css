@@ -233,6 +233,12 @@ footer {
     border-radius: 14px;
     display: block;
 }
+.about-tagline {
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
 /* ===================================
    CONTACTページ
 =================================== */
