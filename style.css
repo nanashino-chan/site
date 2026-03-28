@@ -10,41 +10,49 @@ body {
     text-align: center;
 }
 
+/* ===================================
+   ナビメニュー（修正版）
+=================================== */
+
 nav {
-    background-color: #111;
-    padding: 15px;
+    width: 100%;
+    background-color: #000;
+    border-bottom: 1px solid #1a1a1a;
 }
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* ナビのフォント統一 */
 
 .nav {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    padding: 14px 10px;
-    background: #000;
+    gap: 24px;
+    padding: 16px 20px;
     flex-wrap: wrap;
 }
 
 .nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 14px;
+    font-weight: 600;
     letter-spacing: 1px;
     white-space: nowrap;
+    transition: 0.25s ease;
 }
 
 .nav a:hover {
     opacity: 0.7;
 }
+
+.nav a.active {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 4px;
+}
+
+/* ===================================
+   フッター
+=================================== */
 
 footer {
     margin-top: 80px;
@@ -53,9 +61,9 @@ footer {
     color: #aaa;
 }
 
-/* ==============================
+/* ===================================
    SNSボタン
-============================== */
+=================================== */
 
 .social {
     display: flex;
@@ -65,25 +73,24 @@ footer {
     margin-top: 20px;
 }
 
-.social a{
-background:#111;
-padding:18px;
-border-radius:14px;
-transition:0.3s;
-box-shadow:0 6px 18px rgba(0,0,0,0.5);
+.social a {
+    background: #111;
+    padding: 18px;
+    border-radius: 14px;
+    transition: 0.3s;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
-.social a:hover{
-transform:translateY(-5px) scale(1.05);
-background:#1c1c1c;
+.social a:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: #1c1c1c;
 }
 
-.social img{
-width:36px;
-height:36px;
-display:block;
+.social img {
+    width: 36px;
+    height: 36px;
+    display: block;
 }
-
 
 /* ===================================
    TOPページ
@@ -266,9 +273,8 @@ display:block;
     }
 
     .nav {
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 12px 5px;
+        gap: 14px;
+        padding: 12px 10px;
     }
 
     .nav a {
