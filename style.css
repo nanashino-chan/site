@@ -111,7 +111,9 @@ footer {
     margin: auto;
     line-height: 1.6;
 }
-
+.container h1 {
+    font-size: 48px;
+}
 /* 動画カード */
 
 .video-cards {
