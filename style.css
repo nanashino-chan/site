@@ -51,6 +51,36 @@ footer {
     color: #aaa;
 }
 
+/* ==============================
+   SNSボタン
+============================== */
+
+.social{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:14px;
+margin-top:20px;
+}
+
+.social a{
+background:#111;
+padding:14px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.social a:hover{
+transform:translateY(-4px);
+background:#1c1c1c;
+}
+
+.social img{
+width:28px;
+height:28px;
+display:block;
+}
+
 
 
 /* ===================================
