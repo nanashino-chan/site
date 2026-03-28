@@ -24,7 +24,6 @@
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 <meta name="twitter:site" content="@nanashino_chan">
 
-<!-- CSS（←これを追加） -->
 <link rel="stylesheet" href="style.css">
 
 <!-- フォント -->
@@ -37,7 +36,7 @@
 
 <body>
 
-<!-- ナビ（全ページ共通に統一） -->
+<!-- ナビ -->
 <nav>
 <div class="nav">
 <a href="index.html">HOME</a>
@@ -69,6 +68,34 @@ Over 2000+ tracks released and trusted by listeners around the world.
 </div>
 
 </section>
+
+
+<!-- 本日のおすすめトラック -->
+
+<section class="container">
+
+<h2>🎧 Today's Recommended Track</h2>
+
+<button id="recommendBtn">Get a Random Track</button>
+
+<div id="trackBox" style="display:none; margin-top:20px;">
+
+<h3 id="trackTitle"></h3>
+
+<a id="trackLink" href="#" target="_blank">
+<img id="trackThumb" src="" alt="YouTube thumbnail" style="width:320px; margin-top:10px;">
+</a>
+
+<br>
+
+<a id="listenBtn" href="#" class="btn" target="_blank">
+▶ Listen on YouTube
+</a>
+
+</div>
+
+</section>
+
 
 <!-- 人気動画 -->
 
@@ -106,6 +133,7 @@ Over 2000+ tracks released and trusted by listeners around the world.
 
 </section>
 
+
 <!-- SNSリンク -->
 
 <div class="social">
@@ -136,6 +164,7 @@ Over 2000+ tracks released and trusted by listeners around the world.
 
 </div>
 
+
 <footer>
 
 <h2>Nanashino-chan</h2>
@@ -143,6 +172,56 @@ Over 2000+ tracks released and trusted by listeners around the world.
 <p>© 2026 Nanashino-chan. All rights reserved.</p>
 
 </footer>
+
+
+<!-- ランダムおすすめトラック用JavaScript -->
+
+<script>
+
+const tracks = [
+
+{
+title: "Rainy Tokyo Night – Smooth Jazzhop",
+youtube: "https://www.youtube.com/watch?v=VIDEO_ID_1",
+thumb: "https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg"
+},
+
+{
+title: "Midnight Coffee – Chill Lo-Fi Beats",
+youtube: "https://www.youtube.com/watch?v=VIDEO_ID_2",
+thumb: "https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg"
+},
+
+{
+title: "Soft Piano Lo-Fi – Deep Focus Music",
+youtube: "https://www.youtube.com/watch?v=VIDEO_ID_3",
+thumb: "https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg"
+}
+
+];
+
+const button = document.getElementById("recommendBtn");
+const title = document.getElementById("trackTitle");
+const thumb = document.getElementById("trackThumb");
+const link = document.getElementById("trackLink");
+const listenBtn = document.getElementById("listenBtn");
+const box = document.getElementById("trackBox");
+
+button.addEventListener("click", function () {
+
+const randomIndex = Math.floor(Math.random() * tracks.length);
+const track = tracks[randomIndex];
+
+title.textContent = track.title;
+thumb.src = track.thumb;
+link.href = track.youtube;
+listenBtn.href = track.youtube;
+
+box.style.display = "block";
+
+});
+
+</script>
 
 </body>
 </html>
