@@ -316,4 +316,21 @@ footer {
     transform: scale(1.05);
     background: #1a1a1a;
 }
+/* 動画ボタン */
 
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: #ff8a00;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background: #ffa733;
+    transform: scale(1.05);
+}
