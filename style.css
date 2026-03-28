@@ -226,7 +226,13 @@ footer {
     line-height: 1.9;
     margin-bottom: 20px;
 }
-
+.about-image {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 14px;
+    display: block;
+}
 /* ===================================
    CONTACTページ
 =================================== */
