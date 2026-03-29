@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nanashino-chan | Today's Lo-Fi Track</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#0b0b0b;
+--text:#ffffff;
+--sub:#bdbdbd;
+--accent:#ff4c4c;
+--font-en:'Inter',sans-serif;
+--font-jp:'Noto Sans JP',sans-serif;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:var(--font-en);
+display:flex;
+flex-direction:column;
+align-items:center;
+min-height:100vh;
+}
+
+main{
+width:100%;
+max-width:1200px;
+padding:80px 24px;
+text-align:center;
+}
+
+h1{
+font-size:clamp(28px,5vw,42px);
+margin-bottom:12px;
+}
+
+p{
+color:var(--sub);
+margin-bottom:40px;
+}
+
+.video-box{
+width:100%;
+max-width:800px;
+aspect-ratio:16/9;
+margin:0 auto 40px;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+
+.video-box iframe{
+width:100%;
+height:100%;
+border:none;
+}
+
+.btn{
+display:inline-block;
+padding:16px 40px;
+background:var(--accent);
+color:#fff;
+text-decoration:none;
+border-radius:100px;
+font-weight:600;
+margin:12px;
+transition:.2s;
+}
+
+.btn:hover{
+transform:scale(1.04);
+}
+
+.sub{
+display:block;
+margin-top:24px;
+color:var(--sub);
+font-size:14px;
+text-decoration:none;
+}
+
+footer{
+margin-top:auto;
+padding:40px;
+color:var(--sub);
+font-size:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<main>
+
+<h1>Listen to Today's Lo-Fi Track</h1>
+<p>Relaxing night lo-fi & jazzhop music</p>
+
+<div class="video-box">
+<iframe id="videoFrame"
+src="https://www.youtube.com/embed/PnyutlzXem0"
+allowfullscreen></iframe>
+</div>
+
+<a id="youtubeBtn"
+href="https://www.youtube.com/watch?v=PnyutlzXem0"
+target="_blank"
+class="btn">
+Listen on YouTube
+</a>
+
+<br>
+
+<button onclick="randomTrack()" class="btn" style="background:#222;">
+Another Track
+</button>
+
+<a href="/" class="sub">Back to Top Page</a>
+
+</main>
+
+<footer>
+© 2026 Nanashino-chan
+</footer>
+
+<script>
+
+// 3曲目～21曲目のID
+const tracks = [
+"LNIx3m7r4ZI",
+"VCdUIWULvkc",
+"TZLAJn0qpa0",
+"TYXQ0Uf0ueA",
+"obSxEhJHhMA",
+"5-gpTIm2oU8",
+"3qKBXKiS0Yk",
+"DdEpqx_zvIs",
+"cL7WG4z56YA",
+"yqAoEsOED_I",
+"IYWzShI1MF8",
+"alXYvkWJ1_c",
+"QBY4-ewayCw",
+"cX1gMUKTRwY",
+"PnyutlzXem0",
+"vq-WYNPr0Mg",
+"RJ9VrZw6ijY",
+"Mc3LUM7ef3I",
+"r49Gyql42CU"
+];
+
+function randomTrack(){
+
+const random = tracks[Math.floor(Math.random()*tracks.length)];
+
+document.getElementById("videoFrame").src =
+"https://www.youtube.com/embed/" + random;
+
+document.getElementById("youtubeBtn").href =
+"https://www.youtube.com/watch?v=" + random;
+
+}
+
+</script>
+
+</body>
+</html>
