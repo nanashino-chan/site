@@ -198,21 +198,25 @@
 <!-- ===== videos.js 読み込み ===== -->
 <script src="videos.js"></script>
 
-<!-- ===== ランダム再生スクリプト ===== -->
 <script>
-function getRandomVideo(list){
-    return list[Math.floor(Math.random()*list.length)];
+function randomVideo(list){
+  return list[Math.floor(Math.random() * list.length)];
 }
 
-document.getElementById("focusPlayer").src =
-"https://www.youtube.com/embed/" + getRandomVideo(focusVideos);
+function playFocus(){
+  document.getElementById("focusPlayer").src =
+  "https://www.youtube.com/embed/" + randomVideo(focusVideos);
+}
 
-document.getElementById("sleepPlayer").src =
-"https://www.youtube.com/embed/" + getRandomVideo(sleepVideos);
+function playSleep(){
+  document.getElementById("sleepPlayer").src =
+  "https://www.youtube.com/embed/" + randomVideo(sleepVideos);
+}
 
-document.getElementById("tokyoPlayer").src =
-"https://www.youtube.com/embed/" + getRandomVideo(tokyoVideos);
+function playTokyo(){
+  document.getElementById("tokyoPlayer").src =
+  "https://www.youtube.com/embed/" + randomVideo(tokyoVideos);
+}
 </script>
-
 </body>
 </html>
