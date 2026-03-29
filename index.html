@@ -222,6 +222,19 @@ function playTokyo(){
   document.getElementById("tokyoPlayer").src =
   "https://www.youtube.com/embed/" + randomVideo(tokyoVideos);
 }
+
+window.onload = function(){
+
+  document.getElementById("focusPlayer").src =
+  "https://www.youtube.com/embed/" + randomVideo(focusVideos);
+
+  document.getElementById("sleepPlayer").src =
+  "https://www.youtube.com/embed/" + randomVideo(sleepVideos);
+
+  document.getElementById("tokyoPlayer").src =
+  "https://www.youtube.com/embed/" + randomVideo(tokyoVideos);
+
+};
 </script>
 </body>
 </html>
