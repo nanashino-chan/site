@@ -77,7 +77,7 @@
 
 
 <!-- =========================
-     ランダムジェネレーター追加
+     Listen by Mood（ジェネレーター）
 ========================= -->
 <section class="container">
 
@@ -85,24 +85,30 @@
 
   <div class="video-grid">
 
+    <!-- Focus Generator -->
     <div class="card">
       <iframe id="focusPlayer"></iframe>
       <div class="card-content">
         <p>Focus & Productivity Lo-Fi</p>
+        <button class="btn" onclick="playFocus()">Today's Track</button>
       </div>
     </div>
 
+    <!-- Sleep Generator -->
     <div class="card">
       <iframe id="sleepPlayer"></iframe>
       <div class="card-content">
         <p>Calm Sleep Lo-Fi</p>
+        <button class="btn" onclick="playSleep()">Today's Track</button>
       </div>
     </div>
 
+    <!-- Tokyo Generator -->
     <div class="card">
       <iframe id="tokyoPlayer"></iframe>
       <div class="card-content">
         <p>Tokyo Night Lights Lo-Fi</p>
+        <button class="btn" onclick="playTokyo()">Today's Track</button>
       </div>
     </div>
 
