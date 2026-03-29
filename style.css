@@ -308,7 +308,7 @@ footer {
 .video-grid {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
     max-width: 1100px;
     margin: 0 auto;
@@ -318,6 +318,7 @@ footer {
     width: 300px;
     background: #111;
     border-radius: 12px;
+    padding-bottom: 20px;
     overflow: hidden;
     transition: 0.3s;
 }
