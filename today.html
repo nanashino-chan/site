@@ -1,181 +1,124 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nanashino-chan | Today's Lo-Fi Track</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Today's Recommended Track | Lofi & Chill Music</title>
 
 <style>
-
-:root{
---bg:#0b0b0b;
---text:#ffffff;
---sub:#bdbdbd;
---accent:#ff4c4c;
---font-en:'Inter',sans-serif;
---font-jp:'Noto Sans JP',sans-serif;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-background:var(--bg);
-color:var(--text);
-font-family:var(--font-en);
-display:flex;
-flex-direction:column;
-align-items:center;
-min-height:100vh;
+    margin:0;
+    background:#0e0e0e;
+    color:#ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
 }
 
-main{
-width:100%;
-max-width:1200px;
-padding:80px 24px;
-text-align:center;
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
 }
 
 h1{
-font-size:clamp(28px,5vw,42px);
-margin-bottom:12px;
+    font-size:28px;
+    margin-bottom:10px;
 }
 
 p{
-color:var(--sub);
-margin-bottom:40px;
+    color:#bbbbbb;
+    margin-bottom:30px;
 }
 
-.video-box{
-width:100%;
-max-width:800px;
-aspect-ratio:16/9;
-margin:0 auto 40px;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 10px 40px rgba(0,0,0,0.4);
+iframe{
+    width:100%;
+    height:500px;
+    border-radius:12px;
 }
 
-.video-box iframe{
-width:100%;
-height:100%;
-border:none;
+/* ===== Main Button ===== */
+.youtube-btn{
+    display:inline-block;
+    background:#ff4c4c;
+    color:#ffffff;
+    font-size:16px;
+    font-weight:600;
+    padding:16px 48px;
+    border-radius:100px;
+    text-decoration:none;
+    margin-top:28px;
+    transition:0.2s;
 }
 
-.btn{
-display:inline-block;
-padding:16px 40px;
-background:var(--accent);
-color:#fff;
-text-decoration:none;
-border-radius:100px;
-font-weight:600;
-margin:12px;
-transition:.2s;
+.youtube-btn:hover{
+    transform:scale(1.04);
 }
 
-.btn:hover{
-transform:scale(1.04);
+/* ===== Detail Link ===== */
+.detail-link{
+    display:block;
+    margin-top:14px;
+    font-size:13px;
+    color:#bdbdbd;
+    text-decoration:none;
+    transition:0.2s;
 }
 
-.sub{
-display:block;
-margin-top:24px;
-color:var(--sub);
-font-size:14px;
-text-decoration:none;
+.detail-link:hover{
+    color:#ffffff;
 }
 
-footer{
-margin-top:auto;
-padding:40px;
-color:var(--sub);
-font-size:12px;
+/* ===== Back Link ===== */
+.back-link{
+    display:block;
+    margin-top:40px;
+    font-size:14px;
+    color:#bdbdbd;
+    text-decoration:none;
+    transition:0.2s;
 }
 
+.back-link:hover{
+    color:#ffffff;
+}
 </style>
 </head>
 
 <body>
 
-<main>
+<div class="container">
 
-<h1>Listen to Today's Lo-Fi Track</h1>
-<p>Relaxing night lo-fi & jazzhop music</p>
+<h1>Today's Recommended Track</h1>
+<p>Relax, focus, and enjoy this track.</p>
 
-<div class="video-box">
-<iframe id="videoFrame"
-src="https://www.youtube.com/embed/PnyutlzXem0"
-allowfullscreen></iframe>
-</div>
+<!-- ===== YouTube Video (17曲目) ===== -->
+<iframe 
+src="https://www.youtube.com/embed/PnyutlzXem0" 
+frameborder="0" 
+allowfullscreen>
+</iframe>
 
-<a id="youtubeBtn"
-href="https://www.youtube.com/watch?v=PnyutlzXem0"
-target="_blank"
-class="btn">
+<!-- ===== Main Button ===== -->
+<a href="https://www.youtube.com/watch?v=PnyutlzXem0"
+   target="_blank"
+   class="youtube-btn">
 Listen on YouTube
 </a>
 
-<br>
+<!-- ===== Album Detail Link ===== -->
+<a href="https://www.youtube.com/watch?v=PnyutlzXem0&list=OLAK5uy_n_a2xGuatHdCnHAS-c5UK9Joqh1a51P-w"
+   target="_blank"
+   class="detail-link">
+View this track on the album
+</a>
 
-<button onclick="randomTrack()" class="btn" style="background:#222;">
-Another Track
-</button>
+<!-- ===== Back to TOP ===== -->
+<a href="index.html" class="back-link">
+Back to Top
+</a>
 
-<a href="index.html" class="sub">Back to Top Page</a>
-
-</main>
-
-<footer>
-© 2026 Nanashino-chan
-</footer>
-
-<script>
-
-// 3曲目～21曲目のID
-const tracks = [
-"LNIx3m7r4ZI",
-"VCdUIWULvkc",
-"TZLAJn0qpa0",
-"TYXQ0Uf0ueA",
-"obSxEhJHhMA",
-"5-gpTIm2oU8",
-"3qKBXKiS0Yk",
-"DdEpqx_zvIs",
-"cL7WG4z56YA",
-"yqAoEsOED_I",
-"IYWzShI1MF8",
-"alXYvkWJ1_c",
-"QBY4-ewayCw",
-"cX1gMUKTRwY",
-"PnyutlzXem0",
-"vq-WYNPr0Mg",
-"RJ9VrZw6ijY",
-"Mc3LUM7ef3I",
-"r49Gyql42CU"
-];
-
-function randomTrack(){
-
-const random = tracks[Math.floor(Math.random()*tracks.length)];
-
-document.getElementById("videoFrame").src =
-"https://www.youtube.com/embed/" + random;
-
-document.getElementById("youtubeBtn").href =
-"https://www.youtube.com/watch?v=" + random;
-
-}
-
-</script>
+</div>
 
 </body>
 </html>
