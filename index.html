@@ -1,190 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lo‑Fi Music – Relax & Study Beats</title>
+<title>Nanashino-chan | Jazzhop & Night Lo-Fi Music for Study, Focus & Relax</title>
 
-<style>
+<meta name="description" content="Listen to relaxing lo-fi jazzhop and night café beats by Nanashino-chan. Original lo-fi music for study, focus, sleep, and late-night listening. Watch the latest videos and discover calm lo-fi music inspired by rainy nights and city lights.">
 
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0e0e0e;
-    color:white;
-    text-align:center;
-}
+<!-- OGP（SNS表示用） -->
+<meta property="og:title" content="Nanashino-chan | Lo-Fi Music Artist Official Site">
+<meta property="og:description" content="Relaxing lo-fi music inspired by Tokyo. Perfect for study, focus, work, and late-night listening. Official website of Nanashino-chan.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nanashino-chan.github.io/site/">
+<meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+<meta property="og:site_name" content="Nanashino-chan Official Site">
 
-header{
-    padding:40px 20px;
-}
+<!-- Twitter（X）表示用 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nanashino-chan | Lo-Fi Music Artist">
+<meta name="twitter:description" content="Relaxing lo-fi beats for study, focus, work, and night café vibes. Official site of Nanashino-chan.">
+<meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+<meta name="twitter:site" content="@nanashino_chan">
 
-h1{
-    font-size:32px;
-    margin-bottom:10px;
-}
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
 
-p{
-    color:#bbb;
-}
+<!-- フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.container{
-    max-width:1000px;
-    margin:0 auto;
-    padding:20px;
-}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-.video-section{
-    margin-top:40px;
-}
-
-iframe{
-    width:100%;
-    max-width:800px;
-    height:450px;
-    border:none;
-    border-radius:12px;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:14px 28px;
-    background:#ff4c4c;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-.btn:hover{
-    background:#ff2c2c;
-}
-
-.section-title{
-    margin-top:60px;
-    margin-bottom:20px;
-    font-size:24px;
-}
-
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap:25px;
-    margin-top:30px;
-}
-
-.video-card{
-    background:#161616;
-    padding:15px;
-    border-radius:12px;
-}
-
-.video-card img{
-    width:100%;
-    border-radius:10px;
-}
-
-.video-card a{
-    color:white;
-    text-decoration:none;
-    display:block;
-    margin-top:10px;
-}
-
-footer{
-    margin-top:80px;
-    padding:30px;
-    color:#777;
-    font-size:14px;
-}
-
-</style>
 </head>
 
 <body>
 
-<header>
-<h1>Lo‑Fi Music for Relaxing, Studying & Sleeping</h1>
-<p>Enjoy calm beats and relaxing music anytime</p>
-</header>
+<!-- ナビ -->
+<nav>
+  <div class="nav">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="music.html">MUSIC</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+</nav>
 
 
-<div class="container">
+<!-- HERO -->
+<section class="container">
 
-<!-- ==========================
-MAIN VIDEO
-========================== -->
+  <h1>The Hidden Gem of Tokyo Lo-Fi</h1>
 
-<div class="video-section">
+  <p>
+    Jazzhop & Lo-Fi music from Tokyo streamed worldwide.
+    Over 2000+ tracks released and trusted by listeners around the world.
+  </p>
 
-<iframe src="https://www.youtube.com/embed/VIDEO_ID_MAIN" allowfullscreen></iframe>
+  <h2>Most Popular Jazzhop Mix</h2>
 
-<br>
-<a class="btn" href="https://www.youtube.com/watch?v=VIDEO_ID_MAIN" target="_blank">▶ Watch on YouTube</a>
+  <div class="video-main">
+    <iframe
+      src="https://www.youtube.com/embed/vDAhyDqflD0?rel=0&modestbranding=1"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="center">
+    <a href="https://www.youtube.com/watch?v=vDAhyDqflD0" class="btn">
+      Watch on YouTube
+    </a>
+  </div>
+
+</section>
+
+
+<!-- 人気動画 -->
+<section class="container">
+
+  <h2>Popular Videos</h2>
+
+  <div class="video-grid">
+
+    <div class="card">
+      <img src="https://img.youtube.com/vi/m5dlLsMUi54/maxresdefault.jpg">
+      <div class="card-content">
+        <p>Smooth Lo-Fi for Focus & Relaxation</p>
+        <a href="https://youtu.be/m5dlLsMUi54" class="btn">Watch</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://img.youtube.com/vi/7I35IeHyuXM/maxresdefault.jpg">
+      <div class="card-content">
+        <p>Mellow R&B Beats & Soft Sax</p>
+        <a href="https://youtu.be/7I35IeHyuXM" class="btn">Watch</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://img.youtube.com/vi/9tlQIgznCw0/maxresdefault.jpg">
+      <div class="card-content">
+        <p>Nostalgic Lo-Fi Italo Disco</p>
+        <a href="https://youtu.be/9tlQIgznCw0" class="btn">Watch</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SNSリンク -->
+<div class="social">
+
+  <a href="https://www.youtube.com/@Nanashino-chan" target="_blank">
+    <img src="youtube.png" alt="YouTube">
+  </a>
+
+  <a href="https://x.com/nanashinoch" target="_blank">
+    <img src="twitter.png" alt="X">
+  </a>
+
+  <a href="https://www.instagram.com/nanashino_chan" target="_blank">
+    <img src="instagram.png" alt="Instagram">
+  </a>
+
+  <a href="https://www.tiktok.com/@nanashino_chan" target="_blank">
+    <img src="tiktok.png" alt="TikTok">
+  </a>
+
+  <a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank">
+    <img src="apple-music.png" alt="Apple Music">
+  </a>
+
+  <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank">
+    <img src="youtube-music.png" alt="YouTube Music">
+  </a>
 
 </div>
 
-
-<!-- ==========================
-POPULAR VIDEOS
-========================== -->
-
-<h2 class="section-title">Popular Videos</h2>
-
-<div class="video-grid">
-
-<div class="video-card">
-<a href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank">
-<img src="https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg">
-Lo‑Fi Music for Studying
-</a>
-</div>
-
-<div class="video-card">
-<a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank">
-<img src="https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg">
-Relaxing Lo‑Fi Beats
-</a>
-</div>
-
-<div class="video-card">
-<a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank">
-<img src="https://img.youtube.com/vi/VIDEO_ID_3/hqdefault.jpg">
-Lo‑Fi Sleep Music
-</a>
-</div>
-
-<div class="video-card">
-<a href="https://www.youtube.com/watch?v=VIDEO_ID_4" target="_blank">
-<img src="https://img.youtube.com/vi/VIDEO_ID_4/hqdefault.jpg">
-Rainy Night Lo‑Fi
-</a>
-</div>
-
-<div class="video-card">
-<a href="https://www.youtube.com/watch?v=VIDEO_ID_5" target="_blank">
-<img src="https://img.youtube.com/vi/VIDEO_ID_5/hqdefault.jpg">
-Chill Jazzhop Music
-</a>
-</div>
-
-<div class="video-card">
-<a href="https://www.youtube.com/watch?v=VIDEO_ID_6" target="_blank">
-<img src="https://img.youtube.com/vi/VIDEO_ID_6/hqdefault.jpg">
-Lo‑Fi Piano Relaxation
-</a>
-</div>
-
-</div>
-
-</div>
 
 <footer>
-© 2026 Lo‑Fi Music Channel
+
+  <h2>Nanashino-chan</h2>
+  <p>Tokyo-based Lo-Fi Music Creator</p>
+  <p>© 2026 Nanashino-chan. All rights reserved.</p>
+
 </footer>
 
 </body>
 </html>
-
