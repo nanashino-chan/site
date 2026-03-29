@@ -401,3 +401,10 @@ footer {
     grid-template-columns:repeat(3, 1fr);
     gap:30px;
 }
+.generator-text {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 15px;
+}
