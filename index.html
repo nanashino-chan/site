@@ -204,37 +204,44 @@ Each generator picks a different track every time, so you can instantly discover
 <script src="videos.js"></script>
 
 <script>
+
+// ランダムで動画IDを1つ取得
 function randomVideo(list){
   return list[Math.floor(Math.random() * list.length)];
 }
 
+// YouTube埋め込みURL生成（ロゴ軽減付き）
+function getEmbedURL(id){
+  return "https://www.youtube.com/embed/" + id + "?rel=0&modestbranding=1";
+}
+
+
+// ===== ボタン用 =====
+
 function playFocus(){
   document.getElementById("focusPlayer").src =
-  "https://www.youtube.com/embed/" + randomVideo(focusVideos);
+  getEmbedURL(randomVideo(focusVideos));
 }
 
 function playSleep(){
   document.getElementById("sleepPlayer").src =
-  "https://www.youtube.com/embed/" + randomVideo(sleepVideos);
+  getEmbedURL(randomVideo(sleepVideos));
 }
 
 function playTokyo(){
   document.getElementById("tokyoPlayer").src =
-  "https://www.youtube.com/embed/" + randomVideo(tokyoVideos);
+  getEmbedURL(randomVideo(tokyoVideos));
 }
 
+
+// ===== ページ読み込み時に自動表示（黒画面防止） =====
+
 window.onload = function(){
-
-  document.getElementById("focusPlayer").src =
-  "https://www.youtube.com/embed/" + randomVideo(focusVideos);
-
-  document.getElementById("sleepPlayer").src =
-  "https://www.youtube.com/embed/" + randomVideo(sleepVideos);
-
-  document.getElementById("tokyoPlayer").src =
-  "https://www.youtube.com/embed/" + randomVideo(tokyoVideos);
-
+  playFocus();
+  playSleep();
+  playTokyo();
 };
+
 </script>
 </body>
 </html>
