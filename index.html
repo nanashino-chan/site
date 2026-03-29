@@ -1,154 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nanashino-chan | Jazzhop & Night Lo-Fi Music for Study, Focus & Relax</title>
+<title>The Hidden Gem of Tokyo Lo-Fi</title>
 
-<meta name="description" content="Listen to relaxing lo-fi jazzhop and night café beats by Nanashino-chan. Original lo-fi music for study, focus, sleep, and late-night listening. Watch the latest videos and discover calm lo-fi music inspired by rainy nights and city lights.">
+<style>
+body{
+    margin:0;
+    background:#0e0e0e;
+    color:#ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+}
 
-<!-- OGP（SNS表示用） -->
-<meta property="og:title" content="Nanashino-chan | Lo-Fi Music Artist Official Site">
-<meta property="og:description" content="Relaxing lo-fi music inspired by Tokyo. Perfect for study, focus, work, and late-night listening. Official website of Nanashino-chan.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://nanashino-chan.github.io/site/">
-<meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
-<meta property="og:site_name" content="Nanashino-chan Official Site">
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
 
-<!-- Twitter（X）表示用 -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nanashino-chan | Lo-Fi Music Artist">
-<meta name="twitter:description" content="Relaxing lo-fi beats for study, focus, work, and night café vibes. Official site of Nanashino-chan.">
-<meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
-<meta name="twitter:site" content="@nanashino_chan">
+h1{
+    font-size:30px;
+    margin-bottom:10px;
+}
 
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
+iframe{
+    width:100%;
+    height:500px;
+    border-radius:12px;
+}
 
-<!-- フォント -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+/* ===== Main Button ===== */
+.youtube-btn{
+    display:inline-block;
+    background:#ff4c4c;
+    color:#ffffff;
+    font-size:16px;
+    font-weight:600;
+    padding:16px 48px;
+    border-radius:100px;
+    text-decoration:none;
+    margin-top:28px;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+/* ===== Generator Layout ===== */
+.generator-area{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:30px;
+}
 
+.generator-box iframe{
+    width:100%;
+    height:180px;
+    border-radius:12px;
+}
+
+/* ===== Popular Videos ===== */
+.popular{
+    margin-top:60px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- ナビ -->
-<nav>
-  <div class="nav">
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="music.html">MUSIC</a>
-    <a href="contact.html">CONTACT</a>
-  </div>
-</nav>
+<div class="container">
 
+<h1>The Hidden Gem of Tokyo Lo-Fi</h1>
 
-<!-- HERO -->
-<section class="container">
+<!-- ===== Main Video ===== -->
+<iframe src="https://www.youtube.com/embed/PnyutlzXem0" frameborder="0" allowfullscreen></iframe>
 
-  <h1>The Hidden Gem of Tokyo Lo-Fi</h1>
+<a href="https://www.youtube.com/watch?v=PnyutlzXem0" target="_blank" class="youtube-btn">
+Watch on YouTube
+</a>
 
-  <p>
-    Jazzhop & Lo-Fi music from Tokyo streamed worldwide.
-    Over 2000+ tracks released and trusted by listeners around the world.
-  </p>
+<!-- ===== Random Generator 3 ===== -->
+<div class="generator-area">
 
-  <h2>Most Popular Jazzhop Mix</h2>
+<div class="generator-box">
+<h3>Focus & Productivity</h3>
+<iframe id="focusPlayer"></iframe>
+</div>
 
-  <div class="video-main">
-    <iframe
-      src="https://www.youtube.com/embed/vDAhyDqflD0?rel=0&modestbranding=1"
-      allowfullscreen>
-    </iframe>
-  </div>
+<div class="generator-box">
+<h3>Calm Sleep</h3>
+<iframe id="sleepPlayer"></iframe>
+</div>
 
-  <div class="center">
-    <a href="https://www.youtube.com/watch?v=vDAhyDqflD0" class="btn">
-      Watch on YouTube
-    </a>
-  </div>
-
-</section>
-
-
-<!-- 人気動画 -->
-<section class="container">
-
-  <h2>Popular Videos</h2>
-
-  <div class="video-grid">
-
-    <div class="card">
-      <img src="https://img.youtube.com/vi/m5dlLsMUi54/maxresdefault.jpg">
-      <div class="card-content">
-        <p>Smooth Lo-Fi for Focus & Relaxation</p>
-        <a href="https://youtu.be/m5dlLsMUi54" class="btn">Watch</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://img.youtube.com/vi/7I35IeHyuXM/maxresdefault.jpg">
-      <div class="card-content">
-        <p>Mellow R&B Beats & Soft Sax</p>
-        <a href="https://youtu.be/7I35IeHyuXM" class="btn">Watch</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://img.youtube.com/vi/9tlQIgznCw0/maxresdefault.jpg">
-      <div class="card-content">
-        <p>Nostalgic Lo-Fi Italo Disco</p>
-        <a href="https://youtu.be/9tlQIgznCw0" class="btn">Watch</a>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- SNSリンク -->
-<div class="social">
-
-  <a href="https://www.youtube.com/@Nanashino-chan" target="_blank">
-    <img src="youtube.png" alt="YouTube">
-  </a>
-
-  <a href="https://x.com/nanashinoch" target="_blank">
-    <img src="twitter.png" alt="X">
-  </a>
-
-  <a href="https://www.instagram.com/nanashino_chan" target="_blank">
-    <img src="instagram.png" alt="Instagram">
-  </a>
-
-  <a href="https://www.tiktok.com/@nanashino_chan" target="_blank">
-    <img src="tiktok.png" alt="TikTok">
-  </a>
-
-  <a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank">
-    <img src="apple-music.png" alt="Apple Music">
-  </a>
-
-  <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank">
-    <img src="youtube-music.png" alt="YouTube Music">
-  </a>
+<div class="generator-box">
+<h3>Tokyo Night</h3>
+<iframe id="tokyoPlayer"></iframe>
+</div>
 
 </div>
 
+<!-- ===== Popular Videos ===== -->
+<div class="popular">
+<h2>Popular Videos</h2>
 
-<footer>
+<iframe src="https://www.youtube.com/embed/LNIx3m7r4ZI"></iframe>
+<br><br>
+<iframe src="https://www.youtube.com/embed/VCdUIWULvkc"></iframe>
+<br><br>
+<iframe src="https://www.youtube.com/embed/TZLAJn0qpa0"></iframe>
 
-  <h2>Nanashino-chan</h2>
-  <p>Tokyo-based Lo-Fi Music Creator</p>
-  <p>© 2026 Nanashino-chan. All rights reserved.</p>
+</div>
 
-</footer>
+</div>
+
+<!-- ===== videos.js ===== -->
 <script src="videos.js"></script>
+
+<!-- ===== Random Script ===== -->
+<script>
+function getRandomVideo(list){
+    return list[Math.floor(Math.random()*list.length)];
+}
+
+document.getElementById("focusPlayer").src =
+"https://www.youtube.com/embed/" + getRandomVideo(focusVideos);
+
+document.getElementById("sleepPlayer").src =
+"https://www.youtube.com/embed/" + getRandomVideo(sleepVideos);
+
+document.getElementById("tokyoPlayer").src =
+"https://www.youtube.com/embed/" + getRandomVideo(tokyoVideos);
+</script>
+
 </body>
 </html>
