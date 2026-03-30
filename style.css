@@ -198,6 +198,52 @@ footer {
 .btn.ytmusic:hover {
     background: #ff3333;
 }
+/* ===== Brand Feature Section ===== */
+
+.brand-feature {
+    margin: 60px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.brand-feature h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.brand-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.brand-btn {
+    text-decoration: none;
+    color: white;
+    width: 280px;
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+.brand-btn:hover {
+    transform: translateY(-5px);
+    background-color: #242424;
+}
+
+.brand-btn img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.brand-btn p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
 
 /* ===================================
    ABOUTページ
