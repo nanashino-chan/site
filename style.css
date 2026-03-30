@@ -117,6 +117,13 @@ footer {
 .container {
     padding: 80px 20px;
 }
+.container p {
+    max-width: 680px;
+    margin: 20px auto 0 auto;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #cfcfcf;
+}
 /* 動画カード */
 
 .video-cards {
