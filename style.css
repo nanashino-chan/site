@@ -219,6 +219,7 @@ footer {
 }
 
 .brand-btn {
+    display: block;
     text-decoration: none;
     color: white;
     width: 280px;
