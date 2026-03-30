@@ -207,8 +207,8 @@ footer {
 }
 
 .brand-feature h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .brand-buttons {
@@ -222,7 +222,7 @@ footer {
     display: block;
     text-decoration: none;
     color: white;
-    width: 280px;
+    width: 220px;
     background-color: #1a1a1a;
     padding: 15px;
     border-radius: 12px;
@@ -242,8 +242,9 @@ footer {
 }
 
 .brand-btn p {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.4;
+    opacity: 0.8;
 }
 
 
