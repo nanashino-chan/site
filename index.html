@@ -213,35 +213,95 @@ Each generator picks a different track every time.
 <p>© 2026 Nanashino-chan. All rights reserved.</p>
 </footer>
 
-<!-- JS -->
+<!-- YouTube API -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<!-- 動画IDリスト -->
 <script src="videos.js"></script>
 
 <script>
+
+// プレイヤー
+let focusPlayer;
+let sleepPlayer;
+let tokyoPlayer;
+
+
+// ランダム動画
 function randomVideo(list){
   return list[Math.floor(Math.random() * list.length)];
 }
 
-function getEmbedURL(id){
-  return "https://www.youtube.com/embed/" + id + "?rel=0&modestbranding=1&playsinline=1";
+
+// YouTube API 読み込み後に実行
+function onYouTubeIframeAPIReady(){
+
+  focusPlayer = new YT.Player('focusPlayer', {
+    videoId: randomVideo(focusVideos),
+    playerVars: {
+      rel: 0,
+      modestbranding: 1,
+      playsinline: 1
+    },
+    events: {
+      'onStateChange': function(event){
+        if(event.data === 0){
+          focusPlayer.loadVideoById(randomVideo(focusVideos));
+        }
+      }
+    }
+  });
+
+
+  sleepPlayer = new YT.Player('sleepPlayer', {
+    videoId: randomVideo(sleepVideos),
+    playerVars: {
+      rel: 0,
+      modestbranding: 1,
+      playsinline: 1
+    },
+    events: {
+      'onStateChange': function(event){
+        if(event.data === 0){
+          sleepPlayer.loadVideoById(randomVideo(sleepVideos));
+        }
+      }
+    }
+  });
+
+
+  tokyoPlayer = new YT.Player('tokyoPlayer', {
+    videoId: randomVideo(tokyoVideos),
+    playerVars: {
+      rel: 0,
+      modestbranding: 1,
+      playsinline: 1
+    },
+    events: {
+      'onStateChange': function(event){
+        if(event.data === 0){
+          tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
+        }
+      }
+    }
+  });
+
 }
 
+
+// ボタン用
 function playFocus(){
-  document.getElementById("focusPlayer").src = getEmbedURL(randomVideo(focusVideos));
+  focusPlayer.loadVideoById(randomVideo(focusVideos));
 }
 
 function playSleep(){
-  document.getElementById("sleepPlayer").src = getEmbedURL(randomVideo(sleepVideos));
+  sleepPlayer.loadVideoById(randomVideo(sleepVideos));
 }
 
 function playTokyo(){
-  document.getElementById("tokyoPlayer").src = getEmbedURL(randomVideo(tokyoVideos));
+  tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
 }
 
-window.onload = function(){
-  playFocus();
-  playSleep();
-  playTokyo();
-};
 </script>
 
 </body>
