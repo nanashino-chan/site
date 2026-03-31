@@ -105,6 +105,51 @@ const sleepVideos = [
 "3FajVMiuS_4",
 "V93swbtmJGA",
 "B_SNM3bi4p8",
+//Spiritual Healing: Lo-Fi Frequencies for Meditation & Focus
+
+"vLaohDXCp-Y",
+"DEPPozz1OAk",
+"dSeNrrJYLRg",
+"IIAb9gGT9Eo",
+"2adjmXwFUhk",
+"4KmEhWkQ2ZA",
+"9E0rcSBsU8o",
+"2WC7ceST-4U",
+"lSMo9oT5VVQ",
+"21N-_ZF7CQU",
+"ARO1oJKiq9Y",
+"lrQYaqacWzU",
+"qX_p136g0F4",
+"_GbCyG6ukjU",
+"mgMN9lORQHQ",
+"C81_Q6_0CKQ",
+"EKPWgN1nHSQ",
+"zDriG45v2ac",
+"ZrwvQT5-edM",
+
+
+//Midnight Jazzhop:Lo-Fi Grooves for Late Nights
+
+"bH541iu6IXA",
+"7JR6ODaLd-0",
+"RUcJ9u41stg",
+"xbyhSlooo_Y",
+"kzw61bImAMQ",
+"DzyPXfucCDI",
+"DE4dp0566kU",
+"wTRO0Xo0YRM",
+"r99wpkeymPk",
+"QEAQQZWoBZw",
+"X6hF0eDP0zI",
+"VePJ0EcIi8M",
+"XD75rUFlelo",
+"hzrbJNZA_Ss",
+"AQkOIdruMBQ",
+"wmgbxnNf6io",
+"u-Pry8K5XyA",
+"Dq7IPnjSzPc",
+"sb8X53d893E",
+"xrhnDF6WwpE",
 ];
 
 const tokyoVideos = [
