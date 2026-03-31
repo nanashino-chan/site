@@ -1,4 +1,5 @@
 const focusVideos = [
+//Night Focus Jazz: Lo-Fi Grooves for Deep Late Hours 24
 "O_DlB-RyU-4",
 "Il2V_fgVh0o",
 "XPv78upJZhQ",
@@ -23,6 +24,7 @@ const focusVideos = [
 "m0oqLWYwsoo",
 "7tKXmvLxVo4",
 "qcsZUe_90Kg",
+//Chillhop Lo-Fi Relax & Focus(Instrumental)26曲
 "tOQQZ8Y4PiY",
 "3B8ZMRUhgz0",
 "q2MxqG7PnVU",
@@ -49,6 +51,33 @@ const focusVideos = [
 "O_RLNql0OhI",
 "4bnoHteo-lk",
 "sb4vo2QPWrg", 
+//Midnight Chillhop Jazz Lo-Fi: Smooth Beats for Focus, Relax & Sleep 深夜の作業 26曲
+"MuS5-7ddMcc",
+"bfBJ0dXM9kc",
+"bTVKgfovmC4",
+"HH0RgbDzUnA",
+"XJzzv5L8PZE",
+"ZYgfrenkTCQ",
+"MKg_l1dLdPs",
+"r4ZR0fhf338",
+"UoEhlhFmNvc",
+"2OBf4mMCqQw",
+"fJSUC2HKDPY",
+"FDwd8Zm2xOQ",
+"c61EUWcaIgs",
+"GLP74q2vBjM",
+"yvAHg7sTnzs",
+"Y71zP0Kf9AA",
+"CW8QHSCRUKI",
+"YwjEK3odv8M",
+"VB1FePRH1i4",
+"0FOxLF1WSEE",
+"znDSfosUFIM",
+"F-35FnzFclE",
+"7CkwOVyq5ys",
+"liRkdME-xtk",
+"bcuZOTsTkH0",
+"YGyDkXeFl4I",
 ];
 
 const sleepVideos = [
@@ -75,7 +104,7 @@ const sleepVideos = [
 "1iIsvDtlAew",
 "3FajVMiuS_4",
 "V93swbtmJGA",
-"B_SNM3bi4p8"
+"B_SNM3bi4p8",
 ];
 
 const tokyoVideos = [
@@ -98,7 +127,7 @@ const tokyoVideos = [
 "jJOofeSVC_k",
 "QjoJbU04ATs",
 "2c39TplP3G0",
-"oj2rsPk8oTs"
+"oj2rsPk8oTs",
 ];
 
 
