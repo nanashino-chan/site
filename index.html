@@ -9,7 +9,7 @@
 
 <meta name="description" content="Listen to relaxing lo-fi jazzhop and night café beats by Nanashino-chan. Original lo-fi music for study, focus, sleep, and late-night listening. Watch the latest videos and discover calm lo-fi music inspired by rainy nights and city lights.">
 
-<!-- OGP（SNS表示用） -->
+<!-- OGP -->
 <meta property="og:title" content="Nanashino-chan | Lo-Fi Music Artist Official Site">
 <meta property="og:description" content="Relaxing lo-fi music inspired by Tokyo. Perfect for study, focus, work, and late-night listening. Official website of Nanashino-chan.">
 <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 <meta property="og:site_name" content="Nanashino-chan Official Site">
 
-<!-- Twitter（X）表示用 -->
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nanashino-chan | Lo-Fi Music Artist">
 <meta name="twitter:description" content="Relaxing lo-fi beats for study, focus, work, and night café vibes. Official site of Nanashino-chan.">
@@ -27,12 +27,11 @@
 <!-- CSS -->
 <link rel="stylesheet" href="style.css">
 
-<!-- フォント -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -47,236 +46,203 @@
   </div>
 </nav>
 
-
 <!-- HERO -->
 <section class="container">
-
 <h1>The Hidden Gem of Tokyo Lo-Fi</h1>
-
 <p>
 Over 2,000 original lofi music and jazzhop tracks crafted in Tokyo.
 Organically used in reels and social content by global brands worldwide.
 Available on all major streaming platforms — licensing available for creators, brands, and commercial use.
 </p>
-
 </section>
 
-<!-- ===== Brand Features Section ===== -->
+<!-- ブランド掲載実績 -->
 <section class="brand-feature">
 
 <h2>Featured by Global Brands on Instagram & Reels</h2>
 <p>
-Original lo-fi music created in Tokyo has been organically used in Instagram reels by international brands including fashion, interior, and real estate companies. Music licensing is available for creators and commercial projects.
+Original lo-fi music created in Tokyo has been organically used in Instagram reels by international brands including fashion, interior, and real estate companies.
 </p>
+
 <div class="brand-buttons">
 
-<!-- BAZAAR × Cartier -->
 <a href="https://www.instagram.com/reel/DKLejxuPtd-/" target="_blank" class="brand-btn">
-<img src="bazaar-cartier.png"
-alt="Harper's BAZAAR HK x Cartier Instagram Reel featuring Tokyo lo-fi music">
+<img src="bazaar-cartier.png">
 <p>Harper's BAZAAR HK × Cartier Feature</p>
 </a>
 
 <a href="https://www.instagram.com/reel/DPlsQvcDqpa/" target="_blank" class="brand-btn">
-<img src="arte-moderna.png"
-alt="Arte Moderna Retrô verified interior brand Instagram Reel using Japanese lo-fi music">
-<p>Arte Moderna Retrô — 600K Followers Verified Brand</p>
+<img src="arte-moderna.png">
+<p>Arte Moderna Retrô — Verified Brand Feature</p>
 </a>
 
 <a href="https://www.instagram.com/reel/DLzP-HehrGO/" target="_blank" class="brand-btn">
-<img src="chuo-nittochi.png"
-alt="Chuo-Nittochi official Instagram Reel using lo-fi music from Tokyo artist">
+<img src="chuo-nittochi.png">
 <p>Chuo-Nittochi Official Reel Feature (Japan)</p>
 </a>
 
 </div>
+</section>
+
+<!-- メイン動画 -->
+<section class="container">
+
+<h2>Most Popular Jazzhop Mix</h2>
+
+<div class="video-main">
+<iframe
+src="https://www.youtube.com/embed/vDAhyDqflD0?rel=0&modestbranding=1"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="center">
+<a href="https://www.youtube.com/watch?v=vDAhyDqflD0" class="btn">
+Watch on YouTube
+</a>
+</div>
 
 </section>
 
-  <h2>Most Popular Jazzhop Mix</h2>
-
-  <div class="video-main">
-    <iframe
-      src="https://www.youtube.com/embed/vDAhyDqflD0?rel=0&modestbranding=1"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <div class="center">
-    <a href="https://www.youtube.com/watch?v=vDAhyDqflD0" class="btn">
-      Watch on YouTube
-    </a>
-  </div>
-
-</section>
-
-
-<!-- =========================
-     Listen by Mood（ジェネレーター）
-========================= -->
+<!-- Listen by Mood -->
 <section class="container">
 
 <h2>Listen by Mood</h2>
 
 <p class="generator-text">
 Choose your mood and click <b>Today's Track</b> to get a random lo-fi song.
-Each generator picks a different track every time, so you can instantly discover music for focus, sleep, or late-night listening.
+Each generator picks a different track every time.
 </p>
 
 <div class="video-grid">
 
-    <!-- Focus Generator -->
-    <div class="card">
-      <iframe id="focusPlayer"></iframe>
-      <div class="card-content">
-        <p>Focus & Productivity Lo-Fi</p>
-        <button class="btn" onclick="playFocus()">Today's Track</button>
-      </div>
-    </div>
+<div class="card">
+<iframe id="focusPlayer"></iframe>
+<div class="card-content">
+<p>Focus & Productivity Lo-Fi</p>
+<button class="btn" onclick="playFocus()">Today's Track</button>
+</div>
+</div>
 
-    <!-- Sleep Generator -->
-    <div class="card">
-      <iframe id="sleepPlayer"></iframe>
-      <div class="card-content">
-        <p>Calm Sleep Lo-Fi</p>
-        <button class="btn" onclick="playSleep()">Today's Track</button>
-      </div>
-    </div>
+<div class="card">
+<iframe id="sleepPlayer"></iframe>
+<div class="card-content">
+<p>Calm Sleep Lo-Fi</p>
+<button class="btn" onclick="playSleep()">Today's Track</button>
+</div>
+</div>
 
-    <!-- Tokyo Generator -->
-    <div class="card">
-      <iframe id="tokyoPlayer"></iframe>
-      <div class="card-content">
-        <p>Tokyo Night Lights Lo-Fi</p>
-        <button class="btn" onclick="playTokyo()">Today's Track</button>
-      </div>
-    </div>
+<div class="card">
+<iframe id="tokyoPlayer"></iframe>
+<div class="card-content">
+<p>Tokyo Night Lights Lo-Fi</p>
+<button class="btn" onclick="playTokyo()">Today's Track</button>
+</div>
+</div>
 
-  </div>
-
+</div>
 </section>
-<!-- =========================
-     ここまで追加部分
-========================= -->
-
 
 <!-- 人気動画 -->
 <section class="container">
 
-  <h2>Popular Videos</h2>
+<h2>Popular Videos</h2>
 
-  <div class="video-grid">
+<div class="video-grid">
 
-    <div class="card">
-      <img src="https://img.youtube.com/vi/m5dlLsMUi54/maxresdefault.jpg">
-      <div class="card-content">
-        <p>Smooth Lo-Fi for Focus & Relaxation</p>
-        <a href="https://youtu.be/m5dlLsMUi54" class="btn">Watch</a>
-      </div>
-    </div>
+<div class="card">
+<img src="https://img.youtube.com/vi/m5dlLsMUi54/maxresdefault.jpg">
+<div class="card-content">
+<p>Smooth Lo-Fi for Focus & Relaxation</p>
+<a href="https://youtu.be/m5dlLsMUi54" class="btn">Watch</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="https://img.youtube.com/vi/7I35IeHyuXM/maxresdefault.jpg">
-      <div class="card-content">
-        <p>Mellow R&B Beats & Soft Sax</p>
-        <a href="https://youtu.be/7I35IeHyuXM" class="btn">Watch</a>
-      </div>
-    </div>
+<div class="card">
+<img src="https://img.youtube.com/vi/7I35IeHyuXM/maxresdefault.jpg">
+<div class="card-content">
+<p>Mellow R&B Beats & Soft Sax</p>
+<a href="https://youtu.be/7I35IeHyuXM" class="btn">Watch</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="https://img.youtube.com/vi/9tlQIgznCw0/maxresdefault.jpg">
-      <div class="card-content">
-        <p>Nostalgic Lo-Fi Italo Disco</p>
-        <a href="https://youtu.be/9tlQIgznCw0" class="btn">Watch</a>
-      </div>
-    </div>
+<div class="card">
+<img src="https://img.youtube.com/vi/9tlQIgznCw0/maxresdefault.jpg">
+<div class="card-content">
+<p>Nostalgic Lo-Fi Italo Disco</p>
+<a href="https://youtu.be/9tlQIgznCw0" class="btn">Watch</a>
+</div>
+</div>
 
-  </div>
-
+</div>
 </section>
 
-
-<!-- SNSリンク -->
+<!-- SNS -->
 <div class="social">
 
-  <a href="https://www.youtube.com/@Nanashino-chan" target="_blank">
-    <img src="youtube.png" alt="YouTube">
-  </a>
+<a href="https://www.youtube.com/@Nanashino-chan" target="_blank">
+<img src="youtube.png">
+</a>
 
-  <a href="https://x.com/nanashinoch" target="_blank">
-    <img src="twitter.png" alt="X">
-  </a>
+<a href="https://x.com/nanashinoch" target="_blank">
+<img src="twitter.png">
+</a>
 
-  <a href="https://www.instagram.com/nanashino_chan" target="_blank">
-    <img src="instagram.png" alt="Instagram">
-  </a>
+<a href="https://www.instagram.com/nanashino_chan" target="_blank">
+<img src="instagram.png">
+</a>
 
-  <a href="https://www.tiktok.com/@nanashino_chan" target="_blank">
-    <img src="tiktok.png" alt="TikTok">
-  </a>
+<a href="https://www.tiktok.com/@nanashino_chan" target="_blank">
+<img src="tiktok.png">
+</a>
 
-  <a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank">
-    <img src="apple-music.png" alt="Apple Music">
-  </a>
+<a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank">
+<img src="apple-music.png">
+</a>
 
-  <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank">
-    <img src="youtube-music.png" alt="YouTube Music">
-  </a>
+<a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank">
+<img src="youtube-music.png">
+</a>
 
 </div>
 
-
+<!-- フッター -->
 <footer>
-
-  <h2>Nanashino-chan</h2>
-  <p>Tokyo-based Lo-Fi Music Creator</p>
-  <p>© 2026 Nanashino-chan. All rights reserved.</p>
-
+<h2>Nanashino-chan</h2>
+<p>Tokyo-based Lo-Fi Music Creator</p>
+<p>© 2026 Nanashino-chan. All rights reserved.</p>
 </footer>
 
-
-<!-- ===== videos.js 読み込み ===== -->
+<!-- JS -->
 <script src="videos.js"></script>
 
 <script>
-
-// ランダムで動画IDを1つ取得
 function randomVideo(list){
   return list[Math.floor(Math.random() * list.length)];
 }
 
-// YouTube埋め込みURL生成（ロゴ軽減付き）
 function getEmbedURL(id){
   return "https://www.youtube.com/embed/" + id + "?rel=0&modestbranding=1";
 }
 
-
-// ===== ボタン用 =====
-
 function playFocus(){
-  document.getElementById("focusPlayer").src =
-  getEmbedURL(randomVideo(focusVideos));
+  document.getElementById("focusPlayer").src = getEmbedURL(randomVideo(focusVideos));
 }
 
 function playSleep(){
-  document.getElementById("sleepPlayer").src =
-  getEmbedURL(randomVideo(sleepVideos));
+  document.getElementById("sleepPlayer").src = getEmbedURL(randomVideo(sleepVideos));
 }
 
 function playTokyo(){
-  document.getElementById("tokyoPlayer").src =
-  getEmbedURL(randomVideo(tokyoVideos));
+  document.getElementById("tokyoPlayer").src = getEmbedURL(randomVideo(tokyoVideos));
 }
-
-
-// ===== ページ読み込み時に自動表示（黒画面防止） =====
 
 window.onload = function(){
   playFocus();
   playSleep();
   playTokyo();
 };
-
 </script>
+
 </body>
 </html>
