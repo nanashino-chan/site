@@ -294,15 +294,18 @@ function onYouTubeIframeAPIReady(){
 
 // ボタン用
 function playFocus(){
-  focusPlayer.loadVideoById(randomVideo(focusVideos));
+  lastFocus = randomVideo(focusVideos, lastFocus);
+  focusPlayer.loadVideoById(lastFocus);
 }
 
 function playSleep(){
-  sleepPlayer.loadVideoById(randomVideo(sleepVideos));
+  lastSleep = randomVideo(sleepVideos, lastSleep);
+  sleepPlayer.loadVideoById(lastSleep);
 }
 
 function playTokyo(){
-  tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
+  lastTokyo = randomVideo(tokyoVideos, lastTokyo);
+  tokyoPlayer.loadVideoById(lastTokyo);
 }
 
 </script>
