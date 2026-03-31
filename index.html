@@ -220,26 +220,20 @@ Each generator picks a different track every time.
 <script src="videos.js"></script>
 
 <script>
-
 // プレイヤー
-let focusPlayer;
-let sleepPlayer;
-let tokyoPlayer;
+let focusPlayer, sleepPlayer, tokyoPlayer;
 
-let lastFocus = null;
-let lastSleep = null;
-let lastTokyo = null;
-
-// ランダム動画
-function randomVideo(list){
+// ランダム動画取得
+function randomVideo(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
 
-
-// YouTube API 読み込み後に実行
-function onYouTubeIframeAPIReady(){
+// YouTube API 読み込み後
+function onYouTubeIframeAPIReady() {
 
   focusPlayer = new YT.Player('focusPlayer', {
+    height: '100%',
+    width: '100%',
     videoId: randomVideo(focusVideos),
     playerVars: {
       rel: 0,
@@ -247,16 +241,17 @@ function onYouTubeIframeAPIReady(){
       playsinline: 1
     },
     events: {
-      'onStateChange': function(event){
-        if(event.data === 0){
+      'onStateChange': function(event) {
+        if (event.data === YT.PlayerState.ENDED) {
           focusPlayer.loadVideoById(randomVideo(focusVideos));
         }
       }
     }
   });
 
-
   sleepPlayer = new YT.Player('sleepPlayer', {
+    height: '100%',
+    width: '100%',
     videoId: randomVideo(sleepVideos),
     playerVars: {
       rel: 0,
@@ -264,16 +259,17 @@ function onYouTubeIframeAPIReady(){
       playsinline: 1
     },
     events: {
-      'onStateChange': function(event){
-        if(event.data === 0){
+      'onStateChange': function(event) {
+        if (event.data === YT.PlayerState.ENDED) {
           sleepPlayer.loadVideoById(randomVideo(sleepVideos));
         }
       }
     }
   });
 
-
   tokyoPlayer = new YT.Player('tokyoPlayer', {
+    height: '100%',
+    width: '100%',
     videoId: randomVideo(tokyoVideos),
     playerVars: {
       rel: 0,
@@ -281,33 +277,27 @@ function onYouTubeIframeAPIReady(){
       playsinline: 1
     },
     events: {
-      'onStateChange': function(event){
-        if(event.data === 0){
+      'onStateChange': function(event) {
+        if (event.data === YT.PlayerState.ENDED) {
           tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
         }
       }
     }
   });
-
 }
 
-
-// ボタン用
-function playFocus(){
-  lastFocus = randomVideo(focusVideos, lastFocus);
-  focusPlayer.loadVideoById(lastFocus);
+// ボタンで再生
+function playFocus() {
+  focusPlayer.loadVideoById(randomVideo(focusVideos));
 }
 
-function playSleep(){
-  lastSleep = randomVideo(sleepVideos, lastSleep);
-  sleepPlayer.loadVideoById(lastSleep);
+function playSleep() {
+  sleepPlayer.loadVideoById(randomVideo(sleepVideos));
 }
 
-function playTokyo(){
-  lastTokyo = randomVideo(tokyoVideos, lastTokyo);
-  tokyoPlayer.loadVideoById(lastTokyo);
+function playTokyo() {
+  tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
 }
-
 </script>
 
 </body>
