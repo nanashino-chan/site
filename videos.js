@@ -106,7 +106,6 @@ const sleepVideos = [
 "V93swbtmJGA",
 "B_SNM3bi4p8",
 //Spiritual Healing: Lo-Fi Frequencies for Meditation & Focus
-
 "vLaohDXCp-Y",
 "DEPPozz1OAk",
 "dSeNrrJYLRg",
@@ -126,10 +125,7 @@ const sleepVideos = [
 "EKPWgN1nHSQ",
 "zDriG45v2ac",
 "ZrwvQT5-edM",
-
-
 //Midnight Jazzhop:Lo-Fi Grooves for Late Nights
-
 "bH541iu6IXA",
 "7JR6ODaLd-0",
 "RUcJ9u41stg",
@@ -174,6 +170,54 @@ const tokyoVideos = [
 "QjoJbU04ATs",
 "2c39TplP3G0",
 "oj2rsPk8oTs",
+
+
+//Tokyo Lo-Fi Jazzhop Café – Smooth Piano Sessions　20曲
+"x u9SQYkvl2Co",
+"AoTQv875X3I",
+"PElA1kOw-pw",
+"4mV3W7fxoCc",
+"OTujTFF8n7g",
+"A_SW-niVN2k",
+"LPmdc-JruKo",
+"jAF9M7VfPEo",
+"Bz5aCH4wLZw",
+"BHrEmsb3g24",
+"wI3UCxhN3cY",
+"R-S9xNdzYNg",
+"ginJRnAQutg",
+"E8uzi72Xh7g",
+"0CP3I02TF4U",
+"OP6eLoKHF90",
+"rPrkPrFd7XA",
+"DylwKutnngI",
+"I_-0WehXWDg",
+"utDr866BM4w",
+"B241rGLSciI",
+"U0CpdM_GFG8",
+"7qqcm8ZzJks",
+"adUad0ncM1s",
+"SBkdqPJCmbU",
+//Midnight Soulful Lo-Fi Jazzhop: Smooth Sax & Keys for Deep Focus　19曲
+"BWJI30hbg5s",
+"KkMoWEiQgsU",
+"6Ijofdkt5p8",
+"UwzEfKSMWnE",
+"JgDeLKQuHBs",
+"p5KUZ78_A1Y",
+"fiyCuyj1Hxw",
+"dwIQBY9gMWo",
+"gXmICQMFqok",
+"v1MVwIq2c9A",
+"mQyy9f_791Q",
+"GfYvngoCslc",
+"75pHsKEbbCk",
+"1UrXMR6KfQQ",
+"7Px3wvZHwOk",
+"Ane2mMWD30M",
+"e8BABZDVcNQ",
+"4iuspVKPNOs",
+"2_9RUds3DA4",
 ];
 
 
