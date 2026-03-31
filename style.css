@@ -496,9 +496,10 @@ footer {
 
 #focusPlayer,
 #sleepPlayer,
-#tokyoPlayer {
-    width: 100%;
-    max-width: 560px;
-    height: 315px;
-    margin: 20px auto;
+#tokyoPlayer{
+  width:100%;
+  max-width:560px;
+  height:315px;
+  margin:15px auto;
+  background:#000;
 }
