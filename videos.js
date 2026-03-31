@@ -74,3 +74,16 @@ const tokyoVideos = [
 "2c39TplP3G0",
 "oj2rsPk8oTs"
 ];
+
+
+// ===== ランダム動画取得（同じ動画が連続しない版） =====
+function randomVideo(list, lastVideo = null) {
+
+  let newVideo;
+
+  do {
+    newVideo = list[Math.floor(Math.random() * list.length)];
+  } while (newVideo === lastVideo);
+
+  return newVideo;
+}
