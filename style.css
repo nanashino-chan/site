@@ -13,7 +13,7 @@ body {
 }
 
 /* ===================================
-   ナビメニュー
+   ナビメニュー（修正版）
 =================================== */
 
 nav {
@@ -43,16 +43,13 @@ nav {
     transition: 0.25s ease;
 }
 
+.nav a:hover {
+    opacity: 0.7;
+}
+
 .nav a.active {
     border-bottom: 2px solid #ffffff;
     padding-bottom: 4px;
-}
-
-/* hoverはPCだけで動作させる */
-@media (hover: hover) {
-    .nav a:hover {
-        opacity: 0.7;
-    }
 }
 
 /* ===================================
@@ -60,7 +57,7 @@ nav {
 =================================== */
 
 footer {
-    margin-top: 60px;
+    margin-top: 80px;
     padding: 30px;
     font-size: 14px;
     color: #aaa;
@@ -80,24 +77,21 @@ footer {
 
 .social a {
     background: #111;
-    padding: 16px;
+    padding: 18px;
     border-radius: 14px;
     transition: 0.3s;
     box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
-.social img {
-    width: 34px;
-    height: 34px;
-    display: block;
+.social a:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: #1c1c1c;
 }
 
-/* hoverはPCだけ */
-@media (hover: hover) {
-    .social a:hover {
-        transform: translateY(-5px) scale(1.05);
-        background: #1c1c1c;
-    }
+.social img {
+    width: 36px;
+    height: 36px;
+    display: block;
 }
 
 /* ===================================
@@ -105,7 +99,7 @@ footer {
 =================================== */
 
 .hero {
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
 .hero h1 {
@@ -119,15 +113,12 @@ footer {
     margin: auto;
     line-height: 1.6;
 }
-
-.container {
-    padding: 60px 20px;
-}
-
 .container h1 {
-    font-size: 46px;
+    font-size: 48px;
 }
-
+.container {
+    padding: 80px 20px;
+}
 .container p {
     max-width: 680px;
     margin: 20px auto 0 auto;
@@ -135,15 +126,250 @@ footer {
     font-size: 16px;
     color: #cfcfcf;
 }
+/* 動画カード */
+
+.video-cards {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.video-card {
+    width: 300px;
+    text-decoration: none;
+    color: white;
+    background: #111;
+    padding: 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.video-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+    background: #1a1a1a;
+}
+
+.video-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.video-card p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* 動画メイン表示 */
+
+.video-main {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.video-main iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+}
+
+/* 音楽リンクボタン */
+
+.music-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn.apple {
+    background: #ff2d55;
+}
+
+.btn.ytmusic {
+    background: #ff0000;
+}
+
+.btn.apple:hover {
+    background: #ff4b6e;
+}
+
+.btn.ytmusic:hover {
+    background: #ff3333;
+}
+/* ===== Brand Feature Section ===== */
+
+.brand-feature {
+    margin: 60px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.brand-feature h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.brand-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.brand-btn {
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 220px;
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+.brand-btn:hover {
+    transform: translateY(-5px);
+    background-color: #242424;
+}
+
+.brand-btn img {
+    width: 100%;
+    height: auto; 
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.brand-btn p {
+    font-size: 13px;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
 
 /* ===================================
-   動画カード
+   ABOUTページ
+=================================== */
+
+.about-section {
+    max-width: 900px;
+    margin: 80px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-subtitle {
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.about-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+.about-image {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 14px;
+    display: block;
+}
+.about-tagline {
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+/* ===================================
+   CONTACTページ
+=================================== */
+
+.google-form {
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.google-form iframe {
+    width: 100%;
+    border-radius: 12px;
+    background: white;
+}
+
+/* ===================================
+   スマホ対応（全ページ共通）
+=================================== */
+@media (max-width: 768px){
+
+.generator-grid{
+    grid-template-columns:1fr;
+}
+
+}
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-sub {
+        font-size: 15px;
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+
+    .about-subtitle {
+        font-size: 18px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+
+    .google-form iframe {
+        height: 850px;
+    }
+
+    .nav {
+        gap: 14px;
+        padding: 12px 10px;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+   }
+/* ===================================
+   index.html用 動画カード
 =================================== */
 
 .video-grid {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
     max-width: 1100px;
     margin: 0 auto;
@@ -168,33 +394,11 @@ footer {
     text-align: center;
 }
 
-/* hoverはPCのみ */
-@media (hover: hover) {
-    .card:hover {
-        transform: scale(1.05);
-        background: #1a1a1a;
-    }
+.card:hover {
+    transform: scale(1.05);
+    background: #1a1a1a;
 }
-
-/* ===================================
-   動画メイン表示（ここが重要修正）
-=================================== */
-
-.video-main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 15px;
-}
-
-.video-main iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 12px;
-}
-
-/* ===================================
-   動画ボタン
-=================================== */
+/* 動画ボタン */
 
 .btn {
     display: inline-block;
@@ -208,96 +412,57 @@ footer {
     transition: 0.25s;
 }
 
-@media (hover: hover) {
-    .btn:hover {
-        background: #ffa733;
-        transform: scale(1.05);
-    }
+.btn:hover {
+    background: #ffa733;
+    transform: scale(1.05);
+}
+/* Today's Recommended Track */
+
+.recommend-section {
+  margin-top: 60px;
+  text-align: center;
 }
 
-/* ===================================
-   ABOUTページ
-=================================== */
-
-.about-section {
-    max-width: 900px;
-    margin: 60px auto;
-    text-align: center;
-    padding: 0 20px;
+#recommendBtn {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
-.about-title {
-    font-size: 34px;
-    margin-bottom: 20px;
+.track-box {
+  margin-top: 25px;
 }
 
-.about-subtitle {
-    font-size: 20px;
-    margin-bottom: 25px;
-    font-weight: 500;
+.track-box img {
+  width: 320px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
-.about-content p {
-    font-size: 16px;
-    line-height: 1.9;
-    margin-bottom: 20px;
+.listen-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #ff0000;
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
 }
-
-.about-image {
-    width: 100%;
-    max-width: 900px;
-    margin: 25px auto;
-    border-radius: 14px;
-    display: block;
+.generator-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
 }
-
-/* ===================================
-   CONTACTページ
-=================================== */
-
-.google-form {
+.generator-text {
     max-width: 700px;
-    margin: 40px auto;
-}
-
-.google-form iframe {
-    width: 100%;
-    border-radius: 12px;
-    background: white;
-}
-
-/* ===================================
-   スマホ最適化（重要）
-=================================== */
-
-@media (max-width: 600px) {
-
-    .hero {
-        padding: 40px 15px;
-    }
-
-    .container {
-        padding: 40px 15px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero-sub {
-        font-size: 15px;
-    }
-
-    .card {
-        width: 92%;
-    }
-
-    .social img {
-        width: 30px;
-        height: 30px;
-    }
-
-    footer {
-        margin-top: 40px;
-    }
+    margin: 0 auto 40px auto;
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 15px;
 }
