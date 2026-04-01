@@ -230,8 +230,8 @@ function randomVideo(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
 
-// YouTube API 読み込み後
-function onYouTubeIframeAPIReady() {
+// YouTube APIが完全に読み込まれた後に実行
+window.onYouTubeIframeAPIReady = function () {
 
   focusPlayer = new YT.Player('focusPlayer', {
     height: '100%',
@@ -243,7 +243,7 @@ function onYouTubeIframeAPIReady() {
       playsinline: 1
     },
     events: {
-      'onStateChange': function(event) {
+      onStateChange: function(event) {
         if (event.data === YT.PlayerState.ENDED) {
           focusPlayer.loadVideoById(randomVideo(focusVideos));
         }
@@ -261,7 +261,7 @@ function onYouTubeIframeAPIReady() {
       playsinline: 1
     },
     events: {
-      'onStateChange': function(event) {
+      onStateChange: function(event) {
         if (event.data === YT.PlayerState.ENDED) {
           sleepPlayer.loadVideoById(randomVideo(sleepVideos));
         }
@@ -279,16 +279,17 @@ function onYouTubeIframeAPIReady() {
       playsinline: 1
     },
     events: {
-      'onStateChange': function(event) {
+      onStateChange: function(event) {
         if (event.data === YT.PlayerState.ENDED) {
           tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
         }
       }
     }
   });
-}
 
-// ボタンで再生
+};
+
+// ボタン
 function playFocus() {
   focusPlayer.loadVideoById(randomVideo(focusVideos));
 }
@@ -301,6 +302,5 @@ function playTokyo() {
   tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
 }
 </script>
-
 </body>
 </html>
