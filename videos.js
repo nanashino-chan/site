@@ -77,7 +77,7 @@ const focusVideos = [
 "7CkwOVyq5ys",
 "liRkdME-xtk",
 "bcuZOTsTkH0",
-"YGyDkXeFl4I",
+"YGyDkXeFl4I"
 ];
 
 const sleepVideos = [
@@ -145,7 +145,7 @@ const sleepVideos = [
 "u-Pry8K5XyA",
 "Dq7IPnjSzPc",
 "sb8X53d893E",
-"xrhnDF6WwpE",
+"xrhnDF6WwpE"
 ];
 
 const tokyoVideos = [
@@ -170,8 +170,6 @@ const tokyoVideos = [
 "QjoJbU04ATs",
 "2c39TplP3G0",
 "oj2rsPk8oTs",
-
-
 //Tokyo Lo-Fi Jazzhop Café – Smooth Piano Sessions　20曲
 "x u9SQYkvl2Co",
 "AoTQv875X3I",
@@ -217,7 +215,7 @@ const tokyoVideos = [
 "Ane2mMWD30M",
 "e8BABZDVcNQ",
 "4iuspVKPNOs",
-"2_9RUds3DA4",
+"2_9RUds3DA4"
 ];
 
 
