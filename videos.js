@@ -171,7 +171,7 @@ const tokyoVideos = [
 "2c39TplP3G0",
 "oj2rsPk8oTs",
 //Tokyo Lo-Fi Jazzhop Café – Smooth Piano Sessions　20曲
-"x u9SQYkvl2Co",
+"u9SQYkvl2Co",
 "AoTQv875X3I",
 "PElA1kOw-pw",
 "4mV3W7fxoCc",
