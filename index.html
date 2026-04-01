@@ -216,7 +216,7 @@ Each generator picks a different track every time.
 </footer>
 
 
-<!-- 動画IDリスト -->
+<!-- 動画IDリスト（最初に読み込む） -->
 <script src="videos.js"></script>
 
 <script>
@@ -224,7 +224,7 @@ Each generator picks a different track every time.
 // =========================
 // ランダム動画取得
 // =========================
-function randomVideo(list){
+function randomVideo(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
 
@@ -234,86 +234,92 @@ function randomVideo(list){
 let focusPlayer;
 let sleepPlayer;
 let tokyoPlayer;
-let apiLoaded = false;
 
 // =========================
-// YouTube API を1回だけ読み込む
+// YouTube API をあとから読み込む
 // =========================
-function loadAPI(){
-  if(apiLoaded) return;
-
+function loadYouTubeAPI() {
   const tag = document.createElement("script");
   tag.src = "https://www.youtube.com/iframe_api";
   document.body.appendChild(tag);
-
-  apiLoaded = true;
 }
 
-// =========================
-// Focus
-// =========================
-function playFocus(){
+// ページ読み込み完了後にAPI読み込み
+window.addEventListener("load", loadYouTubeAPI);
 
-  loadAPI();
+// =========================
+// API準備完了後
+// =========================
+window.onYouTubeIframeAPIReady = function () {
 
-  if(!focusPlayer){
-    focusPlayer = new YT.Player("focusPlayer", {
-      videoId: randomVideo(focusVideos),
-      playerVars:{
-        rel:0,
-        modestbranding:1,
-        playsinline:1
+  // Focus
+  focusPlayer = new YT.Player("focusPlayer", {
+    videoId: randomVideo(focusVideos),
+    playerVars: {
+      rel: 0,
+      modestbranding: 1,
+      playsinline: 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+          focusPlayer.loadVideoById(randomVideo(focusVideos));
+        }
       }
-    });
-  }else{
-    focusPlayer.loadVideoById(randomVideo(focusVideos));
-  }
+    }
+  });
 
-}
-
-// =========================
-// Sleep
-// =========================
-function playSleep(){
-
-  loadAPI();
-
-  if(!sleepPlayer){
-    sleepPlayer = new YT.Player("sleepPlayer", {
-      videoId: randomVideo(sleepVideos),
-      playerVars:{
-        rel:0,
-        modestbranding:1,
-        playsinline:1
+  // Sleep
+  sleepPlayer = new YT.Player("sleepPlayer", {
+    videoId: randomVideo(sleepVideos),
+    playerVars: {
+      rel: 0,
+      modestbranding: 1,
+      playsinline: 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+          sleepPlayer.loadVideoById(randomVideo(sleepVideos));
+        }
       }
-    });
-  }else{
-    sleepPlayer.loadVideoById(randomVideo(sleepVideos));
-  }
+    }
+  });
 
-}
-
-// =========================
-// Tokyo
-// =========================
-function playTokyo(){
-
-  loadAPI();
-
-  if(!tokyoPlayer){
-    tokyoPlayer = new YT.Player("tokyoPlayer", {
-      videoId: randomVideo(tokyoVideos),
-      playerVars:{
-        rel:0,
-        modestbranding:1,
-        playsinline:1
+  // Tokyo
+  tokyoPlayer = new YT.Player("tokyoPlayer", {
+    videoId: randomVideo(tokyoVideos),
+    playerVars: {
+      rel: 0,
+      modestbranding: 1,
+      playsinline: 1
+    },
+    events: {
+      onStateChange: function(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+          tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
+        }
       }
-    });
-  }else{
-    tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
-  }
+    }
+  });
 
+};
+
+// =========================
+// ボタン用（安全版）
+// =========================
+function playFocus() {
+  if (focusPlayer) focusPlayer.loadVideoById(randomVideo(focusVideos));
 }
+
+function playSleep() {
+  if (sleepPlayer) sleepPlayer.loadVideoById(randomVideo(sleepVideos));
+}
+
+function playTokyo() {
+  if (tokyoPlayer) tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
+}
+
 </script>
 </body>
 </html>
