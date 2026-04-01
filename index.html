@@ -219,31 +219,40 @@ Each generator picks a different track every time.
 <!-- 動画IDリスト（必ず最初） -->
 <script src="videos.js"></script>
 
-<!-- YouTube Iframe API（次） -->
-<script src="https://www.youtube.com/iframe_api"></script>
-
-<!-- プレイヤーコード（最後） -->
 <script>
 
-// ===== プレイヤー変数 =====
-let focusPlayer;
-let sleepPlayer;
-let tokyoPlayer;
-
-
-// ===== ランダム動画取得 =====
+// =========================
+// ランダム動画取得
+// =========================
 function randomVideo(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
 
+// =========================
+// プレイヤー変数
+// =========================
+let focusPlayer;
+let sleepPlayer;
+let tokyoPlayer;
 
-// ===== YouTube API 読み込み完了後 =====
+// =========================
+// YouTube API をあとから読み込む（重要）
+// =========================
+function loadYouTubeAPI() {
+  const tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.body.appendChild(tag);
+}
+
+window.addEventListener("load", loadYouTubeAPI);
+
+// =========================
+// API読み込み完了後
+// =========================
 window.onYouTubeIframeAPIReady = function () {
 
   // Focus
-  focusPlayer = new YT.Player('focusPlayer', {
-    height: '100%',
-    width: '100%',
+  focusPlayer = new YT.Player("focusPlayer", {
     videoId: randomVideo(focusVideos),
     playerVars: {
       rel: 0,
@@ -251,7 +260,7 @@ window.onYouTubeIframeAPIReady = function () {
       playsinline: 1
     },
     events: {
-      onStateChange: function(event) {
+      onStateChange: function (event) {
         if (event.data === YT.PlayerState.ENDED) {
           focusPlayer.loadVideoById(randomVideo(focusVideos));
         }
@@ -260,9 +269,7 @@ window.onYouTubeIframeAPIReady = function () {
   });
 
   // Sleep
-  sleepPlayer = new YT.Player('sleepPlayer', {
-    height: '100%',
-    width: '100%',
+  sleepPlayer = new YT.Player("sleepPlayer", {
     videoId: randomVideo(sleepVideos),
     playerVars: {
       rel: 0,
@@ -270,7 +277,7 @@ window.onYouTubeIframeAPIReady = function () {
       playsinline: 1
     },
     events: {
-      onStateChange: function(event) {
+      onStateChange: function (event) {
         if (event.data === YT.PlayerState.ENDED) {
           sleepPlayer.loadVideoById(randomVideo(sleepVideos));
         }
@@ -279,9 +286,7 @@ window.onYouTubeIframeAPIReady = function () {
   });
 
   // Tokyo
-  tokyoPlayer = new YT.Player('tokyoPlayer', {
-    height: '100%',
-    width: '100%',
+  tokyoPlayer = new YT.Player("tokyoPlayer", {
     videoId: randomVideo(tokyoVideos),
     playerVars: {
       rel: 0,
@@ -289,7 +294,7 @@ window.onYouTubeIframeAPIReady = function () {
       playsinline: 1
     },
     events: {
-      onStateChange: function(event) {
+      onStateChange: function (event) {
         if (event.data === YT.PlayerState.ENDED) {
           tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
         }
@@ -299,18 +304,19 @@ window.onYouTubeIframeAPIReady = function () {
 
 };
 
-
-// ===== ボタン用 =====
+// =========================
+// ボタン用（安全版）
+// =========================
 function playFocus() {
-  focusPlayer.loadVideoById(randomVideo(focusVideos));
+  if (focusPlayer) focusPlayer.loadVideoById(randomVideo(focusVideos));
 }
 
 function playSleep() {
-  sleepPlayer.loadVideoById(randomVideo(sleepVideos));
+  if (sleepPlayer) sleepPlayer.loadVideoById(randomVideo(sleepVideos));
 }
 
 function playTokyo() {
-  tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
+  if (tokyoPlayer) tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
 }
 
 </script>
