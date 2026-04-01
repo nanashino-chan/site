@@ -221,18 +221,31 @@ Each generator picks a different track every time.
 <!-- 動画IDリスト -->
 <script src="videos.js"></script>
 
-<script>
-// プレイヤー
-let focusPlayer, sleepPlayer, tokyoPlayer;
+<!-- 動画IDリスト（必ず最初） -->
+<script src="videos.js"></script>
 
-// ランダム動画取得
+<!-- YouTube Iframe API（次） -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<!-- プレイヤーコード（最後） -->
+<script>
+
+// ===== プレイヤー変数 =====
+let focusPlayer;
+let sleepPlayer;
+let tokyoPlayer;
+
+
+// ===== ランダム動画取得 =====
 function randomVideo(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
 
-// YouTube APIが完全に読み込まれた後に実行
+
+// ===== YouTube API 読み込み完了後 =====
 window.onYouTubeIframeAPIReady = function () {
 
+  // Focus
   focusPlayer = new YT.Player('focusPlayer', {
     height: '100%',
     width: '100%',
@@ -251,6 +264,7 @@ window.onYouTubeIframeAPIReady = function () {
     }
   });
 
+  // Sleep
   sleepPlayer = new YT.Player('sleepPlayer', {
     height: '100%',
     width: '100%',
@@ -269,6 +283,7 @@ window.onYouTubeIframeAPIReady = function () {
     }
   });
 
+  // Tokyo
   tokyoPlayer = new YT.Player('tokyoPlayer', {
     height: '100%',
     width: '100%',
@@ -289,7 +304,8 @@ window.onYouTubeIframeAPIReady = function () {
 
 };
 
-// ボタン
+
+// ===== ボタン用 =====
 function playFocus() {
   focusPlayer.loadVideoById(randomVideo(focusVideos));
 }
@@ -301,6 +317,7 @@ function playSleep() {
 function playTokyo() {
   tokyoPlayer.loadVideoById(randomVideo(tokyoVideos));
 }
+
 </script>
 </body>
 </html>
