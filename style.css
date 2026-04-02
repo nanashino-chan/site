@@ -373,15 +373,13 @@ footer {
     max-width: 1100px;
     margin: 0 auto;
 }
-
+/* カード */
 .card {
-    width: 300px;
-    background: #111;
-    border-radius: 12px;
-    padding-bottom: 20px;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s;
+  width: 300px;
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
 .card img {
@@ -500,37 +498,29 @@ footer {
 }
 /* ===== YouTubeプレイヤー表示用 ===== */
 
-#player-focus,
-#player-sleep,
-#player-tokyo,
-#player-cafe,
-#player-relax,
-#player-dream {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #111;
-}
+
 /* 動画エリア固定 */
 .card > div[id^="player-"] {
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #000;
   position: relative;
-  overflow: hidden;
 }
 
-/* iframeは中だけに収める */
+/* iframe（中にフィット） */
 .card > div[id^="player-"] iframe {
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0;
   left: 0;
 }
 
-/* ボタンエリア（別レイヤー） */
+
+/* テキスト＋ボタン（完全分離） */
 .card-content {
+  padding: 15px;
+  margin-top: 0;
   position: relative;
-  padding-top: 10px;
   z-index: 2;
 }
