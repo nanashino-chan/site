@@ -510,15 +510,20 @@ footer {
 .card > div[id^="player-"] {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background-color: #111; /* 万が一の黒背景 */
+  background-color: #111; 
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
-/* Loading文字は非表示でもOK */
-.card > div[id^="player-"]::before {
-  content: "";
+.card > div[id^="player-"] .play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  background: rgba(0,0,0,0.4);
 }
