@@ -226,7 +226,33 @@ const videos = {
   // 空でもOK（あとで追加）
   cafe: [],
   relax: [],
-  dream: []
+  dream: [
+//synthwave水着24
+    "CI9JX-r0DgY",
+    "n3rpu23Q4rs",
+    "SBS2N7OaLbY",
+    "wooVVSMqbVg",
+    "mtQwxopXhYo",
+    "5BQUu778j2Y",
+    "VYMUzR85Zgw",
+    "JTUv4um7GoQ",
+    "AE2QX_phV2o",
+    "mEh4fL86Knk",
+    "C5NyE462jgk",
+    "ZXkhIwXwfts",
+    "h8i1SxgaVfM",
+    "GUyYQOjzuQ8",
+    "7nEkHp7pagk",
+    "fchv2mGjExg",
+    "ehQYQ-95MEo",
+    "yifhvQPGfxw",
+    "zVvd5fnSCqE",
+    "fLi8C8OD7J4",
+    "gKa_yMfPZE8",
+    "Fi3PEPJYJeY",
+    "e9JmagU2QY0",
+    "UcmzWj1QYYk"
+  ]
 };
 
 
