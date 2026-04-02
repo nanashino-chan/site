@@ -395,6 +395,13 @@ footer {
     z-index: 2;
     margin-top: 10px;
 }
+.card iframe {
+    height: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
 
 /* hover */
 .card:hover {
