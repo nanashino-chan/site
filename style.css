@@ -507,21 +507,18 @@ footer {
   background: #111;
 }
 /* =========================
-   プレースホルダー＆iframe高さ固定
-========================= */
 .card > div[id^="player-"] {
-  width: 100%;              /* カード幅いっぱい */
-  aspect-ratio: 16 / 9;     /* 16:9比率 */
-  background-color: #111;   /* iframe生成前の背景色 */
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #111; /* 万が一の黒背景 */
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #aaa;
-  font-size: 14px;
-  font-family: 'Inter', sans-serif;
-  text-align: center;
 }
 
+/* Loading文字は非表示でもOK */
 .card > div[id^="player-"]::before {
-  content: "Loading…";
+  content: "";
 }
