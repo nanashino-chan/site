@@ -395,9 +395,10 @@ footer {
     margin-top: 10px;
 }
 
+/* hover */
 .card:hover {
-    transform: scale(1.05);
-    background: #1a1a1a;
+  transform: scale(1.05);
+  background: #1a1a1a;
 }
 /* 動画ボタン */
 
