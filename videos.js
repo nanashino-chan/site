@@ -267,3 +267,17 @@ function getRandomFromAll() {
   const all = Object.values(videos).flat();
   return all[Math.floor(Math.random() * all.length)];
 }
+//追加コード
+function setPlayerThumbnail(type) {
+  const list = getList(type);
+  if(!list || list.length === 0) return;
+
+  const firstVideoId = list[0]; // 最初の動画をサムネイルに
+  const playerDiv = document.getElementById(`player-${type}`);
+  if(playerDiv){
+    playerDiv.style.backgroundImage = `url('https://img.youtube.com/vi/${firstVideoId}/hqdefault.jpg')`;
+  }
+}
+
+// ページ読み込み時に全ジェネレーターに設定
+['focus','sleep','tokyo','cafe','relax','dream'].forEach(setPlayerThumbnail);
