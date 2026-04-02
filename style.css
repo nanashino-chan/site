@@ -506,18 +506,4 @@ footer {
   aspect-ratio: 16 / 9;
   background: #111;
 }
-.player-placeholder {
-  width: 100%;
-  aspect-ratio: 16/9;
-  background: #111;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.player-placeholder img {
-  width: 50%;
-  height: auto;
-  object-fit: contain;
-  opacity: 0.3;
-}
