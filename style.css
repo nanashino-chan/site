@@ -496,12 +496,13 @@ footer {
 }
 /* ===== YouTubeプレイヤー表示用 ===== */
 
-#focusPlayer,
-#sleepPlayer,
-#tokyoPlayer{
-  width:100%;
-  max-width:560px;
-  height:315px;
-  margin:15px auto;
-  background:#000;
+#player-focus,
+#player-sleep,
+#player-tokyo,
+#player-cafe,
+#player-relax,
+#player-dream {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
 }
