@@ -276,26 +276,21 @@ function getRandomFromAll() {
 }
 
 // =========================
-// サムネイル初期表示
+// サムネイル初期表示（確実版）
 // =========================
 const TYPES = ['focus','sleep','tokyo','cafe','relax','dream'];
 
-function setThumbnail(type){
-  const list = getList(type);
-  if(!list || list.length === 0) return;
+window.addEventListener("load", () => {
+  TYPES.forEach(type => {
+    const el = document.getElementById(`player-${type}`);
+    const list = getList(type);
 
-  const videoId = list[0];
-  const el = document.getElementById(`player-${type}`);
-  if(!el) return;
+    if(!el || !list || list.length === 0) return;
 
-  el.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
-  el.style.backgroundSize = "cover";
-  el.style.backgroundPosition = "center";
-}
+    const videoId = list[0];
 
-// =========================
-// 初期化
-// =========================
-document.addEventListener("DOMContentLoaded", ()=>{
-  TYPES.forEach(setThumbnail);
+    el.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
+    el.style.backgroundSize = "cover";
+    el.style.backgroundPosition = "center";
+  });
 });
