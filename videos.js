@@ -285,3 +285,20 @@ window.addEventListener("load", () => {
     el.style.backgroundPosition = "center";
   });
 });
+// =========================
+// 次の曲ボタン
+// =========================
+function nextTrack(type){
+
+  if(!players[type]){
+    // まだ再生してない場合 → 通常再生
+    startGenerator(type);
+    return;
+  }
+
+  const videoId = getRandomVideo(type);
+
+  if(!videoId) return;
+
+  players[type].loadVideoById(videoId);
+}
