@@ -231,52 +231,43 @@ const videos = {
 
 
 // =========================
+// リスト取得（修正版）
+// =========================
+function getList(type){
+  return videos[type];
+}
+
+// =========================
 // 履歴管理（重複防止）
 // =========================
 const history = {};
 
 function getRandomVideo(type) {
   const list = videos[type];
-
   if (!list || list.length === 0) return null;
 
-  if (!history[type]) {
-    history[type] = [];
-  }
-
-  if (history[type].length === list.length) {
-    history[type] = [];
-  }
+  if (!history[type]) history[type] = [];
+  if (history[type].length === list.length) history[type] = [];
 
   let video;
-
   do {
     video = list[Math.floor(Math.random() * list.length)];
   } while (history[type].includes(video));
 
   history[type].push(video);
-
   return video;
 }
 
-
 // =========================
-// 全ジャンルランダム（おすすめ用）
+// 全ジャンルランダム（修正版）
 // =========================
 function getRandomFromAll() {
-  const all = [
-    ...focusVideos,
-    ...sleepVideos,
-    ...tokyoVideos,
-    ...cafeVideos,
-    ...relaxVideos,
-    ...dreamVideos
-  ];
+  const all = Object.values(videos).flat();
   return all[Math.floor(Math.random() * all.length)];
 }
 
 // =========================
-// サムネイル初期表示（確実版）
+// サムネイル初期表示
 // =========================
 const TYPES = ['focus','sleep','tokyo','cafe','relax','dream'];
 
@@ -294,17 +285,3 @@ window.addEventListener("load", () => {
     el.style.backgroundPosition = "center";
   });
 });
-
-// =========================
-// リスト取得（ここに置く）
-// =========================
-function getList(type){
-  return {
-    focus: focusVideos,
-    sleep: sleepVideos,
-    tokyo: tokyoVideos,
-    cafe: cafeVideos,
-    relax: relaxVideos,
-    dream: dreamVideos
-  }[type];
-}
