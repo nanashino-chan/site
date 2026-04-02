@@ -294,3 +294,25 @@ window.addEventListener("load", () => {
     el.style.backgroundPosition = "center";
   });
 });
+// ===== 配列 =====
+const focusVideos = [ ... ];
+const sleepVideos = [ ... ];
+const tokyoVideos = [ ... ];
+const cafeVideos = [ ... ];
+const relaxVideos = [ ... ];
+const dreamVideos = [ ... ];
+
+
+// =========================
+// リスト取得（ここに置く）
+// =========================
+function getList(type){
+  return {
+    focus: focusVideos,
+    sleep: sleepVideos,
+    tokyo: tokyoVideos,
+    cafe: cafeVideos,
+    relax: relaxVideos,
+    dream: dreamVideos
+  }[type];
+}
