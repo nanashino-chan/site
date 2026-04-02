@@ -4,7 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Today's Recommended Track | Lofi & Chill Music</title>
+<title>Today's Lo-Fi Track | Study & Chill Music</title>
+
+<!-- SEO（最低限） -->
+<meta name="description" content="Today's recommended lo-fi track for study, focus, and relaxation. 今日の作業・勉強に最適なLo-Fi音楽。">
+
+<!-- CSP（簡易セキュリティ） -->
+<meta http-equiv="Content-Security-Policy"
+content="
+default-src 'self';
+script-src 'self' https://www.youtube.com https://www.youtube.com/iframe_api;
+frame-src https://www.youtube.com;
+img-src 'self' https://img.youtube.com data:;
+style-src 'self' 'unsafe-inline';
+">
 
 <style>
 body{
@@ -28,16 +41,51 @@ h1{
 
 p{
     color:#bbbbbb;
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
-iframe{
-    width:100%;
-    height:500px;
-    border-radius:12px;
+/* ===== プレイヤー ===== */
+.player{
+  position:relative;
+  aspect-ratio:16/9;
+  background:#000;
+  border-radius:12px;
+  overflow:hidden;
+  cursor:pointer;
 }
 
-/* ===== Main Button ===== */
+.player img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.play-btn{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:40px;
+  background:rgba(0,0,0,0.6);
+  padding:20px;
+  border-radius:50%;
+}
+
+/* ===== ボタン ===== */
+.controls{
+  margin-top:20px;
+}
+
+.controls button{
+  margin:10px;
+  padding:12px 24px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+/* ===== YouTube導線 ===== */
 .youtube-btn{
     display:inline-block;
     background:#ff4c4c;
@@ -47,40 +95,36 @@ iframe{
     padding:16px 48px;
     border-radius:100px;
     text-decoration:none;
-    margin-top:28px;
+    margin-top:30px;
     transition:0.2s;
 }
 
 .youtube-btn:hover{
-    transform:scale(1.04);
+    transform:scale(1.05);
 }
 
-/* ===== Detail Link ===== */
-.detail-link{
-    display:block;
-    margin-top:14px;
-    font-size:13px;
-    color:#bdbdbd;
-    text-decoration:none;
-    transition:0.2s;
-}
-
-.detail-link:hover{
-    color:#ffffff;
-}
-
-/* ===== Back Link ===== */
+/* ===== リンク ===== */
 .back-link{
     display:block;
     margin-top:40px;
     font-size:14px;
     color:#bdbdbd;
     text-decoration:none;
-    transition:0.2s;
 }
 
 .back-link:hover{
     color:#ffffff;
+}
+
+/* ===== 実績 ===== */
+.reel{
+    margin-top:40px;
+}
+
+.reel img{
+    width:100%;
+    max-width:400px;
+    border-radius:12px;
 }
 </style>
 </head>
@@ -88,37 +132,84 @@ iframe{
 <body>
 
 <div class="container">
-<h1>Today's Lofi Track That Everyone Is Using</h1>
-<h2>Today's Recommended Track</h2>
-<p>Relax, focus, and enjoy this track.</p>
 
-<!-- ===== YouTube Video (17曲目) ===== -->
-<iframe 
-src="https://www.youtube.com/embed/PnyutlzXem0" 
-frameborder="0" 
-allowfullscreen>
-</iframe>
+<h1>Today's Lo-Fi Track</h1>
+<p>今日の作業・勉強・リラックスに最適な1曲</p>
 
-<!-- ===== Main Button ===== -->
+<!-- ===== プレイヤー（軽量） ===== -->
+<div class="player" id="player" onclick="playVideo()">
+  <img id="thumbnail"
+       src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg"
+       alt="Today's Lofi Track">
+  <div class="play-btn">▶</div>
+</div>
+
+<!-- ===== コントロール ===== -->
+<div class="controls">
+  <button onclick="playVideo()">Play</button>
+  <button onclick="nextTrack()">Next Track</button>
+</div>
+
+<!-- ===== SEOテキスト ===== -->
+<p>
+This lo-fi track is perfect for study, deep focus, and relaxation.<br>
+このLo-Fi音楽は、作業・勉強・集中・リラックスに最適です。
+</p>
+
+<!-- ===== 実績 ===== -->
+<div class="reel">
+  <h2>Used by Creators</h2>
+  <p>世界中のクリエイターに使用されています</p>
+  <img src="https://via.placeholder.com/400x225" alt="Used in reels">
+</div>
+
+<!-- ===== YouTube導線 ===== -->
 <a href="https://www.youtube.com/watch?v=PnyutlzXem0"
    target="_blank"
    class="youtube-btn">
 Listen on YouTube
 </a>
 
-<!-- ===== Album Detail Link ===== -->
-<a href="https://www.youtube.com/watch?v=PnyutlzXem0&list=OLAK5uy_n_a2xGuatHdCnHAS-c5UK9Joqh1a51P-w"
-   target="_blank"
-   class="detail-link">
-View this track on the album
-</a>
-
-<!-- ===== Back to TOP ===== -->
+<!-- ===== 戻る ===== -->
 <a href="index.html" class="back-link">
 Back to Top
 </a>
 
 </div>
+
+<script>
+const videos = [
+  "PnyutlzXem0",
+  "XPv78upJZhQ",
+  "iRSTgLr4WVE"
+];
+
+let current = 0;
+let playerLoaded = false;
+
+function playVideo(){
+  if(playerLoaded) return;
+
+  const el = document.getElementById("player");
+
+  el.innerHTML = `
+    <iframe
+      src="https://www.youtube.com/embed/${videos[current]}?autoplay=1"
+      frameborder="0"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  `;
+
+  playerLoaded = true;
+}
+
+function nextTrack(){
+  current = Math.floor(Math.random() * videos.length);
+  playerLoaded = false;
+  playVideo();
+}
+</script>
 
 </body>
 </html>
