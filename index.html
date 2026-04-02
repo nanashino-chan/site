@@ -193,28 +193,7 @@ let players = {};
 let apiLoaded = false;
 
 // =========================
-// ランダム
-// =========================
-function randomVideo(list){
-  return list[Math.floor(Math.random() * list.length)];
-}
-
-// =========================
-// リスト取得
-// =========================
-function getList(type){
-  return {
-    focus: focusVideos,
-    sleep: sleepVideos,
-    tokyo: tokyoVideos,
-    cafe: cafeVideos,
-    relax: relaxVideos,
-    dream: dreamVideos
-  }[type];
-}
-
-// =========================
-// API読み込み
+// API読み込み（遅延・安定版）
 // =========================
 function loadYouTubeAPI(){
   return new Promise((resolve)=>{
@@ -243,14 +222,18 @@ function loadYouTubeAPI(){
 }
 
 // =========================
-// メイン機能（超軽量）
+// メイン機能（最適化版）
 // =========================
 async function startGenerator(type){
 
   await loadYouTubeAPI();
 
-  const list = getList(type);
-  const videoId = randomVideo(list);
+  const videoId = getRandomVideo(type);
+
+  if(!videoId){
+    console.warn(`No videos found for type: ${type}`);
+    return;
+  }
 
   if(!players[type]){
 
@@ -264,7 +247,7 @@ async function startGenerator(type){
       events:{
         onStateChange:(event)=>{
           if(event.data === YT.PlayerState.ENDED){
-            players[type].loadVideoById(randomVideo(list));
+            players[type].loadVideoById(getRandomVideo(type));
           }
         }
       }
@@ -276,6 +259,5 @@ async function startGenerator(type){
 }
 
 </script>
-
 </body>
 </html>
