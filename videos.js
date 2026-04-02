@@ -291,7 +291,7 @@ window.addEventListener("load", () => {
 function nextTrack(type){
 
   if(!players[type]){
-    // まだ再生してない場合 → 通常再生
+    // まだ再生してない場合 → 初回再生
     startGenerator(type);
     return;
   }
