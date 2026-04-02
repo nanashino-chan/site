@@ -264,21 +264,38 @@ function getRandomVideo(type) {
 // 全ジャンルランダム（おすすめ用）
 // =========================
 function getRandomFromAll() {
-  const all = Object.values(videos).flat();
+  const all = [
+    ...focusVideos,
+    ...sleepVideos,
+    ...tokyoVideos,
+    ...cafeVideos,
+    ...relaxVideos,
+    ...dreamVideos
+  ];
   return all[Math.floor(Math.random() * all.length)];
 }
-//追加コード
-function setPlayerThumbnail(type){
+
+// =========================
+// サムネイル初期表示
+// =========================
+const TYPES = ['focus','sleep','tokyo','cafe','relax','dream'];
+
+function setThumbnail(type){
   const list = getList(type);
   if(!list || list.length === 0) return;
 
-  const firstVideoId = list[0];
-  const playerDiv = document.getElementById(`player-${type}`);
-  if(playerDiv){
-    playerDiv.style.backgroundImage = `url('https://img.youtube.com/vi/${firstVideoId}/hqdefault.jpg')`;
-    playerDiv.innerHTML = '<div class="play-overlay">Loading…</div>';
-  }
+  const videoId = list[0];
+  const el = document.getElementById(`player-${type}`);
+  if(!el) return;
+
+  el.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
+  el.style.backgroundSize = "cover";
+  el.style.backgroundPosition = "center";
 }
 
-// ページ読み込み時に全ジェネレーターに適用
-['focus','sleep','tokyo','cafe','relax','dream'].forEach(setPlayerThumbnail);
+// =========================
+// 初期化
+// =========================
+document.addEventListener("DOMContentLoaded", ()=>{
+  TYPES.forEach(setThumbnail);
+});
