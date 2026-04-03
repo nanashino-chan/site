@@ -4,47 +4,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>Lo-Fi Music for Study & Focus ☕ Today's Track | 作業用BGM・勉強用BGM</title>
+<title>Today's Lo-Fi Track ☕ Study & Focus Music</title>
 
-<meta name="description" content="Today's lo-fi music for study, focus, and relaxation. Discover a new chill track every day. 作業・勉強・リラックスに最適な今日のLo-Fi音楽。">
+<meta name="description" content="Daily lo-fi music for study, focus, and relaxation. 作業用・勉強用BGMに最適な1曲。">
 
-<meta name="keywords" content="lofi music, study music, chill beats, jazzhop, 作業用BGM, 勉強用BGM, 今日の曲">
-
-<meta name="robots" content="index, follow">
-
-<!-- Canonical -->
-<link rel="canonical" href="https://nanashino-chan.github.io/site/today.html">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="/site/Nanashino-chan Favicon2.png">
-<link rel="shortcut icon" href="/site/Nanashino-chan Favicon2.png">
-
-<!-- OGP -->
-<meta property="og:title" content="Today's Lo-Fi Track ☕ Study & Focus Music">
-<meta property="og:description" content="A new lo-fi track every day. Perfect for study, focus, and relaxation.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://nanashino-chan.github.io/site/today.html">
-<meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Today's Lo-Fi Track ☕ Study & Focus Music">
-<meta name="twitter:description" content="Daily lo-fi music for study, focus, and chill.">
-<meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
-
-<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 
-<!-- セキュリティ（CSP） -->
-<meta http-equiv="Content-Security-Policy"
-content="
-default-src 'self';
-script-src 'self' https://www.youtube.com https://www.youtube.com/iframe_api;
-frame-src https://www.youtube.com;
-img-src 'self' https://img.youtube.com data:;
-style-src 'self' 'unsafe-inline';
-">
+<!-- YouTube API -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<style>
+
+/* ===== 全体 ===== */
+body {
+  margin: 0;
+  background: #0f0f0f;
+  color: #fff;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  text-align: center;
+}
+
+/* ===== コンテナ ===== */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== プレイヤー ===== */
+.player {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.player img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* 再生ボタン */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 20px;
+  border-radius: 50%;
+}
+
+/* ===== コントロール ===== */
+.controls {
+  margin: 20px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #1e1e1e;
+  color: white;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #333;
+}
+
+/* ===== YouTube CTA ===== */
+.youtube-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.youtube-btn:hover {
+  transform: scale(1.05);
+}
+
+</style>
 
 </head>
 
@@ -52,59 +101,105 @@ style-src 'self' 'unsafe-inline';
 
 <div class="container">
 
-<h1>Today's Lo-Fi Track</h1>
+<h1>🎧 Today's Lo-Fi Track</h1>
 <p>今日の作業・勉強・リラックスに最適な1曲</p>
 
 <!-- ===== プレイヤー ===== -->
-<div class="player" id="player" onclick="playVideo()">
-  <img id="thumbnail"
-       src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg"
-       alt="Today's Lofi Track">
+<div id="player-container" class="player" onclick="initPlayer()">
+  <img id="thumbnail" src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg">
   <div class="play-btn">▶</div>
 </div>
 
 <!-- ===== コントロール ===== -->
 <div class="controls">
-  <button onclick="playVideo()">Play</button>
-  <button onclick="nextTrack()">Next Track</button>
+  <button onclick="playVideo()">▶ Play</button>
+  <button onclick="nextTrack()">⏭ Next</button>
 </div>
 
-<!-- ===== SEOテキスト ===== -->
+<!-- ===== 説明 ===== -->
 <p>
-This lo-fi track is perfect for study, deep focus, and relaxation.<br>
-このLo-Fi音楽は、作業・勉強・集中・リラックスに最適です。
+Perfect for study, deep focus, and relaxation.<br>
+作業・勉強・集中・リラックスに最適なLo-Fi音楽。
 </p>
 
-<!-- ===== 実績（仮） ===== -->
-<div class="reel">
-  <h2>Used by Creators</h2>
-  <p>世界中のクリエイターに使用されています</p>
-  <img src="https://via.placeholder.com/400x225" alt="Used in reels">
-</div>
-
 <!-- ===== YouTube導線 ===== -->
-<a href="https://www.youtube.com/watch?v=PnyutlzXem0"
+<a id="youtubeLink"
+   href="https://www.youtube.com/watch?v=PnyutlzXem0"
    target="_blank"
    class="youtube-btn">
-Listen on YouTube
-</a>
-
-<!-- ===== 戻る ===== -->
-<a href="index.html" class="back-link">
-Back to Top
+🔥 Listen Full Track on YouTube
 </a>
 
 </div>
-<!-- ===== Footer ===== -->
-<footer><p>© Nanashino-chan. All rights reserved.</p></footer>
-<footer class="site-footer">
-  <div class="footer-container">
-    <a href="index.html">Back to Top</a> | 
-    <a href="policy.html">ポリシー / Policy</a>
-  </div>
-</footer>
-<!-- JS読み込み（必ずbodyの最後） -->
-<script src="videos.js"></script>
+
+<script>
+
+/* ===== 動画リスト ===== */
+const videos = [
+  "PnyutlzXem0",
+  "XPv78upJZhQ",
+  "iRSTgLr4WVE"
+];
+
+let player;
+let currentIndex = 0;
+let isPlayerReady = false;
+
+/* ===== 初期化 ===== */
+function initPlayer() {
+  if (player) return;
+
+  const container = document.getElementById("player-container");
+
+  container.innerHTML = '<div id="player"></div>';
+
+  player = new YT.Player("player", {
+    height: "405",
+    width: "720",
+    videoId: videos[currentIndex],
+    playerVars: {
+      autoplay: 1,
+      controls: 1
+    },
+    events: {
+      onReady: () => {
+        isPlayerReady = true;
+      }
+    }
+  });
+
+  updateYouTubeLink();
+}
+
+/* ===== 再生 ===== */
+function playVideo() {
+  if (!player) {
+    initPlayer();
+  } else if (isPlayerReady) {
+    player.playVideo();
+  }
+}
+
+/* ===== 次の曲 ===== */
+function nextTrack() {
+  currentIndex = (currentIndex + 1) % videos.length;
+
+  if (!player) {
+    initPlayer();
+  } else {
+    player.loadVideoById(videos[currentIndex]);
+  }
+
+  updateYouTubeLink();
+}
+
+/* ===== YouTubeリンク更新 ===== */
+function updateYouTubeLink() {
+  const link = document.getElementById("youtubeLink");
+  link.href = "https://www.youtube.com/watch?v=" + videos[currentIndex];
+}
+
+</script>
 
 </body>
 </html>
