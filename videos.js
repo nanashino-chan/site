@@ -242,7 +242,7 @@ const videos = {
     "0cIse1-cqBE",
     "XAG94LctIu0",
     "IEMQN0fox1c",
-    "PUJ0oSCRTyE",
+    "PUJ0oSCRTyE"
   ],
   cafe: [
     //Cozy Coffee Break Lo-Fi Jazzhop
