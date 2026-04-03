@@ -60,6 +60,27 @@ footer {
     font-size: 14px;
     color: #aaa;
 }
+/* ===== Footer ===== */
+.site-footer {
+  background-color: #111; /* フッター背景 */
+  color: #bbb;            /* テキスト色 */
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.site-footer a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: 0.2s;
+  margin: 0 6px;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 
 /* ===================================
    SNSボタン
