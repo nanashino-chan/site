@@ -224,8 +224,36 @@ const videos = {
   ],
 
   // 空でもOK（あとで追加）
-  cafe: [],
-  relax: [],
+  relax: [
+  
+  ],
+  cafe: [
+    //Cozy Coffee Break Lo-Fi Jazzhop
+    "Xn9I1ezp9xc",
+    "x3ecMOm45z8",
+    "iajr3woa7Y4",
+    "iFKyx-hT-zQ",
+    "e2u0TbUmh6o",
+    "e4YzAm7S4dI",
+    "9tjL7zR_0xg",
+    "3zN4CTTZfsA",
+    "AVFh_huNfuc",
+    "TCZfYOpuY_E",
+    "JWY152XAGTE",
+    "VUMmhgAgWcE",
+    "1p0_uGq7z18",
+    "SqBP8eVK9bM",
+    "mZb6MMKjrBw",
+    "6byxx4LUvwM",
+    "_-4X8MW2qbo",
+    "V8miXjKdXKo",
+    "Bbi5YnjOdCU",
+    "z5xidTsfBeA",
+    "ZMoO3CjofuA",
+    "WYbV457_svs",
+    "_Ghx7QTYnUo",
+    "7hXfrvkCsJ0"
+  ],
   dream: [
 //synthwave水着24
     "CI9JX-r0DgY",
