@@ -81,7 +81,32 @@ const videos = {
     "7CkwOVyq5ys",
     "liRkdME-xtk",
     "bcuZOTsTkH0",
-    "YGyDkXeFl4I"
+    "YGyDkXeFl4I",
+    //Deep Focus Jazzhop:Smooth Acid Jazz Beats
+    "jeAYdRVTJUY",
+    "x1ejddW4Kyw",
+    "Q1NHuYEt-xg",
+    "7eLcR_-_wOo",
+    "ua3zR4aXb_s",
+    "LbVp6haTNGQ",
+    "jT3rc1dCXlc",
+    "bybs5Nq0MS4",
+    "rIZBwTDurNg",
+    "hl-PJZGVv2k",
+    "G82i2x8NzJ8",
+    "OnSlvdj6dUI",
+    "Vl2_EpsdFUI",
+    "kz5KmM232VI",
+    "PXTpH0OQsbc",
+    "KffCVb2WC4I",
+    "pWLD04gB2hM",
+    "0_JkQddvAUY",
+    "QiZXozJlmgQ",
+    "iQ88tSkFTss",
+    "HqbcUE0X0f8",
+    "2JRas8YGxAQ",
+    "OdDj1Zftf_4",
+    "RZoP2o_NNuk"
   ],
 
   sleep: [
