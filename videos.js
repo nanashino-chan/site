@@ -223,9 +223,26 @@ const videos = {
     "2_9RUds3DA4"
   ],
 
-  // 空でもOK（あとで追加）
   relax: [
-  
+ // Ambient Chill Trap: Soothing Beats for Relaxation 18曲
+    "OwcCZ7iB9BQ",
+    "lkuQtwAWGGU",
+    "zXnd3Urg1X0",
+    "FN6Q0UtmQkQ",
+    "oq9pJ8Bn1Ro",
+    "ENNSqpicLjA",
+    "CGAB5rhK0d0",
+    "M1buamHgQro",
+    "GEdDHz4cCl8",
+    "MZBvbg0ZBTQ",
+    "6Ul8dZXMdyk",
+    "wE2_lUJBAQs",
+    "tzT0gs7s4TI",
+    "lqSUWcwC5zk",
+    "0cIse1-cqBE",
+    "XAG94LctIu0",
+    "IEMQN0fox1c",
+    "PUJ0oSCRTyE",
   ],
   cafe: [
     //Cozy Coffee Break Lo-Fi Jazzhop
