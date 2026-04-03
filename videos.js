@@ -150,7 +150,29 @@ const videos = {
     "u-Pry8K5XyA",
     "Dq7IPnjSzPc",
     "sb8X53d893E",
-    "xrhnDF6WwpE"
+    "xrhnDF6WwpE",
+    "DvJPp9w5xQA",
+ //Serene Lo-Fi Journeys: A Healing Soundscape   
+    "2AkDixT7hfw",
+    "lAAix1yRJXA",
+    "nql4Kz0Lc1I",
+    "9BpLbqe3BtQ",
+    "FjMLJSziHUg",
+    "AK8cFvzLJ4g",
+    "7Hw8Ovu3W5k",
+    "9N7HCdvHABM",
+    "uYSdYHiAV48",
+    "VcjO75Bj4Ds",
+    "cEMtDfFYW5o",
+    "CCrJ92Jhqyw",
+    "gDNSGxtsn3I",
+    "lsfJlKlV_W8",
+    "ayNIKqcXRUQ",
+    "4Kc4bQG4fiI",
+    "_XY-msh24xY",
+    "iNywIdXHcyE"
+
+    
   ],
 
   tokyo: [
