@@ -581,3 +581,31 @@ footer {
   position: relative;
   z-index: 2;
 }
+/* ===== music page押し釦===== */
+.internal-links a {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #1e1e1e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* ホバーで“押せる感”を出す */
+.internal-links a:hover {
+  background-color: #2c2c2c;
+  transform: translateY(-2px);
+}
+
+/* CTAだけ少し強くする（重要） */
+.internal-links a:first-child {
+  background: linear-gradient(135deg, #ff7a18, #ff4d4d);
+}
+
+/* CTAホバー */
+.internal-links a:first-child:hover {
+  opacity: 0.9;
+}
