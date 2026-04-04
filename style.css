@@ -55,6 +55,15 @@ nav {
   text-align: center;
   margin: 15px 0 10px;
 }
+.today-cta a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff7a18, #ff4d4d);
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 /* ===================================
    フッター
