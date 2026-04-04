@@ -12,15 +12,16 @@
 
 <!-- YouTube API -->
 <script src="https://www.youtube.com/iframe_api"></script>
-<!-- Google tag (gtag.js) -->
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CLHM36E1P0');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-CLHM36E1P0');
 </script>
+
 <style>
 
 /* ===== 全体 ===== */
@@ -53,7 +54,6 @@ body {
   border-radius: 12px;
 }
 
-/* 再生ボタン */
 .play-btn {
   position: absolute;
   top: 50%;
@@ -64,56 +64,46 @@ body {
   padding: 10px 20px;
   border-radius: 50%;
 }
-<!-- ===== プレイヤー ===== -->
-<div id="player-container" class="player" onclick="initPlayer()">
-  <img id="thumbnail" src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg">
-  <div class="play-btn">▶</div>
-</div>
 
-
-  
-/* ===== コントロール ===== */
-.controls {
-  margin: 20px;
-}
-
-.controls button {
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  border-radius: 8px;
-  background: #1e1e1e;
-  color: white;
-  cursor: pointer;
-}
-
-.controls button:hover {
-  background: #333;
-}
-
-/* ===== YouTube CTA ===== */
-.youtube-btn {
-  display: inline-block;
+/* ===== CTA ===== */
+.listen {
+  display: none;
   margin-top: 30px;
-  padding: 14px 24px;
-  background: linear-gradient(135deg, #ff0000, #cc0000);
-  color: white;
+}
+
+.track-title {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.album-title {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.dsp-buttons {
+  margin-top: 20px;
+}
+
+.dsp-buttons a {
+  display: inline-block;
+  width: 260px;
+  padding: 12px;
+  margin: 8px;
+  border-radius: 8px;
   text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: 0.3s;
+  color: white;
 }
 
-.youtube-btn:hover {
-  transform: scale(1.05);
+.apple {
+  background: #000;
 }
 
-</section>
-
-
+.ytmusic {
+  background: #cc0000;
+}
 
 </style>
-
 </head>
 
 <body>
@@ -123,123 +113,154 @@ body {
 <h1>🎧 Today's Lo-Fi Track</h1>
 <p>今日の作業・勉強・リラックスに最適な1曲</p>
 
-<!-- ===== プレイヤー ===== -->
+<!-- プレイヤー -->
 <div id="player-container" class="player" onclick="initPlayer()">
   <img id="thumbnail" src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg">
   <div class="play-btn">▶</div>
 </div>
 
-<!-- ===== コントロール ===== -->
+<!-- コントロール -->
 <div class="controls">
   <button onclick="playVideo()">▶ Play</button>
   <button onclick="nextTrack()">⏭ Next</button>
 </div>
 
-<!-- ===== 説明 ===== -->
-<p>
-Perfect for study, deep focus, and relaxation.<br>
-作業・勉強・集中・リラックスに最適なLo-Fi音楽。
-</p>
+<!-- 曲情報 -->
+<p class="track-title"></p>
+<p class="album-title"></p>
 
-<!-- ===== YouTube導線 ===== -->
-<!-- 🔥 ここに入れる -->
+<!-- CTA -->
 <section class="listen">
+  <h2>🎧 Listen & Save</h2>
 
-<h2>🎧 Listen & Save</h2>
+  <div class="dsp-buttons">
+    <a class="apple" target="_blank">
+      Save this track on Apple Music<br>
+      この曲を今すぐ保存
+    </a>
 
-<div class="dsp-buttons">
-
-<a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" class="apple">
-🍎 Listen on Apple Music
-</a>
-
-<a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" class="ytmusic">
-▶ Listen on YouTube Music
-</a>
-
-</div>
-
+    <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A"
+       target="_blank"
+       class="ytmusic">
+      ▶ YouTube Music
+    </a>
+  </div>
 </section>
-  
+
+<!-- YouTube導線 -->
 <a id="youtubeLink"
-   href="https://www.youtube.com/watch?v=PnyutlzXem0"
    target="_blank"
    class="youtube-btn">
-🎧 Continue Listening on YouTube Playlist
+🎧 Continue on YouTube
 </a>
 
 </div>
 
 <script>
 
-/* ===== 動画リスト ===== */
-const videos = [
-  "PnyutlzXem0",
-  "XPv78upJZhQ",
-  "iRSTgLr4WVE",    
-  "MBsx4sUtNxs",
-  "GRGkJoQGMjs",
-  "RL_lN7zBxE4",
-  "Ftm2Ev4pV-c"
+/* ===== トラックデータ ===== */
+const tracks = [
+  {
+    title: "Smooth Groove – Chill Lo-Fi Beat",
+    videoId: "PnyutlzXem0",
+    apple: "https://music.apple.com/us/album/smooth-groove-remastered-night-caf%C3%A9-single/1860873849",
+    album: "Smooth Chillhop Jazz Beats"
+  },
+  {
+    title: "Smooth Transitions – Chillhop Lo-Fi",
+    videoId: "MBsx4sUtNxs",
+    apple: "https://music.apple.com/us/album/chillhop-lo-fi-relax-focus-instrumental/1796933282",
+    album: "Chillhop Lo-Fi Relax & Focus"
+  },
+  {
+    title: "Stillness Vibes – Calm Lo-Fi",
+    videoId: "GRGkJoQGMjs",
+    apple: "https://music.apple.com/us/album/smooth-waves-timeless-electronica-lo-fi-grooves/1811585664",
+    album: "Smooth Waves"
+  },
+  {
+    title: "Calm Transitions – Study Lo-Fi",
+    videoId: "RL_lN7zBxE4",
+    apple: "https://music.apple.com/us/album/smooth-lo-fi-beats-study-chill/1806121136",
+    album: "Smooth Lo-Fi Beats"
+  },
+  {
+    title: "Sunset Glow – Cozy Lo-Fi",
+    videoId: "Ftm2Ev4pV-c",
+    apple: "https://music.apple.com/us/album/cozy-chillhop-nights-relaxing-lo-fi-beats-with-a/1805874023",
+    album: "Cozy Chillhop Nights"
+  }
 ];
 
 let player;
 let currentIndex = 0;
-let isPlayerReady = false;
 
 /* ===== 初期化 ===== */
 function initPlayer() {
   if (player) return;
 
   const container = document.getElementById("player-container");
-
   container.innerHTML = '<div id="player"></div>';
 
   player = new YT.Player("player", {
     height: "405",
     width: "720",
-    videoId: videos[currentIndex],
-    playerVars: {
-      autoplay: 1,
-      controls: 1
-    },
-    events: {
-      onReady: () => {
-        isPlayerReady = true;
-      }
-    }
+    videoId: tracks[currentIndex].videoId,
+    playerVars: { autoplay: 1 }
   });
 
-  updateYouTubeLink();
+  updateUI();
 }
 
 /* ===== 再生 ===== */
 function playVideo() {
-  if (!player) {
-    initPlayer();
-  } else if (isPlayerReady) {
-    player.playVideo();
-  }
+  if (!player) initPlayer();
+  else player.playVideo();
 }
 
-/* ===== 次の曲 ===== */
+/* ===== 次 ===== */
 function nextTrack() {
-  currentIndex = (currentIndex + 1) % videos.length;
-
-  if (!player) {
-    initPlayer();
-  } else {
-    player.loadVideoById(videos[currentIndex]);
-  }
-
-  updateYouTubeLink();
+  currentIndex = (currentIndex + 1) % tracks.length;
+  player.loadVideoById(tracks[currentIndex].videoId);
+  updateUI();
 }
 
-/* ===== YouTubeリンク更新 ===== */
-function updateYouTubeLink() {
-  const link = document.getElementById("youtubeLink");
-  link.href = "https://www.youtube.com/watch?v=" + videos[currentIndex];
+/* ===== UI更新 ===== */
+function updateUI() {
+  const track = tracks[currentIndex];
+
+  // CTA表示（遅延）
+  setTimeout(() => {
+    document.querySelector(".listen").style.display = "block";
+  }, 3000);
+
+  // Appleリンク更新
+  document.querySelector(".apple").href = track.apple;
+
+  // テキスト
+  document.querySelector(".track-title").textContent =
+    "Now Playing: " + track.title;
+
+  document.querySelector(".album-title").textContent =
+    "Album: " + track.album + " (Find this track inside)";
+
+  // YouTubeリンク
+  document.getElementById("youtubeLink").href =
+    "https://www.youtube.com/watch?v=" + track.videoId;
+
+  // GAイベント
+  document.querySelector(".apple").onclick = () => {
+    gtag('event', 'click_apple', {
+      event_category: 'dsp',
+      event_label: track.title
+    });
+  };
 }
+
+/* 初回 */
+window.onload = () => {
+  updateUI();
+};
 
 </script>
 
