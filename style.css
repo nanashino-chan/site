@@ -79,12 +79,15 @@ nav {
 }
 
 .dsp-buttons a {
-  display: inline-block;
-  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 48px;
   border-radius: 10px;
   text-decoration: none;
   color: #fff;
-  width: 260px;
+  font-weight: bold;
 }
 
 /* Appleを主役に */
