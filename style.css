@@ -50,6 +50,12 @@ nav {
     padding-bottom: 4px;
 }
 
+//ナビメニュー下CTA
+.today-cta {
+  text-align: center;
+  margin: 15px 0 10px;
+}
+
 /* ===================================
    フッター
 =================================== */
@@ -609,8 +615,4 @@ footer {
 .internal-links a:first-child:hover {
   opacity: 0.9;
 }
-//
-.today-cta {
-  text-align: center;
-  margin: 15px 0 10px;
-}
+
