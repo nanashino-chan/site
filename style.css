@@ -65,6 +65,37 @@ nav {
   text-decoration: none;
   font-weight: bold;
 }
+.listen {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.dsp-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.dsp-buttons a {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  width: 260px;
+}
+
+/* Appleを主役に */
+.dsp-buttons .apple {
+  background: linear-gradient(135deg, #ff2d55, #ff7a00);
+  font-weight: bold;
+}
+
+/* サブ */
+.dsp-buttons .ytmusic {
+  background: #1e1e1e;
+}
 
 /* ===================================
    フッター
