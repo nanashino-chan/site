@@ -609,3 +609,8 @@ footer {
 .internal-links a:first-child:hover {
   opacity: 0.9;
 }
+//
+.today-cta {
+  text-align: center;
+  margin: 15px 0 10px;
+}
