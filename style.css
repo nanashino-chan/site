@@ -673,6 +673,33 @@ footer {
 .internal-links a:first-child:hover {
   opacity: 0.9;
 }
+/* ===== 曲タイトル（主役）today page ===== */
+.track-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 20px;
+  line-height: 1.4;
+}
 
+/* Now Playing部分だけ少し強調 */
+.track-title::before {
+  content: "Now Playing: ";
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
+/* ===== アルバム（補助） ===== */
+.album-title {
+  font-size: 14px;
+  color: #888;
+  margin-top: 6px;
+}
+
+/* アルバム補足をさらに弱く */
+.album-title span {
+  color: #666;
+  font-size: 12px;
+}
 
 
