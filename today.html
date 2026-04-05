@@ -253,11 +253,11 @@ function updateUI() {
   document.querySelector(".apple").href = track.apple;
 
   // テキスト
-  document.querySelector(".track-title").textContent =
-    "Now Playing: " + track.title;
+document.querySelector(".track-title").textContent =
+  track.title;
 
-  document.querySelector(".album-title").textContent =
-    "Album: " + track.album + " (Find this track inside)";
+document.querySelector(".album-title").innerHTML =
+  `Album: ${track.album} <span>(Find this track inside)</span>`;
 
   // YouTubeリンク
   document.getElementById("youtubeLink").href =
