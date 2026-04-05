@@ -701,5 +701,47 @@ footer {
   color: #666;
   font-size: 12px;
 }
+/* FAQ全体レイアウト */
+body {
+  font-size: 16px; /* 基準サイズ */
+  line-height: 1.8;
+}
 
+/* コンテンツラッパー */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: left; /* ← これが重要 */
+}
+
+/* 見出し */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/* 本文 */
+p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+/* リスト */
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* セクション区切り */
+hr {
+  margin: 40px 0;
+  opacity: 0.2;
+}
 
