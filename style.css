@@ -411,7 +411,13 @@ html {
 .next-btn {
   font-size: 17px;
 }
-
+/* ===================================
+   Musicページ
+=================================== */
+.music-section ul {
+  list-style: none;
+  padding-left: 0;
+}
 
 /* ===================================
    CONTACTページ
