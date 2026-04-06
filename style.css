@@ -418,6 +418,29 @@ html {
   list-style: none !important;
   padding-left: 0 !important;
 }
+/* ===== 共通リストリセット ===== */
+.seo-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* ===== 特徴リスト（✔） ===== */
+.feature-list li::before {
+  content: "✔ ";
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* ===== 利用シーン（アイコン） ===== */
+.usage-list li::before {
+  content: "🎧 ";
+}
+
+/* ===== 見た目調整 ===== */
+.seo-content li {
+  margin-bottom: 8px;
+}
+
 
 /* ===================================
    CONTACTページ
