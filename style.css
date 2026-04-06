@@ -414,9 +414,9 @@ html {
 /* ===================================
    Musicページ
 =================================== */
-.music-section ul {
-  list-style: none;
-  padding-left: 0;
+.seo-content ul {
+  list-style: none !important;
+  padding-left: 0 !important;
 }
 
 /* ===================================
