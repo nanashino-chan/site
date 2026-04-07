@@ -231,7 +231,11 @@ footer {
   background-color: #ff6f61;
   font-weight: bold;
 }
-
+.faq-secondary .faq-cta {
+  background: transparent;
+  border: 1px solid #ff6f61;
+  color: #ff6f61;
+}
 /* モバイル */
 @media (max-width: 600px) {
   .internal-links {
