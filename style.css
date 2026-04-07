@@ -196,29 +196,53 @@ footer {
     font-size: 16px;
     color: #cfcfcf;
 }
-/* 内部リンクボタン風 */
 .internal-links {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
   max-width: 900px;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .internal-links a {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 10px 16px;
   background-color: #1e1e1e;
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .internal-links a:hover {
   background-color: #ff6f61;
-  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+
+.internal-links a:active {
+  transform: scale(0.96);
+}
+
+/* 1つ強調 */
+.internal-links a:first-child {
+  background-color: #ff6f61;
+  font-weight: bold;
+}
+
+/* モバイル */
+@media (max-width: 600px) {
+  .internal-links {
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  .internal-links a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
 }
 
 /* スムーズスクロール */
