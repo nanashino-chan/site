@@ -389,49 +389,55 @@ html {
 =================================== */
 
 .about-section {
-    max-width: 900px;
-    margin: 80px auto;
-    text-align: center;
-    padding: 0 20px;
+  max-width: 900px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .about-title {
-    font-size: 36px;
-    margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
 .about-subtitle {
-    font-size: 22px;
-    margin-bottom: 30px;
-    font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: 500;
 }
 
 .about-content {
-    max-width: 750px;
-    margin: 0 auto;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .about-content p {
-    font-size: 16px;
-    line-height: 1.9;
-    margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 20px;
 }
+
+/* 🔥 修正済：画像レスポンシブ対応 */
 .about-image {
-    .about-image {
   width: 100%;
-  height: auto;              /* ← これが最重要（縦伸び防止） */
-  aspect-ratio: 16 / 9;      /* ← 比率固定 */
-  object-fit: cover;         /* ← 綺麗に表示（おすすめ） */
+  max-width: 900px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   display: block;
+  margin: 20px auto;
   border-radius: 12px;
 }
-}
+
 .about-tagline {
-    margin-top: 10px;
-    color: #aaa;
-    font-size: 15px;
-    letter-spacing: 1px;
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
+
 .card-content p {
   font-size: 18px;
 }
@@ -442,6 +448,34 @@ html {
 
 .next-btn {
   font-size: 17px;
+}
+
+/* 🔥 モバイル最適化 */
+@media (max-width: 768px) {
+
+  .about-section {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  .about-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .about-subtitle {
+    font-size: 18px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .about-tagline {
+    font-size: 13px;
+  }
+
 }
 /* ===================================
    Musicページ
