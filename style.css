@@ -417,11 +417,14 @@ html {
     margin-bottom: 20px;
 }
 .about-image {
-    width: 100%;
-    max-width: 900px;
-    margin: 30px auto;
-    border-radius: 14px;
-    display: block;
+    .about-image {
+  width: 100%;
+  height: auto;              /* ← これが最重要（縦伸び防止） */
+  aspect-ratio: 16 / 9;      /* ← 比率固定 */
+  object-fit: cover;         /* ← 綺麗に表示（おすすめ） */
+  display: block;
+  border-radius: 12px;
+}
 }
 .about-tagline {
     margin-top: 10px;
