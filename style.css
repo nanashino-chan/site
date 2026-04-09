@@ -50,6 +50,7 @@ nav {
 .nav a.active {
     border-bottom: 2px solid #ffffff;
     padding-bottom: 4px;
+    margin-bottom: 10px;
 }
 
 //ナビメニュー下CTA
