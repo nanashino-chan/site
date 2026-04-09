@@ -101,6 +101,98 @@ nav {
   background: #1e1e1e;
 }
 
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 90%;
+}
+
+.hero-brand {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+.hero-sub {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-cta {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.hero-cta:hover {
+    background: #222;
+    transform: translateY(-2px);
+}
+
+/* モバイル */
+@media (max-width: 768px) {
+
+    .hero {
+        height: 80vh;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-sub {
+        font-size: 16px;
+    }
+
+    .hero-cta {
+        font-size: 16px;
+        padding: 14px 24px;
+    }
+}
+
+
 /* ===================================
    フッター
 =================================== */
