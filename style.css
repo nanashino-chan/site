@@ -170,10 +170,8 @@ footer {
 
 .hero-sub {
     font-size: 18px;
-    color: #cfcfcf;
-    max-width: 600px;
-    margin: auto;
-    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #fff;
 }
 .container h1 {
     font-size: 48px;
