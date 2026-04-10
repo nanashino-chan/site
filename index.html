@@ -75,14 +75,22 @@ onload="this.media='all'">
 
 <!-- HERO -->
 <section class="hero">
-  <a href="today.html" class="hero-link">
+  <a href="today.html" class="hero-link" aria-label="Play today lo-fi music">
 
-    <img src="lofi-hero-tokyo-night-v1.webp"
-         class="hero-image"
-         alt="Ad-Free Lo-Fi Music Tokyo Night for Focus and Relaxation"
-         width="1075"
-         height="605"
-         loading="eager">
+    <img
+      src="hero-720.webp"
+      srcset="
+        hero-720.webp 720w,
+        hero-1440.webp 1440w
+      "
+      sizes="(max-width: 768px) 100vw, 720px"
+      width="720"
+      height="405"
+      class="hero-image"
+      alt="Ad-free lo-fi music for focus, study, and relaxation in a Tokyo night ambience"
+      loading="eager"
+      decoding="async"
+    >
 
     <div class="hero-overlay"></div>
 
