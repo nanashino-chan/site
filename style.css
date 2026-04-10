@@ -118,6 +118,7 @@ nav {
 
 /* クリック領域 */
 .hero-link {
+  position: relative;
   display: block;
 }
 
