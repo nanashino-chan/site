@@ -116,6 +116,7 @@ nav {
 ========================= */
 
 .hero {
+  position: relative;
   width: 100%;
   height: auto;
   margin-top: 50px;
@@ -143,24 +144,31 @@ nav {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  bottom: 0;
   background: linear-gradient(
     to top,
     rgba(0,0,0,0.65) 0%,
     rgba(0,0,0,0.3) 40%,
     rgba(0,0,0,0) 80%
   );
+  pointer-events: none; /* ← 重要：クリック阻害防止 */
 }
 
 /* ホバーでCTR強化 */
 .hero-link:hover .hero-overlay {
-  background: rgba(0,0,0,0.65);
+  background: rgba(0,0,0,0.55);
+}
+
+/* 画像余白バグ防止（重要） */
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* モバイル */
 @media (max-width: 768px) {
   .hero {
-    height:auto
+    height: auto;
   }
 }
 /* =========================
@@ -286,9 +294,9 @@ footer {
 =================================== */
 
 .hero-sub {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #fff;
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #fff;
 }
 .container h1 {
     font-size: 48px;
