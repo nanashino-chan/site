@@ -123,13 +123,10 @@ nav {
 /* 🔥 ここが核心 */
 .hero-image {
   width: 100%;
-  height: auto;          /* ← 固定高さをやめる */
-  max-height: 80vh;      /* ← 画面内に収める */
-  object-fit: contain;   /* ← 全体表示 */
+  height: auto;        /* アスペクト比維持 */
   display: block;
   margin: 0 auto;
 }
-
 /* 暗幕 */
 .hero-overlay {
   position: absolute;
