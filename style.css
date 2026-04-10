@@ -109,7 +109,7 @@ nav {
 .hero {
   width: 100%;
   height: auto;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-bottom: 0;
   background: #000; /* 余白対策（黒帯） */
   overflow: hidden;
