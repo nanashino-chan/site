@@ -183,6 +183,27 @@ nav {
   margin-bottom: 20px;
 }
 
+/* ===================================
+   SEOこんてんと
+=================================== */
+.seo-content {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.seo-block.active .seo-content {
+  display: block;
+}
+
+.seo-toggle {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 14px;
+  cursor: pointer;
+}
 
 /* ===================================
    フッター
