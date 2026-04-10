@@ -641,48 +641,50 @@ html {
 /* ===================================
    スマホ対応（全ページ共通）
 =================================== */
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-.generator-grid{
-    grid-template-columns:1fr;
+  .generator-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
 
-}
 @media (max-width: 600px) {
 
-    .hero h1 {
-        font-size: 30px;
-    }
+  .hero h1 {
+    font-size: 30px;
+  }
 
-    .hero-sub {
-        font-size: 15px;
-    }
+  .hero-sub {
+    font-size: 15px;
+  }
 
-    .about-title {
-        font-size: 28px;
-    }
+  .about-title {
+    font-size: 28px;
+  }
 
-    .about-subtitle {
-        font-size: 18px;
-    }
+  .about-subtitle {
+    font-size: 18px;
+  }
 
-    .about-content p {
-        font-size: 15px;
-    }
+  .about-content p {
+    font-size: 15px;
+  }
 
-    .google-form iframe {
-        height: 850px;
-    }
+  .google-form iframe {
+    height: 850px;
+  }
 
-    .nav {
-        gap: 14px;
-        padding: 12px 10px;
-    }
+  .nav {
+    gap: 14px;
+    padding: 12px 10px;
+  }
 
-    .nav a {
-        font-size: 13px;
-    }
-   }
+  .nav a {
+    font-size: 13px;
+  }
+
+}
 /* ===================================
    index.html用 動画カード
 =================================== */
