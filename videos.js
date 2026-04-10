@@ -447,9 +447,4 @@ function nextTrack(type){
 
   players[type].loadVideoById(videoId);
 }
-// =========================
-// TOP画面SEOテキストボタン
-// =========================
-document.querySelector(".seo-toggle").addEventListener("click", function() {
-  document.querySelector(".seo-block").classList.toggle("active");
-});
+
