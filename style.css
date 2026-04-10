@@ -120,6 +120,7 @@ nav {
   height: auto;
   margin-top: 50px;
   margin-bottom: 0;
+  line-height: 0;
   background: #000; /* 余白対策（黒帯） */
   overflow: hidden;
   position: relative;
