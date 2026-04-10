@@ -149,6 +149,28 @@ nav {
     height: 70vh;
   }
 }
+/* =========================
+   INDEX CONTENT
+========================= */
+
+.index-content {
+  max-width: 750px;
+  margin: 20px auto 40px; /* ← 上の余白で調整 */
+  padding: 0 10px;
+  text-align: center;
+}
+
+.index-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.index-content p {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
 
 /* ===================================
    フッター
