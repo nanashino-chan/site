@@ -147,9 +147,10 @@ nav {
  
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;  /* ← 中央ではなく上寄せ */
   align-items: center;
   text-align: center;
+  padding-top: 60px; /* ← 夜空位置に合わせて調整 */
 
   background: linear-gradient(
     to top,
