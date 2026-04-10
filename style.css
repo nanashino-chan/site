@@ -144,25 +144,38 @@ nav {
 .hero-overlay {
   position: absolute;
   inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
   background: linear-gradient(
     to top,
     rgba(0,0,0,0.65) 0%,
     rgba(0,0,0,0.3) 40%,
     rgba(0,0,0,0) 80%
   );
-  pointer-events: none; /* ← 重要：クリック阻害防止 */
+
+  pointer-events: none;
 }
 
-/* ホバーでCTR強化 */
-.hero-link:hover .hero-overlay {
-  background: rgba(0,0,0,0.55);
+.hero-cta {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 2;
+  position: relative;
 }
 
-/* 画像余白バグ防止（重要） */
-.hero-image {
-  display: block;
-  width: 100%;
-  height: auto;
+.hero-sub {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.9);
+  z-index: 2;
+  position: relative;
 }
 
 /* モバイル */
