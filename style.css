@@ -186,25 +186,36 @@ nav {
 /* ===================================
    SEOこんてんと
 =================================== */
-.seo-content {
+.seo-block {
+  margin-top: 20px;
+}
+
+.seo-block summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.seo-block summary::-webkit-details-marker {
   display: none;
-  margin-top: 10px;
-  font-size: 14px;
+}
+
+.seo-content {
+  padding-top: 10px;
   line-height: 1.6;
 }
 
-.seo-block.active .seo-content {
-  display: block;
+.seo-content h2 {
+  font-size: 20px;
+  margin: 10px 0;
 }
 
-.seo-toggle {
-  background: none;
-  border: none;
-  color: #aaa;
-  font-size: 14px;
-  cursor: pointer;
+.seo-content h3 {
+  font-size: 16px;
+  margin: 10px 0;
 }
-
 /* ===================================
    フッター
 =================================== */
