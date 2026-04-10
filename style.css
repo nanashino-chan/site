@@ -95,6 +95,7 @@ nav {
 .dsp-buttons .apple {
   background: linear-gradient(135deg, #ff2d55, #ff7a00);
   font-weight: bold;
+  margin-top: 10px;
 }
 
 /* サブ */
