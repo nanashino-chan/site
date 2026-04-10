@@ -144,7 +144,7 @@ nav {
 .hero-overlay {
   position: absolute;
   inset: 0;
-
+  transform: translateY(50px);
   display: flex;
   flex-direction: column;
   justify-content: center;
