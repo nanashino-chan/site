@@ -133,7 +133,12 @@ nav {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.25);
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.65) 0%,
+    rgba(0,0,0,0.3) 40%,
+    rgba(0,0,0,0) 80%
+  );
 }
 
 /* ホバーでCTR強化 */
