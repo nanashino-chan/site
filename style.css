@@ -110,6 +110,7 @@ nav {
   width: 100%;
   height: 80vh;
   margin-top: 10px;
+  background: #000; /* 余白対策（黒帯） */
   overflow: hidden;
   position: relative;
 }
@@ -117,20 +118,16 @@ nav {
 /* クリック領域 */
 .hero-link {
   display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
 }
 
-/* 🔥 ここが今回の核心（about流用） */
+/* 🔥 ここが核心 */
 .hero-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  /* aboutの安定要素 */
+  height: auto;          /* ← 固定高さをやめる */
+  max-height: 80vh;      /* ← 画面内に収める */
+  object-fit: contain;   /* ← 全体表示 */
   display: block;
-  aspect-ratio: 16 / 9;
+  margin: 0 auto;
 }
 
 /* 暗幕 */
