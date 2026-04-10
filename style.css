@@ -101,6 +101,14 @@ nav {
 .dsp-buttons .ytmusic {
   background: #1e1e1e;
 }
+.cta-note {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cta-note + .cta-note {
+  margin-top: 4px; /* 行間を微調整 */
+}
 
 /* =========================
    HERO（レスポンシブ完全対応）
