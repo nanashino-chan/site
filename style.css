@@ -448,53 +448,7 @@ html {
 
 /* 動画メイン表示 */
 
-/* 動画メイン表示 */
-
-.video-main {
-    max-width: 800px;
-    margin: 40px auto;
-}
-
-/* 追加：リンク全体 */
-.video-link {
-    display: block;
-    position: relative;
-    text-decoration: none;
-}
-
-/* サムネ画像 */
-.video-thumbnail {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 12px;
-    display: block;
-}
-
-/* 再生ボタン */
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    background: rgba(0, 0, 0, 0.65);
-    color: #fff;
-    
-    padding: 14px 22px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: 600;
-    
-    transition: 0.3s ease;
-}
-
-/* ホバー効果（CTR改善） */
-.video-link:hover .play-button {
-    background: rgba(0, 0, 0, 0.85);
-    transform: translate(-50%, -50%) scale(1.05);
-}
-
+.video-main { max-width: 800px; margin: 40px auto; } .video-main iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; }
 /* 音楽リンクボタン */
 
 .music-buttons {
