@@ -44,9 +44,21 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-CLHM36E1P0');
+  function loadGA() {
+    const script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
+    script.async = true;
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', 'G-CLHM36E1P0');
+  }
+
+  // ユーザー操作後に読み込む
+  window.addEventListener('scroll', loadGA, { once: true });
+  window.addEventListener('click', loadGA, { once: true });
+  window.addEventListener('mousemove', loadGA, { once: true });
 </script>
 
 </head>
