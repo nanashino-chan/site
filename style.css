@@ -41,6 +41,9 @@ nav {
 }
 
 .nav a {
+    display: inline-flex;       /* ← 追加 */
+    align-items: center;        /* ← 追加 */
+    height: 40px;   
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
