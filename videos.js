@@ -402,22 +402,9 @@ function getRandomVideo(type) {
   history[type].push(video);
   return video;
 }
-// =========================
-// 安全ガード（未定義対策）
-// =========================
-window.videos = window.videos || {};
-window.players = window.players || {};
 
 // =========================
-// リスト取得（安全版）
-// =========================
-function getList(type){
-  if (!window.videos || !window.videos[type]) return [];
-  return window.videos[type];
-}
-
-// =========================
-// 全ジャンルランダム
+// 全ジャンルランダム（修正版）
 // =========================
 function getRandomFromAll() {
   const all = Object.values(videos).flat();
@@ -443,13 +430,13 @@ window.addEventListener("load", () => {
     el.style.backgroundPosition = "center";
   });
 });
-
 // =========================
-// 次の曲ボタン（旧安定版）
+// 次の曲ボタン
 // =========================
 function nextTrack(type){
 
   if(!players[type]){
+    // まだ再生してない場合 → 初回再生
     startGenerator(type);
     return;
   }
@@ -460,4 +447,3 @@ function nextTrack(type){
 
   players[type].loadVideoById(videoId);
 }
-
