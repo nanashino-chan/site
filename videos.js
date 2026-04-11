@@ -376,74 +376,27 @@ const videos = {
 
 
 // =========================
-// リスト取得（修正版）
+// 次の曲（完全安全版）
 // =========================
-function getList(type){
-  return videos[type];
-}
+function nextTrack(type) {
+  try {
+    if (!players?.[type]) {
+      if (typeof startGenerator === "function") {
+        startGenerator(type);
+      }
+      return;
+    }
 
-// =========================
-// 履歴管理（重複防止）
-// =========================
-const history = {};
+    const videoId = getRandomVideo(type);
+    if (!videoId) return;
 
-function getRandomVideo(type) {
-  const list = videos[type];
-  if (!list || list.length === 0) return null;
+    const player = players[type];
 
-  if (!history[type]) history[type] = [];
-  if (history[type].length === list.length) history[type] = [];
+    if (player && typeof player.loadVideoById === "function") {
+      player.loadVideoById(videoId);
+    }
 
-  let video;
-  do {
-    video = list[Math.floor(Math.random() * list.length)];
-  } while (history[type].includes(video));
-
-  history[type].push(video);
-  return video;
-}
-
-// =========================
-// 全ジャンルランダム（修正版）
-// =========================
-function getRandomFromAll() {
-  const all = Object.values(videos).flat();
-  return all[Math.floor(Math.random() * all.length)];
-}
-
-// =========================
-// サムネイル初期表示
-// =========================
-const TYPES = ['focus','sleep','tokyo','cafe','relax','dream'];
-
-window.addEventListener("load", () => {
-  TYPES.forEach(type => {
-    const el = document.getElementById(`player-${type}`);
-    const list = getList(type);
-
-    if(!el || !list || list.length === 0) return;
-
-    const videoId = list[0];
-
-    el.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
-    el.style.backgroundSize = "cover";
-    el.style.backgroundPosition = "center";
-  });
-});
-// =========================
-// 次の曲ボタン
-// =========================
-function nextTrack(type){
-
-  if(!players[type]){
-    // まだ再生してない場合 → 初回再生
-    startGenerator(type);
-    return;
+  } catch (e) {
+    console.error("nextTrack error:", e);
   }
-
-  const videoId = getRandomVideo(type);
-
-  if(!videoId) return;
-
-  players[type].loadVideoById(videoId);
 }
