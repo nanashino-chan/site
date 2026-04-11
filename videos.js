@@ -402,12 +402,54 @@ function getRandomVideo(type) {
   history[type].push(video);
   return video;
 }
+// =========================
+// 安全ガード（未定義対策）
+// =========================
+window.videos = window.videos || {};
+window.players = window.players || {};
+
+// =========================
+// リスト取得（安全版）
+// =========================
+function getList(type){
+  if (!window.videos || !window.videos[type]) return [];
+  return window.videos[type];
+}
+
+// =========================
+// 履歴管理（重複防止）
+// =========================
+const history = {};
+
+function getRandomVideo(type) {
+  const list = getList(type);
+  if (!list.length) return null;
+
+  if (!history[type]) history[type] = [];
+
+  // 全消化時リセット
+  if (history[type].length >= list.length) {
+    history[type] = [];
+  }
+
+  let video = null;
+  let guard = 0;
+
+  do {
+    video = list[Math.floor(Math.random() * list.length)];
+    guard++;
+  } while (history[type].includes(video) && guard < 20);
+
+  history[type].push(video);
+  return video;
+}
 
 // =========================
 // 全ジャンルランダム（修正版）
 // =========================
 function getRandomFromAll() {
-  const all = Object.values(videos).flat();
+  const all = Object.values(window.videos || {}).flat();
+  if (!all.length) return null;
   return all[Math.floor(Math.random() * all.length)];
 }
 
@@ -421,7 +463,7 @@ window.addEventListener("load", () => {
     const el = document.getElementById(`player-${type}`);
     const list = getList(type);
 
-    if(!el || !list || list.length === 0) return;
+    if (!el || !list.length) return;
 
     const videoId = list[0];
 
@@ -430,21 +472,21 @@ window.addEventListener("load", () => {
     el.style.backgroundPosition = "center";
   });
 });
+
 // =========================
 // 次の曲ボタン
 // =========================
 function nextTrack(type){
 
-  if(!players[type]){
-    // まだ再生してない場合 → 初回再生
+  // players未初期化ガード
+  if (!window.players || !window.players[type]) {
     startGenerator(type);
     return;
   }
 
   const videoId = getRandomVideo(type);
+  if (!videoId) return;
 
-  if(!videoId) return;
-
-  players[type].loadVideoById(videoId);
+  window.players[type].loadVideoById(videoId);
 }
 
