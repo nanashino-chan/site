@@ -129,6 +129,7 @@ nav {
   position: relative;
   width: 100%;
   height: auto;
+  display: flex;
   margin-top: 50px;
   margin-bottom: 0;
   line-height: 0;
