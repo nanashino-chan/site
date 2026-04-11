@@ -417,39 +417,10 @@ function getList(type){
 }
 
 // =========================
-// 履歴管理（重複防止）
-// =========================
-const history = {};
-
-function getRandomVideo(type) {
-  const list = getList(type);
-  if (!list.length) return null;
-
-  if (!history[type]) history[type] = [];
-
-  // 全消化時リセット
-  if (history[type].length >= list.length) {
-    history[type] = [];
-  }
-
-  let video = null;
-  let guard = 0;
-
-  do {
-    video = list[Math.floor(Math.random() * list.length)];
-    guard++;
-  } while (history[type].includes(video) && guard < 20);
-
-  history[type].push(video);
-  return video;
-}
-
-// =========================
-// 全ジャンルランダム（修正版）
+// 全ジャンルランダム
 // =========================
 function getRandomFromAll() {
-  const all = Object.values(window.videos || {}).flat();
-  if (!all.length) return null;
+  const all = Object.values(videos).flat();
   return all[Math.floor(Math.random() * all.length)];
 }
 
@@ -463,7 +434,7 @@ window.addEventListener("load", () => {
     const el = document.getElementById(`player-${type}`);
     const list = getList(type);
 
-    if (!el || !list.length) return;
+    if(!el || !list || list.length === 0) return;
 
     const videoId = list[0];
 
@@ -474,19 +445,19 @@ window.addEventListener("load", () => {
 });
 
 // =========================
-// 次の曲ボタン
+// 次の曲ボタン（旧安定版）
 // =========================
 function nextTrack(type){
 
-  // players未初期化ガード
-  if (!window.players || !window.players[type]) {
+  if(!players[type]){
     startGenerator(type);
     return;
   }
 
   const videoId = getRandomVideo(type);
-  if (!videoId) return;
 
-  window.players[type].loadVideoById(videoId);
+  if(!videoId) return;
+
+  players[type].loadVideoById(videoId);
 }
 
