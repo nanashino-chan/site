@@ -11,7 +11,46 @@
 <meta name="description" content="Lo-fi music for study, focus, and relaxation. Tokyo night jazzhop & chill beats by Nanashino-chan. Perfect for work, sleep, and late-night vibes. 作業・勉強・リラックスに最適なLo-Fi音楽。">
 
 <meta name="robots" content="index, follow">
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
 
+  /* スクリプト（YouTube API必須） */
+  script-src 'self'
+    https://www.youtube.com
+    https://www.google.com
+    https://www.gstatic.com;
+
+  /* iframe（最重要） */
+  frame-src
+    https://www.youtube.com
+    https://www.youtube-nocookie.com;
+
+  /* API通信 */
+  connect-src
+    'self'
+    https://www.youtube.com
+    https://i.ytimg.com
+    https://www.google-analytics.com;
+
+  /* 画像（サムネ・UI） */
+  img-src
+    'self'
+    https://i.ytimg.com
+    data:;
+
+  /* スタイル（現実運用） */
+  style-src
+    'self'
+    'unsafe-inline';
+
+  /* フォント */
+  font-src
+    'self';
+
+  /* ベース制限 */
+  object-src 'none';
+  base-uri 'self';
+">
 
 <!-- クリックジャッキング対策（CSPで制御するため削除推奨） -->
 <!-- <meta http-equiv="X-Frame-Options" content="DENY"> -->
