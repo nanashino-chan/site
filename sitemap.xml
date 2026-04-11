@@ -4,55 +4,77 @@
   <!-- Top Page（ブランド入口） -->
   <url>
     <loc>https://nanashino-chan.github.io/site/</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Today Page（CV最重要・最優先クロール） -->
+  <!-- Today Page（CV最重要） -->
   <url>
     <loc>https://nanashino-chan.github.io/site/today.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
 
-  <!-- FAQ Page（検索流入＋ロングテール強化） -->
+  <!-- SEO Landing Pages（新設4本柱） -->
+
   <url>
-    <loc>https://nanashino-chan.github.io/site/faq.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://nanashino-chan.github.io/site/study.html</loc>
+    <lastmod>2026-04-11</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.92</priority>
   </url>
 
-  <!-- Music Page（SEO流入の主軸） -->
+  <url>
+    <loc>https://nanashino-chan.github.io/site/relax.html</loc>
+    <lastmod>2026-04-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <url>
+    <loc>https://nanashino-chan.github.io/site/tokyo.html</loc>
+    <lastmod>2026-04-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.91</priority>
+  </url>
+
+  <url>
+    <loc>https://nanashino-chan.github.io/site/jazzhop.html</loc>
+    <lastmod>2026-04-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.91</priority>
+  </url>
+
+  <!-- Core Content Page（旧軸） -->
   <url>
     <loc>https://nanashino-chan.github.io/site/music.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- About Page（E-E-A-T強化） -->
+  <!-- About（E-E-A-T） -->
   <url>
     <loc>https://nanashino-chan.github.io/site/about.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Contact Page（収益導線・重要） -->
+  <!-- Contact（収益導線） -->
   <url>
     <loc>https://nanashino-chan.github.io/site/contact.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
-  <!-- Policy Page（信頼補助） -->
+  <!-- Policy（信頼） -->
   <url>
     <loc>https://nanashino-chan.github.io/site/policy.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
