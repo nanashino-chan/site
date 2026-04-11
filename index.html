@@ -55,7 +55,11 @@
 <!-- Fonts（高速化） -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="hero-720.webp">
+<link rel="preload"
+      as="image"
+      href="hero-1440.webp"
+      imagesrcset="hero-720.webp 720w, hero-1440.webp 1440w"
+      imagesizes="(max-width: 768px) 100vw, 1200px">
   
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0"></script>
@@ -110,7 +114,7 @@
     hero-720.webp 720w,
     hero-1440.webp 1440w
   "
-  sizes="(max-width: 768px) 100vw, 720px"
+  sizes="(max-width: 768px) 100vw, 1200px"
   width="720"
   height="405"
   class="hero-image"
