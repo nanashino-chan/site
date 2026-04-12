@@ -136,6 +136,9 @@ nav {
   overflow: hidden;
   position: relative;
 }
+.hero h1 {
+  font-size: clamp(26px, 5vw, 48px);
+}
 
 /* クリック領域 */
 .hero-link {
