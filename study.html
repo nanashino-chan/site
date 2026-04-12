@@ -135,6 +135,7 @@ window.addEventListener('mousemove',loadGA,{once:true});
 
 </section>
 
+
 <!-- SEOテキスト（追加） -->
 <section class="container">
 
@@ -143,7 +144,91 @@ window.addEventListener('mousemove',loadGA,{once:true});
   </p>
 
 </section>
+<!-- 🎧 Generator Section -->
+<section style="max-width:900px; margin:40px auto; padding:20px; text-align:center;">
 
+  <h2 style="
+    font-size:clamp(20px,4vw,28px);
+    margin-bottom:12px;
+  ">
+    Lo-Fi Music Generator – Play by Mood
+  </h2>
+
+  <p style="
+    font-size:14px;
+    line-height:1.7;
+    margin-bottom:10px;
+  ">
+    Instantly play random lo-fi music for focus, study, and relaxation. No login required.
+  </p>
+
+  <p style="
+    font-size:13px;
+    opacity:0.8;
+    margin-bottom:20px;
+  ">
+    ▶ Click “Play Now” to start your session
+  </p>
+
+  <p style="
+    font-size:12px;
+    opacity:0.7;
+    margin-bottom:30px;
+  ">
+    Preview via YouTube (ads may appear) / YouTubeでは広告が表示される場合があります
+  </p>
+
+  <!-- 🎵 Generator -->
+  <div style="
+    display:flex;
+    justify-content:center;
+  ">
+
+    <div id="focus" style="
+      width:100%;
+      max-width:400px;
+    ">
+
+      <div id="player-focus" style="margin-bottom:12px;"></div>
+
+      <p style="
+        font-size:14px;
+        margin-bottom:10px;
+      ">
+        Focus & Productivity Lo-Fi
+      </p>
+
+      <div style="display:flex; gap:10px; justify-content:center;">
+
+        <button onclick="startGenerator('focus')" style="
+          padding:10px 16px;
+          background:#ffcc00;
+          border:none;
+          border-radius:6px;
+          font-weight:bold;
+          cursor:pointer;
+        ">
+          ▶ Play Now
+        </button>
+
+        <button onclick="nextTrack('focus')" style="
+          padding:10px 16px;
+          border:1px solid #ccc;
+          border-radius:6px;
+          cursor:pointer;
+        ">
+          Next
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  
 <!-- CTA -->
 <section class="container">
 
