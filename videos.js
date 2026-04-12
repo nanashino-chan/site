@@ -374,19 +374,18 @@ const videos = {
   ],
 };
 
-
 // =========================
-// 次の曲（安定化・原因特定付き）
+// 次の曲（安定版・依存可視化）
 // =========================
 window.nextTrack = function (type) {
   try {
-    // ① typeチェック
+    // ① type検証
     if (typeof type !== "string" || !type) {
       console.error("[nextTrack] invalid type:", type);
       return;
     }
 
-    // ② プレイヤー確認
+    // ② player存在チェック
     const player = window.players?.[type];
     if (!player) {
       console.warn("[nextTrack] player not ready:", type);
@@ -397,10 +396,10 @@ window.nextTrack = function (type) {
       return;
     }
 
-    // ③ video取得関数チェック（ここが今のエラー原因）
+    // ③ 依存関数チェック（ここが本質エラー）
     if (typeof window.getRandomVideo !== "function") {
       console.error(
-        "[nextTrack] CRITICAL: getRandomVideo is not defined"
+        "[nextTrack] FATAL: getRandomVideo is missing (script load or scope issue)"
       );
       return;
     }
@@ -409,20 +408,20 @@ window.nextTrack = function (type) {
     const videoId = window.getRandomVideo(type);
 
     if (!videoId) {
-      console.warn("[nextTrack] videoId not found:", type);
+      console.warn("[nextTrack] no videoId:", type);
       return;
     }
 
-    // ⑤ YouTube APIチェック
+    // ⑤ YouTube API安全チェック
     if (typeof player.loadVideoById !== "function") {
-      console.warn("[nextTrack] player not ready API:", type);
+      console.warn("[nextTrack] player API not ready:", type);
       return;
     }
 
     // ⑥ 実行
     player.loadVideoById(videoId);
 
-  } catch (err) {
-    console.error("[nextTrack] unexpected error:", err);
+  } catch (e) {
+    console.error("[nextTrack] crashed:", e);
   }
 };
