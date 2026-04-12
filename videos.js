@@ -371,7 +371,7 @@ const videos = {
     "Fi3PEPJYJeY",
     "e9JmagU2QY0",
     "UcmzWj1QYYk"
-  ],
+  ]
 };
 
 // =========================
