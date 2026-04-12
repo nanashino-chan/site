@@ -375,61 +375,116 @@ const videos = {
 };
 
 // =========================
-// 次の曲（安定版・依存完全可視化）
+// リスト取得（修正版）
 // =========================
-window.nextTrack = function (type) {
-  try {
-    // ① typeチェック
-    if (typeof type !== "string" || !type) {
-      console.error("[nextTrack] INVALID TYPE:", type);
-      return;
-    }
+function getList(type){
+  return videos[type];
+}
 
-    // ② player取得
-    const player = window.players?.[type];
+// =========================
+// 履歴管理（重複防止）
+// =========================
+const history = {};
 
-    if (!player) {
-      console.warn("[nextTrack] PLAYER NOT READY:", type);
+function getRandomVideo(type) {
+  const list = videos[type];
+  if (!list || list.length === 0) return null;
 
-      if (typeof window.startGenerator === "function") {
-        window.startGenerator(type);
-      } else {
-        console.error("[nextTrack] startGenerator MISSING");
-      }
+  if (!history[type]) history[type] = [];
+  if (history[type].length === list.length) history[type] = [];
 
-      return;
-    }
+  let video;
+  do {
+    video = list[Math.floor(Math.random() * list.length)];
+  } while (history[type].includes(video));
 
-    // ③ 依存関数チェック（ここが本質原因ポイント）
-    if (typeof window.getRandomVideo !== "function") {
-      console.error(
-        "[nextTrack] FATAL ERROR: getRandomVideo is NOT LOADED",
-        {
-          hint: "script load order or missing global assignment",
-          type
-        }
-      );
-      return;
-    }
+  history[type].push(video);
+  return video;
+}
+// =========================
+// 安全ガード（未定義対策）
+// =========================
+window.videos = window.videos || {};
+window.players = window.players || {};
 
-    // ④ video取得
-    const videoId = window.getRandomVideo(type);
+// =========================
+// リスト取得（安全版）
+// =========================
+function getList(type){
+  if (!window.videos || !window.videos[type]) return [];
+  return window.videos[type];
+}
 
-    if (!videoId) {
-      console.warn("[nextTrack] NO VIDEO ID:", type);
-      return;
-    }
+// =========================
+// 履歴管理（重複防止）
+// =========================
+const history = {};
 
-    // ⑤ YouTube APIチェック
-    if (!player.loadVideoById) {
-      console.warn("[nextTrack] PLAYER API NOT READY:", type);
-      return;
-    }
+function getRandomVideo(type) {
+  const list = getList(type);
+  if (!list.length) return null;
 
-    // ⑥ 実行
-    player.loadVideoById(videoId);
+  if (!history[type]) history[type] = [];
 
-  } catch (err) {
-    console.error("[nextTrack] CRASHED:", err);
+  // 全消化時リセット
+  if (history[type].length >= list.length) {
+    history[type] = [];
   }
-};
+
+  let video = null;
+  let guard = 0;
+
+  do {
+    video = list[Math.floor(Math.random() * list.length)];
+    guard++;
+  } while (history[type].includes(video) && guard < 20);
+
+  history[type].push(video);
+  return video;
+}
+
+// =========================
+// 全ジャンルランダム（修正版）
+// =========================
+function getRandomFromAll() {
+  const all = Object.values(window.videos || {}).flat();
+  if (!all.length) return null;
+  return all[Math.floor(Math.random() * all.length)];
+}
+
+// =========================
+// サムネイル初期表示
+// =========================
+const TYPES = ['focus','sleep','tokyo','cafe','relax','dream'];
+
+window.addEventListener("load", () => {
+  TYPES.forEach(type => {
+    const el = document.getElementById(`player-${type}`);
+    const list = getList(type);
+
+    if (!el || !list.length) return;
+
+    const videoId = list[0];
+
+    el.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/hqdefault.jpg)`;
+    el.style.backgroundSize = "cover";
+    el.style.backgroundPosition = "center";
+  });
+});
+
+// =========================
+// 次の曲ボタン
+// =========================
+function nextTrack(type){
+
+  // players未初期化ガード
+  if (!window.players || !window.players[type]) {
+    startGenerator(type);
+    return;
+  }
+
+  const videoId = getRandomVideo(type);
+  if (!videoId) return;
+
+  window.players[type].loadVideoById(videoId);
+}
