@@ -48,24 +48,33 @@
       imagesrcset="hero-720.webp 720w, hero-1440.webp 1440w"
       imagesizes="(max-width: 768px) 100vw, 1200px">
 
-<!-- GA -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0"></script>
+<!-- GA（遅延ロード） -->
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+
+let gaLoaded = false;
+
 function loadGA(){
- const script=document.createElement('script');
- script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
- script.async=true;
- document.head.appendChild(script);
- gtag('js', new Date());
- gtag('config','G-CLHM36E1P0');
+  if(gaLoaded) return;
+  gaLoaded = true;
+
+  const script = document.createElement('script');
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
+  script.async = true;
+  document.head.appendChild(script);
+
+  gtag('js', new Date());
+  gtag('config','G-CLHM36E1P0');
 }
-window.addEventListener('scroll',loadGA,{once:true});
-window.addEventListener('click',loadGA,{once:true});
-window.addEventListener('mousemove',loadGA,{once:true});
+
+window.addEventListener('scroll', loadGA, { once:true });
+window.addEventListener('click', loadGA, { once:true });
+window.addEventListener('mousemove', loadGA, { once:true });
 </script>
 
+<!-- アプリ本体（最重要） -->
+<script src="app.js" defer></script>
 </head>
 
 <body>
