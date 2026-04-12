@@ -376,53 +376,53 @@ const videos = {
 
 
 // =========================
-// 次の曲（完全安全・プロダクション版）
+// 次の曲（安定化・原因特定付き）
 // =========================
 window.nextTrack = function (type) {
   try {
-    // ① 入力チェック
-    if (!type || typeof type !== "string") {
-      console.warn("nextTrack: invalid type");
+    // ① typeチェック
+    if (typeof type !== "string" || !type) {
+      console.error("[nextTrack] invalid type:", type);
       return;
     }
 
-    // ② getRandomVideo存在チェック（CSP/順序崩壊対策）
-    if (typeof window.getRandomVideo !== "function") {
-      console.error("nextTrack: getRandomVideo is not defined");
-      return;
-    }
+    // ② プレイヤー確認
+    const player = window.players?.[type];
+    if (!player) {
+      console.warn("[nextTrack] player not ready:", type);
 
-    // ③ プレイヤー未存在なら初期化へフォールバック
-    if (!window.players || !window.players[type]) {
       if (typeof window.startGenerator === "function") {
         window.startGenerator(type);
-      } else {
-        console.error("nextTrack: startGenerator is not defined");
       }
       return;
     }
 
-    // ④ ビデオ取得
-    const videoId = window.getRandomVideo(type);
-
-    if (!videoId || typeof videoId !== "string") {
-      console.warn("nextTrack: invalid videoId");
+    // ③ video取得関数チェック（ここが今のエラー原因）
+    if (typeof window.getRandomVideo !== "function") {
+      console.error(
+        "[nextTrack] CRITICAL: getRandomVideo is not defined"
+      );
       return;
     }
 
-    const player = window.players[type];
+    // ④ video取得
+    const videoId = window.getRandomVideo(type);
 
-    // ⑤ YouTube API安全チェック
-    if (!player || typeof player.loadVideoById !== "function") {
-      console.warn("nextTrack: player not ready", type);
+    if (!videoId) {
+      console.warn("[nextTrack] videoId not found:", type);
+      return;
+    }
+
+    // ⑤ YouTube APIチェック
+    if (typeof player.loadVideoById !== "function") {
+      console.warn("[nextTrack] player not ready API:", type);
       return;
     }
 
     // ⑥ 実行
     player.loadVideoById(videoId);
 
-  } catch (e) {
-    // ⑦ 最終防御（サイト全停止防止）
-    console.error("nextTrack critical error:", e);
+  } catch (err) {
+    console.error("[nextTrack] unexpected error:", err);
   }
 };
