@@ -1,7 +1,7 @@
 // =========================
 // 動画データ（ここに縦追加するだけ）
 // =========================
-const videos = {
+window.videos = {
   focus: [
 //Night Focus Jazz: Lo-Fi Grooves for Deep Late Hours 24
     "O_DlB-RyU-4",
@@ -195,9 +195,7 @@ const videos = {
     "ayNIKqcXRUQ",
     "4Kc4bQG4fiI",
     "_XY-msh24xY",
-    "iNywIdXHcyE"
-
-    
+    "iNywIdXHcyE"    
   ],
 
   tokyo: [
@@ -373,62 +371,24 @@ const videos = {
     "UcmzWj1QYYk"
   ]
 };
-
+window.players = {};
+window.history = {};
 // =========================
-// リスト取得（修正版）
+// ランダム取得（重複防止）
 // =========================
-function getList(type){
-  return videos[type];
-}
-
-// =========================
-// 履歴管理（重複防止）
-// =========================
-const history = {};
-
 function getRandomVideo(type) {
-  const list = videos[type];
+  const list = window.videos[type];
+
   if (!list || list.length === 0) return null;
 
-  if (!history[type]) history[type] = [];
-  if (history[type].length === list.length) history[type] = [];
+  if (!window.history[type]) {
+    window.history[type] = [];
+  }
 
-  let video;
-  do {
-    video = list[Math.floor(Math.random() * list.length)];
-  } while (history[type].includes(video));
+  const history = window.history[type];
 
-  history[type].push(video);
-  return video;
-}
-// =========================
-// 安全ガード（未定義対策）
-// =========================
-window.videos = window.videos || {};
-window.players = window.players || {};
-
-// =========================
-// リスト取得（安全版）
-// =========================
-function getList(type){
-  if (!window.videos || !window.videos[type]) return [];
-  return window.videos[type];
-}
-
-// =========================
-// 履歴管理（重複防止）
-// =========================
-const history = {};
-
-function getRandomVideo(type) {
-  const list = getList(type);
-  if (!list.length) return null;
-
-  if (!history[type]) history[type] = [];
-
-  // 全消化時リセット
-  if (history[type].length >= list.length) {
-    history[type] = [];
+  if (history.length >= list.length) {
+    window.history[type] = [];
   }
 
   let video = null;
@@ -437,32 +397,23 @@ function getRandomVideo(type) {
   do {
     video = list[Math.floor(Math.random() * list.length)];
     guard++;
-  } while (history[type].includes(video) && guard < 20);
+  } while (history.includes(video) && guard < 20);
 
-  history[type].push(video);
+  history.push(video);
   return video;
 }
 
 // =========================
-// 全ジャンルランダム（修正版）
+// 初期サムネ表示
 // =========================
-function getRandomFromAll() {
-  const all = Object.values(window.videos || {}).flat();
-  if (!all.length) return null;
-  return all[Math.floor(Math.random() * all.length)];
-}
-
-// =========================
-// サムネイル初期表示
-// =========================
-const TYPES = ['focus','sleep','tokyo','cafe','relax','dream'];
+const TYPES = ["focus","sleep","tokyo","cafe","relax","dream"];
 
 window.addEventListener("load", () => {
   TYPES.forEach(type => {
     const el = document.getElementById(`player-${type}`);
-    const list = getList(type);
+    const list = window.videos[type];
 
-    if (!el || !list.length) return;
+    if (!el || !list || !list.length) return;
 
     const videoId = list[0];
 
@@ -473,12 +424,10 @@ window.addEventListener("load", () => {
 });
 
 // =========================
-// 次の曲ボタン
+// 次の曲
 // =========================
-function nextTrack(type){
-
-  // players未初期化ガード
-  if (!window.players || !window.players[type]) {
+function nextTrack(type) {
+  if (!window.players[type]) {
     startGenerator(type);
     return;
   }
@@ -487,4 +436,29 @@ function nextTrack(type){
   if (!videoId) return;
 
   window.players[type].loadVideoById(videoId);
+}
+
+// =========================
+// 初回再生（外部依存）
+// =========================
+function startGenerator(type) {
+  const videoId = getRandomVideo(type);
+  if (!videoId) return;
+
+  const playerId = `player-${type}`;
+
+  if (!window.players[type]) {
+    window.players[type] = new YT.Player(playerId, {
+      height: "360",
+      width: "640",
+      videoId: videoId,
+      playerVars: {
+        autoplay: 1,
+        controls: 1,
+        rel: 0
+      }
+    });
+  } else {
+    window.players[type].loadVideoById(videoId);
+  }
 }
