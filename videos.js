@@ -376,27 +376,53 @@ const videos = {
 
 
 // =========================
-// 次の曲（完全安全版）
+// 次の曲（完全安全・プロダクション版）
 // =========================
-function nextTrack(type) {
+window.nextTrack = function (type) {
   try {
-    if (!players?.[type]) {
-      if (typeof startGenerator === "function") {
-        startGenerator(type);
+    // ① 入力チェック
+    if (!type || typeof type !== "string") {
+      console.warn("nextTrack: invalid type");
+      return;
+    }
+
+    // ② getRandomVideo存在チェック（CSP/順序崩壊対策）
+    if (typeof window.getRandomVideo !== "function") {
+      console.error("nextTrack: getRandomVideo is not defined");
+      return;
+    }
+
+    // ③ プレイヤー未存在なら初期化へフォールバック
+    if (!window.players || !window.players[type]) {
+      if (typeof window.startGenerator === "function") {
+        window.startGenerator(type);
+      } else {
+        console.error("nextTrack: startGenerator is not defined");
       }
       return;
     }
 
-    const videoId = getRandomVideo(type);
-    if (!videoId) return;
+    // ④ ビデオ取得
+    const videoId = window.getRandomVideo(type);
 
-    const player = players[type];
-
-    if (player && typeof player.loadVideoById === "function") {
-      player.loadVideoById(videoId);
+    if (!videoId || typeof videoId !== "string") {
+      console.warn("nextTrack: invalid videoId");
+      return;
     }
 
+    const player = window.players[type];
+
+    // ⑤ YouTube API安全チェック
+    if (!player || typeof player.loadVideoById !== "function") {
+      console.warn("nextTrack: player not ready", type);
+      return;
+    }
+
+    // ⑥ 実行
+    player.loadVideoById(videoId);
+
   } catch (e) {
-    console.error("nextTrack error:", e);
+    // ⑦ 最終防御（サイト全停止防止）
+    console.error("nextTrack critical error:", e);
   }
-}
+};
