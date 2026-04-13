@@ -13,7 +13,45 @@
 <meta name="description" content="Lo-fi study music with no ads. Free background music for studying, coding, reading, and deep focus. 広告なしの作業用Lo-Fi音楽で集中力を最大化。">
 
 <meta name="robots" content="index, follow">
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
 
+  script-src 'self'
+    'unsafe-inline'
+    https://www.youtube.com
+    https://www.google.com
+    https://www.gstatic.com
+    https://s.ytimg.com
+    https://www.googletagmanager.com
+    https://www.google-analytics.com;
+
+  frame-src
+    https://www.youtube.com
+    https://www.youtube-nocookie.com;
+
+  connect-src
+    'self'
+    https://www.youtube.com
+    https://i.ytimg.com
+    https://www.google-analytics.com
+    https://www.googletagmanager.com
+    https://www.youtube.com;
+
+  img-src
+    'self'
+    https://i.ytimg.com
+    https://img.youtube.com
+    data:;
+
+  style-src
+    'self'
+    'unsafe-inline';
+
+  font-src 'self';
+
+  object-src 'none';
+  base-uri 'self';
+">
 <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
 
 <!-- Canonical -->
