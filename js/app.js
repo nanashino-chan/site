@@ -103,6 +103,9 @@ async function startGenerator(type) {
     return;
   }
 
+  // 👇 サムネ消す（再生時）
+  el.style.backgroundImage = "none";
+
   if (!players[type]) {
 
     players[type] = new YT.Player(playerId, {
@@ -144,16 +147,15 @@ function nextTrack(type) {
 }
 
 // =========================
-// グローバル公開
+// グローバル公開（重複削除）
 // =========================
 window.startGenerator = startGenerator;
 window.nextTrack = nextTrack;
 
-window.startGenerator = startGenerator;
-window.nextTrack = nextTrack;
 
-
-// 👇 ここに追加（最下部）
+// =========================
+// 初期表示＋クリック再生
+// =========================
 window.addEventListener("DOMContentLoaded", () => {
 
   const videos = window.videos || {};
@@ -165,12 +167,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (!el || !list || !list.length) return;
 
+    // サムネ設定
     const thumbnail = `https://img.youtube.com/vi/${list[0]}/hqdefault.jpg`;
 
     el.style.backgroundImage = `url(${thumbnail})`;
     el.style.backgroundSize = "cover";
     el.style.backgroundPosition = "center";
     el.style.cursor = "pointer";
+
+    // 👇 サムネクリックで再生
+    el.addEventListener("click", () => {
+      startGenerator(type);
+    });
+
   });
 
 });
