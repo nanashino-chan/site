@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -6,66 +7,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO -->
-<title>Relaxing Lo-Fi Music 🌙 Chill & Stress Relief BGM</title>
 
-<meta name="description" content="Relaxing lo-fi music for stress relief, sleep, and calm moments. Ad-free chill beats to unwind your mind. リラックス・睡眠に最適なLo-Fi音楽。">
+<title>Lo-Fi Sleep & Relax Music (No Ads) – Stress Relief & Calm Beats</title>
+
+<meta name="description" content="Lo-fi sleep and relax music with no ads. Calm background music for stress relief, anxiety, and better sleep. 睡眠・リラックス・ストレス解消に最適な広告なしのLo-Fi音楽。">
 
 <meta name="robots" content="index, follow">
 
-<!-- CSP -->
 <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  img-src 'self' data: https:;
-  script-src 'self' https://www.googletagmanager.com https://www.youtube.com;
-  style-src 'self' 'unsafe-inline';
-  connect-src 'self' https://www.google-analytics.com;
-  font-src 'self';
-  frame-src https://www.youtube.com https://www.youtube-nocookie.com;
-  base-uri 'self';
-  form-action 'self';
+default-src 'self';
+img-src 'self' data: https:;
+script-src 'self' https://www.googletagmanager.com https://www.youtube.com;
+style-src 'self' 'unsafe-inline';
+connect-src 'self' https://www.google-analytics.com;
+font-src 'self';
+frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+base-uri 'self';
+form-action 'self';
 ">
 
 <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
 
-<!-- Canonical -->
 <link rel="canonical" href="https://nanashino-chan.github.io/site/relax.html">
-
-<!-- Favicon -->
 <link rel="icon" href="./favicon.png" type="image/png">
 
 <!-- OGP -->
-<meta property="og:title" content="Relaxing Lo-Fi Music 🌙 Chill & Stress Relief BGM">
-<meta property="og:description" content="Ad-free lo-fi beats for relaxation, sleep, and stress relief.">
+
+<meta property="og:title" content="Lo-Fi Sleep & Relax Music (No Ads)">
+<meta property="og:description" content="Ad-free lo-fi music for sleep, relaxation, and stress relief.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/relax.html">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
 <!-- Twitter -->
+
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Relaxing Lo-Fi Music 🌙 Chill & Stress Relief BGM">
-<meta name="twitter:description" content="Relaxing lo-fi beats for calm moments and sleep.">
+<meta name="twitter:title" content="Lo-Fi Sleep & Relax Music (No Ads)">
+<meta name="twitter:description" content="Relaxing lo-fi beats for calm moments and better sleep.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
-<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 
-<!-- Preconnect -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Hero preload -->
 <link rel="preload"
       as="image"
       href="hero-1440.webp"
       imagesrcset="hero-720.webp 720w, hero-1440.webp 1440w"
       imagesizes="(max-width: 768px) 100vw, 1200px">
 
-<!-- GA -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0"></script>
+<!-- GA（遅延） -->
+
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+let gaLoaded=false;
 function loadGA(){
+ if(gaLoaded) return;
+ gaLoaded=true;
  const script=document.createElement('script');
  script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
  script.async=true;
@@ -81,154 +81,155 @@ window.addEventListener('mousemove',loadGA,{once:true});
 </head>
 
 <body>
-<!-- ナビ -->
+
 <header>
-  <nav>
-    <div class="nav">
-
-      <!-- ブランド導線 -->
-      <a href="index.html">HOME</a>
-
-      <!-- 🔥 SEOコア（最重要） -->
-      <a href="study.html">Study Lo-Fi</a>
-      <a href="relax.html">Relax Lo-Fi</a>
-      <a href="tokyo.html">Tokyo Vibes</a>
-      <a href="jazzhop.html">Jazzhop</a>
-
-      <!-- サブ -->
-      <a href="music.html">Music</a>
-      <a href="about.html">About</a>
-
-      <!-- CTA -->
-      <a href="today.html" class="nav-cta">▶ Listen Now</a>
-
-    </div>
-  </nav>
+<nav>
+<div class="nav">
+<a href="index.html">HOME</a>
+<a href="study.html">Study Lo-Fi</a>
+<a href="relax.html">Relax Lo-Fi</a>
+<a href="tokyo.html">Tokyo Vibes</a>
+<a href="jazzhop.html">Jazzhop</a>
+<a href="music.html">Music</a>
+<a href="about.html">About</a>
+<a href="today.html" class="nav-cta">▶ Listen Now</a>
+</div>
+</nav>
 </header>
+
 <section class="today-cta">
-  <a href="today.html">🔥 Today’s Best Track</a>
-<!-- ヒーロー -->
-<section style="
-  padding:40px 20px;
-  text-align:center;
-  max-width:800px;
-  margin:0 auto;
-">
+<a href="today.html">🔥 Today’s Best Track</a>
+</section>
 
-  <h1 style="
-    font-size:clamp(24px, 5vw, 36px);
-    line-height:1.3;
-    margin-bottom:16px;
-  ">
-    Relaxing Lo-Fi Music for Stress Relief & Sleep
-  </h1>
+<!-- HERO -->
 
-  <p style="
-    font-size:clamp(14px, 2.5vw, 18px);
-    line-height:1.7;
-    margin:0 auto;
-  ">
-    Unwind with calm lo-fi beats designed for relaxation, sleep, and peaceful moments.
-    No ads. No interruptions. Just music.
-  </p>
+<section style="padding:40px 20px;text-align:center;max-width:800px;margin:0 auto;">
+
+<h1>Lo-Fi Sleep & Relax Music (No Ads)</h1>
+
+<p><strong>Fall asleep faster. No ads. Pure calm.</strong></p>
+
+<p>
+Relaxing lo-fi music for sleep, stress relief, and peaceful nights.<br>
+睡眠・リラックス・ストレス解消に最適なLo-Fi音楽。
+</p>
 
 </section>
 
-<!-- SEOテキスト -->
+<!-- SEO TEXT -->
+
 <section class="container">
 
-  <p>
-    Relaxing lo-fi music and chill beats for stress relief, sleep, and calm focus.
-    Soft ambient sounds designed to help you unwind, reduce anxiety, and improve sleep quality.
-  </p>
+<p>
+Relaxing lo-fi music for sleep, anxiety relief, and deep relaxation.
+Soft ambient beats designed to help you unwind, reduce stress, and fall asleep naturally.
+</p>
 
-  <p>
-    ストレス解消・睡眠・リラックスに最適なLo-Fi音楽です。
-    静かなチルビートで心を落ち着け、穏やかな時間を過ごせます。
-  </p>
+<p>
+静かなLo-Fiビートが心を落ち着け、ストレスを和らげます。
+自然に眠りへ導くリラックス音楽です。
+</p>
 
 </section>
 
 <!-- CTA -->
-<section class="container">
 
-  <a href="/today.html" class="cta-button primary">
-    ▶ Play Relaxing Lo-Fi Now
-  </a>
+<section class="container">
+<a href="today.html" class="cta-button primary">
+▶ Play Relaxing Music (No Ads)
+</a>
+</section>
+
+<!-- SEO CONTENT -->
+
+<section class="seo-content" style="max-width:800px;margin:0 auto;padding:20px;line-height:1.8;">
+
+<h2>Why Lo-Fi Music Helps You Relax</h2>
+<p>
+Lo-fi music uses soft rhythms and ambient textures to calm your mind and reduce stress.
+穏やかなリズムが自律神経を整え、リラックス効果を高めます。
+</p>
+
+<h2>Best Time to Listen</h2>
+<ul>
+<li>Before sleep / 就寝前</li>
+<li>After work / 仕事後</li>
+<li>During meditation / 瞑想</li>
+<li>While relaxing / リラックスタイム</li>
+</ul>
+
+<h2>Ad-Free Music for Better Sleep</h2>
+<p>
+Unlike YouTube playlists, this music plays without interruptions, helping you sleep peacefully.
+広告なしで再生できるため、睡眠が妨げられません。
+</p>
 
 </section>
 
+<!-- INTERNAL LINKS -->
 
-<!-- 🎧 サブ導線 -->
+<section style="max-width:800px;margin:0 auto;padding:20px;">
+
+<h2>Explore More Lo-Fi Music</h2>
+
+<ul>
+<li><a href="study.html">Lo-Fi Study Music for Focus</a></li>
+<li><a href="tokyo.html">Tokyo Night Lo-Fi & Japanese Chill Beats</a></li>
+<li><a href="jazzhop.html">Smooth Jazzhop & Chill Beats</a></li>
+</ul>
+
+</section>
+
+<!-- PLATFORM -->
+
 <section class="platform-links">
 
-  <h2>Continue Listening on Your Favorite Platform</h2>
+<h2>Continue Listening on Your Favorite Platform</h2>
 
-  <a href="YOUR_SPOTIFY_LINK">
-    Listen to relaxing lo-fi music on Spotify
-  </a>
+<a href="YOUR_SPOTIFY_LINK">
+Listen to relaxing lo-fi music on Spotify
+</a><br>
 
-  <br>
+<a href="YOUR_APPLE_LINK">
+Continue chill lo-fi on Apple Music
+</a><br>
 
-  <a href="YOUR_APPLE_LINK">
-    Continue chill lo-fi on Apple Music
-  </a>
-
-  <br>
-
-  <a href="YOUR_YOUTUBE_LINK">
-    Watch relaxing lo-fi playlist on YouTube
-  </a>
+<a href="YOUR_YOUTUBE_LINK">
+Watch relaxing lo-fi playlist on YouTube
+</a>
 
 </section>
-<!-- ===== Footer ===== -->
+
 <footer class="site-footer">
 
-  <div class="footer-container">
+<div class="footer-container">
 
-    <!-- ブランド -->
-    <div class="footer-brand">
-      <h2>Nanashino-chan</h2>
-      <p>Ad-free Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
-      <p>© 2026 Nanashino-chan. All rights reserved.</p>
-    </div>
+<div class="footer-brand">
+<h2>Nanashino-chan</h2>
+<p>Ad-free Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
+<p>© 2026 Nanashino-chan. All rights reserved.</p>
+</div>
 
-    <!-- 🔥 SEOリンク -->
-    <div class="footer-links">
+<div class="footer-links">
+<a href="study.html">Lo-Fi music for studying and focus</a> |
+<a href="relax.html">Relaxing lo-fi music for sleep and stress relief</a> |
+<a href="tokyo.html">Tokyo night lo-fi and Japanese chill beats</a> |
+<a href="jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
+</div>
 
-      <a href="study.html">
-        Lo-Fi music for studying and focus
-      </a> |
+<div class="footer-links-sub">
+<a href="index.html">Home</a> |
+<a href="today.html">Listen Now</a> |
+<a href="faq.html">FAQ</a> |
+<a href="policy.html">Policy</a> |
+<a href="contact.html">Contact</a>
+</div>
 
-      <a href="relax.html">
-        Relaxing lo-fi music for sleep and stress relief
-      </a> |
+<p class="footer-note">
+🎧 No ads. No interruptions. Just pure lo-fi music.
+</p>
 
-      <a href="tokyo.html">
-        Tokyo night lo-fi and Japanese chill beats
-      </a> |
-
-      <a href="jazzhop.html">
-        Smooth jazzhop and jazzy lo-fi beats
-      </a>
-
-    </div>
-
-    <!-- サブリンク -->
-    <div class="footer-links-sub">
-      <a href="index.html">Home</a> |
-      <a href="today.html">Listen Now</a> |
-      <a href="faq.html">FAQ</a> |
-      <a href="policy.html">Policy</a> |
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <!-- CTA -->
-    <p class="footer-note">
-      🎧 No ads. No interruptions. Just pure lo-fi music.
-    </p>
-
-  </div>
+</div>
 
 </footer>
 
