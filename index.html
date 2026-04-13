@@ -523,45 +523,6 @@ allowfullscreen>
 <script src="./js/videos.js"></script>
 <script src="./js/app.js" defer></script>
 
-<script>
 
-// =========================
-// メイン機能（最適化版）
-// =========================
-async function startGenerator(type){
-
-  await loadYouTubeAPI();
-
-  const videoId = getRandomVideo(type);
-
-  if(!videoId){
-    console.warn(`No videos found for type: ${type}`);
-    return;
-  }
-
-  if(!players[type]){
-
-    players[type] = new YT.Player(`player-${type}`, {
-      videoId: videoId,
-      playerVars:{
-        autoplay:1,
-        rel:0,
-        modestbranding:1
-      },
-      events:{
-        onStateChange:(event)=>{
-          if(event.data === YT.PlayerState.ENDED){
-            players[type].loadVideoById(getRandomVideo(type));
-          }
-        }
-      }
-    });
-
-  } else {
-    players[type].loadVideoById(videoId);
-  }
-}
-
-</script>
 </body>
 </html>
