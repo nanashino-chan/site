@@ -345,6 +345,9 @@ footer {
     font-size: 16px;
     color: #cfcfcf;
 }
+.generator-container {
+  padding: clamp(10px, 3vw, 20px);
+}
 .internal-links {
   display: flex;
   flex-wrap: wrap;
