@@ -985,6 +985,7 @@ p {
 ul {
   padding-left: 20px;
   margin-bottom: 20px;
+  list-style: none;
 }
 
 /* セクション区切り */
