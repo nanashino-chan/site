@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -6,47 +7,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO -->
-<title>Tokyo Night Lo-Fi 🌃 Japanese Chill & Jazzhop Beats</title>
 
-<meta name="description" content="Tokyo night lo-fi music with chill jazzhop vibes. Experience Japanese atmosphere through relaxing beats. 東京の夜を感じるLo-Fi音楽。">
+<title>Tokyo Night Lo-Fi Music (No Ads) – Japanese Chill Beats & City Vibes</title>
+
+<meta name="description" content="Tokyo night lo-fi music with no ads. Japanese chill beats inspired by city lights and late-night vibes. 東京の夜を感じるLo-Fi音楽。">
 
 <meta name="robots" content="index, follow">
-
-<!-- CSP -->
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
-  img-src 'self' data: https:;
-  script-src 'self' https://www.googletagmanager.com https://www.youtube.com;
-  style-src 'self' 'unsafe-inline';
-  connect-src 'self' https://www.google-analytics.com;
-  font-src 'self';
-  frame-src https://www.youtube.com https://www.youtube-nocookie.com;
-  base-uri 'self';
-  form-action 'self';
-">
 
-<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+script-src 'self'
+'unsafe-inline'
+https://www.youtube.com
+https://www.google.com
+https://www.gstatic.com
+https://s.ytimg.com
+https://www.googletagmanager.com
+https://www.google-analytics.com;
 
-<!-- Canonical -->
+frame-src
+https://www.youtube.com
+https://www.youtube-nocookie.com;
+
+connect-src
+'self'
+https://www.youtube.com
+https://i.ytimg.com
+https://www.google-analytics.com
+https://www.googletagmanager.com
+https://www.youtube.com;
+
+img-src
+'self'
+https://i.ytimg.com
+https://img.youtube.com
+data:;
+
+style-src
+'self'
+'unsafe-inline';
+
+font-src 'self';
+
+object-src 'none';
+base-uri 'self';
+"> <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+
 <link rel="canonical" href="https://nanashino-chan.github.io/site/tokyo.html">
-
-<!-- Favicon -->
 <link rel="icon" href="./favicon.png" type="image/png">
 
 <!-- OGP -->
-<meta property="og:title" content="Tokyo Night Lo-Fi 🌃 Japanese Chill & Jazzhop Beats">
-<meta property="og:description" content="Experience Tokyo night vibes with relaxing lo-fi and jazzhop beats.">
+
+<meta property="og:title" content="Tokyo Night Lo-Fi Music (No Ads)">
+<meta property="og:description" content="Ad-free Japanese lo-fi music inspired by Tokyo nights and city vibes.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/tokyo.html">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
 <!-- Twitter -->
+
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tokyo Night Lo-Fi 🌃 Japanese Chill & Jazzhop Beats">
-<meta name="twitter:description" content="Japanese chill lo-fi beats inspired by Tokyo nights.">
+<meta name="twitter:title" content="Tokyo Night Lo-Fi Music (No Ads)">
+<meta name="twitter:description" content="Japanese chill beats for night focus and relaxation.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
-<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,12 +82,15 @@
       imagesrcset="hero-720.webp 720w, hero-1440.webp 1440w"
       imagesizes="(max-width: 768px) 100vw, 1200px">
 
-<!-- GA -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0"></script>
+<!-- GA（遅延） -->
+
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+let gaLoaded=false;
 function loadGA(){
+ if(gaLoaded) return;
+ gaLoaded=true;
  const script=document.createElement('script');
  script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
  script.async=true;
@@ -76,147 +103,201 @@ window.addEventListener('click',loadGA,{once:true});
 window.addEventListener('mousemove',loadGA,{once:true});
 </script>
 
+<!-- 動画ID -->
+
+<script src="./js/videos.js"></script>
+
+<script src="./js/app.js" defer></script>
+
 </head>
 
 <body>
-<!-- ナビ -->
+
 <header>
-  <nav>
-    <div class="nav">
-
-      <!-- ブランド導線 -->
-      <a href="index.html">HOME</a>
-
-      <!-- 🔥 SEOコア（最重要） -->
-      <a href="study.html">Study Lo-Fi</a>
-      <a href="relax.html">Relax Lo-Fi</a>
-      <a href="tokyo.html">Tokyo Vibes</a>
-      <a href="jazzhop.html">Jazzhop</a>
-
-      <!-- サブ -->
-      <a href="music.html">Music</a>
-      <a href="about.html">About</a>
-
-      <!-- CTA -->
-      <a href="today.html" class="nav-cta">▶ Listen Now</a>
-
-    </div>
-  </nav>
+<nav>
+<div class="nav">
+<a href="index.html">HOME</a>
+<a href="study.html">Study Lo-Fi</a>
+<a href="relax.html">Relax Lo-Fi</a>
+<a href="tokyo.html">Tokyo Vibes</a>
+<a href="jazzhop.html">Jazzhop</a>
+<a href="music.html">Music</a>
+<a href="about.html">About</a>
+<a href="today.html" class="nav-cta">▶ Listen Now</a>
+</div>
+</nav>
 </header>
+
 <section class="today-cta">
-  <a href="today.html">🔥 Today’s Best Track</a>
-</section>
-<!-- 🎯 メイン -->
-<section style="
-  padding:40px 20px;
-  text-align:center;
-  max-width:800px;
-  margin:0 auto;
-">
-
-  <h1 style="
-    font-size:clamp(24px, 5vw, 36px);
-    line-height:1.3;
-    margin-bottom:16px;
-  ">
-    Tokyo Night Lo-Fi & Japanese Chill Beats
-  </h1>
-
-  <p style="
-    font-size:clamp(14px, 2.5vw, 18px);
-    line-height:1.7;
-    margin-bottom:24px;
-  ">
-    Immerse yourself in the atmosphere of Tokyo nights with smooth lo-fi and jazzhop beats.
-    Perfect for late-night focus, relaxation, and creative sessions.
-  </p>
-
-  <!-- CTA -->
-  <a href="today.html" style="
-    display:inline-block;
-    background:#ffcc00;
-    color:#000;
-    padding:14px 22px;
-    border-radius:8px;
-    font-weight:bold;
-    text-decoration:none;
-    font-size:14px;
-  ">
-    ▶ Experience Tokyo Lo-Fi Now
-  </a>
-
+<a href="today.html">🔥 Today’s Best Track</a>
 </section>
 
+<!-- HERO -->
 
-<!-- 🎧 サブ導線 -->
+<section style="padding:40px 20px;text-align:center;max-width:800px;margin:0 auto;">
+
+<h1>Tokyo Night Lo-Fi Music (No Ads)</h1>
+
+<p><strong>Feel the calm of Tokyo nights. No ads. Just vibes.</strong></p>
+
+<p>
+Japanese lo-fi music inspired by Tokyo city nights, neon lights, and quiet streets.<br>
+東京の夜をイメージしたLo-Fi音楽。作業・リラックスに最適。
+</p>
+
+<!-- GENERATOR -->
+
+<section class="generator-container" style="max-width:900px;margin:0 auto;padding:10px 20px 30px;text-align:center;">
+
+<h2>🎧 Start Listening – Tokyo Night Lo-Fi</h2>
+
+<p>
+Click play and enter the Tokyo night atmosphere.<br>
+東京の夜の雰囲気を感じながらリラックス。
+</p>
+
+<p style="font-size:12px;opacity:0.7;margin-bottom:16px;">
+Perfect for night focus, relaxation, and creative sessions.<br>
+深夜作業・リラックス・創作に最適。
+</p>
+
+<div style="max-width:800px;margin:0 auto;">
+
+<div id="player-tokyo" style="width:100%;aspect-ratio:16/9;background:#000;margin-bottom:12px;"></div>
+
+<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+
+<button onclick="startGenerator('tokyo')" style="padding:14px 22px;background:#b993d6;border:none;border-radius:6px;font-weight:bold;cursor:pointer;">
+▶ Play Tokyo Lo-Fi (No Ads)
+</button>
+
+<button onclick="nextTrack('tokyo')" style="padding:14px 22px;border:1px solid #ccc;border-radius:6px;cursor:pointer;">
+⏭ Next Track
+</button>
+
+</div>
+
+</div>
+
+</section>
+</section>
+
+<!-- SEO TEXT -->
+
+<section class="container">
+
+<p>
+Tokyo lo-fi music blends chill beats with urban night vibes.
+Inspired by neon lights, quiet streets, and late-night atmosphere.
+</p>
+
+<p>
+東京の夜景や静かな街並みをイメージしたLo-Fi音楽。
+落ち着いた雰囲気で集中やリラックスをサポートします。
+</p>
+
+</section>
+
+<!-- CTA -->
+
+<section class="container">
+<a href="today.html" class="cta-button primary">
+▶ Play Tokyo Lo-Fi Music (No Ads)
+</a>
+</section>
+
+<!-- SEO CONTENT -->
+
+<section class="seo-content" style="max-width:800px;margin:0 auto;padding:20px;line-height:1.8;">
+
+<h2>What is Tokyo Lo-Fi Music?</h2>
+<p>
+Tokyo lo-fi captures the atmosphere of city nights with smooth beats and ambient textures.
+東京の夜の雰囲気を再現したチルなLo-Fi音楽です。
+</p>
+
+<h2>Perfect for Night Focus & Relaxation</h2>
+<ul>
+<li>Late-night work / 深夜作業</li>
+<li>Creative sessions / 創作活動</li>
+<li>Relaxing time / リラックス</li>
+</ul>
+
+<h2>Ad-Free Japanese Chill Experience</h2>
+<p>
+Enjoy uninterrupted lo-fi music without ads for immersive listening.
+広告なしで集中を妨げません。
+</p>
+
+</section>
+
+<!-- INTERNAL LINKS -->
+
+<section style="max-width:800px;margin:0 auto;padding:20px;">
+
+<h2>Explore More Lo-Fi Music</h2>
+
+<ul>
+<li><a href="study.html">Lo-Fi Study Music for Focus</a></li>
+<li><a href="relax.html">Relaxing Lo-Fi Music for Sleep</a></li>
+<li><a href="jazzhop.html">Smooth Jazzhop & Chill Beats</a></li>
+</ul>
+
+</section>
+
+<!-- PLATFORM -->
+
 <section class="platform-links">
 
-  <h2>Continue Listening on Your Favorite Platform</h2>
+<h2>Continue Listening on Your Favorite Platform</h2>
 
-  <a href="YOUR_SPOTIFY_LINK">
-    Listen to Tokyo night lo-fi on Spotify
-  </a>
-  <br>
+<a href="YOUR_SPOTIFY_LINK">
+Listen to Tokyo night lo-fi on Spotify
+</a><br>
 
-  <a href="YOUR_APPLE_LINK">
-    Explore Japanese chill beats on Apple Music
-  </a>
-  <br>
+<a href="YOUR_APPLE_LINK">
+Explore Japanese chill beats on Apple Music
+</a><br>
 
-  <a href="YOUR_YOUTUBE_LINK">
-    Watch Tokyo lo-fi playlist on YouTube
-  </a>
+<a href="YOUR_YOUTUBE_LINK">
+Watch Tokyo lo-fi playlist on YouTube
+</a>
 
 </section>
-<!-- ===== Footer ===== -->
+
 <footer class="site-footer">
 
-  <div class="footer-container">
+<div class="footer-container">
 
-    <!-- ブランド -->
-    <div class="footer-brand">
-      <h2>Nanashino-chan</h2>
-      <p>Ad-free Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
-      <p>© 2026 Nanashino-chan. All rights reserved.</p>
-    </div>
+<div class="footer-brand">
+<h2>Nanashino-chan</h2>
+<p>Ad-free Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
+<p>© 2026 Nanashino-chan. All rights reserved.</p>
+</div>
 
-    <!-- 🔥 SEOリンク -->
-    <div class="footer-links">
+<div class="footer-links">
+<a href="study.html">Lo-Fi music for studying and focus</a> |
+<a href="relax.html">Relaxing lo-fi music for sleep and stress relief</a> |
+<a href="tokyo.html">Tokyo night lo-fi and Japanese chill beats</a> |
+<a href="jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
+</div>
 
-      <a href="study.html">
-        Lo-Fi music for studying and focus
-      </a> |
+<div class="footer-links-sub">
+<a href="index.html">Home</a> |
+<a href="today.html">Listen Now</a> |
+<a href="faq.html">FAQ</a> |
+<a href="policy.html">Policy</a> |
+<a href="contact.html">Contact</a>
+</div>
 
-      <a href="relax.html">
-        Relaxing lo-fi music for sleep and stress relief
-      </a> |
+<p class="footer-note">
+🎧 No ads. No interruptions. Just pure lo-fi music.
+</p>
 
-      <a href="tokyo.html">
-        Tokyo night lo-fi and Japanese chill beats
-      </a> |
-
-      <a href="jazzhop.html">
-        Smooth jazzhop and jazzy lo-fi beats
-      </a>
-
-    </div>
-
-    <!-- サブリンク -->
-    <div class="footer-links-sub">
-      <a href="index.html">Home</a> |
-      <a href="today.html">Listen Now</a> |
-      <a href="faq.html">FAQ</a> |
-      <a href="policy.html">Policy</a> |
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <!-- CTA -->
-    <p class="footer-note">
-      🎧 No ads. No interruptions. Just pure lo-fi music.
-    </p>
-
-  </div>
+</div>
 
 </footer>
+
 </body>
 </html>
+
