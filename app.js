@@ -1,25 +1,57 @@
 // =========================
-// グローバル初期化（最重要）
+// Lofi Core（安定版）
 // =========================
-window.Lofi = window.Lofi || {
+window.Lofi = {
   store: {
     videos: window.videos || {}
   },
   state: {
     players: {},
-    history: {}
+    history: {},
+    ytReady: false,
+    ytLoading: false
   }
 };
 
 // =========================
-// ランダム取得（重複防止）
+// YouTube API（多重防止）
 // =========================
-function getList(type) {
-  return Lofi.store.videos[type] || [];
+function loadYouTubeAPI() {
+  return new Promise((resolve) => {
+
+    if (window.YT && window.YT.Player) {
+      Lofi.state.ytReady = true;
+      return resolve();
+    }
+
+    if (Lofi.state.ytLoading) {
+      const wait = setInterval(() => {
+        if (Lofi.state.ytReady) {
+          clearInterval(wait);
+          resolve();
+        }
+      }, 100);
+      return;
+    }
+
+    Lofi.state.ytLoading = true;
+
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+
+    window.onYouTubeIframeAPIReady = () => {
+      Lofi.state.ytReady = true;
+      resolve();
+    };
+  });
 }
 
+// =========================
+// ランダム（重複防止）
+// =========================
 function getRandomVideo(type) {
-  const list = getList(type);
+  const list = Lofi.store.videos[type] || [];
   if (!list.length) return null;
 
   const state = Lofi.state;
@@ -28,13 +60,13 @@ function getRandomVideo(type) {
     state.history[type] = [];
   }
 
-  const history = state.history[type];
+  let history = state.history[type];
 
   if (history.length >= list.length) {
-    state.history[type] = [];
+    history = state.history[type] = [];
   }
 
-  let video = null;
+  let video;
   let guard = 0;
 
   while (guard < 20) {
@@ -48,47 +80,58 @@ function getRandomVideo(type) {
 }
 
 // =========================
-// YouTube Player
+// メイン
 // =========================
-function ensurePlayer(type, videoId) {
-  const playerId = `player-${type}`;
+async function startGenerator(type) {
 
-  if (!window.YT || !window.YT.Player) {
-    console.warn("YT API not ready");
-    window._pendingType = type;
-    return null;
+  if (!Lofi.store.videos[type]) {
+    console.error("Invalid type:", type);
+    return;
   }
 
-  if (!Lofi.state.players[type]) {
-    Lofi.state.players[type] = new YT.Player(playerId, {
+  await loadYouTubeAPI();
+
+  const videoId = getRandomVideo(type);
+  if (!videoId) return;
+
+  const players = Lofi.state.players;
+  const playerId = `player-${type}`;
+
+  const el = document.getElementById(playerId);
+  if (!el) {
+    console.error("Missing element:", playerId);
+    return;
+  }
+
+  if (!players[type]) {
+
+    players[type] = new YT.Player(playerId, {
       videoId,
       playerVars: {
         autoplay: 1,
-        controls: 1,
-        rel: 0
+        rel: 0,
+        modestbranding: 1
+      },
+      events: {
+        onReady: (e) => e.target.playVideo(),
+        onStateChange: (event) => {
+          if (event.data === YT.PlayerState.ENDED) {
+            const next = getRandomVideo(type);
+            if (next) players[type].loadVideoById(next);
+          }
+        }
       }
     });
+
   } else {
-    Lofi.state.players[type].loadVideoById(videoId);
+    players[type].loadVideoById(videoId);
   }
-
-  return Lofi.state.players[type];
 }
 
 // =========================
-// Generator
+// 次の曲
 // =========================
-function startGenerator(type) {
-  const videoId = getRandomVideo(type);
-  if (!videoId) return;
-
-  ensurePlayer(type, videoId);
-}
-
 function nextTrack(type) {
-  const videoId = getRandomVideo(type);
-  if (!videoId) return;
-
   const player = Lofi.state.players[type];
 
   if (!player) {
@@ -96,41 +139,12 @@ function nextTrack(type) {
     return;
   }
 
-  player.loadVideoById(videoId);
+  const next = getRandomVideo(type);
+  if (next) player.loadVideoById(next);
 }
 
 // =========================
-// YT API Ready
-// =========================
-function onYouTubeIframeAPIReady() {
-  window.YTReady = true;
-
-  if (window._pendingType) {
-    startGenerator(window._pendingType);
-  }
-}
-
-// =========================
-// 初期表示（サムネ）
-// =========================
-window.addEventListener("load", () => {
-  const types = Object.keys(Lofi.store.videos);
-
-  types.forEach(type => {
-    const el = document.getElementById(`player-${type}`);
-    const list = getList(type);
-
-    if (!el || !list.length) return;
-
-    el.style.backgroundImage =
-      `url(https://img.youtube.com/vi/${list[0]}/hqdefault.jpg)`;
-    el.style.backgroundSize = "cover";
-    el.style.backgroundPosition = "center";
-  });
-});
-
-// =========================
-// グローバル公開（必須）
+// グローバル公開
 // =========================
 window.startGenerator = startGenerator;
 window.nextTrack = nextTrack;
