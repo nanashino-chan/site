@@ -525,41 +525,6 @@ allowfullscreen>
 <script>
 
 // =========================
-// 状態管理
-// =========================
-let players = {};
-let apiLoaded = false;
-
-// =========================
-// API読み込み（遅延・安定版）
-// =========================
-function loadYouTubeAPI(){
-  return new Promise((resolve)=>{
-
-    if(apiLoaded){
-      resolve();
-      return;
-    }
-
-    if(window.YT && window.YT.Player){
-      apiLoaded = true;
-      resolve();
-      return;
-    }
-
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
-
-    window.onYouTubeIframeAPIReady = ()=>{
-      apiLoaded = true;
-      resolve();
-    };
-
-  });
-}
-
-// =========================
 // メイン機能（最適化版）
 // =========================
 async function startGenerator(type){
