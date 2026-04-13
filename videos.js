@@ -4,14 +4,9 @@
  * 黒画面防止・完全安定版
  * =========================
  */
-window.Lofi = {
-  state: {
-    players: {},
-    history: {}
-  },
-store: {
-    videos: {
-      focus: [
+window.videos = {
+ 
+   focus: [
 //Night Focus Jazz: Lo-Fi Grooves for Deep Late Hours 24
     "O_DlB-RyU-4",
     "Il2V_fgVh0o",
@@ -378,7 +373,6 @@ store: {
     "Fi3PEPJYJeY",
     "e9JmagU2QY0",
     "UcmzWj1QYYk"
-  ]
-}
-}
+    ]
+
 };
