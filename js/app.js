@@ -148,3 +148,29 @@ function nextTrack(type) {
 // =========================
 window.startGenerator = startGenerator;
 window.nextTrack = nextTrack;
+
+window.startGenerator = startGenerator;
+window.nextTrack = nextTrack;
+
+
+// 👇 ここに追加（最下部）
+window.addEventListener("DOMContentLoaded", () => {
+
+  const videos = window.videos || {};
+
+  Object.keys(videos).forEach(type => {
+
+    const el = document.getElementById(`player-${type}`);
+    const list = videos[type];
+
+    if (!el || !list || !list.length) return;
+
+    const thumbnail = `https://img.youtube.com/vi/${list[0]}/hqdefault.jpg`;
+
+    el.style.backgroundImage = `url(${thumbnail})`;
+    el.style.backgroundSize = "cover";
+    el.style.backgroundPosition = "center";
+    el.style.cursor = "pointer";
+  });
+
+});
