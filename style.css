@@ -999,4 +999,70 @@ hr {
   margin: 40px 0;
   opacity: 0.2;
 }
+/* ===== Explore（内部リンク） ===== */
+.explore {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.explore-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.explore-card {
+  display: block;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.2s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.explore-card:hover {
+  background: #222;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+/* ===== Platform（外部リンク） ===== */
+.platform-buttons {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+/* 各サービス */
+.spotify {
+  background: #1db954;
+}
+
+.apple {
+  background: #111;
+  border: 1px solid #444;
+}
+
+.youtube {
+  background: #cc0000;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
