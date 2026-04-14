@@ -999,3 +999,14 @@ hr {
   margin: 40px 0;
   opacity: 0.2;
 }
+.platform-links a {
+  display: inline-block;
+  margin: 6px 0;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.platform-links a:hover {
+  color: #fff;
+}
