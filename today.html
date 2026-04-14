@@ -6,40 +6,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO -->
-<title>Ad-Free Lo-Fi Music ☕ Listen Now | 今日の作業用BGM</title>
+<title>Lo-Fi Music Player ☕ Listen Now | Focus, Study & Relax</title>
 
-<meta name="description" content="Start listening to ad-free lo-fi music now. No interruptions. Just pure sound for focus, study, and relaxation. 広告なしで今すぐ聴けるLo-Fi音楽。">
+<meta name="description" content="Start listening to lo-fi music instantly. Perfect for focus, study, and relaxation. 作業・勉強・リラックスに最適なLo-Fi音楽を今すぐ再生。">
 
 <meta name="robots" content="index, follow">
 
 <!-- Canonical -->
 <link rel="canonical" href="https://nanashino-chan.github.io/site/today.html">
 
-<!-- Favicon（統一） -->
+<!-- Favicon -->
 <link rel="icon" href="./favicon.png" type="image/png">
 
-<!-- OGP（CV特化） -->
-<meta property="og:title" content="Ad-Free Lo-Fi ☕ Start Listening Now">
-<meta property="og:description" content="No ads. No interruptions. Tap to start listening instantly.">
+<!-- OGP -->
+<meta property="og:title" content="Lo-Fi Music ☕ Start Listening Now">
+<meta property="og:description" content="Tap to start listening instantly. Perfect for focus, study, and relaxation.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/today.html">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/today-ogp.jpg">
 
-<!-- Twitter Card -->
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ad-Free Lo-Fi ☕ Start Listening Now">
-<meta name="twitter:description" content="No ads. No interruptions. Tap to listen instantly.">
+<meta name="twitter:title" content="Lo-Fi Music ☕ Start Listening Now">
+<meta name="twitter:description" content="Instant lo-fi music for focus, study, and calm moments.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/today-ogp.jpg">
 
-<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 
-
-
-<!-- YouTube API（必要なら維持） -->
+<!-- YouTube API -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<!-- Google Analytics -->
+<!-- GA -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -48,10 +45,7 @@ gtag('js', new Date());
 gtag('config', 'G-CLHM36E1P0');
 </script>
 
-<!-- ===== スタイル（既存維持） ===== -->
 <style>
-
-/* ===== 全体 ===== */
 body {
   margin: 0;
   background: #0f0f0f;
@@ -60,14 +54,12 @@ body {
   text-align: center;
 }
 
-/* ===== コンテナ ===== */
 .container {
   max-width: 800px;
   margin: auto;
   padding: 20px;
 }
 
-/* ===== プレイヤー ===== */
 .player {
   position: relative;
   width: 100%;
@@ -92,7 +84,6 @@ body {
   border-radius: 50%;
 }
 
-/* ===== CTA ===== */
 .listen {
   display: none;
   margin-top: 30px;
@@ -130,26 +121,27 @@ body {
 .ytmusic {
   background: #cc0000;
 }
-
 </style>
 
 </head>
 
+<body>
+
 <div class="container">
 
-<h1>🎧 Today's Lo-Fi Track</h1>
+<h1>🎧 Today’s Lo-Fi Track</h1>
 <p>今日の作業・勉強・リラックスに最適な1曲</p>
 
 <h2>
-Deep Focus Starts Here.<br>
-集中できる音はここにある
+Start Your Focus Session Now.<br>
+集中できる音を今すぐ再生
 </h2>
+
 <p>
 • Boost Focus / 集中力UP<br>
 • Reduce Stress / ストレス軽減<br>
-• Perfect for Study / 作業用に最適
+• Perfect for Study / 作業・勉強に最適
 </p>
-
 
 <!-- プレイヤー -->
 <div id="player-container" class="player" onclick="initPlayer()">
@@ -162,10 +154,13 @@ Deep Focus Starts Here.<br>
   <button onclick="playVideo()">▶ Play</button>
   <button onclick="nextTrack()">⏭ Next</button>
 </div>
+
 <p class="trust">
-Used by brands｜2000+ tracks｜Shazam 2K+
+Used by creators｜2000+ Shazam｜Growing daily
 </p>
+
 <p>Feel the difference in 10 seconds.</p>
+
 <!-- 曲情報 -->
 <p class="track-title"></p>
 <p class="album-title"></p>
@@ -176,9 +171,9 @@ Used by brands｜2000+ tracks｜Shazam 2K+
 
   <div class="dsp-buttons">
     <a class="apple" target="_blank">
-     <strong>Save this track</strong><br>
-  Apple Musicで今すぐ保存
-</a>
+      <strong>Save this track</strong><br>
+      Apple Musicで保存
+    </a>
 
     <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A"
        target="_blank"
@@ -189,9 +184,7 @@ Used by brands｜2000+ tracks｜Shazam 2K+
 </section>
 
 <!-- YouTube導線 -->
-<a id="youtubeLink"
-   target="_blank"
-   class="youtube-btn">
+<a id="youtubeLink" target="_blank">
 🎧 Continue on YouTube
 </a>
 
@@ -199,7 +192,7 @@ Used by brands｜2000+ tracks｜Shazam 2K+
 
 <script>
 
-/* ===== トラックデータ ===== */
+/* トラック */
 const tracks = [
   {
     title: "Smooth Groove – Chill Lo-Fi Beat",
@@ -218,25 +211,12 @@ const tracks = [
     videoId: "GRGkJoQGMjs",
     apple: "https://music.apple.com/us/album/smooth-waves-timeless-electronica-lo-fi-grooves/1811585664",
     album: "Smooth Waves"
-  },
-  {
-    title: "Calm Transitions – Study Lo-Fi",
-    videoId: "RL_lN7zBxE4",
-    apple: "https://music.apple.com/us/album/smooth-lo-fi-beats-study-chill/1806121136",
-    album: "Smooth Lo-Fi Beats"
-  },
-  {
-    title: "Sunset Glow – Cozy Lo-Fi",
-    videoId: "Ftm2Ev4pV-c",
-    apple: "https://music.apple.com/us/album/cozy-chillhop-nights-relaxing-lo-fi-beats-with-a/1805874023",
-    album: "Cozy Chillhop Nights"
   }
 ];
 
 let player;
 let currentIndex = 0;
 
-/* ===== 初期化 ===== */
 function initPlayer() {
   if (player) return;
 
@@ -253,52 +233,35 @@ function initPlayer() {
   updateUI();
 }
 
-/* ===== 再生 ===== */
 function playVideo() {
   if (!player) initPlayer();
   else player.playVideo();
 }
 
-/* ===== 次 ===== */
 function nextTrack() {
   currentIndex = (currentIndex + 1) % tracks.length;
   player.loadVideoById(tracks[currentIndex].videoId);
   updateUI();
 }
 
-/* ===== UI更新 ===== */
 function updateUI() {
   const track = tracks[currentIndex];
 
-  // CTA表示（遅延）
   setTimeout(() => {
     document.querySelector(".listen").style.display = "block";
   }, 3000);
 
-  // Appleリンク更新
   document.querySelector(".apple").href = track.apple;
 
-  // テキスト
-document.querySelector(".track-title").textContent =
-  track.title;
+  document.querySelector(".track-title").textContent = track.title;
 
-document.querySelector(".album-title").innerHTML =
-  `Album: ${track.album} <span>(Find this track inside)</span>`;
+  document.querySelector(".album-title").innerHTML =
+    `Album: ${track.album}`;
 
-  // YouTubeリンク
   document.getElementById("youtubeLink").href =
     "https://www.youtube.com/watch?v=" + track.videoId;
-
-  // GAイベント
-  document.querySelector(".apple").onclick = () => {
-    gtag('event', 'click_apple', {
-      event_category: 'dsp',
-      event_label: track.title
-    });
-  };
 }
 
-/* 初回 */
 window.onload = () => {
   updateUI();
 };
