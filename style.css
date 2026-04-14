@@ -1006,18 +1006,11 @@ hr {
   gap: 12px;
 }
 /* カード化 */
-.explore-card {
-  display: block;
-  padding: 14px;
-  border-radius: 10px;
-  background: #1a1a1a;
-  color: #ccc;
-  text-decoration: none;
-  transition: 0.2s;
+.explore-links {
+  list-style: none;
+  padding: 0;
 }
 
-.explore-card:hover {
-  background: #2a2a2a;
-  color: #fff;
-  transform: translateY(-2px);
+.explore-links li {
+  margin-bottom: 10px;
 }
