@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -7,328 +6,267 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO -->
+<title>Lo-Fi Music Player ☕ Listen Now | Focus, Study & Relax</title>
 
-<title>Tokyo Night Lo-Fi Music (No Ads) – Japanese Chill Beats & City Vibes</title>
-
-<meta name="description" content="Tokyo night lo-fi music with no ads. Japanese chill beats inspired by city lights and late-night vibes. 東京の夜を感じるLo-Fi音楽。">
+<meta name="description" content="Start listening to lo-fi music instantly. Perfect for focus, study, and relaxation. 作業・勉強・リラックスに最適なLo-Fi音楽を今すぐ再生。">
 
 <meta name="robots" content="index, follow">
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
 
-script-src 'self'
-'unsafe-inline'
-https://www.youtube.com
-https://www.google.com
-https://www.gstatic.com
-https://s.ytimg.com
-https://www.googletagmanager.com
-https://www.google-analytics.com;
+<!-- Canonical -->
+<link rel="canonical" href="https://nanashino-chan.github.io/site/today.html">
 
-frame-src
-https://www.youtube.com
-https://www.youtube-nocookie.com;
-
-connect-src
-'self'
-https://www.youtube.com
-https://i.ytimg.com
-https://www.google-analytics.com
-https://www.googletagmanager.com
-https://www.youtube.com;
-
-img-src
-'self'
-https://i.ytimg.com
-https://img.youtube.com
-data:;
-
-style-src
-'self'
-'unsafe-inline';
-
-font-src 'self';
-
-object-src 'none';
-base-uri 'self';
-"> <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-
-<link rel="canonical" href="https://nanashino-chan.github.io/site/tokyo.html">
+<!-- Favicon -->
 <link rel="icon" href="./favicon.png" type="image/png">
 
 <!-- OGP -->
-
-<meta property="og:title" content="Tokyo Night Lo-Fi Music (No Ads)">
-<meta property="og:description" content="Ad-free Japanese lo-fi music inspired by Tokyo nights and city vibes.">
+<meta property="og:title" content="Lo-Fi Music ☕ Start Listening Now">
+<meta property="og:description" content="Tap to start listening instantly. Perfect for focus, study, and relaxation.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://nanashino-chan.github.io/site/tokyo.html">
-<meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+<meta property="og:url" content="https://nanashino-chan.github.io/site/today.html">
+<meta property="og:image" content="https://nanashino-chan.github.io/site/today-ogp.jpg">
 
 <!-- Twitter -->
-
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tokyo Night Lo-Fi Music (No Ads)">
-<meta name="twitter:description" content="Japanese chill beats for night focus and relaxation.">
-<meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+<meta name="twitter:title" content="Lo-Fi Music ☕ Start Listening Now">
+<meta name="twitter:description" content="Instant lo-fi music for focus, study, and calm moments.">
+<meta name="twitter:image" content="https://nanashino-chan.github.io/site/today-ogp.jpg">
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- YouTube API -->
+<script src="https://www.youtube.com/iframe_api"></script>
 
-<link rel="preload"
-      as="image"
-      href="hero-1440.webp"
-      imagesrcset="hero-720.webp 720w, hero-1440.webp 1440w"
-      imagesizes="(max-width: 768px) 100vw, 1200px">
-
-<!-- GA（遅延） -->
-
+<!-- GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-let gaLoaded=false;
-function loadGA(){
- if(gaLoaded) return;
- gaLoaded=true;
- const script=document.createElement('script');
- script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
- script.async=true;
- document.head.appendChild(script);
- gtag('js', new Date());
- gtag('config','G-CLHM36E1P0');
-}
-window.addEventListener('scroll',loadGA,{once:true});
-window.addEventListener('click',loadGA,{once:true});
-window.addEventListener('mousemove',loadGA,{once:true});
+gtag('js', new Date());
+gtag('config', 'G-CLHM36E1P0');
 </script>
 
-<!-- 動画ID -->
+<style>
+body {
+  margin: 0;
+  background: #0f0f0f;
+  color: #fff;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  text-align: center;
+}
 
-<script src="./js/videos.js"></script>
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
 
-<script src="./js/app.js" defer></script>
+.player {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.player img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 20px;
+  border-radius: 50%;
+}
+
+.listen {
+  display: none;
+  margin-top: 30px;
+}
+
+.track-title {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.album-title {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.dsp-buttons {
+  margin-top: 20px;
+}
+
+.dsp-buttons a {
+  display: inline-block;
+  width: 260px;
+  padding: 12px;
+  margin: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+.apple {
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.ytmusic {
+  background: #cc0000;
+}
+</style>
 
 </head>
 
 <body>
 
-<header>
-<nav>
-  <div class="nav">
+<div class="container">
 
-    <!-- ブランド -->
-    <a href="index.html" class="nav-logo">Home</a>
+<h1>🎧 Today’s Lo-Fi Track</h1>
+<p>今日の作業・勉強・リラックスに最適な1曲</p>
 
-    <!-- コア導線（検索需要順） -->
-    <a href="study.html">Study</a>
-    <a href="sleep.html">Sleep</a>
-    <a href="relax.html">Relax</a>
-
-    <!-- CTA（最重要） -->
-    <a href="today.html" class="nav-cta">▶ Listen Now</a>
-
-  </div>
-</nav>
-</header>
-
-
-<section class="today-cta">
-<a href="today.html">🔥 Today’s Best Track</a>
-</section>
-
-<!-- HERO -->
-
-<section style="padding:40px 20px;text-align:center;max-width:800px;margin:0 auto;">
-
-<h1>Tokyo Night Lo-Fi Music (No Ads)</h1>
-
-<p><strong>Feel the calm of Tokyo nights. No ads. Just vibes.</strong></p>
+<h2>
+Start Your Focus Session Now.<br>
+集中できる音を今すぐ再生
+</h2>
 
 <p>
-Japanese lo-fi music inspired by Tokyo city nights, neon lights, and quiet streets.<br>
-東京の夜をイメージしたLo-Fi音楽。作業・リラックスに最適。
+• Boost Focus / 集中力UP<br>
+• Reduce Stress / ストレス軽減<br>
+• Perfect for Study / 作業・勉強に最適
 </p>
 
-<!-- GENERATOR -->
-
-<section class="generator-container" style="max-width:900px;margin:0 auto;padding:10px 20px 30px;text-align:center;">
-
-<h2>🎧 Start Listening – Tokyo Night Lo-Fi</h2>
-
-<p>
-Click play and enter the Tokyo night atmosphere.<br>
-東京の夜の雰囲気を感じながらリラックス。
-</p>
-
-<p style="font-size:12px;opacity:0.7;margin-bottom:16px;">
-Perfect for night focus, relaxation, and creative sessions.<br>
-深夜作業・リラックス・創作に最適。
-</p>
-
-<div style="max-width:800px;margin:0 auto;">
-
-<div id="player-tokyo" style="width:100%;aspect-ratio:16/9;background:#000;margin-bottom:12px;"></div>
-
-<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
-
-<button onclick="startGenerator('tokyo')" style="padding:14px 22px;background:#b993d6;border:none;border-radius:6px;font-weight:bold;cursor:pointer;">
-▶ Play Tokyo Lo-Fi (No Ads)
-</button>
-
-<button onclick="nextTrack('tokyo')" style="padding:14px 22px;border:1px solid #ccc;border-radius:6px;cursor:pointer;">
-⏭ Next Track
-</button>
-
+<!-- プレイヤー -->
+<div id="player-container" class="player" onclick="initPlayer()">
+  <img id="thumbnail" src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg">
+  <div class="play-btn">▶</div>
 </div>
 
+<!-- コントロール -->
+<div class="controls">
+  <button onclick="playVideo()">▶ Play</button>
+  <button onclick="nextTrack()">⏭ Next</button>
 </div>
 
-</section>
-</section>
-<section style="text-align:center;margin-top:20px;">
-
-  <p style="font-size:14px;line-height:1.7;opacity:0.85;">
-    Discover the atmosphere behind our music and explore unique styles.
-    東京の夜を感じるLo-Fiや、このプロジェクトについて詳しく知ることができます。
-  </p>
-
-  <div style="margin-top:12px;">
-
-    <!-- About（サブCTA） -->
-    <a href="about.html" style="
-      display:inline-block;
-      margin:6px;
-      padding:10px 16px;
-      border-radius:6px;
-      border:1px solid #ccc;
-      background:#fff;
-      color:#111;
-      text-decoration:none;
-      font-size:14px;
-    ">
-      ℹ️ About Nanashino-chan
-    </a>
-
-  </div>
-
-</section>
-<!-- SEO TEXT -->
-
-<section class="container">
-
-<p>
-Tokyo lo-fi music blends chill beats with urban night vibes.
-Inspired by neon lights, quiet streets, and late-night atmosphere.
+<p class="trust">
+Used by creators｜2000+ Shazam｜Growing daily
 </p>
 
-<p>
-東京の夜景や静かな街並みをイメージしたLo-Fi音楽。
-落ち着いた雰囲気で集中やリラックスをサポートします。
-</p>
+<p>Feel the difference in 10 seconds.</p>
 
-</section>
+<!-- 曲情報 -->
+<p class="track-title"></p>
+<p class="album-title"></p>
 
 <!-- CTA -->
+<section class="listen">
+  <h2>🎧 Listen & Save</h2>
 
-<section class="container">
-<a href="today.html" class="cta-button primary">
-▶ Play Tokyo Lo-Fi Music (No Ads)
-</a>
+  <div class="dsp-buttons">
+    <a class="apple" target="_blank">
+      <strong>Save this track</strong><br>
+      Apple Musicで保存
+    </a>
+
+    <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A"
+       target="_blank"
+       class="ytmusic">
+      ▶ YouTube Music
+    </a>
+  </div>
 </section>
 
-<!-- SEO CONTENT -->
-
-<section class="seo-content" style="max-width:800px;margin:0 auto;padding:20px;line-height:1.8;">
-
-<h2>What is Tokyo Lo-Fi Music?</h2>
-<p>
-Tokyo lo-fi captures the atmosphere of city nights with smooth beats and ambient textures.
-東京の夜の雰囲気を再現したチルなLo-Fi音楽です。
-</p>
-
-<h2>Perfect for Night Focus & Relaxation</h2>
-<ul>
-<li>Late-night work / 深夜作業</li>
-<li>Creative sessions / 創作活動</li>
-<li>Relaxing time / リラックス</li>
-</ul>
-
-<h2>Ad-Free Japanese Chill Experience</h2>
-<p>
-Enjoy uninterrupted lo-fi music without ads for immersive listening.
-広告なしで集中を妨げません。
-</p>
-
-</section>
-
-<!-- INTERNAL LINKS -->
-
-<section style="max-width:800px;margin:0 auto;padding:20px;">
-
-<h2>Explore More Lo-Fi Music</h2>
-
-<ul>
-<li><a href="study.html">Lo-Fi Study Music for Focus</a></li>
-<li><a href="relax.html">Relaxing Lo-Fi Music for Sleep</a></li>
-<li><a href="jazzhop.html">Smooth Jazzhop & Chill Beats</a></li>
-</ul>
-
-</section>
-
-<!-- PLATFORM -->
-
-<section class="platform-links">
-
-<h2>Continue Listening on Your Favorite Platform</h2>
-
-<a href="YOUR_SPOTIFY_LINK">
-Listen to Tokyo night lo-fi on Spotify
-</a><br>
-
-<a href="YOUR_APPLE_LINK">
-Explore Japanese chill beats on Apple Music
-</a><br>
-
-<a href="YOUR_YOUTUBE_LINK">
-Watch Tokyo lo-fi playlist on YouTube
+<!-- YouTube導線 -->
+<a id="youtubeLink" target="_blank">
+🎧 Continue on YouTube
 </a>
 
-</section>
-
-<footer class="site-footer">
-
-<div class="footer-container">
-
-<div class="footer-brand">
-<h2>Nanashino-chan</h2>
-<p>Ad-free Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
-<p>© 2026 Nanashino-chan. All rights reserved.</p>
 </div>
 
-<div class="footer-links">
-<a href="study.html">Lo-Fi music for studying and focus</a> |
-<a href="relax.html">Relaxing lo-fi music for sleep and stress relief</a> |
-<a href="tokyo.html">Tokyo night lo-fi and Japanese chill beats</a> |
-<a href="jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
-</div>
+<script>
 
-<div class="footer-links-sub">
-<a href="index.html">Home</a> |
-<a href="today.html">Listen Now</a> |
-<a href="faq.html">FAQ</a> |
-<a href="policy.html">Policy</a> |
-<a href="contact.html">Contact</a>
-</div>
+/* トラック */
+const tracks = [
+  {
+    title: "Smooth Groove – Chill Lo-Fi Beat",
+    videoId: "PnyutlzXem0",
+    apple: "https://music.apple.com/us/album/smooth-groove-remastered-night-caf%C3%A9-single/1860873849",
+    album: "Smooth Chillhop Jazz Beats"
+  },
+  {
+    title: "Smooth Transitions – Chillhop Lo-Fi",
+    videoId: "MBsx4sUtNxs",
+    apple: "https://music.apple.com/us/album/chillhop-lo-fi-relax-focus-instrumental/1796933282",
+    album: "Chillhop Lo-Fi Relax & Focus"
+  },
+  {
+    title: "Stillness Vibes – Calm Lo-Fi",
+    videoId: "GRGkJoQGMjs",
+    apple: "https://music.apple.com/us/album/smooth-waves-timeless-electronica-lo-fi-grooves/1811585664",
+    album: "Smooth Waves"
+  }
+];
 
-<p class="footer-note">
-🎧 No ads. No interruptions. Just pure lo-fi music.
-</p>
+let player;
+let currentIndex = 0;
 
-</div>
+function initPlayer() {
+  if (player) return;
 
-</footer>
+  const container = document.getElementById("player-container");
+  container.innerHTML = '<div id="player"></div>';
+
+  player = new YT.Player("player", {
+    height: "405",
+    width: "720",
+    videoId: tracks[currentIndex].videoId,
+    playerVars: { autoplay: 1 }
+  });
+
+  updateUI();
+}
+
+function playVideo() {
+  if (!player) initPlayer();
+  else player.playVideo();
+}
+
+function nextTrack() {
+  currentIndex = (currentIndex + 1) % tracks.length;
+  player.loadVideoById(tracks[currentIndex].videoId);
+  updateUI();
+}
+
+function updateUI() {
+  const track = tracks[currentIndex];
+
+  setTimeout(() => {
+    document.querySelector(".listen").style.display = "block";
+  }, 3000);
+
+  document.querySelector(".apple").href = track.apple;
+
+  document.querySelector(".track-title").textContent = track.title;
+
+  document.querySelector(".album-title").innerHTML =
+    `Album: ${track.album}`;
+
+  document.getElementById("youtubeLink").href =
+    "https://www.youtube.com/watch?v=" + track.videoId;
+}
+
+window.onload = () => {
+  updateUI();
+};
+
+</script>
 
 </body>
 </html>
-
