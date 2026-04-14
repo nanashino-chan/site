@@ -1005,12 +1005,4 @@ hr {
   flex-direction: column;
   gap: 12px;
 }
-/* カード化 */
-.explore-links {
-  list-style: none;
-  padding: 0;
-}
 
-.explore-links li {
-  margin-bottom: 10px;
-}
