@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+
+<title>Dreamy Synth Lo-Fi Music – Ambient Chill Beats for Sleep & Relaxation</title>
+
+<meta name="description" content="Dreamy synth lo-fi music with ambient textures and soft beats. Perfect for sleep, relaxation, and deep focus. 夢のようなシンセLo-Fi音楽でリラックス。">
+
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+
+script-src 'self'
+'unsafe-inline'
+https://www.youtube.com
+https://www.google.com
+https://www.gstatic.com
+https://s.ytimg.com
+https://www.googletagmanager.com
+https://www.google-analytics.com;
+
+frame-src
+https://www.youtube.com
+https://www.youtube-nocookie.com;
+
+connect-src
+'self'
+https://www.youtube.com
+https://i.ytimg.com
+https://www.google-analytics.com
+https://www.googletagmanager.com
+https://www.youtube.com;
+
+img-src
+'self'
+https://i.ytimg.com
+https://img.youtube.com
+data:;
+
+style-src
+'self'
+'unsafe-inline';
+
+font-src 'self';
+
+object-src 'none';
+base-uri 'self';
+">
+<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+
+<link rel="canonical" href="https://nanashino-chan.github.io/site/synth.html">
+<link rel="icon" href="./favicon.png" type="image/png">
+
+<!-- OGP -->
+
+<meta property="og:title" content="Dreamy Synth Lo-Fi Music">
+<meta property="og:description" content="Ambient lo-fi music with dreamy synth textures for relaxation and sleep.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nanashino-chan.github.io/site/synth.html">
+<meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+
+<!-- Twitter -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dreamy Synth Lo-Fi Music">
+<meta name="twitter:description" content="Soft ambient lo-fi beats for deep relaxation and sleep.">
+<meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preload"
+      as="image"
+      href="hero-1440.webp"
+      imagesrcset="hero-720.webp 720w, hero-1440.webp 1440w"
+      imagesizes="(max-width: 768px) 100vw, 1200px">
+
+<!-- GA（遅延） -->
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+let gaLoaded=false;
+function loadGA(){
+ if(gaLoaded) return;
+ gaLoaded=true;
+ const script=document.createElement('script');
+ script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
+ script.async=true;
+ document.head.appendChild(script);
+ gtag('js', new Date());
+ gtag('config','G-CLHM36E1P0');
+}
+window.addEventListener('scroll',loadGA,{once:true});
+window.addEventListener('click',loadGA,{once:true});
+window.addEventListener('mousemove',loadGA,{once:true});
+</script>
+
+<!-- 動画ID -->
+
+<script src="./js/videos.js"></script>
+<script src="./js/app.js" defer></script>
+
+</head>
+
+<body>
+
+<header>
+<nav>
+  <div class="nav">
+
+    <a href="index.html" class="nav-logo">Home</a>
+
+    <a href="study.html">Study</a>
+    <a href="sleep.html">Sleep</a>
+    <a href="relax.html">Relax</a>
+
+    <a href="today.html" class="nav-cta">▶ Listen Now</a>
+
+  </div>
+</nav>
+</header>
+
+<section class="today-cta">
+<a href="today.html">🔥 Today’s Best Track</a>
+</section>
+
+<!-- HERO -->
+
+<section style="padding:40px 20px;text-align:center;max-width:800px;margin:0 auto;">
+
+<h1>Dreamy Synth Lo-Fi Music</h1>
+
+<p><strong>Float into calm. Soft sounds. Deep atmosphere.</strong></p>
+
+<p>
+Ambient lo-fi music with dreamy synth textures and soft beats.<br>
+浮遊感のあるシンセLo-Fiで、深いリラックスと集中へ。
+</p>
+
+<!-- GENERATOR -->
+
+<section class="generator-container" style="max-width:900px;margin:0 auto;padding:10px 20px 30px;text-align:center;">
+
+<h2>🎧 Start Listening – Dreamy Synth Lo-Fi</h2>
+
+<p>
+Click play and drift into a dreamy soundscape.<br>
+再生するだけで幻想的な空間へ。
+</p>
+
+<p style="font-size:12px;opacity:0.7;margin-bottom:16px;">
+Perfect for sleep, relaxation, and deep focus.<br>
+睡眠・リラックス・深い集中に最適。
+</p>
+
+<div style="max-width:800px;margin:0 auto;">
+
+<div id="player-synth" style="width:100%;aspect-ratio:16/9;background:#000;margin-bottom:12px;"></div>
+
+<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+
+<button onclick="startGenerator('synth')" style="padding:14px 22px;background:#a18cd1;border:none;border-radius:6px;font-weight:bold;cursor:pointer;">
+▶ Play Dreamy Lo-Fi
+</button>
+
+<button onclick="nextTrack('synth')" style="padding:14px 22px;border:1px solid #ccc;border-radius:6px;cursor:pointer;">
+⏭ Next Track
+</button>
+
+</div>
+
+</div>
+
+</section>
+</section>
+
+<!-- SUB CTA -->
+
+<section style="text-align:center;margin-top:20px;">
+
+<p style="font-size:14px;line-height:1.7;opacity:0.85;">
+Explore more moods and discover different lo-fi atmospheres.<br>
+他のLo-Fiスタイルや雰囲気もチェックできます。
+</p>
+
+<div style="margin-top:12px;">
+
+<a href="sleep.html" style="
+display:inline-block;
+margin:6px;
+padding:10px 16px;
+border-radius:6px;
+background:#111;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+">
+🌙 Sleep Lo-Fi
+</a>
+
+<a href="about.html" style="
+display:inline-block;
+margin:6px;
+padding:10px 16px;
+border-radius:6px;
+border:1px solid #ccc;
+text-decoration:none;
+font-size:14px;
+">
+ℹ️ About Nanashino-chan
+</a>
+
+</div>
+
+</section>
+
+<!-- SEO TEXT -->
+
+<section class="container">
+
+<p>
+Dreamy synth lo-fi blends ambient textures with soft rhythms to create a floating soundscape.
+Perfect for deep relaxation, sleep, and creative thinking.
+</p>
+
+<p>
+シンセの柔らかい音とアンビエントな質感が、心を落ち着かせます。
+リラックスや睡眠、創作活動に最適なLo-Fiです。
+</p>
+
+</section>
+
+<!-- CTA -->
+
+<section class="container">
+<a href="today.html" class="cta-button primary">
+▶ Play Dreamy Lo-Fi Now
+</a>
+</section>
+
+<!-- SEO CONTENT -->
+
+<section class="seo-content" style="max-width:800px;margin:0 auto;padding:20px;line-height:1.8;">
+
+<h2>What is Dreamy Synth Lo-Fi?</h2>
+<p>
+A sub-style of lo-fi that emphasizes ambient synth layers and atmospheric sound design.
+浮遊感のある音作りが特徴のLo-Fiスタイルです。
+</p>
+
+<h2>Perfect for Relaxation & Sleep</h2>
+<ul>
+<li>Before sleep / 就寝前</li>
+<li>Deep focus / 深い集中</li>
+<li>Creative sessions / 創作活動</li>
+</ul>
+
+<h2>Immersive Listening Experience</h2>
+<p>
+Continuous playback allows you to stay focused without interruption.
+途切れずに音楽が流れ、集中やリラックスを維持できます。
+</p>
+
+</section>
+
+<!-- INTERNAL LINKS -->
+
+<section style="max-width:800px;margin:0 auto;padding:20px;">
+
+<h2>Explore More Lo-Fi Music</h2>
+
+<ul>
+<li><a href="study.html">Lo-Fi Study Music for Focus</a></li>
+<li><a href="relax.html">Relaxing Lo-Fi Music</a></li>
+<li><a href="tokyo.html">Tokyo Night Lo-Fi</a></li>
+</ul>
+
+</section>
+
+<!-- PLATFORM -->
+
+<section class="platform-links">
+
+<h2>Continue Listening on Your Favorite Platform</h2>
+
+<a href="YOUR_SPOTIFY_LINK">
+Listen to dreamy lo-fi on Spotify
+</a><br>
+
+<a href="YOUR_APPLE_LINK">
+Explore ambient lo-fi on Apple Music
+</a><br>
+
+<a href="YOUR_YOUTUBE_LINK">
+Watch dreamy lo-fi playlist on YouTube
+</a>
+
+</section>
+
+<footer class="site-footer">
+
+<div class="footer-container">
+
+<div class="footer-brand">
+<h2>Nanashino-chan</h2>
+<p>Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
+<p>© 2026 Nanashino-chan. All rights reserved.</p>
+</div>
+
+<div class="footer-links">
+<a href="study.html">Lo-Fi music for studying and focus</a> |
+<a href="relax.html">Relaxing lo-fi music for sleep and stress relief</a> |
+<a href="tokyo.html">Tokyo night lo-fi and Japanese chill beats</a> |
+<a href="jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
+</div>
+
+<div class="footer-links-sub">
+<a href="index.html">Home</a> |
+<a href="today.html">Listen Now</a> |
+<a href="faq.html">FAQ</a> |
+<a href="policy.html">Policy</a> |
+<a href="contact.html">Contact</a>
+</div>
+
+<p class="footer-note">
+🎧 Smooth sounds. Deep focus. Calm moments.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
