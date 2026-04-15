@@ -167,26 +167,36 @@ Free lo-fi music for studying, coding, reading, and deep work.<br>
 <p>
 Click play and start your focus session instantly.<br>
 広告なしで集中できるLo-Fi音楽を今すぐ再生。
-<p>
+</p>
+
 <p style="font-size:12px;opacity:0.7;margin-bottom:16px;">
 Click "Play Now" to play a random lo-fi song.<br>
 Listen on YouTube (advertising may be shown depending on platform)
 </p>
 
 <div class="video-grid">
-<div style="max-width:800px;margin:0 auto;">
+  <div style="max-width:800px;margin:0 auto;">
 
-<div id="player-focus" style="width:100%;aspect-ratio:16/9;background:#000;">
+    <!-- 🔥 プレイヤー（必ず閉じる＆中に何も入れない） -->
+    <div id="player-focus" style="width:100%;aspect-ratio:16/9;background:#000;"></div>
 
-<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+    <!-- 🔥 コントロール（外に出す） -->
+    <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
 
-<button onclick="startGenerator('focus')" style="padding:14px 22px;background:#ffcc00;border:none;border-radius:6px;font-weight:bold;cursor:pointer;">
-▶ Play Study Music
-</button>
+      <button onclick="startGenerator('focus')" style="padding:14px 22px;background:#ffcc00;border:none;border-radius:6px;font-weight:bold;cursor:pointer;">
+        ▶ Play Study Music
+      </button>
 
-<button onclick="nextTrack('focus')" style="padding:14px 22px;border:1px solid #ccc;border-radius:6px;cursor:pointer;">
-⏭ Skip Track
-</button>
+      <button onclick="nextTrack('focus')" style="padding:14px 22px;border:1px solid #ccc;border-radius:6px;cursor:pointer;">
+        ⏭ Skip Track
+      </button>
+
+    </div>
+
+  </div>
+</div>
+
+</section>
 
 </div>
 
