@@ -1065,3 +1065,20 @@ hr {
   border-color: #fff;
   color: #fff;
 }
+/* 各ページジェネレーター固定*/
+#player-focus {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 12px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+#player-focus iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
