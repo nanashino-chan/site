@@ -106,11 +106,31 @@ nav {
 
 /* Appleを主役に */
 .dsp-buttons .apple {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  border-radius: 12px;
+
   background: linear-gradient(135deg, #ff2d55, #ff7a00);
+  color: #fff;
+
   font-weight: bold;
+  text-decoration: none;
+  line-height: 1.4;
   margin-top: 10px;
+  transition: 0.2s;
 }
 
+.dsp-buttons .apple:hover {
+  transform: scale(1.03);
+}
+
+.dsp-buttons .apple span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.85;
+  margin-top: 4px;
+}
 /* サブ */
 .dsp-buttons .ytmusic {
   background: #1e1e1e;
