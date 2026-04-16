@@ -183,22 +183,3 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-
-    document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.querySelector(".hamburger");
-  const menu = document.getElementById("mobileMenu");
-
-  if (!btn || !menu) return;
-
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    menu.classList.toggle("active");
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!menu.classList.contains("active")) return;
-    if (!menu.contains(e.target) && !btn.contains(e.target)) {
-      menu.classList.remove("active");
-    }
-  });
-});
