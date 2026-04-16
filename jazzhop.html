@@ -109,27 +109,37 @@ window.addEventListener('mousemove',loadGA,{once:true});
   <span></span>
 </div>
 </header>
- <!-- 🔥 モバイル＋PC共通メニュー -->
-<div id="mobileMenu" class="mobile-menu">
+
+<!-- 🔥 ハンバーガーボタン（必須：JS安定用） -->
+<div class="hamburger" aria-label="menu" aria-controls="mobileMenu" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- 🔥 モバイル＋PC共通メニュー -->
+<nav id="mobileMenu" class="mobile-menu">
 
   <a href="today.html">▶ Start Listening</a>
 
-  <a href="study.html">📚 Study Lo-Fi</a>
-  <a href="relax.html">☕ Relax Lo-Fi</a>
-  <a href="tokyo.html">🌃 Tokyo Vibes</a>
-  <a href="jazzhop.html">🎷 Jazzhop</a>
+  <a href="study.html">Study Lo-Fi Music</a>
+  <a href="relax.html">Relax Lo-Fi Music</a>
+  <a href="tokyo.html">Tokyo Lo-Fi Vibes</a>
+  <a href="jazzhop.html">Jazzhop Lo-Fi Beats</a>
 
   <hr>
 
-  <a href="music.html">🎶 Music</a>
-  <a href="about.html">ℹ️ About</a>
+  <a href="music.html">Music Collection</a>
+  <a href="about.html">About</a>
 
-  <hr> 
-  
-  <section class="today-cta">
+  <hr>
+
   <a href="today.html">🔥 Today’s Best Track</a>
-  </section>
+
+</nav>
+
 <!-- 🎯 メイン -->
+<main>
 <section style="
   padding:40px 20px;
   text-align:center;
@@ -169,7 +179,7 @@ window.addEventListener('mousemove',loadGA,{once:true});
   </a>
 
 </section>
-
+</main>
 
 <!-- 🎧 サブ導線 -->
 <section class="platform-links">
