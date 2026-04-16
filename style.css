@@ -253,25 +253,38 @@ nav {
   margin-bottom: 20px;
 }
 /* ===================================
-   ハンバーガーメニュー
+   ハンバーガーメニュー（安定版）
 =================================== */
 
-/* ボタン */
+/* ボタン本体 */
 .hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
+
+  width: 44px;
+  height: 44px;
+
   cursor: pointer;
+  user-select: none;
+
+  /* タップ領域の最適化（重要） */
+  -webkit-tap-highlight-color: transparent;
 }
 
+/* 線（バー） */
 .hamburger span {
+  display: block;
   width: 24px;
   height: 2px;
-  background: #fff;
-  display: block;
-  transition: 0.3s;
-}
 
+  background: #fff;
+  border-radius: 2px;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
 /* ===================================
    モバイルメニュー本体
 =================================== */
