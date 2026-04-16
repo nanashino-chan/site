@@ -232,12 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
   overlay.classList.toggle("active");
   document.body.classList.toggle("menu-open");
 
-   // ✅ ここ追加
+  // ✅ ここ追加
   hamburger.setAttribute("aria-expanded", isOpen);
   hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 });
-　fetch("partials/header.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("header-container").innerHTML = data;
-  });
