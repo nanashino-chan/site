@@ -182,32 +182,56 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 // =========================
-// 🔥 追加：ハンバーガーメニュー
+// 🔥 ハンバーガーメニュー（安定版）
 // =========================
-document.addEventListener("DOMContentLoaded", () => {
+(function () {
 
-  const btn = document.querySelector(".hamburger");
-  const menu = document.getElementById("mobileMenu");
+  function initHamburger() {
+    const btn = document.querySelector(".hamburger");
+    const menu = document.getElementById("mobileMenu");
 
-  if (!btn || !menu) return;
+    if (!btn || !menu) return;
 
-  // 開閉
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  });
+    // 重複防止
+    if (btn.dataset.bound === "true") return;
+    btn.dataset.bound = "true";
 
-  // 外クリックで閉じる
-  document.addEventListener("click", (e) => {
-    if (!menu.contains(e.target) && !btn.contains(e.target)) {
-      menu.classList.remove("active");
-    }
-  });
+    // =========================
+    // 開閉
+    // =========================
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // ← 外クリックと競合防止
+      menu.classList.toggle("active");
+    });
 
-  // ESCで閉じる
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      menu.classList.remove("active");
-    }
-  });
+    // =========================
+    // 外クリックで閉じる
+    // =========================
+    document.addEventListener("click", (e) => {
+      if (!menu.classList.contains("active")) return;
 
-});
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove("active");
+      }
+    });
+
+    // =========================
+    // ESCで閉じる
+    // =========================
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        menu.classList.remove("active");
+      }
+    });
+  }
+
+  // =========================
+  // 初期化タイミング
+  // =========================
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initHamburger);
+  } else {
+    initHamburger();
+  }
+
+})();
