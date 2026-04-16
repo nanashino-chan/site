@@ -232,5 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
   overlay.classList.toggle("active");
   document.body.classList.toggle("menu-open");
 
+   // ✅ ここ追加
   hamburger.setAttribute("aria-expanded", isOpen);
+  hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 });
