@@ -293,6 +293,12 @@ nav {
   text-align: left;
   overflow-y: auto;
 }
+.mobile-menu::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
 
 /* 開いた状態 */
 .mobile-menu.active {
