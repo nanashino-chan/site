@@ -103,7 +103,6 @@ async function startGenerator(type) {
     return;
   }
 
-  // 👇 サムネ消す（再生時）
   el.style.backgroundImage = "none";
 
   if (!players[type]) {
@@ -147,11 +146,10 @@ function nextTrack(type) {
 }
 
 // =========================
-// グローバル公開（重複削除）
+// グローバル公開
 // =========================
 window.startGenerator = startGenerator;
 window.nextTrack = nextTrack;
-
 
 // =========================
 // 初期表示＋クリック再生
@@ -167,7 +165,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (!el || !list || !list.length) return;
 
-    // サムネ設定
     const thumbnail = `https://img.youtube.com/vi/${list[0]}/hqdefault.jpg`;
 
     el.style.backgroundImage = `url(${thumbnail})`;
@@ -175,7 +172,6 @@ window.addEventListener("DOMContentLoaded", () => {
     el.style.backgroundPosition = "center";
     el.style.cursor = "pointer";
 
-    // 👇 サムネクリックで再生
     el.addEventListener("click", () => {
       startGenerator(type);
     });
@@ -183,9 +179,9 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-});
+
 // =========================
-// ハンバーガーメニュー制御（class対応版）
+// ハンバーガーメニュー制御
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -198,17 +194,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // 開閉
   hamburger.addEventListener("click", (e) => {
     e.stopPropagation();
-
     hamburger.classList.toggle("active");
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
     document.body.classList.toggle("menu-open");
   });
 
-  // overlayクリックで閉じる
   overlay.addEventListener("click", () => {
     hamburger.classList.remove("active");
     menu.classList.remove("active");
@@ -216,12 +209,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("menu-open");
   });
 
-  // メニュー内クリックは閉じない
   menu.addEventListener("click", (e) => {
     e.stopPropagation();
   });
 
-  // ESCキーで閉じる
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       hamburger.classList.remove("active");
