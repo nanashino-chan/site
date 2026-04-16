@@ -69,23 +69,23 @@ nav {
   position: fixed;
   top: 20px;
   right: 20px;
-  width: 36px;
-  height: 28px;
+  width: 28px;
+  height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: none;
+  border: none;
+  padding: 0;
   cursor: pointer;
   z-index: 1001;
 }
 
 .hamburger span {
-  display: block;
+  height: 2px;
   width: 100%;
-  height: 3px;
   background: #fff;
-  border-radius: 2px;
 }
-
 
 /* =========================
    メニュー本体
