@@ -183,12 +183,13 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+});
 // =========================
-// ハンバーガーメニュー制御（安定版）
+// ハンバーガーメニュー制御（class対応版）
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
 
-  const hamburger = document.getElementById("hamburger");
+  const hamburger = document.querySelector(".hamburger");
   const menu = document.getElementById("mobileMenu");
   const overlay = document.getElementById("overlay");
 
