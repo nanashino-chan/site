@@ -5,14 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
 <title>Jazzhop Lo-Fi 🎷 Smooth Jazz Beats & Chill Hip Hop</title>
 
 <meta name="description" content="Smooth jazzhop and lo-fi hip hop beats. Relaxing jazzy music for work, study, and chill time. ジャズ系Lo-Fi音楽。">
-
 <meta name="robots" content="index, follow">
 
-<!-- CSP -->
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
   img-src 'self' data: https:;
@@ -25,101 +22,39 @@
   form-action 'self';
 ">
 
-<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-
-<!-- Canonical -->
 <link rel="canonical" href="https://nanashino-chan.github.io/site/jazzhop.html">
-
-<!-- Favicon -->
 <link rel="icon" href="./favicon.png" type="image/png">
 
-<!-- OGP -->
-<meta property="og:title" content="Jazzhop Lo-Fi 🎷 Smooth Jazz Beats & Chill Hip Hop">
-<meta property="og:description" content="Enjoy smooth jazzhop and chill lo-fi hip hop beats for focus and relaxation.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://nanashino-chan.github.io/site/jazzhop.html">
-<meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jazzhop Lo-Fi 🎷 Smooth Jazz Beats & Chill Hip Hop">
-<meta name="twitter:description" content="Relaxing jazzy lo-fi beats for work, study, and chill time.">
-<meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
-
-<!-- CSS -->
 <link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link rel="preload"
-      as="image"
-      href="hero-1440.webp"
-      imagesrcset="hero-720.webp 720w, hero-1440.webp 1440w"
-      imagesizes="(max-width: 768px) 100vw, 1200px">
-
-<!-- GA -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-function loadGA(){
- const script=document.createElement('script');
- script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
- script.async=true;
- document.head.appendChild(script);
- gtag('js', new Date());
- gtag('config','G-CLHM36E1P0');
-}
-window.addEventListener('scroll',loadGA,{once:true});
-window.addEventListener('click',loadGA,{once:true});
-window.addEventListener('mousemove',loadGA,{once:true});
-</script>
 
 </head>
 
 <body>
-<!-- ナビ -->
+
 <header>
   <nav>
     <div class="nav">
-
-      <!-- ブランド導線 -->
       <a href="index.html">HOME</a>
-
-      <!-- 🔥 SEOコア（最重要） -->
       <a href="study.html">Study Lo-Fi</a>
       <a href="relax.html">Relax Lo-Fi</a>
       <a href="tokyo.html">Tokyo Vibes</a>
       <a href="jazzhop.html">Jazzhop</a>
-
-      <!-- サブ -->
       <a href="music.html">Music</a>
       <a href="about.html">About</a>
-
-      <!-- CTA -->
       <a href="today.html" class="nav-cta">▶ Listen Now</a>
-
     </div>
   </nav>
-  <!-- 🔥 ハンバーガー（常時表示） -->
-<div class="hamburger" aria-label="menu">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+
+  <!-- ✅ ハンバーガー（1つだけ） -->
+  <div class="hamburger" id="hamburger" aria-controls="mobileMenu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
 
-<!-- 🔥 ハンバーガーボタン（必須：JS安定用） -->
-<div class="hamburger" aria-label="menu" aria-controls="mobileMenu" aria-expanded="false">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-<!-- 🔥 モバイル＋PC共通メニュー -->
+<!-- ✅ メニュー -->
 <nav id="mobileMenu" class="mobile-menu">
-
   <a href="today.html">▶ Start Listening</a>
 
   <a href="study.html">Study Lo-Fi Music</a>
@@ -135,128 +70,40 @@ window.addEventListener('mousemove',loadGA,{once:true});
   <hr>
 
   <a href="today.html">🔥 Today’s Best Track</a>
-
 </nav>
 
-<!-- 🎯 メイン -->
-<main>
-<section style="
-  padding:40px 20px;
-  text-align:center;
-  max-width:800px;
-  margin:0 auto;
-">
+<!-- ✅ overlay追加（超重要） -->
+<div id="overlay" class="overlay"></div>
 
-  <h1 style="
-    font-size:clamp(24px, 5vw, 36px);
-    line-height:1.3;
-    margin-bottom:16px;
-  ">
+<!-- メイン -->
+<main>
+<section style="padding:40px 20px; text-align:center; max-width:800px; margin:0 auto;">
+
+  <h1 style="font-size:clamp(24px, 5vw, 36px); line-height:1.3; margin-bottom:16px;">
     Smooth Jazzhop & Lo-Fi Hip Hop Beats
   </h1>
 
-  <p style="
-    font-size:clamp(14px, 2.5vw, 18px);
-    line-height:1.7;
-    margin-bottom:24px;
-  ">
+  <p style="font-size:clamp(14px, 2.5vw, 18px); line-height:1.7; margin-bottom:24px;">
     Enjoy jazzy lo-fi beats perfect for studying, working, and relaxing.
     Smooth rhythms and warm tones to keep you in the flow.
   </p>
 
-  <!-- CTA -->
-  <a href="today.html" style="
-    display:inline-block;
-    background:#ffcc00;
-    color:#000;
-    padding:14px 22px;
-    border-radius:8px;
-    font-weight:bold;
-    text-decoration:none;
-    font-size:14px;
-  ">
+  <a href="today.html" style="display:inline-block;background:#ffcc00;color:#000;padding:14px 22px;border-radius:8px;font-weight:bold;text-decoration:none;">
     ▶ Play Jazzhop Lo-Fi Now
   </a>
 
 </section>
 </main>
 
-<!-- 🎧 サブ導線 -->
-<section class="platform-links">
-
-
-<section class="platform-links">
-
-<h2>Continue Listening on Streaming Platforms</h2>
-
-<p>Listen to lo-fi study music on your favorite platform:</p>
-
-<div class="platform-buttons">
-
-<a href="https://open.spotify.com/album/6mp4X1AUNRPrAlxv01w7Jl" target="_blank" class="btn spotify">
-🎧 Spotify
-</a>
-
-<a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" class="btn apple">
-🍎 Apple Music
-</a>
-
-<a href="https://www.youtube.com/@Nanashino-chan" target="_blank" class="btn youtube">
-▶ YouTube
-</a>
-
-</div>
-
-</section>
-<!-- ===== Footer ===== -->
+<!-- Footer（そのまま） -->
 <footer class="site-footer">
-
   <div class="footer-container">
-
-    <!-- ブランド -->
     <div class="footer-brand">
       <h2>Nanashino-chan</h2>
       <p>Ad-free Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
-      <p>© 2026 Nanashino-chan. All rights reserved.</p>
     </div>
-
-    <!-- 🔥 SEOリンク -->
-    <div class="footer-links">
-
-      <a href="study.html">
-        Lo-Fi music for studying and focus
-      </a> |
-
-      <a href="relax.html">
-        Relaxing lo-fi music for sleep and stress relief
-      </a> |
-
-      <a href="tokyo.html">
-        Tokyo night lo-fi and Japanese chill beats
-      </a> |
-
-      <a href="jazzhop.html">
-        Smooth jazzhop and jazzy lo-fi beats
-      </a>
-
-    </div>
-
-    <!-- サブリンク -->
-    <div class="footer-links-sub">
-      <a href="index.html">Home</a> |
-      <a href="today.html">Listen Now</a> |
-      <a href="faq.html">FAQ</a> |
-      <a href="policy.html">Policy</a> |
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <!-- CTA -->
-    <p class="footer-note">
-      🎧 No interruptions. Just pure lo-fi music.
-    </p>
-
   </div>
-
 </footer>
+
 </body>
 </html>
