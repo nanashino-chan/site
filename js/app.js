@@ -223,3 +223,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+  hamburger.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  const isOpen = hamburger.classList.toggle("active");
+
+  menu.classList.toggle("active");
+  overlay.classList.toggle("active");
+  document.body.classList.toggle("menu-open");
+
+  hamburger.setAttribute("aria-expanded", isOpen);
+});
