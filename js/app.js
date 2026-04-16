@@ -183,3 +183,51 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+// =========================
+// ハンバーガーメニュー制御（安定版）
+// =========================
+document.addEventListener("DOMContentLoaded", () => {
+
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("overlay");
+
+  if (!hamburger || !menu || !overlay) {
+    console.error("Hamburger menu elements not found");
+    return;
+  }
+
+  // 開閉
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+  });
+
+  // overlayクリックで閉じる
+  overlay.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  });
+
+  // メニュー内クリックは閉じない
+  menu.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  // ESCキーで閉じる
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      hamburger.classList.remove("active");
+      menu.classList.remove("active");
+      overlay.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    }
+  });
+
+});
