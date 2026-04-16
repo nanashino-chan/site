@@ -236,3 +236,8 @@ document.addEventListener("DOMContentLoaded", () => {
   hamburger.setAttribute("aria-expanded", isOpen);
   hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 });
+　fetch("partials/header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header-container").innerHTML = data;
+  });
