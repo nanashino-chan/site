@@ -79,53 +79,33 @@ window.addEventListener('mousemove',loadGA,{once:true});
 </head>
 
 <body>
-
-<!-- ナビ（修正済み） -->
+<!-- ナビ -->
 <header>
   <nav>
     <div class="nav">
 
-      <!-- ロゴ -->
-      <a href="index.html" class="nav-logo">Home</a>
+      <!-- ブランド導線 -->
+      <a href="index.html">HOME</a>
 
-      <!-- PCナビ -->
-      <div class="nav-links">
-        <a href="study.html">Study</a>
-        <a href="sleep.html">Sleep</a>
-        <a href="relax.html">Relax</a>
-        <a href="today.html" class="nav-cta">▶ Listen Now</a>
-      </div>
+      <!-- 🔥 SEOコア（最重要） -->
+      <a href="study.html">Study Lo-Fi</a>
+      <a href="relax.html">Relax Lo-Fi</a>
+      <a href="tokyo.html">Tokyo Vibes</a>
+      <a href="jazzhop.html">Jazzhop</a>
 
-    <div class="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+      <!-- サブ -->
+      <a href="music.html">Music</a>
+      <a href="about.html">About</a>
+
+      <!-- CTA -->
+      <a href="today.html" class="nav-cta">▶ Listen Now</a>
 
     </div>
   </nav>
 </header>
-
-<!-- モバイルメニュー（追加） -->
-<div id="mobileMenu" class="mobile-menu">
-
-  <p class="menu-title">🎧 Listen</p>
-  <a href="today.html">▶ Start Listening Now</a>
-  <a href="study.html">📚 Study & Focus</a>
-  <a href="sleep.html">🌙 Sleep Lo-Fi</a>
-  <a href="relax.html">☕ Relax / Chill</a>
-  <a href="tokyo.html">🌃 Tokyo Night</a>
-
-  <p class="menu-title">ℹ️ About</p>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-
-</div>
-
-<section class="today-cta">
+  <section class="today-cta">
   <a href="today.html">🔥 Today’s Best Track</a>
-</section>
-
+  </section>
 <!-- 🎯 メイン -->
 <section style="
   padding:40px 20px;
@@ -167,7 +147,11 @@ window.addEventListener('mousemove',loadGA,{once:true});
 
 </section>
 
+
 <!-- 🎧 サブ導線 -->
+<section class="platform-links">
+
+
 <section class="platform-links">
 
 <h2>Continue Listening on Streaming Platforms</h2>
@@ -191,24 +175,40 @@ window.addEventListener('mousemove',loadGA,{once:true});
 </div>
 
 </section>
-
 <!-- ===== Footer ===== -->
 <footer class="site-footer">
+
   <div class="footer-container">
 
+    <!-- ブランド -->
     <div class="footer-brand">
       <h2>Nanashino-chan</h2>
       <p>Ad-free Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
       <p>© 2026 Nanashino-chan. All rights reserved.</p>
     </div>
 
+    <!-- 🔥 SEOリンク -->
     <div class="footer-links">
-      <a href="study.html">Lo-Fi music for studying and focus</a> |
-      <a href="relax.html">Relaxing lo-fi music for sleep and stress relief</a> |
-      <a href="tokyo.html">Tokyo night lo-fi and Japanese chill beats</a> |
-      <a href="jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
+
+      <a href="study.html">
+        Lo-Fi music for studying and focus
+      </a> |
+
+      <a href="relax.html">
+        Relaxing lo-fi music for sleep and stress relief
+      </a> |
+
+      <a href="tokyo.html">
+        Tokyo night lo-fi and Japanese chill beats
+      </a> |
+
+      <a href="jazzhop.html">
+        Smooth jazzhop and jazzy lo-fi beats
+      </a>
+
     </div>
 
+    <!-- サブリンク -->
     <div class="footer-links-sub">
       <a href="index.html">Home</a> |
       <a href="today.html">Listen Now</a> |
@@ -217,15 +217,13 @@ window.addEventListener('mousemove',loadGA,{once:true});
       <a href="contact.html">Contact</a>
     </div>
 
+    <!-- CTA -->
     <p class="footer-note">
       🎧 No interruptions. Just pure lo-fi music.
     </p>
 
   </div>
+
 </footer>
-
-<!-- JS（追加・最重要） -->
-<script src="app.js"></script>
-
 </body>
 </html>
