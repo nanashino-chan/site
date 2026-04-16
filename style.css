@@ -65,46 +65,25 @@ nav {
     padding-bottom: 4px;
     margin-bottom: 10px;
 }
-/* =========================
-   ハンバーガーボタン
-========================= */
-/* ===== 強制表示デバッグ ===== */
 .hamburger {
-  position: fixed !important;
-  top: 20px !important;
-  right: 20px !important;
-  width: 50px !important;
-  height: 50px !important;
-  background: red !important;
-  z-index: 9999 !important;
-}
-
-.hamburger span {
-  display: block !important;
-  width: 30px !important;
-  height: 4px !important;
-  background: white !important;
-  margin: 6px auto !important;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
 }
 
 .hamburger span {
   display: block;
-  width: 24px;
-  height: 2px;
-  margin: 0 auto;
+  width: 100%;
+  height: 3px;
   background: #fff;
-  transition: 0.3s;
-}
-
-/* アクティブ時（×に変形） */
-.hamburger.active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  border-radius: 2px;
 }
 
 
