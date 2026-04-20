@@ -147,7 +147,7 @@ Start Your Focus Session Now.<br>
 </p>
 
 <!-- プレイヤー -->
-<div id="player-container" class="player" onclick="initPlayer()">
+<div id="player-container" class="player" onclick="playVideo()">
   <img id="thumbnail" src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg">
   <div class="play-btn">▶</div>
 </div>
@@ -155,11 +155,11 @@ Start Your Focus Session Now.<br>
 <!-- コントロール -->
 <div class="player-controls">
 
-<button onclick="startGenerator('relax')" class="btn-play">
-▶ Play Now
+<button onclick="playVideo()" class="btn-play">
+▶ Start Listening Now
 </button>
 
-<button onclick="nextTrack('relax')" class="btn-next">
+<button onclick="nextTrack()" class="btn-next">
 ⏭ Next
 </button>
 
@@ -176,7 +176,7 @@ Used by creators｜2000+ Shazam｜Growing daily
 <p class="album-title"></p>
 
 <!-- CTA -->
-<section class="listen">
+<section class="listen" style="display:none;">
   <h2>🎧 Listen & Save</h2>
 
  <div class="dsp-buttons">
@@ -188,14 +188,13 @@ Used by creators｜2000+ Shazam｜Growing daily
     <span>お気に入りに追加</span>
   </a>
 
-</div>
+  <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A"
+     target="_blank"
+     class="ytmusic">
+    ▶ YouTube Music
+  </a>
 
-    <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A"
-       target="_blank"
-       class="ytmusic">
-      ▶ YouTube Music
-    </a>
-  </div>
+</div>
 </section>
 
 <!-- YouTube導線 -->
@@ -216,7 +215,7 @@ const tracks = [
     album: "Smooth Chillhop Jazz Beats"
   },
   {
-    title: "Vaporwave Streets – Synthwavw Lo-Fi",
+    title: "Vaporwave Streets – Synthwave Lo-Fi",
     videoId: "mtQwxopXhYo",
     apple: "https://music.apple.com/us/album/retro-pulse-lo-fi-synth-grooves-from-the-night/1808187852",
     album: "Retro Pulse: Lo-Fi Synth Grooves from the Night"
@@ -255,13 +254,30 @@ function initPlayer() {
 }
 
 function playVideo() {
-  if (!player) initPlayer();
-  else player.playVideo();
+  if (!player) {
+    initPlayer();
+
+    // 初回再生保証（重要）
+    setTimeout(() => {
+      if (player && player.playVideo) {
+        player.playVideo();
+      }
+    }, 300);
+
+  } else {
+    player.playVideo();
+  }
 }
 
 function nextTrack() {
   currentIndex = (currentIndex + 1) % tracks.length;
-  player.loadVideoById(tracks[currentIndex].videoId);
+
+  if (!player) {
+    initPlayer();
+  } else {
+    player.loadVideoById(tracks[currentIndex].videoId);
+  }
+
   updateUI();
 }
 
@@ -273,11 +289,8 @@ function updateUI() {
   }, 3000);
 
   document.querySelector(".apple").href = track.apple;
-
   document.querySelector(".track-title").textContent = track.title;
-
-  document.querySelector(".album-title").innerHTML =
-    `Album: ${track.album}`;
+  document.querySelector(".album-title").innerHTML = `Album: ${track.album}`;
 
   document.getElementById("youtubeLink").href =
     "https://www.youtube.com/watch?v=" + track.videoId;
