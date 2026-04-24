@@ -1196,3 +1196,47 @@ hr {
   width: 100%;
   height: auto;
 }
+/* ===================================
+   worksページ
+=================================== */
+.work-card {
+  background: #1a1a1a;
+  padding: 18px;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.cta-btn {
+  background: #ffcc00;
+  color: #000;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255,204,0,0.4);
+}
+.meta {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.type {
+  font-size: 13px;
+  color: #ffcc00;
+  margin-bottom: 6px;
+}
