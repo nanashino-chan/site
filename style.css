@@ -1216,37 +1216,32 @@ hr {
   height: auto;
 }
 /* ===================================
-   worksページ（最適化版）
+   worksページ（最適化・競合排除版）
 =================================== */
 
-/* グリッド */
+/* ===== グリッド ===== */
 .works-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px; /* 少し広げて余裕を出す */
+  gap: 24px;
 }
 
-/* カード本体 */
+/* ===== カード ===== */
 .work-card {
   background: #1a1a1a;
   border-radius: 14px;
   padding: 20px;
 
-  /* レイアウト安定（最重要） */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   min-height: 240px;
-
-  /* 視認性 */
   color: #fff;
 
-  /* アニメーション */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* ホバー */
 .work-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
@@ -1259,14 +1254,14 @@ hr {
   line-height: 1.4;
 }
 
-/* メタ情報 */
+/* メタ */
 .work-card .meta {
   color: #aaa;
   font-size: 13px;
   margin-bottom: 6px;
 }
 
-/* タイプ（強調） */
+/* タイプ */
 .work-card .type {
   font-size: 13px;
   color: #ffcc00;
@@ -1274,14 +1269,14 @@ hr {
   margin-bottom: 8px;
 }
 
-/* 説明文 */
+/* 説明 */
 .work-card .desc {
   font-size: 14px;
   line-height: 1.5;
   color: #ddd;
 }
 
-/* カード内リンク（CTA） */
+/* カード内リンク */
 .work-card a {
   margin-top: 12px;
   color: #ffcc00;
@@ -1293,15 +1288,32 @@ hr {
   text-decoration: underline;
 }
 
+
 /* ===================================
-   CTAボタン（グローバル）
+   ナビ（最優先：白固定）
+=================================== */
+
+.nav a,
+.nav a:link,
+.nav a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  opacity: 0.7;
+}
+
+
+/* ===================================
+   CTAボタン（最優先：黒固定）
 =================================== */
 
 .cta-btn,
 .cta-btn:link,
 .cta-btn:visited {
   background: #ffcc00;
-  color: #000; /* ← 強制的に黒 */
+  color: #000;
   padding: 14px 24px;
   border-radius: 8px;
   font-weight: bold;
@@ -1316,54 +1328,14 @@ hr {
   box-shadow: 0 6px 18px rgba(255,204,0,0.5);
 }
 
-/* ===================================
-   通常リンク（CTA以外）
-=================================== */
-
-a:not(.cta-btn) {
-  color: #ffcc00;
-  text-decoration: none;
-}
-
-a:not(.cta-btn):hover {
-  text-decoration: underline;
-}
-
-a:not(.cta-btn):visited {
-  color: #ffcc00;
-}
-/* ===================================
-   ナビリンク（白固定）
-=================================== */
-
-.nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav a:hover {
-  opacity: 0.7;
-}
-
 
 /* ===================================
-   CTAボタン（黒文字）
-=================================== */
-
-.cta-btn,
-.cta-btn:link,
-.cta-btn:visited {
-  background: #ffcc00;
-  color: #000;
-}
-
-
-/* ===================================
-   本文リンク（黄色）
+   本文リンク（セクション内のみ）
 =================================== */
 
 section a:not(.cta-btn) {
   color: #ffcc00;
+  text-decoration: none;
 }
 
 section a:not(.cta-btn):visited {
@@ -1373,4 +1345,3 @@ section a:not(.cta-btn):visited {
 section a:not(.cta-btn):hover {
   text-decoration: underline;
 }
-
