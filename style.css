@@ -1,5 +1,5 @@
 /* ===================================
-   共通デザイン（全ページ共通）
+   1. RESET / BASE
 =================================== */
 
 html {
@@ -19,71 +19,68 @@ body {
     sans-serif;
 
   background-color: #0f0f0f;
-  color: #fff; /* ← OK */
+  color: #fff;
   text-align: center;
 }
 
-/* 🔥 ここが重要（追加） */
-
-/* 通常リンク */
+/* 🔥 リンク設計（重要：弱くする） */
 a {
-  color: #ffcc00;
   text-decoration: none;
+  color: inherit; /* ← ここが最重要変更 */
 }
 
-/* ホバー */
 a:hover {
   text-decoration: underline;
 }
 
-/* 訪問済みリンクの紫対策 */
-a:visited {
-  color: #ffcc00;
-}
 /* ===================================
-   ナビメニュー（修正版）
+   2. NAVIGATION
 =================================== */
 
 nav {
-    width: 100%;
-    background-color: #000;
-    margin-bottom: 80px;
-    border-bottom: 1px solid #1a1a1a;
+  width: 100%;
+  background-color: #000;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #1a1a1a;
 }
 
 .nav {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    padding: 16px 20px;
-    flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 20px;
+  flex-wrap: wrap;
 }
 
 .nav a {
-    display: inline-flex;       /* ← 追加 */
-    align-items: center;        /* ← 追加 */
-    height: 40px;   
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    white-space: nowrap;
-    transition: 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: 0.25s ease;
 }
 
 .nav a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .nav a.active {
-    border-bottom: 2px solid #ffffff;
-    padding-bottom: 4px;
-    margin-bottom: 10px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
 }
+
+/* ===================================
+   3. HAMBURGER MENU
+=================================== */
+
 .hamburger {
   position: fixed;
   top: 20px;
@@ -95,7 +92,6 @@ nav {
   justify-content: space-between;
   background: none;
   border: none;
-  padding: 0;
   cursor: pointer;
   z-index: 1001;
 }
@@ -106,27 +102,19 @@ nav {
   background: #fff;
 }
 
-/* =========================
-   メニュー本体
-========================= */
 .mobile-menu {
   position: fixed;
   top: 0;
   right: 0;
   width: 280px;
   height: 100%;
-
   background: #111;
   color: #fff;
-
   padding: 80px 20px 20px;
   box-sizing: border-box;
-
   transform: translateX(100%);
   transition: transform 0.3s ease;
-
   z-index: 1000;
-
   overflow-y: auto;
 }
 
@@ -134,11 +122,9 @@ nav {
   transform: translateX(0);
 }
 
-/* メニューリンク */
 .mobile-menu a {
   display: block;
   color: #fff;
-  text-decoration: none;
   padding: 12px 0;
   font-size: 14px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -148,27 +134,20 @@ nav {
   opacity: 0.7;
 }
 
-/* 区切り線 */
 .mobile-menu hr {
   border: none;
   border-top: 1px solid rgba(255,255,255,0.2);
   margin: 16px 0;
 }
 
-
-/* =========================
-   オーバーレイ（最重要）
-========================= */
+/* オーバーレイ */
 .overlay {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
-
   opacity: 0;
   pointer-events: none;
-
   transition: opacity 0.3s ease;
-
   z-index: 999;
 }
 
@@ -177,37 +156,36 @@ nav {
   pointer-events: auto;
 }
 
-
-/* =========================
-   スクロールロック（安全版）
-========================= */
 body.menu-open {
   overflow: hidden;
 }
 
-
-/* =========================
-   デスクトップでも常時表示（重要）
-========================= */
+/* デスクトップ調整 */
 @media (min-width: 768px) {
   .mobile-menu {
     width: 320px;
   }
 }
-//ナビメニュー下CTA
+
+/* ===================================
+   4. CTA / BUTTONS
+=================================== */
+
 .today-cta {
   text-align: center;
   margin: 20px 0 25px;
 }
+
 .today-cta a {
   display: inline-block;
   padding: 10px 20px;
   background: linear-gradient(135deg, #ff7a18, #ff4d4d);
-  color: #fff !important;
+  color: #fff;
   border-radius: 10px;
-  text-decoration: none;
   font-weight: bold;
 }
+
+/* DSPボタン */
 .listen {
   text-align: center;
   margin: 30px 0;
@@ -227,23 +205,18 @@ body.menu-open {
   width: 260px;
   height: 48px;
   border-radius: 10px;
-  text-decoration: none;
   color: #fff;
   font-weight: bold;
 }
 
-/* Appleを主役に */
+/* Apple（メインCTA） */
 .dsp-buttons .apple {
   display: block;
   text-align: center;
   padding: 16px;
   border-radius: 12px;
-
   background: linear-gradient(135deg, #ff2d55, #ff7a00);
   color: #fff;
-
-  font-weight: bold;
-  text-decoration: none;
   line-height: 1.4;
   margin-top: 10px;
   transition: 0.2s;
@@ -259,98 +232,73 @@ body.menu-open {
   opacity: 0.85;
   margin-top: 4px;
 }
-/* サブ */
+
 .dsp-buttons .ytmusic {
   background: #1e1e1e;
 }
+
 .cta-note {
   margin: 0;
   line-height: 1.4;
 }
 
 .cta-note + .cta-note {
-  margin-top: 4px; /* 行間を微調整 */
+  margin-top: 4px;
 }
 
-/* =========================
-   HERO（レスポンシブ完全対応）
-========================= */
+/* ===================================
+   5. HERO
+=================================== */
 
 .hero {
   position: relative;
   width: 100%;
-  height: auto;
   margin-top: 50px;
-  margin-bottom: 0;
-  line-height: 0;
-  background: #000; /* 余白対策（黒帯） */
+  background: #000;
   overflow: hidden;
-  position: relative;
 }
 
-/* クリック領域 */
 .hero-link {
-  position: relative;
   display: block;
+  position: relative;
 }
 
-/* 🔥 ここが核心 */
 .hero-image {
   width: 100%;
-  height: auto;        /* アスペクト比維持 */
+  height: auto;
   display: block;
-  margin: 0 auto;
 }
-/* 暗幕 */
+
 .hero-overlay {
   position: absolute;
   inset: 0;
-
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  text-align: center;
-
   padding-top: 70px;
-
+  text-align: center;
   background: linear-gradient(
     to top,
     rgba(0,0,0,0.65) 0%,
     rgba(0,0,0,0.3) 40%,
     rgba(0,0,0,0) 80%
   );
-
   pointer-events: none;
 }
 
-/* CTA（ボタン本体） */
 .hero-cta {
   font-size: 22px;
   font-weight: 700;
-  color: #fff;
-  background: rgba(0,0,0,0.55); /* 🔥変更 */
+  background: rgba(0,0,0,0.55);
   color: #fff;
   padding: 10px 18px;
   border-radius: 999px;
-
-  line-height: 1;
   margin-bottom: 4px;
-
-  position: relative;
-  z-index: 2;
 }
 
-/* サブテキスト（極限まで圧縮） */
 .hero-sub {
   font-size: 13px;
-  line-height: 1;
-  margin-top: 0;
-
   color: rgba(255,255,255,0.9);
-
-  position: relative;
-  z-index: 2;
 }
 
 /* モバイル */
