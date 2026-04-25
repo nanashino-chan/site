@@ -1332,4 +1332,45 @@ a:not(.cta-btn):hover {
 a:not(.cta-btn):visited {
   color: #ffcc00;
 }
+/* ===================================
+   ナビリンク（白固定）
+=================================== */
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  opacity: 0.7;
+}
+
+
+/* ===================================
+   CTAボタン（黒文字）
+=================================== */
+
+.cta-btn,
+.cta-btn:link,
+.cta-btn:visited {
+  background: #ffcc00;
+  color: #000;
+}
+
+
+/* ===================================
+   本文リンク（黄色）
+=================================== */
+
+section a:not(.cta-btn) {
+  color: #ffcc00;
+}
+
+section a:not(.cta-btn):visited {
+  color: #ffcc00;
+}
+
+section a:not(.cta-btn):hover {
+  text-decoration: underline;
+}
 
