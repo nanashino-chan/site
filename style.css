@@ -1186,3 +1186,58 @@ body.menu-open {
 .content a:hover {
   text-decoration: underline;
 }
+/* =========================
+   LP専用デザイン（重要）
+========================= */
+
+.lp-section {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.lp-center {
+  text-align: center;
+}
+
+/* 見出しバランス修正 */
+.lp-title {
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+/* 本文 */
+.lp-text {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+/* リスト（←これが超重要） */
+.lp-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.lp-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #ddd;
+}
+
+/* 小テキスト */
+.lp-small {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* リンク */
+.lp-link {
+  color: #ffcc00;
+  text-decoration: underline;
+}
