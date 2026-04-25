@@ -927,10 +927,10 @@ body.menu-open {
   }
 
 }
-/* ===== YouTubeプレイヤー表示用 ===== */
+/* ===================================
+   23. PLAYER / EMBED
+=================================== */
 
-
-/* 動画エリア固定 */
 .card > div[id^="player-"] {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -938,130 +938,95 @@ body.menu-open {
   position: relative;
 }
 
-/* iframe（中にフィット） */
 .card > div[id^="player-"] iframe {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
 }
 
+/* ===================================
+   24. CARD CONTENT
+=================================== */
 
-/* テキスト＋ボタン（完全分離） */
 .card-content {
   padding: 15px;
-  margin-top: 0;
   position: relative;
   z-index: 2;
 }
-/* ===== music page押し釦===== */
-.internal-links a {
-  display: inline-block;
-  padding: 10px 18px;
-  background-color: #1e1e1e;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: all 0.25s ease;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
 
-/* ホバーで“押せる感”を出す */
-.internal-links a:hover {
-  background-color: #2c2c2c;
-  transform: translateY(-2px);
-}
+/* ===================================
+   25. TRACK INFO
+=================================== */
 
-/* CTAだけ少し強くする（重要） */
-.internal-links a:first-child {
-  background: linear-gradient(135deg, #ff7a18, #ff4d4d);
-}
-
-/* CTAホバー */
-.internal-links a:first-child:hover {
-  opacity: 0.9;
-}
-/* ===== 曲タイトル（主役）today page ===== */
 .track-title {
   font-size: 22px;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   margin-top: 20px;
   line-height: 1.4;
 }
 
-/* Now Playing部分だけ少し強調 */
 .track-title::before {
   content: "Now Playing: ";
   font-weight: 400;
-  color: #aaaaaa;
+  color: #aaa;
 }
 
-/* ===== アルバム（補助） ===== */
 .album-title {
   font-size: 14px;
   color: #888;
   margin-top: 6px;
 }
 
-/* アルバム補足をさらに弱く */
 .album-title span {
   color: #666;
   font-size: 12px;
 }
-/* FAQ全体レイアウト */
-body {
-  font-size: 16px; /* 基準サイズ */
-  line-height: 1.8;
-}
 
-/* コンテンツラッパー */
+/* ===================================
+   26. FAQ（安全設計）
+=================================== */
+
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
-  text-align: left; /* ← これが重要 */
+  text-align: left;
 }
 
-/* 見出し */
-h1 {
+/* 👇 グローバル汚染を防ぐ */
+.faq-container h1 {
   font-size: 30px;
   margin-bottom: 20px;
 }
 
-h2 {
+.faq-container h2 {
   font-size: 20px;
   margin-top: 40px;
   margin-bottom: 10px;
 }
 
-/* 本文 */
-p {
+.faq-container p {
   font-size: 16px;
   margin-bottom: 16px;
 }
 
-/* リスト */
-ul {
+.faq-container ul {
   padding-left: 20px;
   margin-bottom: 20px;
   list-style: none;
 }
 
-/* セクション区切り */
-hr {
+.faq-container hr {
   margin: 40px 0;
   opacity: 0.2;
 }
 
-.explore-links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-/* today ctaボタン */
+/* ===================================
+   27. PLAYER CTA（重要）
+=================================== */
+
 .player-controls {
   display: flex;
   justify-content: center;
@@ -1070,12 +1035,10 @@ hr {
   margin-top: 12px;
 }
 
-/* 🔥 主役 */
 .btn-play {
   padding: 16px 28px;
   background: #ffcc00;
   color: #000;
-  border: none;
   border-radius: 10px;
   font-weight: bold;
   font-size: 16px;
@@ -1087,7 +1050,6 @@ hr {
   transform: scale(1.05);
 }
 
-/* 👇 脇役 */
 .btn-next {
   padding: 14px 20px;
   background: transparent;
@@ -1101,7 +1063,11 @@ hr {
   border-color: #fff;
   color: #fff;
 }
-/* 各ページジェネレーター固定*/
+
+/* ===================================
+   28. GENERATOR PLAYER
+=================================== */
+
 #player-focus {
   width: 100%;
   max-width: 800px;
@@ -1118,36 +1084,37 @@ hr {
   width: 100%;
   height: 100%;
 }
+
+/* ===================================
+   29. ARTIST
+=================================== */
+
 .artist-box img {
   max-width: 500px;
   width: 100%;
   height: auto;
 }
+
 /* ===================================
-   worksページ（最適化・競合排除版）
+   30. WORKS（CV直結）
 =================================== */
 
-/* ===== グリッド ===== */
 .works-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 }
 
-/* ===== カード ===== */
 .work-card {
   background: #1a1a1a;
   border-radius: 14px;
   padding: 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   min-height: 240px;
   color: #fff;
-
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.2s;
 }
 
 .work-card:hover {
@@ -1155,80 +1122,49 @@ hr {
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
-/* タイトル */
 .work-card h3 {
-  margin-top: 0;
   font-size: 18px;
   line-height: 1.4;
 }
 
-/* メタ */
 .work-card .meta {
   color: #aaa;
   font-size: 13px;
-  margin-bottom: 6px;
 }
 
-/* タイプ */
 .work-card .type {
   font-size: 13px;
   color: #ffcc00;
   font-weight: bold;
-  margin-bottom: 8px;
 }
 
-/* 説明 */
 .work-card .desc {
   font-size: 14px;
-  line-height: 1.5;
   color: #ddd;
 }
 
-/* カード内リンク */
 .work-card a {
   margin-top: 12px;
   color: #ffcc00;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .work-card a:hover {
   text-decoration: underline;
 }
 
-
 /* ===================================
-   ナビ（最優先：白固定）
+   31. CTA（統一）
 =================================== */
 
-.nav a,
-.nav a:link,
-.nav a:visited {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav a:hover {
-  opacity: 0.7;
-}
-
-
-/* ===================================
-   CTAボタン（最優先：黒固定）
-=================================== */
-
-.cta-btn,
-.cta-btn:link,
-.cta-btn:visited {
+.cta-btn {
+  display: inline-block;
   background: #ffcc00;
   color: #000;
   padding: 14px 24px;
   border-radius: 8px;
   font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: 0.15s;
 }
 
 .cta-btn:hover {
@@ -1236,20 +1172,17 @@ hr {
   box-shadow: 0 6px 18px rgba(255,204,0,0.5);
 }
 
-
 /* ===================================
-   本文リンク（セクション内のみ）
+   32. 本文リンク（最終形）
 =================================== */
 
-section a:not(.cta-btn) {
-  color: #ffcc00;
-  text-decoration: none;
-}
+/* ❌ section指定は完全廃止 */
 
-section a:not(.cta-btn):visited {
+/* ✅ 本文専用 */
+.content a {
   color: #ffcc00;
 }
 
-section a:not(.cta-btn):hover {
+.content a:hover {
   text-decoration: underline;
 }
