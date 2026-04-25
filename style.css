@@ -1244,64 +1244,8 @@ body.menu-open {
 /* ===================================
    LICENSE PAGE（完全隔離）
 =================================== */
-
 .license-page {
   max-width: 900px;
   margin: 0 auto;
   padding: 40px 20px;
-}
-
-/* 見出し（global潰し） */
-.license-page h2 {
-  font-size: 22px !important;
-  margin-bottom: 16px;
-  font-weight: 700;
-  text-align: left;
-}
-
-/* テキスト */
-.license-page p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #ccc;
-}
-
-/* リスト（←原因ここ） */
-.license-page ul {
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin: 0;
-}
-
-.license-page li {
-  margin-bottom: 10px;
-  color: #ddd;
-}
-
-/* セクション余白 */
-.license-page section {
-  margin-bottom: 60px;
-}
-
-/* CTA */
-.license-page .cta-main,
-.license-page a[href="contact.html"] {
-  display: inline-block;
-  background: #ffcc00 !important;
-  color: #000 !important;
-  padding: 16px 28px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* 中央寄せ */
-.license-page section[style*="text-align:center"] {
-  text-align: center !important;
-}
-
-/* 小テキスト */
-.license-page p[style*="font-size:14px"] {
-  font-size: 14px !important;
-  color: #888 !important;
 }
