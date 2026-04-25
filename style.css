@@ -203,7 +203,7 @@ body.menu-open {
   display: inline-block;
   padding: 10px 20px;
   background: linear-gradient(135deg, #ff7a18, #ff4d4d);
-  color: #fff;
+  color: #fff !important;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
