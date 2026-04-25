@@ -630,15 +630,14 @@ body.menu-open {
   opacity: 0.8;
 }
 /* ===================================
-   ABOUTページ
+   15. ABOUT
 =================================== */
 
 .about-section {
   max-width: 900px;
   margin: 80px auto;
-  text-align: center;
   padding: 0 20px;
-  box-sizing: border-box;
+  text-align: center;
 }
 
 .about-title {
@@ -664,16 +663,14 @@ body.menu-open {
   margin-bottom: 20px;
 }
 
-/* 🔥 修正済：画像レスポンシブ対応 */
 .about-image {
   width: 100%;
   max-width: 900px;
-  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  display: block;
   margin: 20px auto;
   border-radius: 12px;
+  display: block;
 }
 
 .about-tagline {
@@ -683,204 +680,136 @@ body.menu-open {
   letter-spacing: 1px;
 }
 
-.card-content p {
-  font-size: 18px;
-}
-
-.btn {
-  font-size: 16px;
-}
-
-.next-btn {
-  font-size: 17px;
-}
-
-/* 🔥 モバイル最適化 */
-@media (max-width: 768px) {
-
-  .about-section {
-    margin: 40px auto;
-    padding: 0 16px;
-  }
-
-  .about-title {
-    font-size: 24px;
-    line-height: 1.4;
-  }
-
-  .about-subtitle {
-    font-size: 18px;
-  }
-
-  .about-content p {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-
-  .about-tagline {
-    font-size: 13px;
-  }
-
-}
 /* ===================================
-   Musicページ
+   16. LIST / SEO CONTENT（安全化）
 =================================== */
-.seo-content ul {
-  list-style: none !important;
-  padding-left: 0 !important;
-}
-/* ===== 共通リストリセット ===== */
+
 .seo-content ul {
   list-style: none;
   padding-left: 0;
 }
 
-/* ===== 特徴リスト（✔） ===== */
+.seo-content li {
+  margin-bottom: 8px;
+}
+
 .feature-list li::before {
   content: "✔ ";
   color: #4CAF50;
   font-weight: bold;
 }
 
-/* ===== 利用シーン（アイコン） ===== */
 .usage-list li::before {
   content: "🎧 ";
 }
 
-/* ===== 見た目調整 ===== */
-.seo-content li {
-  margin-bottom: 8px;
-}
-
-
 /* ===================================
-   CONTACTページ
+   17. CONTACT
 =================================== */
 
 .google-form {
-    max-width: 700px;
-    margin: 40px auto;
+  max-width: 700px;
+  margin: 40px auto;
 }
 
 .google-form iframe {
-    width: 100%;
-    border-radius: 12px;
-    background: white;
+  width: 100%;
+  border-radius: 12px;
+  background: #fff;
 }
 
 /* ===================================
-   スマホ対応（全ページ共通）
-=================================== */
-@media (max-width: 768px) {
-
-  .generator-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-@media (max-width: 600px) {
-
-  .hero h1 {
-    font-size: 24px;
-  }
-
-  .hero-sub {
-    font-size: 15px;
-  }
-
-  .about-title {
-    font-size: 28px;
-  }
-
-  .about-subtitle {
-    font-size: 18px;
-  }
-
-  .about-content p {
-    font-size: 15px;
-  }
-
-  .google-form iframe {
-    height: 850px;
-  }
-
-  .nav {
-    gap: 14px;
-    padding: 12px 10px;
-  }
-
-  .nav a {
-    font-size: 13px;
-  }
-
-}
-/* ===================================
-   index.html用 動画カード
+   18. CARD（統一設計）
 =================================== */
 
+.card-grid,
 .video-grid {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    max-width: 1100px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-/* カード */
-.card {
+
+.card,
+.video-card {
   width: 300px;
   background: #111;
   border-radius: 12px;
   overflow: hidden;
   transition: 0.3s;
+  color: #fff;
 }
 
-.card img {
-    width: 100%;
-    display: block;
+.card img,
+.video-card img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
 }
 
-.card-content {
-    padding: 15px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    margin-top: 10px;
-}
-.card iframe {
-    height: 100% !important;
-    width: 100% !important;
-    height: 100% !important;
-    display: block;
-}
-
-
-/* hover */
-.card:hover {
+.card:hover,
+.video-card:hover {
   transform: scale(1.05);
   background: #1a1a1a;
 }
-/* 動画ボタン */
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content p {
+  font-size: 16px;
+}
+
+.video-card p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* iframe安全化 */
+.card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: none;
+}
+
+/* ===================================
+   19. BUTTON（重要：再設計）
+=================================== */
 
 .btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 22px;
-    background: #ff8a00;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.25s;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.25s;
+  text-align: center;
 }
 
-.btn:hover {
-    background: #ffa733;
-    transform: scale(1.05);
+/* バリエーション */
+.btn-primary {
+  background: #ff8a00;
+  color: #fff;
 }
-/* Today's Recommended Track */
+
+.btn-primary:hover {
+  background: #ffa733;
+  transform: scale(1.05);
+}
+
+.btn-danger {
+  background: #ff0000;
+  color: #fff;
+}
+
+/* ===================================
+   20. RECOMMEND
+=================================== */
 
 .recommend-section {
   margin-top: 60px;
@@ -888,14 +817,12 @@ body.menu-open {
 }
 
 #recommendBtn {
-  background: #ffffff;
-  color: #000000;
+  background: #fff;
+  color: #000;
   border: none;
   padding: 12px 20px;
-  font-size: 16px;
-  cursor: pointer;
   border-radius: 8px;
-  margin-top: 10px;
+  cursor: pointer;
 }
 
 .track-box {
@@ -912,51 +839,92 @@ body.menu-open {
   display: inline-block;
   margin-top: 15px;
   background: #ff0000;
-  color: white;
+  color: #fff;
   padding: 10px 16px;
-  text-decoration: none;
   border-radius: 8px;
   font-size: 14px;
 }
-.generator-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
-    gap:30px;
-    max-width:1200px;
-    margin:0 auto;
+
+/* ===================================
+   21. GENERATOR
+=================================== */
+
+.generator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
 .generator-text {
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    color: #ccc;
-    line-height: 1.7;
-    font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 18px;
 }
+
+/* ===================================
+   22. RESPONSIVE（統一）
+=================================== */
+
+@media (max-width: 768px) {
+
+  .about-section {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-subtitle {
+    font-size: 18px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+
+  .nav {
+    gap: 14px;
+    padding: 12px 10px;
+  }
+
+  .nav a {
+    font-size: 13px;
+  }
+
+}
+
 @media (max-width: 600px) {
 
-.video-main iframe {
-    aspect-ratio: 16 / 9;
-    height: auto;
-}
+  .hero h1 {
+    font-size: 24px;
+  }
 
-.social {
+  .hero-sub {
+    font-size: 15px;
+  }
+
+  .google-form iframe {
+    height: 850px;
+  }
+
+  .social {
     gap: 10px;
-    margin-top: 10px;
-}
+  }
 
-.social a {
+  .social a {
     padding: 14px;
-}
+  }
 
-.social img {
+  .social img {
     width: 28px;
     height: 28px;
-}
-
-footer {
-    margin-top: 40px;
-    padding: 20px;
-}
+  }
 
 }
 /* ===== YouTubeプレイヤー表示用 ===== */
