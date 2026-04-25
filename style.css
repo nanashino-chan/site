@@ -307,13 +307,13 @@ body.menu-open {
     height: auto;
   }
 }
-/* =========================
-   INDEX CONTENT
-========================= */
+/* ===================================
+   6. CONTENT / TEXT
+=================================== */
 
 .index-content {
   max-width: 750px;
-  margin: 20px auto 40px; /* ← 上の余白で調整 */
+  margin: 20px auto 40px;
   padding: 0 10px;
   text-align: center;
 }
@@ -330,8 +330,9 @@ body.menu-open {
 }
 
 /* ===================================
-   SEOこんてんと
+   7. SEO BLOCK（折りたたみ）
 =================================== */
+
 .seo-block {
   margin-top: 20px;
 }
@@ -349,107 +350,79 @@ body.menu-open {
 }
 
 .seo-content {
-  list-style: none;
   padding-top: 10px;
   line-height: 1.6;
 }
 
 .seo-content h2 {
-  list-style: none;
   font-size: 20px;
   margin: 10px 0;
 }
 
 .seo-content h3 {
-  list-style: none;
   font-size: 16px;
   margin: 10px 0;
 }
+
 /* ===================================
-   フッター
+   8. FOOTER（統一）
 =================================== */
 
-footer {
-    margin-top: 80px;
-    padding: 30px;
-    font-size: 14px;
-    color: #aaa;
-}
-/* ===== Footer ===== */
 .site-footer {
-  background-color: #111; /* フッター背景 */
-  color: #bbb;            /* テキスト色 */
-  padding: 20px 0;
+  background-color: #111;
+  color: #bbb;
+  padding: 30px 20px;
   text-align: center;
   font-size: 14px;
+  margin-top: 80px;
 }
 
 .site-footer a {
-  color: #bbbbbb;
-  text-decoration: none;
-  transition: 0.2s;
+  color: #bbb;
   margin: 0 6px;
+  transition: 0.2s;
 }
 
 .site-footer a:hover {
-  color: #ffffff;
+  color: #fff;
   text-decoration: underline;
 }
 
-
 /* ===================================
-   SNSボタン
+   9. SOCIAL
 =================================== */
 
 .social {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 20px;
 }
 
 .social a {
-    background: #111;
-    padding: 18px;
-    border-radius: 14px;
-    transition: 0.3s;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  background: #111;
+  padding: 18px;
+  border-radius: 14px;
+  transition: 0.3s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
 .social a:hover {
-    transform: translateY(-5px) scale(1.05);
-    background: #1c1c1c;
+  transform: translateY(-5px) scale(1.05);
+  background: #1c1c1c;
 }
 
 .social img {
-    width: 36px;
-    height: 36px;
-    display: block;
+  width: 36px;
+  height: 36px;
+  display: block;
 }
 
 /* ===================================
-   TOPページ
+   10. INTERNAL LINKS（重要修正）
 =================================== */
 
-.hero-sub {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #fff;
-}
-.container {
-    padding: 80px 20px;
-}
-.container p {
-    max-width: 680px;
-    margin: 20px auto 0 auto;
-    line-height: 1.8;
-    font-size: 16px;
-    color: #cfcfcf;
-}
-.generator-container {
-  padding: clamp(10px, 3vw, 20px);
-}
 .internal-links {
   display: flex;
   flex-wrap: wrap;
@@ -463,8 +436,7 @@ footer {
   display: inline-block;
   padding: 10px 16px;
   background-color: #1e1e1e;
-  color: #fff !important;
-  text-decoration: none;
+  color: #fff; /* ← !important削除 */
   border-radius: 8px;
   transition: all 0.2s ease;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -480,16 +452,11 @@ footer {
   transform: scale(0.96);
 }
 
-/* 1つ強調 */
 .internal-links a:first-child {
   background-color: #ff6f61;
   font-weight: bold;
 }
-.faq-secondary .faq-cta {
-  background: transparent;
-  border: 1px solid #ff6f61;
-  color: #ff6f61;
-}
+
 /* モバイル */
 @media (max-width: 600px) {
   .internal-links {
@@ -503,140 +470,165 @@ footer {
   }
 }
 
-/* スムーズスクロール */
-html {
-  scroll-behavior: smooth;
+/* ===================================
+   11. CONTAINER
+=================================== */
+
+.container {
+  padding: 80px 20px;
 }
-/* 動画カード */
+
+.container p {
+  max-width: 680px;
+  margin: 20px auto 0;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #cfcfcf;
+}
+
+.generator-container {
+  padding: clamp(10px, 3vw, 20px);
+}
+
+/* ===================================
+   12. VIDEO CARDS
+=================================== */
 
 .video-cards {
-    text-align: center;
-    margin-top: 60px;
+  margin-top: 60px;
+  text-align: center;
 }
 
 .card-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .video-card {
-    width: 300px;
-    text-decoration: none;
-    color: white;
-    background: #111;
-    padding: 15px;
-    border-radius: 12px;
-    transition: 0.3s;
+  width: 300px;
+  background: #111;
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+  color: #fff;
 }
 
 .video-card img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .video-card:hover {
-    transform: scale(1.05);
-    background: #1a1a1a;
+  transform: scale(1.05);
+  background: #1a1a1a;
 }
 
 .video-card h3 {
-    margin-top: 15px;
-    font-size: 13px;
+  margin-top: 15px;
+  font-size: 13px;
 }
 
 .video-card p {
-    font-size: 14px;
-    opacity: 0.7;
+  font-size: 14px;
+  opacity: 0.7;
 }
+
 .video-note {
   font-size: 13px;
   line-height: 1.6;
-  text-align: center;
   opacity: 0.7;
-
-  margin-top: 8px;
-  margin-bottom: 24px; /* ← これが重要 */
+  margin: 8px 0 24px;
 }
 
-/* 動画メイン表示 */
+/* メイン動画 */
+.video-main {
+  max-width: 800px;
+  margin: 40px auto;
+}
 
-.video-main { max-width: 800px; margin: 40px auto; } .video-main iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; }
-/* 音楽リンクボタン */
+.video-main iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+/* ===================================
+   13. MUSIC BUTTONS
+=================================== */
 
 .music-buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .btn.apple {
-    background: #ff2d55;
+  background: #ff2d55;
 }
 
 .btn.ytmusic {
-    background: #ff0000;
+  background: #ff0000;
 }
 
 .btn.apple:hover {
-    background: #ff4b6e;
+  background: #ff4b6e;
 }
 
 .btn.ytmusic:hover {
-    background: #ff3333;
+  background: #ff3333;
 }
-/* ===== Brand Feature Section ===== */
+
+/* ===================================
+   14. BRAND
+=================================== */
 
 .brand-feature {
-    margin: 60px auto;
-    max-width: 1000px;
-    text-align: center;
+  margin: 60px auto;
+  max-width: 1000px;
+  text-align: center;
 }
 
 .brand-feature h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .brand-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .brand-btn {
-    display: block;
-    text-decoration: none;
-    color: white;
-    width: 220px;
-    background-color: #1a1a1a;
-    padding: 15px;
-    border-radius: 12px;
-    transition: 0.25s;
+  display: block;
+  width: 220px;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.25s;
+  color: #fff;
 }
 
 .brand-btn:hover {
-    transform: translateY(-5px);
-    background-color: #242424;
+  transform: translateY(-5px);
+  background-color: #242424;
 }
 
 .brand-btn img {
-    width: 100%;
-    height: auto; 
-    border-radius: 10px;
-    margin-bottom: 12px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
 }
 
 .brand-btn p {
-    font-size: 13px;
-    line-height: 1.4;
-    opacity: 0.8;
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.8;
 }
-
-
 /* ===================================
    ABOUTページ
 =================================== */
