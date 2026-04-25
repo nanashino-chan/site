@@ -1309,10 +1309,7 @@ hr {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 /* CTAボタンの文字色を強制固定 */
-a.cta-btn {
-  color: #000 !important;
-}
-.cta-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(255,204,0,0.5);
+/* リンク整理 */
+a:not(.cta-btn) {
+  color: #ccc;
 }
