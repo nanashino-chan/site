@@ -1297,9 +1297,11 @@ hr {
    CTAボタン（グローバル）
 =================================== */
 
-.cta-btn {
+.cta-btn,
+.cta-btn:link,
+.cta-btn:visited {
   background: #ffcc00;
-  color: #000;
+  color: #000; /* ← 強制的に黒 */
   padding: 14px 24px;
   border-radius: 8px;
   font-weight: bold;
@@ -1308,8 +1310,26 @@ hr {
 
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-/* CTAボタンの文字色を強制固定 */
-/* リンク整理 */
-a:not(.cta-btn) {
-  color: #ccc;
+
+.cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255,204,0,0.5);
 }
+
+/* ===================================
+   通常リンク（CTA以外）
+=================================== */
+
+a:not(.cta-btn) {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+a:not(.cta-btn):hover {
+  text-decoration: underline;
+}
+
+a:not(.cta-btn):visited {
+  color: #ffcc00;
+}
+
