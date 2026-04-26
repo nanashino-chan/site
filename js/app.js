@@ -101,43 +101,24 @@ function getRandomVideo(type) {
 // =========================
 async function startGenerator(type) {
 
-  if (!Lofi.store.videos[type]) {
-    console.error("Invalid type:", type);
-    return;
-  }
-  console.log("TYPE:", type);
-  console.log("VIDEOS:", Lofi.store.videos[type]);
   await loadYouTubeAPI();
 
   const videoId = getRandomVideo(type);
   if (!videoId) return;
 
-  const players = Lofi.state.players;
-  const playerId = `player-${type}`;
+  currentType = type;
 
-  const el = document.getElementById(playerId);
-  if (!el) {
-    console.error("Missing element:", playerId);
-    return;
-  }
+  const el = document.getElementById(`player-${type}`);
+  if (!el) return;
 
-  // 他プレイヤー停止
-  if (activePlayer && activePlayer !== type) {
-    const prev = players[activePlayer];
-    if (prev && prev.stopVideo) {
-      prev.stopVideo();
-    }
-  }
+  // すべてリセット
+  document.querySelectorAll("[id^='player-']").forEach(p => {
+    p.innerHTML = "";
+  });
 
-  activePlayer = type;
+  if (!player) {
 
-  el.style.backgroundImage = "none";
-
-  if (!players[type]) {
-
-    el.innerHTML = "";
-
-    players[type] = new YT.Player(playerId, {
+    player = new YT.Player(`player-${type}`, {
       videoId,
       playerVars: {
         autoplay: 1,
@@ -148,15 +129,15 @@ async function startGenerator(type) {
         onReady: (e) => e.target.playVideo(),
         onStateChange: (event) => {
           if (event.data === YT.PlayerState.ENDED) {
-            const next = getRandomVideo(type);
-            if (next) players[type].loadVideoById(next);
+            const next = getRandomVideo(currentType);
+            if (next) player.loadVideoById(next);
           }
         }
       }
     });
 
   } else {
-    players[type].loadVideoById(videoId);
+    player.loadVideoById(videoId);
   }
 }
 // =========================
