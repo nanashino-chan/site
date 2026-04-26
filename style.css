@@ -769,28 +769,30 @@ body.menu-open {
   opacity: 0.7;
 }
 
+
 /* ===================================
-   iframe安全化（完全版）
+   iframe安全化（最終版）
 =================================== */
 
-/* プレイヤー枠だけ比率管理 */
-.card > div[id^="player-"] {
+/* プレイヤー専用ラッパー */
+.player-wrapper {
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #000;
   position: relative;
-  overflow: hidden; /* ← 追加（はみ出し防止） */
+  overflow: hidden;
 }
 
-/* iframeは完全フィット（YouTube上書き） */
-.card > div[id^="player-"] iframe {
+/* YouTube iframe完全制御 */
+.player-wrapper iframe {
   position: absolute;
   inset: 0;
-  width: 100% !important;   /* ← 追加 */
-  height: 100% !important;  /* ← これが最重要 */
+  width: 100% !important;
+  height: 100% !important;
   border: none;
-  display: block;           /* ← 追加（余白バグ防止） */
+  display: block;
 }
+
 
 /* ===================================
    19. BUTTON（重要：再設計）
