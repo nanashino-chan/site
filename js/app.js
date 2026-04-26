@@ -1,9 +1,21 @@
 // =========================
-// Lofi Core（安定版）
+// 🔥 これを一番上に置く
+// =========================
+window.videos = {
+  focus: ["O_DlB-RyU-4"],
+  sleep: ["_5pVC_EikhU"],
+  tokyo: ["rjK5Ql3BaaQ"],
+  cafe: ["tg7ZxXR8oPc"],
+  relax: ["OwcCZ7iB9BQ"],
+  dream: ["CI9JX-r0DgY"]
+};
+
+// =========================
+// Lofi Core
 // =========================
 window.Lofi = {
   store: {
-    videos: window.videos || {}
+    videos: window.videos
   },
   state: {
     players: {},
