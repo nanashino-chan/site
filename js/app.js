@@ -92,7 +92,8 @@ async function startGenerator(type) {
     console.error("Invalid type:", type);
     return;
   }
-
+  console.log("TYPE:", type);
+  console.log("VIDEOS:", Lofi.store.videos[type]);
   await loadYouTubeAPI();
 
   const videoId = getRandomVideo(type);
