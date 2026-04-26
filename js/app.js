@@ -13,6 +13,10 @@ window.Lofi = {
   }
 };
 
+// 🔥 追加：アクティブ管理 & ロード制御
+let activePlayer = null;
+let isLoading = false;
+
 // =========================
 // YouTube API（多重防止）
 // =========================
@@ -80,19 +84,26 @@ function getRandomVideo(type) {
 }
 
 // =========================
-// メイン
+// メイン（修正済み）
 // =========================
 async function startGenerator(type) {
 
+  if (isLoading) return;
+  isLoading = true;
+
   if (!Lofi.store.videos[type]) {
     console.error("Invalid type:", type);
+    isLoading = false;
     return;
   }
 
   await loadYouTubeAPI();
 
   const videoId = getRandomVideo(type);
-  if (!videoId) return;
+  if (!videoId) {
+    isLoading = false;
+    return;
+  }
 
   const players = Lofi.state.players;
   const playerId = `player-${type}`;
@@ -100,12 +111,26 @@ async function startGenerator(type) {
   const el = document.getElementById(playerId);
   if (!el) {
     console.error("Missing element:", playerId);
+    isLoading = false;
     return;
   }
+
+  // 🔥 他プレイヤー停止
+  if (activePlayer && activePlayer !== type) {
+    const prev = players[activePlayer];
+    if (prev && prev.stopVideo) {
+      prev.stopVideo();
+    }
+  }
+
+  activePlayer = type;
 
   el.style.backgroundImage = "none";
 
   if (!players[type]) {
+
+    // 🔥 初回生成前にクリア（黒画面対策）
+    el.innerHTML = "";
 
     players[type] = new YT.Player(playerId, {
       videoId,
@@ -115,7 +140,10 @@ async function startGenerator(type) {
         modestbranding: 1
       },
       events: {
-        onReady: (e) => e.target.playVideo(),
+        onReady: (e) => {
+          e.target.playVideo();
+          isLoading = false; // 🔥 ここ重要
+        },
         onStateChange: (event) => {
           if (event.data === YT.PlayerState.ENDED) {
             const next = getRandomVideo(type);
@@ -127,6 +155,7 @@ async function startGenerator(type) {
 
   } else {
     players[type].loadVideoById(videoId);
+    isLoading = false;
   }
 }
 
@@ -181,7 +210,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // =========================
-// ハンバーガーメニュー制御
+// ハンバーガーメニュー制御（修正済み）
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -196,10 +225,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   hamburger.addEventListener("click", (e) => {
     e.stopPropagation();
-    hamburger.classList.toggle("active");
+
+    const isOpen = hamburger.classList.toggle("active");
+
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
     document.body.classList.toggle("menu-open");
+
+    hamburger.setAttribute("aria-expanded", isOpen);
+    hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
 
   overlay.addEventListener("click", () => {
@@ -222,17 +256,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-});
-  hamburger.addEventListener("click", (e) => {
-  e.stopPropagation();
-
-  const isOpen = hamburger.classList.toggle("active");
-
-  menu.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.classList.toggle("menu-open");
-
-  // ✅ ここ追加
-  hamburger.setAttribute("aria-expanded", isOpen);
-  hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 });
