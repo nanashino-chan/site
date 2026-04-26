@@ -15,7 +15,7 @@ window.Lofi = {
 
 // 🔥 追加：アクティブ管理 & ロード制御
 let activePlayer = null;
-let isLoading = false;
+
 
 // =========================
 // YouTube API（多重防止）
@@ -87,9 +87,6 @@ function getRandomVideo(type) {
 // メイン（修正済み）
 // =========================
 async function startGenerator(type) {
-
-  if (isLoading) return;
-  isLoading = true;
 
   if (!Lofi.store.videos[type]) {
     console.error("Invalid type:", type);
