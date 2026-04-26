@@ -774,7 +774,6 @@ body.menu-open {
    iframe安全化（最終版）
 =================================== */
 
-/* プレイヤー専用ラッパー */
 .player-wrapper {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -783,7 +782,6 @@ body.menu-open {
   overflow: hidden;
 }
 
-/* YouTube iframe完全制御 */
 .player-wrapper iframe {
   position: absolute;
   inset: 0;
@@ -791,6 +789,8 @@ body.menu-open {
   height: 100% !important;
   border: none;
   display: block;
+
+  pointer-events: none; /* 🔥 追加 */
 }
 
 
