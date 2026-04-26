@@ -90,17 +90,13 @@ async function startGenerator(type) {
 
   if (!Lofi.store.videos[type]) {
     console.error("Invalid type:", type);
-    isLoading = false;
     return;
   }
 
   await loadYouTubeAPI();
 
   const videoId = getRandomVideo(type);
-  if (!videoId) {
-    isLoading = false;
-    return;
-  }
+  if (!videoId) return;
 
   const players = Lofi.state.players;
   const playerId = `player-${type}`;
@@ -108,11 +104,10 @@ async function startGenerator(type) {
   const el = document.getElementById(playerId);
   if (!el) {
     console.error("Missing element:", playerId);
-    isLoading = false;
     return;
   }
 
-  // 🔥 他プレイヤー停止
+  // 他プレイヤー停止
   if (activePlayer && activePlayer !== type) {
     const prev = players[activePlayer];
     if (prev && prev.stopVideo) {
@@ -126,7 +121,6 @@ async function startGenerator(type) {
 
   if (!players[type]) {
 
-    // 🔥 初回生成前にクリア（黒画面対策）
     el.innerHTML = "";
 
     players[type] = new YT.Player(playerId, {
@@ -137,10 +131,7 @@ async function startGenerator(type) {
         modestbranding: 1
       },
       events: {
-        onReady: (e) => {
-          e.target.playVideo();
-          isLoading = false; // 🔥 ここ重要
-        },
+        onReady: (e) => e.target.playVideo(),
         onStateChange: (event) => {
           if (event.data === YT.PlayerState.ENDED) {
             const next = getRandomVideo(type);
@@ -152,10 +143,8 @@ async function startGenerator(type) {
 
   } else {
     players[type].loadVideoById(videoId);
-    isLoading = false;
   }
 }
-
 // =========================
 // 次の曲
 // =========================
