@@ -26,7 +26,8 @@ window.Lofi = {
 };
 
 // 🔥 追加：アクティブ管理 & ロード制御
-let activePlayer = null;
+let player = null;
+let currentType = null;
 
 
 // =========================
