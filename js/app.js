@@ -1,21 +1,9 @@
 // =========================
-// 🔥 これを一番上に置く
-// =========================
-window.videos = {
-  focus: ["O_DlB-RyU-4"],
-  sleep: ["_5pVC_EikhU"],
-  tokyo: ["rjK5Ql3BaaQ"],
-  cafe: ["tg7ZxXR8oPc"],
-  relax: ["OwcCZ7iB9BQ"],
-  dream: ["CI9JX-r0DgY"]
-};
-
-// =========================
-// Lofi Core
+// Lofi Core（安定版）
 // =========================
 window.Lofi = {
   store: {
-    videos: window.videos
+    videos: window.videos || {}
   },
   state: {
     players: {},
@@ -24,11 +12,6 @@ window.Lofi = {
     ytLoading: false
   }
 };
-
-// 🔥 追加：アクティブ管理 & ロード制御
-let player = null;
-let currentType = null;
-
 
 // =========================
 // YouTube API（多重防止）
@@ -97,28 +80,34 @@ function getRandomVideo(type) {
 }
 
 // =========================
-// メイン（修正済み）
+// メイン
 // =========================
 async function startGenerator(type) {
+
+  if (!Lofi.store.videos[type]) {
+    console.error("Invalid type:", type);
+    return;
+  }
 
   await loadYouTubeAPI();
 
   const videoId = getRandomVideo(type);
   if (!videoId) return;
 
-  currentType = type;
+  const players = Lofi.state.players;
+  const playerId = `player-${type}`;
 
-  const el = document.getElementById(`player-${type}`);
-  if (!el) return;
+  const el = document.getElementById(playerId);
+  if (!el) {
+    console.error("Missing element:", playerId);
+    return;
+  }
 
-  // すべてリセット
-  document.querySelectorAll("[id^='player-']").forEach(p => {
-    p.innerHTML = "";
-  });
+  el.style.backgroundImage = "none";
 
-  if (!player) {
+  if (!players[type]) {
 
-    player = new YT.Player(`player-${type}`, {
+    players[type] = new YT.Player(playerId, {
       videoId,
       playerVars: {
         autoplay: 1,
@@ -129,17 +118,18 @@ async function startGenerator(type) {
         onReady: (e) => e.target.playVideo(),
         onStateChange: (event) => {
           if (event.data === YT.PlayerState.ENDED) {
-            const next = getRandomVideo(currentType);
-            if (next) player.loadVideoById(next);
+            const next = getRandomVideo(type);
+            if (next) players[type].loadVideoById(next);
           }
         }
       }
     });
 
   } else {
-    player.loadVideoById(videoId);
+    players[type].loadVideoById(videoId);
   }
 }
+
 // =========================
 // 次の曲
 // =========================
@@ -191,7 +181,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // =========================
-// ハンバーガーメニュー制御（修正済み）
+// ハンバーガーメニュー制御
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -206,15 +196,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   hamburger.addEventListener("click", (e) => {
     e.stopPropagation();
-
-    const isOpen = hamburger.classList.toggle("active");
-
+    hamburger.classList.toggle("active");
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
     document.body.classList.toggle("menu-open");
-
-    hamburger.setAttribute("aria-expanded", isOpen);
-    hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
 
   overlay.addEventListener("click", () => {
@@ -237,4 +222,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+});
+  hamburger.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  const isOpen = hamburger.classList.toggle("active");
+
+  menu.classList.toggle("active");
+  overlay.classList.toggle("active");
+  document.body.classList.toggle("menu-open");
+
+  // ✅ ここ追加
+  hamburger.setAttribute("aria-expanded", isOpen);
+  hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 });
