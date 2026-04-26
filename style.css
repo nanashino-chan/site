@@ -770,10 +770,20 @@ body.menu-open {
 }
 
 /* iframe安全化 */
-.card iframe {
+/* プレイヤー枠だけ比率管理 */
+.card > div[id^="player-"] {
   width: 100%;
   aspect-ratio: 16 / 9;
-  display: block;
+  background: #000;
+  position: relative;
+}
+
+/* iframeはフィットさせるだけ */
+.card > div[id^="player-"] iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   border: none;
 }
 
