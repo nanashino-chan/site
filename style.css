@@ -944,23 +944,6 @@ body.menu-open {
   }
 
 }
-/* ===================================
-   23. PLAYER / EMBED
-=================================== */
-
-.card > div[id^="player-"] {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #000;
-  position: relative;
-}
-
-.card > div[id^="player-"] iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
 
 /* ===================================
    24. CARD CONTENT
