@@ -771,7 +771,7 @@ body.menu-open {
 
 
 /* ===================================
-   iframe安全化（最終版）
+   iframe安全化（完全安定版）
 =================================== */
 
 .player-wrapper {
@@ -784,23 +784,40 @@ body.menu-open {
   overflow: hidden;
 }
 
-.player-wrapper iframe {
-  position: absolute;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
-  border: none;
-  display: block;
-
-  pointer-events: none; /* 🔥 追加 */
-}
+/* プレイヤー本体 */
 #main-player {
   width: 100%;
-  aspect-ratio: 16/9;
+  height: 100%;
+  position: relative;
   background: #000;
-  line-height: 0; /* ← これも効く */
+  line-height: 0;
 }
 
+/* iframeを完全フィット */
+#main-player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* 初期サムネ用（ズレ防止） */
+#main-player::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 再生開始後に消す用クラス */
+#main-player.playing::before {
+  display: none;
+}
 /* ===================================
    19. BUTTON（重要：再設計）
 =================================== */
