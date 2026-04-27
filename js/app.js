@@ -184,3 +184,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+   window.addEventListener("DOMContentLoaded", async () => {
+
+  await loadYouTubeAPI();
+
+  // 初期ジャンル（重要）
+  const defaultType = "focus";
+
+  const videoId = getRandomVideo(defaultType);
+
+  if (!videoId) return;
+
+  const el = document.getElementById("main-player");
+
+  window.player = new YT.Player("main-player", {
+    videoId,
+    playerVars: {
+      autoplay: 0, // ← ここ重要（UX）
+      rel: 0,
+      modestbranding: 1
+    }
+  });
+
+  // テキスト更新
+  document.getElementById("nowPlaying").textContent =
+    "▶ Focus Lo-Fi Playing";
+});
