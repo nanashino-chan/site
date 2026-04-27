@@ -848,7 +848,59 @@ body.menu-open {
   background: #ff0000;
   color: #fff;
 }
+/* =========================
+   Lo-Fiプレイヤー用ボタン拡張
+========================= */
 
+/* 基本ボタン（既存を微調整） */
+.btn {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #111;
+
+  transition: all 0.2s ease;
+}
+
+/* 🔥 ホバー（全ボタン共通） */
+.btn:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  transform: translateY(-2px);
+}
+
+/* 🔥 クリック感 */
+.btn:active {
+  transform: translateY(0);
+  opacity: 0.85;
+}
+
+/* =========================
+   Nextボタンだけ強調
+========================= */
+
+.next-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+}
+
+.next-btn:hover {
+  background: #333;
+}
+
+/* =========================
+   ジャンル配置
+========================= */
+
+.genre-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
 /* ===================================
    20. RECOMMEND
 =================================== */
