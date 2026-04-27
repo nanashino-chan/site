@@ -133,16 +133,26 @@ async function startGenerator(type) {
 // =========================
 // 次の曲
 // =========================
-function nextTrack(type) {
-  const player = Lofi.state.players[type];
+function nextTrack() {
 
-  if (!player) {
-    startGenerator(type);
+  if (!currentGenre) {
+    console.warn("No genre selected");
     return;
   }
 
-  const next = getRandomVideo(type);
-  if (next) player.loadVideoById(next);
+  const next = getRandomVideo(currentGenre);
+
+  if (!next) {
+    console.warn("No video found");
+    return;
+  }
+
+  if (!player) {
+    playGenre(currentGenre);
+    return;
+  }
+
+  player.loadVideoById(next);
 }
 
 // =========================
