@@ -296,95 +296,84 @@ Listen on YouTube (advertising may be shown depending on platform)
 </section>
 
 </section>
-<!-- Listen by Mood -->
+
+<!-- 🎧 Listen by Mood（完全リライト） -->
 <section class="container">
 
-<h2>Listen by Mood</h2>
+<h2>🎧 Free Lo-Fi Music Generator</h2>
+
 <p class="generator-explain">
-This is a free lo-fi music generator that plays random tracks instantly.
+Instantly play lo-fi music for focus, sleep, and relaxation.
 </p>
+
 <p class="generator-text">
-Click "Play Now" to start a random lo-fi session.
+Select a mood and start your session.
 </p>
+
 <p class="video-note">
 Listen on YouTube (advertising may be shown depending on platform)
 </p>
-<div class="video-grid">
 
-<!-- ① Focus -->
-<div class="card" id="focus">
-  <div class="player-wrapper">
-    <div id="player-focus"></div>
-  </div>
-  <div class="card-content">
-    <p>Focus & Productivity Lo-Fi</p>
-    <button class="btn" onclick="startGenerator('focus')">▶Play Now</button>
-    <button class="btn next-btn" onclick="nextTrack('focus')">Next</button>
-  </div>
+<!-- 🎬 メインプレイヤー -->
+<div class="player-wrapper">
+  <div id="main-player"></div>
 </div>
 
-<!-- ② Sleep -->
-<div class="card" id="sleep">
-  <div class="player-wrapper">
-    <div id="player-sleep"></div>
-  </div>
-  <div class="card-content">
-    <p>Calm Sleep Lo-Fi</p>
-    <button class="btn" onclick="startGenerator('sleep')">▶Play Now</button>
-    <button class="btn next-btn" onclick="nextTrack('sleep')">Next</button>
-  </div>
+<!-- 🎵 Now Playing -->
+<p id="nowPlaying" style="margin-top:10px;opacity:0.8;">
+▶ Select a mood to start
+</p>
+
+<!-- 🎯 ジャンル選択 -->
+<div class="genre-grid">
+
+  <button class="btn" onclick="playGenre('focus')">
+    Focus
+  </button>
+
+  <button class="btn" onclick="playGenre('sleep')">
+    Sleep
+  </button>
+
+  <button class="btn" onclick="playGenre('tokyo')">
+    Tokyo
+  </button>
+
+  <button class="btn" onclick="playGenre('cafe')">
+    Cafe
+  </button>
+
+  <button class="btn" onclick="playGenre('relax')">
+    Relax
+  </button>
+
+  <button class="btn" onclick="playGenre('dream')">
+    Dream
+  </button>
+
 </div>
 
-<!-- ③ Tokyo -->
-<div class="card" id="tokyo">
-  <div class="player-wrapper">
-    <div id="player-tokyo"></div>
-  </div>
-  <div class="card-content">
-    <p>Tokyo Night Lights Lo-Fi</p>
-    <button class="btn" onclick="startGenerator('tokyo')">▶Play Now</button>
-    <button class="btn next-btn" onclick="nextTrack('tokyo')">Next</button>
-  </div>
+<!-- ⏭ コントロール -->
+<div style="margin-top:10px;">
+  <button class="btn next-btn" onclick="nextTrack()">
+    Next Track
+  </button>
 </div>
 
-<!-- ④ Cafe -->
-<div class="card" id="cafe">
-  <div class="player-wrapper">
-    <div id="player-cafe"></div>
-  </div>
-  <div class="card-content">
-    <p>Night Café Lo-Fi</p>
-    <button class="btn" onclick="startGenerator('cafe')">▶Play Now</button>
-    <button class="btn next-btn" onclick="nextTrack('cafe')">Next</button>
-  </div>
+<!-- 🔥 CV導線 -->
+<div class="cta-box" style="margin-top:30px;">
+
+  <p>
+  ✔ Use this music in your YouTube, TikTok, and Instagram videos
+  </p>
+
+  <a href="licensing.html" class="cta-btn">
+    Get License
+  </a>
+
 </div>
 
-<!-- ⑤ Relax -->
-<div class="card" id="relax">
-  <div class="player-wrapper">
-    <div id="player-relax"></div>
-  </div>
-  <div class="card-content">
-    <p>Relax & Chill Lo-Fi</p>
-    <button class="btn" onclick="startGenerator('relax')">▶Play Now</button>
-    <button class="btn next-btn" onclick="nextTrack('relax')">Next</button>
-  </div>
-</div>
-
-<!-- ⑥ Dream -->
-<div class="card" id="dream">
-  <div class="player-wrapper">
-    <div id="player-dream"></div>
-  </div>
-  <div class="card-content">
-    <p>Dreamy Synth Lo-Fi</p>
-    <button class="btn" onclick="startGenerator('dream')">▶Play Now</button>
-    <button class="btn next-btn" onclick="nextTrack('dream')">Next</button>
-  </div>
-</div>
-</div> <!-- ← video-gridを閉じる -->
-
-</section> <!-- ← containerを閉じる -->
+</section>
 
 <!-- ===== Listen / DSP ===== -->
 <section class="listen">
