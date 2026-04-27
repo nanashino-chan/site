@@ -114,9 +114,7 @@ function nextTrack() {
 window.playGenre = playGenre;
 window.nextTrack = nextTrack;
 
-// =========================
-// 初期サムネイル（完全リライト）
-// =========================
+// 初期サムネイル表示
 window.addEventListener("DOMContentLoaded", () => {
 
   const el = document.getElementById("main-player");
@@ -141,7 +139,6 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-
 // =========================
 // ハンバーガーメニュー（整理済み）
 // =========================
