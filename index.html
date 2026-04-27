@@ -113,17 +113,7 @@ Instant play. Tokyo jazzhop & chill beats by Nanashino-chan. 作業・勉強・�
   window.addEventListener('mousemove', loadGA, { once: true });
 </script>
 <!-- 動画ID -->
-<script>
-window.videos = {
-  focus: ["O_DlB-RyU-4"],
-  sleep: ["_5pVC_EikhU"],
-  tokyo: ["rjK5Ql3BaaQ"],
-  cafe: ["tg7ZxXR8oPc"],
-  relax: ["OwcCZ7iB9BQ"],
-  dream: ["CI9JX-r0DgY"]
-};
-</script>
-
+<script src="./js/videos.js"></script>
 <script src="./js/app.js" defer></script>
   
 </head>
@@ -160,7 +150,7 @@ Lo-Fi Music Generator for Focus, Sleep & Relax
 </h1>
 
 <p class="hero-tagline">
-Free lo-fi music for study, focus, sleep and relaxation. Instant play.<br>
+Free lo-fi music for study, focus, sleep and relaxation.Instant play.<br>
 Listen on YouTube (advertising may be shown depending on platform)
 </p>
 
@@ -204,12 +194,12 @@ Listen on YouTube (advertising may be shown depending on platform)
 
 </div>
 <section class="internal-links"> 
-<a href="#player">Lo-Fi Study Music for Focus & Productivity</a>
-<a href="#player">Lo-Fi Sleep Music for Relaxation & Deep Sleep</a>
-<a href="#player">Tokyo Night Lo-Fi Music & City Vibes</a>
-<a href="#player">Cafe Lo-Fi Beats for Work & Chill</a>
-<a href="#player">Relaxing Lo-Fi Music for Stress Relief</a>
-<a href="#player">Dreamy Lo-Fi Music & Ambient Chill</a>
+<a href="#focus">Lo-Fi Study Music for Focus & Productivity</a>
+<a href="#sleep">Lo-Fi Sleep Music for Relaxation & Deep Sleep</a>
+<a href="#tokyo">Tokyo Night Lo-Fi Music & City Vibes</a>
+<a href="#cafe">Cafe Lo-Fi Beats for Work & Chill</a>
+<a href="#relax">Relaxing Lo-Fi Music for Stress Relief</a>
+<a href="#dream">Dreamy Lo-Fi Music & Ambient Chill</a>
 </section>
   <section class="seo-intro">
   <h2>Free Lo-Fi Music for Study, Focus & Sleep</h2>
@@ -296,84 +286,83 @@ Listen on YouTube (advertising may be shown depending on platform)
 </section>
 
 </section>
-
-<!-- 🎧 Listen by Mood（完全リライト） -->
+<!-- Listen by Mood -->
 <section class="container">
 
-<h2>🎧 Free Lo-Fi Music Generator</h2>
-
+<h2>Listen by Mood</h2>
 <p class="generator-explain">
-Instantly play lo-fi music for focus, sleep, and relaxation.
+This is a free lo-fi music generator that plays random tracks instantly.
 </p>
-
 <p class="generator-text">
-Select a mood and start your session.
+Click "Play Now" to start a random lo-fi session.
 </p>
-
 <p class="video-note">
 Listen on YouTube (advertising may be shown depending on platform)
 </p>
+<div class="video-grid">
 
-<!-- 🎬 メインプレイヤー -->
-<div class="player-wrapper">
-  <div id="main-player"></div>
+<!-- ① Focus -->
+<div class="card" id="focus">
+  <div id="player-focus"></div>
+  <div class="card-content">
+    <p>Focus & Productivity Lo-Fi</p>
+    <button class="btn" onclick="startGenerator('focus')">▶Play Now</button>
+    <button class="btn next-btn" onclick="nextTrack('focus')">Next</button>
+  </div>
 </div>
 
-<!-- 🎵 Now Playing -->
-<p id="nowPlaying" style="margin-top:10px;opacity:0.8;">
-▶ Select a mood to start
-</p>
-
-<!-- 🎯 ジャンル選択 -->
-<div class="genre-grid">
-
-  <button class="btn" onclick="playGenre('focus')">
-    Focus
-  </button>
-
-  <button class="btn" onclick="playGenre('sleep')">
-    Sleep
-  </button>
-
-  <button class="btn" onclick="playGenre('tokyo')">
-    Tokyo
-  </button>
-
-  <button class="btn" onclick="playGenre('cafe')">
-    Cafe
-  </button>
-
-  <button class="btn" onclick="playGenre('relax')">
-    Relax
-  </button>
-
-  <button class="btn" onclick="playGenre('dream')">
-    Dream
-  </button>
-
+<!-- ② Sleep -->
+<div class="card" id="sleep">
+  <div id="player-sleep"></div>
+  <div class="card-content">
+    <p>Calm Sleep Lo-Fi</p>
+    <button class="btn" onclick="startGenerator('sleep')">▶Play Now</button>
+    <button class="btn next-btn" onclick="nextTrack('sleep')">Next</button>
+  </div>
 </div>
 
-<!-- ⏭ コントロール -->
-<div style="margin-top:10px;">
-  <button class="btn next-btn" onclick="nextTrack()">
-    Next Track
-  </button>
+<!-- ③ Tokyo -->
+<div class="card" id="tokyo">
+  <div id="player-tokyo"></div>
+  <div class="card-content">
+    <p>Tokyo Night Lights Lo-Fi</p>
+    <button class="btn" onclick="startGenerator('tokyo')">▶Play Now</button>
+    <button class="btn next-btn" onclick="nextTrack('tokyo')">Next</button>
+  </div>
 </div>
 
-<!-- 🔥 CV導線 -->
-<div class="cta-box" style="margin-top:30px;">
-
-  <p>
-  ✔ Use this music in your YouTube, TikTok, and Instagram videos
-  </p>
-
-  <a href="licensing.html" class="cta-btn">
-    Get License
-  </a>
-
+<!-- ④ Cafe -->
+<div class="card" id="cafe">
+  <div id="player-cafe"></div>
+  <div class="card-content">
+    <p>Night Café Lo-Fi</p>
+    <button class="btn" onclick="startGenerator('cafe')">▶Play Now</button>
+    <button class="btn next-btn" onclick="nextTrack('cafe')">Next</button>
+  </div>
 </div>
 
-</section>
+<!-- ⑤ Relax -->
+<div class="card" id="relax">
+  <div id="player-relax"></div>
+  <div class="card-content">
+    <p>Relax & Chill Lo-Fi</p>
+    <button class="btn" onclick="startGenerator('relax')">▶Play Now</button>
+    <button class="btn next-btn" onclick="nextTrack('relax')">Next</button>
+  </div>
+</div>
+
+<!-- ⑥ Dream -->
+<div class="card" id="dream">
+  <div id="player-dream"></div>
+  <div class="card-content">
+    <p>Dreamy Synth Lo-Fi</p>
+    <button class="btn" onclick="startGenerator('dream')">▶Play Now</button>
+    <button class="btn next-btn" onclick="nextTrack('dream')">Next</button>
+  </div>
+</div>
+</div> <!-- ← video-gridを閉じる -->
+
+</section> <!-- ← containerを閉じる -->
 
 <!-- ===== Listen / DSP ===== -->
 <section class="listen">
