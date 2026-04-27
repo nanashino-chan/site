@@ -776,6 +776,8 @@ body.menu-open {
 
 .player-wrapper {
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   aspect-ratio: 16 / 9;
   background: #000;
   position: relative;
@@ -792,7 +794,12 @@ body.menu-open {
 
   pointer-events: none; /* 🔥 追加 */
 }
-
+#main-player {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  line-height: 0; /* ← これも効く */
+}
 
 /* ===================================
    19. BUTTON（重要：再設計）
