@@ -57,7 +57,15 @@ if (isSinglePlayer) {
   }
 
   async function playGenre(type) {
+// 👇ここ追加
+document.querySelectorAll(".genre-grid .btn").forEach(btn => {
+  btn.classList.remove("active");
+});
 
+const targetBtn = document.querySelector(`[onclick="playGenre('${type}')"]`);
+if (targetBtn) {
+  targetBtn.classList.add("active");
+}
     await loadYouTubeAPI();
 
     const videoId = getRandomVideoSingle(type);
