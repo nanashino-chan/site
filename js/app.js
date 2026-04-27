@@ -48,7 +48,7 @@ function loadYouTubeAPI() {
 }
 
 // =========================
-// ランダム（重複防止）
+// ランダム（安定版）
 // =========================
 function getRandomVideo(type) {
   const list = Lofi.store.videos[type] || [];
@@ -56,29 +56,33 @@ function getRandomVideo(type) {
 
   const state = Lofi.state;
 
+  // 履歴初期化
   if (!state.history[type]) {
     state.history[type] = [];
   }
 
   let history = state.history[type];
 
+  // 全部再生したらリセット
   if (history.length >= list.length) {
     history = state.history[type] = [];
   }
 
-  let video;
-  let guard = 0;
+  // 未再生だけ抽出（ここが重要）
+  const remaining = list.filter(v => !history.includes(v));
 
-  while (guard < 20) {
-    video = list[Math.floor(Math.random() * list.length)];
-    if (!history.includes(video)) break;
-    guard++;
+  // 万が一空なら保険
+  if (!remaining.length) {
+    return list[Math.floor(Math.random() * list.length)];
   }
 
+  // ランダム選択
+  const video = remaining[Math.floor(Math.random() * remaining.length)];
+
   history.push(video);
+
   return video;
 }
-
 // =========================
 // メイン
 // =========================
