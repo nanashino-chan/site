@@ -1,5 +1,5 @@
 // =========================
-// Lofi Core（簡略化）
+// Lofi Core
 // =========================
 window.Lofi = {
   store: {
@@ -7,12 +7,11 @@ window.Lofi = {
   }
 };
 
-// 🎧 単一プレイヤー用
 let player = null;
 let currentGenre = null;
 
 // =========================
-// YouTube API（そのまま）
+// YouTube API
 // =========================
 function loadYouTubeAPI() {
   return new Promise((resolve) => {
@@ -25,14 +24,12 @@ function loadYouTubeAPI() {
     tag.src = "https://www.youtube.com/iframe_api";
     document.head.appendChild(tag);
 
-    window.onYouTubeIframeAPIReady = () => {
-      resolve();
-    };
+    window.onYouTubeIframeAPIReady = resolve;
   });
 }
 
 // =========================
-// ランダム（簡略化）
+// ランダム
 // =========================
 function getRandomVideo(type) {
   const list = Lofi.store.videos[type] || [];
@@ -42,34 +39,21 @@ function getRandomVideo(type) {
 }
 
 // =========================
-// メイン（完全リライト）
+// 再生
 // =========================
 async function playGenre(type) {
 
-  if (!Lofi.store.videos[type]) {
-    console.error("Invalid type:", type);
-    return;
-  }
+  currentGenre = type;
 
   await loadYouTubeAPI();
 
   const videoId = getRandomVideo(type);
   if (!videoId) return;
 
-  currentGenre = type;
-
   const el = document.getElementById("main-player");
-  if (!el) {
-    console.error("Missing element: main-player");
-    return;
-  }
+  if (!el) return;
 
   el.style.backgroundImage = "none";
-
-  const now = document.getElementById("nowPlaying");
-  if (now) {
-    now.textContent = `▶ Now Playing: ${type}`;
-  }
 
   if (!player) {
 
@@ -93,28 +77,32 @@ async function playGenre(type) {
   } else {
     player.loadVideoById(videoId);
   }
-}
 
-// =========================
-// 次の曲（完全リライト）
-// =========================
-function nextTrack() {
-
-  if (!player || !currentGenre) return;
-
-  const next = getRandomVideo(currentGenre);
-  if (next) {
-    player.loadVideoById(next);
+  const now = document.getElementById("nowPlaying");
+  if (now) {
+    now.textContent = `▶ ${type.toUpperCase()} Lo-Fi Playing`;
   }
 }
 
 // =========================
-// グローバル公開（変更）
+// 次の曲
+// =========================
+function nextTrack() {
+  if (!player || !currentGenre) return;
+
+  const next = getRandomVideo(currentGenre);
+  if (next) player.loadVideoById(next);
+}
+
+// =========================
+// 公開
 // =========================
 window.playGenre = playGenre;
 window.nextTrack = nextTrack;
 
-// 初期サムネイル表示
+// =========================
+// 初期サムネ（これだけ残す）
+// =========================
 window.addEventListener("DOMContentLoaded", () => {
 
   const el = document.getElementById("main-player");
@@ -139,8 +127,9 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
 // =========================
-// ハンバーガーメニュー（整理済み）
+// ハンバーガー（そのまま）
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -170,44 +159,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("menu-open");
   });
 
-  menu.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      hamburger.classList.remove("active");
-      menu.classList.remove("active");
-      overlay.classList.remove("active");
-      document.body.classList.remove("menu-open");
-    }
-  });
-
-});
-
-   window.addEventListener("DOMContentLoaded", async () => {
-
-  await loadYouTubeAPI();
-
-  // 初期ジャンル（重要）
-  const defaultType = "focus";
-
-  const videoId = getRandomVideo(defaultType);
-
-  if (!videoId) return;
-
-  const el = document.getElementById("main-player");
-
-  window.player = new YT.Player("main-player", {
-    videoId,
-    playerVars: {
-      autoplay: 0, // ← ここ重要（UX）
-      rel: 0,
-      modestbranding: 1
-    }
-  });
-
-  // テキスト更新
-  document.getElementById("nowPlaying").textContent =
-    "▶ Focus Lo-Fi Playing";
 });
