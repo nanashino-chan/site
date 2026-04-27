@@ -1,201 +1,254 @@
 // =========================
-// Lofi Core（安定版）
+// 判定（最重要）
 // =========================
-window.Lofi = {
-  store: {
-    videos: window.videos || {}
-  },
-  state: {
-    players: {},
-    history: {},
-    ytReady: false,
-    ytLoading: false
-  }
-};
+const isSinglePlayer = document.getElementById("main-player");
+
 
 // =========================
-// YouTube API（多重防止）
+// YouTube API（共通）
 // =========================
 function loadYouTubeAPI() {
   return new Promise((resolve) => {
 
     if (window.YT && window.YT.Player) {
-      Lofi.state.ytReady = true;
       return resolve();
     }
-
-    if (Lofi.state.ytLoading) {
-      const wait = setInterval(() => {
-        if (Lofi.state.ytReady) {
-          clearInterval(wait);
-          resolve();
-        }
-      }, 100);
-      return;
-    }
-
-    Lofi.state.ytLoading = true;
 
     const tag = document.createElement("script");
     tag.src = "https://www.youtube.com/iframe_api";
     document.head.appendChild(tag);
 
     window.onYouTubeIframeAPIReady = () => {
-      Lofi.state.ytReady = true;
       resolve();
     };
   });
 }
 
+
 // =========================
-// ランダム（安定版）
 // =========================
-function getRandomVideo(type) {
-  const list = Lofi.store.videos[type] || [];
-  if (!list.length) return null;
-
-  const state = Lofi.state;
-
-  // 履歴初期化
-  if (!state.history[type]) {
-    state.history[type] = [];
-  }
-
-  let history = state.history[type];
-
-  // 全部再生したらリセット
-  if (history.length >= list.length) {
-    history = state.history[type] = [];
-  }
-
-  // 未再生だけ抽出（ここが重要）
-  const remaining = list.filter(v => !history.includes(v));
-
-  // 万が一空なら保険
-  if (!remaining.length) {
-    return list[Math.floor(Math.random() * list.length)];
-  }
-
-  // ランダム選択
-  const video = remaining[Math.floor(Math.random() * remaining.length)];
-
-  history.push(video);
-
-  return video;
-}
+// 🎧 ① index（1プレイヤー）
 // =========================
-// メイン
 // =========================
-async function startGenerator(type) {
+if (isSinglePlayer) {
 
-  if (!Lofi.store.videos[type]) {
-    console.error("Invalid type:", type);
-    return;
+  let player = null;
+  let currentGenre = null;
+
+  // ランダム（重複防止）
+  function getRandomVideoSingle(type) {
+    const list = window.videos[type] || [];
+    if (!list.length) return null;
+
+    if (!window.playHistory) window.playHistory = {};
+    if (!window.playHistory[type]) window.playHistory[type] = [];
+
+    let history = window.playHistory[type];
+
+    if (history.length >= list.length) {
+      history = window.playHistory[type] = [];
+    }
+
+    const remaining = list.filter(v => !history.includes(v));
+    const video = remaining[Math.floor(Math.random() * remaining.length)];
+
+    history.push(video);
+    return video;
   }
 
-  await loadYouTubeAPI();
+  async function playGenre(type) {
 
-  const videoId = getRandomVideo(type);
-  if (!videoId) return;
+    await loadYouTubeAPI();
 
-  const players = Lofi.state.players;
-  const playerId = `player-${type}`;
+    const videoId = getRandomVideoSingle(type);
+    if (!videoId) return;
 
-  const el = document.getElementById(playerId);
-  if (!el) {
-    console.error("Missing element:", playerId);
-    return;
-  }
+    currentGenre = type;
 
-  el.style.backgroundImage = "none";
+    const now = document.getElementById("nowPlaying");
+    if (now) now.textContent = `▶ Now Playing: ${type}`;
 
-  if (!players[type]) {
+    if (!player) {
 
-    players[type] = new YT.Player(playerId, {
-      videoId,
-      playerVars: {
-        autoplay: 1,
-        rel: 0,
-        modestbranding: 1
-      },
-      events: {
-        onReady: (e) => e.target.playVideo(),
-        onStateChange: (event) => {
-          if (event.data === YT.PlayerState.ENDED) {
-            const next = getRandomVideo(type);
-            if (next) players[type].loadVideoById(next);
+      player = new YT.Player("main-player", {
+        videoId,
+        playerVars: {
+          autoplay: 1,
+          rel: 0,
+          modestbranding: 1
+        },
+        events: {
+          onReady: (e) => e.target.playVideo(),
+          onStateChange: (e) => {
+            if (e.data === YT.PlayerState.ENDED) {
+              nextTrackSingle();
+            }
           }
         }
-      }
-    });
+      });
 
-  } else {
-    players[type].loadVideoById(videoId);
-  }
-}
-
-// =========================
-// 次の曲
-// =========================
-function nextTrack() {
-
-  if (!currentGenre) {
-    console.warn("No genre selected");
-    return;
+    } else {
+      player.loadVideoById(videoId);
+    }
   }
 
-  const next = getRandomVideo(currentGenre);
+  function nextTrackSingle() {
+    if (!currentGenre) return;
 
-  if (!next) {
-    console.warn("No video found");
-    return;
+    const next = getRandomVideoSingle(currentGenre);
+    if (next && player) {
+      player.loadVideoById(next);
+    }
   }
 
-  if (!player) {
-    playGenre(currentGenre);
-    return;
-  }
+  // グローバル公開
+  window.playGenre = playGenre;
+  window.nextTrack = nextTrackSingle;
 
-  player.loadVideoById(next);
-}
+  // 初期サムネイル
+  window.addEventListener("DOMContentLoaded", () => {
 
-// =========================
-// グローバル公開
-// =========================
-window.startGenerator = startGenerator;
-window.nextTrack = nextTrack;
+    const el = document.getElementById("main-player");
+    if (!el) return;
 
-// =========================
-// 初期表示＋クリック再生
-// =========================
-window.addEventListener("DOMContentLoaded", () => {
+    const firstGenre = Object.keys(window.videos)[0];
+    const firstVideo = window.videos[firstGenre][0];
 
-  const videos = window.videos || {};
-
-  Object.keys(videos).forEach(type => {
-
-    const el = document.getElementById(`player-${type}`);
-    const list = videos[type];
-
-    if (!el || !list || !list.length) return;
-
-    const thumbnail = `https://img.youtube.com/vi/${list[0]}/hqdefault.jpg`;
-
-    el.style.backgroundImage = `url(${thumbnail})`;
+    el.style.backgroundImage =
+      `url(https://img.youtube.com/vi/${firstVideo}/hqdefault.jpg)`;
     el.style.backgroundSize = "cover";
     el.style.backgroundPosition = "center";
     el.style.cursor = "pointer";
 
-    el.addEventListener("click", () => {
-      startGenerator(type);
-    });
-
+    el.addEventListener("click", () => playGenre(firstGenre));
   });
+}
 
-});
 
 // =========================
-// ハンバーガーメニュー制御
+// =========================
+// 🎧 ② 他ページ（複数プレイヤー）
+// =========================
+// =========================
+if (!isSinglePlayer) {
+
+  window.Lofi = {
+    store: {
+      videos: window.videos || {}
+    },
+    state: {
+      players: {},
+      history: {}
+    }
+  };
+
+  function getRandomVideoMulti(type) {
+    const list = Lofi.store.videos[type] || [];
+    if (!list.length) return null;
+
+    if (!Lofi.state.history[type]) {
+      Lofi.state.history[type] = [];
+    }
+
+    let history = Lofi.state.history[type];
+
+    if (history.length >= list.length) {
+      history = Lofi.state.history[type] = [];
+    }
+
+    const remaining = list.filter(v => !history.includes(v));
+    const video = remaining[Math.floor(Math.random() * remaining.length)];
+
+    history.push(video);
+    return video;
+  }
+
+  async function startGenerator(type) {
+
+    await loadYouTubeAPI();
+
+    const videoId = getRandomVideoMulti(type);
+    if (!videoId) return;
+
+    const playerId = `player-${type}`;
+    const el = document.getElementById(playerId);
+    if (!el) return;
+
+    el.style.backgroundImage = "none";
+
+    if (!Lofi.state.players[type]) {
+
+      Lofi.state.players[type] = new YT.Player(playerId, {
+        videoId,
+        playerVars: {
+          autoplay: 1,
+          rel: 0,
+          modestbranding: 1
+        },
+        events: {
+          onReady: (e) => e.target.playVideo(),
+          onStateChange: (e) => {
+            if (e.data === YT.PlayerState.ENDED) {
+              const next = getRandomVideoMulti(type);
+              if (next) {
+                Lofi.state.players[type].loadVideoById(next);
+              }
+            }
+          }
+        }
+      });
+
+    } else {
+      Lofi.state.players[type].loadVideoById(videoId);
+    }
+  }
+
+  function nextTrack(type) {
+
+    const player = Lofi.state.players[type];
+
+    if (!player) {
+      startGenerator(type);
+      return;
+    }
+
+    const next = getRandomVideoMulti(type);
+    if (next) player.loadVideoById(next);
+  }
+
+  window.startGenerator = startGenerator;
+  window.nextTrack = nextTrack;
+
+  // 初期サムネイル
+  window.addEventListener("DOMContentLoaded", () => {
+
+    const videos = window.videos || {};
+
+    Object.keys(videos).forEach(type => {
+
+      const el = document.getElementById(`player-${type}`);
+      const list = videos[type];
+
+      if (!el || !list || !list.length) return;
+
+      const thumbnail =
+        `https://img.youtube.com/vi/${list[0]}/hqdefault.jpg`;
+
+      el.style.backgroundImage = `url(${thumbnail})`;
+      el.style.backgroundSize = "cover";
+      el.style.backgroundPosition = "center";
+      el.style.cursor = "pointer";
+
+      el.addEventListener("click", () => {
+        startGenerator(type);
+      });
+    });
+  });
+}
+
+
+// =========================
+// 🍔 ハンバーガー（共通）
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -203,17 +256,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.getElementById("mobileMenu");
   const overlay = document.getElementById("overlay");
 
-  if (!hamburger || !menu || !overlay) {
-    console.error("Hamburger menu elements not found");
-    return;
-  }
+  if (!hamburger || !menu || !overlay) return;
 
   hamburger.addEventListener("click", (e) => {
     e.stopPropagation();
-    hamburger.classList.toggle("active");
+
+    const isOpen = hamburger.classList.toggle("active");
+
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
     document.body.classList.toggle("menu-open");
+
+    hamburger.setAttribute("aria-expanded", isOpen);
+    hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
 
   overlay.addEventListener("click", () => {
@@ -236,17 +291,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-});
-  hamburger.addEventListener("click", (e) => {
-  e.stopPropagation();
-
-  const isOpen = hamburger.classList.toggle("active");
-
-  menu.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.classList.toggle("menu-open");
-
-  // ✅ ここ追加
-  hamburger.setAttribute("aria-expanded", isOpen);
-  hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 });
