@@ -630,54 +630,176 @@ body.menu-open {
   opacity: 0.8;
 }
 /* ===================================
-   15. ABOUT
+   15. ABOUT（SEO + UX最適化版）
 =================================== */
 
 .about-section {
   max-width: 900px;
-  margin: 80px auto;
+  margin: 60px auto;
   padding: 0 20px;
   text-align: center;
 }
 
+/* タイトル */
 .about-title {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 32px;
+  line-height: 1.4;
+  margin-bottom: 16px;
 }
 
-.about-subtitle {
-  font-size: 22px;
-  margin-bottom: 30px;
-  font-weight: 500;
+/* サブコピー */
+.about-tagline {
+  margin-top: 10px;
+  color: #888;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
 }
 
+/* 本文エリア */
 .about-content {
-  max-width: 750px;
-  margin: 0 auto;
+  max-width: 720px;
+  margin: 30px auto 0;
   padding: 0 10px;
+  text-align: left; /* ←重要：可読性UP */
 }
 
+/* 段落 */
 .about-content p {
   font-size: 16px;
   line-height: 1.9;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
+/* 見出し */
+.about-content h2 {
+  font-size: 22px;
+  margin: 40px 0 16px;
+  line-height: 1.4;
+}
+
+/* ===================================
+   画像（超重要）
+=================================== */
+
+/* ファーストビュー画像 */
+.about-hero-image {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 12px;
+  margin: 20px auto;
+  display: block;
+
+  /* 信頼感UP */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* 通常画像 */
 .about-image {
   width: 100%;
-  max-width: 900px;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  margin: 20px auto;
+  max-width: 720px;
+  height: auto;
+  margin: 24px auto;
   border-radius: 12px;
   display: block;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
+/* キャプション */
 .about-tagline {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* ===================================
+   実績ブロック（Shazamなど）
+=================================== */
+
+.proof-block {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f8f8f8;
+}
+
+.proof-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.proof-box img {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.proof-note {
+  font-size: 13px;
+  color: #666;
+}
+
+.proof-sub {
+  font-size: 14px;
+  color: #777;
   margin-top: 10px;
-  color: #aaa;
-  font-size: 15px;
-  letter-spacing: 1px;
+}
+
+/* ===================================
+   内部リンク
+=================================== */
+
+.internal-links {
+  margin: 30px 0;
+}
+
+.internal-links a {
+  display: inline-block;
+  margin: 6px;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.internal-links a:hover {
+  opacity: 0.8;
+}
+
+/* ===================================
+   モバイル最適化（重要）
+=================================== */
+
+@media (max-width: 768px) {
+
+  .about-title {
+    font-size: 26px;
+  }
+
+  .about-content h2 {
+    font-size: 20px;
+  }
+
+  .about-content {
+    text-align: left;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+
+  .about-hero-image,
+  .about-image {
+    border-radius: 10px;
+  }
 }
 
 /* ===================================
