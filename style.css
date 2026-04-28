@@ -420,7 +420,7 @@ body.menu-open {
 }
 
 /* ===================================
-   10. INTERNAL LINKS（重要修正）
+   10. INTERNAL LINKS（完全最適化）
 =================================== */
 
 .internal-links {
@@ -428,48 +428,70 @@ body.menu-open {
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
+  align-items: stretch;
   max-width: 900px;
-  margin: 20px auto;
+  margin: 24px auto;
+  padding: 0 12px;
 }
 
+/* ボタン */
 .internal-links a {
-  display: inline-block;
-  padding: 10px 16px;
+  flex: 1 1 260px; /* ← 重要：均等配置 */
+  max-width: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 14px 16px;
+
   background-color: #1e1e1e;
-  color: #fff; /* ← !important削除 */
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  color: #fff;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.35);
 }
 
+/* hover */
 .internal-links a:hover {
   background-color: #ff6f61;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.45);
 }
 
+/* active */
 .internal-links a:active {
   transform: scale(0.96);
 }
 
+/* メインCTA（1個目） */
 .internal-links a:first-child {
   background-color: #ff6f61;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-/* モバイル */
+/* =========================
+   モバイル最適化
+========================= */
 @media (max-width: 600px) {
+
   .internal-links {
-    gap: 8px;
-    padding: 0 10px;
+    gap: 10px;
   }
 
   .internal-links a {
+    flex: 1 1 100%; /* ← 縦並び */
+    max-width: 100%;
     font-size: 14px;
-    padding: 8px 12px;
+    padding: 12px;
   }
 }
-
 /* ===================================
    11. CONTAINER
 =================================== */
