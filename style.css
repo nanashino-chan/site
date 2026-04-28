@@ -738,41 +738,61 @@ body.menu-open {
 }
 
 /* ===================================
-   実績ブロック（Shazamなど）
+   実績ブロック（Shazamなど）改善版
 =================================== */
 
 .proof-block {
-  margin-top: 30px;
+  margin-top: 40px;
   padding: 20px;
-  border-radius: 12px;
-  background: #f8f8f8;
+  border-radius: 14px;
+
+  /* ダークUIに統一 */
+  background: #111;
+
+  /* カード感 */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+
+  text-align: center;
 }
 
 .proof-text {
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  font-size: 16px;
+  color: #fff;
 }
 
+/* 画像 */
 .proof-box img {
   width: 100%;
-  max-width: 500px;
-  margin: 10px auto;
+  max-width: 600px;
+
+  margin: 14px auto;
   display: block;
-  border-radius: 8px;
+
+  border-radius: 10px;
+
+  /* ←これ重要（白画像対策） */
+  background: #000;
+
+  /* UIとして馴染ませる */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
+/* キャプション */
 .proof-note {
   font-size: 13px;
-  color: #666;
+  color: #aaa;
+  margin-top: 6px;
 }
 
+/* 補足テキスト */
 .proof-sub {
   font-size: 14px;
-  color: #777;
-  margin-top: 10px;
+  color: #bbb;
+  margin-top: 12px;
+  line-height: 1.6;
 }
-
-
 /* ===================================
    モバイル最適化（重要）
 =================================== */
