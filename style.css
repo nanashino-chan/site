@@ -772,29 +772,6 @@ body.menu-open {
   margin-top: 10px;
 }
 
-/* ===================================
-   内部リンク
-=================================== */
-
-.internal-links {
-  margin: 30px 0;
-}
-
-.internal-links a {
-  display: inline-block;
-  margin: 6px;
-  padding: 10px 14px;
-  font-size: 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  background: #111;
-  color: #fff;
-  transition: 0.2s;
-}
-
-.internal-links a:hover {
-  opacity: 0.8;
-}
 
 /* ===================================
    モバイル最適化（重要）
