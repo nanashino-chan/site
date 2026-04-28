@@ -58,9 +58,15 @@ Lo-Fi Focus Music for Studying & Deep Work | 作業用BGM・集中音楽
 <!-- 🎧 プレイヤー -->
 <section class="player-section">
 
-  <p id="nowPlaying">▶ Select a mood to start your focus session</p>
+  <!-- 🎬 プレイヤー -->
+  <div class="player-wrapper">
+    <div id="main-player"></div>
+  </div>
 
-  <!-- ジャンル操作 -->
+  <!-- 状態 -->
+  <p id="nowPlaying">▶ Select a mood to start</p>
+
+  <!-- ボタン -->
   <div class="controls">
     <button class="btn active" onclick="playGenre('focus')">Focus</button>
     <button class="btn" onclick="playGenre('sleep')">Sleep</button>
