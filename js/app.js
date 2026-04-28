@@ -24,7 +24,6 @@ function loadYouTubeAPI() {
   });
 }
 
-
 // =========================
 // =========================
 // 🎧 ① index（1プレイヤー）
@@ -35,7 +34,9 @@ if (isSinglePlayer) {
   let player = null;
   let currentGenre = null;
 
-  // ランダム（重複防止）
+  // =========================
+  // 🎲 ランダム（重複防止）
+  // =========================
   function getRandomVideoSingle(type) {
     const list = window.videos[type] || [];
     if (!list.length) return null;
@@ -56,16 +57,32 @@ if (isSinglePlayer) {
     return video;
   }
 
+  // =========================
+  // 🎧 再生 + スクロール
+  // =========================
   async function playGenre(type) {
-// 👇ここ追加
-document.querySelectorAll(".genre-grid .btn").forEach(btn => {
-  btn.classList.remove("active");
-});
 
-const targetBtn = document.querySelector(`[onclick="playGenre('${type}')"]`);
-if (targetBtn) {
-  targetBtn.classList.add("active");
-}
+    // 🔥 ボタンactive制御
+    document.querySelectorAll(".genre-grid .btn").forEach(btn => {
+      btn.classList.remove("active");
+    });
+
+    const targetBtn = document.querySelector(
+      `.genre-grid .btn[onclick="playGenre('${type}')"]`
+    );
+    if (targetBtn) {
+      targetBtn.classList.add("active");
+    }
+
+    // 🔥 ジェネレーターへスクロール
+    const generator = document.getElementById("generator");
+    if (generator) {
+      generator.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
     await loadYouTubeAPI();
 
     const videoId = getRandomVideoSingle(type);
@@ -73,9 +90,13 @@ if (targetBtn) {
 
     currentGenre = type;
 
+    // 🎵 Now Playing 表示
     const now = document.getElementById("nowPlaying");
-    if (now) now.textContent = `▶ Now Playing: ${type}`;
+    if (now) {
+      now.textContent = `▶ Now Playing: ${type}`;
+    }
 
+    // 🎬 プレイヤー生成 or 切替
     if (!player) {
 
       player = new YT.Player("main-player", {
@@ -100,6 +121,9 @@ if (targetBtn) {
     }
   }
 
+  // =========================
+  // ⏭ 次の曲
+  // =========================
   function nextTrackSingle() {
     if (!currentGenre) return;
 
@@ -109,11 +133,15 @@ if (targetBtn) {
     }
   }
 
-  // グローバル公開
+  // =========================
+  // 🌍 グローバル公開
+  // =========================
   window.playGenre = playGenre;
   window.nextTrack = nextTrackSingle;
 
-  // 初期サムネイル
+  // =========================
+  // 🖼 初期サムネイル
+  // =========================
   window.addEventListener("DOMContentLoaded", () => {
 
     const el = document.getElementById("main-player");
@@ -128,6 +156,7 @@ if (targetBtn) {
     el.style.backgroundPosition = "center";
     el.style.cursor = "pointer";
 
+    // 初回クリックで再生
     el.addEventListener("click", () => playGenre(firstGenre));
   });
 }
