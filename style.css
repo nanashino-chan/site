@@ -793,6 +793,15 @@ body.menu-open {
   margin-top: 12px;
   line-height: 1.6;
 }
+.proof-video {
+  margin-top: 20px;
+}
+
+.proof-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
 /* ===================================
    モバイル最適化（重要）
 =================================== */
