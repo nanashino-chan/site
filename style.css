@@ -722,8 +722,6 @@ body.menu-open {
   width: 100%;
   max-width: 720px;
   height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
   margin: 24px auto;
   border-radius: 12px;
   display: block;
@@ -794,15 +792,6 @@ body.menu-open {
   color: #bbb;
   margin-top: 12px;
   line-height: 1.6;
-}
-.proof-video {
-  margin-top: 20px;
-}
-
-.proof-video iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
 }
 /* ===================================
    モバイル最適化（重要）
