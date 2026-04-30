@@ -169,23 +169,67 @@ Playback powered by YouTube (ads may appear depending on your device and region)
 
 <div style="max-width:800px;margin:0 auto;">
 
-<div id="player-synth" style="width:100%;aspect-ratio:16/9;background:#000;margin-bottom:12px;"></div>
+  <!-- プレイヤー -->
+  <div id="player-synth" style="width:100%;aspect-ratio:16/9;background:#000;margin-bottom:12px;"></div>
 
-<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+  <!-- コントロール -->
+  <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:10px;">
 
-<button onclick="startGenerator('synth')" style="padding:14px 22px;background:#a18cd1;border:none;border-radius:6px;font-weight:bold;cursor:pointer;">
-▶ Play Dreamy Synth Lo-Fi
-</button>
+    <!-- メイン：再生 -->
+    <button onclick="startGenerator('synth')" style="
+      padding:16px 24px;
+      background:#a18cd1;
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      font-weight:700;
+      font-size:16px;
+      cursor:pointer;
+      box-shadow:0 4px 12px rgba(0,0,0,0.25);
+    ">
+      ▶ Play Dreamy Synth Lo-Fi
+    </button>
 
-<button onclick="nextTrack('synth')" style="padding:14px 22px;border:1px solid #ccc;border-radius:6px;cursor:pointer;">
-⏭ Next Track
-</button>
+    <!-- サブ：次の曲 -->
+    <button onclick="nextTrack('synth')" style="
+      padding:16px 22px;
+      background:#1a1a1a;
+      color:#fff;
+      border:1px solid #333;
+      border-radius:8px;
+      font-size:15px;
+      cursor:pointer;
+    ">
+      ⏭ Next Track
+    </button>
+
+  </div>
 
 </div>
 
+<!-- CV導線（Synth専用） -->
+<div style="margin-top:18px;text-align:center;">
+
+  <p style="font-size:13px;opacity:0.85;margin-bottom:10px;">
+    ✔ Perfect for cinematic videos, night scenes & aesthetic content<br>
+    ✔ Ideal for YouTube, TikTok & creative projects<br>
+    ✔ Commercial use available with license
+  </p>
+
+  <a href="licensing.html" style="
+    display:inline-block;
+    padding:14px 22px;
+    background:#ffffff;
+    color:#000;
+    border-radius:8px;
+    font-weight:bold;
+    text-decoration:none;
+  ">
+    ▶ Use This Music in Your Videos
+  </a>
+
 </div>
 
-</section>
 </section>
 
 <!-- SUB CTA -->
