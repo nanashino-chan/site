@@ -171,21 +171,34 @@ Listen on YouTube (advertising may be shown depending on platform)
 
 <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
 
-<button onclick="startGenerator('relax')" style="
-    padding:14px 22px;
-    background:#6a85b6;
+<!-- メイン：再生 -->
+<button onclick="startGenerator('relax')" 
+  style="
+    padding:16px 24px;
+    background:#7fa8d8;
+    color:#fff;
     border:none;
-    border-radius:6px;
-    font-weight:bold;
-    cursor:pointer;
-    color:#ffffff;
+    border-radius:8px;
+    font-weight:700;
     font-size:16px;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
   ">
-▶ Play Relaxing Music
+  ▶ Play Relaxing Music
 </button>
 
-<button onclick="nextTrack('relax')" style="padding:14px 22px;border:1px solid #ccc;border-radius:6px;cursor:pointer;">
-⏭ Next Track
+<!-- サブ：次の曲 -->
+<button onclick="nextTrack('relax')" 
+  style="
+    padding:16px 22px;
+    background:#1a1a1a;
+    color:#fff;
+    border:1px solid #333;
+    border-radius:8px;
+    font-size:15px;
+    cursor:pointer;
+  ">
+  ⏭ Next Track
 </button>
 
 </div>
