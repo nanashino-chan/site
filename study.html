@@ -176,44 +176,62 @@ Powered by YouTube (ads may appear depending on your device and region)
   <!-- プレイヤー -->
   <div id="player-focus" style="width:100%;aspect-ratio:16/9;background:#000;margin-bottom:12px;"></div>
 
- <!-- コントロール -->
-<div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:10px;">
+  <!-- コントロール -->
+  <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:10px;">
 
-  <!-- メイン：再生 -->
-  <button onclick="startGenerator('focus')" style="
-    padding:16px 24px;
-    background:#ffcc00;
-    color:#000;
-    border:none;
-    border-radius:8px;
-    font-weight:700;
-    font-size:16px;
-    cursor:pointer;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
-  ">
-    ▶ Play Lo-Fi Study Music
-  </button>
+    <!-- 再生 -->
+    <button onclick="startGenerator('focus')" style="
+      padding:16px 24px;
+      background:#ffcc00;
+      color:#000;
+      border:none;
+      border-radius:8px;
+      font-weight:700;
+      font-size:16px;
+      cursor:pointer;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    ">
+      ▶ Play Lo-Fi Study Music
+    </button>
 
-  <!-- サブ：次の曲 -->
-  <button onclick="nextTrack('focus')" style="
-    padding:16px 22px;
-    background:#222;
-    color:#fff;
-    border:1px solid #333;
-    border-radius:8px;
-    font-size:15px;
-    cursor:pointer;
-  ">
-    ⏭ Next Track
-  </button>
+    <!-- 次 -->
+    <button onclick="nextTrack('focus')" style="
+      padding:16px 22px;
+      background:#222;
+      color:#fff;
+      border:1px solid #333;
+      border-radius:8px;
+      font-size:15px;
+      cursor:pointer;
+    ">
+      ⏭ Next Track
+    </button>
 
-</div>
+  </div>
 
-</div>
+  <!-- CV導線（ここが重要） -->
+  <div style="margin-top:18px;">
 
-</section>
+    <p style="font-size:13px;opacity:0.85;margin-bottom:10px;">
+      ✔ Use this music in your videos<br>
+      ✔ Safe for YouTube, TikTok & Instagram<br>
+      ✔ Avoid copyright issues with a license
+    </p>
 
-</div>
+    <a href="licensing.html" style="
+      display:inline-block;
+      padding:14px 22px;
+      background:#ffffff;
+      color:#000;
+      border-radius:8px;
+      font-weight:bold;
+      text-decoration:none;
+      transition:0.2s;
+    ">
+      ▶ Get License for Your Videos
+    </a>
+
+  </div>
 
 </div>
 
