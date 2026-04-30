@@ -29,7 +29,30 @@
 <link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
 
 <link rel="stylesheet" href="style.css">
+<!-- GA（遅延） -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
 
+let gaLoaded = false;
+
+function loadGA(){
+  if(gaLoaded) return;
+  gaLoaded = true;
+
+  const script = document.createElement('script');
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
+  script.async = true;
+  document.head.appendChild(script);
+
+  gtag('js', new Date());
+  gtag('config','G-CLHM36E1P0');
+}
+
+window.addEventListener('scroll', loadGA, { once:true });
+window.addEventListener('click', loadGA, { once:true });
+window.addEventListener('mousemove', loadGA, { once:true });
+</script>
 </head>
 
 <main>
