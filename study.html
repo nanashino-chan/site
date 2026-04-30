@@ -185,27 +185,38 @@ Powered by YouTube (ads may appear depending on your device and region)
   <!-- プレイヤー -->
   <div id="player-focus" style="width:100%;aspect-ratio:16/9;background:#000;margin-bottom:12px;"></div>
 
-  <!-- コントロール -->
-  <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+ <!-- コントロール -->
+<div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:10px;">
 
-    <button onclick="startGenerator('focus')"style="
-    padding:14px 22px;
-    background:#6a85b6;
+  <!-- メイン：再生 -->
+  <button onclick="startGenerator('focus')" style="
+    padding:16px 24px;
+    background:#ffcc00;
+    color:#000;
     border:none;
-    border-radius:6px;
-    font-weight:bold;
-    cursor:pointer;
-    color:#ffffff;
+    border-radius:8px;
+    font-weight:700;
     font-size:16px;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
   ">
-      ▶ Play Lo-Fi Study Music
-    </button>
+    ▶ Play Lo-Fi Study Music
+  </button>
 
-    <button onclick="nextTrack('focus')" style="padding:14px 22px;border:1px solid #ccc;border-radius:6px;cursor:pointer;">
-      ⏭ Skip to Next Track
-    </button>
+  <!-- サブ：次の曲 -->
+  <button onclick="nextTrack('focus')" style="
+    padding:16px 22px;
+    background:#222;
+    color:#fff;
+    border:1px solid #333;
+    border-radius:8px;
+    font-size:15px;
+    cursor:pointer;
+  ">
+    ⏭ Next Track
+  </button>
 
-  </div>
+</div>
 
 </div>
 
