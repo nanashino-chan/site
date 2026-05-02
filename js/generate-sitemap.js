@@ -1,47 +1,41 @@
 const fs = require("fs");
 
-const domain = "https://nanashino-chan.github.io/site";
+const baseUrl = "https://nanashino-chan.github.io/site";
 
-const urls = [
-  { path: "/", priority: 1.0 },
-  { path: "/today.html", priority: 0.97 },
-  { path: "/licensing.html", priority: 0.96 },
-  { path: "/contact.html", priority: 0.92 },
-
-  { path: "/focus.html", priority: 0.95 },
-  { path: "/study.html", priority: 0.94 },
-  { path: "/sleep.html", priority: 0.94 },
-  { path: "/relax.html", priority: 0.94 },
-
-  { path: "/tokyo.html", priority: 0.93 },
-  { path: "/cafe.html", priority: 0.93 },
-  { path: "/jazzhop.html", priority: 0.93 },
-  { path: "/synth.html", priority: 0.93 },
-
-  { path: "/music.html", priority: 0.86 },
-  { path: "/about.html", priority: 0.75 },
-  { path: "/works.html", priority: 0.75 },
-
-  { path: "/faq.html", priority: 0.8 },
-  { path: "/commerce.html", priority: 0.6 },
-  { path: "/terms.html", priority: 0.4 },
-  { path: "/policy.html", priority: 0.4 },
+const pages = [
+  ["", "1.0", "weekly"],
+  ["/today.html", "0.97", "weekly"],
+  ["/licensing.html", "0.96", "weekly"],
+  ["/contact.html", "0.92", "weekly"],
+  ["/focus.html", "0.95", "weekly"],
+  ["/study.html", "0.94", "weekly"],
+  ["/sleep.html", "0.94", "weekly"],
+  ["/relax.html", "0.94", "weekly"],
+  ["/tokyo.html", "0.93", "weekly"],
+  ["/cafe.html", "0.93", "weekly"],
+  ["/jazzhop.html", "0.93", "weekly"],
+  ["/synth.html", "0.93", "weekly"],
+  ["/music.html", "0.86", "monthly"],
+  ["/about.html", "0.75", "monthly"],
+  ["/works.html", "0.75", "monthly"],
+  ["/faq.html", "0.8", "monthly"],
+  ["/commerce.html", "0.6", "yearly"],
+  ["/terms.html", "0.4", "yearly"],
+  ["/policy.html", "0.4", "yearly"]
 ];
 
 const today = new Date().toISOString().split("T")[0];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(u => `
+${pages.map(p => `
   <url>
-    <loc>${domain}${u.path}</loc>
+    <loc>${baseUrl}${p[0]}</loc>
     <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${u.priority}</priority>
+    <changefreq>${p[2]}</changefreq>
+    <priority>${p[1]}</priority>
   </url>
 `).join("")}
 </urlset>`;
 
 fs.writeFileSync("sitemap.xml", xml);
-
-console.log("✅ sitemap.xml generated");
