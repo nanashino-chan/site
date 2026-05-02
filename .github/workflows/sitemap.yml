@@ -19,7 +19,7 @@ jobs:
           node-version: '18'
 
       - name: Generate sitemap
-        run: node site/js/generate-sitemap.js
+        run: node js/generate-sitemap.js
 
       - name: Commit sitemap
         run: |
