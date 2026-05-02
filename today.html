@@ -146,6 +146,11 @@ Start Your Focus Session Now.<br>
 • Perfect for Study / 作業・勉強に最適
 </p>
 
+<!-- ▼ 追加：軽い権利訴求（邪魔しない一行） -->
+<p class="sub-note" style="font-size:12px; opacity:0.8;">
+Safe for commercial use with license｜商用利用はライセンスで安全に使用可能
+</p>
+
 <!-- プレイヤー -->
 <div id="player-container" class="player" onclick="playVideo()">
   <img id="thumbnail" src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg">
@@ -171,6 +176,16 @@ Used by creators｜2000+ Shazam｜Growing daily
 
 <p>Feel the difference in 10 seconds.</p>
 
+<!-- ▼ 追加：試聴直後CTA（最重要ポイント） -->
+<div class="soft-cta" style="margin:20px 0; padding:14px; border:1px solid rgba(255,255,255,0.1); border-radius:8px;">
+  <p style="margin:0 0 8px 0;">
+    💼 Want to use this music in your videos?
+  </p>
+  <a href="licensing.html" class="btn-license" style="display:inline-block; padding:10px 16px; border-radius:6px; background:#111; color:#fff; text-decoration:none;">
+    Use this music safely →
+  </a>
+</div>
+
 <!-- 曲情報 -->
 <p class="track-title"></p>
 <p class="album-title"></p>
@@ -195,12 +210,31 @@ Used by creators｜2000+ Shazam｜Growing daily
   </a>
 
 </div>
+
+<!-- ▼ 追加：分岐導線（ここがCV分岐点） -->
+<div class="cta-split" style="margin-top:18px; font-size:14px; opacity:0.9;">
+  <p style="margin:6px 0;">🎧 Just listening?</p>
+  <p style="margin:6px 0;">
+    → <a href="https://www.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank">Continue on YouTube</a>
+  </p>
+
+  <p style="margin:10px 0 6px;">💼 Using this for your content?</p>
+  <p style="margin:6px 0;">
+    → <a href="licensing.html">Get License</a>
+  </p>
+</div>
+
 </section>
 
 <!-- YouTube導線 -->
 <a id="youtubeLink" target="_blank">
 🎧 Continue on YouTube
 </a>
+
+<!-- ▼ 追加：YouTube遷移前の最後の拾い -->
+<p style="margin-top:10px; font-size:12px; opacity:0.7;">
+Using this track for your video? → <a href="licensing.html">Get License</a>
+</p>
 
 </div>
 
@@ -257,7 +291,6 @@ function playVideo() {
   if (!player) {
     initPlayer();
 
-    // 初回再生保証（重要）
     setTimeout(() => {
       if (player && player.playVideo) {
         player.playVideo();
