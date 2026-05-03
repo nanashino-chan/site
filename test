@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>Lo-Fi Music License FAQ – Safe for YouTube, TikTok & Monetization?</title>
+
+<meta name="description" content="Can you use lo-fi music for YouTube, TikTok, or monetized videos? Learn copyright rules, Content ID, and licensing options. YouTube・TikTokで使えるLo-Fi音楽の利用ルールを解説。">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://nanashino-chan.github.io/site/faq.html">
+
+<!-- Security -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+
+  script-src 'self'
+    'unsafe-inline'
+    https://www.googletagmanager.com
+    https://www.google-analytics.com;
+
+  connect-src
+    'self'
+    https://www.google-analytics.com
+    https://www.googletagmanager.com;
+
+  img-src
+    'self'
+    data:;
+
+  style-src
+    'self'
+    'unsafe-inline';
+
+  font-src 'self';
+
+  object-src 'none';
+  base-uri 'self';
+">
+
+<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+
+<!-- Favicon -->
+<link rel="icon" href="/site/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
+
+<!-- OGP -->
+<meta property="og:title" content="Lo-Fi Music License FAQ – Safe for YouTube & TikTok?">
+<meta property="og:description" content="Learn how to use lo-fi music safely. Copyright, Content ID, and licensing explained.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nanashino-chan.github.io/site/faq.html">
+<meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lo-Fi Music FAQ – Safe for YouTube & TikTok?">
+<meta name="twitter:description" content="Understand copyright rules and how to safely use lo-fi music.">
+<meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- 構造化データ（強化） -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Can I use this lo-fi music on YouTube?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Usage depends on licensing. Commercial or monetized use requires permission or a license."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is this music safe from Content ID claims?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Some tracks may be registered with Content ID. Licensing ensures safe usage without claims."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I use this music on TikTok or Instagram?",
+   "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes, for organic posts. For ads or commercial campaigns, licensing is required."
+   }
+  }
+ ]
+}
+</script>
+
+<!-- GA（遅延） -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+let gaLoaded = false;
+
+function loadGA(){
+  if(gaLoaded) return;
+  gaLoaded = true;
+
+  const script = document.createElement('script');
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
+  script.async = true;
+  document.head.appendChild(script);
+
+  gtag('js', new Date());
+  gtag('config','G-CLHM36E1P0');
+}
+
+window.addEventListener('scroll', loadGA, { once:true });
+window.addEventListener('click', loadGA, { once:true });
+window.addEventListener('mousemove', loadGA, { once:true });
+</script>
+
+</head>
+<body>
+<div class="faq-container">
+<h1>Lo-Fi Music Usage & License FAQ</h1>
+<!-- ===== Quick Summary（超重要） ===== -->
+<!-- ===== Quick Summary（最重要） ===== -->
+
+<section style="max-width:900px;margin:30px auto;padding:24px;background:#111;border-radius:12px;">
+
+  <h2 style="color:#fff;">⚡ Quick Guide / クイックガイド</h2>
+
+  <p style="color:#ccc;">
+    Not sure which license you need? Start here.<br>
+    どのライセンスが必要か分からない方は、まずここをご確認ください。
+  </p>
+
+  <!-- ❗リスク提示（追加） -->
+  <p style="margin-top:10px;color:#ff6b6b;font-weight:bold;">
+    ⚠ Using music without proper licensing may lead to copyright claims, demonetization, or content removal.<br>
+    ⚠ 無許可の音楽使用は、著作権クレーム・収益停止・動画削除のリスクがあります
+  </p>
+
+  <!-- テーブル -->
+  <table style="width:100%;border-collapse:collapse;margin-top:20px;">
+    <tr style="background:#222;color:#fff;">
+      <th style="padding:10px;border:1px solid #333;">Usage</th>
+      <th style="padding:10px;border:1px solid #333;">Required License</th>
+    </tr>
+
+    <tr>
+      <td style="padding:10px;border:1px solid #333;">
+        Personal use (non-monetized, no editing)<br>
+        個人利用（非収益・編集なし）
+      </td>
+      <td style="padding:10px;border:1px solid #333;">
+        ✅ Free / Personal Use
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:10px;border:1px solid #333;">
+        YouTube / SNS monetized content<br>
+        収益化・SNS投稿
+      </td>
+      <td style="padding:10px;border:1px solid #333;">
+        💼 Commercial License
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:10px;border:1px solid #333;">
+        Ads / Client work / Brand videos<br>
+        広告・クライアント制作・ブランド動画
+      </td>
+      <td style="padding:10px;border:1px solid #333;">
+        🎬 Sync License
+      </td>
+    </tr>
+
+  </table>
+
+  <!-- 結論強調 -->
+  <p style="margin-top:15px;color:#ffcc00;font-weight:bold;">
+    ✔ Monetization, editing, or branding requires a commercial or sync license.<br>
+    ✔ 収益化・編集・広告用途は、商用またはSyncライセンスが必要です
+  </p>
+
+  <!-- CTA強化 -->
+  <p style="margin-top:20px;">
+    👉 <a href="licensing.html" style="color:#ffcc00;font-weight:bold;">
+      View License Plans / ライセンス詳細を見る
+    </a>
+  </p>
+
+</section>
+
+
+<!-- ===== 権利説明（強化） ===== -->
+
+<section style="max-width:900px;margin:0 auto 40px auto;line-height:1.8;">
+
+  <p><strong>All music is 100% owned and controlled by Nanashino-chan.</strong></p>
+
+  <p>
+    This includes all rights related to composition, production, and distribution.<br>
+    Unauthorized use outside these guidelines may result in copyright enforcement.
+  </p>
+
+  <hr style="margin:20px 0;">
+
+  <p><strong>日本語：</strong></p>
+  <p>
+    本サイトの楽曲はすべてNanashino-chanが100％の権利を保有しています。<br>
+    著作権・制作・配信に関するすべての権利を含みます。<br>
+    ガイドライン外での使用は著作権対応の対象となる場合があります。
+  </p>
+
+</section>
+
+
+<!-- ===== FAQ構造（SEO強化） ===== -->
+
+<section style="max-width:900px;margin:0 auto;">
+
+  <h2>FAQ – Licensing & Usage</h2>
+
+  <ul style="list-style:none;padding-left:0;line-height:2;">
+    <li>Q1. What does “free to use” actually mean?</li>
+    <li>Q2. Can I use this music on YouTube?</li>
+    <li>Q3. Can I monetize my videos?</li>
+    <li>Q4. Do I need a license for collaborations or brand deals?</li>
+    <li>Q5. Can I use this music for ads or commercial campaigns?</li>
+  </ul>
+
+</section>
+
