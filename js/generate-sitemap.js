@@ -43,16 +43,40 @@ if (fs.existsSync(pagesDir)) {
 
   files.forEach(file => {
 
-    if (
-      file.endsWith(".html") &&
-      file !== "index.html"
-    ) {
+    // htmlのみ対象
+    if (!file.endsWith(".html")) return;
 
-      pages.push([
-        `/pages/${file}`,
-        "0.75",
-        "monthly"
-      ]);
+    // URL生成
+    let url = `/pages/${file}`;
+
+    // index.html → /pages/
+    if (file === "index.html") {
+      url = "/pages/";
+    }
+
+    // 重複防止
+    const alreadyExists = pages.some(p => p[0] === url);
+
+    if (!alreadyExists) {
+
+      // pages/index.html は少し強め
+      if (file === "index.html") {
+
+        pages.push([
+          url,
+          "0.85",
+          "weekly"
+        ]);
+
+      } else {
+
+        pages.push([
+          url,
+          "0.75",
+          "monthly"
+        ]);
+
+      }
 
     }
 
@@ -61,11 +85,10 @@ if (fs.existsSync(pagesDir)) {
 }
 
 /* =========================
-   sitemap.xml 生成
+   XML生成
 ========================= */
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 ${pages.map(p => `
@@ -74,13 +97,12 @@ ${pages.map(p => `
     <lastmod>${today}</lastmod>
     <changefreq>${p[2]}</changefreq>
     <priority>${p[1]}</priority>
-  </url>
-`).join("")}
+  </url>`).join("\n")}
 
 </urlset>`;
 
 /* =========================
-   出力
+   sitemap.xml 出力
 ========================= */
 
 const outputPath = path.join(__dirname, "..", "sitemap.xml");
