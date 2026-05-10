@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
 
   <url>
     <loc>https://nanashino-chan.github.io/site</loc>
@@ -11,16 +8,12 @@
     <priority>1.0</priority>
   </url>
 
-
-
   <url>
     <loc>https://nanashino-chan.github.io/site/today.html</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.97</priority>
   </url>
-
-
 
   <url>
     <loc>https://nanashino-chan.github.io/site/licensing.html</loc>
@@ -29,16 +22,12 @@
     <priority>0.96</priority>
   </url>
 
-
-
   <url>
     <loc>https://nanashino-chan.github.io/site/contact.html</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
   </url>
-
-
 
   <url>
     <loc>https://nanashino-chan.github.io/site/focus.html</loc>
@@ -47,16 +36,12 @@
     <priority>0.95</priority>
   </url>
 
-
-
   <url>
     <loc>https://nanashino-chan.github.io/site/study.html</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.94</priority>
   </url>
-
-
 
   <url>
     <loc>https://nanashino-chan.github.io/site/sleep.html</loc>
@@ -65,8 +50,6 @@
     <priority>0.94</priority>
   </url>
 
-
-
   <url>
     <loc>https://nanashino-chan.github.io/site/relax.html</loc>
     <lastmod>2026-05-10</lastmod>
@@ -74,7 +57,33 @@
     <priority>0.94</priority>
   </url>
 
+  <url>
+    <loc>https://nanashino-chan.github.io/site/tokyo.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.93</priority>
+  </url>
 
+  <url>
+    <loc>https://nanashino-chan.github.io/site/cafe.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.93</priority>
+  </url>
+
+  <url>
+    <loc>https://nanashino-chan.github.io/site/jazzhop.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.93</priority>
+  </url>
+
+  <url>
+    <loc>https://nanashino-chan.github.io/site/synth.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.93</priority>
+  </url>
 
   <url>
     <loc>https://nanashino-chan.github.io/site/music.html</loc>
@@ -83,7 +92,19 @@
     <priority>0.86</priority>
   </url>
 
+  <url>
+    <loc>https://nanashino-chan.github.io/site/about.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
 
+  <url>
+    <loc>https://nanashino-chan.github.io/site/works.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
 
   <url>
     <loc>https://nanashino-chan.github.io/site/faq.html</loc>
@@ -92,249 +113,25 @@
     <priority>0.8</priority>
   </url>
 
-
-
   <url>
-    <loc>https://nanashino-chan.github.io/site/pages/background-music-for-ads.html</loc>
+    <loc>https://nanashino-chan.github.io/site/commerce.html</loc>
     <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
-
-
   <url>
-    <loc>https://nanashino-chan.github.io/site/pages/background-music-for-videos.html</loc>
+    <loc>https://nanashino-chan.github.io/site/terms.html</loc>
     <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
-
-
   <url>
-    <loc>https://nanashino-chan.github.io/site/pages/copyright-free-lofi-music.html</loc>
+    <loc>https://nanashino-chan.github.io/site/policy.html</loc>
     <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/how-to-avoid-copyright-claims.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/how-to-avoid-copyright-strike-youtube.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/how-to-use-music-without-copyright.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-Instagram.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-ads.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-coding.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-facebook.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-focus.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-relaxation.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-sleep.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-studying.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-tiktok.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-youtube.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/music-for-business-videos.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/music-for-commercial-videos.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/music-for-content-creators.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/music-for-instagram-reels.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/music-for-tiktok-videos.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/music-for-youtube-videos.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/music-license-social-media-guide.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/music-licensing-for-youtube-ads.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/music-licensing-vs-sync-licensing.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/royalty-free-lofi-music.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
-
-  <url>
-    <loc>https://nanashino-chan.github.io/site/pages/why-instagram-mutes-videos.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-
 
 </urlset>
