@@ -1,63 +1,54 @@
 const fs = require("fs");
-const path = require("path");
 
 const baseUrl = "https://nanashino-chan.github.io/site";
 
 const today = new Date().toISOString().split("T")[0];
 
-const pages = [];
+// 手動管理ページ
+const pages = [
+  ["", "1.0", "weekly"],
+  ["/today.html", "0.97", "weekly"],
+  ["/licensing.html", "0.96", "weekly"],
+  ["/contact.html", "0.92", "weekly"],
+  ["/focus.html", "0.95", "weekly"],
+  ["/study.html", "0.94", "weekly"],
+  ["/sleep.html", "0.94", "weekly"],
+  ["/relax.html", "0.94", "weekly"],
+  ["/music.html", "0.86", "monthly"],
+  ["/faq.html", "0.8", "monthly"]
+];
 
-function scanDir(dir) {
+// pagesフォルダを自動追加
+const pageFiles = fs.readdirSync("./pages");
 
-  const files = fs.readdirSync(dir);
+pageFiles.forEach(file => {
 
-  files.forEach(file => {
+  if (
+    file.endsWith(".html") &&
+    file !== "index.html"
+  ) {
 
-    const fullPath = path.join(dir, file);
+    pages.push([
+      `/pages/${file}`,
+      "0.75",
+      "monthly"
+    ]);
 
-    const stat = fs.statSync(fullPath);
+  }
 
-    // 除外フォルダ
-    if (
-      fullPath.includes("node_modules") ||
-      fullPath.includes(".git") ||
-      fullPath.includes(".github")
-    ) {
-      return;
-    }
-
-    if (stat.isDirectory()) {
-
-      scanDir(fullPath);
-
-    } else if (file.endsWith(".html")) {
-
-      let urlPath = fullPath
-        .replace(/\\/g, "/")
-        .replace(/^\./, "")
-        .replace(/index\.html$/, "");
-
-      urlPath = urlPath.replace(/\.html$/, ".html");
-
-      pages.push(urlPath);
-    }
-
-  });
-}
-
-scanDir(".");
+});
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-${pages.map(page => `
+${pages.map(p => `
 
   <url>
-    <loc>${baseUrl}${page}</loc>
+    <loc>${baseUrl}${p[0]}</loc>
     <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>${p[2]}</changefreq>
+    <priority>${p[1]}</priority>
   </url>
 
 `).join("")}
