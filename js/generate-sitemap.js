@@ -7,24 +7,37 @@ const today = new Date().toISOString().split("T")[0];
 
 const pages = [];
 
-function scanDir(dir, basePath = "") {
+function scanDir(dir) {
 
   const files = fs.readdirSync(dir);
 
   files.forEach(file => {
 
     const fullPath = path.join(dir, file);
+
     const stat = fs.statSync(fullPath);
+
+    // 除外フォルダ
+    if (
+      fullPath.includes("node_modules") ||
+      fullPath.includes(".git") ||
+      fullPath.includes(".github")
+    ) {
+      return;
+    }
 
     if (stat.isDirectory()) {
 
-      scanDir(fullPath, `${basePath}/${file}`);
+      scanDir(fullPath);
 
     } else if (file.endsWith(".html")) {
 
-      let urlPath = `${basePath}/${file}`;
+      let urlPath = fullPath
+        .replace(/\\/g, "/")
+        .replace(/^\./, "")
+        .replace(/index\.html$/, "");
 
-      urlPath = urlPath.replace("/index.html", "/");
+      urlPath = urlPath.replace(/\.html$/, ".html");
 
       pages.push(urlPath);
     }
