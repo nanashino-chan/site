@@ -1,41 +1,56 @@
 const fs = require("fs");
+const path = require("path");
 
 const baseUrl = "https://nanashino-chan.github.io/site";
 
-const pages = [
-  ["", "1.0", "weekly"],
-  ["/today.html", "0.97", "weekly"],
-  ["/licensing.html", "0.96", "weekly"],
-  ["/contact.html", "0.92", "weekly"],
-  ["/focus.html", "0.95", "weekly"],
-  ["/study.html", "0.94", "weekly"],
-  ["/sleep.html", "0.94", "weekly"],
-  ["/relax.html", "0.94", "weekly"],
-  ["/tokyo.html", "0.93", "weekly"],
-  ["/cafe.html", "0.93", "weekly"],
-  ["/jazzhop.html", "0.93", "weekly"],
-  ["/synth.html", "0.93", "weekly"],
-  ["/music.html", "0.86", "monthly"],
-  ["/about.html", "0.75", "monthly"],
-  ["/works.html", "0.75", "monthly"],
-  ["/faq.html", "0.8", "monthly"],
-  ["/commerce.html", "0.6", "yearly"],
-  ["/terms.html", "0.4", "yearly"],
-  ["/policy.html", "0.4", "yearly"]
-];
-
 const today = new Date().toISOString().split("T")[0];
 
+const pages = [];
+
+function scanDir(dir, basePath = "") {
+
+  const files = fs.readdirSync(dir);
+
+  files.forEach(file => {
+
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+
+    if (stat.isDirectory()) {
+
+      scanDir(fullPath, `${basePath}/${file}`);
+
+    } else if (file.endsWith(".html")) {
+
+      let urlPath = `${basePath}/${file}`;
+
+      urlPath = urlPath.replace("/index.html", "/");
+
+      pages.push(urlPath);
+    }
+
+  });
+}
+
+scanDir(".");
+
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(p => `
+
+${pages.map(page => `
+
   <url>
-    <loc>${baseUrl}${p[0]}</loc>
+    <loc>${baseUrl}${page}</loc>
     <lastmod>${today}</lastmod>
-    <changefreq>${p[2]}</changefreq>
-    <priority>${p[1]}</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+
 `).join("")}
+
 </urlset>`;
 
 fs.writeFileSync("sitemap.xml", xml);
+
+console.log("Sitemap generated!");
