@@ -157,6 +157,13 @@
   </url>
 
   <url>
+    <loc>https://nanashino-chan.github.io/site/pages/background-music-for-streams.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
     <loc>https://nanashino-chan.github.io/site/pages/background-music-for-videos.html</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -381,6 +388,13 @@
   </url>
 
   <url>
+    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-creative-work.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
     <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-deep-focus.html</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -416,6 +430,20 @@
   </url>
 
   <url>
+    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-programming.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-reading.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
     <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-relaxation.html</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -438,6 +466,13 @@
 
   <url>
     <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-tiktok.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://nanashino-chan.github.io/site/pages/lofi-music-for-working.html</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
