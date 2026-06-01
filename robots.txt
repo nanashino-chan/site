@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nanashino-chan.github.io/site/sitemap.xml
