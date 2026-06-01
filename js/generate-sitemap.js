@@ -1,82 +1,79 @@
 const fs = require("fs");
 const path = require("path");
 
-const baseUrl = "https://nanashino-chan.github.io/site";
+/* =====================================
+   Site Settings
+===================================== */
 
-const today = new Date().toISOString().split("T")[0];
+const BASE_URL = "https://nanashino-chan.github.io/site";
+const TODAY = new Date().toISOString().split("T")[0];
 
-/* =========================
-   手動管理ページ
-========================= */
+/* =====================================
+   Core Pages
+===================================== */
 
 const pages = [
-  ["", "1.0", "weekly"],
+  ["/", "1.0", "weekly"],
+
   ["/today.html", "0.97", "weekly"],
   ["/licensing.html", "0.96", "weekly"],
-  ["/contact.html", "0.92", "monthly"],
+
   ["/focus.html", "0.95", "weekly"],
   ["/study.html", "0.94", "weekly"],
   ["/sleep.html", "0.94", "weekly"],
   ["/relax.html", "0.94", "weekly"],
+
   ["/tokyo.html", "0.93", "weekly"],
   ["/cafe.html", "0.93", "weekly"],
   ["/jazzhop.html", "0.93", "weekly"],
   ["/synth.html", "0.93", "weekly"],
+
+  ["/contact.html", "0.92", "monthly"],
+
   ["/music.html", "0.86", "monthly"],
+
+  ["/faq.html", "0.80", "monthly"],
+
   ["/about.html", "0.75", "monthly"],
   ["/works.html", "0.75", "monthly"],
-  ["/faq.html", "0.80", "monthly"],
+
   ["/commerce.html", "0.60", "yearly"],
+
   ["/terms.html", "0.40", "yearly"],
   ["/policy.html", "0.40", "yearly"]
 ];
 
-/* =========================
-   /pages/ を自動追加
-========================= */
+/* =====================================
+   Auto Add /pages/*.html
+===================================== */
 
 const pagesDir = path.join(__dirname, "..", "pages");
 
 if (fs.existsSync(pagesDir)) {
 
-  const files = fs.readdirSync(pagesDir);
+  const files = fs
+    .readdirSync(pagesDir)
+    .filter(file => file.endsWith(".html"))
+    .sort();
 
   files.forEach(file => {
 
-    // htmlのみ対象
-    if (!file.endsWith(".html")) return;
+    const url =
+      file === "index.html"
+        ? "/pages/"
+        : `/pages/${file}`;
 
-    // URL生成
-    let url = `/pages/${file}`;
+    const exists = pages.some(
+      page => page[0] === url
+    );
 
-    // index.html → /pages/
-    if (file === "index.html") {
-      url = "/pages/";
-    }
+    if (!exists) {
 
-    // 重複防止
-    const alreadyExists = pages.some(p => p[0] === url);
-
-    if (!alreadyExists) {
-
-      // pages/index.html は少し強め
-      if (file === "index.html") {
-
-        pages.push([
-          url,
-          "0.85",
-          "weekly"
-        ]);
-
-      } else {
-
-        pages.push([
-          url,
-          "0.75",
-          "monthly"
-        ]);
-
-      }
+      pages.push([
+        url,
+        file === "index.html" ? "0.85" : "0.75",
+        file === "index.html" ? "weekly" : "monthly"
+      ]);
 
     }
 
@@ -84,29 +81,75 @@ if (fs.existsSync(pagesDir)) {
 
 }
 
-/* =========================
-   XML生成
-========================= */
+/* =====================================
+   Remove Duplicates
+===================================== */
+
+const uniquePages = [
+  ...new Map(
+    pages.map(page => [page[0], page])
+  ).values()
+];
+
+/* =====================================
+   XML Escape
+===================================== */
+
+function escapeXml(str) {
+
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+
+}
+
+/* =====================================
+   Generate XML
+===================================== */
+
+const urls = uniquePages
+  .map(([url, priority, changefreq]) => {
+
+    const fullUrl =
+      url === "/"
+        ? `${BASE_URL}/`
+        : `${BASE_URL}${url}`;
+
+    return `
+  <url>
+    <loc>${escapeXml(fullUrl)}</loc>
+    <lastmod>${TODAY}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+
+  })
+  .join("\n");
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-${pages.map(p => `
-  <url>
-    <loc>${baseUrl}${p[0]}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>${p[2]}</changefreq>
-    <priority>${p[1]}</priority>
-  </url>`).join("\n")}
-
+${urls}
 </urlset>`;
 
-/* =========================
-   sitemap.xml 出力
-========================= */
+/* =====================================
+   Write File
+===================================== */
 
-const outputPath = path.join(__dirname, "..", "sitemap.xml");
+const outputPath = path.join(
+  __dirname,
+  "..",
+  "sitemap.xml"
+);
 
-fs.writeFileSync(outputPath, xml);
+fs.writeFileSync(
+  outputPath,
+  xml,
+  "utf8"
+);
 
-console.log("✅ sitemap.xml generated successfully!");
+console.log(
+  `✅ sitemap.xml generated (${uniquePages.length} URLs)`
+);
