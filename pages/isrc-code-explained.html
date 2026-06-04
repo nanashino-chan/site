@@ -6,18 +6,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>
-ISRC Code Explained | Why Track Identification Matters for Music Licensing
-</title>
+<title>ISRC Code Explained | Music Identification, Copyright & Licensing Guide</title>
 
-<meta name="description" content="Learn what ISRC codes are, how music identification works, and why ISRC registration helps creators, brands, and commercial licensing workflows. ISRCコードの仕組みと音楽ライセンス解説。">
+<meta name="description" content="What is an ISRC code? Learn how ISRC identifies sound recordings, how it differs from copyright, Content ID and Shazam, and why it matters for music licensing.">
 
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://nanashino-chan.github.io/site/pages/isrc-code-explained.html">
 
-<!-- Security -->
+<link rel="stylesheet" href="/site/style.css">
+
+<!-- Favicon -->
+<link rel="icon" href="/site/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="ISRC Code Explained | Music Identification & Licensing">
+<meta property="og:description" content="Understand ISRC codes, track identification, Shazam, Content ID, copyright, and commercial music licensing workflows.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nanashino-chan.github.io/site/pages/isrc-code-explained.html">
+<meta property="og:image" content="https://nanashino-chan.github.io/site/images/infographics/music-licensing-process.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ISRC Code Explained">
+<meta name="twitter:description" content="Learn how ISRC codes identify recordings and support music distribution, metadata, rights management, and licensing workflows.">
+<meta name="twitter:image" content="https://nanashino-chan.github.io/site/images/infographics/music-licensing-process.webp">
+
+<!-- CSP -->
 <meta http-equiv="Content-Security-Policy" content="
 default-src 'self';
 script-src 'self' 'unsafe-inline'
@@ -27,63 +45,160 @@ https://www.gstatic.com
 https://s.ytimg.com
 https://www.googletagmanager.com
 https://www.google-analytics.com;
+
 frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+
 connect-src 'self'
 https://www.youtube.com
 https://i.ytimg.com
 https://www.google-analytics.com
 https://www.googletagmanager.com;
+
 img-src 'self'
 https://i.ytimg.com
 https://img.youtube.com
 data:;
+
 style-src 'self' 'unsafe-inline';
+
 font-src 'self';
+
 object-src 'none';
 base-uri 'self';
 ">
 
 <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
 
-<!-- Favicon -->
-<link rel="icon" href="/site/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nanashino-chan.github.io/site/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Articles",
+      "item": "https://nanashino-chan.github.io/site/pages/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ISRC Code Explained",
+      "item": "https://nanashino-chan.github.io/site/pages/isrc-code-explained.html"
+    }
+  ]
+}
+</script>
 
-<!-- OGP -->
-<meta property="og:title" content="ISRC Code Explained | Music Identification & Licensing">
-<meta property="og:description" content="Understand ISRC codes, track identification, copyright systems, and commercial music licensing.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://nanashino-chan.github.io/site/pages/isrc-code-explained.html">
-<meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+<!-- Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ISRC Code Explained",
+  "description": "A practical guide explaining what an ISRC code is, how it identifies sound recordings, how it differs from copyright and Content ID, and why it matters for music licensing, Shazam, distribution, and creator workflows.",
+  "image": "https://nanashino-chan.github.io/site/images/infographics/music-licensing-process.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "Nanashino-chan"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nanashino-chan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nanashino-chan.github.io/site/nanashino-artist.jpg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nanashino-chan.github.io/site/pages/isrc-code-explained.html"
+  }
+}
+</script>
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ISRC Code Explained">
-<meta name="twitter:description" content="Learn how ISRC codes help identify music tracks and support licensing workflows.">
-<meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an ISRC code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An ISRC code, or International Standard Recording Code, is a unique identifier assigned to a specific sound recording or music video recording."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does an ISRC code mean music is copyright free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. An ISRC code identifies a recording. It does not mean the music is copyright free, royalty free, or automatically cleared for video, social media, or commercial use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ISRC the same as Content ID?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ISRC identifies a specific recording, while YouTube Content ID is an automated system that detects matching copyrighted audio or video on YouTube."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can ISRC help with music licensing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ISRC can help identify the exact recording being licensed, which reduces confusion between different versions, edits, remixes, releases, and recordings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Shazam identify songs through ISRC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shazam identifies music through audio recognition and metadata systems. ISRC can support recording identification in distribution metadata, but Shazam recognition does not replace a music license."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do creators still need permission if a song has an ISRC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ISRC helps identify the recording, but creators still need the correct license or permission to use that music in videos, ads, social media posts, client work, or commercial projects."
+      }
+    }
+  ]
+}
+</script>
 
-<link rel="stylesheet" href="/site/style.css">
-
-<!-- GA -->
+<!-- GA delayed loading -->
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-
 let gaLoaded=false;
 
 function loadGA(){
- if(gaLoaded) return;
- gaLoaded=true;
+  if(gaLoaded) return;
+  gaLoaded=true;
 
- const script=document.createElement('script');
- script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
- script.async=true;
- document.head.appendChild(script);
+  const script=document.createElement('script');
+  script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
+  script.async=true;
+  document.head.appendChild(script);
 
- gtag('js', new Date());
- gtag('config','G-CLHM36E1P0');
+  gtag('js', new Date());
+  gtag('config','G-CLHM36E1P0');
 }
 
 window.addEventListener('scroll',loadGA,{once:true});
@@ -91,164 +206,449 @@ window.addEventListener('click',loadGA,{once:true});
 window.addEventListener('mousemove',loadGA,{once:true});
 </script>
 
-<script src="/site/js/videos.js"></script>
-<script src="/site/js/app.js" defer></script>
-
 </head>
 
 <body>
 
 <main style="max-width:900px;margin:0 auto;padding:40px 20px;">
 
+<section style="margin-bottom:30px;font-size:14px;color:#aaa;">
+<a href="/site/">Home</a> →
+<a href="/site/pages/">Articles</a> →
+ISRC Code Explained
+</section>
+
 <!-- HERO -->
-<section style="text-align:center;margin-bottom:60px;">
 
-  <h1>ISRC Code Explained</h1>
+<section style="margin-bottom:80px;">
 
-  <img src="/site/yourbrand.webp"
-       alt="ISRC code and music identification explanation"
-       style="width:100%;max-width:850px;border-radius:16px;margin-top:25px;">
+<h1 style="font-size:48px;line-height:1.2;margin-bottom:20px;">
+ISRC Code Explained
+</h1>
 
-  <p style="font-size:18px;margin-top:25px;line-height:1.8;">
-    Learn how ISRC codes help identify music tracks, support licensing workflows,
-    and improve copyright management for creators and commercial projects.<br>
-    ISRCコードと音楽識別システムの解説
-  </p>
+<p style="font-size:20px;line-height:1.8;color:#ccc;">
+An ISRC code, or International Standard Recording Code, is a unique identifier assigned to a specific sound recording or music video recording.
+</p>
 
-  <a href="/site/licensing.html"
-     style="display:inline-block;margin-top:30px;background:#ffcc00;color:#000;padding:16px 30px;border-radius:10px;font-weight:bold;text-decoration:none;font-size:18px;">
-    ▶ Commercial Licensing Options
-  </a>
+<p style="font-size:20px;line-height:1.8;color:#ccc;">
+ISRC helps platforms, distributors, music databases, rights systems, labels, artists, and licensing workflows identify the exact recording being used. It is useful because different versions of the same song can have different recordings.
+</p>
 
-</section>
+<p style="font-size:20px;line-height:1.8;color:#ccc;">
+However, an ISRC is not a music license. It identifies a recording, but creators still need the correct permission to use that recording in YouTube videos, social media posts, ads, client work, or commercial projects.
+</p>
 
-
-<!-- WHAT IS ISRC -->
-<section style="margin-bottom:60px;">
-
-  <h2>What Is an ISRC Code?</h2>
-
-  <p>
-    ISRC stands for International Standard Recording Code.
-    It is a unique identification code assigned to individual sound recordings.
-  </p>
-
-  <p>
-    Each released track receives its own ISRC code,
-    allowing platforms, distributors, and rights systems
-    to identify recordings separately.
-  </p>
-
-  <p>
-    ISRCコードは音源ごとに付与される識別コードであり、
-    配信プラットフォーム・著作権管理・収益管理などに利用されます。
-  </p>
+<div style="margin-top:40px;">
+<a href="/site/licensing.html"
+style="display:inline-block;background:#ffcc00;color:#000;padding:18px 32px;border-radius:10px;font-weight:bold;text-decoration:none;font-size:18px;">
+► View Licensing Options
+</a>
+</div>
 
 </section>
 
+<!-- IMAGE -->
 
-<!-- WHY IT MATTERS -->
-<section style="margin-bottom:60px;">
+<section style="margin-bottom:80px;">
 
-  <h2>Why ISRC Codes Matter</h2>
-
-  <ul style="list-style:none;padding-left:0;line-height:2;">
-
-    <li>✔ Helps identify original recordings</li>
-
-    <li>✔ Supports music distribution systems</li>
-
-    <li>✔ Used by streaming platforms</li>
-
-    <li>✔ Improves licensing management</li>
-
-    <li>✔ Reduces confusion between tracks</li>
-
-    <li>✔ Helps rights holders manage releases</li>
-
-  </ul>
-
-  <p>
-    Commercial music licensing becomes easier when tracks are clearly identifiable.
-    This is especially important for creators, agencies, advertisers, and brand campaigns.
-  </p>
+<img
+src="/site/images/infographics/music-licensing-process.webp"
+alt="Music licensing process with ISRC code, track identification, rights management, and creator licensing workflow"
+loading="lazy"
+width="1600"
+height="900"
+style="width:100%;height:auto;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.28);">
 
 </section>
 
+<!-- DIRECT ANSWER -->
 
-<!-- CONTENT ID -->
-<section style="margin-bottom:60px;">
+<section style="margin-bottom:80px;">
 
-  <h2>ISRC Codes & Content Identification</h2>
+<h2>What Is an ISRC Code?</h2>
 
-  <p>
-    Platforms and music distribution systems often rely on metadata
-    and identification systems to recognize recordings.
-  </p>
+<p style="line-height:1.9;">
+ISRC stands for International Standard Recording Code. It is a unique code used to identify a specific sound recording or music video recording.
+</p>
 
-  <p>
-    While ISRC codes alone do not automatically prevent claims,
-    properly managed track identification can help reduce confusion
-    around ownership and licensing workflows.
-  </p>
+<p style="line-height:1.9;">
+The key word is recording. ISRC identifies the recorded audio or music video, not the general song idea, melody, lyrics, or composition by itself.
+</p>
 
-  <div style="
-    margin-top:25px;
-    padding:24px;
-    border-radius:14px;
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(255,255,255,0.08);
-  ">
+<div style="background:#111;padding:28px;border-radius:16px;margin-top:30px;">
 
-    <h3 style="margin-top:0;">
-      Why Creators Care About This
-    </h3>
+<ul style="list-style:none;padding-left:0;line-height:2;">
+<li>• ISRC identifies a specific sound recording</li>
+<li>• It can also identify music video recordings</li>
+<li>• It is used in music distribution and metadata workflows</li>
+<li>• It helps distinguish different versions of the same song</li>
+<li>• It is not the same as copyright ownership</li>
+<li>• It is not the same as YouTube Content ID</li>
+<li>• It does not replace a music license</li>
+</ul>
 
-    <ul style="list-style:none;padding-left:0;line-height:2;">
-
-      <li>🎬 Safer commercial workflows</li>
-
-      <li>📺 Better organization for YouTube usage</li>
-
-      <li>📱 Easier platform identification</li>
-
-      <li>🎧 Clearer ownership tracking</li>
-
-      <li>🏢 Improved agency & client management</li>
-
-    </ul>
-
-  </div>
+</div>
 
 </section>
 
+<!-- EXAMPLE -->
+
+<section style="margin-bottom:80px;">
+
+<h2>Why ISRC Matters: One Song Can Have Many Recordings</h2>
+
+<p style="line-height:1.9;">
+A single song can exist in multiple recorded versions. Each version may need its own identification because each recording can be distributed, monetized, licensed, and tracked separately.
+</p>
+
+<div style="overflow-x:auto;margin-top:28px;">
+
+<table style="width:100%;border-collapse:collapse;min-width:760px;">
+<thead>
+<tr>
+<th style="text-align:center;padding:14px;border-bottom:1px solid #333;">Version</th>
+<th style="text-align:center;padding:14px;border-bottom:1px solid #333;">Same Song?</th>
+<th style="text-align:center;padding:14px;border-bottom:1px solid #333;">Same ISRC?</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td style="padding:14px;border-bottom:1px solid #222;">Original studio recording</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Yes</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Has its own ISRC</td>
+</tr>
+
+<tr>
+<td style="padding:14px;border-bottom:1px solid #222;">Acoustic version</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Same composition, different recording</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Usually separate ISRC</td>
+</tr>
+
+<tr>
+<td style="padding:14px;border-bottom:1px solid #222;">Remix</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Related composition, different recording</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Usually separate ISRC</td>
+</tr>
+
+<tr>
+<td style="padding:14px;border-bottom:1px solid #222;">Live recording</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Same song, different performance</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Usually separate ISRC</td>
+</tr>
+
+<tr>
+<td style="padding:14px;border-bottom:1px solid #222;">Remastered recording</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Same base recording, revised version</td>
+<td style="padding:14px;border-bottom:1px solid #222;">May require separate identification depending on release treatment</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+</section>
+
+<!-- ISRC FORMAT -->
+
+<section style="margin-bottom:80px;">
+
+<h2>What Does an ISRC Code Look Like?</h2>
+
+<p style="line-height:1.9;">
+An ISRC is commonly displayed as a 12-character code. It may be shown with hyphens for readability, but the underlying code is typically treated as a continuous identifier.
+</p>
+
+<div style="
+  margin-top:28px;
+  padding:28px;
+  border-radius:16px;
+  background:#111;
+  text-align:center;
+">
+
+<p style="font-size:28px;font-weight:bold;letter-spacing:1px;margin-bottom:14px;">
+ISRC JP-ABC-24-12345
+</p>
+
+<p style="font-size:14px;color:#aaa;line-height:1.8;">
+Example format only. Do not use this as a real ISRC.
+</p>
+
+</div>
+
+<p style="line-height:1.9;margin-top:24px;">
+The code helps identify a specific recording in music distribution, reporting, licensing, metadata, and royalty-related workflows.
+</p>
+
+</section>
+
+<!-- NOT COPYRIGHT FREE -->
+
+<section style="margin-bottom:80px;">
+
+<h2>Does an ISRC Code Mean the Music Is Copyright-Free?</h2>
+
+<p style="line-height:1.9;">
+No. An ISRC code does not mean the music is copyright-free, royalty-free, public domain, or automatically safe for YouTube, TikTok, Instagram, ads, or commercial projects.
+</p>
+
+<p style="line-height:1.9;">
+ISRC identifies the recording. Copyright and licensing determine whether you are allowed to use that recording in your content.
+</p>
+
+<div style="background:#111;padding:28px;border-radius:16px;margin-top:30px;">
+
+<ul style="list-style:none;padding-left:0;line-height:2;">
+<li>• ISRC identifies the recording</li>
+<li>• Copyright protects rights in music and recordings</li>
+<li>• A license gives permission for a specific use</li>
+<li>• Content ID may detect copyrighted material on YouTube</li>
+<li>• Shazam may identify a song from audio recognition</li>
+<li>• None of these automatically replace permission</li>
+</ul>
+
+</div>
+
+</section>
+
+<!-- COMPARISON -->
+
+<section style="margin-bottom:80px;">
+
+<h2>ISRC vs Copyright vs Content ID vs Shazam</h2>
+
+<p style="line-height:1.9;">
+These systems are related to music identification and rights, but they are not the same. Confusing them can lead to licensing mistakes.
+</p>
+
+<div style="overflow-x:auto;margin-top:28px;">
+
+<table style="width:100%;border-collapse:collapse;min-width:760px;">
+<thead>
+<tr>
+<th style="text-align:center;padding:14px;border-bottom:1px solid #333;">Term</th>
+<th style="text-align:center;padding:14px;border-bottom:1px solid #333;">What It Does</th>
+<th style="text-align:center;padding:14px;border-bottom:1px solid #333;">What It Does Not Do</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td style="padding:14px;border-bottom:1px solid #222;">ISRC</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Identifies a specific recording</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Does not grant usage permission</td>
+</tr>
+
+<tr>
+<td style="padding:14px;border-bottom:1px solid #222;">Copyright</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Protects rights in music, recordings, and creative works</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Does not automatically tell you whether you can use a track</td>
+</tr>
+
+<tr>
+<td style="padding:14px;border-bottom:1px solid #222;">Music license</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Gives permission for defined usage</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Does not necessarily mean claim-free in every platform system</td>
+</tr>
+
+<tr>
+<td style="padding:14px;border-bottom:1px solid #222;">YouTube Content ID</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Detects matching copyrighted audio or video on YouTube</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Does not replace licensing or ownership records</td>
+</tr>
+
+<tr>
+<td style="padding:14px;border-bottom:1px solid #222;">Shazam</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Identifies songs through audio recognition and metadata</td>
+<td style="padding:14px;border-bottom:1px solid #222;">Does not prove you have permission to use the music</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+</section>
+
+<!-- SHAZAM -->
+
+<section style="margin-bottom:80px;">
+
+<h2>ISRC and Shazam: Why Music Identification Matters</h2>
+
+<p style="line-height:1.9;">
+When a song can be identified through music recognition services such as Shazam, it often means the recording is part of a recognizable music metadata ecosystem. This can help listeners, creators, and clients identify the artist and track.
+</p>
+
+<p style="line-height:1.9;">
+However, Shazam recognition is not the same as a license. It can help identify the song, but creators still need permission for YouTube, social media, ads, or commercial use.
+</p>
+
+<div style="background:#111;padding:28px;border-radius:16px;margin-top:30px;">
+
+<ul style="list-style:none;padding-left:0;line-height:2;">
+<li>• Shazam can help identify a track from audio</li>
+<li>• ISRC helps identify a specific recording in metadata systems</li>
+<li>• Recognizable music is often easier to verify than anonymous audio</li>
+<li>• Identification does not equal permission</li>
+<li>• For commercial use, a license is still required</li>
+</ul>
+
+</div>
+
+<p style="line-height:1.9;margin-top:24px;">
+For a deeper page on this topic, see:
+<a href="/site/pages/isrc-and-shazam-music-identification.html">ISRC and Shazam Music Identification</a>.
+</p>
+
+</section>
+
+<!-- WHY CREATORS CARE -->
+
+<section style="margin-bottom:80px;">
+
+<h2>Why Creators, Brands, and Agencies Should Care About ISRC</h2>
+
+<p style="line-height:1.9;">
+Creators often focus on whether a track sounds good. Businesses and agencies also need to know whether the exact recording can be identified, licensed, documented, and used safely in a professional workflow.
+</p>
+
+<ul style="list-style:none;padding-left:0;line-height:2;">
+<li>• YouTube creators may need proof of track identity</li>
+<li>• Agencies need cleaner documentation for client work</li>
+<li>• Brands need to avoid anonymous or unclear audio sources</li>
+<li>• Commercial campaigns need track-level licensing clarity</li>
+<li>• Music supervisors and editors need to know which recording is used</li>
+<li>• AI video creators need identifiable music for business workflows</li>
+<li>• Licensing workflows become easier when recordings are clearly identified</li>
+</ul>
+
+</section>
+
+<!-- LICENSING -->
+
+<section style="margin-bottom:80px;">
+
+<h2>How ISRC Supports Music Licensing Workflows</h2>
+
+<p style="line-height:1.9;">
+Commercial music licensing works best when the exact recording is clear. The ISRC can help identify the track being licensed so there is less confusion between similar titles, edits, remixes, instrumentals, and alternate versions.
+</p>
+
+<p style="line-height:1.9;">
+A good music license should still include practical usage terms. ISRC can support identification, but it does not replace the license itself.
+</p>
+
+<div style="background:#111;padding:28px;border-radius:16px;margin-top:30px;">
+
+<ul style="list-style:none;padding-left:0;line-height:2;">
+<li>• Track title</li>
+<li>• Artist name</li>
+<li>• Recording identifier or ISRC when available</li>
+<li>• License holder</li>
+<li>• Permitted platforms</li>
+<li>• Commercial-use permission</li>
+<li>• Monetization permission</li>
+<li>• Duration and territory</li>
+<li>• Attribution requirements</li>
+<li>• Content ID or claim policy</li>
+</ul>
+
+</div>
+
+</section>
+
+<!-- YOUTUBE -->
+
+<section style="margin-bottom:80px;">
+
+<h2>ISRC and YouTube: What Creators Should Understand</h2>
+
+<p style="line-height:1.9;">
+ISRC is not the same as YouTube Content ID. ISRC identifies a recording. Content ID is YouTube’s automated system for detecting matching copyrighted audio or video.
+</p>
+
+<p style="line-height:1.9;">
+A track can have an ISRC and still trigger Content ID. A licensed track can also trigger a claim if the rights holder uses Content ID and the claim needs to be released or verified.
+</p>
+
+<ul style="list-style:none;padding-left:0;line-height:2;">
+<li>• ISRC helps identify the recording</li>
+<li>• Content ID helps detect matching content on YouTube</li>
+<li>• A license explains what you are allowed to do</li>
+<li>• Proof of license may be needed if a claim appears</li>
+<li>• Monetized videos and sponsored content need stronger documentation</li>
+</ul>
+
+<p style="line-height:1.9;">
+For more detail, see:
+<a href="/site/pages/youtube-content-id-guide.html">YouTube Content ID Guide</a>.
+</p>
+
+</section>
 
 <!-- NANASHINO -->
-<section style="margin-bottom:60px;">
 
-  <h2>How Nanashino-chan Uses Track Identification</h2>
+<section style="margin-bottom:80px;">
 
-  <p>
-    Distributed tracks are individually identified and managed
-    through professional music distribution workflows.
-  </p>
+<h2>How Nanashino-chan Uses Track Identification</h2>
 
-  <p>
-    Original music ownership and controlled licensing
-    help simplify usage for creators and commercial clients.
-  </p>
+<p style="line-height:1.9;">
+Nanashino-chan’s officially distributed music is managed as identifiable recordings. Many releases are associated with formal recording metadata such as ISRC-based identification.
+</p>
 
-  <p>
-    配信楽曲は個別に管理されており、
-    商用ライセンスやクリエイター利用に対応しやすい構成になっています。
-  </p>
+<p style="line-height:1.9;">
+This helps support clearer licensing conversations for creators, brands, agencies, AI video creators, YouTube channels, social media marketers, and commercial projects.
+</p>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:30px;">
+
+<div style="background:#111;padding:24px;border-radius:14px;">
+<h3>Identifiable Recordings</h3>
+<p>Officially distributed tracks are easier to identify than anonymous or reposted audio files.</p>
+</div>
+
+<div style="background:#111;padding:24px;border-radius:14px;">
+<h3>Commercial Licensing</h3>
+<p>Music can be licensed for creators, brands, campaigns, social content, and client projects.</p>
+</div>
+
+<div style="background:#111;padding:24px;border-radius:14px;">
+<h3>Creator Workflows</h3>
+<p>Useful for YouTube videos, Shorts, ads, podcasts, AI videos, and brand storytelling.</p>
+</div>
+
+</div>
 
 </section>
 
+<!-- PREVIEW -->
 
-<!-- OFFICIAL COPYRIGHT -->
+<section style="margin-bottom:80px;text-align:center;">
+
+<h2>Preview Music Before You License</h2>
+
+<p style="line-height:1.9;max-width:760px;margin:0 auto 24px;">
+Explore original lo-fi music designed for YouTube creators, social media videos, AI content, brand campaigns, podcasts, client work, and commercial projects.
+</p>
+
+<div id="generator-container"></div>
+
+<p style="margin-top:18px;font-size:14px;color:#aaa;">
+Browse the catalog →
+<a href="/site/music.html" style="text-decoration:underline;">All Tracks</a>
+</p>
+
+</section>
+
+<!-- OFFICIAL REFERENCES -->
+
 <section style="
-  margin-bottom:60px;
+  margin-bottom:80px;
   padding:24px;
   border:1px solid rgba(255,204,0,0.25);
   border-left:4px solid #ffcc00;
@@ -258,31 +658,90 @@ window.addEventListener('mousemove',loadGA,{once:true});
     rgba(255,204,0,0.03)
   );
   border-radius:14px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.18);
 ">
 
-  <h2 style="margin-top:0;color:#ffcc00;">
-    Official Platform Copyright Policies
+  <h2 style="
+    margin-top:0;
+    margin-bottom:14px;
+    color:#ffcc00;
+    font-size:26px;
+    letter-spacing:0.4px;
+  ">
+    Official ISRC and Platform Copyright Resources
   </h2>
 
-  <p style="line-height:1.9;">
-    Major platforms officially state that purchasing or streaming music
-    does not automatically grant upload, monetization,
-    or commercial usage rights.
+  <p style="
+    line-height:1.9;
+    font-size:15px;
+    color:rgba(255,255,255,0.92);
+    margin-bottom:20px;
+  ">
+    ISRC helps identify recordings, but music usage rights still depend on
+    copyright, licensing terms, platform rules, and the specific project.
+    Always review current official guidance before using music commercially.
   </p>
 
   <ul style="
     list-style:none;
     padding-left:0;
+    margin:0;
     line-height:2.2;
-    margin-top:20px;
   ">
+
+    <li>
+      <a href="https://isrc.ifpi.org/"
+         target="_blank"
+         rel="noopener noreferrer"
+         style="
+           color:#ffcc00;
+           font-weight:700;
+           text-decoration:none;
+           transition:0.25s;
+         ">
+         International ISRC Agency
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.isrc.ne.jp/"
+         target="_blank"
+         rel="noopener noreferrer"
+         style="
+           color:#ffcc00;
+           font-weight:700;
+           text-decoration:none;
+           transition:0.25s;
+         ">
+         Japan ISRC Registration Authority
+      </a>
+    </li>
 
     <li>
       <a href="https://support.google.com/youtube/answer/2797449"
          target="_blank"
          rel="noopener noreferrer"
-         style="color:#ffcc00;font-weight:bold;text-decoration:none;">
+         style="
+           color:#ffcc00;
+           font-weight:700;
+           text-decoration:none;
+           transition:0.25s;
+         ">
          YouTube Copyright Guidelines
+      </a>
+    </li>
+
+    <li>
+      <a href="https://support.google.com/youtube/answer/2797370"
+         target="_blank"
+         rel="noopener noreferrer"
+         style="
+           color:#ffcc00;
+           font-weight:700;
+           text-decoration:none;
+           transition:0.25s;
+         ">
+         YouTube Content ID Overview
       </a>
     </li>
 
@@ -290,148 +749,164 @@ window.addEventListener('mousemove',loadGA,{once:true});
       <a href="https://help.instagram.com/1992178671014348/"
          target="_blank"
          rel="noopener noreferrer"
-         style="color:#ffcc00;font-weight:bold;text-decoration:none;">
+         style="
+           color:#ffcc00;
+           font-weight:700;
+           text-decoration:none;
+           transition:0.25s;
+         ">
          Instagram Copyright Information
       </a>
     </li>
 
     <li>
-      <a href="https://www.facebook.com/help/1020633957973118/"
+      <a href="https://www.tiktok.com/legal/page/global/copyright-policy/"
          target="_blank"
          rel="noopener noreferrer"
-         style="color:#ffcc00;font-weight:bold;text-decoration:none;">
-         Facebook Copyright Policy
-      </a>
-    </li>
-
-    <li>
-      <a href="https://www.tiktok.com/legal/page/global/copyright-policy/ja"
-         target="_blank"
-         rel="noopener noreferrer"
-         style="color:#ffcc00;font-weight:bold;text-decoration:none;">
+         style="
+           color:#ffcc00;
+           font-weight:700;
+           text-decoration:none;
+           transition:0.25s;
+         ">
          TikTok Copyright Policy
       </a>
     </li>
 
   </ul>
 
-</section>
-
-
-<!-- MUSIC PREVIEW -->
-<section style="text-align:center;margin-bottom:60px;">
-
-  <h2>Preview the Music</h2>
-
-  <p>
-    Explore original lo-fi music for creators, brands, and commercial projects.
+  <p style="
+    font-size:13px;
+    opacity:0.72;
+    margin-top:22px;
+    line-height:1.8;
+  ">
+    This page is an educational guide and not legal advice.
+    ISRC identification does not replace a valid music license.
   </p>
 
-  <div id="generator-container"></div>
-
-  <a href="/site/music.html"
-     style="display:inline-block;margin-top:20px;text-decoration:underline;">
-    ▶ Browse All Tracks
-  </a>
-
 </section>
-
 
 <!-- FAQ -->
-<section style="margin-bottom:60px;">
 
-  <h2>Frequently Asked Questions</h2>
+<section style="margin-bottom:80px;">
 
-  <div style="margin-bottom:30px;">
+<h2>FAQ</h2>
 
-    <h3>Does an ISRC code mean music is copyright free?</h3>
+<h3>What is an ISRC code?</h3>
+<p style="line-height:1.9;">
+An ISRC code, or International Standard Recording Code, is a unique identifier assigned to a specific sound recording or music video recording.
+</p>
 
-    <p>
-      No. ISRC codes identify recordings,
-      but copyright ownership and licensing still apply.
-    </p>
+<h3>Does an ISRC code mean music is copyright free?</h3>
+<p style="line-height:1.9;">
+No. An ISRC code identifies a recording. It does not mean the music is copyright free, royalty free, or automatically cleared for YouTube, social media, ads, or commercial use.
+</p>
 
-  </div>
+<h3>Is ISRC the same as Content ID?</h3>
+<p style="line-height:1.9;">
+No. ISRC identifies a specific recording, while YouTube Content ID is an automated system that detects matching copyrighted audio or video on YouTube.
+</p>
 
-  <div style="margin-bottom:30px;">
+<h3>Can ISRC help with music licensing?</h3>
+<p style="line-height:1.9;">
+Yes. ISRC can help identify the exact recording being licensed, which reduces confusion between different versions, edits, remixes, releases, and recordings.
+</p>
 
-    <h3>Can ISRC codes help commercial licensing?</h3>
+<h3>Can Shazam identify songs through ISRC?</h3>
+<p style="line-height:1.9;">
+Shazam identifies music through audio recognition and metadata systems. ISRC can support recording identification in distribution metadata, but Shazam recognition does not replace a music license.
+</p>
 
-    <p>
-      Yes. Unique track identification helps organize licensing,
-      distribution, and ownership management.
-    </p>
-
-  </div>
-
-  <div>
-
-    <h3>Do creators still need permission to use music?</h3>
-
-    <p>
-      In many cases, yes.
-      Commercial uploads and monetized content may still require licensing permission.
-    </p>
-
-  </div>
+<h3>Do creators still need permission if a song has an ISRC?</h3>
+<p style="line-height:1.9;">
+Yes. ISRC helps identify the recording, but creators still need the correct license or permission to use that music in videos, ads, social media posts, client work, or commercial projects.
+</p>
 
 </section>
 
+<!-- CTA -->
 
-<!-- INTERNAL LINKS -->
-<section style="text-align:center;margin-bottom:40px;font-size:14px;">
+<section style="margin-bottom:80px;text-align:center;">
 
-  <p>Related Pages:</p>
+<h2>Need Identifiable Music with Clear Licensing?</h2>
 
-  <p>
+<p style="font-size:18px;line-height:1.9;">
+Use original lo-fi music with commercial licensing options for YouTube creators, social media videos, AI content, brand campaigns, ads, podcasts, and client projects.
+</p>
 
-    <a href="/site/pages/music-rights-explained.html">
-      Music Rights Explained
-    </a>
+<div style="margin-top:30px;">
+<a href="/site/licensing.html"
+style="display:inline-block;background:#ffcc00;color:#000;padding:18px 32px;border-radius:10px;font-weight:bold;text-decoration:none;font-size:18px;">
+► View Licensing Options
+</a>
+</div>
 
-    |
+</section>
 
-    <a href="/site/pages/how-music-copyright-works.html">
-      How Music Copyright Works
-    </a>
+<!-- RELATED -->
 
-    |
+<section style="margin-bottom:80px;">
 
-    <a href="/site/pages/what-is-content-id.html">
-      What Is Content ID
-    </a>
+<h2>Related Pages</h2>
 
-    |
+<ul style="list-style:none;padding-left:0;line-height:2.2;">
 
-    <a href="/site/pages/music-licensing-guide-for-creators.html">
-      Music Licensing Guide
-    </a>
+<li><a href="/site/pages/isrc-and-shazam-music-identification.html">ISRC and Shazam Music Identification</a></li>
 
-  </p>
+<li><a href="/site/pages/music-rights-explained.html">Music Rights Explained</a></li>
+
+<li><a href="/site/pages/how-music-copyright-works.html">How Music Copyright Works</a></li>
+
+<li><a href="/site/pages/what-is-content-id.html">What Does Content ID Mean?</a></li>
+
+<li><a href="/site/pages/youtube-content-id-guide.html">YouTube Content ID Guide</a></li>
+
+<li><a href="/site/pages/how-to-check-if-music-is-copyright-safe.html">How to Check If Music Is Copyright-Safe</a></li>
+
+<li><a href="/site/pages/can-you-use-famous-songs-on-social-media.html">Can You Use Famous Songs on Social Media?</a></li>
+
+<li><a href="/site/pages/commercial-use-music-guide.html">Commercial Use Music Guide</a></li>
+
+<li><a href="/site/pages/music-license-for-youtube-creators.html">Music License for YouTube Creators</a></li>
+
+<li><a href="/site/licensing.html">Licensing Page</a></li>
+
+</ul>
 
 </section>
 
 </main>
 
 <footer class="site-footer">
+<div class="footer-container">
 
-  <p>© 2026 Nanashino-chan</p>
+<div class="footer-brand">
+<h2>Nanashino-chan</h2>
+<p>© Nanashino-chan</p>
+</div>
 
-  <p>
+<div class="footer-links-sub">
+<a href="/site/index.html">Home</a> |
+<a href="/site/today.html">Listen Now</a> |
+<a href="/site/licensing.html">License Music</a> |
+<a href="/site/faq.html">FAQ</a> |
+<a href="/site/terms.html">Terms</a> |
+<a href="/site/commerce.html">Legal</a> |
+<a href="/site/policy.html">Policy</a> |
+<a href="/site/contact.html">Contact</a>
+</div>
 
-    <a href="/site/index.html">Home</a> |
+<p class="footer-note">
+🎧 No interruptions. Just pure lo-fi music.<br>
+<a href="/site/licensing.html">▶ License this music</a>
+</p>
 
-    <a href="/site/music.html">Music</a> |
-
-    <a href="/site/licensing.html">License</a> |
-
-    <a href="/site/contact.html">Contact</a> |
-
-    <a href="/site/pages/">All Pages</a>
-
-  </p>
-
+</div>
 </footer>
+
+<script src="/site/js/videos.js"></script>
+<script src="/site/js/app.js" defer></script>
 
 </body>
 </html>
