@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO -->
-<title>Lo-Fi Music Player ☕ Listen Now | Focus, Study & Relax</title>
+<title>Lo-Fi Music Player ☕ Listen Now | Focus, Study, Relax & Licensed Music</title>
 
-<meta name="description" content="Start listening to lo-fi music instantly. Perfect for focus, study, and relaxation. 作業・勉強・リラックスに最適なLo-Fi音楽を今すぐ再生。">
+<meta name="description" content="Start listening to Nanashino-chan lo-fi music instantly. Perfect for focus, study, relaxation, work sessions, YouTube videos, creator content, and licensed commercial use. 作業・勉強・リラックスに最適なLo-Fi音楽を今すぐ再生。">
 
 <meta name="robots" content="index, follow">
 
@@ -23,7 +24,7 @@
 
 <!-- OGP -->
 <meta property="og:title" content="Lo-Fi Music ☕ Start Listening Now">
-<meta property="og:description" content="Tap to start listening instantly. Perfect for focus, study, and relaxation.">
+<meta property="og:description" content="Instant lo-fi music for focus, study, work, relaxation, and creator-friendly licensed use.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/today.html">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/today-ogp.jpg">
@@ -31,7 +32,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lo-Fi Music ☕ Start Listening Now">
-<meta name="twitter:description" content="Instant lo-fi music for focus, study, and calm moments.">
+<meta name="twitter:description" content="Instant lo-fi music for focus, study, calm moments, and creator workflows.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/today-ogp.jpg">
 
 <link rel="stylesheet" href="style.css">
@@ -58,16 +59,93 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 860px;
   margin: auto;
-  padding: 20px;
+  padding: 24px 20px 60px;
+}
+
+.hero {
+  margin: 24px auto 34px;
+}
+
+.hero-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255,204,0,0.1);
+  border: 1px solid rgba(255,204,0,0.25);
+  color: #ffcc00;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(34px, 7vw, 58px);
+  line-height: 1.12;
+  margin: 0 0 18px;
+}
+
+h2 {
+  line-height: 1.35;
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #ccc;
+  max-width: 760px;
+  margin: 0 auto 22px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 26px 0 22px;
+}
+
+.hero-actions a,
+.hero-actions button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 15px 24px;
+  border-radius: 10px;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.btn-primary {
+  background: #ffcc00;
+  color: #000;
+}
+
+.btn-secondary {
+  background: #171717;
+  color: #fff;
+  border: 1px solid #333 !important;
+}
+
+.use-note {
+  margin: 18px auto 0;
+  padding: 14px 16px;
+  max-width: 760px;
+  border-radius: 12px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .player {
   position: relative;
   width: 100%;
   max-width: 720px;
-  margin: 20px auto;
+  margin: 28px auto 20px;
   cursor: pointer;
 }
 
@@ -87,19 +165,86 @@ body {
   border-radius: 50%;
 }
 
-.listen {
-  display: none;
-  margin-top: 30px;
+.player-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 22px 0;
+}
+
+.player-controls button {
+  cursor: pointer;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.btn-play {
+  background: #ffcc00;
+  color: #000;
+}
+
+.btn-next {
+  background: #1b1b1b;
+  color: #fff;
+  border: 1px solid #333 !important;
 }
 
 .track-title {
-  font-size: 18px;
-  margin-top: 15px;
+  font-size: 19px;
+  margin-top: 18px;
+  font-weight: 800;
 }
 
 .album-title {
   font-size: 14px;
   color: #aaa;
+}
+
+.trust {
+  margin-top: 18px;
+  color: #ffcc00;
+  font-weight: 800;
+  line-height: 1.8;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+  gap: 14px;
+  margin: 34px auto;
+  max-width: 760px;
+}
+
+.benefit-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.benefit-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.benefit-card span {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.listen {
+  display: none;
+  margin-top: 34px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #111;
+  border: 1px solid rgba(255,204,0,0.18);
 }
 
 .dsp-buttons {
@@ -109,7 +254,7 @@ body {
 .dsp-buttons a {
   display: inline-block;
   width: 260px;
-  padding: 12px;
+  padding: 13px;
   margin: 8px;
   border-radius: 8px;
   text-decoration: none;
@@ -124,6 +269,101 @@ body {
 .ytmusic {
   background: #cc0000;
 }
+
+.cta-split {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 16px;
+  text-align: left;
+}
+
+.cta-box {
+  background: #181818;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.cta-box h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.cta-box p {
+  margin: 0 0 14px;
+  color: #bbb;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.cta-box a {
+  color: #ffcc00;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.info-section {
+  margin: 54px auto 0;
+  text-align: left;
+  line-height: 1.9;
+  color: #ccc;
+}
+
+.info-section h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.info-section p {
+  margin: 0 0 16px;
+}
+
+.related-links {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 14px;
+}
+
+.related-links a {
+  display: block;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px;
+  text-decoration: none;
+  color: #fff;
+  text-align: left;
+}
+
+.related-links span {
+  display: block;
+  margin-top: 6px;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+#youtubeLink {
+  display: inline-block;
+  margin-top: 24px;
+  color: #ffcc00;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-links {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #aaa;
+  line-height: 2;
+}
+
+.footer-links a {
+  color: #ccc;
+}
 </style>
 
 </head>
@@ -132,24 +372,30 @@ body {
 
 <div class="container">
 
+<section class="hero">
+
+<span class="hero-label">Nanashino-chan Lo-Fi Music Player</span>
+
 <h1>🎧 Today’s Lo-Fi Track</h1>
-<p>今日の作業・勉強・リラックスに最適な1曲</p>
 
-<h2>
-Start Your Focus Session Now.<br>
-集中できる音を今すぐ再生
-</h2>
-
-<p>
-• Boost Focus / 集中力UP<br>
-• Reduce Stress / ストレス軽減<br>
-• Perfect for Study / 作業・勉強に最適
+<p class="lead">
+Start listening to calm lo-fi music for focus, studying, work sessions, reading, relaxation, and creative time.
+<br>
+今日の作業・勉強・リラックスに最適なLo-Fi音楽を今すぐ再生できます。
 </p>
 
-<!-- ▼ 追加：軽い権利訴求（邪魔しない一行） -->
-<p class="sub-note" style="font-size:12px; opacity:0.8;">
-Safe for commercial use with license｜商用利用はライセンスで安全に使用可能
+<div class="hero-actions">
+  <button onclick="playVideo()" class="btn-primary">▶ Start Listening Now</button>
+  <a href="licensing.html" class="btn-secondary">🎬 License This Music</a>
+</div>
+
+<p class="use-note">
+Just listening? Enjoy the music here or continue on YouTube.
+<br>
+Using this track in a YouTube video, Reel, TikTok, podcast, AI video, ad, or client project? Please check the correct license before publishing.
 </p>
+
+</section>
 
 <!-- プレイヤー -->
 <div id="player-container" class="player" onclick="playVideo()">
@@ -165,25 +411,40 @@ Safe for commercial use with license｜商用利用はライセンスで安全�
 </button>
 
 <button onclick="nextTrack()" class="btn-next">
-⏭ Next
+⏭ Next Track
 </button>
 
 </div>
 
 <p class="trust">
-Used by creators｜2000+ Shazam｜Growing daily
+Used by creators｜3,000+ Shazam searches｜Growing worldwide
+<br>
+クリエイターにも使用されています｜Shazam検索3,000回以上｜世界中で少しずつ拡大中
 </p>
 
-<p>Feel the difference in 10 seconds.</p>
+<p style="color:#ccc;line-height:1.8;">
+Feel the difference in 10 seconds. Press play and start your focus session.
+<br>
+まずは10秒だけ聴いて、今日の集中時間を始めてください。
+</p>
 
-<!-- ▼ 追加：試聴直後CTA（最重要ポイント） -->
-<div class="soft-cta" style="margin:20px 0; padding:14px; border:1px solid rgba(255,255,255,0.1); border-radius:8px;">
-  <p style="margin:0 0 8px 0;">
-    💼 Want to use this music in your videos?
-  </p>
-  <a href="licensing.html" class="btn-license" style="display:inline-block; padding:10px 16px; border-radius:6px; background:#111; color:#fff; text-decoration:none;">
-    Use this music safely →
-  </a>
+<div class="benefits">
+
+<div class="benefit-card">
+<strong>Boost Focus</strong>
+<span>Soft lo-fi beats for work, study, writing, reading, and deep focus.</span>
+</div>
+
+<div class="benefit-card">
+<strong>Calm Your Mind</strong>
+<span>Warm background music for relaxing, slowing down, and reducing noise.</span>
+</div>
+
+<div class="benefit-card">
+<strong>Creator-Friendly</strong>
+<span>Commercial use is available when used under the correct license.</span>
+</div>
+
 </div>
 
 <!-- 曲情報 -->
@@ -192,7 +453,11 @@ Used by creators｜2000+ Shazam｜Growing daily
 
 <!-- CTA -->
 <section class="listen" style="display:none;">
-  <h2>🎧 Listen & Save</h2>
+  <h2>🎧 Listen, Save, or Use This Music</h2>
+
+  <p style="color:#ccc;line-height:1.8;margin-top:0;">
+    Save Nanashino-chan music on your favorite platform, or check licensing options if you want to use the music in videos, ads, podcasts, social media, AI videos, or client projects.
+  </p>
 
  <div class="dsp-buttons">
 
@@ -211,17 +476,24 @@ Used by creators｜2000+ Shazam｜Growing daily
 
 </div>
 
-<!-- ▼ 追加：分岐導線（ここがCV分岐点） -->
-<div class="cta-split" style="margin-top:18px; font-size:14px; opacity:0.9;">
-  <p style="margin:6px 0;">🎧 Just listening?</p>
-  <p style="margin:6px 0;">
-    → <a href="https://www.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank">Continue on YouTube</a>
-  </p>
+<div class="cta-split">
 
-  <p style="margin:10px 0 6px;">💼 Using this for your content?</p>
-  <p style="margin:6px 0;">
-    → <a href="licensing.html">Get License</a>
-  </p>
+  <div class="cta-box">
+    <h3>🎧 Just listening?</h3>
+    <p>
+      Continue listening on YouTube or save the artist page on Apple Music / YouTube Music.
+    </p>
+    <a href="https://www.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank">Continue on YouTube →</a>
+  </div>
+
+  <div class="cta-box">
+    <h3>🎬 Using this for content?</h3>
+    <p>
+      For YouTube, TikTok, Instagram, podcasts, ads, AI videos, business videos, or client work, check the license first.
+    </p>
+    <a href="licensing.html">View licensing options →</a>
+  </div>
+
 </div>
 
 </section>
@@ -231,10 +503,83 @@ Used by creators｜2000+ Shazam｜Growing daily
 🎧 Continue on YouTube
 </a>
 
-<!-- ▼ 追加：YouTube遷移前の最後の拾い -->
-<p style="margin-top:10px; font-size:12px; opacity:0.7;">
-Using this track for your video? → <a href="licensing.html">Get License</a>
+<p style="margin-top:10px;font-size:13px;opacity:0.78;line-height:1.8;">
+Using this track for a video, ad, podcast, AI video, or client project?
+<br>
+<a href="licensing.html" style="color:#ffcc00;font-weight:800;">Get the correct license before publishing →</a>
 </p>
+
+<section class="info-section">
+
+<h2>Lo-Fi Music for Focus, Study, Work, and Creative Time</h2>
+
+<p>
+Nanashino-chan creates calm lo-fi music for people who need a soft background sound while working, studying, reading, coding, writing, relaxing, or creating content.
+</p>
+
+<p>
+This page is designed for immediate listening. Press play, move to the next track, save the music on Apple Music or YouTube Music, or continue listening on YouTube.
+</p>
+
+<p>
+If you want to use Nanashino-chan music in your own content, the listening experience and the licensing use case are different. Videos, ads, podcasts, business content, AI videos, social media posts, and client projects may require the correct license.
+</p>
+
+<h2>For Creators, Brands, and Video Projects</h2>
+
+<p>
+Nanashino-chan music can be useful for YouTube videos, Instagram Reels, TikTok videos, YouTube Shorts, podcasts, AI-generated videos, product demos, tutorials, UGC ads, influencer campaigns, business videos, and commercial content workflows.
+</p>
+
+<p>
+Commercial use is available when the music is used within the correct license scope. A license helps clarify permitted use, but platform behavior may still depend on each platform’s copyright systems, Content ID, advertising rules, account type, region, and policy changes.
+</p>
+
+<div class="related-links">
+
+<a href="/site/licensing.html">
+<strong>Music Licensing Options</strong>
+<span>Choose a license for creator, commercial, sync, brand, or custom use.</span>
+</a>
+
+<a href="/site/works.html">
+<strong>Real Use Cases</strong>
+<span>See examples of Nanashino-chan music used in brand and creator projects.</span>
+</a>
+
+<a href="/site/pages/music-license-for-youtube-creators.html">
+<strong>Music License for YouTube Creators</strong>
+<span>Understand music license proof, YouTube use, and creator workflows.</span>
+</a>
+
+<a href="/site/pages/music-for-content-creators.html">
+<strong>Music for Content Creators</strong>
+<span>Lo-fi music for videos, social media, podcasts, streams, and creator content.</span>
+</a>
+
+<a href="/site/pages/music-for-ai-video-generators.html">
+<strong>Music for AI Video Generators</strong>
+<span>Licensed music for AI video workflows and commercial AI content.</span>
+</a>
+
+<a href="/site/faq.html">
+<strong>FAQ</strong>
+<span>Read common questions about licensing, commercial use, and safe music use.</span>
+</a>
+
+</div>
+
+</section>
+
+<div class="footer-links">
+<p>
+<a href="/site/index.html">Home</a> |
+<a href="/site/music.html">Music</a> |
+<a href="/site/licensing.html">License</a> |
+<a href="/site/pages/">All Pages</a> |
+<a href="/site/contact.html">Contact</a>
+</p>
+</div>
 
 </div>
 
