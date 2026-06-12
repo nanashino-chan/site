@@ -806,16 +806,24 @@ Start by choosing a mood. These categories are designed to help playlist curator
 <div id="generator">
 
 <div id="main-player">
-  Select a mood below to start discovering Nanashino-chan music.
+<iframe
+  width="100%"
+  height="100%"
+  src="https://www.youtube.com/embed/PnyutlzXem0?rel=0"
+  title="Nanashino-chan lo-fi music for study and focus"
+  loading="lazy"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
 </div>
 
 <div class="mood-buttons">
-<button type="button" onclick="playVideo('focus')">Study / Focus</button>
-<button type="button" onclick="playVideo('sleep')">Sleep / Calm</button>
-<button type="button" onclick="playVideo('tokyo')">Tokyo Night</button>
-<button type="button" onclick="playVideo('cafe')">Cafe / Cozy</button>
-<button type="button" onclick="playVideo('relax')">Relax / Soft Mood</button>
-<button type="button" onclick="playVideo('dream')">Dream / Ambient</button>
+<button type="button" onclick="playPlaylistCuratorVideo('focus')">Study / Focus</button>
+<button type="button" onclick="playPlaylistCuratorVideo('sleep')">Sleep / Calm</button>
+<button type="button" onclick="playPlaylistCuratorVideo('tokyo')">Tokyo Night</button>
+<button type="button" onclick="playPlaylistCuratorVideo('cafe')">Cafe / Cozy</button>
+<button type="button" onclick="playPlaylistCuratorVideo('relax')">Relax / Soft Mood</button>
+<button type="button" onclick="playPlaylistCuratorVideo('dream')">Dream / Ambient</button>
 </div>
 
 </div>
@@ -827,6 +835,56 @@ For deeper listening, use the official streaming links below and save tracks on 
 </div>
 
 </section>
+
+<script>
+function playPlaylistCuratorVideo(mood) {
+  const videos = {
+    focus: {
+      id: "PnyutlzXem0",
+      title: "Nanashino-chan lo-fi music for study and focus"
+    },
+    sleep: {
+      id: "GRGkJoQGMjs",
+      title: "Nanashino-chan calm lo-fi music for sleep and relaxation"
+    },
+    tokyo: {
+      id: "mtQwxopXhYo",
+      title: "Nanashino-chan Tokyo night lo-fi music"
+    },
+    cafe: {
+      id: "MBsx4sUtNxs",
+      title: "Nanashino-chan cafe and cozy lo-fi music"
+    },
+    relax: {
+      id: "GRGkJoQGMjs",
+      title: "Nanashino-chan relaxing soft mood lo-fi music"
+    },
+    dream: {
+      id: "mtQwxopXhYo",
+      title: "Nanashino-chan dreamy ambient lo-fi music"
+    }
+  };
+
+  const selected = videos[mood] || videos.focus;
+  const player = document.getElementById("main-player");
+
+  if (!player) {
+    return;
+  }
+
+  player.innerHTML =
+    '<iframe ' +
+    'width="100%" ' +
+    'height="100%" ' +
+    'src="https://www.youtube.com/embed/' + selected.id + '?rel=0" ' +
+    'title="' + selected.title + '" ' +
+    'loading="lazy" ' +
+    'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
+    'allowfullscreen>' +
+    '</iframe>';
+}
+</script>
+
 
 
 <!-- STREAMING LINKS -->
