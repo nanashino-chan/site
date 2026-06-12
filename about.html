@@ -1,4 +1,7 @@
+現行のabout.htmlを基に、定義の明確化・ノイズ除去・気になる表現の整理を行った全文です。
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -6,79 +9,86 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO -->
-<title>About Nanashino-chan | Tokyo Lo-Fi Artist & Licensed Music for Creators</title>
 
-<meta name="description" content="Nanashino-chan is a Tokyo-based lo-fi artist creating calm jazzhop and chill beats for focus, study, relaxation, YouTube videos, AI videos, podcasts, brands, and licensed commercial use.">
+<title>About Nanashino-chan | Lo-Fi Music Artist, Project & Licensed Music IP</title>
+
+<meta name="description" content="Nanashino-chan is a lo-fi music artist name, project name, avatar, and creative IP that includes music, character identity, visual storytelling, and licensed music for creators, brands, AI videos, and commercial use.">
 
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://nanashino-chan.github.io/site/about.html">
 
 <!-- Security -->
+
 <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
+default-src 'self';
 
-  script-src 'self'
-    'unsafe-inline'
-    https://www.youtube.com
-    https://www.google.com
-    https://www.gstatic.com
-    https://s.ytimg.com
-    https://www.googletagmanager.com
-    https://www.google-analytics.com;
+script-src 'self'
+'unsafe-inline'
+[https://www.youtube.com](https://www.youtube.com)
+[https://www.google.com](https://www.google.com)
+[https://www.gstatic.com](https://www.gstatic.com)
+[https://s.ytimg.com](https://s.ytimg.com)
+[https://www.googletagmanager.com](https://www.googletagmanager.com)
+[https://www.google-analytics.com](https://www.google-analytics.com);
 
-  frame-src
-    https://www.youtube.com
-    https://www.youtube-nocookie.com;
+frame-src
+[https://www.youtube.com](https://www.youtube.com)
+[https://www.youtube-nocookie.com](https://www.youtube-nocookie.com);
 
-  connect-src
-    'self'
-    https://i.ytimg.com
-    https://www.google-analytics.com
-    https://www.googletagmanager.com
-    https://www.youtube.com;
+connect-src
+'self'
+[https://i.ytimg.com](https://i.ytimg.com)
+[https://www.google-analytics.com](https://www.google-analytics.com)
+[https://www.googletagmanager.com](https://www.googletagmanager.com)
+[https://www.youtube.com](https://www.youtube.com);
 
-  img-src
-    'self'
-    https://i.ytimg.com
-    https://img.youtube.com
-    data:;
+img-src
+'self'
+[https://i.ytimg.com](https://i.ytimg.com)
+[https://img.youtube.com](https://img.youtube.com)
+data:;
 
-  style-src
-    'self'
-    'unsafe-inline';
+style-src
+'self'
+'unsafe-inline';
 
-  font-src 'self';
+font-src 'self';
 
-  object-src 'none';
-  base-uri 'self';
+object-src 'none';
+base-uri 'self';
 ">
 
 <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
 
 <!-- Favicon -->
+
 <link rel="icon" href="/site/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
 
 <!-- OGP -->
-<meta property="og:title" content="About Nanashino-chan | Tokyo Lo-Fi Artist">
-<meta property="og:description" content="Tokyo-based lo-fi artist creating calm jazzhop and chill beats for listeners, creators, brands, AI videos, podcasts, and licensed commercial use.">
+
+<meta property="og:title" content="About Nanashino-chan | Lo-Fi Music Artist, Project & Creative IP">
+<meta property="og:description" content="Nanashino-chan is a lo-fi music artist name, project name, avatar, and creative IP for music, characters, visual storytelling, and licensed commercial use.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/about.html">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
 <!-- Twitter -->
+
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About Nanashino-chan | Tokyo Lo-Fi Artist">
-<meta name="twitter:description" content="Lo-fi music from Tokyo for focus, study, relaxation, creator videos, brands, and licensed commercial use.">
+<meta name="twitter:title" content="About Nanashino-chan | Lo-Fi Music Artist, Project & Creative IP">
+<meta name="twitter:description" content="Lo-fi music from Tokyo for listeners, creators, brands, AI videos, visual storytelling, and licensed commercial use.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
 <!-- CSS -->
+
 <link rel="stylesheet" href="/site/style.css">
 
 <!-- Fonts -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -87,7 +97,32 @@ rel="stylesheet"
 media="print"
 onload="this.media='all'">
 
+<!-- Creative Project Schema -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Brand",
+ "name": "Nanashino-chan",
+ "url": "https://nanashino-chan.github.io/site/",
+ "logo": "https://nanashino-chan.github.io/site/favicon-512.png",
+ "image": "https://nanashino-chan.github.io/site/nanashino-artist.jpg",
+ "description": "Nanashino-chan is a lo-fi music artist name, project name, avatar, and creative IP that includes music, character identity, visual storytelling, and licensed music for creators, brands, AI videos, and commercial use.",
+ "sameAs": [
+  "https://www.youtube.com/@Nanashino-chan",
+  "https://x.com/nanashinoch",
+  "https://www.instagram.com/nanashino_chan",
+  "https://www.tiktok.com/@nanashino_chan",
+  "https://www.linkedin.com/in/nanashino-chan/",
+  "https://music.apple.com/us/artist/nanashino-chan/1795947895",
+  "https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A",
+  "https://hyperfollow.com/nanashinochan"
+ ]
+}
+</script>
+
 <!-- Person Schema -->
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -95,13 +130,14 @@ onload="this.media='all'">
  "name": "Nanashino-chan",
  "url": "https://nanashino-chan.github.io/site/",
  "image": "https://nanashino-chan.github.io/site/nanashino-artist.jpg",
- "jobTitle": "Lo-Fi Music Artist",
- "description": "Tokyo-based lo-fi music artist creating calm jazzhop and chill beats for focus, study, relaxation, creator videos, brands, podcasts, AI videos, and licensed commercial use.",
+ "jobTitle": "Lo-Fi Music Artist / Music Producer",
+ "description": "Nanashino-chan is the artist and project identity behind a lo-fi music catalog for focus, study, relaxation, creator videos, brand content, AI videos, and licensed commercial use.",
  "sameAs": [
   "https://www.youtube.com/@Nanashino-chan",
   "https://x.com/nanashinoch",
   "https://www.instagram.com/nanashino_chan",
   "https://www.tiktok.com/@nanashino_chan",
+  "https://www.linkedin.com/in/nanashino-chan/",
   "https://music.apple.com/us/artist/nanashino-chan/1795947895",
   "https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A"
  ]
@@ -109,12 +145,13 @@ onload="this.media='all'">
 </script>
 
 <!-- WebPage Schema -->
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "AboutPage",
  "name": "About Nanashino-chan",
- "description": "About Nanashino-chan, a Tokyo-based lo-fi artist creating music for focus, relaxation, content creators, brands, podcasts, AI videos, and licensed commercial use.",
+ "description": "About Nanashino-chan, a lo-fi music artist name, project name, avatar, and creative IP for music, character identity, visual storytelling, and licensed commercial use.",
  "url": "https://nanashino-chan.github.io/site/about.html",
  "primaryImageOfPage": {
   "@type": "ImageObject",
@@ -132,6 +169,7 @@ onload="this.media='all'">
 </script>
 
 <!-- FAQPage Schema -->
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -142,7 +180,15 @@ onload="this.media='all'">
    "name": "Who is Nanashino-chan?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Nanashino-chan is a Tokyo-based lo-fi music artist creating calm jazzhop and chill beats for focus, study, relaxation, content creators, brands, podcasts, AI videos, and licensed commercial use."
+    "text": "Nanashino-chan is a lo-fi music artist name, project name, avatar, and creative IP that includes music, character identity, visual storytelling, and licensed music for creators, brands, AI videos, and commercial use."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is Nanashino-chan a music artist, a project, or a character?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nanashino-chan is all of these: a music artist name, a producer and project identity, an avatar for the person behind the activity, and a creative IP that includes music, character expression, visual identity, and licensing."
    }
   },
   {
@@ -174,6 +220,7 @@ onload="this.media='all'">
 </script>
 
 <!-- GA delayed loading -->
+
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -456,9 +503,10 @@ body {
 <nav>
   <div class="nav">
     <a href="/site/index.html" class="nav-logo">Home</a>
-    <a href="/site/study.html">Study</a>
-    <a href="/site/sleep.html">Sleep</a>
-    <a href="/site/relax.html">Relax</a>
+    <a href="/site/music.html">Music</a>
+    <a href="/site/works.html">Works</a>
+    <a href="/site/licensing.html">License</a>
+    <a href="/site/contact.html">Contact</a>
     <a href="/site/today.html" class="nav-cta">▶ Listen Now</a>
   </div>
 </nav>
@@ -467,20 +515,21 @@ body {
 <main class="about-main">
 
 <!-- HERO -->
+
 <section class="about-hero">
 
-<span class="about-label">Tokyo Lo-Fi Artist / Licensed Music for Creators</span>
+<span class="about-label">Lo-Fi Music Artist / Project / Avatar / Creative IP</span>
 
 <h1 class="about-title">
 About Nanashino-chan
 </h1>
 
 <p class="about-lead">
-Nanashino-chan is a Tokyo-based lo-fi music artist creating calm jazzhop and chill beats for focus, study, relaxation, YouTube videos, podcasts, AI videos, brands, and licensed commercial use.
+Nanashino-chan is a lo-fi music artist name, project name, avatar, and creative IP that includes music, character identity, visual storytelling, and licensed music for creators, brands, AI videos, and commercial use.
 </p>
 
 <p class="about-lead">
-東京を拠点に、作業・勉強・リラックスのためのLo-Fi音楽を制作しています。リスニング用途だけでなく、動画・SNS・AI動画・ポッドキャスト・商用コンテンツ向けのライセンス音楽としても展開しています。
+Nanashino-chanは、音楽アーティスト名であり、プロジェクト名であり、本人のアバターであり、音楽・キャラクター・ライセンス展開を含む総合IPです。
 </p>
 
 <div class="about-actions">
@@ -493,18 +542,71 @@ Nanashino-chan is a Tokyo-based lo-fi music artist creating calm jazzhop and chi
 <img
 src="/site/nanashino-artist.jpg"
 class="about-image"
-alt="Nanashino-chan Tokyo lo-fi music artist portrait"
+alt="Nanashino-chan lo-fi music artist, avatar, project identity, and creative IP"
 width="1200"
 height="675"
 loading="eager">
 <figcaption class="caption">
-Nanashino-chan — Tokyo-based lo-fi artist creating calm music for listeners, creators, and brands.
+Nanashino-chan — a lo-fi music artist, project identity, avatar, and creative IP for listeners, creators, and brands.
 </figcaption>
 </figure>
 
 </section>
 
+<!-- CORE DEFINITION -->
+
+<section class="about-section">
+
+<div class="highlight-box">
+
+<h2>What Is Nanashino-chan?</h2>
+
+<p>
+Nanashino-chan is not only a music artist name. It is also the name of a creative project, a producer identity, an avatar representing the person behind the activity, and an IP that connects music, characters, visual storytelling, social media, and licensed commercial use.
+</p>
+
+<p>
+The project is built around calm lo-fi music inspired by Tokyo nights, quiet city streets, creative work, and emotional background sound for modern visual content.
+</p>
+
+<p>
+日本語：Nanashino-chanは、単なるアーティスト名ではありません。音楽を発表する名義であり、制作・配信・権利管理を行うプロジェクト名であり、活動者本人の世界観を表すアバターでもあります。
+</p>
+
+<p>
+音楽作品、キャラクター、ビジュアル表現、SNS発信、Webサイト、商用音楽ライセンスまでを一体として展開する、総合的な音楽IPとして運用しています。
+</p>
+
+</div>
+
+<div class="about-card-grid">
+
+<div class="about-card">
+<h3>Artist Name</h3>
+<p>The public music artist name used for releases, streaming platforms, music discovery, and audience-facing activity.</p>
+</div>
+
+<div class="about-card">
+<h3>Project Name</h3>
+<p>The creative and business project behind music production, distribution, rights management, website development, and licensing.</p>
+</div>
+
+<div class="about-card">
+<h3>Avatar</h3>
+<p>A character-based identity that represents the person behind the activity while expressing the world of the music visually.</p>
+</div>
+
+<div class="about-card">
+<h3>Creative IP</h3>
+<p>An integrated IP that includes music, character identity, visual storytelling, social presence, and commercial licensing.</p>
+</div>
+
+</div>
+
+</section>
+
 <!-- INTRODUCTION -->
+
 <section class="about-section">
 
 <h2>Tokyo Lo-Fi Music for Listeners, Creators, and Brands</h2>
@@ -552,11 +654,11 @@ Unlike random background playlists, Nanashino-chan focuses on original tracks wi
 </section>
 
 <!-- CREATOR ECONOMY / GOOGLE TOKYO -->
+
 <section class="about-section">
 
 <div class="highlight-box">
 
-```html
 <h2>Selected Creator Event Experience in Tokyo</h2>
 
 <p>
@@ -585,7 +687,6 @@ This does not mean the project is officially endorsed, certified, sponsored, or 
 
 </div>
 
-
 <figure style="margin:36px 0 0;">
 <img
 src="/site/google.webp"
@@ -613,7 +714,9 @@ Participated in “The Artists' Night” — a curated event for selected creato
 </figure>
 
 </section>
+
 <!-- SHAZAM PROOF -->
+
 <section class="about-section">
 
 <h2>Real Listener Demand: 3,000+ Shazam Searches</h2>
@@ -679,6 +782,7 @@ YouTube Shorts milestone video: Nanashino-chan reached 3,000+ Shazam searches.
 </section>
 
 <!-- WHY THIS MUSIC IS DIFFERENT -->
+
 <section class="about-section">
 
 <h2>Why This Lo-Fi Music Is Different</h2>
@@ -726,6 +830,7 @@ For creators, this balance matters. Background music for videos, podcasts, ads, 
 </section>
 
 <!-- LICENSED MUSIC FOR CREATORS AND BRANDS -->
+
 <section class="about-section">
 
 <div class="highlight-box">
@@ -747,7 +852,7 @@ Commercial use is available when the music is used under the correct license sco
 <div class="about-actions" style="justify-content:flex-start;margin-top:26px;">
 <a href="/site/licensing.html" class="btn-primary">▶ View Licensing Options</a>
 <a href="/site/pages/music-licensing-for-commercial-use-guide.html" class="btn-secondary">Commercial Use Guide</a>
-<a href="/site/pages/what-are-sync-rights.html" class="btn-secondary">What Are Sync Rights?</a>
+<a href="/site/pages/what-is-sync-licensing.html" class="btn-secondary">What Is Sync Licensing?</a>
 </div>
 
 </div>
@@ -755,9 +860,10 @@ Commercial use is available when the music is used under the correct license sco
 </section>
 
 <!-- REAL USE CASES -->
+
 <section class="about-section">
 
-<h2>Used in Real Brand & Creator Projects</h2>
+<h2>Used in Real Brand and Creator Projects</h2>
 
 <p>
 Nanashino-chan music has been used in real creator and brand-related projects. For businesses, agencies, creators, and editors, this matters because music is not only about sound quality. It is also about trust, documentation, licensing clarity, and practical usability.
@@ -780,6 +886,7 @@ The project is designed for modern content workflows where a single track may be
 </section>
 
 <!-- MUSIC USE CASES -->
+
 <section class="about-section">
 
 <h2>What Nanashino-chan Music Is Good For</h2>
@@ -816,7 +923,7 @@ Nanashino-chan music is designed for calm listening and practical content use. T
 </div>
 
 <div class="about-card">
-<h3>Focus & Study</h3>
+<h3>Focus and Study</h3>
 <p>Lo-fi beats for study sessions, coding, reading, writing, work sessions, deep focus, and calm routines.</p>
 </div>
 
@@ -825,6 +932,7 @@ Nanashino-chan music is designed for calm listening and practical content use. T
 </section>
 
 <!-- MUSIC STYLE -->
+
 <section class="about-section">
 
 <h2>The Sound: Calm, Urban, Warm, and Repeatable</h2>
@@ -857,6 +965,7 @@ Original lo-fi and jazzhop music inspired by Tokyo nights, quiet city streets, a
 </section>
 
 <!-- LISTEN / SAVE -->
+
 <section class="about-section">
 
 <h2>Listen to Nanashino-chan Music</h2>
@@ -881,6 +990,11 @@ You can listen to Nanashino-chan music directly on this website, YouTube, YouTub
 <span>Browse tracks, albums, and lo-fi music pages.</span>
 </a>
 
+<a href="/site/music-for-music-curators.html">
+<strong>Music for Music Curators</strong>
+<span>Explore curated listening paths for playlist editors, music curators, creators, and visual content teams.</span>
+</a>
+
 <a href="https://www.youtube.com/@Nanashino-chan" target="_blank" rel="noopener noreferrer">
 <strong>YouTube</strong>
 <span>Watch and listen on the official YouTube channel.</span>
@@ -896,6 +1010,11 @@ You can listen to Nanashino-chan music directly on this website, YouTube, YouTub
 <span>Save Nanashino-chan on Apple Music.</span>
 </a>
 
+<a href="https://hyperfollow.com/nanashinochanalbums" target="_blank" rel="noopener noreferrer">
+<strong>Full Discography</strong>
+<span>Browse Nanashino-chan albums and streaming links.</span>
+</a>
+
 <a href="/site/licensing.html">
 <strong>License Music</strong>
 <span>Use the music in videos, podcasts, AI videos, ads, or commercial projects.</span>
@@ -906,6 +1025,7 @@ You can listen to Nanashino-chan music directly on this website, YouTube, YouTub
 </section>
 
 <!-- FAQ -->
+
 <section class="about-section">
 
 <h2>FAQ</h2>
@@ -913,7 +1033,19 @@ You can listen to Nanashino-chan music directly on this website, YouTube, YouTub
 <h3>Who is Nanashino-chan?</h3>
 
 <p>
-Nanashino-chan is a Tokyo-based lo-fi music artist creating calm jazzhop and chill beats for focus, study, relaxation, content creators, brands, podcasts, AI videos, and licensed commercial use.
+Nanashino-chan is a lo-fi music artist name, project name, avatar, and creative IP that includes music, character identity, visual storytelling, and licensed music for creators, brands, AI videos, and commercial use.
+</p>
+
+<h3>Nanashino-chanは何ですか？</h3>
+
+<p>
+Nanashino-chanは、音楽アーティスト名であり、プロジェクト名であり、本人のアバターであり、音楽・キャラクター・ライセンス展開を含む総合IPです。
+</p>
+
+<h3>Is Nanashino-chan a character or a music artist?</h3>
+
+<p>
+Nanashino-chan is both. It is the artist name used for music releases and the avatar identity used to express the project’s world, visuals, and character-based creative direction.
 </p>
 
 <h3>What kind of music does Nanashino-chan make?</h3>
@@ -961,6 +1093,7 @@ You can visit the Works page to see examples of Nanashino-chan music used in rea
 </section>
 
 <!-- RELATED GUIDES -->
+
 <section class="about-section">
 
 <h2>Related Guides</h2>
@@ -979,6 +1112,16 @@ Continue with these guides if you want to understand how Nanashino-chan music ca
 <a href="/site/works.html">
 <strong>Works</strong>
 <span>See real brand and creator use cases.</span>
+</a>
+
+<a href="/site/music-for-music-curators.html">
+<strong>Music for Music Curators</strong>
+<span>Curated discovery page for playlist editors, music curators, creators, and visual content teams.</span>
+</a>
+
+<a href="/site/pages/what-is-sync-licensing.html">
+<strong>What Is Sync Licensing?</strong>
+<span>Understand sync licensing for videos, ads, brands, AI videos, and commercial projects.</span>
 </a>
 
 <a href="/site/pages/music-licensing-for-commercial-use-guide.html">
@@ -1036,6 +1179,7 @@ Continue with these guides if you want to understand how Nanashino-chan music ca
 </section>
 
 <!-- FINAL CTA -->
+
 <section class="about-section">
 
 <div class="highlight-box" style="text-align:center;">
@@ -1061,12 +1205,13 @@ Listen to Nanashino-chan music for focus, study, work, relaxation, and calm crea
 </section>
 
 <!-- FOLLOW -->
+
 <section class="about-section" style="text-align:center;">
 
 <h2>Follow Nanashino-chan</h2>
 
 <p>
-Follow Nanashino-chan on YouTube, X, Instagram, TikTok, Apple Music, and YouTube Music.
+Follow Nanashino-chan on YouTube, X, Instagram, TikTok, LinkedIn, Apple Music, and YouTube Music.
 </p>
 
 <div class="social-grid">
@@ -1087,6 +1232,10 @@ Follow Nanashino-chan on YouTube, X, Instagram, TikTok, Apple Music, and YouTube
 <img src="/site/tiktok.png" alt="TikTok profile, Nanashino-chan">
 </a>
 
+<a href="https://www.linkedin.com/in/nanashino-chan/" target="_blank" rel="noopener noreferrer">
+<img src="/site/linkedin.png" alt="LinkedIn profile, Nanashino-chan">
+</a>
+
 <a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" rel="noopener noreferrer">
 <img src="/site/apple-music.png" alt="Apple Music artist page, Nanashino-chan">
 </a>
@@ -1102,27 +1251,29 @@ Follow Nanashino-chan on YouTube, X, Instagram, TikTok, Apple Music, and YouTube
 </main>
 
 <!-- FOOTER -->
+
 <footer class="site-footer">
 
 <div class="footer-container">
 
 <div class="footer-brand">
 <h2>Nanashino-chan</h2>
-<p>Ad-free Lo-Fi Music for Focus, Relaxation, Creative Work, and Licensed Content Use</p>
+<p>Lo-Fi Music Artist, Project, Avatar, and Creative IP for Focus, Visual Storytelling, and Licensed Content Use</p>
 <p>© 2026 Nanashino-chan. All rights reserved.</p>
 </div>
 
 <div class="footer-links">
-<a href="/site/study.html">Lo-Fi music for studying and focus</a> |
-<a href="/site/relax.html">Relaxing lo-fi music for sleep and stress relief</a> |
+<a href="/site/music-for-music-curators.html">Music for curators and playlist editors</a> |
 <a href="/site/tokyo.html">Tokyo night lo-fi and Japanese chill beats</a> |
-<a href="/site/jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
+<a href="/site/works.html">Real brand and creator use cases</a> |
+<a href="/site/licensing.html">Commercial music licensing</a>
 </div>
 
 <div class="footer-links-sub">
 <a href="/site/index.html">Home</a> |
 <a href="/site/today.html">Listen Now</a> |
 <a href="/site/music.html">Music</a> |
+<a href="/site/works.html">Works</a> |
 <a href="/site/licensing.html" style="font-weight:bold;">License Music</a> |
 <a href="/site/pages/">All Pages</a> |
 <a href="/site/faq.html">FAQ</a> |
@@ -1133,7 +1284,7 @@ Follow Nanashino-chan on YouTube, X, Instagram, TikTok, Apple Music, and YouTube
 </div>
 
 <p class="footer-note">
-🎧 No interruptions. Just pure lo-fi music.<br>
+🎧 Calm lo-fi music for listening, visual storytelling, and licensed content use.<br>
 <a href="/site/licensing.html">▶ License this music</a>
 </p>
 
@@ -1143,5 +1294,3 @@ Follow Nanashino-chan on YouTube, X, Instagram, TikTok, Apple Music, and YouTube
 
 </body>
 </html>
-
-
