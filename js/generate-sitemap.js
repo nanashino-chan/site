@@ -8,17 +8,16 @@ Site Settings
 const BASE_URL = "https://nanashino-chan.github.io/site";
 
 const ROOT_DIR = path.resolve(__dirname, "..");
-const SITE_DIR = path.join(ROOT_DIR, "site");
-const SITE_PAGES_DIR = path.join(SITE_DIR, "pages");
-const OUTPUT_PATH = path.join(SITE_DIR, "sitemap.xml");
+const PAGES_DIR = path.join(ROOT_DIR, "pages");
+const OUTPUT_PATH = path.join(ROOT_DIR, "sitemap.xml");
 
 /* =====================================
 Safety Check
 ===================================== */
 
-if (!fs.existsSync(SITE_DIR)) {
-console.error("Error: site directory not found.");
-console.error("Expected path: " + SITE_DIR);
+if (!fs.existsSync(ROOT_DIR)) {
+console.error("Error: root directory not found.");
+console.error("Expected path: " + ROOT_DIR);
 process.exit(1);
 }
 
@@ -72,18 +71,18 @@ Pages
 const pages = [];
 
 /* =====================================
-Auto Add /site/*.html
+Auto Add /*.html
 ===================================== */
 
-const siteFiles = fs
-.readdirSync(SITE_DIR)
+const rootFiles = fs
+.readdirSync(ROOT_DIR)
 .filter(function(file) {
 return file.endsWith(".html");
 })
 .sort();
 
-siteFiles.forEach(function(file) {
-const filePath = path.join(SITE_DIR, file);
+rootFiles.forEach(function(file) {
+const filePath = path.join(ROOT_DIR, file);
 const url = file === "index.html" ? "/" : "/" + file;
 
 let priority = "0.70";
@@ -147,19 +146,19 @@ addPage(pages, url, priority, changefreq, filePath);
 });
 
 /* =====================================
-Auto Add /site/pages/*.html
+Auto Add /pages/*.html
 ===================================== */
 
-if (fs.existsSync(SITE_PAGES_DIR)) {
+if (fs.existsSync(PAGES_DIR)) {
 const pageFiles = fs
-.readdirSync(SITE_PAGES_DIR)
+.readdirSync(PAGES_DIR)
 .filter(function(file) {
 return file.endsWith(".html");
 })
 .sort();
 
 pageFiles.forEach(function(file) {
-const filePath = path.join(SITE_PAGES_DIR, file);
+const filePath = path.join(PAGES_DIR, file);
 const url = file === "index.html" ? "/pages/" : "/pages/" + file;
 
 ```
@@ -235,10 +234,6 @@ const xml = xmlLines.join("\n") + "\n";
 Write File
 ===================================== */
 
-fs.mkdirSync(path.dirname(OUTPUT_PATH), {
-recursive: true
-});
-
 fs.writeFileSync(
 OUTPUT_PATH,
 xml,
@@ -246,5 +241,6 @@ xml,
 );
 
 console.log("Sitemap generated successfully.");
+console.log("Root: " + ROOT_DIR);
 console.log("Output: " + OUTPUT_PATH);
 console.log("URLs: " + pages.length);
