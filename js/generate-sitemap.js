@@ -27,13 +27,16 @@ Helpers
 ===================================== */
 
 function escapeXml(str) {
+const amp = String.fromCharCode(38);
+
 return String(str)
-.replace(/&/g, "&")
-.replace(/</g, "<")
-.replace(/>/g, ">")
-.replace(/"/g, """)
-.replace(/'/g, "'");
+.replace(/&/g, amp + "amp;")
+.replace(/</g, amp + "lt;")
+.replace(/>/g, amp + "gt;")
+.replace(/"/g, amp + "quot;")
+.replace(/'/g, amp + "apos;");
 }
+
 
 function formatDate(date) {
 return date.toISOString().split("T")[0];
