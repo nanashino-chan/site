@@ -161,7 +161,7 @@ pageFiles.forEach(function(file) {
 const filePath = path.join(PAGES_DIR, file);
 const url = file === "index.html" ? "/pages/" : "/pages/" + file;
 
-```
+
 let priority = file === "index.html" ? "0.85" : "0.75";
 let changefreq = file === "index.html" ? "weekly" : "monthly";
 
@@ -192,7 +192,6 @@ if (
 }
 
 addPage(pages, url, priority, changefreq, filePath);
-```
 
 });
 }
