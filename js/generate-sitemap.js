@@ -9,7 +9,7 @@ const BASE_URL = "https://nanashino-chan.github.io/site";
 
 const ROOT_DIR = path.resolve(__dirname, "..");
 const SITE_DIR = path.join(ROOT_DIR, "site");
-const PAGES_DIR = path.join(SITE_DIR, "pages");
+const SITE_PAGES_DIR = path.join(SITE_DIR, "pages");
 const OUTPUT_PATH = path.join(SITE_DIR, "sitemap.xml");
 
 /* =====================================
@@ -17,26 +17,14 @@ Safety Check
 ===================================== */
 
 if (!fs.existsSync(SITE_DIR)) {
-console.error("❌ Error: site directory not found.");
-console.error(`Expected path: ${SITE_DIR}`);
+console.error("Error: site directory not found.");
+console.error("Expected path: " + SITE_DIR);
 process.exit(1);
 }
 
 /* =====================================
 Helpers
 ===================================== */
-
-function escapeXml(str) {
-const amp = String.fromCharCode(38);
-
-return String(str)
-.replace(/&/g, amp + "amp;")
-.replace(/</g, amp + "lt;")
-.replace(/>/g, amp + "gt;")
-.replace(/"/g, amp + "quot;")
-.replace(/'/g, amp + "apos;");
-}
-
 
 function formatDate(date) {
 return date.toISOString().split("T")[0];
@@ -51,15 +39,28 @@ return formatDate(new Date());
 }
 }
 
+function escapeXml(str) {
+const amp = String.fromCharCode(38);
+
+return String(str)
+.replace(/&/g, amp + "amp;")
+.replace(/</g, amp + "lt;")
+.replace(/>/g, amp + "gt;")
+.replace(/"/g, amp + "quot;")
+.replace(/'/g, amp + "apos;");
+}
+
 function addPage(pageList, url, priority, changefreq, filePath) {
-const exists = pageList.some(page => page.url === url);
+const exists = pageList.some(function(page) {
+return page.url === url;
+});
 
 if (!exists) {
 pageList.push({
-url,
-priority,
-changefreq,
-filePath
+url: url,
+priority: priority,
+changefreq: changefreq,
+filePath: filePath
 });
 }
 }
@@ -71,17 +72,19 @@ Pages
 const pages = [];
 
 /* =====================================
-Add /site/*.html
+Auto Add /site/*.html
 ===================================== */
 
-const rootFiles = fs
+const siteFiles = fs
 .readdirSync(SITE_DIR)
-.filter(file => file.endsWith(".html"))
+.filter(function(file) {
+return file.endsWith(".html");
+})
 .sort();
 
-rootFiles.forEach(file => {
+siteFiles.forEach(function(file) {
 const filePath = path.join(SITE_DIR, file);
-const url = file === "index.html" ? "/" : `/${file}`;
+const url = file === "index.html" ? "/" : "/" + file;
 
 let priority = "0.70";
 let changefreq = "monthly";
@@ -112,9 +115,9 @@ file === "synth.html"
 priority = "0.93";
 changefreq = "weekly";
 } else if (
-file.includes("playlist") ||
-file.includes("curator") ||
-file.includes("music-for")
+file.indexOf("playlist") !== -1 ||
+file.indexOf("curator") !== -1 ||
+file.indexOf("music-for") !== -1
 ) {
 priority = "0.86";
 changefreq = "weekly";
@@ -144,44 +147,46 @@ addPage(pages, url, priority, changefreq, filePath);
 });
 
 /* =====================================
-Add /site/pages/*.html
+Auto Add /site/pages/*.html
 ===================================== */
 
-if (fs.existsSync(PAGES_DIR)) {
+if (fs.existsSync(SITE_PAGES_DIR)) {
 const pageFiles = fs
-.readdirSync(PAGES_DIR)
-.filter(file => file.endsWith(".html"))
+.readdirSync(SITE_PAGES_DIR)
+.filter(function(file) {
+return file.endsWith(".html");
+})
 .sort();
 
-pageFiles.forEach(file => {
-const filePath = path.join(PAGES_DIR, file);
-const url = file === "index.html" ? "/pages/" : `/pages/${file}`;
+pageFiles.forEach(function(file) {
+const filePath = path.join(SITE_PAGES_DIR, file);
+const url = file === "index.html" ? "/pages/" : "/pages/" + file;
 
 ```
 let priority = file === "index.html" ? "0.85" : "0.75";
 let changefreq = file === "index.html" ? "weekly" : "monthly";
 
 if (
-  file.includes("license") ||
-  file.includes("licensing") ||
-  file.includes("commercial") ||
-  file.includes("sync") ||
-  file.includes("rights") ||
-  file.includes("copyright") ||
-  file.includes("content-id") ||
-  file.includes("youtube")
+  file.indexOf("license") !== -1 ||
+  file.indexOf("licensing") !== -1 ||
+  file.indexOf("commercial") !== -1 ||
+  file.indexOf("sync") !== -1 ||
+  file.indexOf("rights") !== -1 ||
+  file.indexOf("copyright") !== -1 ||
+  file.indexOf("content-id") !== -1 ||
+  file.indexOf("youtube") !== -1
 ) {
   priority = "0.82";
   changefreq = "weekly";
 }
 
 if (
-  file.includes("music-for") ||
-  file.includes("brand") ||
-  file.includes("business") ||
-  file.includes("agency") ||
-  file.includes("client") ||
-  file.includes("ai")
+  file.indexOf("music-for") !== -1 ||
+  file.indexOf("brand") !== -1 ||
+  file.indexOf("business") !== -1 ||
+  file.indexOf("agency") !== -1 ||
+  file.indexOf("client") !== -1 ||
+  file.indexOf("ai") !== -1
 ) {
   priority = "0.80";
   changefreq = "weekly";
@@ -197,43 +202,49 @@ addPage(pages, url, priority, changefreq, filePath);
 Sort Pages
 ===================================== */
 
-pages.sort((a, b) => a.url.localeCompare(b.url));
+pages.sort(function(a, b) {
+return a.url.localeCompare(b.url);
+});
 
 /* =====================================
 Generate XML
 ===================================== */
 
-const urls = pages
-.map(page => {
-const fullUrl =
-page.url === "/"
-? `${BASE_URL}/`
-: `${BASE_URL}${page.url}`;
+const xmlLines = [];
 
-```
+xmlLines.push('<?xml version="1.0" encoding="UTF-8"?>');
+xmlLines.push('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">');
+
+pages.forEach(function(page) {
+const fullUrl = page.url === "/" ? BASE_URL + "/" : BASE_URL + page.url;
 const lastmod = getLastMod(page.filePath);
 
-return `  <url>
-<loc>${escapeXml(fullUrl)}</loc>
-<lastmod>${lastmod}</lastmod>
-<changefreq>${escapeXml(page.changefreq)}</changefreq>
-<priority>${escapeXml(page.priority)}</priority>
-```
+xmlLines.push("  <url>");
+xmlLines.push("    <loc>" + escapeXml(fullUrl) + "</loc>");
+xmlLines.push("    <lastmod>" + escapeXml(lastmod) + "</lastmod>");
+xmlLines.push("    <changefreq>" + escapeXml(page.changefreq) + "</changefreq>");
+xmlLines.push("    <priority>" + escapeXml(page.priority) + "</priority>");
+xmlLines.push("  </url>");
+});
 
-</url>`;
-})
-.join("\n");
+xmlLines.push("</urlset>");
 
-const xml = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls} </urlset>
-`;
+const xml = xmlLines.join("\n") + "\n";
 
 /* =====================================
 Write File
 ===================================== */
 
-fs.writeFileSync(OUTPUT_PATH, xml, "utf8");
+fs.mkdirSync(path.dirname(OUTPUT_PATH), {
+recursive: true
+});
 
-console.log(`✅ Sitemap generated successfully.`);
-console.log(`📄 Output: ${OUTPUT_PATH}`);
-console.log(`🔗 URLs: ${pages.length}`);
+fs.writeFileSync(
+OUTPUT_PATH,
+xml,
+"utf8"
+);
+
+console.log("Sitemap generated successfully.");
+console.log("Output: " + OUTPUT_PATH);
+console.log("URLs: " + pages.length);
