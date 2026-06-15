@@ -7,53 +7,24 @@ Site Settings
 
 const BASE_URL = "https://nanashino-chan.github.io/site";
 
-const ROOT_DIR = path.join(__dirname, "..");
+const ROOT_DIR = path.resolve(__dirname, "..");
 const SITE_DIR = path.join(ROOT_DIR, "site");
-const SITE_PAGES_DIR = path.join(SITE_DIR, "pages");
+const PAGES_DIR = path.join(SITE_DIR, "pages");
 const OUTPUT_PATH = path.join(SITE_DIR, "sitemap.xml");
 
 /* =====================================
-Core Pages
+Safety Check
 ===================================== */
 
-const pages = [
-["/", "1.00", "weekly"],
-
-["/today.html", "0.97", "weekly"],
-["/licensing.html", "0.96", "weekly"],
-
-["/focus.html", "0.95", "weekly"],
-["/study.html", "0.94", "weekly"],
-["/sleep.html", "0.94", "weekly"],
-["/relax.html", "0.94", "weekly"],
-
-["/tokyo.html", "0.93", "weekly"],
-["/cafe.html", "0.93", "weekly"],
-["/jazzhop.html", "0.93", "weekly"],
-["/synth.html", "0.93", "weekly"],
-
-["/music-for-music-curators.html", "0.90", "weekly"],
-["/music-for-playlist-curators.html", "0.90", "weekly"],
-["/lofi-music-for-playlists.html", "0.88", "weekly"],
-
-["/contact.html", "0.92", "monthly"],
-["/music.html", "0.86", "monthly"],
-["/faq.html", "0.80", "monthly"],
-["/about.html", "0.75", "monthly"],
-["/works.html", "0.75", "monthly"],
-
-["/commerce.html", "0.60", "yearly"],
-["/terms.html", "0.40", "yearly"],
-["/policy.html", "0.40", "yearly"]
-];
+if (!fs.existsSync(SITE_DIR)) {
+console.error("❌ Error: site directory not found.");
+console.error(`Expected path: ${SITE_DIR}`);
+process.exit(1);
+}
 
 /* =====================================
 Helpers
 ===================================== */
-
-function formatDate(date) {
-return date.toISOString().split("T")[0];
-}
 
 function escapeXml(str) {
 return String(str)
@@ -62,6 +33,10 @@ return String(str)
 .replace(/>/g, ">")
 .replace(/"/g, """)
 .replace(/'/g, "'");
+}
+
+function formatDate(date) {
+return date.toISOString().split("T")[0];
 }
 
 function getLastMod(filePath) {
@@ -73,80 +48,111 @@ return formatDate(new Date());
 }
 }
 
-function addPage(url, priority, changefreq, filePath) {
-const exists = pages.some(page => page[0] === url);
+function addPage(pageList, url, priority, changefreq, filePath) {
+const exists = pageList.some(page => page.url === url);
 
 if (!exists) {
-pages.push([
+pageList.push({
 url,
 priority,
 changefreq,
 filePath
-]);
+});
 }
 }
 
 /* =====================================
-Add file paths to core pages
+Pages
 ===================================== */
 
-for (const page of pages) {
-const url = page[0];
-
-if (url === "/") {
-page[3] = path.join(SITE_DIR, "index.html");
-} else {
-page[3] = path.join(SITE_DIR, url.replace(/^//, ""));
-}
-}
+const pages = [];
 
 /* =====================================
-Auto Add /site/*.html
+Add /site/*.html
 ===================================== */
 
-if (fs.existsSync(SITE_DIR)) {
 const rootFiles = fs
 .readdirSync(SITE_DIR)
 .filter(file => file.endsWith(".html"))
 .sort();
 
 rootFiles.forEach(file => {
-const url = file === "index.html" ? "/" : `/${file}`;
 const filePath = path.join(SITE_DIR, file);
+const url = file === "index.html" ? "/" : `/${file}`;
 
-```
-let priority = "0.72";
+let priority = "0.70";
 let changefreq = "monthly";
 
-if (file.includes("playlist") || file.includes("curator")) {
-  priority = "0.82";
-  changefreq = "weekly";
+if (file === "index.html") {
+priority = "1.00";
+changefreq = "weekly";
+} else if (file === "today.html") {
+priority = "0.97";
+changefreq = "weekly";
+} else if (file === "licensing.html") {
+priority = "0.96";
+changefreq = "weekly";
+} else if (
+file === "focus.html" ||
+file === "study.html" ||
+file === "sleep.html" ||
+file === "relax.html"
+) {
+priority = "0.94";
+changefreq = "weekly";
+} else if (
+file === "tokyo.html" ||
+file === "cafe.html" ||
+file === "jazzhop.html" ||
+file === "synth.html"
+) {
+priority = "0.93";
+changefreq = "weekly";
+} else if (
+file.includes("playlist") ||
+file.includes("curator") ||
+file.includes("music-for")
+) {
+priority = "0.86";
+changefreq = "weekly";
+} else if (
+file === "music.html" ||
+file === "works.html" ||
+file === "contact.html"
+) {
+priority = "0.82";
+changefreq = "monthly";
+} else if (
+file === "faq.html" ||
+file === "about.html"
+) {
+priority = "0.75";
+changefreq = "monthly";
+} else if (
+file === "terms.html" ||
+file === "policy.html" ||
+file === "commerce.html"
+) {
+priority = "0.40";
+changefreq = "yearly";
 }
 
-if (file.includes("licensing") || file.includes("license")) {
-  priority = "0.86";
-  changefreq = "weekly";
-}
-
-addPage(url, priority, changefreq, filePath);
-```
-
+addPage(pages, url, priority, changefreq, filePath);
 });
-}
 
 /* =====================================
-Auto Add /site/pages/*.html
+Add /site/pages/*.html
 ===================================== */
 
-if (fs.existsSync(SITE_PAGES_DIR)) {
+if (fs.existsSync(PAGES_DIR)) {
 const pageFiles = fs
-.readdirSync(SITE_PAGES_DIR)
+.readdirSync(PAGES_DIR)
 .filter(file => file.endsWith(".html"))
 .sort();
 
 pageFiles.forEach(file => {
+const filePath = path.join(PAGES_DIR, file);
 const url = file === "index.html" ? "/pages/" : `/pages/${file}`;
-const filePath = path.join(SITE_PAGES_DIR, file);
 
 ```
 let priority = file === "index.html" ? "0.85" : "0.75";
@@ -156,9 +162,11 @@ if (
   file.includes("license") ||
   file.includes("licensing") ||
   file.includes("commercial") ||
+  file.includes("sync") ||
   file.includes("rights") ||
   file.includes("copyright") ||
-  file.includes("content-id")
+  file.includes("content-id") ||
+  file.includes("youtube")
 ) {
   priority = "0.82";
   changefreq = "weekly";
@@ -166,54 +174,52 @@ if (
 
 if (
   file.includes("music-for") ||
-  file.includes("youtube") ||
-  file.includes("ai-video") ||
   file.includes("brand") ||
+  file.includes("business") ||
   file.includes("agency") ||
-  file.includes("business")
+  file.includes("client") ||
+  file.includes("ai")
 ) {
   priority = "0.80";
   changefreq = "weekly";
 }
 
-addPage(url, priority, changefreq, filePath);
+addPage(pages, url, priority, changefreq, filePath);
 ```
 
 });
 }
 
 /* =====================================
-Remove Duplicates
+Sort Pages
 ===================================== */
 
-const uniquePages = [
-...new Map(
-pages.map(page => [page[0], page])
-).values()
-];
+pages.sort((a, b) => a.url.localeCompare(b.url));
 
 /* =====================================
 Generate XML
 ===================================== */
 
-const urls = uniquePages
-.sort((a, b) => a[0].localeCompare(b[0]))
-.map(([url, priority, changefreq, filePath]) => {
-const fullUrl = url === "/" ? `${BASE_URL}/` : `${BASE_URL}${url}`;
-const lastmod = getLastMod(filePath);
+const urls = pages
+.map(page => {
+const fullUrl =
+page.url === "/"
+? `${BASE_URL}/`
+: `${BASE_URL}${page.url}`;
 
 ```
-return `
+const lastmod = getLastMod(page.filePath);
+
+return `  <url>
+<loc>${escapeXml(fullUrl)}</loc>
+<lastmod>${lastmod}</lastmod>
+<changefreq>${escapeXml(page.changefreq)}</changefreq>
+<priority>${escapeXml(page.priority)}</priority>
 ```
 
-  <url>
-    <loc>${escapeXml(fullUrl)}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${escapeXml(changefreq)}</changefreq>
-    <priority>${escapeXml(priority)}</priority>
-  </url>`;
-  })
-  .join("\n");
+</url>`;
+})
+.join("\n");
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls} </urlset>
@@ -223,12 +229,8 @@ ${urls} </urlset>
 Write File
 ===================================== */
 
-fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
+fs.writeFileSync(OUTPUT_PATH, xml, "utf8");
 
-fs.writeFileSync(
-OUTPUT_PATH,
-xml,
-"utf8"
-);
-
-console.log(`✅ site/sitemap.xml generated (${uniquePages.length} URLs)`);
+console.log(`✅ Sitemap generated successfully.`);
+console.log(`📄 Output: ${OUTPUT_PATH}`);
+console.log(`🔗 URLs: ${pages.length}`);
