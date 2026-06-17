@@ -1506,11 +1506,20 @@ body.menu-open {
    LICENSE PAGE（完全隔離）
 =================================== */
 .license-page {
-  max-width: 900px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 24px;
 }
 
+.license-page > section {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.license-page #plans {
+  max-width: 1180px;
+}
 /* ===================================
 33. PLAYLIST / CURATOR CLUSTER
 For /site/lofi-music-for-playlists.html and future playlist pages
