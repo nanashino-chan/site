@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const childProcess = require("child_process");
 
 /* =====================================
 Site Settings
@@ -29,7 +30,44 @@ function formatDate(date) {
 return date.toISOString().split("T")[0];
 }
 
+function getRelativePath(filePath) {
+return path.relative(ROOT_DIR, filePath).split(path.sep).join("/");
+}
+
+function getGitLastMod(filePath) {
+try {
+const relativePath = getRelativePath(filePath);
+
+
+const output = childProcess.execFileSync(
+  "git",
+  ["log", "-1", "--format=%cs", "--", relativePath],
+  {
+    cwd: ROOT_DIR,
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "ignore"]
+  }
+).trim();
+
+if (/^\d{4}-\d{2}-\d{2}$/.test(output)) {
+  return output;
+}
+
+
+} catch (error) {
+return null;
+}
+
+return null;
+}
+
 function getLastMod(filePath) {
+const gitDate = getGitLastMod(filePath);
+
+if (gitDate) {
+return gitDate;
+}
+
 try {
 const stat = fs.statSync(filePath);
 return formatDate(stat.mtime);
@@ -47,6 +85,12 @@ return String(str)
 .replace(/>/g, amp + "gt;")
 .replace(/"/g, amp + "quot;")
 .replace(/'/g, amp + "apos;");
+}
+
+function hasAnyKeyword(file, keywords) {
+return keywords.some(function(keyword) {
+return file.indexOf(keyword) !== -1;
+});
 }
 
 function addPage(pageList, url, priority, changefreq, filePath) {
@@ -71,7 +115,7 @@ Pages
 const pages = [];
 
 /* =====================================
-Auto Add /*.html
+Auto Add Root HTML Files
 ===================================== */
 
 const rootFiles = fs
@@ -146,7 +190,7 @@ addPage(pages, url, priority, changefreq, filePath);
 });
 
 /* =====================================
-Auto Add /pages/*.html
+Auto Add Pages HTML Files
 ===================================== */
 
 if (fs.existsSync(PAGES_DIR)) {
@@ -165,33 +209,65 @@ const url = file === "index.html" ? "/pages/" : "/pages/" + file;
 let priority = file === "index.html" ? "0.85" : "0.75";
 let changefreq = file === "index.html" ? "weekly" : "monthly";
 
-if (
-  file.indexOf("license") !== -1 ||
-  file.indexOf("licensing") !== -1 ||
-  file.indexOf("commercial") !== -1 ||
-  file.indexOf("sync") !== -1 ||
-  file.indexOf("rights") !== -1 ||
-  file.indexOf("copyright") !== -1 ||
-  file.indexOf("content-id") !== -1 ||
-  file.indexOf("youtube") !== -1
-) {
+const coreSeoKeywords = [
+  "license",
+  "licensing",
+  "commercial",
+  "sync",
+  "rights",
+  "copyright",
+  "content-id",
+  "youtube",
+  "claim",
+  "claims",
+  "monetization",
+  "master-license",
+  "proof-of-music-license",
+  "music-license-documentation"
+];
+
+const businessKeywords = [
+  "music-for",
+  "brand",
+  "business",
+  "agency",
+  "agencies",
+  "client",
+  "saas",
+  "b2b",
+  "linkedin",
+  "marketing",
+  "product-demo",
+  "app-demo",
+  "corporate",
+  "ecommerce"
+];
+
+const aiKeywords = [
+  "music-for-ai",
+  "ai-video",
+  "ai-content",
+  "ai-generated",
+  "ai-marketing",
+  "ai-avatar",
+  "ai-youtube",
+  "ai-commercial",
+  "copyright-safe-music-for-ai"
+];
+
+if (hasAnyKeyword(file, coreSeoKeywords)) {
   priority = "0.82";
   changefreq = "weekly";
-}
-
-if (
-  file.indexOf("music-for") !== -1 ||
-  file.indexOf("brand") !== -1 ||
-  file.indexOf("business") !== -1 ||
-  file.indexOf("agency") !== -1 ||
-  file.indexOf("client") !== -1 ||
-  file.indexOf("ai") !== -1
+} else if (
+  hasAnyKeyword(file, businessKeywords) ||
+  hasAnyKeyword(file, aiKeywords)
 ) {
   priority = "0.80";
   changefreq = "weekly";
 }
 
 addPage(pages, url, priority, changefreq, filePath);
+
 
 });
 }
