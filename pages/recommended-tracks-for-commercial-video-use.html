@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -55,15 +54,18 @@ base-uri 'self';
 
 <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
 
+<script src="https://www.youtube.com/iframe_api"></script>
+
 <style>
 .recommended-page {
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 40px 20px 70px;
+  padding: 40px 26px 72px;
 }
 
 .recommended-breadcrumb {
-  margin-bottom: 34px;
+  max-width: 1180px;
+  margin: 0 auto 34px;
   font-size: 14px;
   color: #aaa;
 }
@@ -74,11 +76,12 @@ base-uri 'self';
 }
 
 .recommended-hero {
+  max-width: 1180px;
+  margin: 0 auto 54px;
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: 34px;
+  grid-template-columns: minmax(0, 1fr) minmax(460px, 540px);
+  gap: 38px;
   align-items: center;
-  margin-bottom: 90px;
 }
 
 .hero-copy {
@@ -92,37 +95,37 @@ base-uri 'self';
   border-radius: 999px;
   color: #ffcc00;
   font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 22px;
+  font-weight: 800;
+  margin: 0 0 22px;
   background: rgba(255,204,0,0.06);
 }
 
 .hero-copy h1 {
-  font-size: clamp(38px, 6vw, 64px);
+  font-size: clamp(38px, 6vw, 66px);
   line-height: 1.06;
   margin: 0 0 22px;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
 }
 
 .hero-lead {
   font-size: 20px;
   line-height: 1.8;
   color: #ddd;
-  margin-bottom: 18px;
+  margin: 0 0 18px;
 }
 
 .hero-sub {
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.85;
   color: #aaa;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .cta-row {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 32px;
+  margin-top: 30px;
 }
 
 .primary-btn,
@@ -131,7 +134,7 @@ base-uri 'self';
   display: inline-block;
   padding: 16px 24px;
   border-radius: 12px;
-  font-weight: 800;
+  font-weight: 900;
   text-decoration: none;
   line-height: 1.2;
 }
@@ -166,7 +169,7 @@ base-uri 'self';
 
 .player-kicker {
   color: #ffcc00;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 14px;
   margin: 0 0 14px;
 }
@@ -235,12 +238,11 @@ base-uri 'self';
 }
 
 .btn-play,
-.btn-next,
-.btn-small {
+.btn-next {
   border: 0;
   cursor: pointer;
   border-radius: 12px;
-  font-weight: 800;
+  font-weight: 900;
   padding: 14px 18px;
   line-height: 1.2;
 }
@@ -290,7 +292,8 @@ base-uri 'self';
 }
 
 .section-block {
-  margin-bottom: 90px;
+  max-width: 1180px;
+  margin: 0 auto 92px;
 }
 
 .section-block h2 {
@@ -304,32 +307,86 @@ base-uri 'self';
   color: #ccc;
   line-height: 1.9;
   font-size: 18px;
-  max-width: 860px;
+  max-width: 880px;
 }
 
-.visual-band {
+.stats-grid {
+  max-width: 1180px;
+  margin: 0 auto 92px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
   background:
-    radial-gradient(circle at top right, rgba(255,204,0,0.12), transparent 32%),
+    radial-gradient(circle at top left, rgba(255,204,0,0.12), transparent 34%),
     #101010;
-  border-radius: 24px;
-  padding: 26px;
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-.visual-band img {
-  width: 100%;
+  border: 1px solid rgba(255,204,0,0.18);
   border-radius: 18px;
-  display: block;
-  border: 1px solid rgba(255,255,255,0.08);
+  padding: 22px;
 }
 
-.visual-band p {
-  color: #ccc;
-  line-height: 1.9;
+.stat-card strong {
+  display: block;
+  color: #ffcc00;
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.stat-card span {
+  color: #cfcfcf;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.selector-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.selector-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 22px;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.selector-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,204,0,0.38);
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.12), transparent 34%),
+    #111;
+}
+
+.selector-card strong {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.selector-card span {
+  display: block;
+  color: #bbb;
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+.selector-card em {
+  display: block;
+  color: #ffcc00;
+  font-style: normal;
+  font-weight: 800;
+  margin-top: 14px;
+  font-size: 13px;
 }
 
 .quick-grid {
@@ -354,19 +411,66 @@ base-uri 'self';
 }
 
 .quick-card h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 .quick-card .genre {
   color: #ffcc00;
-  font-weight: 800;
-  margin-bottom: 14px;
+  font-weight: 900;
+  margin: 0 0 14px;
 }
 
 .quick-card p {
   color: #ccc;
   line-height: 1.8;
+}
+
+.full-infographic {
+  background:
+    radial-gradient(circle at top right, rgba(255,204,0,0.12), transparent 32%),
+    #101010;
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.full-infographic p {
+  color: #ccc;
+  line-height: 1.9;
+  max-width: 920px;
+}
+
+.full-infographic img {
+  width: 100%;
+  max-width: 1120px;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-top: 24px;
+}
+
+.full-size-link {
+  display: inline-block;
+  color: #ffcc00;
+  font-weight: 900;
+  text-decoration: none;
+  margin-top: 18px;
+}
+
+.category-header {
+  margin-top: 72px;
+  padding-top: 8px;
+}
+
+.category-header h2 {
+  margin-bottom: 12px;
+}
+
+.category-header p {
+  color: #ccc;
+  line-height: 1.9;
+  max-width: 880px;
 }
 
 .track-grid {
@@ -389,17 +493,6 @@ base-uri 'self';
   border-color: rgba(255,204,0,0.38);
 }
 
-.track-art {
-  min-height: 142px;
-  display: grid;
-  place-items: center;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(255,204,0,0.24), transparent 30%),
-    linear-gradient(135deg, #1a1a1a, #070707);
-  color: #ffcc00;
-  font-size: 44px;
-}
-
 .track-art img {
   width: 100%;
   height: 170px;
@@ -418,14 +511,29 @@ base-uri 'self';
 
 .track-body .genre {
   color: #ffcc00;
-  font-weight: 800;
+  font-weight: 900;
   margin: 0 0 12px;
 }
 
-.track-body p {
+.track-meta {
   color: #ccc;
-  line-height: 1.75;
-  margin: 0 0 14px;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+.track-meta strong {
+  color: #fff;
+}
+
+.preview-label {
+  display: inline-block;
+  color: #000;
+  background: #ffcc00;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 14px;
 }
 
 .tag-list {
@@ -475,21 +583,6 @@ base-uri 'self';
   padding: 10px 13px;
   text-decoration: none;
   font-size: 14px;
-}
-
-.category-header {
-  margin-top: 70px;
-  padding-top: 8px;
-}
-
-.category-header h2 {
-  margin-bottom: 12px;
-}
-
-.category-header p {
-  color: #ccc;
-  line-height: 1.9;
-  max-width: 880px;
 }
 
 .license-panel {
@@ -611,37 +704,73 @@ base-uri 'self';
   margin: 18px auto 0;
 }
 
-.mobile-note {
-  display: none;
+.disclaimer-section {
+  text-align: center;
 }
 
-@media (max-width: 900px) {
-  .recommended-hero,
-  .visual-band {
+.disclaimer-section p {
+  max-width: 920px;
+  margin: 0 auto 18px;
+  line-height: 1.9;
+  color: #ccc;
+}
+
+@media (max-width: 1050px) {
+  .recommended-hero {
     grid-template-columns: 1fr;
   }
 
-  .quick-grid,
+  .selector-grid,
+  .stats-grid,
+  .license-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .track-grid,
-  .license-grid,
+  .quick-grid,
   .related-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .benefits {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-player-card {
-    padding: 16px;
-  }
-
+@media (max-width: 720px) {
   .recommended-page {
     padding: 28px 16px 60px;
   }
 
-  .mobile-note {
-    display: block;
+  .recommended-hero,
+  .section-block,
+  .recommended-breadcrumb,
+  .stats-grid {
+    max-width: 100%;
+  }
+
+  .hero-player-card,
+  .full-infographic,
+  .license-panel,
+  .note-box {
+    padding: 18px;
+  }
+
+  .selector-grid,
+  .stats-grid,
+  .quick-grid,
+  .track-grid,
+  .license-grid,
+  .related-grid,
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .dark-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .player-controls button {
+    width: 100%;
   }
 }
 </style>
@@ -710,7 +839,7 @@ base-uri 'self';
     "name": "Nanashino-chan"
   },
   "url": "https://nanashino-chan.github.io/site/pages/recommended-tracks-for-commercial-video-use.html",
-  "numTracks": 17,
+  "numTracks": 18,
   "track": [
     {
       "@type": "MusicRecording",
@@ -719,16 +848,18 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Chillhop"
+      "genre": "Chillhop",
+      "url": "https://www.youtube.com/watch?v=PnyutlzXem0"
     },
     {
       "@type": "MusicRecording",
-      "name": "Sunset Glow",
+      "name": "Vaporwave Streets",
       "byArtist": {
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Smooth Jazzhop"
+      "genre": "Synthwave Lo-Fi",
+      "url": "https://www.youtube.com/watch?v=mtQwxopXhYo"
     },
     {
       "@type": "MusicRecording",
@@ -737,7 +868,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Smooth Jazzhop"
+      "genre": "Smooth Jazzhop",
+      "url": "https://www.youtube.com/watch?v=MBsx4sUtNxs"
     },
     {
       "@type": "MusicRecording",
@@ -746,7 +878,18 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Classic Electronica"
+      "genre": "Classic Electronica",
+      "url": "https://www.youtube.com/watch?v=GRGkJoQGMjs"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Sunset Glow",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Smooth Jazzhop",
+      "url": "https://www.youtube.com/watch?v=Ftm2Ev4pV-c"
     },
     {
       "@type": "MusicRecording",
@@ -755,7 +898,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Chillhop"
+      "genre": "Chillhop",
+      "url": "https://www.youtube.com/watch?v=tImJ2txmHhQ"
     },
     {
       "@type": "MusicRecording",
@@ -764,7 +908,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Lo-Fi Hip-Hop"
+      "genre": "Lo-Fi Hip-Hop",
+      "url": "https://www.youtube.com/watch?v=RL_lN7zBxE4"
     },
     {
       "@type": "MusicRecording",
@@ -773,7 +918,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Lo-Fi Jazz"
+      "genre": "Lo-Fi Jazz",
+      "url": "https://www.youtube.com/watch?v=q_9N6d5m1YE"
     },
     {
       "@type": "MusicRecording",
@@ -782,7 +928,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Down Tempo"
+      "genre": "Down Tempo",
+      "url": "https://www.youtube.com/watch?v=O8KUo0Ps0lQ"
     },
     {
       "@type": "MusicRecording",
@@ -791,7 +938,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Lo-Fi Hip-Hop"
+      "genre": "Lo-Fi Hip-Hop",
+      "url": "https://www.youtube.com/watch?v=cjHL_j6-e88"
     },
     {
       "@type": "MusicRecording",
@@ -800,7 +948,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "R&B"
+      "genre": "R&B",
+      "url": "https://www.youtube.com/watch?v=cZWDFWc3-m8"
     },
     {
       "@type": "MusicRecording",
@@ -809,7 +958,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Chillhop"
+      "genre": "Chillhop",
+      "url": "https://www.youtube.com/watch?v=_Ghx7QTYnUo"
     },
     {
       "@type": "MusicRecording",
@@ -818,7 +968,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Chillhop"
+      "genre": "Chillhop",
+      "url": "https://www.youtube.com/watch?v=-RnzftKc7AM"
     },
     {
       "@type": "MusicRecording",
@@ -827,7 +978,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Chillhop"
+      "genre": "Chillhop",
+      "url": "https://www.youtube.com/watch?v=yvAHg7sTnzs"
     },
     {
       "@type": "MusicRecording",
@@ -836,7 +988,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Smooth Jazz"
+      "genre": "Smooth Jazz",
+      "url": "https://www.youtube.com/watch?v=IeXtJlmQ-ZE"
     },
     {
       "@type": "MusicRecording",
@@ -845,7 +998,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Trip-Hop"
+      "genre": "Trip-Hop",
+      "url": "https://www.youtube.com/watch?v=tZiYlmaP9tM"
     },
     {
       "@type": "MusicRecording",
@@ -854,7 +1008,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Jazzhop"
+      "genre": "Jazzhop",
+      "url": "https://www.youtube.com/watch?v=VTqOWrEmg-w"
     },
     {
       "@type": "MusicRecording",
@@ -863,7 +1018,8 @@ base-uri 'self';
         "@type": "MusicGroup",
         "name": "Nanashino-chan"
       },
-      "genre": "Techno Pop"
+      "genre": "Techno Pop",
+      "url": "https://www.youtube.com/watch?v=noixzH_OSs4"
     }
   ]
 }
@@ -879,7 +1035,7 @@ base-uri 'self';
       "name": "What are the best Nanashino-chan tracks for commercial videos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Recommended starting tracks include Smooth Groove for premium lifestyle and café visuals, Smooth Transitions for product demos and business videos, Stillness Vibes for creative work and calm visuals, Urban Twilight for stylish night scenes, and Smooth Beginnings for short cinematic cuts."
+        "text": "Recommended starting tracks include Smooth Groove for premium lifestyle and café visuals, Smooth Transitions for product demos and business videos, Stillness Vibes for creative work and calm visuals, Urban Twilight and Vaporwave Streets for stylish night scenes, and Smooth Beginnings for short cinematic cuts."
       }
     },
     {
@@ -887,7 +1043,7 @@ base-uri 'self';
       "name": "Can I use these recommended tracks in commercial videos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, if you purchase the correct license for your intended use. Standard non-ad commercial content may require a Commercial Creator License, while paid ads, brand campaigns, sponsored videos, and client advertising projects may require a Sync License."
+        "text": "Yes, if you purchase the correct license for your intended use. Standard non-ad commercial content may require a Commercial Creator License, while paid ads, brand campaigns, sponsored videos, and client advertising projects may require a Sync License or custom license."
       }
     },
     {
@@ -903,7 +1059,7 @@ base-uri 'self';
       "name": "Which track is recommended for brand videos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Smooth Groove, Sunset Glow, Closing Time Jazz, Urban Twilight, and Smooth introduction are good starting points for brand videos, lifestyle visuals, café content, fashion content, and premium commercial video projects."
+        "text": "Smooth Groove, Sunset Glow, Closing Time Jazz, Urban Twilight, Smooth introduction, and Vaporwave Streets are good starting points for brand videos, lifestyle visuals, café content, fashion content, Tokyo night visuals, and premium commercial video projects."
       }
     },
     {
@@ -979,14 +1135,14 @@ window.addEventListener('mousemove', loadGA, { once:true });
 </p>
 
 <p class="hero-sub">
-  This page is designed as a practical starting point for creators, brands, agencies,
-  and businesses that need to choose music quickly before purchasing the right license.
+  This page is designed as a practical track-selection guide for creators, brands,
+  agencies, and businesses that need to choose music quickly before purchasing the right license.
 </p>
 
 <div class="cta-row">
   <a href="#listen" class="primary-btn">▶ Start Listening</a>
-  <a href="/site/licensing.html#pricing" class="secondary-btn">View License Options</a>
-  <a href="/site/contact.html" class="dark-btn">Ask About Track Selection</a>
+  <a href="#choose-by-video-type" class="secondary-btn">Choose by Video Type</a>
+  <a href="/site/licensing.html#pricing" class="dark-btn">View License Options</a>
 </div>
 
 
@@ -1002,8 +1158,8 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <div class="play-btn">▶</div>
 </div>
 
-<p class="track-title">Smooth Groove</p>
-<p class="album-title">Chillhop · Premium lifestyle / café / brand mood videos</p>
+<p class="track-title"></p>
+<p class="album-title"></p>
 
 <div class="player-controls">
 
@@ -1018,9 +1174,9 @@ window.addEventListener('mousemove', loadGA, { once:true });
 </div>
 
 <p class="trust">
-  Used by creators｜3,000+ Shazam searches｜Growing worldwide
+  18 playable previews｜3,000+ Shazam searches｜Direct commercial / sync licensing available
   <br>
-  クリエイターにも使用されています｜Shazam検索3,000回以上｜世界中で少しずつ拡大中
+  18曲をページ内で試聴可能｜Shazam検索3,000回以上｜商用・Syncライセンス対応
 </p>
 
 <div class="benefits">
@@ -1047,32 +1203,89 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 </section>
 
-<section class="section-block">
+<section class="stats-grid" aria-label="Trust signals">
 
-  <div class="visual-band">
-
-
-<div>
-  <h2>Start with a Sound, Not a Wall of Text</h2>
-
-  <p>
-    Commercial video music selection should be fast. Instead of reading a long list first,
-    listen to the featured tracks, compare the mood, then choose the license that matches
-    your actual use case.
-  </p>
-
-  <p>
-    日本語：このページは「説明を読むページ」ではなく、
-    まず聴いて、動画の用途に合う曲を選ぶためのページです。
-  </p>
-
-  <div class="cta-row">
-    <a href="#hero-picks" class="primary-btn">View Hero Picks</a>
-    <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="dark-btn">YouTube Music</a>
+  <div class="stat-card">
+    <strong>18</strong>
+    <span>Playable track previews available directly on this page.</span>
   </div>
-</div>
 
-<img src="/site/images/infographics/music-licensing-process.webp" alt="Music licensing process infographic for commercial video use" loading="lazy">
+  <div class="stat-card">
+    <strong>3,000+</strong>
+    <span>Shazam searches and growing discovery signals.</span>
+  </div>
+
+  <div class="stat-card">
+    <strong>5M+</strong>
+    <span>Estimated views across social media usage and creator discovery.</span>
+  </div>
+
+  <div class="stat-card">
+    <strong>Direct</strong>
+    <span>Commercial and sync licensing available from the rights holder.</span>
+  </div>
+
+</section>
+
+<section id="choose-by-video-type" class="section-block">
+
+  <h2>Choose by Video Type</h2>
+
+  <p class="section-lead">
+    If you do not know which track to choose, start with the type of video you are making.
+    Each option below opens a suggested preview in the player.
+  </p>
+
+  <div class="selector-grid">
+
+
+<button class="selector-card" onclick="selectTrack(0)">
+  <strong>Premium brand video</strong>
+  <span>Fashion, café, lifestyle, polished social visuals, and warm brand mood edits.</span>
+  <em>Try Smooth Groove</em>
+</button>
+
+<button class="selector-card" onclick="selectTrack(2)">
+  <strong>Product demo</strong>
+  <span>SaaS demos, app walkthroughs, business explainers, and clean product visuals.</span>
+  <em>Try Smooth Transitions</em>
+</button>
+
+<button class="selector-card" onclick="selectTrack(3)">
+  <strong>AI-generated video</strong>
+  <span>Creative workflows, calm technology visuals, AI-assisted videos, and quiet product scenes.</span>
+  <em>Try Stillness Vibes</em>
+</button>
+
+<button class="selector-card" onclick="selectTrack(11)">
+  <strong>Café lifestyle reel</strong>
+  <span>Cozy cafés, evening scenes, lifestyle brands, warm interiors, and relaxed social clips.</span>
+  <em>Try Closing Time Jazz</em>
+</button>
+
+<button class="selector-card" onclick="selectTrack(15)">
+  <strong>Tokyo night visual</strong>
+  <span>Urban nightlife, fashion edits, neon city scenes, tech mood videos, and stylish reels.</span>
+  <em>Try Urban Twilight</em>
+</button>
+
+<button class="selector-card" onclick="selectTrack(16)">
+  <strong>Short intro or Reel</strong>
+  <span>Quick openings, short-form videos, YouTube Shorts, TikTok cuts, and brand intros.</span>
+  <em>Try Smooth Beginnings</em>
+</button>
+
+<button class="selector-card" onclick="selectTrack(8)">
+  <strong>Calm wellness video</strong>
+  <span>Slow edits, meditation-style visuals, wellness brands, and reflective storytelling.</span>
+  <em>Try Ambient Flow</em>
+</button>
+
+<button class="selector-card" onclick="selectTrack(14)">
+  <strong>Elegant business intro</strong>
+  <span>Corporate intros, polished openings, professional reels, and smooth presentations.</span>
+  <em>Try Smooth introduction</em>
+</button>
 
 
   </div>
@@ -1084,7 +1297,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <h2>Hero Picks: Fast Starting Tracks</h2>
 
   <p class="section-lead">
-    These tracks are strong starting points for commercial video selection because they are easy to understand,
+    These tracks are strong starting points because they are easy to understand,
     flexible across different visual styles, and suitable for common creator and business use cases.
   </p>
 
@@ -1111,7 +1324,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
     Best for product demos, SaaS videos, app walkthroughs, business explainers,
     workflow videos, and clean modern edits.
   </p>
-  <button class="listen-btn" onclick="selectTrack(1)">▶ Listen</button>
+  <button class="listen-btn" onclick="selectTrack(2)">▶ Listen</button>
 </div>
 
 <div class="quick-card">
@@ -1121,11 +1334,32 @@ window.addEventListener('mousemove', loadGA, { once:true });
     Best for creative workflow videos, quiet business visuals, modern technology scenes,
     AI-assisted content, and calm product visuals.
   </p>
-  <button class="listen-btn" onclick="selectTrack(2)">▶ Listen</button>
+  <button class="listen-btn" onclick="selectTrack(3)">▶ Listen</button>
 </div>
 
 
   </div>
+
+</section>
+
+<section class="section-block full-infographic">
+
+  <h2>How Track Selection Leads to Licensing</h2>
+
+  <p>
+    Commercial video music selection should be simple: listen to the track, match it to the video mood,
+    then choose the license based on how the final video will be used.
+  </p>
+
+  <p>
+    日本語：このページは、まず音を聴いて、動画の用途に合う曲を選び、その後で商用・広告・クライアントワークなどに合うライセンスを確認するためのページです。
+  </p>
+
+  <img src="/site/images/infographics/music-licensing-process.webp" alt="Music licensing process infographic for commercial video use" loading="lazy" width="1600" height="900">
+
+  <a href="/site/images/infographics/music-licensing-process.webp" target="_blank" rel="noopener noreferrer" class="full-size-link">
+    Open full-size infographic →
+  </a>
 
 </section>
 
@@ -1134,8 +1368,8 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <h2>Recommended Tracks by Use Case</h2>
 
   <p class="section-lead">
-    Nanashino-chan has a large lo-fi catalog, but a smaller curated starting list is easier for video teams.
-    Use the cards below to choose a track by mood, video type, and commercial context.
+    Nanashino-chan has a large lo-fi catalog, but a curated starting list is easier for video teams.
+    All tracks below can be previewed directly on this page.
   </p>
 
   <div class="category-header">
@@ -1149,16 +1383,16 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <div class="track-grid">
 
 
-<article class="track-card">
+<article class="track-card" id="smooth-groove">
   <div class="track-art">
     <img src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg" alt="Smooth Groove thumbnail" loading="lazy">
   </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Smooth Groove</h3>
     <p class="genre">Chillhop</p>
-    <p>
-      Premium lifestyle, café, fashion, calm brand reels, creator videos, and commercial mood edits.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Premium lifestyle, café, fashion, calm brand reels, creator videos.</p>
+    <p class="track-meta"><strong>Mood:</strong> Smooth, warm, stylish, commercial-friendly.</p>
     <div class="tag-list">
       <span class="tag">Premium</span>
       <span class="tag">Café</span>
@@ -1172,14 +1406,16 @@ window.addEventListener('mousemove', loadGA, { once:true });
   </div>
 </article>
 
-<article class="track-card">
-  <div class="track-art">🌇</div>
+<article class="track-card" id="sunset-glow">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/Ftm2Ev4pV-c/hqdefault.jpg" alt="Sunset Glow thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Sunset Glow</h3>
     <p class="genre">Smooth Jazzhop</p>
-    <p>
-      Warm lifestyle visuals, travel edits, soft brand content, product scenes, and gentle storytelling.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Warm lifestyle visuals, travel edits, product scenes, soft brand content.</p>
+    <p class="track-meta"><strong>Mood:</strong> Warm, gentle, glowing, relaxed.</p>
     <div class="tag-list">
       <span class="tag">Warm</span>
       <span class="tag">Travel</span>
@@ -1187,22 +1423,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Lifestyle</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(4)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
 </article>
 
-<article class="track-card">
+<article class="track-card" id="smooth-transitions">
   <div class="track-art">
     <img src="https://img.youtube.com/vi/MBsx4sUtNxs/hqdefault.jpg" alt="Smooth Transitions thumbnail" loading="lazy">
   </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Smooth Transitions</h3>
     <p class="genre">Smooth Jazzhop</p>
-    <p>
-      SaaS demos, product videos, business explainers, app walkthroughs, and workflow visuals.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> SaaS demos, product videos, business explainers, app walkthroughs.</p>
+    <p class="track-meta"><strong>Mood:</strong> Clean, smooth, professional, modern.</p>
     <div class="tag-list">
       <span class="tag">Product Demo</span>
       <span class="tag">SaaS</span>
@@ -1210,7 +1446,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Clean</span>
     </div>
     <div class="listen-row">
-      <button class="listen-btn" onclick="selectTrack(1)">▶ Listen</button>
+      <button class="listen-btn" onclick="selectTrack(2)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
@@ -1230,17 +1466,16 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <div class="track-grid">
 
 
-<article class="track-card">
+<article class="track-card" id="stillness-vibes">
   <div class="track-art">
     <img src="https://img.youtube.com/vi/GRGkJoQGMjs/hqdefault.jpg" alt="Stillness Vibes thumbnail" loading="lazy">
   </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Stillness Vibes</h3>
     <p class="genre">Classic Electronica</p>
-    <p>
-      Creative workflow videos, modern product visuals, quiet business explainers,
-      AI-assisted content, and calm technology scenes.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Creative workflow videos, AI-assisted content, calm technology scenes.</p>
+    <p class="track-meta"><strong>Mood:</strong> Calm, focused, spacious, modern.</p>
     <div class="tag-list">
       <span class="tag">Workflow</span>
       <span class="tag">AI Video</span>
@@ -1248,21 +1483,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Calm</span>
     </div>
     <div class="listen-row">
-      <button class="listen-btn" onclick="selectTrack(2)">▶ Listen</button>
+      <button class="listen-btn" onclick="selectTrack(3)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
 </article>
 
-<article class="track-card">
-  <div class="track-art">☀️</div>
+<article class="track-card" id="soft-sunsine">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/tImJ2txmHhQ/hqdefault.jpg" alt="Soft Sunsine thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Soft Sunsine</h3>
     <p class="genre">Chillhop</p>
-    <p>
-      Light brand content, casual creator videos, soft product scenes,
-      friendly social media posts, and relaxed work-related visuals.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Light brand content, friendly creator videos, casual product scenes.</p>
+    <p class="track-meta"><strong>Mood:</strong> Light, friendly, sunny, social.</p>
     <div class="tag-list">
       <span class="tag">Light</span>
       <span class="tag">Friendly</span>
@@ -1270,21 +1506,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Social</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(5)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
 </article>
 
-<article class="track-card">
-  <div class="track-art">🧩</div>
+<article class="track-card" id="calm-transitions">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/RL_lN7zBxE4/hqdefault.jpg" alt="Calm Transitions thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Calm Transitions</h3>
     <p class="genre">Lo-Fi Hip-Hop</p>
-    <p>
-      Product demos, workflow videos, explainer content, AI videos,
-      business education, and steady background scenes.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Product demos, workflow videos, explainers, AI videos, business education.</p>
+    <p class="track-meta"><strong>Mood:</strong> Steady, background, calm, practical.</p>
     <div class="tag-list">
       <span class="tag">Explainer</span>
       <span class="tag">Workflow</span>
@@ -1292,7 +1529,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Background</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(6)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
@@ -1312,15 +1549,16 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <div class="track-grid">
 
 
-<article class="track-card">
-  <div class="track-art">🌙</div>
+<article class="track-card" id="goodnight-lofi-jazz">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/q_9N6d5m1YE/hqdefault.jpg" alt="Goodnight Lo-Fi Jazz thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Goodnight, Lo-Fi Jazz</h3>
     <p class="genre">Lo-Fi Jazz</p>
-    <p>
-      Night visuals, sleep content, calm lifestyle videos, relaxing scenes,
-      and soft background moments.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Night visuals, sleep content, calm lifestyle videos, relaxing scenes.</p>
+    <p class="track-meta"><strong>Mood:</strong> Night, quiet, soft, relaxed.</p>
     <div class="tag-list">
       <span class="tag">Night</span>
       <span class="tag">Sleep</span>
@@ -1328,21 +1566,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Soft</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(7)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
 </article>
 
-<article class="track-card">
-  <div class="track-art">🌊</div>
+<article class="track-card" id="ambient-flow">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/O8KUo0Ps0lQ/hqdefault.jpg" alt="Ambient Flow thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Ambient Flow</h3>
     <p class="genre">Down Tempo</p>
-    <p>
-      Wellness videos, meditation-style visuals, slow edits,
-      reflective brand scenes, and soft background storytelling.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Wellness videos, meditation visuals, slow edits, reflective brand scenes.</p>
+    <p class="track-meta"><strong>Mood:</strong> Ambient, slow, mindful, spacious.</p>
     <div class="tag-list">
       <span class="tag">Wellness</span>
       <span class="tag">Meditation</span>
@@ -1350,21 +1589,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Ambient</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(8)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
 </article>
 
-<article class="track-card">
-  <div class="track-art">🍃</div>
+<article class="track-card" id="warm-breeze">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/cjHL_j6-e88/hqdefault.jpg" alt="Warm Breeze thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Warm Breeze</h3>
     <p class="genre">Lo-Fi Hip-Hop</p>
-    <p>
-      Relaxed brand videos, warm social content, lifestyle clips,
-      travel moments, and gentle creator videos.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Relaxed brand videos, warm social content, lifestyle clips, travel moments.</p>
+    <p class="track-meta"><strong>Mood:</strong> Warm, breezy, gentle, relaxed.</p>
     <div class="tag-list">
       <span class="tag">Warm</span>
       <span class="tag">Travel</span>
@@ -1372,21 +1612,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Relaxed</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(9)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
 </article>
 
-<article class="track-card">
-  <div class="track-art">🎧</div>
+<article class="track-card" id="smooth-vibes">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/cZWDFWc3-m8/hqdefault.jpg" alt="Smooth Vibes thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Smooth Vibes</h3>
     <p class="genre">R&amp;B</p>
-    <p>
-      Soft lifestyle edits, emotional commercial content,
-      calm product scenes, and smooth social media videos.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Soft lifestyle edits, emotional commercial content, calm product scenes.</p>
+    <p class="track-meta"><strong>Mood:</strong> Smooth, emotional, soft, mellow.</p>
     <div class="tag-list">
       <span class="tag">R&amp;B</span>
       <span class="tag">Soft</span>
@@ -1394,7 +1635,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Smooth</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(10)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
@@ -1414,15 +1655,16 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <div class="track-grid">
 
 
-<article class="track-card">
-  <div class="track-art">☕</div>
+<article class="track-card" id="closing-time-jazz">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/_Ghx7QTYnUo/hqdefault.jpg" alt="Closing Time Jazz thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Closing Time Jazz</h3>
     <p class="genre">Chillhop</p>
-    <p>
-      Café videos, evening visuals, cozy brand content, lifestyle edits,
-      and calm closing-scene storytelling.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Café videos, evening visuals, cozy brand content, lifestyle edits.</p>
+    <p class="track-meta"><strong>Mood:</strong> Cozy, evening, warm, relaxed.</p>
     <div class="tag-list">
       <span class="tag">Café</span>
       <span class="tag">Evening</span>
@@ -1430,21 +1672,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Chillhop</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(11)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
 </article>
 
-<article class="track-card">
-  <div class="track-art">📖</div>
+<article class="track-card" id="lazy-afternoon-vibes">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/-RnzftKc7AM/hqdefault.jpg" alt="Lazy Afternoon Vibes thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Lazy Afternoon Vibes</h3>
     <p class="genre">Chillhop</p>
-    <p>
-      Lifestyle videos, café scenes, reading clips, relaxed product visuals,
-      and warm afternoon content.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Lifestyle videos, café scenes, reading clips, relaxed product visuals.</p>
+    <p class="track-meta"><strong>Mood:</strong> Afternoon, lazy, gentle, warm.</p>
     <div class="tag-list">
       <span class="tag">Afternoon</span>
       <span class="tag">Reading</span>
@@ -1452,21 +1695,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Lifestyle</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(12)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
 </article>
 
-<article class="track-card">
-  <div class="track-art">📚</div>
+<article class="track-card" id="bookstore-dreams">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/yvAHg7sTnzs/hqdefault.jpg" alt="Bookstore Dreams thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Bookstore Dreams</h3>
     <p class="genre">Chillhop</p>
-    <p>
-      Bookstore visuals, reading content, study scenes, educational creators,
-      quiet business content, and calm lifestyle edits.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Bookstore visuals, reading content, study scenes, educational creators.</p>
+    <p class="track-meta"><strong>Mood:</strong> Quiet, thoughtful, cozy, academic.</p>
     <div class="tag-list">
       <span class="tag">Bookstore</span>
       <span class="tag">Study</span>
@@ -1474,21 +1718,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Education</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(13)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
 </article>
 
-<article class="track-card">
-  <div class="track-art">✨</div>
+<article class="track-card" id="smooth-introduction">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/IeXtJlmQ-ZE/hqdefault.jpg" alt="Smooth introduction thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Smooth introduction</h3>
     <p class="genre">Smooth Jazz</p>
-    <p>
-      Elegant intros, soft brand openings, corporate introductions,
-      professional reels, and polished lifestyle scenes.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Elegant intros, soft brand openings, corporate introductions.</p>
+    <p class="track-meta"><strong>Mood:</strong> Elegant, polished, professional, smooth.</p>
     <div class="tag-list">
       <span class="tag">Intro</span>
       <span class="tag">Elegant</span>
@@ -1496,21 +1741,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Polished</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(14)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
 </article>
 
-<article class="track-card">
-  <div class="track-art">🌃</div>
+<article class="track-card" id="urban-twilight">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/tZiYlmaP9tM/hqdefault.jpg" alt="Urban Twilight thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Urban Twilight</h3>
     <p class="genre">Trip-Hop</p>
-    <p>
-      Tokyo night visuals, urban lifestyle videos, stylish brand content,
-      fashion edits, and modern city scenes.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Tokyo night visuals, urban lifestyle videos, fashion edits, city scenes.</p>
+    <p class="track-meta"><strong>Mood:</strong> Urban, stylish, twilight, cinematic.</p>
     <div class="tag-list">
       <span class="tag">Tokyo Night</span>
       <span class="tag">Urban</span>
@@ -1518,7 +1764,30 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Stylish</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(15)">▶ Listen</button>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card" id="vaporwave-streets">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/mtQwxopXhYo/hqdefault.jpg" alt="Vaporwave Streets thumbnail" loading="lazy">
+  </div>
+  <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
+    <h3>Vaporwave Streets</h3>
+    <p class="genre">Synthwave Lo-Fi</p>
+    <p class="track-meta"><strong>Best for:</strong> Night visuals, tech edits, retro city scenes, Tokyo-style mood videos.</p>
+    <p class="track-meta"><strong>Mood:</strong> Neon, retro, urban, synthwave.</p>
+    <div class="tag-list">
+      <span class="tag">Night</span>
+      <span class="tag">Tech</span>
+      <span class="tag">Retro</span>
+      <span class="tag">City</span>
+    </div>
+    <div class="listen-row">
+      <button class="listen-btn" onclick="selectTrack(1)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
@@ -1538,15 +1807,16 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <div class="track-grid">
 
 
-<article class="track-card">
-  <div class="track-art">🎞️</div>
+<article class="track-card" id="smooth-beginnings">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/VTqOWrEmg-w/hqdefault.jpg" alt="Smooth Beginnings thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Smooth Beginnings</h3>
     <p class="genre">Jazzhop</p>
-    <p>
-      Short intros, Reels, opening scenes, quick brand cuts,
-      social clips, and commercial edits under 30 seconds.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Short intros, Reels, opening scenes, quick brand cuts, social clips.</p>
+    <p class="track-meta"><strong>Mood:</strong> Fresh, short-form, smooth, quick.</p>
     <div class="tag-list">
       <span class="tag">Shorts</span>
       <span class="tag">Reels</span>
@@ -1554,21 +1824,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Under 30s</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(16)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
 </article>
 
-<article class="track-card">
-  <div class="track-art">💫</div>
+<article class="track-card" id="kawaii-vibes">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/noixzH_OSs4/hqdefault.jpg" alt="Kawaii vibes thumbnail" loading="lazy">
+  </div>
   <div class="track-body">
+    <span class="preview-label">Playable Preview</span>
     <h3>Kawaii vibes</h3>
     <p class="genre">Techno Pop</p>
-    <p>
-      Cute product videos, pop visuals, playful short clips,
-      creator edits, and bright social media content.
-    </p>
+    <p class="track-meta"><strong>Best for:</strong> Cute product videos, pop visuals, playful short clips, bright social content.</p>
+    <p class="track-meta"><strong>Mood:</strong> Cute, playful, pop, bright.</p>
     <div class="tag-list">
       <span class="tag">Cute</span>
       <span class="tag">Pop</span>
@@ -1576,7 +1847,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
       <span class="tag">Social</span>
     </div>
     <div class="listen-row">
-      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <button class="listen-btn" onclick="selectTrack(17)">▶ Listen</button>
       <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
     </div>
   </div>
@@ -1587,14 +1858,8 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 </section>
 
-<section class="section-block">
+<section class="section-block full-infographic">
 
-  <div class="visual-band">
-
-
-<img src="/site/images/infographics/why-both-rights-matter.webp" alt="Why both copyright permission and master rights permission matter for commercial music use" loading="lazy">
-
-<div>
   <h2>Listening Is Only the First Step. Licensing Still Matters.</h2>
 
   <p>
@@ -1613,10 +1878,12 @@ window.addEventListener('mousemove', loadGA, { once:true });
     日本語：音源ページで使えることと、商用・広告・クライアント案件で使えることは同じではありません。
     企業利用や広告利用では、用途に合ったライセンス確認が必要です。
   </p>
-</div>
 
+  <img src="/site/images/infographics/why-both-rights-matter.webp" alt="Why both copyright permission and master rights permission matter for commercial music use" loading="lazy" width="1600" height="900">
 
-  </div>
+  <a href="/site/images/infographics/why-both-rights-matter.webp" target="_blank" rel="noopener noreferrer" class="full-size-link">
+    Open full-size infographic →
+  </a>
 
 </section>
 
@@ -1708,7 +1975,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <h2>Browse the Full Catalog</h2>
 
   <p class="section-lead">
-    The embedded player highlights selected tracks with known YouTube preview IDs.
+    The embedded player highlights selected commercial-use starting tracks.
     To search the wider Nanashino-chan catalog, use the official YouTube Music account or Topic page.
   </p>
 
@@ -1794,7 +2061,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
 <p>
   Recommended starting tracks include Smooth Groove for premium lifestyle and café visuals,
   Smooth Transitions for product demos and business videos, Stillness Vibes for creative work and calm visuals,
-  Urban Twilight for stylish night scenes, and Smooth Beginnings for short cinematic cuts.
+  Urban Twilight and Vaporwave Streets for stylish night scenes, and Smooth Beginnings for short cinematic cuts.
 </p>
 
 <h3>Can I use these recommended tracks in commercial videos?</h3>
@@ -1806,9 +2073,9 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 <h3>Which track is recommended for brand videos?</h3>
 <p>
-  Smooth Groove, Sunset Glow, Closing Time Jazz, Urban Twilight, and Smooth introduction
-  are good starting points for brand videos, lifestyle visuals, café content, fashion content,
-  and premium commercial video projects.
+  Smooth Groove, Sunset Glow, Closing Time Jazz, Urban Twilight, Smooth introduction,
+  and Vaporwave Streets are good starting points for brand videos, lifestyle visuals,
+  café content, fashion content, Tokyo night visuals, and premium commercial video projects.
 </p>
 
 <h3>Which tracks are suitable for product demos or business videos?</h3>
@@ -1854,17 +2121,17 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 </section>
 
-<section class="section-block">
+<section class="section-block disclaimer-section">
 
   <h2>Disclaimer</h2>
 
-  <p class="section-lead">
+  <p>
     This page provides general track recommendations and music licensing information.
     It is not legal advice and does not guarantee platform behavior, monetization approval,
     video performance, ad performance, reach, or claim outcomes.
   </p>
 
-  <p class="section-lead">
+  <p>
     A license clarifies permitted use from the rights holder, but platform systems such as YouTube Content ID,
     Instagram, TikTok, Facebook, advertising review systems, and future platform policy changes may still depend on
     each platform’s rules, account status, region, metadata, and automated review behavior.
@@ -1872,7 +2139,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
   <h2>免責事項</h2>
 
-  <p class="section-lead">
+  <p>
     このページは、商用動画向けのおすすめ曲と音楽ライセンスに関する一般的な情報を提供するものです。
     法的助言ではなく、各プラットフォームでの表示、収益化、広告成果、再生数、Content IDの挙動を保証するものではありません。
   </p>
@@ -1909,72 +2176,239 @@ window.addEventListener('mousemove', loadGA, { once:true });
 </footer>
 
 <script>
-const recommendedTracks = [
+const tracks = [
   {
-    title: "Smooth Groove",
-    subtitle: "Chillhop · Premium lifestyle / café / brand mood videos",
-    videoId: "PnyutlzXem0"
+    title: "Smooth Groove – Chill Lo-Fi Beat",
+    videoId: "PnyutlzXem0",
+    apple: "https://music.apple.com/us/album/smooth-groove-remastered-night-caf%C3%A9-single/1860873849",
+    album: "Smooth Chillhop Jazz Beats",
+    genre: "Chillhop",
+    subtitle: "Chillhop · Premium lifestyle / café / brand mood videos"
   },
   {
-    title: "Smooth Transitions",
-    subtitle: "Smooth Jazzhop · Product demos / SaaS / business explainers",
-    videoId: "MBsx4sUtNxs"
+    title: "Vaporwave Streets – Synthwave Lo-Fi",
+    videoId: "mtQwxopXhYo",
+    apple: "https://music.apple.com/us/album/retro-pulse-lo-fi-synth-grooves-from-the-night/1808187852",
+    album: "Retro Pulse: Lo-Fi Synth Grooves from the Night",
+    genre: "Synthwave Lo-Fi",
+    subtitle: "Synthwave Lo-Fi · Night visuals / tech edits / Tokyo-style mood"
   },
   {
-    title: "Stillness Vibes",
-    subtitle: "Classic Electronica · Creative workflow / AI videos / calm product visuals",
-    videoId: "GRGkJoQGMjs"
+    title: "Smooth Transitions – Chillhop Lo-Fi",
+    videoId: "MBsx4sUtNxs",
+    apple: "https://music.apple.com/us/album/chillhop-lo-fi-relax-focus-instrumental/1796933282",
+    album: "Chillhop Lo-Fi Relax & Focus",
+    genre: "Smooth Jazzhop",
+    subtitle: "Smooth Jazzhop · Product demos / SaaS / business explainers"
+  },
+  {
+    title: "Stillness Vibes – Calm Lo-Fi",
+    videoId: "GRGkJoQGMjs",
+    apple: "https://music.apple.com/us/album/smooth-waves-timeless-electronica-lo-fi-grooves/1811585664",
+    album: "Smooth Waves",
+    genre: "Classic Electronica",
+    subtitle: "Classic Electronica · Creative workflow / AI videos / calm product visuals"
+  },
+  {
+    title: "Sunset Glow",
+    videoId: "Ftm2Ev4pV-c",
+    apple: "",
+    album: "",
+    genre: "Smooth Jazzhop",
+    subtitle: "Smooth Jazzhop · Warm lifestyle / travel / soft brand visuals"
+  },
+  {
+    title: "Soft Sunsine",
+    videoId: "tImJ2txmHhQ",
+    apple: "",
+    album: "",
+    genre: "Chillhop",
+    subtitle: "Chillhop · Light brand content / friendly creator videos"
+  },
+  {
+    title: "Calm Transitions",
+    videoId: "RL_lN7zBxE4",
+    apple: "",
+    album: "",
+    genre: "Lo-Fi Hip-Hop",
+    subtitle: "Lo-Fi Hip-Hop · Product demos / explainers / workflow videos"
+  },
+  {
+    title: "Goodnight, Lo-Fi Jazz",
+    videoId: "q_9N6d5m1YE",
+    apple: "",
+    album: "",
+    genre: "Lo-Fi Jazz",
+    subtitle: "Lo-Fi Jazz · Night visuals / sleep content / relaxing scenes"
+  },
+  {
+    title: "Ambient Flow",
+    videoId: "O8KUo0Ps0lQ",
+    apple: "",
+    album: "",
+    genre: "Down Tempo",
+    subtitle: "Down Tempo · Wellness / meditation-style visuals / reflective edits"
+  },
+  {
+    title: "Warm Breeze",
+    videoId: "cjHL_j6-e88",
+    apple: "",
+    album: "",
+    genre: "Lo-Fi Hip-Hop",
+    subtitle: "Lo-Fi Hip-Hop · Warm lifestyle / travel / relaxed brand videos"
+  },
+  {
+    title: "Smooth Vibes",
+    videoId: "cZWDFWc3-m8",
+    apple: "",
+    album: "",
+    genre: "R&B",
+    subtitle: "R&B · Soft lifestyle / emotional commercial content"
+  },
+  {
+    title: "Closing Time Jazz",
+    videoId: "_Ghx7QTYnUo",
+    apple: "",
+    album: "",
+    genre: "Chillhop",
+    subtitle: "Chillhop · Café videos / evening visuals / cozy brand content"
+  },
+  {
+    title: "Lazy Afternoon Vibes",
+    videoId: "-RnzftKc7AM",
+    apple: "",
+    album: "Easter Chillhop Vibes",
+    genre: "Chillhop",
+    subtitle: "Chillhop · Afternoon lifestyle / café scenes / reading clips"
+  },
+  {
+    title: "Bookstore Dreams",
+    videoId: "yvAHg7sTnzs",
+    apple: "",
+    album: "",
+    genre: "Chillhop",
+    subtitle: "Chillhop · Bookstore visuals / study scenes / quiet education content"
+  },
+  {
+    title: "Smooth introduction",
+    videoId: "IeXtJlmQ-ZE",
+    apple: "",
+    album: "",
+    genre: "Smooth Jazz",
+    subtitle: "Smooth Jazz · Elegant intros / corporate openings / polished reels"
+  },
+  {
+    title: "Urban Twilight",
+    videoId: "tZiYlmaP9tM",
+    apple: "",
+    album: "",
+    genre: "Trip-Hop",
+    subtitle: "Trip-Hop · Tokyo night visuals / urban lifestyle / fashion edits"
+  },
+  {
+    title: "Smooth Beginnings",
+    videoId: "VTqOWrEmg-w",
+    apple: "",
+    album: "",
+    genre: "Jazzhop",
+    subtitle: "Jazzhop · Short intros / Reels / quick brand cuts"
+  },
+  {
+    title: "Kawaii vibes",
+    videoId: "noixzH_OSs4",
+    apple: "",
+    album: "",
+    genre: "Techno Pop",
+    subtitle: "Techno Pop · Cute product videos / playful short clips / bright social content"
   }
 ];
 
-let currentTrackIndex = 0;
+let player;
+let currentIndex = 0;
+let pendingPlayerInit = false;
 
-function updateTrackDisplay(autoplay) {
-  const playerContainer = document.getElementById("player-container");
-  const currentTrack = recommendedTracks[currentTrackIndex];
-  const title = document.querySelector(".track-title");
-  const subtitle = document.querySelector(".album-title");
+function onYouTubeIframeAPIReady() {
+  if (pendingPlayerInit) {
+    pendingPlayerInit = false;
+    initPlayer();
+  }
+}
 
-  if (title) {
-    title.textContent = currentTrack.title;
+function initPlayer() {
+  if (player) return;
+
+  if (!window.YT || !YT.Player) {
+    pendingPlayerInit = true;
+    return;
   }
 
-  if (subtitle) {
-    subtitle.textContent = currentTrack.subtitle;
-  }
+  const container = document.getElementById("player-container");
 
-  if (autoplay) {
-    playerContainer.innerHTML =
-      '<iframe src="https://www.youtube-nocookie.com/embed/' +
-      currentTrack.videoId +
-      '?autoplay=1&rel=0" title="' +
-      currentTrack.title +
-      ' - Nanashino-chan" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-  } else {
-    playerContainer.innerHTML =
-      '<img id="thumbnail" src="https://img.youtube.com/vi/' +
-      currentTrack.videoId +
-      '/hqdefault.jpg" alt="' +
-      currentTrack.title +
-      ' YouTube thumbnail">' +
-      '<div class="play-btn">▶</div>';
-  }
+  if (!container) return;
+
+  container.innerHTML = '<div id="player"></div>';
+
+  player = new YT.Player("player", {
+    height: "405",
+    width: "720",
+    videoId: tracks[currentIndex].videoId,
+    playerVars: {
+      autoplay: 1,
+      rel: 0,
+      playsinline: 1
+    },
+    events: {
+      onReady: function(event) {
+        event.target.playVideo();
+        updateUI();
+      }
+    }
+  });
 }
 
 function playVideo() {
-  updateTrackDisplay(true);
+  if (!player) {
+    initPlayer();
+
+    setTimeout(function() {
+      if (player && player.playVideo) {
+        player.playVideo();
+      }
+    }, 300);
+  } else {
+    player.playVideo();
+  }
+
+  updateUI();
 }
 
 function nextTrack() {
-  currentTrackIndex = (currentTrackIndex + 1) % recommendedTracks.length;
-  updateTrackDisplay(true);
+  currentIndex = (currentIndex + 1) % tracks.length;
+
+  if (!player) {
+    initPlayer();
+  } else {
+    player.loadVideoById(tracks[currentIndex].videoId);
+  }
+
+  updateUI();
 }
 
 function selectTrack(index) {
-  currentTrackIndex = index;
-  updateTrackDisplay(true);
+  if (!tracks[index]) return;
+
+  currentIndex = index;
+
+  if (!player) {
+    initPlayer();
+  } else {
+    player.loadVideoById(tracks[currentIndex].videoId);
+  }
+
+  updateUI();
 
   const listenSection = document.getElementById("listen");
+
   if (listenSection) {
     listenSection.scrollIntoView({
       behavior: "smooth",
@@ -1983,8 +2417,33 @@ function selectTrack(index) {
   }
 }
 
+function updateUI() {
+  const track = tracks[currentIndex];
+
+  const trackTitle = document.querySelector(".track-title");
+  const albumTitle = document.querySelector(".album-title");
+  const thumbnail = document.getElementById("thumbnail");
+
+  if (trackTitle) {
+    trackTitle.textContent = track.title;
+  }
+
+  if (albumTitle) {
+    if (track.album) {
+      albumTitle.textContent = track.subtitle + " · Album: " + track.album;
+    } else {
+      albumTitle.textContent = track.subtitle;
+    }
+  }
+
+  if (thumbnail) {
+    thumbnail.src = "https://img.youtube.com/vi/" + track.videoId + "/hqdefault.jpg";
+    thumbnail.alt = track.title + " YouTube thumbnail";
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-  updateTrackDisplay(false);
+  updateUI();
 });
 </script>
 
