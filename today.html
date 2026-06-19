@@ -1,183 +1,265 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>Lo-Fi Music Player ☕ Listen Now | Focus, Study, Relax & Licensed Music</title>
+<title>Recommended Lo-Fi Tracks for Commercial Video Use | Nanashino-chan</title>
 
-<meta name="description" content="Start listening to Nanashino-chan lo-fi music instantly. Perfect for focus, study, relaxation, work sessions, YouTube videos, creator content, and licensed commercial use. 作業・勉強・リラックスに最適なLo-Fi音楽を今すぐ再生。">
+<meta name="description" content="Listen to recommended Nanashino-chan lo-fi tracks for commercial videos, YouTube, business videos, product demos, ads, AI videos, brand campaigns, café content, and social media projects.">
 
 <meta name="robots" content="index, follow">
 
-<!-- Canonical -->
-<link rel="canonical" href="https://nanashino-chan.github.io/site/today.html">
+<link rel="canonical" href="https://nanashino-chan.github.io/site/pages/recommended-tracks-for-commercial-video-use.html">
 
-<!-- Favicon -->
+<link rel="stylesheet" href="/site/style.css">
+
 <link rel="icon" href="/site/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
 
-<!-- OGP -->
-<meta property="og:title" content="Lo-Fi Music ☕ Start Listening Now">
-<meta property="og:description" content="Instant lo-fi music for focus, study, work, relaxation, and creator-friendly licensed use.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://nanashino-chan.github.io/site/today.html">
-<meta property="og:image" content="https://nanashino-chan.github.io/site/today-ogp.jpg">
+<meta property="og:title" content="Recommended Lo-Fi Tracks for Commercial Video Use">
+<meta property="og:description" content="Listen first, then choose the right license. Recommended Nanashino-chan tracks for YouTube videos, business videos, ads, AI videos, brand campaigns, and social media projects.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nanashino-chan.github.io/site/pages/recommended-tracks-for-commercial-video-use.html">
+<meta property="og:image" content="https://nanashino-chan.github.io/site/images/infographics/music-licensing-process.webp">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lo-Fi Music ☕ Start Listening Now">
-<meta name="twitter:description" content="Instant lo-fi music for focus, study, calm moments, and creator workflows.">
-<meta name="twitter:image" content="https://nanashino-chan.github.io/site/today-ogp.jpg">
+<meta name="twitter:title" content="Recommended Lo-Fi Tracks for Commercial Video Use">
+<meta name="twitter:description" content="Preview recommended Nanashino-chan tracks for commercial videos, business videos, ads, AI videos, and brand campaigns.">
+<meta name="twitter:image" content="https://nanashino-chan.github.io/site/images/infographics/music-licensing-process.webp">
 
-<link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self' 'unsafe-inline'
+https://www.youtube.com
+https://www.youtube-nocookie.com
+https://www.google.com
+https://www.gstatic.com
+https://s.ytimg.com
+https://www.googletagmanager.com
+https://www.google-analytics.com;
+frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
+img-src 'self' https://i.ytimg.com https://img.youtube.com data:;
+style-src 'self' 'unsafe-inline';
+font-src 'self';
+object-src 'none';
+base-uri 'self';
+">
 
-<!-- YouTube API -->
+<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+
 <script src="https://www.youtube.com/iframe_api"></script>
-
-<!-- GA -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-CLHM36E1P0');
-</script>
 
 <style>
 body {
-  margin: 0;
   background: #0f0f0f;
   color: #fff;
-  font-family: 'Inter', 'Noto Sans JP', sans-serif;
-  text-align: center;
 }
 
-.container {
-  max-width: 860px;
-  margin: auto;
-  padding: 24px 20px 60px;
+.recommended-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 26px 72px;
 }
 
-.hero {
-  margin: 24px auto 34px;
+.recommended-breadcrumb {
+  max-width: 1180px;
+  margin: 0 auto 34px;
+  font-size: 14px;
+  color: #aaa;
 }
 
-.hero-label {
-  display: inline-block;
-  margin-bottom: 14px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: rgba(255,204,0,0.1);
-  border: 1px solid rgba(255,204,0,0.25);
+.recommended-breadcrumb a {
   color: #ffcc00;
-  font-size: 13px;
+  text-decoration: none;
   font-weight: 700;
 }
 
-h1 {
-  font-size: clamp(34px, 7vw, 58px);
-  line-height: 1.12;
+.recommended-hero {
+  max-width: 1180px;
+  margin: 0 auto 90px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(460px, 540px);
+  gap: 38px;
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,204,0,0.42);
+  border-radius: 999px;
+  color: #ffcc00;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 22px;
+  background: rgba(255,204,0,0.06);
+}
+
+.hero-copy h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.05;
+  margin: 0 0 22px;
+  letter-spacing: -0.045em;
+}
+
+.hero-lead {
+  font-size: 20px;
+  line-height: 1.85;
+  color: #ddd;
   margin: 0 0 18px;
+  max-width: 720px;
 }
 
-h2 {
-  line-height: 1.35;
-}
-
-.lead {
-  font-size: 18px;
-  line-height: 1.9;
-  color: #ccc;
+.hero-sub {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #aaa;
+  margin: 0;
   max-width: 760px;
-  margin: 0 auto 22px;
 }
 
-.hero-actions {
+.cta-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 14px;
-  margin: 26px 0 22px;
+  margin-top: 32px;
 }
 
-.hero-actions a,
-.hero-actions button {
+.primary-btn,
+.secondary-btn,
+.dark-btn {
   display: inline-block;
-  border: none;
-  cursor: pointer;
-  padding: 15px 24px;
-  border-radius: 10px;
-  font-weight: 800;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-weight: 900;
   text-decoration: none;
-  font-size: 15px;
+  line-height: 1.2;
 }
 
-.btn-primary {
+.primary-btn {
   background: #ffcc00;
   color: #000;
+  box-shadow: 0 10px 28px rgba(255,204,0,0.18);
 }
 
-.btn-secondary {
-  background: #171717;
+.secondary-btn {
+  border: 1px solid #ffcc00;
+  color: #ffcc00;
+  background: rgba(255,204,0,0.04);
+}
+
+.dark-btn {
+  border: 1px solid rgba(255,255,255,0.16);
   color: #fff;
-  border: 1px solid #333 !important;
+  background: #111;
 }
 
-.use-note {
-  margin: 18px auto 0;
-  padding: 14px 16px;
-  max-width: 760px;
-  border-radius: 12px;
-  background: #111;
-  border: 1px solid rgba(255,255,255,0.08);
-  color: #ccc;
+.hero-player-card {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.18), transparent 34%),
+    linear-gradient(180deg, #151515, #0b0b0b);
+  border: 1px solid rgba(255,204,0,0.24);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.player-kicker {
+  color: #ffcc00;
+  font-weight: 900;
   font-size: 14px;
-  line-height: 1.8;
+  margin: 0 0 14px;
 }
 
 .player {
   position: relative;
   width: 100%;
-  max-width: 720px;
-  margin: 28px auto 20px;
+  aspect-ratio: 16 / 9;
+  background: #050505;
+  border-radius: 18px;
+  overflow: hidden;
   cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .player img {
   width: 100%;
-  border-radius: 12px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.08) contrast(1.05);
+}
+
+#player {
+  width: 100%;
+  height: 100%;
+}
+
+#player iframe,
+.player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 .play-btn {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 48px;
-  background: rgba(0,0,0,0.6);
-  padding: 10px 20px;
+  inset: 0;
+  margin: auto;
+  width: 78px;
+  height: 78px;
   border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255,204,0,0.92);
+  color: #000;
+  font-size: 32px;
+  font-weight: 900;
+  box-shadow: 0 12px 34px rgba(0,0,0,0.42);
+}
+
+.track-title {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 20px 0 4px;
+  color: #fff;
+}
+
+.album-title {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #bbb;
+  margin: 0;
 }
 
 .player-controls {
   display: flex;
-  gap: 12px;
-  justify-content: center;
   flex-wrap: wrap;
-  margin: 22px 0;
+  gap: 12px;
+  margin-top: 18px;
 }
 
-.player-controls button {
+.btn-play,
+.btn-next {
+  border: 0;
   cursor: pointer;
-  border: none;
-  padding: 14px 24px;
-  border-radius: 10px;
-  font-weight: 800;
+  border-radius: 12px;
+  font-weight: 900;
+  padding: 14px 18px;
+  line-height: 1.2;
   font-size: 15px;
 }
 
@@ -187,448 +269,1896 @@ h2 {
 }
 
 .btn-next {
-  background: #1b1b1b;
+  background: #252525;
   color: #fff;
-  border: 1px solid #333 !important;
-}
-
-.track-title {
-  font-size: 19px;
-  margin-top: 18px;
-  font-weight: 800;
-}
-
-.album-title {
-  font-size: 14px;
-  color: #aaa;
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
 .trust {
-  margin-top: 18px;
   color: #ffcc00;
-  font-weight: 800;
   line-height: 1.8;
+  font-size: 14px;
+  font-weight: 900;
+  margin: 18px 0 0;
 }
 
 .benefits {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 14px;
-  margin: 34px auto;
-  max-width: 760px;
+  margin-top: 22px;
 }
 
 .benefit-card {
-  background: #111;
+  background: rgba(255,255,255,0.045);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
-  padding: 18px;
+  padding: 16px;
 }
 
 .benefit-card strong {
+  display: block;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.benefit-card span {
+  color: #bbb;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.section-block {
+  max-width: 1180px;
+  margin: 0 auto 92px;
+}
+
+.section-block h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.18;
+  margin: 0 0 18px;
+  letter-spacing: -0.025em;
+}
+
+.section-lead {
+  color: #ccc;
+  line-height: 1.9;
+  font-size: 18px;
+  max-width: 920px;
+}
+
+.intro-panel {
+  background:
+    radial-gradient(circle at top right, rgba(255,204,0,0.13), transparent 34%),
+    linear-gradient(180deg, #141414, #0c0c0c);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 34px;
+}
+
+.intro-panel p {
+  color: #ccc;
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.usecase-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.usecase-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.usecase-card strong {
+  display: block;
+  color: #ffcc00;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.usecase-card span {
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.quick-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.quick-card.highlight {
+  border-color: rgba(255,204,0,0.38);
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.14), transparent 36%),
+    #111;
+}
+
+.quick-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.genre {
+  color: #ffcc00;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.quick-card p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.track-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.track-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,204,0,0.38);
+}
+
+.track-art {
+  min-height: 160px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,204,0,0.24), transparent 30%),
+    linear-gradient(135deg, #1a1a1a, #070707);
+  color: #ffcc00;
+  font-size: 46px;
+}
+
+.track-art img {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  display: block;
+}
+
+.track-body {
+  padding: 22px;
+}
+
+.track-body h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.track-body p {
+  color: #ccc;
+  line-height: 1.75;
+  margin: 0 0 14px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 800;
+  color: #ddd;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: rgba(255,255,255,0.04);
+}
+
+.listen-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.listen-btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 10px;
+  background: #ffcc00;
+  color: #000;
+  font-weight: 900;
+  padding: 11px 14px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.catalog-btn {
+  display: inline-block;
+  border-radius: 10px;
+  background: #222;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+  font-weight: 800;
+  padding: 10px 13px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.category-header {
+  margin-top: 72px;
+  padding-top: 8px;
+}
+
+.category-header h2 {
+  margin-bottom: 12px;
+}
+
+.category-header p {
+  color: #ccc;
+  line-height: 1.9;
+  max-width: 940px;
+}
+
+.full-infographic {
+  max-width: 1180px;
+  margin: 0 auto 92px;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.11), transparent 30%),
+    #101010;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+}
+
+.full-infographic h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.18;
+  margin: 0 0 18px;
+}
+
+.full-infographic p {
+  color: #ccc;
+  line-height: 1.9;
+  font-size: 17px;
+  max-width: 960px;
+}
+
+.full-infographic img {
+  display: block;
+  width: 100%;
+  max-width: 1120px;
+  height: auto;
+  margin: 28px auto 0;
+  border-radius: 18px;
+  box-shadow: 0 12px 42px rgba(0,0,0,0.32);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.image-open-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #ffcc00;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.license-panel {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.14), transparent 32%),
+    linear-gradient(180deg, rgba(255,204,0,0.07), rgba(255,204,0,0.025));
+  border: 1px solid rgba(255,204,0,0.26);
+  border-left: 4px solid #ffcc00;
+  border-radius: 22px;
+  padding: 32px;
+}
+
+.license-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.license-card {
+  background: #101010;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.license-card h3 {
+  margin-top: 0;
+}
+
+.price {
+  color: #ffcc00;
+  font-size: 28px;
+  font-weight: 900;
+  margin: 8px 0 14px;
+}
+
+.license-card p {
+  color: #ccc;
+  line-height: 1.75;
+  font-size: 14px;
+}
+
+.note-box {
+  background: #101010;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.note-box p,
+.note-box li {
+  color: #ccc;
+  line-height: 1.9;
+}
+
+.note-box ul {
+  padding-left: 22px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.related-card {
+  display: block;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 22px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.related-card strong {
   display: block;
   margin-bottom: 8px;
   color: #fff;
 }
 
-.benefit-card span {
-  color: #aaa;
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.listen {
-  display: none;
-  margin-top: 34px;
-  padding: 24px;
-  border-radius: 16px;
-  background: #111;
-  border: 1px solid rgba(255,204,0,0.18);
-}
-
-.dsp-buttons {
-  margin-top: 20px;
-}
-
-.dsp-buttons a {
-  display: inline-block;
-  width: 260px;
-  padding: 13px;
-  margin: 8px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
-}
-
-.apple {
-  font-weight: bold;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-.ytmusic {
-  background: #cc0000;
-}
-
-.cta-split {
-  margin-top: 24px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-  gap: 16px;
-  text-align: left;
-}
-
-.cta-box {
-  background: #181818;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  padding: 18px;
-}
-
-.cta-box h3 {
-  margin: 0 0 10px;
-  font-size: 18px;
-}
-
-.cta-box p {
-  margin: 0 0 14px;
+.related-card span {
   color: #bbb;
-  line-height: 1.7;
+  line-height: 1.6;
   font-size: 14px;
 }
 
-.cta-box a {
-  color: #ffcc00;
-  font-weight: 800;
-  text-decoration: none;
+.related-card.featured {
+  background: #ffcc00;
+  color: #000;
 }
 
-.info-section {
-  margin: 54px auto 0;
-  text-align: left;
-  line-height: 1.9;
-  color: #ccc;
+.related-card.featured strong,
+.related-card.featured span {
+  color: #000;
 }
 
-.info-section h2 {
-  color: #fff;
+.final-cta {
   text-align: center;
-  margin-bottom: 18px;
+  padding: 50px 30px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at top, rgba(255,204,0,0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255,204,0,0.1), rgba(255,204,0,0.03));
+  border: 1px solid rgba(255,204,0,0.28);
 }
 
-.info-section p {
-  margin: 0 0 16px;
+.final-cta h2 {
+  margin-top: 0;
 }
 
-.related-links {
-  margin-top: 34px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
-  gap: 14px;
-}
-
-.related-links a {
-  display: block;
-  background: #111;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  padding: 18px;
-  text-decoration: none;
-  color: #fff;
-  text-align: left;
-}
-
-.related-links span {
-  display: block;
-  margin-top: 6px;
-  color: #aaa;
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-#youtubeLink {
-  display: inline-block;
-  margin-top: 24px;
-  color: #ffcc00;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.footer-links {
-  margin-top: 50px;
-  font-size: 14px;
-  color: #aaa;
-  line-height: 2;
-}
-
-.footer-links a {
+.final-cta p {
   color: #ccc;
+  line-height: 1.9;
+  font-size: 18px;
+  max-width: 860px;
+  margin: 18px auto 0;
+}
+
+.disclaimer-section {
+  text-align: center;
+}
+
+.disclaimer-section p {
+  color: #ccc;
+  line-height: 1.9;
+  max-width: 920px;
+  margin: 0 auto 18px;
+}
+
+@media (max-width: 1080px) {
+  .recommended-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-player-card {
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .usecase-grid,
+  .license-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .track-grid,
+  .quick-grid,
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .recommended-page {
+    padding: 28px 16px 60px;
+  }
+
+  .recommended-breadcrumb {
+    padding: 0 2px;
+  }
+
+  .usecase-grid,
+  .track-grid,
+  .quick-grid,
+  .license-grid,
+  .related-grid,
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .full-infographic {
+    padding: 18px;
+  }
+
+  .license-panel {
+    padding: 22px;
+  }
+
+  .intro-panel {
+    padding: 24px;
+  }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nanashino-chan.github.io/site/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Articles",
+      "item": "https://nanashino-chan.github.io/site/pages/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Recommended Tracks for Commercial Video Use",
+      "item": "https://nanashino-chan.github.io/site/pages/recommended-tracks-for-commercial-video-use.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Recommended Lo-Fi Tracks for Commercial Video Use",
+  "description": "A curated listening guide to recommended Nanashino-chan lo-fi tracks for commercial videos, YouTube videos, business videos, product demos, ads, AI videos, brand campaigns, café lifestyle content, and social media projects.",
+  "author": {
+    "@type": "Person",
+    "name": "Nanashino-chan"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nanashino-chan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nanashino-chan.github.io/site/favicon-512.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nanashino-chan.github.io/site/pages/recommended-tracks-for-commercial-video-use.html"
+  },
+  "image": "https://nanashino-chan.github.io/site/images/infographics/music-licensing-process.webp"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicPlaylist",
+  "name": "Recommended Nanashino-chan Tracks for Commercial Video Use",
+  "description": "Recommended Nanashino-chan lo-fi tracks grouped by commercial video use case, including YouTube videos, business videos, product demos, ads, AI videos, brand campaigns, café content, and short cinematic cuts.",
+  "creator": {
+    "@type": "Person",
+    "name": "Nanashino-chan"
+  },
+  "url": "https://nanashino-chan.github.io/site/pages/recommended-tracks-for-commercial-video-use.html",
+  "numTracks": 17,
+  "track": [
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Groove",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Chillhop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Sunset Glow",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Smooth Jazzhop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Transitions",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Smooth Jazzhop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Stillness Vibes",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Classic Electronica"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Soft Sunsine",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Chillhop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Calm Transitions",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Lo-Fi Hip-Hop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Goodnight, Lo-Fi Jazz",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Lo-Fi Jazz"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Ambient Flow",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Down Tempo"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Warm Breeze",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Lo-Fi Hip-Hop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Vibes",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "R&B"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Closing Time Jazz",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Chillhop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Lazy Afternoon Vibes",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Chillhop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Bookstore Dreams",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Chillhop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth introduction",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Smooth Jazz"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Urban Twilight",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Trip-Hop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Beginnings",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Jazzhop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Kawaii vibes",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Techno Pop"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the best Nanashino-chan tracks for commercial videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recommended starting tracks include Smooth Groove for premium lifestyle and café visuals, Smooth Transitions for product demos and business videos, Stillness Vibes for creative work and calm visuals, Urban Twilight for stylish night scenes, and Smooth Beginnings for short cinematic cuts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these recommended tracks in commercial videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you purchase the correct license for your intended use. Standard non-ad commercial content may require a Commercial Creator License, while paid ads, brand campaigns, sponsored videos, and client advertising projects may require a Sync License."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Instagram or TikTok platform audio instead of buying a license?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Platform-library or credit-based usage may be suitable for non-commercial or small-scale projects, but it should not be treated as a substitute for a commercial license, sync license, paid advertising license, client-work license, or brand campaign license."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which track is recommended for brand videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smooth Groove, Sunset Glow, Closing Time Jazz, Urban Twilight, and Smooth introduction are good starting points for brand videos, lifestyle visuals, café content, fashion content, and premium commercial video projects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which tracks are suitable for product demos or business videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smooth Transitions, Stillness Vibes, Soft Sunsine, Calm Transitions, and Ambient Flow are suitable starting points for product demos, SaaS videos, business explainers, app demos, and creative workflow content."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do paid ads require a Sync License?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paid ads, brand campaigns, sponsored campaign videos, client advertising projects, and broader promotional distribution generally require a Sync License or custom license."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+let gaLoaded = false;
+
+function loadGA(){
+  if(gaLoaded) return;
+  gaLoaded = true;
+
+  const script = document.createElement('script');
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
+  script.async = true;
+  document.head.appendChild(script);
+
+  gtag('js', new Date());
+  gtag('config','G-CLHM36E1P0');
+}
+
+window.addEventListener('scroll', loadGA, { once:true });
+window.addEventListener('click', loadGA, { once:true });
+window.addEventListener('mousemove', loadGA, { once:true });
+</script>
 
 </head>
 
 <body>
 
-<div class="container">
+<main class="recommended-page">
 
-<section class="hero">
-
-<span class="hero-label">Nanashino-chan Lo-Fi Music Player</span>
-
-<h1>🎧 Today’s Lo-Fi Track</h1>
-
-<p class="lead">
-Start listening to calm lo-fi music for focus, studying, work sessions, reading, relaxation, and creative time.
-<br>
-今日の作業・勉強・リラックスに最適なLo-Fi音楽を今すぐ再生できます。
-</p>
-
-<div class="hero-actions">
-  <button onclick="playVideo()" class="btn-primary">▶ Start Listening Now</button>
-  <a href="licensing.html" class="btn-secondary">🎬 License This Music</a>
-</div>
-
-<p class="use-note">
-Just listening? Enjoy the music here or continue on YouTube.
-<br>
-Using this track in a YouTube video, Reel, TikTok, podcast, AI video, ad, or client project? Please check the correct license before publishing.
-</p>
-
+<section class="recommended-breadcrumb">
+  <a href="/site/index.html">Home</a> →
+  <a href="/site/pages/">Articles</a> →
+  Recommended Tracks for Commercial Video Use
 </section>
 
-<!-- プレイヤー -->
+<section class="recommended-hero">
+
+  <div class="hero-copy">
+
+
+<p class="hero-badge">
+  Listen first. Then choose the right license.
+</p>
+
+<h1>Recommended Lo-Fi Tracks for Commercial Video Use</h1>
+
+<p class="hero-lead">
+  Preview selected Nanashino-chan tracks for commercial videos, YouTube, business videos,
+  product demos, ads, AI videos, brand campaigns, café content, and short social media edits.
+</p>
+
+<p class="hero-sub">
+  This page is designed as a practical starting point for creators, brands, agencies,
+  and businesses that need to choose music quickly before purchasing the right license.
+</p>
+
+<div class="cta-row">
+  <a href="#listen" class="primary-btn">▶ Start Listening</a>
+  <a href="/site/licensing.html#pricing" class="secondary-btn">View License Options</a>
+  <a href="/site/contact.html" class="dark-btn">Ask About Track Selection</a>
+</div>
+
+
+  </div>
+
+  <div class="hero-player-card" id="listen">
+
+
+<p class="player-kicker">Featured preview player</p>
+
 <div id="player-container" class="player" onclick="playVideo()">
-  <img id="thumbnail" src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg">
+  <img id="thumbnail" src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg" alt="Smooth Groove YouTube thumbnail">
   <div class="play-btn">▶</div>
 </div>
 
-<!-- コントロール -->
+<p class="track-title"></p>
+<p class="album-title"></p>
+
 <div class="player-controls">
 
-<button onclick="playVideo()" class="btn-play">
-▶ Start Listening Now
-</button>
+  <button onclick="playVideo()" class="btn-play">
+    ▶ Start Listening Now
+  </button>
 
-<button onclick="nextTrack()" class="btn-next">
-⏭ Next Track
-</button>
+  <button onclick="nextTrack()" class="btn-next">
+    ⏭ Next Track
+  </button>
 
 </div>
 
 <p class="trust">
-Used by creators｜3,000+ Shazam searches｜Growing worldwide
-<br>
-クリエイターにも使用されています｜Shazam検索3,000回以上｜世界中で少しずつ拡大中
-</p>
-
-<p style="color:#ccc;line-height:1.8;">
-Feel the difference in 10 seconds. Press play and start your focus session.
-<br>
-まずは10秒だけ聴いて、今日の集中時間を始めてください。
+  Used by creators｜3,000+ Shazam searches｜Growing worldwide
+  <br>
+  クリエイターにも使用されています｜Shazam検索3,000回以上｜世界中で少しずつ拡大中
 </p>
 
 <div class="benefits">
 
-<div class="benefit-card">
-<strong>Boost Focus</strong>
-<span>Soft lo-fi beats for work, study, writing, reading, and deep focus.</span>
+  <div class="benefit-card">
+    <strong>Choose Faster</strong>
+    <span>Start from curated tracks instead of searching through a large catalog.</span>
+  </div>
+
+  <div class="benefit-card">
+    <strong>Match the Mood</strong>
+    <span>Find tracks for café, business, product, AI, calm, and short-form visuals.</span>
+  </div>
+
+  <div class="benefit-card">
+    <strong>License Correctly</strong>
+    <span>Commercial use is available when used under the correct license.</span>
+  </div>
+
 </div>
 
-<div class="benefit-card">
-<strong>Calm Your Mind</strong>
-<span>Warm background music for relaxing, slowing down, and reducing noise.</span>
+
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <div class="intro-panel">
+
+
+<h2>Start with a Sound, Not a Wall of Text</h2>
+
+<p>
+  Commercial video music selection should be fast. Instead of reading a long list first,
+  listen to a few strong starting tracks, compare the mood, then choose the license that matches
+  your actual use case.
+</p>
+
+<p>
+  日本語：このページは「説明を読むページ」ではなく、
+  まず聴いて、動画の用途に合う曲を選ぶためのページです。
+</p>
+
+<div class="cta-row">
+  <a href="#choose-by-video-type" class="primary-btn">Choose by Video Type</a>
+  <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="dark-btn">YouTube Music</a>
 </div>
 
-<div class="benefit-card">
-<strong>Creator-Friendly</strong>
-<span>Commercial use is available when used under the correct license.</span>
-</div>
 
-</div>
+  </div>
 
-<!-- 曲情報 -->
-<p class="track-title"></p>
-<p class="album-title"></p>
+</section>
 
-<!-- CTA -->
-<section class="listen" style="display:none;">
-  <h2>🎧 Listen, Save, or Use This Music</h2>
+<section id="choose-by-video-type" class="section-block">
 
-  <p style="color:#ccc;line-height:1.8;margin-top:0;">
-    Save Nanashino-chan music on your favorite platform, or check licensing options if you want to use the music in videos, ads, podcasts, social media, AI videos, or client projects.
+  <h2>Choose by Video Type</h2>
+
+  <p class="section-lead">
+    If you do not know which track to choose, start from the video type.
+    This is the fastest way to match the music mood to your content.
   </p>
 
- <div class="dsp-buttons">
+  <div class="usecase-grid">
 
-  <a href="https://music.apple.com/us/artist/nanashino-chan/1795947895"
-     target="_blank"
-     class="apple">
-    🍎 Save on Apple Music<br>
-    <span>お気に入りに追加</span>
-  </a>
 
-  <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A"
-     target="_blank"
-     class="ytmusic">
-    ▶ YouTube Music
-  </a>
-
+<div class="usecase-card">
+  <strong>Premium brand video</strong>
+  <span>Smooth Groove / Sunset Glow</span>
 </div>
 
-<div class="cta-split">
-
-  <div class="cta-box">
-    <h3>🎧 Just listening?</h3>
-    <p>
-      Continue listening on YouTube or save the artist page on Apple Music / YouTube Music.
-    </p>
-    <a href="https://www.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank">Continue on YouTube →</a>
-  </div>
-
-  <div class="cta-box">
-    <h3>🎬 Using this for content?</h3>
-    <p>
-      For YouTube, TikTok, Instagram, podcasts, ads, AI videos, business videos, or client work, check the license first.
-    </p>
-    <a href="licensing.html">View licensing options →</a>
-  </div>
-
+<div class="usecase-card">
+  <strong>Product demo</strong>
+  <span>Smooth Transitions / Calm Transitions</span>
 </div>
+
+<div class="usecase-card">
+  <strong>AI-generated video</strong>
+  <span>Stillness Vibes / Ambient Flow</span>
+</div>
+
+<div class="usecase-card">
+  <strong>Café lifestyle reel</strong>
+  <span>Closing Time Jazz / Lazy Afternoon Vibes</span>
+</div>
+
+<div class="usecase-card">
+  <strong>Tokyo night visual</strong>
+  <span>Urban Twilight / Vaporwave Streets</span>
+</div>
+
+<div class="usecase-card">
+  <strong>Short intro or Reel</strong>
+  <span>Smooth Beginnings / Kawaii vibes</span>
+</div>
+
+<div class="usecase-card">
+  <strong>Calm wellness video</strong>
+  <span>Ambient Flow / Goodnight, Lo-Fi Jazz</span>
+</div>
+
+<div class="usecase-card">
+  <strong>Business explainer</strong>
+  <span>Smooth Transitions / Stillness Vibes</span>
+</div>
+
+
+  </div>
 
 </section>
 
-<!-- YouTube導線 -->
-<a id="youtubeLink" target="_blank">
-🎧 Continue on YouTube
-</a>
+<section id="hero-picks" class="section-block">
 
-<p style="margin-top:10px;font-size:13px;opacity:0.78;line-height:1.8;">
-Using this track for a video, ad, podcast, AI video, or client project?
-<br>
-<a href="licensing.html" style="color:#ffcc00;font-weight:800;">Get the correct license before publishing →</a>
-</p>
+  <h2>Hero Picks: Fast Starting Tracks</h2>
 
-<section class="info-section">
+  <p class="section-lead">
+    These tracks are strong starting points for commercial video selection because they are easy to understand,
+    flexible across different visual styles, and suitable for common creator and business use cases.
+  </p>
 
-<h2>Lo-Fi Music for Focus, Study, Work, and Creative Time</h2>
+  <div class="quick-grid">
 
-<p>
-Nanashino-chan creates calm lo-fi music for people who need a soft background sound while working, studying, reading, coding, writing, relaxing, or creating content.
-</p>
 
-<p>
-This page is designed for immediate listening. Press play, move to the next track, save the music on Apple Music or YouTube Music, or continue listening on YouTube.
-</p>
-
-<p>
-If you want to use Nanashino-chan music in your own content, the listening experience and the licensing use case are different. Videos, ads, podcasts, business content, AI videos, social media posts, and client projects may require the correct license.
-</p>
-
-<h2>For Creators, Brands, and Video Projects</h2>
-
-<p>
-Nanashino-chan music can be useful for YouTube videos, Instagram Reels, TikTok videos, YouTube Shorts, podcasts, AI-generated videos, product demos, tutorials, UGC ads, influencer campaigns, business videos, and commercial content workflows.
-</p>
-
-<p>
-Commercial use is available when the music is used within the correct license scope. A license helps clarify permitted use, but platform behavior may still depend on each platform’s copyright systems, Content ID, advertising rules, account type, region, and policy changes.
-</p>
-
-<div class="related-links">
-
-<a href="/site/licensing.html">
-<strong>Music Licensing Options</strong>
-<span>Choose a license for creator, commercial, sync, brand, or custom use.</span>
-</a>
-
-<a href="/site/works.html">
-<strong>Real Use Cases</strong>
-<span>See examples of Nanashino-chan music used in brand and creator projects.</span>
-</a>
-
-<a href="/site/pages/music-license-for-youtube-creators.html">
-<strong>Music License for YouTube Creators</strong>
-<span>Understand music license proof, YouTube use, and creator workflows.</span>
-</a>
-
-<a href="/site/pages/music-for-content-creators.html">
-<strong>Music for Content Creators</strong>
-<span>Lo-fi music for videos, social media, podcasts, streams, and creator content.</span>
-</a>
-
-<a href="/site/pages/music-for-ai-video-generators.html">
-<strong>Music for AI Video Generators</strong>
-<span>Licensed music for AI video workflows and commercial AI content.</span>
-</a>
-
-<a href="/site/faq.html">
-<strong>FAQ</strong>
-<span>Read common questions about licensing, commercial use, and safe music use.</span>
-</a>
-
+<div class="quick-card highlight">
+  <h3>Smooth Groove</h3>
+  <p class="genre">Chillhop</p>
+  <p>
+    Best for premium lifestyle videos, café visuals, fashion content, brand mood reels,
+    calm commercial edits, and warm creator videos.
+  </p>
+  <p>
+    Discovery signal: 1,700+ Instagram Reels and 5M+ estimated views across user-generated usage.
+  </p>
+  <button class="listen-btn" onclick="selectTrack(0)">▶ Listen</button>
 </div>
+
+<div class="quick-card">
+  <h3>Smooth Transitions</h3>
+  <p class="genre">Smooth Jazzhop</p>
+  <p>
+    Best for product demos, SaaS videos, app walkthroughs, business explainers,
+    workflow videos, and clean modern edits.
+  </p>
+  <button class="listen-btn" onclick="selectTrack(2)">▶ Listen</button>
+</div>
+
+<div class="quick-card">
+  <h3>Stillness Vibes</h3>
+  <p class="genre">Classic Electronica</p>
+  <p>
+    Best for creative workflow videos, quiet business visuals, modern technology scenes,
+    AI-assisted content, and calm product visuals.
+  </p>
+  <button class="listen-btn" onclick="selectTrack(3)">▶ Listen</button>
+</div>
+
+
+  </div>
 
 </section>
 
-<div class="footer-links">
+<section class="full-infographic">
+
+  <h2>How Track Selection Leads to Licensing</h2>
+
+  <p>
+    First choose the music mood. Then choose the license based on how the video will be used:
+    personal, commercial, client work, paid advertising, brand campaign, AI video, or custom media use.
+  </p>
+
+<img
+ src="/site/images/infographics/music-licensing-process.webp"
+ alt="Music licensing process infographic for commercial video use"
+ loading="lazy"
+ width="1600"
+ height="900">
+
+  <a href="/site/images/infographics/music-licensing-process.webp" target="_blank" rel="noopener noreferrer" class="image-open-link">
+    Open full-size infographic →
+  </a>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Recommended Tracks by Use Case</h2>
+
+  <p class="section-lead">
+    Nanashino-chan has a large lo-fi catalog, but a smaller curated starting list is easier for video teams.
+    Use the cards below to choose a track by mood, video type, and commercial context.
+  </p>
+
+  <div class="category-header">
+    <h2>🎬 Commercial Video Starter Picks</h2>
+    <p>
+      Use these tracks when you need a flexible starting point for brand videos, creator content,
+      YouTube videos, product scenes, and general commercial online video.
+    </p>
+  </div>
+
+  <div class="track-grid">
+
+
+<article class="track-card">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/PnyutlzXem0/hqdefault.jpg" alt="Smooth Groove thumbnail" loading="lazy">
+  </div>
+  <div class="track-body">
+    <h3>Smooth Groove</h3>
+    <p class="genre">Chillhop</p>
+    <p>
+      Premium lifestyle, café, fashion, calm brand reels, creator videos, and commercial mood edits.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Premium</span>
+      <span class="tag">Café</span>
+      <span class="tag">Lifestyle</span>
+      <span class="tag">Brand</span>
+    </div>
+    <div class="listen-row">
+      <button class="listen-btn" onclick="selectTrack(0)">▶ Listen</button>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">🌇</div>
+  <div class="track-body">
+    <h3>Sunset Glow</h3>
+    <p class="genre">Smooth Jazzhop</p>
+    <p>
+      Warm lifestyle visuals, travel edits, soft brand content, product scenes, and gentle storytelling.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Warm</span>
+      <span class="tag">Travel</span>
+      <span class="tag">Soft Brand</span>
+      <span class="tag">Lifestyle</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/MBsx4sUtNxs/hqdefault.jpg" alt="Smooth Transitions thumbnail" loading="lazy">
+  </div>
+  <div class="track-body">
+    <h3>Smooth Transitions</h3>
+    <p class="genre">Smooth Jazzhop</p>
+    <p>
+      SaaS demos, product videos, business explainers, app walkthroughs, and workflow visuals.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Product Demo</span>
+      <span class="tag">SaaS</span>
+      <span class="tag">Business</span>
+      <span class="tag">Clean</span>
+    </div>
+    <div class="listen-row">
+      <button class="listen-btn" onclick="selectTrack(2)">▶ Listen</button>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+
+  </div>
+
+  <div class="category-header">
+    <h2>🎨 Creative & Work Flow</h2>
+    <p>
+      These tracks work well for creative workflow visuals, business videos, product explainers,
+      focus content, AI videos, and modern edits that need background music without overpowering the message.
+    </p>
+  </div>
+
+  <div class="track-grid">
+
+
+<article class="track-card">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/GRGkJoQGMjs/hqdefault.jpg" alt="Stillness Vibes thumbnail" loading="lazy">
+  </div>
+  <div class="track-body">
+    <h3>Stillness Vibes</h3>
+    <p class="genre">Classic Electronica</p>
+    <p>
+      Creative workflow videos, modern product visuals, quiet business explainers,
+      AI-assisted content, and calm technology scenes.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Workflow</span>
+      <span class="tag">AI Video</span>
+      <span class="tag">Technology</span>
+      <span class="tag">Calm</span>
+    </div>
+    <div class="listen-row">
+      <button class="listen-btn" onclick="selectTrack(3)">▶ Listen</button>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">☀️</div>
+  <div class="track-body">
+    <h3>Soft Sunsine</h3>
+    <p class="genre">Chillhop</p>
+    <p>
+      Light brand content, casual creator videos, soft product scenes,
+      friendly social media posts, and relaxed work-related visuals.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Light</span>
+      <span class="tag">Friendly</span>
+      <span class="tag">Creator</span>
+      <span class="tag">Social</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">🧩</div>
+  <div class="track-body">
+    <h3>Calm Transitions</h3>
+    <p class="genre">Lo-Fi Hip-Hop</p>
+    <p>
+      Product demos, workflow videos, explainer content, AI videos,
+      business education, and steady background scenes.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Explainer</span>
+      <span class="tag">Workflow</span>
+      <span class="tag">Steady</span>
+      <span class="tag">Background</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+
+  </div>
+
+  <div class="category-header">
+    <h2>🧘 Calm & Mindful Moments</h2>
+    <p>
+      These tracks are useful for wellness brands, calm business videos, night visuals,
+      soft commercial storytelling, quiet product scenes, and reflective content.
+    </p>
+  </div>
+
+  <div class="track-grid">
+
+
+<article class="track-card">
+  <div class="track-art">🌙</div>
+  <div class="track-body">
+    <h3>Goodnight, Lo-Fi Jazz</h3>
+    <p class="genre">Lo-Fi Jazz</p>
+    <p>
+      Night visuals, sleep content, calm lifestyle videos, relaxing scenes,
+      and soft background moments.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Night</span>
+      <span class="tag">Sleep</span>
+      <span class="tag">Relax</span>
+      <span class="tag">Soft</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">🌊</div>
+  <div class="track-body">
+    <h3>Ambient Flow</h3>
+    <p class="genre">Down Tempo</p>
+    <p>
+      Wellness videos, meditation-style visuals, slow edits,
+      reflective brand scenes, and soft background storytelling.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Wellness</span>
+      <span class="tag">Meditation</span>
+      <span class="tag">Slow</span>
+      <span class="tag">Ambient</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">🍃</div>
+  <div class="track-body">
+    <h3>Warm Breeze</h3>
+    <p class="genre">Lo-Fi Hip-Hop</p>
+    <p>
+      Relaxed brand videos, warm social content, lifestyle clips,
+      travel moments, and gentle creator videos.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Warm</span>
+      <span class="tag">Travel</span>
+      <span class="tag">Lifestyle</span>
+      <span class="tag">Relaxed</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">🎧</div>
+  <div class="track-body">
+    <h3>Smooth Vibes</h3>
+    <p class="genre">R&amp;B</p>
+    <p>
+      Soft lifestyle edits, emotional commercial content,
+      calm product scenes, and smooth social media videos.
+    </p>
+    <div class="tag-list">
+      <span class="tag">R&amp;B</span>
+      <span class="tag">Soft</span>
+      <span class="tag">Emotional</span>
+      <span class="tag">Smooth</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+
+  </div>
+
+  <div class="category-header">
+    <h2>☕ Café & Cozy Lifestyle</h2>
+    <p>
+      These tracks fit café visuals, reading content, bookstore scenes, lifestyle brands,
+      cozy product videos, fashion content, city night edits, and relaxed social media campaigns.
+    </p>
+  </div>
+
+  <div class="track-grid">
+
+
+<article class="track-card">
+  <div class="track-art">☕</div>
+  <div class="track-body">
+    <h3>Closing Time Jazz</h3>
+    <p class="genre">Chillhop</p>
+    <p>
+      Café videos, evening visuals, cozy brand content, lifestyle edits,
+      and calm closing-scene storytelling.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Café</span>
+      <span class="tag">Evening</span>
+      <span class="tag">Cozy</span>
+      <span class="tag">Chillhop</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">📖</div>
+  <div class="track-body">
+    <h3>Lazy Afternoon Vibes</h3>
+    <p class="genre">Chillhop</p>
+    <p>
+      Lifestyle videos, café scenes, reading clips, relaxed product visuals,
+      and warm afternoon content.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Afternoon</span>
+      <span class="tag">Reading</span>
+      <span class="tag">Relaxed</span>
+      <span class="tag">Lifestyle</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">📚</div>
+  <div class="track-body">
+    <h3>Bookstore Dreams</h3>
+    <p class="genre">Chillhop</p>
+    <p>
+      Bookstore visuals, reading content, study scenes, educational creators,
+      quiet business content, and calm lifestyle edits.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Bookstore</span>
+      <span class="tag">Study</span>
+      <span class="tag">Quiet</span>
+      <span class="tag">Education</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">✨</div>
+  <div class="track-body">
+    <h3>Smooth introduction</h3>
+    <p class="genre">Smooth Jazz</p>
+    <p>
+      Elegant intros, soft brand openings, corporate introductions,
+      professional reels, and polished lifestyle scenes.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Intro</span>
+      <span class="tag">Elegant</span>
+      <span class="tag">Corporate</span>
+      <span class="tag">Polished</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">
+    <img src="https://img.youtube.com/vi/mtQwxopXhYo/hqdefault.jpg" alt="Vaporwave Streets thumbnail" loading="lazy">
+  </div>
+  <div class="track-body">
+    <h3>Urban Twilight</h3>
+    <p class="genre">Trip-Hop</p>
+    <p>
+      Tokyo night visuals, urban lifestyle videos, stylish brand content,
+      fashion edits, and modern city scenes.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Tokyo Night</span>
+      <span class="tag">Urban</span>
+      <span class="tag">Fashion</span>
+      <span class="tag">Stylish</span>
+    </div>
+    <div class="listen-row">
+      <button class="listen-btn" onclick="selectTrack(1)">▶ Listen</button>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+
+  </div>
+
+  <div class="category-header">
+    <h2>🎬 Short Cinematic Cuts</h2>
+    <p>
+      These tracks are useful for short intros, Reels, Shorts, TikTok-style clips,
+      opening scenes, quick product cuts, and short cinematic social media edits.
+    </p>
+  </div>
+
+  <div class="track-grid">
+
+
+<article class="track-card">
+  <div class="track-art">🎞️</div>
+  <div class="track-body">
+    <h3>Smooth Beginnings</h3>
+    <p class="genre">Jazzhop</p>
+    <p>
+      Short intros, Reels, opening scenes, quick brand cuts,
+      social clips, and commercial edits under 30 seconds.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Shorts</span>
+      <span class="tag">Reels</span>
+      <span class="tag">Intro</span>
+      <span class="tag">Under 30s</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+<article class="track-card">
+  <div class="track-art">💫</div>
+  <div class="track-body">
+    <h3>Kawaii vibes</h3>
+    <p class="genre">Techno Pop</p>
+    <p>
+      Cute product videos, pop visuals, playful short clips,
+      creator edits, and bright social media content.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Cute</span>
+      <span class="tag">Pop</span>
+      <span class="tag">Playful</span>
+      <span class="tag">Social</span>
+    </div>
+    <div class="listen-row">
+      <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="catalog-btn">Browse Catalog</a>
+      <a href="/site/licensing.html#pricing" class="catalog-btn">License</a>
+    </div>
+  </div>
+</article>
+
+
+  </div>
+
+</section>
+
+<section class="full-infographic">
+
+  <h2>Listening Is Only the First Step. Licensing Still Matters.</h2>
+
+  <p>
+    A track may sound perfect for your video, but the correct license depends on the actual use:
+    organic YouTube content, business videos, client projects, paid ads, sponsored campaigns,
+    AI-generated videos, or long-term brand promotion.
+  </p>
+
+  <p>
+    Platform-library or credit-based usage may be suitable for non-commercial or small-scale projects,
+    but it should not be treated as a substitute for a commercial license, sync license,
+    paid advertising license, client-work license, or brand campaign license.
+  </p>
+
+<img
+ src="/site/images/infographics/why-both-rights-matter.webp"
+ alt="Why both copyright permission and master rights permission matter for commercial music use"
+ loading="lazy"
+ width="1600"
+ height="900">
+
+  <a href="/site/images/infographics/why-both-rights-matter.webp" target="_blank" rel="noopener noreferrer" class="image-open-link">
+    Open full-size infographic →
+  </a>
+
+</section>
+
+<section class="section-block license-panel">
+
+  <h2>Which License Do These Tracks Need?</h2>
+
+  <p class="section-lead">
+    Track selection and license selection are separate decisions.
+    Choose the music based on mood, then choose the license based on how the final video will be used.
+  </p>
+
+  <div class="license-grid">
+
+
+<div class="license-card">
+  <h3>Personal Use License</h3>
+  <p class="price">$19</p>
+  <p>
+    For personal, non-commercial, small-scale use only.
+    Not for monetized videos, client work, paid ads, or business promotion.
+  </p>
+  <a href="https://nanashinochan.gumroad.com/l/jmzek" target="_blank" rel="noopener noreferrer" class="catalog-btn">Open Gumroad</a>
+</div>
+
+<div class="license-card">
+  <h3>Commercial Creator License</h3>
+  <p class="price">$500</p>
+  <p>
+    For monetized YouTube videos, business videos, organic social content,
+    website videos, product demos, and non-ad commercial online videos.
+  </p>
+  <a href="https://nanashinochan.gumroad.com/l/qhjyhg" target="_blank" rel="noopener noreferrer" class="catalog-btn">Open Gumroad</a>
+</div>
+
+<div class="license-card">
+  <h3>1-Month Sync License</h3>
+  <p class="price">$500</p>
+  <p>
+    For short-term paid ads, brand campaigns, YouTube campaigns,
+    social campaigns, promotional videos, and sync use.
+  </p>
+  <a href="https://nanashinochan.gumroad.com/l/lddwsb" target="_blank" rel="noopener noreferrer" class="catalog-btn">Open Gumroad</a>
+</div>
+
+<div class="license-card">
+  <h3>3-Month Sync License</h3>
+  <p class="price">$1,200</p>
+  <p>
+    For longer campaigns, extended paid social distribution,
+    brand promotion, campaign videos, and broader commercial visibility.
+  </p>
+  <a href="https://nanashinochan.gumroad.com/l/zwjyq" target="_blank" rel="noopener noreferrer" class="catalog-btn">Open Gumroad</a>
+</div>
+
+
+  </div>
+
+  <div class="cta-row">
+    <a href="/site/licensing.html#pricing" class="primary-btn">View Full License Guide</a>
+    <a href="/site/contact.html" class="secondary-btn">Ask Which License You Need</a>
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Simple Use Case Guide</h2>
+
+  <div class="note-box">
+
+
+<ul>
+  <li><strong>Personal non-commercial video:</strong> Personal Use License may be enough if there is no monetization, business purpose, client work, or advertising.</li>
+  <li><strong>Monetized YouTube video:</strong> Commercial Creator License is the usual starting point.</li>
+  <li><strong>Business website or organic social video:</strong> Commercial Creator License is usually the starting point.</li>
+  <li><strong>Client project or agency deliverable:</strong> Commercial, Sync, or Custom License may be needed depending on distribution and campaign scope.</li>
+  <li><strong>Paid Instagram, TikTok, YouTube, Facebook, or LinkedIn ads:</strong> Sync License is the safer starting point.</li>
+  <li><strong>TV, cinema, games, apps, or exclusive use:</strong> Contact first for custom terms.</li>
+</ul>
+
+
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Browse the Full Catalog</h2>
+
+  <p class="section-lead">
+    The embedded player highlights selected tracks with known YouTube preview IDs.
+    To search the wider Nanashino-chan catalog, use the official YouTube Music account or Topic page.
+  </p>
+
+  <div class="cta-row">
+    <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="primary-btn">▶ YouTube Music</a>
+    <a href="https://www.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="secondary-btn">Open Topic Page</a>
+    <a href="/site/music.html" class="dark-btn">Browse Site Music Page</a>
+    <a href="/site/today.html" class="dark-btn">Listen Now</a>
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Related Guides</h2>
+
+  <p class="section-lead">
+    Continue with these guides if you need help choosing a license, understanding commercial use,
+    avoiding Content ID confusion, or licensing music for business videos and campaigns.
+  </p>
+
+  <div class="related-grid">
+
+
+<a href="/site/licensing.html" class="related-card featured">
+  <strong>Music Licensing Page</strong>
+  <span>Commercial, sync, brand, and custom music licensing.</span>
+</a>
+
+<a href="/site/pages/music-license-for-business-videos.html" class="related-card">
+  <strong>Music License for Business Videos</strong>
+  <span>Licensing guide for company videos, product demos, and business content.</span>
+</a>
+
+<a href="/site/pages/music-licensing-for-commercial-use-guide.html" class="related-card">
+  <strong>Music Licensing for Commercial Use</strong>
+  <span>Commercial music licensing guide for creators, brands, and agencies.</span>
+</a>
+
+<a href="/site/pages/how-to-choose-music-license-for-videos.html" class="related-card">
+  <strong>How to Choose a Music License for Videos</strong>
+  <span>Choose the right license before publishing video content.</span>
+</a>
+
+<a href="/site/pages/music-licensing-vs-sync-licensing.html" class="related-card">
+  <strong>Music Licensing vs Sync Licensing</strong>
+  <span>Understand the difference before choosing a license.</span>
+</a>
+
+<a href="/site/pages/music-license-for-paid-social-ads.html" class="related-card">
+  <strong>Music License for Paid Social Ads</strong>
+  <span>Licensing for Instagram, TikTok, Facebook, LinkedIn, and YouTube ads.</span>
+</a>
+
+<a href="/site/pages/music-for-product-demo-videos.html" class="related-card">
+  <strong>Music for Product Demo Videos</strong>
+  <span>Track selection and licensing for product demonstration videos.</span>
+</a>
+
+<a href="/site/pages/music-for-ai-video-generators.html" class="related-card">
+  <strong>Music for AI Video Generators</strong>
+  <span>Licensed music for AI-generated video workflows.</span>
+</a>
+
+<a href="/site/pages/how-to-avoid-content-id-claims.html" class="related-card">
+  <strong>How to Avoid Content ID Claims</strong>
+  <span>Checklist before uploading music-based videos.</span>
+</a>
+
+
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>FAQ</h2>
+
+  <div class="note-box">
+
+
+<h3>What are the best Nanashino-chan tracks for commercial videos?</h3>
 <p>
+  Recommended starting tracks include Smooth Groove for premium lifestyle and café visuals,
+  Smooth Transitions for product demos and business videos, Stillness Vibes for creative work and calm visuals,
+  Urban Twilight for stylish night scenes, and Smooth Beginnings for short cinematic cuts.
+</p>
+
+<h3>Can I use these recommended tracks in commercial videos?</h3>
+<p>
+  Yes, if you purchase the correct license for your intended use.
+  Standard non-ad commercial content may require a Commercial Creator License,
+  while paid ads, brand campaigns, sponsored videos, and client advertising projects may require a Sync License.
+</p>
+
+<h3>Which track is recommended for brand videos?</h3>
+<p>
+  Smooth Groove, Sunset Glow, Closing Time Jazz, Urban Twilight, and Smooth introduction
+  are good starting points for brand videos, lifestyle visuals, café content, fashion content,
+  and premium commercial video projects.
+</p>
+
+<h3>Which tracks are suitable for product demos or business videos?</h3>
+<p>
+  Smooth Transitions, Stillness Vibes, Soft Sunsine, Calm Transitions, and Ambient Flow
+  are suitable starting points for product demos, SaaS videos, business explainers, app demos,
+  and creative workflow content.
+</p>
+
+<h3>Can I use Instagram or TikTok platform audio instead of buying a license?</h3>
+<p>
+  Platform-library or credit-based usage may be suitable for non-commercial or small-scale projects,
+  but it should not be treated as a substitute for a commercial license, sync license,
+  paid advertising license, client-work license, or brand campaign license.
+</p>
+
+<h3>Do paid ads require a Sync License?</h3>
+<p>
+  Paid ads, brand campaigns, sponsored campaign videos, client advertising projects,
+  and broader promotional distribution generally require a Sync License or custom license.
+</p>
+
+
+  </div>
+
+</section>
+
+<section class="section-block final-cta">
+
+  <h2>Listen, Pick a Track, Then License It Correctly</h2>
+
+  <p>
+    Start with a recommended track that fits your visual tone.
+    Then choose the license that matches your actual use: personal, commercial, client work,
+    paid advertising, brand campaign, AI video, or custom media use.
+  </p>
+
+  <div class="cta-row" style="justify-content:center;">
+    <a href="#listen" class="primary-btn">▶ Listen Again</a>
+    <a href="/site/licensing.html#pricing" class="secondary-btn">View License Plans</a>
+    <a href="/site/contact.html" class="dark-btn">Contact for Track Advice</a>
+  </div>
+
+</section>
+
+<section class="section-block disclaimer-section">
+
+  <h2>Disclaimer</h2>
+
+  <p>
+    This page provides general track recommendations and music licensing information.
+    It is not legal advice and does not guarantee platform behavior, monetization approval,
+    video performance, ad performance, reach, or claim outcomes.
+  </p>
+
+  <p>
+    A license clarifies permitted use from the rights holder, but platform systems such as YouTube Content ID,
+    Instagram, TikTok, Facebook, advertising review systems, and future platform policy changes may still depend on
+    each platform’s rules, account status, region, metadata, and automated review behavior.
+  </p>
+
+  <h2>免責事項</h2>
+
+  <p>
+    このページは、商用動画向けのおすすめ曲と音楽ライセンスに関する一般的な情報を提供するものです。
+    法的助言ではなく、各プラットフォームでの表示、収益化、広告成果、再生数、Content IDの挙動を保証するものではありません。
+  </p>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+<div class="footer-container">
+
+<div class="footer-brand">
+<h2>Nanashino-chan</h2>
+<p>© Nanashino-chan</p>
+</div>
+
+<div class="footer-links-sub">
 <a href="/site/index.html">Home</a> |
-<a href="/site/music.html">Music</a> |
-<a href="/site/licensing.html">License</a> |
-<a href="/site/pages/">All Pages</a> |
+<a href="/site/today.html">Listen Now</a> |
+<a href="/site/licensing.html">License Music</a> |
+<a href="/site/faq.html">FAQ</a> |
+<a href="/site/terms.html">Terms</a> |
+<a href="/site/commerce.html">Legal</a> |
+<a href="/site/policy.html">Policy</a> |
 <a href="/site/contact.html">Contact</a>
-</p>
 </div>
 
+<p class="footer-note">
+🎧 No interruptions. Just pure lo-fi music.<br>
+<a href="/site/licensing.html">▶ License this music</a>
+</p>
+
 </div>
+</footer>
 
 <script>
-
-/* トラック */
 const tracks = [
   {
     title: "Smooth Groove – Chill Lo-Fi Beat",
     videoId: "PnyutlzXem0",
     apple: "https://music.apple.com/us/album/smooth-groove-remastered-night-caf%C3%A9-single/1860873849",
-    album: "Smooth Chillhop Jazz Beats"
+    album: "Smooth Chillhop Jazz Beats",
+    subtitle: "Chillhop · Premium lifestyle / café / brand mood videos"
   },
   {
     title: "Vaporwave Streets – Synthwave Lo-Fi",
     videoId: "mtQwxopXhYo",
     apple: "https://music.apple.com/us/album/retro-pulse-lo-fi-synth-grooves-from-the-night/1808187852",
-    album: "Retro Pulse: Lo-Fi Synth Grooves from the Night"
+    album: "Retro Pulse: Lo-Fi Synth Grooves from the Night",
+    subtitle: "Synthwave Lo-Fi · Night visuals / tech edits / Tokyo-style mood"
   },
   {
     title: "Smooth Transitions – Chillhop Lo-Fi",
     videoId: "MBsx4sUtNxs",
     apple: "https://music.apple.com/us/album/chillhop-lo-fi-relax-focus-instrumental/1796933282",
-    album: "Chillhop Lo-Fi Relax & Focus"
+    album: "Chillhop Lo-Fi Relax & Focus",
+    subtitle: "Smooth Jazzhop · Product demos / SaaS / business explainers"
   },
   {
     title: "Stillness Vibes – Calm Lo-Fi",
     videoId: "GRGkJoQGMjs",
     apple: "https://music.apple.com/us/album/smooth-waves-timeless-electronica-lo-fi-grooves/1811585664",
-    album: "Smooth Waves"
+    album: "Smooth Waves",
+    subtitle: "Classic Electronica · Creative workflow / AI videos / calm product visuals"
   }
 ];
 
 let player;
 let currentIndex = 0;
+let pendingPlayerInit = false;
+
+function onYouTubeIframeAPIReady() {
+  if (pendingPlayerInit) {
+    pendingPlayerInit = false;
+    initPlayer();
+  }
+}
 
 function initPlayer() {
   if (player) return;
 
+  if (!window.YT || !YT.Player) {
+    pendingPlayerInit = true;
+    return;
+  }
+
   const container = document.getElementById("player-container");
+
+  if (!container) return;
+
   container.innerHTML = '<div id="player"></div>';
 
   player = new YT.Player("player", {
     height: "405",
     width: "720",
     videoId: tracks[currentIndex].videoId,
-    playerVars: { autoplay: 1 }
+    playerVars: {
+      autoplay: 1,
+      rel: 0,
+      playsinline: 1
+    },
+    events: {
+      onReady: function(event) {
+        event.target.playVideo();
+        updateUI();
+      }
+    }
   });
-
-  updateUI();
 }
 
 function playVideo() {
@@ -644,6 +2174,8 @@ function playVideo() {
   } else {
     player.playVideo();
   }
+
+  updateUI();
 }
 
 function nextTrack() {
@@ -658,26 +2190,56 @@ function nextTrack() {
   updateUI();
 }
 
+function selectTrack(index) {
+  if (!tracks[index]) return;
+
+  currentIndex = index;
+
+  if (!player) {
+    initPlayer();
+  } else {
+    player.loadVideoById(tracks[currentIndex].videoId);
+  }
+
+  updateUI();
+
+  const listenSection = document.getElementById("listen");
+
+  if (listenSection) {
+    listenSection.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }
+}
+
 function updateUI() {
   const track = tracks[currentIndex];
 
-  setTimeout(() => {
-    document.querySelector(".listen").style.display = "block";
-  }, 3000);
+  const trackTitle = document.querySelector(".track-title");
+  const albumTitle = document.querySelector(".album-title");
+  const thumbnail = document.getElementById("thumbnail");
 
-  document.querySelector(".apple").href = track.apple;
-  document.querySelector(".track-title").textContent = track.title;
-  document.querySelector(".album-title").innerHTML = `Album: ${track.album}`;
+  if (trackTitle) {
+    trackTitle.textContent = track.title;
+  }
 
-  document.getElementById("youtubeLink").href =
-    "https://www.youtube.com/watch?v=" + track.videoId;
+  if (albumTitle) {
+    albumTitle.textContent = track.subtitle + " · Album: " + track.album;
+  }
+
+  if (thumbnail) {
+    thumbnail.src = "https://img.youtube.com/vi/" + track.videoId + "/hqdefault.jpg";
+    thumbnail.alt = track.title + " YouTube thumbnail";
+  }
 }
 
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", function() {
   updateUI();
-};
-
+});
 </script>
+
+<script src="/site/js/app.js" defer></script>
 
 </body>
 </html>
