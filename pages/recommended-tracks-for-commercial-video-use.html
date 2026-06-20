@@ -2609,129 +2609,139 @@ const tracks = [
   }
 ];
 
+
 let player;
 let currentIndex = 0;
 let pendingPlayerInit = false;
 
 function onYouTubeIframeAPIReady() {
-  if (pendingPlayerInit) {
-    pendingPlayerInit = false;
-    initPlayer();
-  }
+if (pendingPlayerInit) {
+pendingPlayerInit = false;
+initPlayer();
+}
 }
 
 function initPlayer() {
-  if (player) return;
+if (player) return;
 
-  if (!window.YT || !YT.Player) {
-    pendingPlayerInit = true;
-    return;
-  }
+if (!window.YT || !YT.Player) {
+pendingPlayerInit = true;
+return;
+}
 
-  const container = document.getElementById("player-container");
+const container = document.getElementById("player-container");
 
-  if (!container) return;
+if (!container) return;
 
-  container.innerHTML = '<div id="player"></div>';
+container.innerHTML = '<div id="player"></div>';
 
-  player = new YT.Player("player", {
-    height: "405",
-    width: "720",
-    videoId: tracks[currentIndex].videoId,
-    playerVars: {
-      autoplay: 1,
-      rel: 0,
-      playsinline: 1
-    },
-    events: {
-      onReady: function(event) {
-        event.target.playVideo();
-        updateUI();
-      }
+player = new YT.Player("player", {
+height: "405",
+width: "720",
+videoId: tracks[currentIndex].videoId,
+playerVars: {
+autoplay: 1,
+rel: 0,
+playsinline: 1
+},
+events: {
+onReady: function(event) {
+updateUI();
+
+
+    if (event.target && typeof event.target.playVideo === "function") {
+      event.target.playVideo();
     }
-  });
+  }
+}
+
+
+});
 }
 
 function playVideo() {
-  if (!player) {
-    initPlayer();
+updateUI();
 
-    setTimeout(function() {
-      if (player && player.playVideo) {
-        player.playVideo();
-      }
-    }, 300);
-  } else {
+if (!player) {
+initPlayer();
+
+
+setTimeout(function() {
+  if (player && typeof player.playVideo === "function") {
     player.playVideo();
   }
+}, 400);
 
-  updateUI();
+return;
+
+
+}
+
+if (player && typeof player.playVideo === "function") {
+player.playVideo();
+}
 }
 
 function nextTrack() {
-  currentIndex = (currentIndex + 1) % tracks.length;
-
-  if (!player) {
-    initPlayer();
-  } else {
-    player.loadVideoById(tracks[currentIndex].videoId);
-  }
-
-  updateUI();
+const nextIndex = (currentIndex + 1) % tracks.length;
+selectTrack(nextIndex);
 }
 
 function selectTrack(index) {
-  if (!tracks[index]) return;
+if (!tracks[index]) return;
 
-  currentIndex = index;
+currentIndex = index;
+updateUI();
 
-  if (!player) {
-    initPlayer();
-  } else {
-    player.loadVideoById(tracks[currentIndex].videoId);
-  }
+if (!player) {
+initPlayer();
+} else if (player && typeof player.loadVideoById === "function") {
+player.loadVideoById(tracks[currentIndex].videoId);
+} else {
+initPlayer();
+}
 
-  updateUI();
+const listenSection = document.getElementById("listen");
 
-  const listenSection = document.getElementById("listen");
-
-  if (listenSection) {
-    listenSection.scrollIntoView({
-      behavior: "smooth",
-      block: "center"
-    });
-  }
+if (listenSection) {
+listenSection.scrollIntoView({
+behavior: "smooth",
+block: "center"
+});
+}
 }
 
 function updateUI() {
-  const track = tracks[currentIndex];
+const track = tracks[currentIndex];
 
-  const trackTitle = document.querySelector(".track-title");
-  const albumTitle = document.querySelector(".album-title");
-  const thumbnail = document.getElementById("thumbnail");
+if (!track) return;
 
-  if (trackTitle) {
-    trackTitle.textContent = track.title;
-  }
+const trackTitle = document.querySelector(".track-title");
+const albumTitle = document.querySelector(".album-title");
+const thumbnail = document.getElementById("thumbnail");
 
-  if (albumTitle) {
-    if (track.album) {
-      albumTitle.textContent = track.subtitle + " · Album: " + track.album;
-    } else {
-      albumTitle.textContent = track.subtitle;
-    }
-  }
+if (trackTitle) {
+trackTitle.textContent = track.title;
+}
 
-  if (thumbnail) {
-    thumbnail.src = "https://img.youtube.com/vi/" + track.videoId + "/hqdefault.jpg";
-    thumbnail.alt = track.title + " YouTube thumbnail";
-  }
+if (albumTitle) {
+if (track.album) {
+albumTitle.textContent = track.subtitle + " · Album: " + track.album;
+} else {
+albumTitle.textContent = track.subtitle;
+}
+}
+
+if (thumbnail) {
+thumbnail.src = "[https://img.youtube.com/vi/](https://img.youtube.com/vi/)" + track.videoId + "/hqdefault.jpg";
+thumbnail.alt = track.title + " YouTube thumbnail";
+}
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  updateUI();
-});
-</script>
+updateUI();
+}); </script>
+
 
 <script src="/site/js/app.js" defer></script>
 
