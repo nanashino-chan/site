@@ -1244,13 +1244,13 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 <div class="player-controls">
 
-  <button onclick="playVideo()" class="btn-play">
-    ▶ Start Listening Now
-  </button>
+<button type="button" id="start-player-button" class="btn-play">
+  ▶ Start Listening Now
+</button>
 
-  <button onclick="nextTrack()" class="btn-next">
-    ⏭ Next Track
-  </button>
+<button type="button" id="next-track-button" class="btn-next">
+  ⏭ Next Track
+</button>
 
 </div>
 
@@ -2683,8 +2683,24 @@ player.playVideo();
 }
 
 function nextTrack() {
-const nextIndex = (currentIndex + 1) % tracks.length;
-selectTrack(nextIndex);
+if (!tracks || tracks.length === 0) return;
+
+currentIndex = currentIndex + 1;
+
+if (currentIndex >= tracks.length) {
+currentIndex = 0;
+}
+
+updateUI();
+
+if (!player) {
+initPlayer();
+return;
+}
+
+if (player && typeof player.loadVideoById === "function") {
+player.loadVideoById(tracks[currentIndex].videoId);
+}
 }
 
 function selectTrack(index) {
@@ -2740,7 +2756,25 @@ thumbnail.alt = track.title + " YouTube thumbnail";
 
 document.addEventListener("DOMContentLoaded", function() {
 updateUI();
-}); </script>
+
+const startButton = document.getElementById("start-player-button");
+const nextButton = document.getElementById("next-track-button");
+
+if (startButton) {
+startButton.addEventListener("click", function(event) {
+event.preventDefault();
+playVideo();
+});
+}
+
+if (nextButton) {
+nextButton.addEventListener("click", function(event) {
+event.preventDefault();
+nextTrack();
+});
+}
+}); 
+</script>
 
 
 <script src="/site/js/app.js" defer></script>
