@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -6,307 +8,1343 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LoFi Music for Focus | Deep Concentration Background Music</title>
+<title>Lo-Fi Music for Focus, Deep Work & Concentration | Nanashino-chan</title>
 
-<meta name="description" content="Discover calm lo-fi music for focus, deep work, concentration, studying, programming, and productivity sessions.">
+<meta name="description" content="Listen to calm lo-fi music for focus, deep work, concentration, studying, coding, writing, reading, remote work, and productivity sessions. Instrumental focus-friendly lo-fi by Nanashino-chan.">
 
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://nanashino-chan.github.io/site/pages/lofi-music-for-focus.html">
 
-<meta http-equiv="Content-Security-Policy" content="
-default-src 'self';
-script-src 'self' 'unsafe-inline'
-https://www.youtube.com
-https://www.google.com
-https://www.gstatic.com
-https://s.ytimg.com
-https://www.googletagmanager.com
-https://www.google-analytics.com;
-
-frame-src https://www.youtube.com https://www.youtube-nocookie.com;
-
-connect-src 'self'
-https://www.youtube.com
-https://i.ytimg.com
-https://www.google-analytics.com
-https://www.googletagmanager.com;
-
-img-src 'self'
-https://i.ytimg.com
-https://img.youtube.com
-data:;
-
-style-src 'self' 'unsafe-inline';
-
-font-src 'self';
-
-object-src 'none';
-base-uri 'self';
-">
-
-<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+<link rel="stylesheet" href="/site/style.css">
 
 <link rel="icon" href="/site/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
 
-<meta property="og:title" content="LoFi Music for Focus">
-<meta property="og:description" content="Relaxing lo-fi beats for deep focus, productivity, studying, and concentration sessions.">
-<meta property="og:type" content="website">
+<meta property="og:title" content="Lo-Fi Music for Focus, Deep Work & Concentration">
+<meta property="og:description" content="Calm instrumental lo-fi music for focus, studying, coding, writing, reading, remote work, and long concentration sessions.">
+<meta property="og:type" content="article">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/pages/lofi-music-for-focus.html">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="LoFi Music for Focus">
-<meta name="twitter:description" content="Explore calm lo-fi music for focus, deep work, studying, and productivity enhancement sessions.">
+<meta name="twitter:title" content="Lo-Fi Music for Focus, Deep Work & Concentration">
+<meta name="twitter:description" content="Instrumental lo-fi music for deep work, studying, coding, writing, reading, and productivity sessions.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
-<link rel="stylesheet" href="/site/style.css">
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self' 'unsafe-inline'
+https://www.youtube.com
+https://www.youtube-nocookie.com
+https://www.google.com
+https://www.gstatic.com
+https://s.ytimg.com
+https://www.googletagmanager.com
+https://www.google-analytics.com;
+frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+connect-src 'self' https://www.youtube.com https://i.ytimg.com https://www.google-analytics.com https://www.googletagmanager.com;
+img-src 'self' https://i.ytimg.com https://img.youtube.com data:;
+style-src 'self' 'unsafe-inline';
+font-src 'self';
+object-src 'none';
+base-uri 'self';
+">
+
+<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+
+<style>
+.focus-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 42px 24px 80px;
+}
+
+.focus-breadcrumb {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 34px;
+}
+
+.focus-breadcrumb a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.focus-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 450px);
+  gap: 38px;
+  align-items: center;
+  margin-bottom: 72px;
+}
+
+.hero-badge {
+  display: inline-block;
+  color: #ffcc00;
+  border: 1px solid rgba(255,204,0,0.42);
+  background: rgba(255,204,0,0.06);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.focus-hero h1 {
+  font-size: clamp(38px, 6vw, 66px);
+  line-height: 1.06;
+  margin: 0 0 24px;
+  letter-spacing: -0.045em;
+}
+
+.hero-lead {
+  color: #ddd;
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 0 0 18px;
+}
+
+.hero-sub {
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn,
+.dark-btn {
+  display: inline-block;
+  padding: 15px 22px;
+  border-radius: 12px;
+  font-weight: 900;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.primary-btn {
+  background: #ffcc00;
+  color: #000;
+  box-shadow: 0 10px 28px rgba(255,204,0,0.18);
+}
+
+.secondary-btn {
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+  background: rgba(255,204,0,0.04);
+}
+
+.dark-btn {
+  color: #fff;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.hero-card {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.16), transparent 34%),
+    linear-gradient(180deg, #151515, #0b0b0b);
+  border: 1px solid rgba(255,204,0,0.22);
+  border-radius: 24px;
+  padding: 26px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.32);
+}
+
+.hero-card h2 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.hero-card p,
+.hero-card li {
+  color: #ccc;
+  line-height: 1.85;
+}
+
+.hero-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 22px 0 0;
+}
+
+.hero-card li {
+  margin-bottom: 10px;
+}
+
+.section-block {
+  margin-bottom: 86px;
+}
+
+.section-block h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.18;
+  margin: 0 0 18px;
+  letter-spacing: -0.02em;
+}
+
+.section-lead {
+  color: #ccc;
+  line-height: 1.9;
+  font-size: 18px;
+  max-width: 900px;
+}
+
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.info-card,
+.track-card,
+.related-card,
+.note-box,
+.warning-box,
+.process-card,
+.use-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.info-card h3,
+.track-card h3,
+.process-card h3,
+.use-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.info-card p,
+.track-card p,
+.related-card p,
+.note-box p,
+.warning-box p,
+.process-card p,
+.use-card p,
+.note-box li,
+.warning-box li {
+  color: #ccc;
+  line-height: 1.85;
+}
+
+.card-kicker {
+  color: #ffcc00;
+  font-weight: 900;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.warning-box {
+  border-left: 4px solid #ffcc00;
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.12), transparent 34%),
+    #101010;
+}
+
+.listen-panel {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.14), transparent 32%),
+    linear-gradient(180deg, rgba(255,204,0,0.07), rgba(255,204,0,0.025));
+  border: 1px solid rgba(255,204,0,0.26);
+  border-left: 4px solid #ffcc00;
+  border-radius: 22px;
+  padding: 30px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 800;
+  color: #ddd;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: rgba(255,255,255,0.04);
+}
+
+.step-number {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffcc00;
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 28px;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 16px;
+  vertical-align: top;
+  line-height: 1.7;
+}
+
+.comparison-table th {
+  background: rgba(255,204,0,0.12);
+  color: #ffcc00;
+  text-align: left;
+}
+
+.comparison-table td {
+  color: #ccc;
+  background: #101010;
+}
+
+.related-card {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,204,0,0.38);
+}
+
+.related-card strong {
+  display: block;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.related-card span {
+  color: #bbb;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.final-cta {
+  text-align: center;
+  padding: 48px 28px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at top, rgba(255,204,0,0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255,204,0,0.1), rgba(255,204,0,0.03));
+  border: 1px solid rgba(255,204,0,0.28);
+}
+
+.final-cta p {
+  color: #ccc;
+  line-height: 1.9;
+  font-size: 18px;
+  max-width: 860px;
+  margin: 18px auto 0;
+}
+
+.disclaimer {
+  text-align: center;
+}
+
+.disclaimer p {
+  color: #bbb;
+  line-height: 1.9;
+  max-width: 920px;
+  margin: 0 auto 18px;
+}
+
+@media (max-width: 980px) {
+  .focus-hero,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .focus-page {
+    padding: 30px 16px 64px;
+  }
+
+  .hero-card,
+  .info-card,
+  .track-card,
+  .related-card,
+  .note-box,
+  .warning-box,
+  .process-card,
+  .use-card,
+  .listen-panel,
+  .final-cta {
+    padding: 22px;
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .dark-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .comparison-table,
+  .comparison-table thead,
+  .comparison-table tbody,
+  .comparison-table th,
+  .comparison-table td,
+  .comparison-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .comparison-table th {
+    display: none;
+  }
+
+  .comparison-table td {
+    border-bottom: 0;
+  }
+
+  .comparison-table tr {
+    margin-bottom: 18px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+}
+</style>
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Article",
-  "headline":"LoFi Music for Focus",
-  "description":"Guide explaining lo-fi music for focus, deep work, studying, and productivity.",
-  "author":{
-    "@type":"Organization",
-    "name":"Nanashino-chan"
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nanashino-chan.github.io/site/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Articles",
+      "item": "https://nanashino-chan.github.io/site/pages/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Lo-Fi Music for Focus",
+      "item": "https://nanashino-chan.github.io/site/pages/lofi-music-for-focus.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Lo-Fi Music for Focus, Deep Work and Concentration",
+  "description": "A guide to calm instrumental lo-fi music for focus, deep work, concentration, studying, coding, writing, reading, remote work, and productivity sessions.",
+  "author": {
+    "@type": "Person",
+    "name": "Nanashino-chan"
   },
-  "publisher":{
-    "@type":"Organization",
-    "name":"Nanashino-chan"
-  }
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nanashino-chan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nanashino-chan.github.io/site/favicon-512.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nanashino-chan.github.io/site/pages/lofi-music-for-focus.html"
+  },
+  "image": "https://nanashino-chan.github.io/site/nanashino-artist.jpg"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicPlaylist",
+  "name": "Nanashino-chan Lo-Fi Music for Focus",
+  "description": "Instrumental lo-fi music for focus, deep work, studying, coding, writing, reading, and calm work sessions.",
+  "creator": {
+    "@type": "Person",
+    "name": "Nanashino-chan"
+  },
+  "url": "https://nanashino-chan.github.io/site/pages/lofi-music-for-focus.html",
+  "track": [
+    {
+      "@type": "MusicRecording",
+      "name": "Stillness Vibes",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Calm Lo-Fi"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Transitions",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Chillhop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Calm Transitions",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Lo-Fi Hip-Hop"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Ambient Flow",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Downtempo"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best lo-fi music for focus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Instrumental lo-fi with a steady rhythm, soft texture, and minimal vocal distraction is often preferred for focus, studying, coding, writing, reading, and deep work sessions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is lo-fi music good for studying and concentration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many listeners use lo-fi music as a consistent background environment for studying and concentration. Results vary by person, task, volume, and listening habit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of music is best for deep work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For deep work, many people prefer instrumental, low-distraction, loop-friendly music that stays consistent and does not pull attention away from the main task."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Nanashino-chan focus music in videos or commercial content?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you choose the correct license for the intended use. Personal, commercial, client, brand, and advertising uses may require different licensing scopes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I listen to Nanashino-chan focus music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can start with the Listen Now page, browse the music catalog, or preview recommended tracks for commercial video use on the Nanashino-chan website."
+      }
+    }
+  ]
 }
 </script>
 
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-let gaLoaded=false;
+
+let gaLoaded = false;
 
 function loadGA(){
- if(gaLoaded) return;
- gaLoaded=true;
+  if(gaLoaded) return;
+  gaLoaded = true;
 
- const script=document.createElement('script');
- script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
- script.async=true;
- document.head.appendChild(script);
+  const script = document.createElement('script');
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
+  script.async = true;
+  document.head.appendChild(script);
 
- gtag('js', new Date());
- gtag('config','G-CLHM36E1P0');
+  gtag('js', new Date());
+  gtag('config','G-CLHM36E1P0');
 }
 
-window.addEventListener('scroll',loadGA,{once:true});
-window.addEventListener('click',loadGA,{once:true});
-window.addEventListener('mousemove',loadGA,{once:true});
+window.addEventListener('scroll', loadGA, { once:true });
+window.addEventListener('click', loadGA, { once:true });
+window.addEventListener('mousemove', loadGA, { once:true });
 </script>
 
 </head>
 
 <body>
 
-<main style="max-width:900px;margin:0 auto;padding:40px 20px;">
+<main class="focus-page">
 
-<section style="margin-bottom:80px;">
+<section class="focus-breadcrumb">
+  <a href="/site/index.html">Home</a> →
+  <a href="/site/pages/">Articles</a> →
+  Lo-Fi Music for Focus
+</section>
 
-<h1 style="font-size:48px;line-height:1.2;margin-bottom:20px;">
-LoFi Music for Focus
-</h1>
+<section class="focus-hero">
 
-<p style="font-size:20px;line-height:1.8;color:#ccc;">
-Focus requires a stable mental environment with minimal distraction and consistent auditory background.
+  <div>
+
+
+<p class="hero-badge">
+  Focus music｜deep work｜studying｜coding｜writing｜reading
 </p>
 
-<p style="font-size:20px;line-height:1.8;color:#ccc;">
-Lo-fi music is widely used for deep work, productivity sessions, studying, and long concentration tasks.
+<h1>Lo-Fi Music for Focus, Deep Work & Concentration</h1>
+
+<p class="hero-lead">
+  Listen to calm instrumental lo-fi music for focus, deep work, studying,
+  coding, writing, reading, remote work, and long concentration sessions.
 </p>
 
-<p style="font-size:20px;line-height:1.8;color:#ccc;">
-Nanashino-chan creates original lo-fi music designed for focus, productivity, and sustained cognitive performance.
+<p class="hero-sub">
+  Nanashino-chan creates original lo-fi, chillhop, jazzhop, and ambient-style tracks
+  that work well as soft background music when you need a steady sound environment.
 </p>
 
-<div style="margin-top:40px;">
-<a href="/site/today.html"
-style="display:inline-block;background:#ffcc00;color:#000;padding:18px 32px;border-radius:10px;font-weight:bold;text-decoration:none;font-size:18px;">
-► Start Listening
+<div class="cta-row">
+  <a href="/site/today.html" class="primary-btn">▶ Start Listening</a>
+  <a href="/site/music.html" class="secondary-btn">Browse Music Catalog</a>
+  <a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="dark-btn">Preview Recommended Tracks</a>
+</div>
+
+
+  </div>
+
+  <aside class="hero-card">
+
+
+<h2>Best for Focus Sessions</h2>
+
+<p>
+  Use this page when you need background music that stays calm,
+  consistent, and non-intrusive during long tasks.
+</p>
+
+<ul>
+  <li>✔ Deep work and concentration</li>
+  <li>✔ Studying and exam preparation</li>
+  <li>✔ Coding and software development</li>
+  <li>✔ Writing, reading, and research</li>
+  <li>✔ Remote work and planning</li>
+  <li>✔ Calm night productivity sessions</li>
+</ul>
+
+
+  </aside>
+
+</section>
+
+<section class="section-block warning-box">
+
+  <h2>Why This Page Needed a Clearer Focus</h2>
+
+  <p>
+    Many pages about focus music only say that lo-fi is relaxing.
+    That is too broad. A stronger focus page should explain who the music is for,
+    what tasks it supports, what sound qualities matter, and where listeners should go next.
+  </p>
+
+  <p>
+    This page is built around specific search intent:
+    lo-fi music for focus, deep work music, background music for concentration,
+    study lo-fi, coding music, productivity music, and instrumental music for work.
+  </p>
+
+  <p>
+    日本語：このページは「集中したい人が、すぐに聴けて、用途に合う曲を選べる」ことを目的にしています。
+    単なる説明記事ではなく、作業・勉強・読書・コーディング用の導線ページとして整理しています。
+  </p>
+
+</section>
+
+<section class="section-block listen-panel">
+
+  <h2>Start with Focus-Friendly Lo-Fi</h2>
+
+  <p class="section-lead">
+    The fastest way to decide whether a track works for focus is to listen while doing a real task.
+    Start with the music player, then adjust the volume so the music stays in the background.
+  </p>
+
+  <div id="generator-container"></div>
+
+  <div class="cta-row">
+    <a href="/site/today.html" class="primary-btn">▶ Open Listen Now</a>
+    <a href="/site/music.html" class="secondary-btn">Browse More Tracks</a>
+    <a href="/site/pages/lofi-music-for-study.html" class="dark-btn">Music for Study</a>
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>What Makes Lo-Fi Music Useful for Focus?</h2>
+
+  <p class="section-lead">
+    Focus music does not need to be dramatic. For many listeners, the best background music is predictable,
+    instrumental, soft, and steady enough to support a working rhythm without becoming the main object of attention.
+  </p>
+
+  <div class="grid-3">
+
+
+<div class="info-card">
+  <p class="card-kicker">Sound quality</p>
+  <h3>Low-distraction texture</h3>
+  <p>
+    Soft drums, warm keys, gentle ambience, and restrained melodic movement can create a calmer work environment.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Soft</span>
+    <span class="tag">Instrumental</span>
+    <span class="tag">Low-distraction</span>
+  </div>
+</div>
+
+<div class="info-card">
+  <p class="card-kicker">Listening behavior</p>
+  <h3>Loop-friendly structure</h3>
+  <p>
+    Focus sessions often last longer than one song.
+    Loop-friendly lo-fi helps the music continue without dramatic changes that interrupt concentration.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Loop-friendly</span>
+    <span class="tag">Steady</span>
+    <span class="tag">Long sessions</span>
+  </div>
+</div>
+
+<div class="info-card">
+  <p class="card-kicker">Task support</p>
+  <h3>Background, not foreground</h3>
+  <p>
+    The music should support the task.
+    For coding, reading, writing, and studying, vocals or sudden transitions can become distracting.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Focus</span>
+    <span class="tag">Work</span>
+    <span class="tag">Study</span>
+  </div>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Choose Focus Music by Task</h2>
+
+  <p class="section-lead">
+    Different focus tasks benefit from different kinds of background music.
+    Use these categories to choose a listening direction before opening the full catalog.
+  </p>
+
+  <div class="grid-4">
+
+
+<div class="use-card">
+  <p class="card-kicker">Deep work</p>
+  <h3>Long concentration sessions</h3>
+  <p>
+    Choose calm, steady, low-dynamic tracks that do not change too aggressively.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Deep Work</span>
+    <span class="tag">Long Form</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Studying</p>
+  <h3>Reading, notes, and exams</h3>
+  <p>
+    Softer lo-fi and chillhop can support a quiet study room atmosphere.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Study</span>
+    <span class="tag">Reading</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Coding</p>
+  <h3>Programming and debugging</h3>
+  <p>
+    Repetitive, instrumental background music can be easier to keep on during software work.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Coding</span>
+    <span class="tag">Flow</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Writing</p>
+  <h3>Drafting and editing</h3>
+  <p>
+    Music with fewer attention-grabbing melodic changes can help maintain a steady writing rhythm.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Writing</span>
+    <span class="tag">Research</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Remote work</p>
+  <h3>Planning and admin tasks</h3>
+  <p>
+    Warm background music can make repetitive work feel more structured and less silent.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Remote Work</span>
+    <span class="tag">Planning</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Creative work</p>
+  <h3>Design and ideation</h3>
+  <p>
+    Chillhop, jazzhop, and ambient lo-fi can fit visual design, idea generation, and creative review.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Creative</span>
+    <span class="tag">Design</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Night focus</p>
+  <h3>Late work and quiet rooms</h3>
+  <p>
+    Softer nighttime tracks can fit evening work, quiet study, and slow-paced concentration.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Night</span>
+    <span class="tag">Calm</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Work playlist</p>
+  <h3>Background listening</h3>
+  <p>
+    Use multiple tracks in sequence when you want a continuous low-distraction sound bed.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Playlist</span>
+    <span class="tag">Background</span>
+  </div>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Recommended Nanashino-chan Tracks for Focus</h2>
+
+  <p class="section-lead">
+    These are useful starting points if you want instrumental lo-fi for concentration,
+    work sessions, studying, coding, and calm background listening.
+  </p>
+
+  <div class="grid-4">
+
+
+<div class="track-card">
+  <p class="card-kicker">Calm workflow</p>
+  <h3>Stillness Vibes</h3>
+  <p>
+    Good for quiet work sessions, AI-assisted workflows, calm technology visuals,
+    and low-pressure concentration.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Calm</span>
+    <span class="tag">Workflow</span>
+    <span class="tag">Focus</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Productivity</p>
+  <h3>Smooth Transitions</h3>
+  <p>
+    A clean and steady track for app work, business tasks, planning,
+    product demos, coding-adjacent workflows, and focused work.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Clean</span>
+    <span class="tag">Work</span>
+    <span class="tag">Steady</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Study room</p>
+  <h3>Calm Transitions</h3>
+  <p>
+    A practical lo-fi option for reading, note-taking, study blocks,
+    and calm productivity sessions.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Study</span>
+    <span class="tag">Reading</span>
+    <span class="tag">Practical</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Ambient focus</p>
+  <h3>Ambient Flow</h3>
+  <p>
+    Softer and slower, suitable for reflective work, long reading sessions,
+    planning, and quieter concentration blocks.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Ambient</span>
+    <span class="tag">Slow</span>
+    <span class="tag">Reflective</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Quiet desk</p>
+  <h3>Soft Lights, Quiet Thoughts</h3>
+  <p>
+    Useful for late-night writing, reading, calm research,
+    and thoughtful desk work.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Quiet</span>
+    <span class="tag">Writing</span>
+    <span class="tag">Night</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Book focus</p>
+  <h3>Autumn Pages</h3>
+  <p>
+    A cozy choice for reading sessions, study clips, bookstore mood,
+    and long-form learning environments.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Reading</span>
+    <span class="tag">Study</span>
+    <span class="tag">Cozy</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Gentle work</p>
+  <h3>Warm Breeze</h3>
+  <p>
+    Warm and relaxed background music for planning, admin tasks,
+    email work, and remote work blocks.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Warm</span>
+    <span class="tag">Remote Work</span>
+    <span class="tag">Relaxed</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Evening focus</p>
+  <h3>Evening Chillhop Glow</h3>
+  <p>
+    A calm evening option for late work, soft concentration,
+    and warm desk sessions.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Evening</span>
+    <span class="tag">Desk</span>
+    <span class="tag">Chillhop</span>
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="cta-row">
+    <a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="primary-btn">▶ Preview Recommended Tracks</a>
+    <a href="/site/today.html" class="secondary-btn">Start Listening Now</a>
+    <a href="/site/music.html" class="dark-btn">Browse Full Catalog</a>
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Focus Music by Listening Scenario</h2>
+
+  <p class="section-lead">
+    Use this simple guide when choosing background music for work or study.
+    The best track is not always the most exciting track; it is the track that stays useful after 30 minutes.
+  </p>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Scenario</th>
+        <th>Recommended Sound</th>
+        <th>Useful Starting Direction</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Deep work</td>
+        <td>Steady, instrumental, low-distraction, minimal dramatic changes.</td>
+        <td>Stillness Vibes, Ambient Flow, Smooth Transitions.</td>
+      </tr>
+      <tr>
+        <td>Studying</td>
+        <td>Soft, warm, consistent background music that does not compete with reading.</td>
+        <td>Calm Transitions, Autumn Pages, Soft Lights, Quiet Thoughts.</td>
+      </tr>
+      <tr>
+        <td>Coding</td>
+        <td>Loop-friendly rhythm, gentle drums, and a clean structure.</td>
+        <td>Smooth Transitions, Stillness Vibes, Warm Breeze.</td>
+      </tr>
+      <tr>
+        <td>Writing</td>
+        <td>Quiet, less melodic, and slow enough to stay behind the words.</td>
+        <td>Soft Lights, Quiet Thoughts, Ambient Flow, Evening Chillhop Glow.</td>
+      </tr>
+      <tr>
+        <td>Remote work</td>
+        <td>Warm, practical, and pleasant background audio for long desk sessions.</td>
+        <td>Warm Breeze, Smooth Groove, Lazy Afternoon Vibes.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
+
+<section class="section-block">
+
+  <h2>How to Use Lo-Fi Music During a Focus Session</h2>
+
+  <p class="section-lead">
+    A focus playlist works best when the listening setup is simple.
+    The goal is to remove friction, reduce switching, and let the music stay in the background.
+  </p>
+
+  <div class="grid-3">
+
+
+<div class="process-card">
+  <span class="step-number">1</span>
+  <h3>Choose the task first</h3>
+  <p>
+    Decide whether you are studying, coding, writing, reading, planning, or doing creative work.
+    Then choose music that fits that task.
+  </p>
+</div>
+
+<div class="process-card">
+  <span class="step-number">2</span>
+  <h3>Keep the volume low</h3>
+  <p>
+    Focus music should support the session.
+    If the music becomes the main thing you notice, lower the volume or choose a softer track.
+  </p>
+</div>
+
+<div class="process-card">
+  <span class="step-number">3</span>
+  <h3>Avoid constant switching</h3>
+  <p>
+    Once the track works, let it run.
+    The benefit of background music is often the stable environment, not active song selection.
+  </p>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>For Creators: Can Focus Music Be Used in Work, Study, or Productivity Videos?</h2>
+
+  <p class="section-lead">
+    Yes, but video use and personal listening are different.
+    If you want to use Nanashino-chan focus music in YouTube videos, business content,
+    study-with-me videos, coding videos, productivity channels, app demos, or brand content,
+    choose the correct license before publishing.
+  </p>
+
+  <div class="grid-3">
+
+
+<div class="info-card">
+  <p class="card-kicker">Creator use</p>
+  <h3>Study, work, or coding videos</h3>
+  <p>
+    Focus music can fit study-with-me videos, coding sessions, work vlogs,
+    desk setup videos, and productivity channels.
+  </p>
+</div>
+
+<div class="info-card">
+  <p class="card-kicker">Business use</p>
+  <h3>Productivity and app content</h3>
+  <p>
+    SaaS demos, productivity apps, remote work tools, education platforms,
+    and workflow products may need commercial music licensing.
+  </p>
+</div>
+
+<div class="info-card">
+  <p class="card-kicker">Commercial use</p>
+  <h3>Client or brand projects</h3>
+  <p>
+    If the video promotes a product, client, brand, sponsor, or paid campaign,
+    personal listening access is not the same as commercial permission.
+  </p>
+</div>
+
+
+  </div>
+
+  <div class="cta-row">
+    <a href="/site/licensing.html#pricing" class="primary-btn">View License Options</a>
+    <a href="/site/pages/commercial-music-licensing.html" class="secondary-btn">Commercial Music Licensing Guide</a>
+    <a href="/site/contact.html" class="dark-btn">Ask About Usage</a>
+  </div>
+
+</section>
+
+<section class="section-block warning-box">
+
+  <h2>Important: Focus Music Is a Listening Environment, Not a Productivity Guarantee</h2>
+
+  <p>
+    Lo-fi music may help some listeners create a calmer background environment,
+    but it does not guarantee better focus, productivity, grades, work results, or health outcomes.
+    Listening preferences vary by person, task, volume, and environment.
+  </p>
+
+  <p>
+    For best results, treat music as one part of your focus setup:
+    choose the task, reduce interruptions, keep the volume low, and use music that does not compete with attention.
+  </p>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Related Focus, Study & Work Music Pages</h2>
+
+  <p class="section-lead">
+    Continue through the focus music cluster depending on your listening context.
+  </p>
+
+  <div class="grid-3">
+
+
+<a href="/site/pages/lofi-music-for-study.html" class="related-card">
+  <strong>Lo-Fi Music for Study</strong>
+  <span>Music for study sessions, reading, learning, and exam preparation.</span>
 </a>
-</div>
 
-</section>
-
-<section style="margin-bottom:80px;">
-
-<h2>Why LoFi Music Improves Focus</h2>
-
-<p style="line-height:1.9;">
-Many users rely on lo-fi music to maintain attention by reducing environmental noise and mental interruptions.
-</p>
-
-<p style="line-height:1.9;">
-Common use cases include:
-</p>
-
-<ul style="list-style:none;padding-left:0;line-height:2;">
-<li>• Deep work sessions</li>
-<li>• Study and exam preparation</li>
-<li>• Programming and software development</li>
-<li>• Writing and research tasks</li>
-<li>• Administrative work</li>
-<li>• Data analysis and planning</li>
-<li>• Long reading or learning sessions</li>
-</ul>
-
-<p style="line-height:1.9;">
-Instrumental music without lyrics is preferred to avoid cognitive interference.
-</p>
-
-</section>
-
-<section style="margin-bottom:80px;">
-
-<h2>Deep Focus Sound Environment</h2>
-
-<p style="line-height:1.9;">
-Focus music works best when it is predictable, soft, and non-intrusive.
-</p>
-
-<p style="line-height:1.9;">
-Lo-fi provides consistent rhythm patterns that help maintain a steady workflow state.
-</p>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:30px;">
-
-<div style="background:#111;padding:24px;border-radius:14px;">
-<h3>Deep Work</h3>
-<p>Long uninterrupted concentration sessions.</p>
-</div>
-
-<div style="background:#111;padding:24px;border-radius:14px;">
-<h3>Study Focus</h3>
-<p>Academic learning and exam preparation environments.</p>
-</div>
-
-<div style="background:#111;padding:24px;border-radius:14px;">
-<h3>Work Productivity</h3>
-<p>Office tasks, planning, and execution workflows.</p>
-</div>
-
-<div style="background:#111;padding:24px;border-radius:14px;">
-<h3>Creative Focus</h3>
-<p>Balanced environments for design and ideation.</p>
-</div>
-
-</div>
-
-</section>
-
-<section style="margin-bottom:80px;">
-
-<h2>Relaxing Original LoFi Music</h2>
-
-<p style="line-height:1.9;">
-Nanashino-chan produces original lo-fi music optimized for focus, deep work, and productivity.
-</p>
-
-<ul style="list-style:none;padding-left:0;line-height:2;">
-<li>• Non-distracting sound design</li>
-<li>• Loop-friendly structures</li>
-<li>• Soft ambient textures</li>
-<li>• Minimal melodic interference</li>
-<li>• Stable rhythmic flow</li>
-<li>• Creator-focused compositions</li>
-<li>• Long-session compatibility</li>
-</ul>
-
-</section>
-
-<section style="margin-bottom:80px;">
-
-<h2>Preview Music</h2>
-
-<p style="line-height:1.9;">
-Explore calming lo-fi music designed for deep focus, productivity, studying, and workflow optimization.
-</p>
-
-<div id="generator-container"></div>
-
-</section>
-
-<section style="margin-bottom:80px;">
-
-<h2>Ideal Focus Environments</h2>
-
-<p style="line-height:1.9;">
-Lo-fi focus music is widely used in structured productivity environments.
-</p>
-
-<ul style="list-style:none;padding-left:0;line-height:2;">
-<li>• Home offices</li>
-<li>• Study rooms</li>
-<li>• Co-working spaces</li>
-<li>• Libraries</li>
-<li>• Remote work setups</li>
-<li>• Night productivity sessions</li>
-<li>• Long-form writing environments</li>
-</ul>
-
-</section>
-
-<section style="margin-bottom:80px;">
-
-<h2>FAQ</h2>
-
-<h3>Is lo-fi music good for focus?</h3>
-
-<p style="line-height:1.9;">
-Yes, many people use it to reduce distractions and maintain concentration.</p>
-
-<h3>Does music improve productivity?</h3>
-
-<p style="line-height:1.9;">
-It can help some users maintain workflow consistency during long tasks.</p>
-
-<h3>What type of music is best for focus?</h3>
-
-<p style="line-height:1.9;">
-Instrumental, slow-tempo, and non-intrusive audio is typically preferred.</p>
-
-</section>
-
-<section style="margin-bottom:80px;text-align:center;">
-
-<h2>Listen to Focus Music</h2>
-
-<p style="font-size:18px;line-height:1.9;">
-Explore lo-fi beats designed for deep focus, productivity, studying, and work sessions.
-</p>
-
-<div style="margin-top:30px;">
-<a href="/site/licensing.html"
-style="display:inline-block;background:#ffcc00;color:#000;padding:18px 32px;border-radius:10px;font-weight:bold;text-decoration:none;font-size:18px;">
-► Get Music License
+<a href="/site/pages/lofi-music-for-programming.html" class="related-card">
+  <strong>Lo-Fi Music for Programming</strong>
+  <span>Background music for coding, debugging, software work, and development flow.</span>
 </a>
-</div>
+
+<a href="/site/pages/lofi-music-for-working.html" class="related-card">
+  <strong>Lo-Fi Music for Working</strong>
+  <span>Music for desk work, remote work, planning, and productivity sessions.</span>
+</a>
+
+<a href="/site/pages/lofi-music-for-creative-work.html" class="related-card">
+  <strong>Lo-Fi Music for Creative Work</strong>
+  <span>Music for design, writing, ideation, editing, and creative focus.</span>
+</a>
+
+<a href="/site/pages/lofi-music-for-reading.html" class="related-card">
+  <strong>Lo-Fi Music for Reading</strong>
+  <span>Quiet lo-fi for books, research, reading rooms, and long learning sessions.</span>
+</a>
+
+<a href="/site/pages/lofi-music-for-sleep.html" class="related-card">
+  <strong>Lo-Fi Music for Sleep</strong>
+  <span>Softer night music for calm listening and evening wind-down contexts.</span>
+</a>
+
+<a href="/site/today.html" class="related-card">
+  <strong>Listen Now</strong>
+  <span>Open the Nanashino-chan music player and start listening immediately.</span>
+</a>
+
+<a href="/site/music.html" class="related-card">
+  <strong>Music Catalog</strong>
+  <span>Browse Nanashino-chan tracks and listening pages across moods and use cases.</span>
+</a>
+
+<a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="related-card">
+  <strong>Recommended Tracks for Commercial Video Use</strong>
+  <span>Preview tracks for videos, brand content, product demos, and commercial projects.</span>
+</a>
+
+
+  </div>
 
 </section>
 
-<section style="margin-bottom:80px;">
+<section class="section-block">
 
-<h2>Related Pages</h2>
+  <h2>FAQ</h2>
 
-<ul style="list-style:none;padding-left:0;line-height:2.2;">
+  <div class="note-box">
 
-<li><a href="/site/pages/lofi-music-for-programming.html">LoFi Music for Programming</a></li>
-<li><a href="/site/pages/lofi-music-for-working.html">LoFi Music for Working</a></li>
-<li><a href="/site/pages/lofi-music-for-creative-work.html">LoFi Music for Creative Work</a></li>
-<li><a href="/site/pages/lofi-music-for-reading.html">LoFi Music for Reading</a></li>
-<li><a href="/site/licensing.html">Licensing Page</a></li>
 
-</ul>
+<h3>What is the best lo-fi music for focus?</h3>
+<p>
+  The best lo-fi music for focus is usually instrumental, steady, low-distraction,
+  and soft enough to stay in the background. For many listeners, tracks with gentle drums,
+  warm keys, and minimal vocal elements work well for study, coding, writing, and deep work.
+</p>
+
+<h3>Is lo-fi music good for studying and concentration?</h3>
+<p>
+  Many people use lo-fi music as background audio for studying and concentration.
+  It can help create a consistent sound environment, but the effect varies by person,
+  task type, volume, and listening habit.
+</p>
+
+<h3>What type of music is best for deep work?</h3>
+<p>
+  For deep work, many listeners prefer instrumental music with stable rhythm,
+  minimal sudden changes, and a calm mood. Music with lyrics or dramatic transitions
+  may become distracting during reading, writing, or analytical tasks.
+</p>
+
+<h3>Can I use Nanashino-chan focus music in YouTube videos?</h3>
+<p>
+  Yes, if you choose the correct license for the video’s use.
+  Monetized YouTube videos, business content, client projects, sponsored videos,
+  and paid ads may require different license scopes.
+</p>
+
+<h3>Where should I start listening?</h3>
+<p>
+  Start with the Listen Now page for immediate playback, browse the music catalog for more tracks,
+  or use the recommended tracks page if you are choosing music for commercial video use.
+</p>
+
+
+  </div>
+
+</section>
+
+<section class="section-block final-cta">
+
+  <h2>Start a Focus Session with Calm Lo-Fi Music</h2>
+
+  <p>
+    Choose a quiet instrumental track, keep the volume low, and let the music support your work,
+    study, coding, writing, or reading session.
+  </p>
+
+  <div class="cta-row" style="justify-content:center;">
+    <a href="/site/today.html" class="primary-btn">▶ Start Listening</a>
+    <a href="/site/music.html" class="secondary-btn">Browse Music</a>
+    <a href="/site/licensing.html#pricing" class="dark-btn">License Music</a>
+  </div>
+
+</section>
+
+<section class="section-block disclaimer">
+
+  <h2>Disclaimer</h2>
+
+  <p>
+    This page provides general listening guidance for lo-fi music, focus music,
+    studying, work sessions, and productivity-related listening contexts.
+    It does not provide medical, psychological, educational, or productivity guarantees.
+  </p>
+
+  <p>
+    If you use Nanashino-chan music in videos, brand content, client work,
+    ads, or commercial projects, choose the correct license before publishing.
+  </p>
+
+  <h2>免責事項</h2>
+
+  <p>
+    このページは、Lo-Fi音楽、集中用BGM、作業用BGM、勉強用BGMに関する一般的な情報を提供するものです。
+    医学的・心理学的・学業的・生産性向上の効果を保証するものではありません。
+  </p>
 
 </section>
 
@@ -340,6 +1378,7 @@ style="display:inline-block;background:#ffcc00;color:#000;padding:18px 32px;bord
 </footer>
 
 <script src="/site/js/videos.js"></script>
+
 <script src="/site/js/app.js" defer></script>
 
 </body>
