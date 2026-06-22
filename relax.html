@@ -1,342 +1,1838 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>Lo-Fi Relax Music for Sleep & Stress Relief – Free Calm Beats</title>
+<title>Relaxing Lo-Fi Music for Calm Moments & Quiet Background Listening</title>
 
-<meta name="description" content="Free lo-fi relax music for stress relief, sleep, and calm moments. Instantly play soft ambient beats for relaxation. 睡眠・リラックス・ストレス解消に最適なLo-Fi音楽。">
+<meta name="description" content="Stream relaxing instrumental lo-fi music for calm moments, quiet evenings, reading, resting, journaling, soft background listening, night routines, and peaceful creative work. Listen to Nanashino-chan relaxing lo-fi music and find licensed tracks for videos and commercial use.">
 
 <meta name="robots" content="index, follow">
-
 <link rel="canonical" href="https://nanashino-chan.github.io/site/relax.html">
 
-<!-- Security -->
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
+<link rel="stylesheet" href="/site/style.css">
 
-  script-src 'self'
-    'unsafe-inline'
-    https://www.youtube.com
-    https://www.google.com
-    https://www.gstatic.com
-    https://s.ytimg.com
-    https://www.googletagmanager.com
-    https://www.google-analytics.com;
-
-  frame-src
-    https://www.youtube.com
-    https://www.youtube-nocookie.com;
-
-  connect-src
-    'self'
-    https://www.youtube.com
-    https://i.ytimg.com
-    https://www.google-analytics.com
-    https://www.googletagmanager.com;
-
-  img-src
-    'self'
-    https://i.ytimg.com
-    https://img.youtube.com
-    data:;
-
-  style-src
-    'self'
-    'unsafe-inline';
-
-  font-src 'self';
-
-  object-src 'none';
-  base-uri 'self';
-">
-
-<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-
-<!-- Favicon -->
 <link rel="icon" href="/site/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
 
-<!-- OGP -->
-<meta property="og:title" content="Lo-Fi Relax Music – Sleep, Stress Relief & Calm Beats">
-<meta property="og:description" content="Free lo-fi music for relaxation, stress relief, and better sleep.">
+<meta property="og:title" content="Relaxing Lo-Fi Music for Calm Moments">
+<meta property="og:description" content="Instrumental lo-fi music for relaxing, quiet evenings, reading, resting, journaling, night routines, and peaceful background listening.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/relax.html">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lo-Fi Relax Music for Sleep & Stress Relief">
-<meta name="twitter:description" content="Soft lo-fi beats for relaxation, stress relief, and peaceful sleep.">
+<meta name="twitter:title" content="Relaxing Lo-Fi Music for Calm Moments">
+<meta name="twitter:description" content="Listen to instrumental lo-fi music for calm evenings, relaxing background music, reading, journaling, resting, and quiet routines.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self' 'unsafe-inline'
+https://www.youtube.com
+https://www.youtube-nocookie.com
+https://www.google.com
+https://www.gstatic.com
+https://s.ytimg.com
+https://www.googletagmanager.com
+https://www.google-analytics.com;
+frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+connect-src 'self' https://www.youtube.com https://i.ytimg.com https://www.google-analytics.com https://www.googletagmanager.com;
+img-src 'self' https://i.ytimg.com https://img.youtube.com data:;
+style-src 'self' 'unsafe-inline';
+font-src 'self';
+object-src 'none';
+base-uri 'self';
+">
 
-<!-- Preconnect -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
 
-<!-- Hero preload -->
-<link rel="preload"
-      as="image"
-      href="hero-1440.webp"
-      imagesrcset="hero-720.webp 720w, hero-1440.webp 1440w"
-      imagesizes="(max-width: 768px) 100vw, 1200px">
+<style>
+.relax-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 42px 24px 80px;
+}
 
-<!-- GA（遅延） -->
+.relax-breadcrumb {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.relax-breadcrumb a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.relax-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 440px);
+  gap: 38px;
+  align-items: center;
+  margin-bottom: 58px;
+}
+
+.hero-badge {
+  display: inline-block;
+  color: #ffcc00;
+  border: 1px solid rgba(255,204,0,0.42);
+  background: rgba(255,204,0,0.06);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.relax-hero h1 {
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.06;
+  margin: 0 0 24px;
+  letter-spacing: -0.045em;
+}
+
+.hero-lead {
+  color: #ddd;
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 0 0 18px;
+}
+
+.hero-sub {
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn,
+.dark-btn,
+.small-btn {
+  display: inline-block;
+  border-radius: 12px;
+  font-weight: 900;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.primary-btn {
+  padding: 15px 22px;
+  background: #ffcc00;
+  color: #000;
+  box-shadow: 0 10px 28px rgba(255,204,0,0.18);
+}
+
+.secondary-btn {
+  padding: 15px 22px;
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+  background: rgba(255,204,0,0.04);
+}
+
+.dark-btn {
+  padding: 15px 22px;
+  color: #fff;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.small-btn {
+  padding: 11px 13px;
+  color: #ddd;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.12);
+  font-size: 13px;
+}
+
+.hero-card {
+  background:
+    radial-gradient(circle at top left, rgba(127,168,216,0.22), transparent 34%),
+    linear-gradient(180deg, #151515, #0b0b0b);
+  border: 1px solid rgba(127,168,216,0.34);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.32);
+}
+
+.hero-card h2 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.hero-card p,
+.hero-card li {
+  color: #ccc;
+  line-height: 1.85;
+}
+
+.hero-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 22px 0 0;
+}
+
+.hero-card li {
+  margin-bottom: 10px;
+}
+
+.today-cta {
+  max-width: 1180px;
+  margin: 0 auto 30px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.today-cta a {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  color: #000;
+  background: #ffcc00;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(255,204,0,0.18);
+}
+
+.section-block {
+  margin-bottom: 84px;
+}
+
+.section-block h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.18;
+  margin: 0 0 18px;
+  letter-spacing: -0.02em;
+}
+
+.section-lead {
+  color: #ccc;
+  line-height: 1.9;
+  font-size: 18px;
+  max-width: 900px;
+}
+
+.player-panel {
+  background:
+    radial-gradient(circle at top left, rgba(127,168,216,0.18), transparent 34%),
+    linear-gradient(180deg, #151515, #0d0d0d);
+  border: 1px solid rgba(127,168,216,0.32);
+  border-radius: 26px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 22px 70px rgba(0,0,0,0.28);
+}
+
+.player-panel h2 {
+  margin-top: 0;
+}
+
+.player-note {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.75;
+  max-width: 760px;
+  margin: 12px auto 24px;
+}
+
+.player-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+#player-relax {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.player-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.player-btn-main,
+.player-btn-sub {
+  padding: 16px 24px;
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.player-btn-main {
+  background: #7fa8d8;
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 24px rgba(127,168,216,0.22);
+}
+
+.player-btn-sub {
+  background: #222;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.mood-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.info-card,
+.stat-card,
+.track-card,
+.use-card,
+.related-card,
+.note-box,
+.warning-box,
+.license-card,
+.process-card,
+.catalog-card,
+.faq-box,
+.mood-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.info-card h3,
+.track-card h3,
+.use-card h3,
+.license-card h3,
+.process-card h3,
+.catalog-card h3,
+.mood-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.info-card p,
+.stat-card p,
+.track-card p,
+.use-card p,
+.related-card p,
+.note-box p,
+.warning-box p,
+.license-card p,
+.process-card p,
+.catalog-card p,
+.faq-box p,
+.mood-card p,
+.note-box li,
+.warning-box li {
+  color: #ccc;
+  line-height: 1.85;
+}
+
+.card-kicker {
+  color: #ffcc00;
+  font-weight: 900;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.stat-card {
+  background:
+    radial-gradient(circle at top left, rgba(127,168,216,0.18), transparent 34%),
+    #101010;
+  border-color: rgba(127,168,216,0.26);
+}
+
+.stat-card strong {
+  display: block;
+  color: #ffcc00;
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.stat-card span {
+  color: #cfcfcf;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.warning-box {
+  border-left: 4px solid #ffcc00;
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.12), transparent 34%),
+    #101010;
+}
+
+.answer-box {
+  background:
+    radial-gradient(circle at top left, rgba(127,168,216,0.18), transparent 32%),
+    linear-gradient(180deg, rgba(127,168,216,0.08), rgba(127,168,216,0.025));
+  border: 1px solid rgba(127,168,216,0.32);
+  border-left: 4px solid #7fa8d8;
+  border-radius: 22px;
+  padding: 30px;
+}
+
+.full-infographic {
+  background:
+    radial-gradient(circle at top right, rgba(255,204,0,0.12), transparent 32%),
+    #101010;
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.full-infographic p {
+  color: #ccc;
+  line-height: 1.9;
+  max-width: 920px;
+}
+
+.full-infographic img {
+  width: 100%;
+  max-width: 1120px;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-top: 24px;
+}
+
+.full-size-link {
+  display: inline-block;
+  color: #ffcc00;
+  font-weight: 900;
+  text-decoration: none;
+  margin-top: 18px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 800;
+  color: #ddd;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: rgba(255,255,255,0.04);
+}
+
+.track-meta {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.related-card {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,204,0,0.38);
+}
+
+.related-card strong {
+  display: block;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.related-card span {
+  color: #bbb;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.platform-links-enhanced {
+  text-align: center;
+  background:
+    radial-gradient(circle at top, rgba(127,168,216,0.14), transparent 34%),
+    #101010;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 38px 26px;
+}
+
+.platform-links-enhanced p {
+  color: #ccc;
+  line-height: 1.85;
+}
+
+.platform-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.platform-buttons a {
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  color: #fff;
+  background: #151515;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.final-cta {
+  text-align: center;
+  padding: 48px 28px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at top, rgba(127,168,216,0.2), transparent 34%),
+    linear-gradient(180deg, rgba(127,168,216,0.1), rgba(127,168,216,0.03));
+  border: 1px solid rgba(127,168,216,0.32);
+}
+
+.final-cta p {
+  color: #ccc;
+  line-height: 1.9;
+  font-size: 18px;
+  max-width: 860px;
+  margin: 18px auto 0;
+}
+
+.disclaimer {
+  text-align: center;
+}
+
+.disclaimer p {
+  color: #bbb;
+  line-height: 1.9;
+  max-width: 920px;
+  margin: 0 auto 18px;
+}
+
+@media (max-width: 980px) {
+  .relax-hero,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .relax-page {
+    padding: 30px 16px 64px;
+  }
+
+  .today-cta {
+    padding: 0 16px;
+  }
+
+  .hero-card,
+  .info-card,
+  .stat-card,
+  .track-card,
+  .use-card,
+  .related-card,
+  .note-box,
+  .warning-box,
+  .license-card,
+  .process-card,
+  .catalog-card,
+  .faq-box,
+  .mood-card,
+  .answer-box,
+  .full-infographic,
+  .player-panel,
+  .platform-links-enhanced,
+  .final-cta {
+    padding: 22px;
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .dark-btn,
+  .player-btn-main,
+  .player-btn-sub {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nanashino-chan.github.io/site/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Relax",
+      "item": "https://nanashino-chan.github.io/site/relax.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Relaxing Lo-Fi Music for Calm Moments & Quiet Background Listening",
+  "url": "https://nanashino-chan.github.io/site/relax.html",
+  "description": "Instrumental relaxing lo-fi music for calm moments, quiet evenings, reading, resting, journaling, soft background listening, and peaceful creative work.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Nanashino-chan",
+    "url": "https://nanashino-chan.github.io/site/"
+  },
+  "about": [
+    "relaxing lo-fi music",
+    "calm background music",
+    "quiet evening music",
+    "lo-fi music for reading",
+    "Nanashino-chan"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Nanashino-chan"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nanashino-chan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nanashino-chan.github.io/site/favicon-512.png"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicPlaylist",
+  "name": "Nanashino-chan Relaxing Lo-Fi Music Playlist",
+  "description": "Selected Nanashino-chan lo-fi tracks for relaxing, reading, resting, quiet evenings, journaling, night routines, and calm background listening.",
+  "creator": {
+    "@type": "Person",
+    "name": "Nanashino-chan"
+  },
+  "url": "https://nanashino-chan.github.io/site/relax.html",
+  "track": [
+    {
+      "@type": "MusicRecording",
+      "name": "Stillness Vibes",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Calm Lo-Fi",
+      "url": "https://www.youtube.com/watch?v=GRGkJoQGMjs"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Groove",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Chillhop",
+      "url": "https://www.youtube.com/watch?v=PnyutlzXem0"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Transitions",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Smooth Jazzhop",
+      "url": "https://www.youtube.com/watch?v=MBsx4sUtNxs"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Vaporwave Streets",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Lo-Fi / Chillwave",
+      "url": "https://www.youtube.com/watch?v=mtQwxopXhYo"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Urban Twilight",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Trip-Hop / Lo-Fi",
+      "url": "https://www.youtube.com/watch?v=tZiYlmaP9tM"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is relaxing lo-fi music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Relaxing lo-fi music is usually soft instrumental background music with warm tones, gentle rhythm, and minimal distraction. It is often used for quiet evenings, reading, journaling, resting, calm work, and peaceful background listening."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is lo-fi music good for relaxing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lo-fi music may help some listeners create a calmer background atmosphere. It does not guarantee stress relief, anxiety reduction, sleep improvement, health benefits, or emotional outcomes, but many people use soft instrumental music for quiet listening and unwinding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can relaxing lo-fi music reduce anxiety?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No music page should promise anxiety reduction or medical effects. Relaxing lo-fi music may help create a peaceful listening environment for some people, but it is not medical advice or treatment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use lo-fi music while reading or journaling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many listeners use soft instrumental lo-fi while reading, journaling, writing, or resting because it can be less distracting than lyrical music. Keep the volume low and choose tracks with fewer sudden changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is relaxing lo-fi music good for sleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Relaxing lo-fi music may be suitable for quiet night listening or wind-down routines for some listeners, but it does not guarantee sleep improvement or health outcomes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Nanashino-chan music in relaxation videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Relaxation videos, vlogs, slow living videos, reading videos, desk setup videos, and night routine videos may require a license if they are monetized, commercial, sponsored, client-based, or used as part of a business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a license for monetized relaxation videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, monetized or commercial relaxation videos should use music that is properly licensed for the intended use. A Commercial Creator License may fit some organic monetized videos, while paid ads or campaigns may require a Sync License or custom permission."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use platform music for relaxation videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Do not assume platform music is cleared for all uses. Platform-library or credit-based usage should not be treated as a substitute for a commercial license, sync license, paid advertising license, client-work license, or brand campaign license."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Nanashino-chan tracks are good for relaxation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stillness Vibes, Smooth Groove, Lazy Afternoon Vibes, Dreamy Vibes, Soft Lights Quiet Thoughts, Autumn Pages, Ambient Flow, Closing Time Jazz, Evening Chillhop Glow, and Vaporwave Streets can fit different relaxation moods."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I license Nanashino-chan relaxing music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nanashino-chan music can be licensed through the licensing page. Available options include Personal Use, Commercial Creator, 1-Month Sync, and 3-Month Sync licenses for suitable use cases, subject to license scope."
+      }
+    }
+  ]
+}
+</script>
+
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-let gaLoaded=false;
+
+let gaLoaded = false;
+
 function loadGA(){
- if(gaLoaded) return;
- gaLoaded=true;
- const script=document.createElement('script');
- script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
- script.async=true;
- document.head.appendChild(script);
- gtag('js', new Date());
- gtag('config','G-CLHM36E1P0');
+  if(gaLoaded) return;
+  gaLoaded = true;
+
+  const script = document.createElement('script');
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
+  script.async = true;
+  document.head.appendChild(script);
+
+  gtag('js', new Date());
+  gtag('config','G-CLHM36E1P0');
 }
-window.addEventListener('scroll',loadGA,{once:true});
-window.addEventListener('click',loadGA,{once:true});
-window.addEventListener('mousemove',loadGA,{once:true});
+
+window.addEventListener('scroll', loadGA, { once:true });
+window.addEventListener('click', loadGA, { once:true });
+window.addEventListener('mousemove', loadGA, { once:true });
 </script>
 
-<!-- JS -->
-<script src="./js/videos.js"></script>
-<script src="./js/app.js" defer></script>
+<script src="/site/js/videos.js"></script>
+
+<script src="/site/js/app.js" defer></script>
 
 </head>
+
 <body>
 
 <header>
 <nav>
   <div class="nav">
-    <a href="index.html" class="nav-logo">Home</a>
-    <a href="study.html">Study</a>
-    <a href="sleep.html">Sleep</a>
-    <a href="relax.html">Relax</a>
-    <a href="today.html" class="nav-cta">▶ Listen Now</a>
+    <a href="/site/index.html" class="nav-logo">Home</a>
+    <a href="/site/study.html">Study</a>
+    <a href="/site/sleep.html">Sleep</a>
+    <a href="/site/relax.html">Relax</a>
+    <a href="/site/today.html" class="nav-cta">▶ Listen Now</a>
   </div>
 </nav>
 </header>
 
 <section class="today-cta">
-<a href="today.html">🌿 Today’s Most Relaxing Lo-Fi Track</a>
+  <a href="/site/today.html">🌿 Today’s Relaxing Lo-Fi Player</a>
 </section>
 
-<!-- HERO -->
+<main class="relax-page">
 
-<section style="padding:40px 20px;text-align:center;max-width:800px;margin:0 auto;">
-
-<h1>Relaxing Lo-Fi Music for Stress Relief, Calm & Anxiety Reduction</h1>
-
-<p><strong>Unwind your mind. Reduce stress. Feel calm instantly.</strong></p>
-
-<p>
-Stream relaxing lo-fi music designed to reduce stress, ease anxiety, and create a calm atmosphere.<br>
-ストレス解消・リラックス・不安軽減に最適なLo-Fi音楽をすぐに再生できます。
-</p>
-
+<section class="relax-breadcrumb">
+  <a href="/site/index.html">Home</a> →
+  Relaxing Lo-Fi Music
 </section>
 
-<!-- GENERATOR -->
+<section class="relax-hero">
 
-<section class="generator-container" style="max-width:900px;margin:0 auto;padding:10px 20px 30px;text-align:center;">
+  <div>
 
-<h2>🎧 Start Listening – Relaxing Lo-Fi Music Player</h2>
 
-<p>
-Click play and instantly enter a calm and relaxed state.<br>
-再生するだけで心が落ち着き、リラックス状態へ。
+<p class="hero-badge">
+  Relaxing lo-fi｜calm background music｜quiet evenings｜reading｜rest｜night routines
 </p>
 
-<p style="font-size:12px;opacity:0.7;margin-bottom:16px;">
-Perfect for stress relief, anxiety reduction, meditation, and calm background music.<br>
-ストレス解消・瞑想・リラックスタイムに最適なBGM。<br>
-Listen on YouTube (advertising may be shown depending on platform)
+<h1>Relaxing Lo-Fi Music for Calm Moments & Quiet Background Listening</h1>
+
+<p class="hero-lead">
+  Stream instrumental lo-fi music for quiet evenings, reading, journaling,
+  resting at home, soft background listening, slow routines, and peaceful creative work.
 </p>
 
-<div style="max-width:800px;margin:0 auto;">
+<p class="hero-sub">
+  Nanashino-chan creates soft lo-fi, chillhop, jazzhop, ambient, and Tokyo-inspired background music
+  for listeners who want a gentle atmosphere without aggressive melodies or distracting vocals.
+  静かに休みたい時間、読書、日記、夜の作業、落ち着いた空間づくりに使いやすいLo-Fi音楽です。
+</p>
 
-<div id="player-relax" style="width:100%;aspect-ratio:16/9;background:#000;margin-bottom:12px;"></div>
-
-<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
-
-<!-- メイン：再生 -->
-<button onclick="startGenerator('relax')" 
-  style="
-    padding:16px 24px;
-    background:#7fa8d8;
-    color:#fff;
-    border:none;
-    border-radius:8px;
-    font-weight:700;
-    font-size:16px;
-    cursor:pointer;
-    box-shadow:0 4px 12px rgba(0,0,0,0.25);
-  ">
-  ▶ Play Relaxing Music
-</button>
-
-<!-- サブ：次の曲 -->
-<button onclick="nextTrack('relax')" 
-  style="
-    padding:16px 22px;
-    background:#1a1a1a;
-    color:#fff;
-    border:1px solid #333;
-    border-radius:8px;
-    font-size:15px;
-    cursor:pointer;
-  ">
-  ⏭ Next Track
-</button>
-
+<div class="cta-row">
+  <a href="#relax-player" class="primary-btn">▶ Start Listening</a>
+  <a href="#recommended-tracks" class="secondary-btn">Choose Relaxing Tracks</a>
+  <a href="/site/licensing.html#pricing" class="dark-btn">License for Videos</a>
 </div>
 
-</div>
 
-</section>
-<!-- CV導線（Relax専用） -->
-<div style="margin-top:18px;">
+  </div>
 
-  <p style="font-size:13px;opacity:0.85;margin-bottom:10px;">
-    ✔ Perfect for relaxing videos, vlogs & background music<br>
-    ✔ Works great for YouTube, TikTok & Instagram<br>
-    ✔ Commercial use available with license
-  </p>
+  <aside class="hero-card">
 
-  <a href="licensing.html" style="
-    display:inline-block;
-    padding:14px 22px;
-    background:#ffffff;
-    color:#000;
-    border-radius:8px;
-    font-weight:bold;
-    text-decoration:none;
-  ">
-    ▶ Use This Music in Your Videos
-  </a>
 
-</div>
-<!-- SEO TEXT -->
-
-<section class="container">
+<h2>Best for Gentle Background Listening</h2>
 
 <p>
-This relaxing lo-fi music player delivers calm background music with soft beats and ambient textures.
-It helps reduce stress, relieve anxiety, and create a peaceful environment for your mind.
+  Use this page as a starting point for calm listening, evening routines,
+  slow background music, quiet creative work, or licensed music for relaxing video content.
 </p>
 
-<p>
-穏やかなLo-Fiビートとアンビエントサウンドが心を落ち着かせ、ストレスや不安を軽減します。
-落ち着いた時間やリラックスしたい瞬間に最適な音楽です。
-</p>
-
-</section>
-
-<!-- CTA -->
-
-<section class="today-cta">
-<a href="today.html">▶ Start Your Relaxation Session Now</a>
-</section>
-
-<!-- SEO CONTENT -->
-
-<section class="seo-content" style="max-width:800px;margin:0 auto;padding:20px;line-height:1.8;">
-
-<h2>Why Relaxing Lo-Fi Music Reduces Stress and Anxiety</h2>
-<p>
-Relaxing lo-fi music uses slow rhythms, warm tones, and minimal melodies to calm your nervous system.
-It helps reduce mental overload, ease anxiety, and promote emotional balance.
-</p>
-
-<p>
-ゆったりとしたリズムと柔らかい音が自律神経を整え、ストレスや不安を和らげます。
-心を落ち着かせることで、自然なリラックス状態を作り出します。
-</p>
-
-<h2>Best Situations to Use Relaxing Music</h2>
 <ul>
-<li>After work to unwind / 仕事後のリラックス</li>
-<li>During meditation or mindfulness / 瞑想・マインドフルネス</li>
-<li>While resting at home / 自宅での休息時間</li>
-<li>As background music for calm focus / 落ち着いた作業用BGM</li>
+  <li>✔ Evening wind-down and quiet home listening</li>
+  <li>✔ Reading, journaling, drawing, and slow creative work</li>
+  <li>✔ Café atmosphere, room videos, and cozy visuals</li>
+  <li>✔ Relaxation videos, vlogs, and night routine content</li>
+  <li>✔ Licensed options for creators and commercial video use</li>
 </ul>
 
-<h2>Calm Background Music for Daily Life</h2>
-<p>
-Use this relaxing lo-fi music as background music to improve your mood, reduce tension, and create a peaceful environment throughout your day.
-</p>
 
-<p>
-日常のBGMとして使用することで、気分を安定させ、穏やかな空間を作ることができます。
-</p>
-
-<h2>Continuous Playback for Seamless Relaxation</h2>
-<p>
-Enjoy uninterrupted playback designed to keep your mind calm without sudden changes or distractions.
-Perfect for long relaxation sessions.
-</p>
-
-<p>
-途切れない再生設計により、長時間でも快適にリラックスできます。
-</p>
+  </aside>
 
 </section>
 
-<!-- INTERNAL LINKS -->
-<h2>Explore More Lo-Fi Music</h2>
+<section class="grid-4 section-block" aria-label="Nanashino-chan relaxing music signals">
 
-<section class="internal-links">
+  <div class="stat-card">
+    <strong>1,500+</strong>
+    <span>Lo-fi, chillhop, jazzhop, ambient, Tokyo-inspired, study, sleep, and calm background tracks.</span>
+  </div>
 
-<a href="study.html">
-Lo-Fi Study Music for Focus & Productivity
-</a>
+  <div class="stat-card">
+    <strong>3,000+</strong>
+    <span>Shazams from listeners discovering Nanashino-chan music in real listening contexts.</span>
+  </div>
 
-<a href="sleep.html">
-Lo-Fi Sleep Music for Deep Sleep & Relaxation
-</a>
+  <div class="stat-card">
+    <strong>Relax</strong>
+    <span>Soft instrumental music for calm moments, quiet rooms, reading, journaling, and evening routines.</span>
+  </div>
 
-<a href="tokyo.html">
-Tokyo Night Lo-Fi & Japanese Chill Beats
-</a>
+  <div class="stat-card">
+    <strong>License</strong>
+    <span>Direct licensing options are available for creators, relaxation videos, brand videos, and commercial projects.</span>
+  </div>
 
 </section>
 
-</section>
+<section id="relax-player" class="section-block player-panel">
 
-<section class="platform-links">
+  <h2>🎧 Start Listening – Relaxing Lo-Fi Music Player</h2>
 
-<h2>Continue Listening on Streaming Platforms</h2>
+  <p class="section-lead" style="margin-left:auto;margin-right:auto;">
+    Press play and begin a soft listening session.
+    This player is designed for relaxing, quiet evenings, reading, journaling, resting, and calm background music.
+  </p>
 
-<p>Enjoy relaxing lo-fi music on your favorite streaming services:</p>
+  <p class="player-note">
+    Powered by YouTube. Playback behavior, availability, and ads may vary depending on your device, region, account, and platform settings.
+  </p>
 
-<div class="platform-buttons">
+  <div class="player-wrap">
 
-<a href="https://open.spotify.com/album/6mp4X1AUNRPrAlxv01w7Jl" target="_blank" class="btn spotify">
-🎧 Spotify
-</a>
 
-<a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" class="btn apple">
-🍎 Apple Music
-</a>
+<div id="player-relax"></div>
 
-<a href="https://www.youtube.com/@Nanashino-chan" target="_blank" class="btn youtube">
-▶ YouTube
-</a>
+<div class="player-buttons">
+  <button onclick="startGenerator('relax')" class="player-btn-main">
+    ▶ Play Relaxing Lo-Fi Music
+  </button>
 
+  <button onclick="nextTrack('relax')" class="player-btn-sub">
+    ⏭ Next Track
+  </button>
 </div>
 
+<div class="mood-links">
+  <a href="/site/relax.html" class="small-btn">Relax</a>
+  <a href="/site/sleep.html" class="small-btn">Sleep</a>
+  <a href="/site/study.html" class="small-btn">Study</a>
+  <a href="/site/pages/lofi-music-for-focus.html" class="small-btn">Focus</a>
+  <a href="/site/pages/lofi-music-for-reading.html" class="small-btn">Reading</a>
+  <a href="/site/pages/lofi-music-for-working.html" class="small-btn">Work</a>
+  <a href="/site/tokyo.html" class="small-btn">Tokyo Night</a>
+  <a href="/site/jazzhop.html" class="small-btn">Soft Jazzhop</a>
+  <a href="/site/today.html" class="small-btn">Today’s Player</a>
+</div>
+
+
+  </div>
+
 </section>
+
+<section class="section-block answer-box">
+
+  <h2>What Makes Lo-Fi Useful for Relaxing Background Listening?</h2>
+
+  <p class="section-lead">
+    Relaxing lo-fi music can be useful because it creates a gentle sound layer without demanding too much attention.
+    The goal is not to force a result. The goal is to make quiet moments feel a little more comfortable, warm, and grounded.
+  </p>
+
+  <div class="grid-3">
+
+
+<div class="info-card">
+  <p class="card-kicker">Soft texture</p>
+  <h3>Warm sounds without pressure</h3>
+  <p>
+    Gentle keys, soft drums, vinyl texture, ambient pads, and smooth jazzhop elements
+    can create a calm background without becoming too dramatic.
+  </p>
+</div>
+
+<div class="info-card">
+  <p class="card-kicker">Low distraction</p>
+  <h3>Instrumental and easy to place</h3>
+  <p>
+    Many relaxing lo-fi tracks avoid strong vocals and sudden changes,
+    making them easier to use behind reading, journaling, drawing, resting, and quiet home routines.
+  </p>
+</div>
+
+<div class="info-card">
+  <p class="card-kicker">Everyday atmosphere</p>
+  <h3>Calm music for ordinary moments</h3>
+  <p>
+    Relaxing lo-fi can fit small daily scenes:
+    making tea, reading at night, sitting by a window, organizing a desk, or taking a quiet break.
+  </p>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="section-block warning-box">
+
+  <h2>A Careful Note About Stress, Anxiety, Sleep, and Health Claims</h2>
+
+  <p>
+    Relaxing lo-fi music does not guarantee stress relief, anxiety reduction,
+    sleep improvement, emotional balance, medical benefits, or health outcomes.
+    Music can support a listening environment, but it should not be presented as treatment.
+  </p>
+
+  <p>
+    This page describes relaxing lo-fi music as background music for calm moments,
+    quiet routines, reading, journaling, resting, and peaceful listening.
+    Individual experiences vary depending on the listener, volume, environment, and situation.
+  </p>
+
+  <p>
+    日本語：Lo-Fi音楽は、ストレスや不安を治すものではありません。
+    ただし、静かに休みたい時間や、落ち着いた空間を作りたいときの背景音として使いやすい音楽です。
+  </p>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Best Ways to Use Relaxing Lo-Fi Music</h2>
+
+  <p class="section-lead">
+    Relaxing music is not a single situation.
+    Choose the mood that matches the moment.
+  </p>
+
+  <div class="grid-4">
+
+
+<div class="use-card">
+  <p class="card-kicker">After work</p>
+  <h3>Evening wind-down</h3>
+  <p>
+    Use soft lo-fi after work when you want a gentle transition from a busy day
+    into a quieter evening routine.
+  </p>
+  <div class="tag-list">
+    <span class="tag">After Work</span>
+    <span class="tag">Evening</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Reading</p>
+  <h3>Quiet reading background</h3>
+  <p>
+    Choose soft instrumental tracks when reading books, long articles,
+    magazines, essays, or slow weekend pages.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Reading</span>
+    <span class="tag">Books</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Journaling</p>
+  <h3>Writing and reflection</h3>
+  <p>
+    Warm and gentle lo-fi can sit behind journaling, planning,
+    letter writing, morning pages, and reflective notes.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Journaling</span>
+    <span class="tag">Writing</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Home café</p>
+  <h3>Café-style atmosphere</h3>
+  <p>
+    Use cozy jazzhop and café-style lo-fi for coffee time,
+    home workspaces, interior videos, and slow living moments.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Café</span>
+    <span class="tag">Cozy</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Night routine</p>
+  <h3>Low-light listening</h3>
+  <p>
+    Softer night lo-fi can fit low-light rooms, quiet desk scenes,
+    night reading, and gentle end-of-day background music.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Night</span>
+    <span class="tag">Low Light</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Slow morning</p>
+  <h3>Weekend morning mood</h3>
+  <p>
+    Gentle lo-fi can support breakfast, slow cleaning,
+    morning sunlight, soft planning, and quiet weekend routines.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Morning</span>
+    <span class="tag">Slow Living</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Creative rest</p>
+  <h3>Drawing, ideas, and light work</h3>
+  <p>
+    Use mellow tracks while sketching, editing photos,
+    organizing ideas, or doing creative work without time pressure.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Creative</span>
+    <span class="tag">Ideas</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Video background</p>
+  <h3>Relaxing videos and vlogs</h3>
+  <p>
+    Relaxing lo-fi can fit vlogs, slow living videos, café videos,
+    room tours, desk setup videos, and calm brand visuals when properly licensed.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Vlog</span>
+    <span class="tag">Video</span>
+  </div>
+</div>
+
+
+  </div>
+
+</section>
+
+<section id="recommended-tracks" class="section-block">
+
+  <h2>Recommended Nanashino-chan Tracks for Relaxation</h2>
+
+  <p class="section-lead">
+    These tracks are useful starting points for calm listening, reading, journaling,
+    quiet evening routines, café atmosphere, and relaxed creative work.
+  </p>
+
+  <div class="grid-4">
+
+
+<div class="track-card">
+  <p class="card-kicker">Quiet evening</p>
+  <h3>Stillness Vibes</h3>
+  <p>
+    A calm and spacious track for quiet evenings, reading,
+    peaceful desk time, and soft background listening.
+  </p>
+  <p class="track-meta">Best for: quiet evenings, reading, stillness</p>
+  <div class="tag-list">
+    <span class="tag">Calm</span>
+    <span class="tag">Still</span>
+    <span class="tag">Evening</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Warm relaxation</p>
+  <h3>Smooth Groove</h3>
+  <p>
+    A warm lo-fi groove for café-style relaxation,
+    room atmosphere, casual breaks, and gentle background music.
+  </p>
+  <p class="track-meta">Best for: café time, light rest, home listening</p>
+  <div class="tag-list">
+    <span class="tag">Warm</span>
+    <span class="tag">Café</span>
+    <span class="tag">Chillhop</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Slow afternoon</p>
+  <h3>Lazy Afternoon Vibes</h3>
+  <p>
+    A relaxed track for slower afternoons,
+    casual reading, quiet breaks, and soft weekend routines.
+  </p>
+  <p class="track-meta">Best for: afternoon, weekend, gentle rest</p>
+  <div class="tag-list">
+    <span class="tag">Afternoon</span>
+    <span class="tag">Relaxed</span>
+    <span class="tag">Soft</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Reflective mood</p>
+  <h3>Dreamy Vibes</h3>
+  <p>
+    A gentle and dreamy track for journaling,
+    quiet reflection, creative rest, and peaceful background listening.
+  </p>
+  <p class="track-meta">Best for: journaling, reflection, soft ideas</p>
+  <div class="tag-list">
+    <span class="tag">Dreamy</span>
+    <span class="tag">Reflective</span>
+    <span class="tag">Gentle</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Night desk scene</p>
+  <h3>Soft Lights, Quiet Thoughts</h3>
+  <p>
+    A quiet track for low-light rooms, night reading,
+    desk setups, soft writing, and calm evening visuals.
+  </p>
+  <p class="track-meta">Best for: night routine, desk setup, writing</p>
+  <div class="tag-list">
+    <span class="tag">Night</span>
+    <span class="tag">Desk</span>
+    <span class="tag">Quiet</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Cozy reading</p>
+  <h3>Autumn Pages</h3>
+  <p>
+    A warm and thoughtful track for reading,
+    handwritten notes, tea time, and cozy room atmosphere.
+  </p>
+  <p class="track-meta">Best for: reading, notes, cozy rooms</p>
+  <div class="tag-list">
+    <span class="tag">Autumn</span>
+    <span class="tag">Reading</span>
+    <span class="tag">Cozy</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Soft ambient</p>
+  <h3>Ambient Flow</h3>
+  <p>
+    A softer ambient-style track for peaceful background listening,
+    slow visuals, quiet work, and light creative rest.
+  </p>
+  <p class="track-meta">Best for: ambient mood, calm visuals, rest</p>
+  <div class="tag-list">
+    <span class="tag">Ambient</span>
+    <span class="tag">Flow</span>
+    <span class="tag">Soft</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Café evening</p>
+  <h3>Closing Time Jazz</h3>
+  <p>
+    A cozy jazzhop mood for café visuals,
+    evening interiors, hospitality content, and warm room scenes.
+  </p>
+  <p class="track-meta">Best for: café, interior, evening atmosphere</p>
+  <div class="tag-list">
+    <span class="tag">Jazzhop</span>
+    <span class="tag">Café</span>
+    <span class="tag">Interior</span>
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="cta-row">
+    <a href="/site/today.html" class="primary-btn">▶ Open Today’s Player</a>
+    <a href="/site/music.html" class="secondary-btn">Browse Music Catalog</a>
+    <a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="dark-btn">Tracks for Commercial Video</a>
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Choose the Right Relaxing Lo-Fi Mood</h2>
+
+  <p class="section-lead">
+    Relaxing lo-fi works best when the sound matches the scene.
+    Use these mood categories to find a better fit.
+  </p>
+
+  <div class="grid-3">
+
+
+<div class="mood-card">
+  <p class="card-kicker">Calm and minimal</p>
+  <h3>For reading, rest, and quiet rooms</h3>
+  <p>
+    Choose soft, minimal, instrumental tracks when you want the music to stay behind the activity
+    rather than draw attention.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Minimal</span>
+    <span class="tag">Reading</span>
+  </div>
+</div>
+
+<div class="mood-card">
+  <p class="card-kicker">Warm and cozy</p>
+  <h3>For café, home, and slow living</h3>
+  <p>
+    Choose warm chillhop or jazzhop for coffee time, room videos,
+    interior scenes, hospitality content, and cozy evening visuals.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Cozy</span>
+    <span class="tag">Café</span>
+  </div>
+</div>
+
+<div class="mood-card">
+  <p class="card-kicker">Night and atmospheric</p>
+  <h3>For Tokyo night and low-light scenes</h3>
+  <p>
+    Choose darker, softer, city-inspired lo-fi for night routines,
+    quiet desk setups, urban visuals, and reflective listening.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Night</span>
+    <span class="tag">Tokyo</span>
+  </div>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="section-block full-infographic">
+
+  <h2>Using Relaxing Lo-Fi Music in Videos</h2>
+
+  <p>
+    Relaxing lo-fi music is often used in relaxation videos, slow living videos,
+    room tour videos, café videos, reading videos, night routine videos,
+    desk setup videos, wellness-style visuals, travel edits, and soft brand videos.
+  </p>
+
+  <p>
+    If the video is monetized, sponsored, client-based, used for a business,
+    or distributed as part of a commercial project, choose a license that matches the actual use.
+  </p>
+
+  <img src="/site/images/infographics/music-licensing-process.webp" alt="Music licensing process infographic for relaxing lo-fi music, relaxation videos, vlogs, and commercial video use" loading="lazy" width="1600" height="900">
+
+  <a href="/site/images/infographics/music-licensing-process.webp" target="_blank" rel="noopener noreferrer" class="full-size-link">
+    Open full-size infographic →
+  </a>
+
+</section>
+
+<section class="section-block">
+
+  <h2>License Guidance for Relaxation Videos, Vlogs, and Calm Brand Content</h2>
+
+  <p class="section-lead">
+    The right license depends on whether the music is used for personal listening,
+    organic creator content, monetized videos, business videos, paid ads, or client work.
+  </p>
+
+  <div class="grid-4">
+
+
+<div class="license-card">
+  <p class="card-kicker">Personal listening</p>
+  <h3>Personal Use License</h3>
+  <p>
+    For personal, non-commercial listening or non-commercial use.
+    Not for monetized videos, business content, client work, advertising, or brand campaigns.
+  </p>
+  <div class="tag-list">
+    <span class="tag">$19</span>
+    <span class="tag">Personal</span>
+  </div>
+</div>
+
+<div class="license-card">
+  <p class="card-kicker">Creator video</p>
+  <h3>Commercial Creator License</h3>
+  <p>
+    For suitable organic commercial videos, monetized videos, YouTube videos,
+    relaxation videos, vlogs, business videos, and non-ad online content within license scope.
+  </p>
+  <div class="tag-list">
+    <span class="tag">$500</span>
+    <span class="tag">Commercial</span>
+  </div>
+</div>
+
+<div class="license-card">
+  <p class="card-kicker">Short campaign</p>
+  <h3>1-Month Sync License</h3>
+  <p>
+    For suitable short-term ads, paid campaigns, sponsored promotion,
+    client advertising, and music synchronized with campaign video.
+  </p>
+  <div class="tag-list">
+    <span class="tag">$500</span>
+    <span class="tag">Sync</span>
+  </div>
+</div>
+
+<div class="license-card">
+  <p class="card-kicker">Extended campaign</p>
+  <h3>3-Month Sync License</h3>
+  <p>
+    For suitable longer campaign periods, paid social distribution,
+    extended promotional use, and broader campaign visibility.
+  </p>
+  <div class="tag-list">
+    <span class="tag">$1,200</span>
+    <span class="tag">3 Months</span>
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="cta-row">
+    <a href="/site/licensing.html#pricing" class="primary-btn">Compare License Options</a>
+    <a href="/site/pages/commercial-license-vs-sync-license.html" class="secondary-btn">Commercial vs Sync License</a>
+    <a href="/site/pages/proof-of-music-license-for-business.html" class="dark-btn">Proof of Music License</a>
+  </div>
+
+</section>
+
+<section class="section-block full-infographic">
+
+  <h2>Platform Music Is Not a Full Commercial License</h2>
+
+  <p>
+    A track may appear inside Instagram, TikTok, YouTube Shorts, or another platform music interface,
+    but that does not automatically make it cleared for monetized relaxation videos,
+    sponsored content, client work, online courses, paid ads, or broader commercial use.
+  </p>
+
+  <p>
+    Platform-library or credit-based usage may be suitable for non-commercial or small-scale projects,
+    but it should not be treated as a substitute for a commercial license, sync license,
+    paid advertising license, client-work license, or brand campaign license.
+  </p>
+
+  <p>
+    日本語：SNS上で選べる音源として表示されていることと、収益化動画・広告・クライアント案件・商用動画で使えることは同じではありません。
+    動画やビジネスで使う場合は、用途に合ったライセンス確認が必要です。
+  </p>
+
+  <img src="/site/images/infographics/why-both-rights-matter.webp" alt="Why both copyright permission and master rights permission matter for relaxing lo-fi music in commercial videos" loading="lazy" width="1600" height="900">
+
+  <a href="/site/images/infographics/why-both-rights-matter.webp" target="_blank" rel="noopener noreferrer" class="full-size-link">
+    Open full-size infographic →
+  </a>
+
+</section>
+
+<section class="section-block">
+
+  <h2>About Nanashino-chan’s Relaxing Lo-Fi Catalog</h2>
+
+  <p class="section-lead">
+    Nanashino-chan creates instrumental lo-fi, chillhop, jazzhop, chillwave,
+    ambient, and Tokyo-inspired background music for relaxation, study, focus,
+    sleep, creative work, and commercial video use.
+  </p>
+
+  <div class="grid-3">
+
+
+<div class="catalog-card">
+  <p class="card-kicker">Catalog</p>
+  <h3>Large background music library</h3>
+  <p>
+    The Nanashino-chan catalog includes 1,500+ tracks across lo-fi, chillhop,
+    jazzhop, ambient, Tokyo night, café, focus, sleep, relaxation, and creative work moods.
+  </p>
+</div>
+
+<div class="catalog-card">
+  <p class="card-kicker">Discovery</p>
+  <h3>3,000+ Shazams</h3>
+  <p>
+    Listener discovery through Shazam shows that the music is being noticed
+    in real listening contexts, even when people do not already know the track name.
+  </p>
+</div>
+
+<div class="catalog-card">
+  <p class="card-kicker">Use</p>
+  <h3>Listening and licensing</h3>
+  <p>
+    Music can be explored for personal listening, playlists, creator videos,
+    brand videos, business videos, relaxation videos, and suitable commercial projects.
+  </p>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Relaxing Music Listening Workflow</h2>
+
+  <p class="section-lead">
+    A simple listening workflow can make relaxing lo-fi easier to use in daily routines.
+  </p>
+
+  <div class="grid-3">
+
+
+<div class="process-card">
+  <p class="card-kicker">Step 1</p>
+  <h3>Choose the moment</h3>
+  <p>
+    Decide whether you are reading, resting, journaling,
+    drinking coffee, drawing, winding down, or creating a soft room atmosphere.
+  </p>
+</div>
+
+<div class="process-card">
+  <p class="card-kicker">Step 2</p>
+  <h3>Keep the volume gentle</h3>
+  <p>
+    Relaxing lo-fi works best as background music when it supports the room
+    instead of becoming the main event.
+  </p>
+</div>
+
+<div class="process-card">
+  <p class="card-kicker">Step 3</p>
+  <h3>Let the music stay simple</h3>
+  <p>
+    Choose softer tracks with fewer sudden changes when you want the music to stay calm and unobtrusive.
+  </p>
+</div>
+
+<div class="process-card">
+  <p class="card-kicker">Step 4</p>
+  <h3>Match the time of day</h3>
+  <p>
+    Use warmer tracks for afternoon and café time,
+    softer tracks for evening, and darker tracks for night routines.
+  </p>
+</div>
+
+<div class="process-card">
+  <p class="card-kicker">Step 5</p>
+  <h3>Avoid over-optimizing</h3>
+  <p>
+    The goal is not to search endlessly for the perfect playlist.
+    Start listening, settle into the room, and let the music fade into the background.
+  </p>
+</div>
+
+<div class="process-card">
+  <p class="card-kicker">Step 6</p>
+  <h3>License if you publish</h3>
+  <p>
+    If the music is used in a public, monetized, business, sponsored,
+    or client video, choose a license that matches the actual use.
+  </p>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="section-block platform-links-enhanced">
+
+  <h2>Continue Listening on Streaming Platforms</h2>
+
+  <p>
+    Explore Nanashino-chan music through streaming and video platforms.
+    For published videos, business use, advertising, or commercial projects, use the licensing page instead of relying only on platform availability.
+  </p>
+
+  <div class="platform-buttons">
+    <a href="https://open.spotify.com/album/6mp4X1AUNRPrAlxv01w7Jl" target="_blank" rel="noopener noreferrer">🎧 Spotify</a>
+    <a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" rel="noopener noreferrer">🍎 Apple Music</a>
+    <a href="https://www.youtube.com/@Nanashino-chan" target="_blank" rel="noopener noreferrer">▶ YouTube</a>
+    <a href="/site/music.html">Browse Catalog</a>
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Explore More Lo-Fi Music</h2>
+
+  <p class="section-lead">
+    Continue into related listening pages and licensing guides.
+  </p>
+
+  <div class="grid-3">
+
+
+<a href="/site/sleep.html" class="related-card">
+  <strong>Sleep Lo-Fi Music</strong>
+  <span>Calmer lo-fi and ambient music for night listening and quiet wind-down routines.</span>
+</a>
+
+<a href="/site/study.html" class="related-card">
+  <strong>Lo-Fi Music for Studying</strong>
+  <span>Instrumental lo-fi music for studying, reading, coding, writing, and calm productivity.</span>
+</a>
+
+<a href="/site/pages/lofi-music-for-focus.html" class="related-card">
+  <strong>Lo-Fi Music for Focus</strong>
+  <span>Instrumental lo-fi for concentration, deep work, focus blocks, and productivity sessions.</span>
+</a>
+
+<a href="/site/pages/lofi-music-for-reading.html" class="related-card">
+  <strong>Lo-Fi Music for Reading</strong>
+  <span>Soft background music for books, long-form reading, research, and quiet document work.</span>
+</a>
+
+<a href="/site/tokyo.html" class="related-card">
+  <strong>Tokyo Lo-Fi Music</strong>
+  <span>Tokyo-inspired lo-fi, night city atmosphere, Japanese chill beats, and urban background music.</span>
+</a>
+
+<a href="/site/jazzhop.html" class="related-card">
+  <strong>Jazzhop Music</strong>
+  <span>Smooth jazzhop and jazzy lo-fi beats for café, reading, working, and creative sessions.</span>
+</a>
+
+<a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="related-card">
+  <strong>Recommended Tracks for Commercial Video Use</strong>
+  <span>Selected Nanashino-chan tracks for videos, brand content, product demos, and commercial projects.</span>
+</a>
+
+<a href="/site/pages/can-businesses-use-platform-music.html" class="related-card">
+  <strong>Can Businesses Use Platform Music?</strong>
+  <span>Learn why platform audio is not always a substitute for commercial or paid advertising music licensing.</span>
+</a>
+
+<a href="/site/licensing.html" class="related-card">
+  <strong>License Nanashino-chan Music</strong>
+  <span>Compare Personal, Commercial Creator, Sync, and custom licensing options.</span>
+</a>
+
+
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>FAQ</h2>
+
+  <div class="faq-box">
+
+
+<h3>What is relaxing lo-fi music?</h3>
+<p>
+  Relaxing lo-fi music is usually soft instrumental background music with warm tones,
+  gentle rhythm, and minimal distraction. It is often used for quiet evenings,
+  reading, journaling, resting, calm work, and peaceful background listening.
+</p>
+
+<h3>Is lo-fi music good for relaxing?</h3>
+<p>
+  Lo-fi music may help some listeners create a calmer background atmosphere.
+  It does not guarantee stress relief, anxiety reduction, sleep improvement,
+  health benefits, or emotional outcomes, but many people use soft instrumental music for quiet listening and unwinding.
+</p>
+
+<h3>Can relaxing lo-fi music reduce anxiety?</h3>
+<p>
+  No music page should promise anxiety reduction or medical effects.
+  Relaxing lo-fi music may help create a peaceful listening environment for some people,
+  but it is not medical advice or treatment.
+</p>
+
+<h3>Can I use lo-fi music while reading or journaling?</h3>
+<p>
+  Yes. Many listeners use soft instrumental lo-fi while reading, journaling, writing, or resting
+  because it can be less distracting than lyrical music. Keep the volume low and choose tracks with fewer sudden changes.
+</p>
+
+<h3>Is relaxing lo-fi music good for sleep?</h3>
+<p>
+  Relaxing lo-fi music may be suitable for quiet night listening or wind-down routines for some listeners,
+  but it does not guarantee sleep improvement or health outcomes.
+</p>
+
+<h3>What Nanashino-chan tracks are good for relaxation?</h3>
+<p>
+  Stillness Vibes, Smooth Groove, Lazy Afternoon Vibes, Dreamy Vibes,
+  Soft Lights Quiet Thoughts, Autumn Pages, Ambient Flow, Closing Time Jazz,
+  Evening Chillhop Glow, and Vaporwave Streets can fit different relaxation moods.
+</p>
+
+<h3>Can I use Nanashino-chan music in relaxation videos?</h3>
+<p>
+  Relaxation videos, vlogs, slow living videos, reading videos, desk setup videos,
+  and night routine videos may require a license if they are monetized, commercial,
+  sponsored, client-based, or used as part of a business.
+</p>
+
+<h3>Do I need a license for monetized relaxation videos?</h3>
+<p>
+  Yes, monetized or commercial relaxation videos should use music that is properly licensed for the intended use.
+  A Commercial Creator License may fit some organic monetized videos,
+  while paid ads or campaigns may require a Sync License or custom permission.
+</p>
+
+<h3>Can I use platform music for relaxation videos?</h3>
+<p>
+  Do not assume platform music is cleared for all uses.
+  Platform-library or credit-based usage should not be treated as a substitute for a commercial license,
+  sync license, paid advertising license, client-work license, or brand campaign license.
+</p>
+
+<h3>Can businesses use relaxing lo-fi music?</h3>
+<p>
+  Businesses can use relaxing lo-fi music in videos when the music is properly licensed for the intended commercial use.
+  Business videos, client work, paid ads, and brand campaigns may require different license scopes.
+</p>
+
+<h3>Where can I license Nanashino-chan music?</h3>
+<p>
+  Nanashino-chan music can be licensed through the licensing page.
+  Available options include Personal Use, Commercial Creator, 1-Month Sync,
+  and 3-Month Sync licenses for suitable use cases, subject to license scope.
+</p>
+
+
+  </div>
+
+</section>
+
+<section class="section-block final-cta">
+
+  <h2>Start a Calm Listening Session</h2>
+
+  <p>
+    Use the player for personal listening, explore relaxing tracks,
+    or choose a license if you want to use Nanashino-chan music in YouTube videos,
+    relaxation content, vlogs, business videos, or commercial projects.
+  </p>
+
+  <div class="cta-row" style="justify-content:center;">
+    <a href="#relax-player" class="primary-btn">▶ Start Listening</a>
+    <a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="secondary-btn">Preview Licensed Tracks</a>
+    <a href="/site/licensing.html#pricing" class="dark-btn">View License Options</a>
+  </div>
+
+</section>
+
+<section class="section-block disclaimer">
+
+  <h2>Disclaimer</h2>
+
+  <p>
+    This page provides general listening and music licensing information for relaxing lo-fi music,
+    calm background music, reading, journaling, resting, night routines, relaxation videos,
+    vlogs, YouTube videos, commercial videos, and business use.
+    It is not medical, mental health, wellness, sleep, productivity, or legal advice.
+  </p>
+
+  <p>
+    Relaxing lo-fi music does not guarantee stress relief, anxiety reduction,
+    sleep improvement, health outcomes, emotional outcomes, monetization approval,
+    ad approval, platform behavior, Content ID outcomes, reach, or commercial performance.
+  </p>
+
+  <h2>免責事項</h2>
+
+  <p>
+    このページは、Relaxing Lo-Fi音楽、落ち着いた背景音、読書、日記、休息、
+    夜のルーティン、Vlog、YouTube動画、商用動画、ビジネス利用に関する一般的な情報を提供するものです。
+    医療・メンタルヘルス・睡眠・生産性・法律に関する助言ではなく、ストレス軽減、不安軽減、睡眠改善、収益化、広告審査、Content IDの挙動、各プラットフォームでの結果を保証するものではありません。
+  </p>
+
+</section>
+
+</main>
 
 <footer class="site-footer">
 
@@ -344,27 +1840,30 @@ Tokyo Night Lo-Fi & Japanese Chill Beats
 
 <div class="footer-brand">
 <h2>Nanashino-chan</h2>
-<p>Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
+<p>Lo-Fi Music for Focus, Relaxation, Study, and Creative Work</p>
 <p>© 2026 Nanashino-chan. All rights reserved.</p>
 </div>
 
 <div class="footer-links">
-<a href="study.html">Lo-Fi music for studying and focus</a> |
-<a href="relax.html">Relaxing lo-fi music for sleep and stress relief</a> |
-<a href="tokyo.html">Tokyo night lo-fi and Japanese chill beats</a> |
-<a href="jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
+<a href="/site/study.html">Lo-Fi music for studying and focus</a> |
+<a href="/site/relax.html">Relaxing lo-fi music</a> |
+<a href="/site/sleep.html">Sleep lo-fi music</a> |
+<a href="/site/tokyo.html">Tokyo night lo-fi</a> |
+<a href="/site/jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
 </div>
 
 <div class="footer-links-sub">
-<a href="index.html">Home</a> |
-<a href="today.html">Listen Now</a> |
-<a href="faq.html">FAQ</a> |
-<a href="policy.html">Policy</a> |
-<a href="contact.html">Contact</a>
+<a href="/site/index.html">Home</a> |
+<a href="/site/today.html">Listen Now</a> |
+<a href="/site/music.html">Music</a> |
+<a href="/site/licensing.html">License Music</a> |
+<a href="/site/faq.html">FAQ</a> |
+<a href="/site/policy.html">Policy</a> |
+<a href="/site/contact.html">Contact</a>
 </div>
 
 <p class="footer-note">
-🎧 Designed for calm, relaxation, and a smooth listening experience.
+🎧 Calm instrumental lo-fi music for listening, relaxation, and licensed video use.
 </p>
 
 </div>
