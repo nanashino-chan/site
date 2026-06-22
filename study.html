@@ -1,96 +1,801 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>Lo-Fi Study Music for Focus & Productivity – Free Deep Work Beats</title>
+<title>Lo-Fi Music for Studying, Focus & Deep Work | Nanashino-chan</title>
 
-<meta name="description" content="Free lo-fi study music for focus, deep work, coding, and productivity. Instantly play relaxing background beats. 作業・勉強・集中に最適なLo-Fi音楽。">
+<meta name="description" content="Stream instrumental lo-fi music for studying, focus, deep work, reading, coding, writing, and calm productivity. Listen to Nanashino-chan lo-fi study music and find licensed tracks for study videos, YouTube, and commercial use.">
 
 <meta name="robots" content="index, follow">
-
-<!-- Canonical -->
 <link rel="canonical" href="https://nanashino-chan.github.io/site/study.html">
 
-<!-- Security -->
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
+<link rel="stylesheet" href="/site/style.css">
 
-  script-src 'self'
-    'unsafe-inline'
-    https://www.youtube.com
-    https://www.google.com
-    https://www.gstatic.com
-    https://s.ytimg.com
-    https://www.googletagmanager.com
-    https://www.google-analytics.com;
-
-  frame-src
-    https://www.youtube.com
-    https://www.youtube-nocookie.com;
-
-  connect-src
-    'self'
-    https://www.youtube.com
-    https://i.ytimg.com
-    https://www.google-analytics.com
-    https://www.googletagmanager.com;
-
-  img-src
-    'self'
-    https://i.ytimg.com
-    https://img.youtube.com
-    data:;
-
-  style-src
-    'self'
-    'unsafe-inline';
-
-  font-src 'self';
-
-  object-src 'none';
-  base-uri 'self';
-">
-
-<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-
-<!-- Favicon -->
 <link rel="icon" href="/site/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
 
-<!-- OGP -->
-<meta property="og:title" content="Lo-Fi Study Music – Focus & Productivity Beats">
-<meta property="og:description" content="Free lo-fi music for studying, deep focus, and productivity.">
+<meta property="og:title" content="Lo-Fi Music for Studying, Focus & Deep Work">
+<meta property="og:description" content="Instrumental lo-fi study music for focus, reading, coding, writing, deep work, and calm productivity.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/study.html">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lo-Fi Study Music for Focus & Productivity">
-<meta name="twitter:description" content="Free focus music for studying and deep work.">
+<meta name="twitter:title" content="Lo-Fi Music for Studying, Focus & Deep Work">
+<meta name="twitter:description" content="Listen to instrumental lo-fi music for studying, focus, deep work, reading, coding, and productivity.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self' 'unsafe-inline'
+https://www.youtube.com
+https://www.youtube-nocookie.com
+https://www.google.com
+https://www.gstatic.com
+https://s.ytimg.com
+https://www.googletagmanager.com
+https://www.google-analytics.com;
+frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+connect-src 'self' https://www.youtube.com https://i.ytimg.com https://www.google-analytics.com https://www.googletagmanager.com;
+img-src 'self' https://i.ytimg.com https://img.youtube.com data:;
+style-src 'self' 'unsafe-inline';
+font-src 'self';
+object-src 'none';
+base-uri 'self';
+">
 
-<!-- Preconnect -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
 
-<!-- Hero preload -->
-<link rel="preload"
-      as="image"
-      href="hero-1440.webp"
-      imagesrcset="hero-720.webp 720w, hero-1440.webp 1440w"
-      imagesizes="(max-width: 768px) 100vw, 1200px">
+<style>
+.study-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 42px 24px 80px;
+}
 
-<!-- GA遅延 -->
+.study-breadcrumb {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.study-breadcrumb a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.study-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 440px);
+  gap: 38px;
+  align-items: center;
+  margin-bottom: 58px;
+}
+
+.hero-badge {
+  display: inline-block;
+  color: #ffcc00;
+  border: 1px solid rgba(255,204,0,0.42);
+  background: rgba(255,204,0,0.06);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.study-hero h1 {
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.06;
+  margin: 0 0 24px;
+  letter-spacing: -0.045em;
+}
+
+.hero-lead {
+  color: #ddd;
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 0 0 18px;
+}
+
+.hero-sub {
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn,
+.dark-btn,
+.small-btn {
+  display: inline-block;
+  border-radius: 12px;
+  font-weight: 900;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.primary-btn {
+  padding: 15px 22px;
+  background: #ffcc00;
+  color: #000;
+  box-shadow: 0 10px 28px rgba(255,204,0,0.18);
+}
+
+.secondary-btn {
+  padding: 15px 22px;
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+  background: rgba(255,204,0,0.04);
+}
+
+.dark-btn {
+  padding: 15px 22px;
+  color: #fff;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.small-btn {
+  padding: 11px 13px;
+  color: #ddd;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.12);
+  font-size: 13px;
+}
+
+.hero-card {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.17), transparent 34%),
+    linear-gradient(180deg, #151515, #0b0b0b);
+  border: 1px solid rgba(255,204,0,0.22);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.32);
+}
+
+.hero-card h2 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.hero-card p,
+.hero-card li {
+  color: #ccc;
+  line-height: 1.85;
+}
+
+.hero-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 22px 0 0;
+}
+
+.hero-card li {
+  margin-bottom: 10px;
+}
+
+.today-cta {
+  max-width: 1180px;
+  margin: 0 auto 30px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.today-cta a {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  color: #000;
+  background: #ffcc00;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(255,204,0,0.18);
+}
+
+.section-block {
+  margin-bottom: 84px;
+}
+
+.section-block h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.18;
+  margin: 0 0 18px;
+  letter-spacing: -0.02em;
+}
+
+.section-lead {
+  color: #ccc;
+  line-height: 1.9;
+  font-size: 18px;
+  max-width: 900px;
+}
+
+.player-panel {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.14), transparent 34%),
+    linear-gradient(180deg, #151515, #0d0d0d);
+  border: 1px solid rgba(255,204,0,0.24);
+  border-radius: 26px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 22px 70px rgba(0,0,0,0.28);
+}
+
+.player-panel h2 {
+  margin-top: 0;
+}
+
+.player-note {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.75;
+  max-width: 760px;
+  margin: 12px auto 24px;
+}
+
+.player-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+#player-focus {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.player-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.player-btn-main,
+.player-btn-sub {
+  padding: 16px 24px;
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.player-btn-main {
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  box-shadow: 0 8px 24px rgba(255,204,0,0.18);
+}
+
+.player-btn-sub {
+  background: #222;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.mood-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.info-card,
+.stat-card,
+.track-card,
+.use-card,
+.related-card,
+.note-box,
+.warning-box,
+.license-card,
+.process-card,
+.catalog-card,
+.faq-box {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.info-card h3,
+.track-card h3,
+.use-card h3,
+.license-card h3,
+.process-card h3,
+.catalog-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.info-card p,
+.stat-card p,
+.track-card p,
+.use-card p,
+.related-card p,
+.note-box p,
+.warning-box p,
+.license-card p,
+.process-card p,
+.catalog-card p,
+.faq-box p,
+.note-box li,
+.warning-box li {
+  color: #ccc;
+  line-height: 1.85;
+}
+
+.card-kicker {
+  color: #ffcc00;
+  font-weight: 900;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.stat-card {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.12), transparent 34%),
+    #101010;
+  border-color: rgba(255,204,0,0.18);
+}
+
+.stat-card strong {
+  display: block;
+  color: #ffcc00;
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.stat-card span {
+  color: #cfcfcf;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.warning-box {
+  border-left: 4px solid #ffcc00;
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.12), transparent 34%),
+    #101010;
+}
+
+.answer-box {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.14), transparent 32%),
+    linear-gradient(180deg, rgba(255,204,0,0.07), rgba(255,204,0,0.025));
+  border: 1px solid rgba(255,204,0,0.26);
+  border-left: 4px solid #ffcc00;
+  border-radius: 22px;
+  padding: 30px;
+}
+
+.full-infographic {
+  background:
+    radial-gradient(circle at top right, rgba(255,204,0,0.12), transparent 32%),
+    #101010;
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.full-infographic p {
+  color: #ccc;
+  line-height: 1.9;
+  max-width: 920px;
+}
+
+.full-infographic img {
+  width: 100%;
+  max-width: 1120px;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-top: 24px;
+}
+
+.full-size-link {
+  display: inline-block;
+  color: #ffcc00;
+  font-weight: 900;
+  text-decoration: none;
+  margin-top: 18px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 800;
+  color: #ddd;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: rgba(255,255,255,0.04);
+}
+
+.track-meta {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.related-card {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,204,0,0.38);
+}
+
+.related-card strong {
+  display: block;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.related-card span {
+  color: #bbb;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.platform-links-enhanced {
+  text-align: center;
+  background:
+    radial-gradient(circle at top, rgba(255,204,0,0.12), transparent 34%),
+    #101010;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 38px 26px;
+}
+
+.platform-links-enhanced p {
+  color: #ccc;
+  line-height: 1.85;
+}
+
+.platform-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.platform-buttons a {
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  color: #fff;
+  background: #151515;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.final-cta {
+  text-align: center;
+  padding: 48px 28px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at top, rgba(255,204,0,0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255,204,0,0.1), rgba(255,204,0,0.03));
+  border: 1px solid rgba(255,204,0,0.28);
+}
+
+.final-cta p {
+  color: #ccc;
+  line-height: 1.9;
+  font-size: 18px;
+  max-width: 860px;
+  margin: 18px auto 0;
+}
+
+.disclaimer {
+  text-align: center;
+}
+
+.disclaimer p {
+  color: #bbb;
+  line-height: 1.9;
+  max-width: 920px;
+  margin: 0 auto 18px;
+}
+
+@media (max-width: 980px) {
+  .study-hero,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .study-page {
+    padding: 30px 16px 64px;
+  }
+
+  .today-cta {
+    padding: 0 16px;
+  }
+
+  .hero-card,
+  .info-card,
+  .stat-card,
+  .track-card,
+  .use-card,
+  .related-card,
+  .note-box,
+  .warning-box,
+  .license-card,
+  .process-card,
+  .catalog-card,
+  .faq-box,
+  .answer-box,
+  .full-infographic,
+  .player-panel,
+  .platform-links-enhanced,
+  .final-cta {
+    padding: 22px;
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .dark-btn,
+  .player-btn-main,
+  .player-btn-sub {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nanashino-chan.github.io/site/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Study",
+      "item": "https://nanashino-chan.github.io/site/study.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Lo-Fi Music for Studying, Focus & Deep Work",
+  "url": "https://nanashino-chan.github.io/site/study.html",
+  "description": "Instrumental lo-fi music for studying, focus, deep work, reading, coding, writing, and calm productivity.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Nanashino-chan",
+    "url": "https://nanashino-chan.github.io/site/"
+  },
+  "about": [
+    "lo-fi study music",
+    "focus music",
+    "deep work music",
+    "instrumental background music",
+    "Nanashino-chan"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Nanashino-chan"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nanashino-chan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nanashino-chan.github.io/site/favicon-512.png"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicPlaylist",
+  "name": "Nanashino-chan Lo-Fi Study Music Playlist",
+  "description": "Selected Nanashino-chan lo-fi tracks for studying, focus, reading, coding, writing, deep work, and productivity sessions.",
+  "creator": {
+    "@type": "Person",
+    "name": "Nanashino-chan"
+  },
+  "url": "https://nanashino-chan.github.io/site/study.html",
+  "track": [
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Groove",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Chillhop",
+      "url": "https://www.youtube.com/watch?v=PnyutlzXem0"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Transitions",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Smooth Jazzhop",
+      "url": "https://www.youtube.com/watch?v=MBsx4sUtNxs"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Stillness Vibes",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Calm Lo-Fi",
+      "url": "https://www.youtube.com/watch?v=GRGkJoQGMjs"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Vaporwave Streets",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Lo-Fi / Chillwave",
+      "url": "https://www.youtube.com/watch?v=mtQwxopXhYo"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Urban Twilight",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "genre": "Trip-Hop / Lo-Fi",
+      "url": "https://www.youtube.com/watch?v=tZiYlmaP9tM"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is lo-fi study music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lo-fi study music is usually calm instrumental background music with soft textures, steady rhythm, and minimal distraction. It is often used while studying, reading, writing, coding, or doing deep work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is lo-fi music good for studying?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lo-fi music may help some listeners create a calmer background environment for studying. It does not guarantee better grades, focus, productivity, or health outcomes, but many people use instrumental lo-fi because it is less distracting than lyrical music."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Nanashino-chan music for Study With Me videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Study With Me videos, Pomodoro videos, educational videos, and productivity videos may require a license if they are monetized, commercial, sponsored, client-based, or used as part of a business. Choose the license based on the actual use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a license for monetized study videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, monetized or commercial study videos should use music that is properly licensed for the intended use. A Commercial Creator License may fit some organic monetized videos, while paid ads or campaigns may require a Sync License or custom permission."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use platform music for study videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Do not assume platform music is cleared for all uses. Platform-library or credit-based usage should not be treated as a substitute for a commercial license, sync license, paid advertising license, client-work license, or brand campaign license."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Nanashino-chan tracks are good for studying?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smooth Groove, Smooth Transitions, Stillness Vibes, Vaporwave Streets, Ambient Flow, Dreamy Vibes, Soft Lights Quiet Thoughts, and Autumn Pages can fit different study moods such as focus, reading, coding, writing, and calm night study."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does lo-fi music guarantee better concentration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Lo-fi music does not guarantee better concentration, grades, productivity, sleep, or health outcomes. It can be useful as background music for some listeners, but results depend on the person, task, environment, and listening habits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I license Nanashino-chan study music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nanashino-chan music can be licensed through the licensing page. Available options include Personal Use, Commercial Creator, 1-Month Sync, and 3-Month Sync licenses for suitable use cases, subject to license scope."
+      }
+    }
+  ]
+}
+</script>
+
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -115,9 +820,9 @@ window.addEventListener('click', loadGA, { once:true });
 window.addEventListener('mousemove', loadGA, { once:true });
 </script>
 
-<!-- JS -->
-<script src="./js/videos.js"></script>
-<script src="./js/app.js" defer></script>
+<script src="/site/js/videos.js"></script>
+
+<script src="/site/js/app.js" defer></script>
 
 </head>
 
@@ -126,212 +831,962 @@ window.addEventListener('mousemove', loadGA, { once:true });
 <header>
 <nav>
   <div class="nav">
-    <a href="index.html" class="nav-logo">Home</a>
-    <a href="study.html">Study</a>
-    <a href="sleep.html">Sleep</a>
-    <a href="relax.html">Relax</a>
-    <a href="today.html" class="nav-cta">▶ Listen Now</a>
+    <a href="/site/index.html" class="nav-logo">Home</a>
+    <a href="/site/study.html">Study</a>
+    <a href="/site/lofi-music-for-focus.html">Focus</a>
+    <a href="/site/sleep.html">Sleep</a>
+    <a href="/site/relax.html">Relax</a>
+    <a href="/site/today.html" class="nav-cta">▶ Listen Now</a>
   </div>
 </nav>
 </header>
 
 <section class="today-cta">
-<a href="today.html">🔥 Today’s Most Popular Lo-Fi Track</a>
+  <a href="/site/today.html">🔥 Today’s Most Popular Lo-Fi Track</a>
 </section>
 
-<!-- HERO -->
-<section style="padding:40px 20px 20px;text-align:center;max-width:800px;margin:0 auto;">
+<main class="study-page">
+
+<section class="study-breadcrumb">
+  <a href="/site/index.html">Home</a> →
+  Lo-Fi Music for Studying
+</section>
+
+<section class="study-hero">
+
+  <div>
+
+
+<p class="hero-badge">
+  Study music｜focus music｜deep work｜reading｜coding｜instrumental lo-fi
+</p>
 
 <h1>Lo-Fi Music for Studying, Focus & Deep Work</h1>
 
-<p><strong>Start instantly. Stay focused. No distractions.</strong></p>
-
-<p>
-Stream high-quality lo-fi music for studying, coding, reading, and deep work sessions.<br>
-勉強・作業・集中に最適なLo-Fi音楽をすぐに再生できます。
+<p class="hero-lead">
+  Stream instrumental lo-fi music for studying, reading, writing, coding,
+  deep work, late-night focus sessions, and calm productivity.
 </p>
 
-</section>
-
-<!-- GENERATOR -->
-<section class="generator-container" style="max-width:900px;margin:0 auto;padding:10px 20px 30px;text-align:center;">
-
-<h2>🎧 Start Listening – Lo-Fi Study Music Player</h2>
-
-<p>
-Play lo-fi study music instantly and enter a focused work session.<br>
-ワンクリックで集中できるLo-Fi音楽を再生。
+<p class="hero-sub">
+  Nanashino-chan creates soft lo-fi, chillhop, jazzhop, and Tokyo-inspired background music
+  for people who want a calm listening space without aggressive melodies or distracting lyrics.
+  勉強・読書・執筆・プログラミングなどの作業中に、静かで落ち着いた背景音を作りたい人向けのLo-Fi音楽です。
 </p>
 
-<p style="font-size:12px;opacity:0.7;margin-bottom:16px;">
-Ideal for studying, coding, reading, and productivity.<br>
-勉強・作業・集中に最適なBGM。<br>
-Powered by YouTube (ads may appear depending on your device and region)
-</p>
+<div class="cta-row">
+  <a href="#study-player" class="primary-btn">▶ Start Listening</a>
+  <a href="#recommended-tracks" class="secondary-btn">Choose Study Tracks</a>
+  <a href="/site/licensing.html#pricing" class="dark-btn">License for Videos</a>
+</div>
 
-<div style="max-width:800px;margin:0 auto;">
-
-  <!-- プレイヤー -->
-  <div id="player-focus" style="width:100%;aspect-ratio:16/9;background:#000;margin-bottom:12px;"></div>
-
-  <!-- コントロール -->
-  <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:10px;">
-
-    <button onclick="startGenerator('focus')" style="
-      padding:16px 24px;
-      background:#ffcc00;
-      color:#000;
-      border:none;
-      border-radius:8px;
-      font-weight:700;
-      font-size:16px;
-      cursor:pointer;
-      box-shadow:0 4px 10px rgba(0,0,0,0.2);
-    ">
-      ▶ Play Lo-Fi Study Music
-    </button>
-
-    <button onclick="nextTrack('focus')" style="
-      padding:16px 22px;
-      background:#222;
-      color:#fff;
-      border:1px solid #333;
-      border-radius:8px;
-      font-size:15px;
-      cursor:pointer;
-    ">
-      ⏭ Next Track
-    </button>
 
   </div>
 
-  <!-- 🔥 CV（即） -->
-  <div style="margin-top:20px;">
+  <aside class="hero-card">
 
-    <p style="font-size:14px;opacity:0.9;margin-bottom:12px;">
-      ✔ Safe for YouTube, TikTok & Instagram<br>
-      ✔ No copyright strikes (with license)<br>
-      ✔ Monetize your content safely
-    </p>
 
-    <a href="licensing.html" style="
-      display:inline-block;
-      padding:16px 26px;
-      background:#ffcc00;
-      color:#000;
-      border-radius:10px;
-      font-weight:700;
-      font-size:17px;
-      text-decoration:none;
-    ">
-      🎧 Get License for Your Videos
-    </a>
+<h2>Best for Calm Study Sessions</h2>
+
+<p>
+  Use this page as a starting point for focused listening, study playlists,
+  productivity sessions, or licensed background music for study-related video content.
+</p>
+
+<ul>
+  <li>✔ Studying for exams and long reading sessions</li>
+  <li>✔ Coding, writing, design, and deep work</li>
+  <li>✔ Pomodoro sessions and quiet desk setups</li>
+  <li>✔ Study With Me videos and productivity content</li>
+  <li>✔ Licensed options for creators and commercial video use</li>
+</ul>
+
+
+  </aside>
+
+</section>
+
+<section class="grid-4 section-block" aria-label="Nanashino-chan study music signals">
+
+  <div class="stat-card">
+    <strong>1,500+</strong>
+    <span>Lo-fi, chillhop, jazzhop, ambient, Tokyo-inspired, and calm background music tracks.</span>
+  </div>
+
+  <div class="stat-card">
+    <strong>3,000+</strong>
+    <span>Shazams from listeners discovering Nanashino-chan music in real listening contexts.</span>
+  </div>
+
+  <div class="stat-card">
+    <strong>Study</strong>
+    <span>Instrumental background music for reading, coding, writing, deep work, and concentration sessions.</span>
+  </div>
+
+  <div class="stat-card">
+    <strong>License</strong>
+    <span>Direct licensing options are available for creators, study videos, brand videos, and commercial projects.</span>
+  </div>
+
+</section>
+
+<section id="study-player" class="section-block player-panel">
+
+  <h2>🎧 Start Listening – Lo-Fi Study Music Player</h2>
+
+  <p class="section-lead" style="margin-left:auto;margin-right:auto;">
+    Press play and begin a calm study session.
+    This player is designed for studying, focus, reading, coding, writing, and quiet work.
+  </p>
+
+  <p class="player-note">
+    Powered by YouTube. Playback behavior, availability, and ads may vary depending on your device, region, account, and platform settings.
+  </p>
+
+  <div class="player-wrap">
+
+
+<div id="player-focus"></div>
+
+<div class="player-buttons">
+  <button onclick="startGenerator('focus')" class="player-btn-main">
+    ▶ Play Lo-Fi Study Music
+  </button>
+
+  <button onclick="nextTrack('focus')" class="player-btn-sub">
+    ⏭ Next Track
+  </button>
+</div>
+
+<div class="mood-links">
+  <a href="/site/pages/lofi-music-for-study.html" class="small-btn">Study</a>
+  <a href="/site/lofi-music-for-focus.html" class="small-btn">Focus</a>
+  <a href="/site/pages/lofi-music-for-reading.html" class="small-btn">Reading</a>
+  <a href="/site/pages/lofi-music-for-programming.html" class="small-btn">Coding</a>
+  <a href="/site/pages/lofi-music-for-working.html" class="small-btn">Work</a>
+  <a href="/site/pages/lofi-music-for-creative-work.html" class="small-btn">Creative Work</a>
+  <a href="/site/today.html" class="small-btn">Today’s Player</a>
+</div>
+
 
   </div>
 
+</section>
+
+<section class="section-block answer-box">
+
+  <h2>What Makes Lo-Fi Music Useful as a Study Background?</h2>
+
+  <p class="section-lead">
+    Lo-fi music may help some listeners create a calmer background environment for study and work.
+    The value is not magic productivity. It is the way soft instrumental music can reduce silence,
+    mask small distractions, and create a steady atmosphere for long sessions.
+  </p>
+
+  <div class="grid-3">
+
+
+<div class="info-card">
+  <p class="card-kicker">Less distraction</p>
+  <h3>Instrumental and low-pressure</h3>
+  <p>
+    Many lo-fi tracks avoid dominant vocals, dramatic hooks, and sudden changes,
+    making them easier to place behind reading, writing, coding, or revision.
+  </p>
 </div>
 
+<div class="info-card">
+  <p class="card-kicker">Steady background</p>
+  <h3>Rhythm without aggression</h3>
+  <p>
+    Soft drums, warm keys, vinyl texture, and gentle repetition can help create a stable listening environment
+    without turning the music into the main focus.
+  </p>
+</div>
+
+<div class="info-card">
+  <p class="card-kicker">Flexible mood</p>
+  <h3>Calm, modern, and human</h3>
+  <p>
+    Lo-fi can work for late-night study, morning reading, café-style work, coding sessions,
+    quiet design work, and reflective creative tasks.
+  </p>
+</div>
+
+
+  </div>
+
 </section>
 
-<!-- 🛡 不安除去 -->
-<section style="max-width:800px;margin:0 auto;padding:10px 20px;text-align:center;">
+<section class="section-block warning-box">
 
-<h3>Use Lo-Fi Music Without Copyright Issues</h3>
+  <h2>A Careful Note About Focus and Productivity</h2>
 
-<p style="line-height:1.8;">
-Using random music can lead to copyright claims and monetization problems.<br>
-This music is designed for safe usage with proper licensing.<br><br>
+  <p>
+    Lo-fi music does not guarantee better grades, better concentration, better productivity,
+    improved memory, sleep improvement, health benefits, or work results.
+    It may simply help some listeners create a more comfortable background environment.
+  </p>
 
-You can confidently use it for:
-</p>
+  <p>
+    The best study music depends on the person, task, volume, environment, and listening habit.
+    Use lo-fi as a tool for atmosphere, not as a guaranteed performance solution.
+  </p>
 
-<ul style="list-style:none;padding-left:0;line-height:2;">
-<li>YouTube videos / YouTube動画</li>
-<li>TikTok & Instagram / SNS投稿</li>
-<li>Commercial projects / 商用利用</li>
-</ul>
+  <p>
+    日本語：Lo-Fi音楽は、集中力や成績の向上を保証するものではありません。
+    ただし、静かすぎる環境が苦手な人や、落ち着いた背景音を作りたい人にとって、勉強・読書・作業の雰囲気づくりに役立つ場合があります。
+  </p>
 
 </section>
 
-<!-- SEO -->
-<section style="max-width:800px;margin:0 auto;padding:20px;line-height:1.8;">
+<section class="section-block">
 
-<h2>Why Lo-Fi Music Is Effective for Studying</h2>
+  <h2>Best Lo-Fi Music for Different Study Sessions</h2>
+
+  <p class="section-lead">
+    “Study music” includes many different listening situations.
+    Choose a mood that matches the work in front of you.
+  </p>
+
+  <div class="grid-4">
+
+
+<div class="use-card">
+  <p class="card-kicker">Exam study</p>
+  <h3>Lo-Fi for long review sessions</h3>
+  <p>
+    Use steady, low-energy tracks when reviewing notes, preparing for exams,
+    or repeating similar tasks over a long period.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Exam Study</span>
+    <span class="tag">Revision</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Reading</p>
+  <h3>Lo-Fi for reading and research</h3>
+  <p>
+    Choose softer instrumental music with fewer sharp sounds when reading books,
+    articles, research papers, or long documents.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Reading</span>
+    <span class="tag">Research</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Writing</p>
+  <h3>Lo-Fi for writing and editing</h3>
+  <p>
+    Use warm and repetitive tracks for drafting, journaling, editing,
+    email writing, essays, scripts, or content planning.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Writing</span>
+    <span class="tag">Editing</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Coding</p>
+  <h3>Lo-Fi for programming</h3>
+  <p>
+    Clean and steady lo-fi can sit behind programming, debugging,
+    documentation, interface work, and long technical sessions.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Coding</span>
+    <span class="tag">Programming</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Deep work</p>
+  <h3>Lo-Fi for focused blocks</h3>
+  <p>
+    For deep work, choose music that is calm enough to disappear into the background
+    and consistent enough for longer work blocks.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Deep Work</span>
+    <span class="tag">Focus</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Pomodoro</p>
+  <h3>Lo-Fi for timed sessions</h3>
+  <p>
+    Use lo-fi as a consistent background for 25-minute or 50-minute work blocks,
+    then pause or change tracks during breaks.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Pomodoro</span>
+    <span class="tag">Timer</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Night study</p>
+  <h3>Lo-Fi for late-night focus</h3>
+  <p>
+    Softer, darker, Tokyo-inspired lo-fi can fit night study,
+    quiet desk scenes, reflective work, and low-light focus sessions.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Night Study</span>
+    <span class="tag">Tokyo</span>
+  </div>
+</div>
+
+<div class="use-card">
+  <p class="card-kicker">Creative work</p>
+  <h3>Lo-Fi for design and ideas</h3>
+  <p>
+    Use slightly warmer tracks for design, illustration, editing,
+    brainstorming, story planning, or creative production.
+  </p>
+  <div class="tag-list">
+    <span class="tag">Creative</span>
+    <span class="tag">Design</span>
+  </div>
+</div>
+
+
+  </div>
+
+</section>
+
+<section id="recommended-tracks" class="section-block">
+
+  <h2>Recommended Nanashino-chan Tracks for Studying</h2>
+
+  <p class="section-lead">
+    These tracks are useful starting points for study, focus, reading, writing, coding,
+    and calm productivity sessions. Choose by mood first, then open the player or catalog.
+  </p>
+
+  <div class="grid-4">
+
+
+<div class="track-card">
+  <p class="card-kicker">Warm study / social focus</p>
+  <h3>Smooth Groove</h3>
+  <p>
+    A warm, relaxed lo-fi groove for reading, light study, café-style work,
+    and soft background listening.
+  </p>
+  <p class="track-meta">Best for: reading, planning, easy focus</p>
+  <div class="tag-list">
+    <span class="tag">Warm</span>
+    <span class="tag">Study</span>
+    <span class="tag">Chillhop</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Clean focus / workflow</p>
+  <h3>Smooth Transitions</h3>
+  <p>
+    A clean and practical track for coding, writing, product work,
+    workflow videos, and structured study sessions.
+  </p>
+  <p class="track-meta">Best for: coding, writing, deep work</p>
+  <div class="tag-list">
+    <span class="tag">Clean</span>
+    <span class="tag">Focus</span>
+    <span class="tag">Coding</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Quiet concentration</p>
+  <h3>Stillness Vibes</h3>
+  <p>
+    A calm background track for quiet work, slower study,
+    note review, and peaceful concentration.
+  </p>
+  <p class="track-meta">Best for: calm study, reading, review</p>
+  <div class="tag-list">
+    <span class="tag">Calm</span>
+    <span class="tag">Reading</span>
+    <span class="tag">Still</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Night desk mood</p>
+  <h3>Vaporwave Streets</h3>
+  <p>
+    A city-night lo-fi mood for late study, screen work,
+    quiet coding sessions, and Tokyo-inspired focus.
+  </p>
+  <p class="track-meta">Best for: night study, coding, atmosphere</p>
+  <div class="tag-list">
+    <span class="tag">Night</span>
+    <span class="tag">Tokyo</span>
+    <span class="tag">Ambient</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Soft study mood</p>
+  <h3>Lazy Afternoon Vibes</h3>
+  <p>
+    A relaxed track for slower study sessions,
+    reading on quiet afternoons, and low-pressure work.
+  </p>
+  <p class="track-meta">Best for: reading, casual study, review</p>
+  <div class="tag-list">
+    <span class="tag">Soft</span>
+    <span class="tag">Afternoon</span>
+    <span class="tag">Relaxed</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Dreamy reading</p>
+  <h3>Dreamy Vibes</h3>
+  <p>
+    A gentle and reflective mood for reading,
+    journaling, creative planning, and quiet work.
+  </p>
+  <p class="track-meta">Best for: reading, writing, ideas</p>
+  <div class="tag-list">
+    <span class="tag">Dreamy</span>
+    <span class="tag">Writing</span>
+    <span class="tag">Reflective</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Soft light / desk work</p>
+  <h3>Soft Lights, Quiet Thoughts</h3>
+  <p>
+    A calm track for low-light desk setups,
+    careful reading, quiet writing, and reflective study.
+  </p>
+  <p class="track-meta">Best for: night desk, writing, calm focus</p>
+  <div class="tag-list">
+    <span class="tag">Soft</span>
+    <span class="tag">Desk</span>
+    <span class="tag">Quiet</span>
+  </div>
+</div>
+
+<div class="track-card">
+  <p class="card-kicker">Seasonal focus</p>
+  <h3>Autumn Pages</h3>
+  <p>
+    A warm and thoughtful track for reading,
+    study notes, writing sessions, and cozy work environments.
+  </p>
+  <p class="track-meta">Best for: reading, notes, writing</p>
+  <div class="tag-list">
+    <span class="tag">Autumn</span>
+    <span class="tag">Pages</span>
+    <span class="tag">Cozy</span>
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="cta-row">
+    <a href="/site/today.html" class="primary-btn">▶ Open Today’s Player</a>
+    <a href="/site/music.html" class="secondary-btn">Browse Music Catalog</a>
+    <a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="dark-btn">Tracks for Commercial Video</a>
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Study, Focus, Reading, Coding: Choose the Right Guide</h2>
+
+  <p class="section-lead">
+    Use this page as the study music hub, then move into a more specific guide depending on your task.
+  </p>
+
+  <div class="grid-3">
+
+
+<a href="/site/pages/lofi-music-for-study.html" class="related-card">
+  <strong>Lo-Fi Music for Study</strong>
+  <span>Study-focused lo-fi music for revision, notes, long sessions, and calm academic work.</span>
+</a>
+
+<a href="/site/lofi-music-for-focus.html" class="related-card">
+  <strong>Lo-Fi Music for Focus</strong>
+  <span>Instrumental lo-fi for concentration, deep work, focus blocks, and productivity sessions.</span>
+</a>
+
+<a href="/site/pages/lofi-music-for-reading.html" class="related-card">
+  <strong>Lo-Fi Music for Reading</strong>
+  <span>Soft background music for books, research, long-form reading, and quiet document work.</span>
+</a>
+
+<a href="/site/pages/lofi-music-for-programming.html" class="related-card">
+  <strong>Lo-Fi Music for Programming</strong>
+  <span>Clean and steady lo-fi for coding, debugging, software work, and technical writing.</span>
+</a>
+
+<a href="/site/pages/lofi-music-for-working.html" class="related-card">
+  <strong>Lo-Fi Music for Working</strong>
+  <span>Background music for desk work, remote work, planning, admin, and everyday productivity.</span>
+</a>
+
+<a href="/site/pages/lofi-music-for-creative-work.html" class="related-card">
+  <strong>Lo-Fi Music for Creative Work</strong>
+  <span>Warm lo-fi music for design, illustration, writing, editing, and creative production.</span>
+</a>
+
+
+  </div>
+
+</section>
+
+<section class="section-block full-infographic">
+
+  <h2>Using Lo-Fi Study Music in Videos</h2>
+
+  <p>
+    Study music is not only for personal listening.
+    Creators often use calm lo-fi music in Study With Me videos, Pomodoro videos,
+    educational videos, productivity content, desk setup videos, coding videos, and online course materials.
+  </p>
+
+  <p>
+    If the video is monetized, sponsored, client-based, used for a business,
+    or distributed as part of a commercial project, choose a license that matches the actual use.
+  </p>
+
+  <img src="/site/images/infographics/music-licensing-process.webp" alt="Music licensing process infographic for study videos, YouTube content, commercial video use, and lo-fi background music" loading="lazy" width="1600" height="900">
+
+  <a href="/site/images/infographics/music-licensing-process.webp" target="_blank" rel="noopener noreferrer" class="full-size-link">
+    Open full-size infographic →
+  </a>
+
+</section>
+
+<section class="section-block">
+
+  <h2>License Guidance for Study Videos and Productivity Content</h2>
+
+  <p class="section-lead">
+    The right license depends on whether the music is used for personal listening,
+    organic creator content, monetized videos, business videos, paid ads, or client work.
+  </p>
+
+  <div class="grid-4">
+
+
+<div class="license-card">
+  <p class="card-kicker">Personal listening</p>
+  <h3>Personal Use License</h3>
+  <p>
+    For personal, non-commercial listening or non-commercial use.
+    Not for monetized videos, business content, client work, advertising, or brand campaigns.
+  </p>
+  <div class="tag-list">
+    <span class="tag">$19</span>
+    <span class="tag">Personal</span>
+  </div>
+</div>
+
+<div class="license-card">
+  <p class="card-kicker">Creator video</p>
+  <h3>Commercial Creator License</h3>
+  <p>
+    For suitable organic commercial videos, monetized videos, YouTube videos,
+    study videos, business videos, and non-ad online content within license scope.
+  </p>
+  <div class="tag-list">
+    <span class="tag">$500</span>
+    <span class="tag">Commercial</span>
+  </div>
+</div>
+
+<div class="license-card">
+  <p class="card-kicker">Short campaign</p>
+  <h3>1-Month Sync License</h3>
+  <p>
+    For suitable short-term ads, paid campaigns, sponsored promotion,
+    client advertising, and music synchronized with campaign video.
+  </p>
+  <div class="tag-list">
+    <span class="tag">$500</span>
+    <span class="tag">Sync</span>
+  </div>
+</div>
+
+<div class="license-card">
+  <p class="card-kicker">Extended campaign</p>
+  <h3>3-Month Sync License</h3>
+  <p>
+    For suitable longer campaign periods, paid social distribution,
+    extended promotional use, and broader campaign visibility.
+  </p>
+  <div class="tag-list">
+    <span class="tag">$1,200</span>
+    <span class="tag">3 Months</span>
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="cta-row">
+    <a href="/site/licensing.html#pricing" class="primary-btn">Compare License Options</a>
+    <a href="/site/pages/commercial-license-vs-sync-license.html" class="secondary-btn">Commercial vs Sync License</a>
+    <a href="/site/pages/proof-of-music-license-for-business.html" class="dark-btn">Proof of Music License</a>
+  </div>
+
+</section>
+
+<section class="section-block full-infographic">
+
+  <h2>Platform Music Is Not a Full Commercial License</h2>
+
+  <p>
+    A track may appear inside Instagram, TikTok, YouTube Shorts, or another platform music interface,
+    but that does not automatically make it cleared for monetized study videos,
+    sponsored productivity content, client work, online courses, paid ads, or broader commercial use.
+  </p>
+
+  <p>
+    Platform-library or credit-based usage may be suitable for non-commercial or small-scale projects,
+    but it should not be treated as a substitute for a commercial license, sync license,
+    paid advertising license, client-work license, or brand campaign license.
+  </p>
+
+  <p>
+    日本語：SNS上で選べる音源として表示されていることと、商用動画・収益化動画・広告・クライアント案件で使えることは同じではありません。
+    動画やビジネスで使う場合は、用途に合ったライセンス確認が必要です。
+  </p>
+
+  <img src="/site/images/infographics/why-both-rights-matter.webp" alt="Why both copyright permission and master rights permission matter for lo-fi study music in commercial videos" loading="lazy" width="1600" height="900">
+
+  <a href="/site/images/infographics/why-both-rights-matter.webp" target="_blank" rel="noopener noreferrer" class="full-size-link">
+    Open full-size infographic →
+  </a>
+
+</section>
+
+<section class="section-block">
+
+  <h2>About Nanashino-chan’s Lo-Fi Catalog</h2>
+
+  <p class="section-lead">
+    Nanashino-chan creates instrumental lo-fi, chillhop, jazzhop, chillwave,
+    and Tokyo-inspired background music for studying, focus, relaxation,
+    creative work, and commercial video use.
+  </p>
+
+  <div class="grid-3">
+
+
+<div class="catalog-card">
+  <p class="card-kicker">Catalog</p>
+  <h3>Large background music library</h3>
+  <p>
+    The Nanashino-chan catalog includes 1,500+ tracks across lo-fi, chillhop,
+    jazzhop, ambient, Tokyo night, café, focus, sleep, and creative work moods.
+  </p>
+</div>
+
+<div class="catalog-card">
+  <p class="card-kicker">Discovery</p>
+  <h3>3,000+ Shazams</h3>
+  <p>
+    Listener discovery through Shazam shows that the music is being noticed
+    in real listening contexts, even when people do not already know the track name.
+  </p>
+</div>
+
+<div class="catalog-card">
+  <p class="card-kicker">Use</p>
+  <h3>Listening and licensing</h3>
+  <p>
+    Music can be explored for personal listening, playlists, creator videos,
+    brand videos, business videos, study videos, and suitable commercial projects.
+  </p>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Study Music Listening Workflow</h2>
+
+  <p class="section-lead">
+    A simple listening workflow can make lo-fi more useful during long work sessions.
+  </p>
+
+  <div class="grid-3">
+
+
+<div class="process-card">
+  <p class="card-kicker">Step 1</p>
+  <h3>Choose the task</h3>
+  <p>
+    Decide whether you are reading, writing, coding, studying for exams,
+    reviewing notes, doing deep work, or planning creative work.
+  </p>
+</div>
+
+<div class="process-card">
+  <p class="card-kicker">Step 2</p>
+  <h3>Keep the volume low</h3>
+  <p>
+    Lo-fi works best as background music when it supports the task instead of competing with it.
+    Start lower than you think you need.
+  </p>
+</div>
+
+<div class="process-card">
+  <p class="card-kicker">Step 3</p>
+  <h3>Use consistent blocks</h3>
+  <p>
+    Try one track or playlist during a focused block.
+    Change music during breaks rather than constantly switching during the task.
+  </p>
+</div>
+
+<div class="process-card">
+  <p class="card-kicker">Step 4</p>
+  <h3>Match energy to the work</h3>
+  <p>
+    Use softer tracks for reading, cleaner tracks for coding,
+    warmer tracks for writing, and darker tracks for night study.
+  </p>
+</div>
+
+<div class="process-card">
+  <p class="card-kicker">Step 5</p>
+  <h3>Avoid over-optimizing</h3>
+  <p>
+    The goal is not to search endlessly for the perfect playlist.
+    Start listening, settle into the session, and let the music fade into the background.
+  </p>
+</div>
+
+<div class="process-card">
+  <p class="card-kicker">Step 6</p>
+  <h3>License if you publish</h3>
+  <p>
+    If the music is used in a public, monetized, business, sponsored,
+    or client video, choose a license that matches the actual use.
+  </p>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="section-block platform-links-enhanced">
+
+  <h2>Listen on Your Favorite Platforms</h2>
+
+  <p>
+    Explore Nanashino-chan music through streaming and video platforms.
+    For published videos, business use, advertising, or commercial projects, use the licensing page instead of relying only on platform availability.
+  </p>
+
+  <div class="platform-buttons">
+    <a href="https://open.spotify.com/album/6mp4X1AUNRPrAlxv01w7Jl" target="_blank" rel="noopener noreferrer">🎧 Spotify</a>
+    <a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" rel="noopener noreferrer">🍎 Apple Music</a>
+    <a href="https://www.youtube.com/@Nanashino-chan" target="_blank" rel="noopener noreferrer">▶ YouTube</a>
+    <a href="/site/music.html">Browse Catalog</a>
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>Explore More Lo-Fi Music</h2>
+
+  <p class="section-lead">
+    Continue into related listening pages and licensing guides.
+  </p>
+
+  <div class="grid-3">
+
+
+<a href="/site/relax.html" class="related-card">
+  <strong>Relaxing Lo-Fi Music</strong>
+  <span>Soft background music for calm breaks, cozy listening, and relaxation sessions.</span>
+</a>
+
+<a href="/site/sleep.html" class="related-card">
+  <strong>Sleep Lo-Fi Music</strong>
+  <span>Calmer lo-fi and ambient music for night listening and quiet wind-down routines.</span>
+</a>
+
+<a href="/site/tokyo.html" class="related-card">
+  <strong>Tokyo Lo-Fi Music</strong>
+  <span>Tokyo-inspired lo-fi, night city atmosphere, Japanese chill beats, and urban background music.</span>
+</a>
+
+<a href="/site/jazzhop.html" class="related-card">
+  <strong>Jazzhop Music</strong>
+  <span>Smooth jazzhop and jazzy lo-fi beats for café, reading, working, and creative sessions.</span>
+</a>
+
+<a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="related-card">
+  <strong>Recommended Tracks for Commercial Video Use</strong>
+  <span>Selected Nanashino-chan tracks for videos, brand content, product demos, and commercial projects.</span>
+</a>
+
+<a href="/site/licensing.html" class="related-card">
+  <strong>License Nanashino-chan Music</strong>
+  <span>Compare Personal, Commercial Creator, Sync, and custom licensing options.</span>
+</a>
+
+
+  </div>
+
+</section>
+
+<section class="section-block">
+
+  <h2>FAQ</h2>
+
+  <div class="faq-box">
+
+
+<h3>What is lo-fi study music?</h3>
 <p>
-Lo-fi music helps improve concentration by providing a steady rhythm and minimizing distractions.<br>
-歌詞が少なく、一定のリズムが集中力を維持しやすい環境を作ります。
+  Lo-fi study music is usually calm instrumental background music with soft texture,
+  steady rhythm, and minimal distraction. It is often used while studying, reading,
+  writing, coding, or doing deep work.
 </p>
 
-<h2>Best Situations to Use Lo-Fi Study Music</h2>
-<ul style="list-style:none;padding-left:0;line-height:2;">
-<li>Studying for exams / 試験勉強</li>
-<li>Coding and programming / プログラミング</li>
-<li>Reading and writing / 読書・執筆</li>
-<li>Work and productivity / 作業用BGM</li>
-</ul>
-
-<h2>Continuous Playback for Deep Focus</h2>
+<h3>Is lo-fi music good for studying?</h3>
 <p>
-Unlike typical playlists, this player allows smooth and continuous playback without interruptions.<br>
-途切れない再生で、長時間の集中作業にも最適です。
+  Lo-fi music may help some listeners create a calmer background environment for studying.
+  It does not guarantee better grades, focus, productivity, or health outcomes,
+  but many people use instrumental lo-fi because it is less distracting than lyrical music.
 </p>
 
+<h3>Can I use lo-fi music while reading?</h3>
+<p>
+  Yes, many listeners use soft instrumental lo-fi while reading.
+  For reading, choose lower-volume tracks with fewer sudden changes and minimal vocal elements.
+</p>
+
+<h3>Is instrumental lo-fi better for focus?</h3>
+<p>
+  Instrumental lo-fi can be easier to use for focus because there are fewer lyrics competing with language-heavy tasks.
+  The best choice still depends on the listener, task, volume, and environment.
+</p>
+
+<h3>Can I use Nanashino-chan music for Study With Me videos?</h3>
+<p>
+  Study With Me videos, Pomodoro videos, educational videos, and productivity videos may require a license
+  if they are monetized, commercial, sponsored, client-based, or used as part of a business.
+  Choose the license based on the actual use.
+</p>
+
+<h3>Do I need a license for monetized study videos?</h3>
+<p>
+  Yes, monetized or commercial study videos should use music that is properly licensed for the intended use.
+  A Commercial Creator License may fit some organic monetized videos, while paid ads or campaigns may require a Sync License or custom permission.
+</p>
+
+<h3>Can I use platform music for study videos?</h3>
+<p>
+  Do not assume platform music is cleared for all uses.
+  Platform-library or credit-based usage should not be treated as a substitute for a commercial license,
+  sync license, paid advertising license, client-work license, or brand campaign license.
+</p>
+
+<h3>Which Nanashino-chan tracks are good for studying?</h3>
+<p>
+  Smooth Groove, Smooth Transitions, Stillness Vibes, Vaporwave Streets,
+  Ambient Flow, Dreamy Vibes, Soft Lights Quiet Thoughts, and Autumn Pages
+  can fit different study moods such as focus, reading, coding, writing, and calm night study.
+</p>
+
+<h3>Does lo-fi music guarantee better concentration?</h3>
+<p>
+  No. Lo-fi music does not guarantee better concentration, grades, productivity,
+  sleep, or health outcomes. It can be useful as background music for some listeners,
+  but results depend on the person, task, environment, and listening habits.
+</p>
+
+<h3>Can businesses use lo-fi study music in videos?</h3>
+<p>
+  Businesses can use lo-fi music in videos when the music is properly licensed for the intended commercial use.
+  Business videos, client work, paid ads, and brand campaigns may require different license scopes.
+</p>
+
+<h3>Where can I license Nanashino-chan music?</h3>
+<p>
+  Nanashino-chan music can be licensed through the licensing page.
+  Available options include Personal Use, Commercial Creator, 1-Month Sync,
+  and 3-Month Sync licenses for suitable use cases, subject to license scope.
+</p>
+
+
+  </div>
+
 </section>
 
-<!-- 🔥 CTA（再） -->
-<section style="text-align:center;margin-top:30px;">
+<section class="section-block final-cta">
 
-<a href="licensing.html" style="
-  display:inline-block;
-  padding:14px 24px;
-  background:#ffffff;
-  color:#000;
-  border-radius:8px;
-  font-weight:bold;
-  text-decoration:none;
-">
-▶ Start Using This Music in Your Videos
-</a>
+  <h2>Start a Calm Study Session</h2>
 
-</section>
+  <p>
+    Use the player for personal listening, explore study-friendly tracks,
+    or choose a license if you want to use Nanashino-chan music in YouTube videos,
+    study content, business videos, or commercial projects.
+  </p>
 
-<!-- 内部リンク -->
-<section style="max-width:900px;margin:40px auto;text-align:center;">
-
-<h2>Explore More Lo-Fi Music</h2>
-
-<div class="internal-links">
-  <a href="relax.html">Relaxing Lo-Fi Music</a>
-  <a href="sleep.html">Sleep Lo-Fi Music</a>
-  <a href="tokyo.html">Tokyo Lo-Fi</a>
-</div>
+  <div class="cta-row" style="justify-content:center;">
+    <a href="#study-player" class="primary-btn">▶ Start Listening</a>
+    <a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="secondary-btn">Preview Licensed Tracks</a>
+    <a href="/site/licensing.html#pricing" class="dark-btn">View License Options</a>
+  </div>
 
 </section>
 
-<!-- 外部導線 -->
-<section class="platform-links">
+<section class="section-block disclaimer">
 
-<h2>Listen on Your Favorite Platforms</h2>
+  <h2>Disclaimer</h2>
 
-<p>Enjoy lo-fi music on streaming services:</p>
+  <p>
+    This page provides general listening and music licensing information for lo-fi study music,
+    focus music, deep work music, reading, coding, writing, Study With Me videos,
+    productivity content, YouTube videos, commercial videos, and business use.
+    It is not medical, educational, productivity, or legal advice.
+  </p>
 
-<div class="platform-buttons">
+  <p>
+    Lo-fi music does not guarantee better grades, focus, productivity, sleep,
+    health outcomes, monetization approval, ad approval, platform behavior,
+    Content ID outcomes, reach, or commercial performance.
+  </p>
 
-<a href="https://open.spotify.com/album/6mp4X1AUNRPrAlxv01w7Jl" target="_blank" class="btn spotify">
-🎧 Spotify
-</a>
+  <h2>免責事項</h2>
 
-<a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" class="btn apple">
-🍎 Apple Music
-</a>
-
-<a href="https://www.youtube.com/@Nanashino-chan" target="_blank" class="btn youtube">
-▶ YouTube
-</a>
-
-</div>
+  <p>
+    このページは、勉強用Lo-Fi音楽、集中用BGM、読書、執筆、プログラミング、
+    Study With Me動画、YouTube動画、商用動画、ビジネス利用に関する一般的な情報を提供するものです。
+    医療・教育・生産性・法律に関する助言ではなく、成績、集中力、収益化、広告審査、Content IDの挙動、各プラットフォームでの結果を保証するものではありません。
+  </p>
 
 </section>
+
+</main>
 
 <footer class="site-footer">
 
@@ -339,27 +1794,30 @@ Unlike typical playlists, this player allows smooth and continuous playback with
 
 <div class="footer-brand">
 <h2>Nanashino-chan</h2>
-<p>Ad-free Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
+<p>Lo-Fi Music for Focus, Relaxation, Study, and Creative Work</p>
 <p>© 2026 Nanashino-chan. All rights reserved.</p>
 </div>
 
 <div class="footer-links">
-<a href="study.html">Lo-Fi music for studying and focus</a> |
-<a href="relax.html">Relaxing lo-fi music for sleep and stress relief</a> |
-<a href="tokyo.html">Tokyo night lo-fi and Japanese chill beats</a> |
-<a href="jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
+<a href="/site/study.html">Lo-Fi music for studying and focus</a> |
+<a href="/site/relax.html">Relaxing lo-fi music</a> |
+<a href="/site/sleep.html">Sleep lo-fi music</a> |
+<a href="/site/tokyo.html">Tokyo night lo-fi</a> |
+<a href="/site/jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
 </div>
 
 <div class="footer-links-sub">
-<a href="index.html">Home</a> |
-<a href="today.html">Listen Now</a> |
-<a href="faq.html">FAQ</a> |
-<a href="policy.html">Policy</a> |
-<a href="contact.html">Contact</a>
+<a href="/site/index.html">Home</a> |
+<a href="/site/today.html">Listen Now</a> |
+<a href="/site/music.html">Music</a> |
+<a href="/site/licensing.html">License Music</a> |
+<a href="/site/faq.html">FAQ</a> |
+<a href="/site/policy.html">Policy</a> |
+<a href="/site/contact.html">Contact</a>
 </div>
 
 <p class="footer-note">
-🎧 No interruptions. Just pure lo-fi music.
+🎧 Calm instrumental lo-fi music for listening, focus, and licensed video use.
 </p>
 
 </div>
