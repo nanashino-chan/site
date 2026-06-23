@@ -119,525 +119,1258 @@ Instant play. Tokyo jazzhop & chill beats by Nanashino-chan. 作業・勉強・�
   
 </head>
 
+
 <body>
 
+<style>
+.home-mobile-sticky {
+  display: none;
+}
+
+.home-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 20px 90px;
+}
+
+.home-hero-new {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 34px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.home-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,204,0,0.35);
+  border-radius: 999px;
+  background: rgba(255,204,0,0.07);
+  color: #ffcc00;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.home-hero-new h1 {
+  font-size: clamp(38px, 6vw, 70px);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  margin: 0 0 20px;
+}
+
+.home-lead {
+  color: #ddd;
+  font-size: 20px;
+  line-height: 1.75;
+  margin: 0 0 14px;
+}
+
+.home-sub {
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.home-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.home-btn-main,
+.home-btn-sub,
+.home-btn-dark {
+  display: inline-block;
+  border-radius: 12px;
+  padding: 15px 22px;
+  font-weight: 800;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.home-btn-main {
+  background: #ffcc00;
+  color: #000;
+}
+
+.home-btn-sub {
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+  background: rgba(255,204,0,0.04);
+}
+
+.home-btn-dark {
+  background: #111;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.16);
+}
+
+.home-visual-card {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.16), transparent 36%),
+    linear-gradient(180deg, #151515, #0b0b0b);
+  border: 1px solid rgba(255,204,0,0.22);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.3);
+}
+
+.home-visual-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 16px;
+}
+
+.home-visual-card h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.home-visual-card p {
+  margin: 0;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 26px 0 56px;
+}
+
+.home-stat {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.home-stat strong {
+  display: block;
+  color: #ffcc00;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.home-stat span {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.home-section-new {
+  margin-bottom: 76px;
+}
+
+.home-section-new h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+}
+
+.home-section-lead {
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.85;
+  max-width: 900px;
+  margin: 0;
+}
+
+.home-player-shell {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.13), transparent 34%),
+    #101010;
+  border: 1px solid rgba(255,204,0,0.22);
+  border-radius: 24px;
+  padding: 28px;
+  text-align: center;
+}
+
+.home-player-shell .player-section {
+  margin-top: 22px;
+}
+
+.home-player-note {
+  max-width: 760px;
+  margin: 14px auto 0;
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.home-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.home-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.home-card-link,
+.home-card,
+.home-track-card,
+.home-feature-card,
+.home-license-box,
+.home-warning-box,
+.home-faq-box {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.home-card-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.home-card-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,204,0,0.42);
+}
+
+.home-kicker {
+  color: #ffcc00;
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+.home-card-link strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+
+.home-card-link span,
+.home-card p,
+.home-track-card p,
+.home-feature-card p,
+.home-license-box p,
+.home-warning-box p,
+.home-faq-box p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.home-card h3,
+.home-track-card h3,
+.home-feature-card h3 {
+  margin: 0 0 10px;
+}
+
+.home-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+.home-tag {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  padding: 6px 9px;
+  color: #ddd;
+  background: rgba(255,255,255,0.04);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.home-feature-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 15px;
+}
+
+.home-feature-card a,
+.home-faq-box a {
+  color: #ffcc00;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.home-license-box {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.13), transparent 34%),
+    linear-gradient(180deg, rgba(255,204,0,0.08), rgba(255,204,0,0.025));
+  border-left: 4px solid #ffcc00;
+}
+
+.home-warning-box {
+  border-left: 4px solid #ffcc00;
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.1), transparent 36%),
+    #101010;
+}
+
+.home-platform-box {
+  text-align: center;
+  background: #101010;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 22px;
+  padding: 34px 22px;
+}
+
+.home-platform-box p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.home-platform-buttons,
+.home-social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.home-platform-buttons a {
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 10px;
+  color: #fff;
+  background: #151515;
+  border: 1px solid rgba(255,255,255,0.12);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.home-social-icons a {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.home-social-icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.home-seo-details {
+  margin-top: 28px;
+  padding: 22px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+}
+
+.home-seo-details summary {
+  color: #ffcc00;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.home-seo-details p {
+  color: #ccc;
+  line-height: 1.85;
+}
+
+.home-final {
+  text-align: center;
+  padding: 42px 24px;
+  border: 1px solid rgba(255,204,0,0.22);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top, rgba(255,204,0,0.15), transparent 34%),
+    #101010;
+}
+
+.home-final p {
+  color: #ccc;
+  line-height: 1.85;
+  max-width: 820px;
+  margin: 12px auto 0;
+}
+
+@media (max-width: 980px) {
+  .home-hero-new,
+  .home-grid-3,
+  .home-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .home-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-wrap {
+    padding: 22px 16px 104px;
+  }
+
+  .home-hero-new {
+    gap: 22px;
+  }
+
+  .home-lead {
+    font-size: 18px;
+  }
+
+  .home-btn-main,
+  .home-btn-sub,
+  .home-btn-dark {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-visual-card,
+  .home-player-shell,
+  .home-card-link,
+  .home-card,
+  .home-track-card,
+  .home-feature-card,
+  .home-license-box,
+  .home-warning-box,
+  .home-faq-box,
+  .home-platform-box,
+  .home-seo-details,
+  .home-final {
+    padding: 20px;
+  }
+
+  .home-mobile-sticky {
+    position: fixed;
+    z-index: 60;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 9px 12px;
+    background: rgba(5,5,5,0.92);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+  }
+
+  .home-mobile-sticky a {
+    display: block;
+    text-align: center;
+    padding: 11px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .home-mobile-sticky .listen {
+    background: #ffcc00;
+    color: #000;
+  }
+
+  .home-mobile-sticky .license {
+    background: #151515;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.16);
+  }
+}
+</style>
+
 <!-- ナビ -->
+
 <header>
 <nav>
   <div class="nav">
 
-    <!-- ブランド -->
-    <a href="index.html" class="nav-logo">Home</a>
 
-    <!-- コア導線（検索需要順） -->
-    <a href="study.html">Study</a>
-    <a href="sleep.html">Sleep</a>
-    <a href="relax.html">Relax</a>
+<a href="index.html" class="nav-logo">Home</a>
 
-    <!-- CTA（最重要） -->
-    <a href="today.html" class="nav-cta">▶ Listen Now</a>
+<a href="study.html">Study</a>
+<a href="focus.html">Focus</a>
+<a href="relax.html">Relax</a>
+<a href="sleep.html">Sleep</a>
+<a href="licensing.html">License</a>
+
+<a href="today.html" class="nav-cta">▶ Listen Now</a>
+
 
   </div>
 </nav>
 </header>
 
-
-<!-- Today CTA（残すならここ） -->
-<section class="today-cta">
-  <a href="today.html">🔥 Today’s Best Lo-Fi Track</a>
-</section>
-<h1>
-Free Lo-Fi Music for Focus, Study, Sleep & Relaxation
-</h1>
-
-<p class="hero-tagline">
-Instantly stream high-quality lo-fi music for studying, deep focus, better sleep, and relaxation.<br>
-No sign-up required. Start listening in one click. Available on YouTube (ads may appear depending on platform).
-</p>
-
-<section class="seo-block">
-
-<h2>What Is the Best Lo-Fi Music for Focus, Study, and Sleep?</h2>
-
-<p>
-Looking for the best lo-fi music for studying, focus, or sleep?<br> 
-This free lo-fi music generator lets you instantly play carefully curated tracks designed for productivity,<br> 
-  relaxation, and deep sleep.
-</p>
-
-
-</section>
-<!-- HERO -->
-<section class="hero">
-  <a href="today.html" class="hero-link" aria-label="Play today’s lo-fi focus session">
-
-  <img
-  src="hero-720.webp"
-  srcset="
-    hero-720.webp 720w,
-    hero-1440.webp 1440w
-  "
-  sizes="(max-width: 768px) 100vw, 1200px"
-  width="720"
-  height="405"
-  class="hero-image"
-  alt="Lo-fi music generator for focus and study, Tokyo night ambience"
-  loading="eager"
-  decoding="async"
-  fetchpriority="high"
->
-
-  <div class="hero-overlay">
-    <div class="hero-cta">▶ Start Listening Now</div>
-    <div class="hero-sub">Focus • Study • Relax</div>
-  </div>
-
-</a>
-</section>
-<!-- 🔥 SEO + 説明（画像の直後） -->
-<section class="hero-description" style="max-width:800px;margin:20px auto 0;padding:0 20px;line-height:1.8;">
-
-<p>
-Lo-fi music is one of the most popular background music styles for studying, coding, reading, and deep work.
-Its steady rhythm, minimal vocals, and soft textures help reduce distractions, improve concentration, and create a calm environment.
-</p>
-
-<p>
-Unlike random playlists, this generator allows you to stream lo-fi music based on your mood — including focus,
-sleep, relaxation, cafe ambience, and Tokyo night vibes. Each category is optimized for productivity,
-stress relief, and restful sleep.
-</p>
-
-<p>
-多くの人がLo-Fi音楽を「作業用BGM」「集中用音楽」「睡眠用BGM」として利用しています。<br>
-このサイトでは、目的別に最適化されたLo-Fi音楽をワンクリックで再生でき、集中力の維持やリラックスに役立ちます。
-</p>
-
-</section>
-
-
-<div class="index-content">
-
-  <!-- 内部リンクセクション -->
-  <h2>Explore Lo-Fi Music by Mood</h2>
-
-  <p>
-Find the perfect lo-fi soundtrack for every moment. Choose from focus, sleep, relaxation, cafe ambience,<br> 
-    and Tokyo night vibes designed for productivity and calm listening.
-</p>
-
+<div class="home-mobile-sticky" aria-label="Quick mobile actions">
+  <a href="#player-section" class="listen">▶ Listen</a>
+  <a href="licensing.html" class="license">License</a>
 </div>
-<section class="internal-links"> 
 
-<a href="#player-section" onclick="playGenre('focus')">
-Lo-Fi Study Music for Focus & Productivity
+<main class="home-wrap">
+
+<section class="home-hero-new">
+
+  <div>
+
+
+<p class="home-eyebrow">
+  Original Lo-Fi｜Chillhop｜Jazzhop｜Tokyo Night｜Licensed Music
+</p>
+
+<h1>Original Lo-Fi Music for Focus, Study, Relaxation & Creative Work</h1>
+
+<p class="home-lead">
+  Soft instrumental lo-fi, chillhop, jazzhop, ambient, and Tokyo-inspired background music by Nanashino-chan.
+</p>
+
+<p class="home-sub">
+  Start listening by mood, explore 2,000+ Original Lo-Fi Tracks, or choose licensed music for YouTube videos,
+  brand videos, client work, paid campaigns, and commercial content.
+  作業・勉強・リラックス・夜のBGM・動画利用に向いたオリジナルLo-Fi音楽です。
+</p>
+
+<div class="home-cta-row">
+  <a href="#player-section" class="home-btn-main">▶ Start Listening</a>
+  <a href="#moods" class="home-btn-sub">Choose a Mood</a>
+  <a href="licensing.html" class="home-btn-dark">License Music</a>
+</div>
+
+
+  </div>
+
+  <aside class="home-visual-card">
+
+
+<a href="today.html" aria-label="Open today's lo-fi player">
+  <img
+    src="hero-720.webp"
+    srcset="hero-720.webp 720w, hero-1440.webp 1440w"
+    sizes="(max-width: 768px) 100vw, 430px"
+    width="720"
+    height="405"
+    alt="Nanashino-chan original lo-fi music for focus, study, relaxation, and Tokyo night listening"
+    loading="eager"
+    decoding="async"
+    fetchpriority="high">
 </a>
 
-<a href="#player-section" onclick="playGenre('sleep')">
-Lo-Fi Sleep Music for Relaxation & Deep Sleep
-</a>
+<h2>Not sure where to start?</h2>
 
-<a href="#player-section" onclick="playGenre('tokyo')">
-Tokyo Night Lo-Fi Music & City Vibes
-</a>
-
-<a href="#player-section" onclick="playGenre('cafe')">
-Cafe Lo-Fi Beats for Work & Chill
-</a>
-
-<a href="#player-section" onclick="playGenre('relax')">
-Relaxing Lo-Fi Music for Stress Relief
-</a>
-
-<a href="#player-section" onclick="playGenre('dream')">
-Dreamy Lo-Fi Music & Ambient Chill
-</a>
-
-</section>
-  <section class="seo-intro">
-<h2>Free Lo-Fi Music for Study, Focus & Sleep</h2>
 <p>
-This lo-fi music generator lets you instantly stream carefully selected tracks optimized for studying,<br>
-  deep work, relaxation, and sleep.
-Each track is designed to maintain a smooth and distraction-free listening experience.
+  Open today’s player for a quick first listen, or use the mood cards below to choose a listening context.
 </p>
+
+<div class="home-cta-row">
+  <a href="today.html" class="home-btn-main">Today’s Player</a>
+  <a href="music.html" class="home-btn-sub">Music Catalog</a>
+</div>
+
+
+  </aside>
+
 </section>
-<details class="seo-block">
 
-  <summary class="seo-toggle">
-    About This Lo-Fi Music Collection
-  </summary>
+<section class="home-stats" aria-label="Nanashino-chan trust signals">
 
-  <div class="seo-content">
-
-    <h2>Original Tokyo Lo-Fi & Jazzhop Collection</h2>
-
-    <p>
-    Explore over 2,000 original lo-fi music and jazzhop tracks created in Tokyo.<br>
-    These tracks have been organically featured in social media content by global brands across fashion,<br> 
-    lifestyle, and creative industries.
-    </p>
-
-    <h3>Lo-Fi Music for Study, Work & Relaxation</h3>
-
-    <p>
-      Discover over 2,000 original lofi music tracks created in Tokyo. Perfect for studying,<br>
-      working, sleeping, and content creation.
-    </p>
-
-    <p>
-    This collection is designed for students, developers, creators,<br> 
-    and professionals who need reliable background music for focus and productivity.<br>
-    Lo-fi beats provide a consistent rhythm and calm atmosphere that helps improve concentration.
-    </p>
-
-    <p>
-    All tracks are suitable for studying, working, sleeping, and content creation,<br>
-    including YouTube videos, TikTok, and social media platforms.
-    </p>
-
-    <p>
-    Enjoy ad-free listening on supported platforms and use copyright-safe music to avoid claims and monetization issues.
-    </p>
-
-    <p>
-    東京で制作されたオリジナルLo-Fi音楽を配信。作業用・勉強用・睡眠用BGMとして最適で、YouTube収益化にも対応した安全な音楽です。
-    </p>
-
+  <div class="home-stat">
+    <strong>2,000+</strong>
+    <span>Original Lo-Fi Tracks across focus, study, sleep, relax, Tokyo night, café, jazzhop, ambient, and creative work moods.</span>
   </div>
 
-</details>
-<section style="text-align:center;margin-top:20px;">
+  <div class="home-stat">
+    <strong>3,000+</strong>
+    <span>Shazams from listeners discovering Nanashino-chan music in real listening contexts.</span>
+  </div>
 
-  <p style="font-size:14px;line-height:1.7;opacity:0.85;">
-Discover the atmosphere behind our Tokyo-inspired lo-fi music and explore unique sound styles.<br>
-東京の夜を感じるLo-Fiの世界観や、このプロジェクトの詳細をご覧いただけます。
-</p>
-
-  <div style="margin-top:12px;">
-
-    <!-- Tokyo（メインCTA） -->
-    <a href="tokyo.html" style="
-      display:inline-block;
-      margin:6px;
-      padding:10px 16px;
-      border-radius:6px;
-      background:#111;
-      color:#fff;
-      text-decoration:none;
-      font-size:14px;
-    ">
-      🌃 Explore Tokyo Lo-Fi
-    </a>
-
-    <!-- About（サブCTA） -->
-    <a href="about.html" style="
-      display:inline-block;
-      margin:6px;
-      padding:10px 16px;
-      border-radius:6px;
-      border:1px solid #ccc;
-      background:#fff;
-      color:#111;
-      text-decoration:none;
-      font-size:14px;
-    ">
-      ℹ️ About Nanashino-chan
-    </a>
-
+  <div class="home-stat">
+    <strong>Direct</strong>
+    <span>Licensing options for creators, business videos, client work, paid ads, and brand campaigns.</span>
   </div>
 
 </section>
 
-<section class="container">
+<section id="player-section" class="home-section-new home-player-shell">
 
-<h2 id="generator">🎧 Free Lo-Fi Music Generator</h2>
+  <h2 id="generator">🎧 Start Listening Now</h2>
 
-<p class="generator-explain">
-Stream high-quality lo-fi music for focus, studying, relaxation, and deep sleep — all in one place.
-</p>
+  <p class="home-section-lead" style="margin-left:auto;margin-right:auto;">
+    Choose a mood and start a lo-fi session. Use this player for a quick first listen before exploring the full catalog.
+  </p>
 
-<p class="generator-text">
-Select a mood below to instantly start your session. Each category is optimized for a specific purpose, from productivity to relaxation.
-</p>
+  <p class="home-player-note">
+    Playback is powered by YouTube. Ads, availability, and playback behavior may vary depending on your region, device, account, and platform settings.
+  </p>
 
-<p class="video-note">
-Playback is powered by YouTube<br>
-(ads may appear depending on your region and device)
-</p>
+  <section class="player-section">
 
-<!-- 🎬 プレイヤー -->
+
 <div class="player-wrapper">
   <div id="main-player"></div>
 </div>
 
-<!-- 🎵 状態 -->
-<p id="nowPlaying" style="margin-top:10px;opacity:0.8;">
-▶ Select a category below to start listening
-</p>
+<p id="nowPlaying">▶ Select a mood to start</p>
 
-<!-- 🎯 ボタン -->
-<div class="genre-grid">
-
-  <button class="btn" onclick="playGenre('focus')">Focus</button>
+<div class="controls">
+  <button class="btn active" onclick="playGenre('focus')">Focus</button>
   <button class="btn" onclick="playGenre('sleep')">Sleep</button>
-  <button class="btn" onclick="playGenre('tokyo')">Tokyo</button>
-  <button class="btn" onclick="playGenre('cafe')">Cafe</button>
   <button class="btn" onclick="playGenre('relax')">Relax</button>
+  <button class="btn" onclick="playGenre('cafe')">Cafe</button>
+  <button class="btn" onclick="playGenre('tokyo')">Tokyo</button>
   <button class="btn" onclick="playGenre('dream')">Dream</button>
-
 </div>
 
-<!-- ⏭ -->
-<div style="margin-top:10px;">
-  <button class="btn next-btn" onclick="nextTrack()">Next Track</button>
-</div>
+<button class="btn next-btn" onclick="nextTrack()">Next Track ▶</button>
 
-<!-- 🔥 SEOアンカー（ここが重要） -->
 
-<div class="generator-seo-text" style="margin-top:40px;line-height:1.8;">
-
-  <h3 id="focus">Lo-Fi Study Music for Focus & Productivity</h3>
-  <p>
-  Carefully curated lo-fi beats designed to improve concentration, deep work, and study sessions.
-  Ideal for coding, reading, and productivity without distractions.
-  </p>
-
-  <h3 id="sleep">Lo-Fi Sleep Music for Relaxation & Deep Sleep</h3>
-  <p>
-  Soft ambient lo-fi music to help you relax, reduce anxiety, and fall asleep faster.
-  Perfect for night routines and peaceful rest.
-  </p>
-
-  <h3 id="tokyo">Tokyo Night Lo-Fi Music & City Vibes</h3>
-  <p>
-  Atmospheric lo-fi inspired by Tokyo nights, city lights, and urban calm.
-  A unique blend of chill beats and Japanese ambience.
-  </p>
-
-  <h3 id="cafe">Cafe Lo-Fi Beats for Work & Chill</h3>
-  <p>
-  Warm and cozy cafe-style lo-fi music for relaxed focus, creative work, and background listening.
-  </p>
-
-  <h3 id="relax">Relaxing Lo-Fi Music for Stress Relief</h3>
-  <p>
-  Gentle lo-fi beats designed to calm your mind, reduce stress, and create a peaceful atmosphere.
-  </p>
-
-  <h3 id="dream">Dreamy Lo-Fi Music & Ambient Chill</h3>
-  <p>
-  Dreamlike ambient lo-fi soundscapes for deep relaxation, meditation, and creative thinking.
-  </p>
-
-</div>
+  </section>
 
 </section>
 
-<!-- ===== Listen / DSP ===== -->
-<section class="listen">
+<section id="moods" class="home-section-new">
 
-  <h2>🎧 Listen & Save</h2>
+  <h2>Choose Lo-Fi Music by Mood</h2>
 
-  <p class="cta-note">
-    🎧 Enjoy the full ad-free experience on Apple Music
+  <p class="home-section-lead">
+    The home page is now a gateway. Choose the listening context first, then open the page built for that mood.
   </p>
 
-  <p class="cta-note">
-    🎧 Apple Musicでは広告なしで再生できます
-  </p>
+  <div class="home-grid-3">
 
-  <div class="dsp-buttons">
 
-    <a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" class="apple">
-      🍎 Listen on Apple Music<br>
-      <span>Add to your library</span>
-    </a>
+<a href="study.html" class="home-card-link">
+  <p class="home-kicker">Study</p>
+  <strong>Lo-Fi Music for Studying</strong>
+  <span>For reading, notes, exam review, long learning sessions, and Study With Me contexts.</span>
+  <div class="home-tags">
+    <span class="home-tag">Study</span>
+    <span class="home-tag">Reading</span>
+    <span class="home-tag">Learning</span>
+  </div>
+</a>
 
-    <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" class="ytmusic">
-      ▶ Listen on YouTube Music
-    </a>
+<a href="focus.html" class="home-card-link">
+  <p class="home-kicker">Focus</p>
+  <strong>Lo-Fi Music for Focus</strong>
+  <span>For coding, writing, planning, deep work, desk sessions, and calm productivity.</span>
+  <div class="home-tags">
+    <span class="home-tag">Focus</span>
+    <span class="home-tag">Coding</span>
+    <span class="home-tag">Work</span>
+  </div>
+</a>
+
+<a href="sleep.html" class="home-card-link">
+  <p class="home-kicker">Sleep</p>
+  <strong>Lo-Fi Music for Quiet Nights</strong>
+  <span>For low-volume night listening, bedtime routines, night reading, and soft evening atmosphere.</span>
+  <div class="home-tags">
+    <span class="home-tag">Night</span>
+    <span class="home-tag">Wind-Down</span>
+    <span class="home-tag">Soft</span>
+  </div>
+</a>
+
+<a href="relax.html" class="home-card-link">
+  <p class="home-kicker">Relax</p>
+  <strong>Relaxing Lo-Fi Music</strong>
+  <span>For calm evenings, journaling, resting, quiet rooms, and peaceful background listening.</span>
+  <div class="home-tags">
+    <span class="home-tag">Relax</span>
+    <span class="home-tag">Journaling</span>
+    <span class="home-tag">Calm</span>
+  </div>
+</a>
+
+<a href="tokyo.html" class="home-card-link">
+  <p class="home-kicker">Tokyo</p>
+  <strong>Tokyo Night Lo-Fi Music</strong>
+  <span>For Japanese city atmosphere, night windows, urban visuals, and Tokyo-inspired moods.</span>
+  <div class="home-tags">
+    <span class="home-tag">Tokyo</span>
+    <span class="home-tag">Night</span>
+    <span class="home-tag">City</span>
+  </div>
+</a>
+
+<a href="jazzhop.html" class="home-card-link">
+  <p class="home-kicker">Jazzhop</p>
+  <strong>Jazzhop & Jazzy Lo-Fi Beats</strong>
+  <span>For smooth café mood, reading, cozy work, warm keys, and jazzy background music.</span>
+  <div class="home-tags">
+    <span class="home-tag">Jazzhop</span>
+    <span class="home-tag">Café</span>
+    <span class="home-tag">Smooth</span>
+  </div>
+</a>
+
 
   </div>
 
 </section>
-<!-- ブランド掲載実績 -->
-<section class="brand-feature">
-<p class="brand-note">
-Use lo-fi music safely for YouTube, TikTok & monetized content<br>  
-YouTubeやSNSでも安心して使えるLo-Fi音楽（収益化OK）
-</p>
 
-<a href="/site/faq.html" class="faq-cta">
-✔ Learn how to avoid copyright claims
+<section class="home-section-new">
+
+  <h2>What Is Nanashino-chan?</h2>
+
+  <p class="home-section-lead">
+    Nanashino-chan creates original lo-fi, chillhop, jazzhop, chillwave, ambient,
+    and Tokyo-inspired background music for personal listening, playlists, creator videos,
+    brand content, client work, and commercial projects.
+  </p>
+
+  <div class="home-grid-3">
+
+
+<div class="home-card">
+  <p class="home-kicker">Listening</p>
+  <h3>Music for everyday moments</h3>
+  <p>
+    Use the music for study, focus, relaxation, quiet nights, Tokyo atmosphere,
+    café mood, reading, creative work, and calm background listening.
+  </p>
+</div>
+
+<div class="home-card">
+  <p class="home-kicker">Catalog</p>
+  <h3>2,000+ Original Lo-Fi Tracks</h3>
+  <p>
+    The catalog includes original tracks across multiple moods and use cases,
+    so users can move from quick listening to more specific pages when needed.
+  </p>
+</div>
+
+<div class="home-card">
+  <p class="home-kicker">Licensing</p>
+  <h3>Direct music permission</h3>
+  <p>
+    For videos, brands, client work, ads, and commercial projects,
+    use the licensing page instead of relying only on platform availability.
+  </p>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="home-section-new">
+
+  <h2>Good Starting Tracks</h2>
+
+  <p class="home-section-lead">
+    Start with a small set of representative tracks, then explore the full catalog or the recommended commercial-use page.
+  </p>
+
+  <div class="home-grid-4">
+
+
+<div class="home-track-card">
+  <p class="home-kicker">Warm first listen</p>
+  <h3>Smooth Groove</h3>
+  <p>
+    A warm chillhop groove for easy listening, relaxed work, planning, and calm background atmosphere.
+  </p>
+  <div class="home-tags">
+    <span class="home-tag">Chillhop</span>
+    <span class="home-tag">Warm</span>
+  </div>
+</div>
+
+<div class="home-track-card">
+  <p class="home-kicker">Clean workflow</p>
+  <h3>Smooth Transitions</h3>
+  <p>
+    A clean, practical track for focus, coding, product work, workflow visuals, and steady desk sessions.
+  </p>
+  <div class="home-tags">
+    <span class="home-tag">Focus</span>
+    <span class="home-tag">Work</span>
+  </div>
+</div>
+
+<div class="home-track-card">
+  <p class="home-kicker">Quiet atmosphere</p>
+  <h3>Stillness Vibes</h3>
+  <p>
+    A calm track for quiet rooms, night listening, reading, careful editing, and softer background use.
+  </p>
+  <div class="home-tags">
+    <span class="home-tag">Calm</span>
+    <span class="home-tag">Night</span>
+  </div>
+</div>
+
+<div class="home-track-card">
+  <p class="home-kicker">Tokyo night mood</p>
+  <h3>Vaporwave Streets</h3>
+  <p>
+    A city-night mood for Tokyo atmosphere, screen work, urban visuals, and low-light listening.
+  </p>
+  <div class="home-tags">
+    <span class="home-tag">Tokyo</span>
+    <span class="home-tag">Chillwave</span>
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="home-cta-row">
+    <a href="today.html" class="home-btn-main">▶ Open Today’s Player</a>
+    <a href="music.html" class="home-btn-sub">Browse Music Catalog</a>
+    <a href="pages/recommended-tracks-for-commercial-video-use.html" class="home-btn-dark">Tracks for Commercial Video</a>
+  </div>
+
+</section>
+
+<section class="home-section-new">
+
+  <h2>Real-World Visual Examples</h2>
+
+  <p class="home-section-lead">
+    Nanashino-chan tracks have appeared in public social video contexts across fashion,
+    interior, real estate, lifestyle, and visual storytelling.
+  </p>
+
+  <div class="home-grid-3">
+
+
+<div class="home-feature-card">
+  <img src="bazaar-cartier.webp" alt="Harper's BAZAAR HK and Cartier-related visual example using Nanashino-chan lo-fi music" loading="lazy" width="800" height="450">
+  <p class="home-kicker">Fashion / event visual</p>
+  <h3>Harper’s BAZAAR HK × Cartier-related Visual Example</h3>
+  <p>
+    A public social video context showing how soft lo-fi atmosphere can support luxury, fashion, and event-related visuals.
+  </p>
+  <a href="https://www.instagram.com/reel/DKLejxuPtd-/" target="_blank" rel="noopener noreferrer">View example →</a>
+</div>
+
+<div class="home-feature-card">
+  <img src="arte-moderna.webp" alt="Arte Moderna Retrô interior and lifestyle visual example using Nanashino-chan lo-fi music" loading="lazy" width="800" height="450">
+  <p class="home-kicker">Interior / lifestyle visual</p>
+  <h3>Arte Moderna Retrô</h3>
+  <p>
+    A public interior and lifestyle visual example where lo-fi music supports warm, stylish, and design-oriented content.
+  </p>
+  <a href="https://www.instagram.com/reel/DPlsQvcDqpa/" target="_blank" rel="noopener noreferrer">View example →</a>
+</div>
+
+<div class="home-feature-card">
+  <img src="chuo-nittochi.webp" alt="Chuo-Nittochi corporate and real estate visual example using Nanashino-chan lo-fi music" loading="lazy" width="800" height="450">
+  <p class="home-kicker">Corporate / real estate visual</p>
+  <h3>Chuo-Nittochi Visual Example</h3>
+  <p>
+    A public corporate and real estate visual context where lo-fi music supports calm, modern, and city-oriented visuals.
+  </p>
+  <a href="https://www.instagram.com/reel/DLzP-HehrGO/" target="_blank" rel="noopener noreferrer">View example →</a>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="home-section-new home-license-box">
+
+  <h2>Use Nanashino-chan Music in Videos</h2>
+
+  <p>
+    If you want to use Nanashino-chan music in YouTube videos, brand videos,
+    client work, product demos, paid ads, social campaigns, or commercial content,
+    choose a license that matches the intended use.
+  </p>
+
+  <p>
+    A track being available on a platform is not the same as having full permission for every commercial use.
+    Licensing helps clarify the permitted scope for creators, businesses, agencies, and brands.
+  </p>
+
+  <div class="home-cta-row">
+    <a href="licensing.html#pricing" class="home-btn-main">View License Options</a>
+    <a href="pages/recommended-tracks-for-commercial-video-use.html" class="home-btn-sub">Preview Licensed Tracks</a>
+    <a href="pages/commercial-license-vs-sync-license.html" class="home-btn-dark">Commercial vs Sync License</a>
+  </div>
+
+</section>
+
+<section class="home-section-new home-warning-box">
+
+  <h2>Platform Music Is Not a Full Commercial License</h2>
+
+  <p>
+    A track may appear inside Instagram, TikTok, YouTube Shorts, or another platform music interface,
+    but that does not automatically make it cleared for monetized videos, sponsored content,
+    client work, paid ads, brand campaigns, or broader commercial use.
+  </p>
+
+  <p>
+    Platform-library or credit-based usage may be suitable for non-commercial or small-scale projects,
+    but it should not be treated as a substitute for a commercial license, sync license,
+    paid advertising license, client-work license, or brand campaign license.
+  </p>
+
+  <p>
+    日本語：SNS上で選べる音源として表示されていることと、商用動画・収益化動画・広告・クライアント案件で使えることは同じではありません。
+    用途に合ったライセンス確認が必要です。
+  </p>
+
+  <div class="home-cta-row">
+    <a href="pages/can-businesses-use-platform-music.html" class="home-btn-sub">Can Businesses Use Platform Music?</a>
+    <a href="pages/proof-of-music-license-for-business.html" class="home-btn-dark">Proof of Music License</a>
+  </div>
+
+</section>
+
+<section class="home-section-new home-platform-box">
+
+  <h2>Continue Listening on Streaming Platforms</h2>
+
+  <p>
+    Streaming platforms are useful for personal listening and discovery.
+    For published videos, business use, advertising, or client projects, use the licensing page instead of relying only on platform availability.
+  </p>
+
+  <div class="home-platform-buttons">
+    <a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" rel="noopener noreferrer">🍎 Apple Music</a>
+    <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer">▶ YouTube Music</a>
+    <a href="https://open.spotify.com/album/6mp4X1AUNRPrAlxv01w7Jl" target="_blank" rel="noopener noreferrer">🎧 Spotify</a>
+    <a href="https://www.youtube.com/@Nanashino-chan" target="_blank" rel="noopener noreferrer">YouTube Channel</a>
+  </div>
+
+</section>
+
+<section class="home-section-new container">
+
+  <h2>Most Popular Jazzhop Mix</h2>
+
+  <p class="home-section-lead">
+    Start with one of the most approachable Nanashino-chan mixes if you want a longer listening session.
+  </p>
+
+  <div class="video-main">
+    <iframe
+      title="Most Popular Jazzhop Mix"
+      src="https://www.youtube.com/embed/vDAhyDqflD0?rel=0&modestbranding=1"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+</section>
+
+<section class="home-section-new">
+
+  <h2>Popular Videos</h2>
+
+  <p class="home-section-lead">
+    Explore a few starting points from the Nanashino-chan YouTube catalog.
+  </p>
+
+  <div class="home-grid-3">
+
+
+<div class="home-feature-card">
+  <img src="https://img.youtube.com/vi/m5dlLsMUi54/hqdefault.jpg" loading="lazy" alt="Smooth Lo-Fi for Focus and Relaxation by Nanashino-chan">
+  <h3>Smooth Lo-Fi for Focus & Relaxation</h3>
+  <p>Soft instrumental lo-fi for quiet background listening, work sessions, and calm moments.</p>
+  <a href="https://youtu.be/m5dlLsMUi54" target="_blank" rel="noopener noreferrer">Watch →</a>
+</div>
+
+<div class="home-feature-card">
+  <img src="https://img.youtube.com/vi/7I35IeHyuXM/hqdefault.jpg" loading="lazy" alt="Mellow R&B beats and soft sax by Nanashino-chan">
+  <h3>Mellow R&B Beats & Soft Sax</h3>
+  <p>A mellow listening option for evening atmosphere, smooth background mood, and relaxed visuals.</p>
+  <a href="https://youtu.be/7I35IeHyuXM" target="_blank" rel="noopener noreferrer">Watch →</a>
+</div>
+
+<div class="home-feature-card">
+  <img src="https://img.youtube.com/vi/9tlQIgznCw0/hqdefault.jpg" loading="lazy" alt="Nostalgic lo-fi Italo disco by Nanashino-chan">
+  <h3>Nostalgic Lo-Fi Italo Disco</h3>
+  <p>A retro-inspired Nanashino-chan video for listeners who want a nostalgic lo-fi atmosphere.</p>
+  <a href="https://youtu.be/9tlQIgznCw0" target="_blank" rel="noopener noreferrer">Watch →</a>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="home-section-new">
+
+  <h2>Learn More</h2>
+
+  <p class="home-section-lead">
+    The home page is only the starting point. These guides explain listening contexts, licensing, and commercial use.
+  </p>
+
+  <div class="home-grid-3">
+
+
+<a href="pages/recommended-tracks-for-commercial-video-use.html" class="home-card-link">
+  <p class="home-kicker">Track selection</p>
+  <strong>Recommended Tracks for Commercial Video Use</strong>
+  <span>Preview selected Nanashino-chan tracks for videos, product demos, brand content, and commercial projects.</span>
 </a>
-<h2>Featured by Global Brands on Instagram & Reels</h2>
+
+<a href="licensing.html" class="home-card-link">
+  <p class="home-kicker">Licensing</p>
+  <strong>License Music</strong>
+  <span>Compare Personal, Commercial Creator, 1-Month Sync, and 3-Month Sync license options.</span>
+</a>
+
+<a href="faq.html" class="home-card-link">
+  <p class="home-kicker">FAQ</p>
+  <strong>Music Licensing FAQ</strong>
+  <span>Understand common questions about YouTube, social media, Content ID, commercial use, and permissions.</span>
+</a>
+
+<a href="pages/music-license-for-brand-videos.html" class="home-card-link">
+  <p class="home-kicker">Brand video</p>
+  <strong>Music License for Brand Videos</strong>
+  <span>Guidance for using music in brand films, product videos, PR content, and business videos.</span>
+</a>
+
+<a href="pages/music-license-for-client-work.html" class="home-card-link">
+  <p class="home-kicker">Client work</p>
+  <strong>Music License for Client Work</strong>
+  <span>For creators, freelancers, agencies, and production teams delivering videos to clients.</span>
+</a>
+
+<a href="pages/music-license-for-paid-social-ads.html" class="home-card-link">
+  <p class="home-kicker">Paid ads</p>
+  <strong>Music License for Paid Social Ads</strong>
+  <span>Understand music licensing for paid ads, boosted posts, sponsored content, and campaign videos.</span>
+</a>
+
+
+  </div>
+
+</section>
+
+<section class="home-section-new">
+
+  <h2>About This Lo-Fi Music Collection</h2>
+
+  <p class="home-section-lead">
+    Nanashino-chan’s music is designed for listeners, creators, and businesses who need calm,
+    original background music across multiple moods and usage contexts.
+  </p>
+
+  <div class="home-grid-3">
+
+
+<div class="home-card">
+  <p class="home-kicker">Focus / Study</p>
+  <h3>Background music for task sessions</h3>
+  <p>
+    For focus, study, reading, coding, writing, and desk work,
+    choose soft instrumental tracks that support the session without demanding attention.
+  </p>
+</div>
+
+<div class="home-card">
+  <p class="home-kicker">Relax / Sleep</p>
+  <h3>Soft music for calm listening</h3>
+  <p>
+    For quiet evenings, relaxing moments, low-volume night listening,
+    journaling, reading before bed, and calm room atmosphere.
+  </p>
+</div>
+
+<div class="home-card">
+  <p class="home-kicker">Videos / Commercial use</p>
+  <h3>Music with licensing options</h3>
+  <p>
+    For YouTube videos, brand videos, client projects, product demos,
+    paid campaigns, and commercial content, choose an appropriate license before publishing.
+  </p>
+</div>
+
+
+  </div>
+
+  <details class="home-seo-details">
+    <summary>More about the Nanashino-chan catalog</summary>
+
+
 <p>
-Original lo-fi music created in Tokyo has been organically used in Instagram reels.<br>
-By international brands.<br>
-Including fashion, interior, and real estate companies.
+  Nanashino-chan creates original lo-fi music, chillhop, jazzhop, ambient, chillwave,
+  and Tokyo-inspired background music. The catalog includes 2,000+ Original Lo-Fi Tracks
+  across focus, study, sleep, relaxation, café, Tokyo night, jazzhop, ambient, and creative work moods.
 </p>
 
-<div class="faq-secondary">
-  <a href="/site/faq.html" class="faq-cta">
-    ✔ Avoid copyright claims – Learn how to use this music safely
-  </a>
-</div>
-
-<div class="brand-buttons">
-
-<a href="https://www.instagram.com/reel/DKLejxuPtd-/" target="_blank" class="brand-btn">
-<img src="bazaar-cartier.webp" alt="Cartier Instagram Reel featuring lo-fi music">
-<p>Harper's BAZAAR HK × Cartier Feature</p>
-</a>
-
-<a href="https://www.instagram.com/reel/DPlsQvcDqpa/" target="_blank" class="brand-btn">
-<img src="arte-moderna.webp" alt="Arte Moderna Retrô Instagram Reel featuring lo-fi music">
-<p>Arte Moderna Retrô — Verified Brand Feature</p>
-</a>
-
-<a href="https://www.instagram.com/reel/DLzP-HehrGO/" target="_blank" class="brand-btn">
-<img src="chuo-nittochi.webp" alt="Chuo-Nittochi Instagram Reel featuring lo-fi music">
-<p>Chuo-Nittochi Official Reel Feature (Japan)</p>
-</a>
-</div>
-</section>
-
-<!-- メイン動画 -->
-<section class="container">
-<h2>Most Popular Jazzhop Mix</h2>
 <p>
-Original lo-fi music created in Tokyo has been organically used in Instagram reels by international brands including fashion,<br> 
-interior, and real estate companies.
+  This site helps listeners choose music by mood and helps creators understand when a music license is needed
+  for videos, brands, client work, paid ads, and commercial projects.
 </p>
-<div class="video-main">
-<iframe
-title="Most Popular Jazzhop Mix"
-src="https://www.youtube.com/embed/vDAhyDqflD0?rel=0&modestbranding=1"
-loading="lazy"
-allowfullscreen>
-</iframe>
-</div>
+
+<p>
+  日本語：Nanashino-chanは、作業、勉強、集中、リラックス、夜のBGM、動画制作、商用利用に向いたオリジナルLo-Fi音楽を制作しています。
+  SNS上で音源を選べることと、商用動画や広告で自由に使えることは同じではないため、用途に応じたライセンス確認が重要です。
+</p>
+
+
+  </details>
+
 </section>
 
-<!-- 人気動画 -->
-<section class="container">
-<h2>Popular Videos</h2>
+<section class="home-section-new">
 
-<div class="video-grid">
+  <h2>FAQ</h2>
 
-<div class="card">
-<img src="https://img.youtube.com/vi/m5dlLsMUi54/hqdefault.jpg" loading="lazy" alt="Smooth Lo-Fi for Focus & Relaxation">
-<div class="card-content">
-<p>Smooth Lo-Fi for Focus & Relaxation</p>
-<a href="https://youtu.be/m5dlLsMUi54" class="btn">Watch</a>
-</div>
-</div>
+  <div class="home-faq-box">
 
-<div class="card">
-<img src="https://img.youtube.com/vi/7I35IeHyuXM/hqdefault.jpg" loading="lazy" alt="Mellow R&B Beats & Soft Sax">
-<div class="card-content">
-<p>Mellow R&B Beats & Soft Sax</p>
-<a href="https://youtu.be/7I35IeHyuXM" class="btn">Watch</a>
-</div>
-</div>
 
-<div class="card">
-<img src="https://img.youtube.com/vi/9tlQIgznCw0/hqdefault.jpg" loading="lazy" alt="Nostalgic Lo-Fi Italo Disco">
-<div class="card-content">
-<p>Nostalgic Lo-Fi Italo Disco</p>
-<a href="https://youtu.be/9tlQIgznCw0" class="btn">Watch</a>
-</div>
-</div>
+<h3>What is Nanashino-chan?</h3>
+<p>
+  Nanashino-chan is an original lo-fi music project creating lo-fi, chillhop, jazzhop,
+  ambient, chillwave, and Tokyo-inspired background music for listening, videos, creative work, and commercial use.
+</p>
 
-</div>
+<h3>Where should I start listening?</h3>
+<p>
+  Start with the player on this page, open <a href="today.html">Listen Now</a>,
+  or choose a mood such as Study, Focus, Sleep, Relax, Tokyo, or Jazzhop.
+</p>
+
+<h3>Can I use Nanashino-chan music in YouTube videos?</h3>
+<p>
+  Yes, when the music is properly licensed for the intended use.
+  Monetized videos, business videos, sponsored content, client work, paid ads, and brand campaigns may require different license scopes.
+</p>
+
+<h3>Is platform music the same as a commercial license?</h3>
+<p>
+  No. Platform-library or credit-based usage should not be treated as a substitute for a commercial license,
+  sync license, paid advertising license, client-work license, or brand campaign license.
+</p>
+
+<h3>How many tracks are in the Nanashino-chan catalog?</h3>
+<p>
+  The catalog includes 2,000+ Original Lo-Fi Tracks across focus, study, sleep,
+  relaxation, Tokyo night, café, jazzhop, ambient, and creative work moods.
+</p>
+
+
+  </div>
+
 </section>
-<h3>Follow</h3>
-<!-- SNS -->
-<div class="social">
 
-<a href="https://www.youtube.com/@Nanashino-chan" target="_blank">
-<img src="youtube.png" alt="YouTube channel,Nanashino-chan">
+<section class="home-section-new home-platform-box">
+
+  <h2>Follow Nanashino-chan</h2>
+
+  <p>
+    Follow Nanashino-chan on social and streaming platforms for new music, videos, short-form content, and updates.
+  </p>
+
+  <div class="home-social-icons">
+
+
+<a href="https://www.youtube.com/@Nanashino-chan" target="_blank" rel="noopener noreferrer" aria-label="YouTube channel">
+  <img src="youtube.png" alt="YouTube channel Nanashino-chan">
 </a>
 
-<a href="https://x.com/nanashinoch" target="_blank">
-<img src="twitter.png" alt="Twitter (X) profile">
+<a href="https://x.com/nanashinoch" target="_blank" rel="noopener noreferrer" aria-label="X profile">
+  <img src="twitter.png" alt="Twitter X profile">
 </a>
 
-<a href="https://www.instagram.com/nanashino_chan" target="_blank">
-<img src="instagram.png" alt="Instagram profile">
+<a href="https://www.instagram.com/nanashino_chan" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+  <img src="instagram.png" alt="Instagram profile">
 </a>
 
-<a href="https://www.tiktok.com/@nanashino_chan" target="_blank">
-<img src="tiktok.png" alt="TikTok profile">
+<a href="https://www.tiktok.com/@nanashino_chan" target="_blank" rel="noopener noreferrer" aria-label="TikTok profile">
+  <img src="tiktok.png" alt="TikTok profile">
 </a>
 
-<a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank">
-<img src="apple-music.png" alt="Apple Music artist page">
+<a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" rel="noopener noreferrer" aria-label="Apple Music artist page">
+  <img src="apple-music.png" alt="Apple Music artist page">
 </a>
 
-<a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank">
-<img src="youtube-music.png" alt="YouTube Music artist page">
+<a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" aria-label="YouTube Music artist page">
+  <img src="youtube-music.png" alt="YouTube Music artist page">
 </a>
 
-</div>
 
-<!-- ===== Footer ===== -->
+  </div>
+
+</section>
+
+<section class="home-section-new home-final">
+
+  <h2>Start Listening or License Music</h2>
+
+  <p>
+    Listen first, choose the right mood, then use the licensing page if you want to publish Nanashino-chan music
+    in videos, brand content, client work, paid ads, or commercial projects.
+  </p>
+
+  <div class="home-cta-row" style="justify-content:center;">
+    <a href="#player-section" class="home-btn-main">▶ Start Listening</a>
+    <a href="pages/recommended-tracks-for-commercial-video-use.html" class="home-btn-sub">Preview Tracks</a>
+    <a href="licensing.html#pricing" class="home-btn-dark">License Music</a>
+  </div>
+
+</section>
+
+</main>
+
 <footer class="site-footer">
 
   <div class="footer-container">
 
-    <!-- ブランド -->
-    <div class="footer-brand">
-      <h2>Nanashino-chan</h2>
-      <p>Ad-free Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
-      <p>© 2026 Nanashino-chan. All rights reserved.</p>
-    </div>
 
-    <!-- 🔥 SEOリンク -->
-    <div class="footer-links">
+<div class="footer-brand">
+  <h2>Nanashino-chan</h2>
+  <p>Original Lo-Fi Music for Focus, Relaxation, Study, Sleep, and Creative Work</p>
+  <p>© 2026 Nanashino-chan. All rights reserved.</p>
+</div>
 
-      <a href="study.html">
-        Lo-Fi music for studying and focus
-      </a> |
+<div class="footer-links">
+  <a href="study.html">Lo-Fi music for studying</a> |
+  <a href="focus.html">Lo-Fi music for focus</a> |
+  <a href="relax.html">Relaxing lo-fi music</a> |
+  <a href="sleep.html">Sleep lo-fi music</a> |
+  <a href="tokyo.html">Tokyo night lo-fi</a> |
+  <a href="jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
+</div>
 
-      <a href="relax.html">
-        Relaxing lo-fi music for sleep and stress relief
-      </a> |
+<div class="footer-links-sub">
+  <a href="index.html">Home</a> |
+  <a href="today.html">Listen Now</a> |
+  <a href="music.html">Music</a> |
+  <a href="licensing.html" style="font-weight:bold;">License Music</a> |
+  <a href="faq.html">FAQ</a> |
+  <a href="terms.html">Terms</a> |
+  <a href="commerce.html">Legal</a> |
+  <a href="policy.html">Policy</a> |
+  <a href="contact.html">Contact</a>
+</div>
 
-      <a href="tokyo.html">
-        Tokyo night lo-fi and Japanese chill beats
-      </a> |
+<p class="footer-note">
+  🎧 Original lo-fi music for listening, videos, and licensed creative use.
+</p>
 
-      <a href="jazzhop.html">
-        Smooth jazzhop and jazzy lo-fi beats
-      </a>
-
-    </div>
-
-    <!-- サブリンク -->
-    <div class="footer-links-sub">
-      <a href="index.html">Home</a> |
-      <a href="today.html">Listen Now</a> |
-       <a href="licensing.html" style="font-weight:bold;">License Music</a> |
-      <a href="faq.html">FAQ</a> |
-      <a href="terms.html">Terms</a>|
-      <a href="commerce.html">Legal</a>|
-      <a href="policy.html">Policy</a> |
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <!-- CTA -->
-    <p class="footer-note">
-      🎧 No interruptions. Just pure lo-fi music.
-    </p>
 
   </div>
 
 </footer>
 
-
-
-
 </body>
+
 </html>
