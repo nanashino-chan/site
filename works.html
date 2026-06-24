@@ -1,4 +1,3 @@
-<!-- works.html Part 1 / 3 -->
 
 <!DOCTYPE html>
 
@@ -8,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Works & Public Use References | Nanashino-chan Music for Brands, Creators & Commercial Videos</title>
+<title>Works &amp; Public Use References | Nanashino-chan Music for Brands, Creators &amp; Commercial Videos</title>
 
 <meta name="description" content="Explore Nanashino-chan works, public social use references, brand and creator examples, business credibility milestones, licensing guidance, infographics, and decision materials for commercial video music use.">
 
@@ -57,20 +56,30 @@ form-action 'self';
 <link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
 
+<!-- Preload Primary Works Thumbnail -->
+
+<link rel="preload" as="image" href="/site/images/og/works-public-use-references.webp">
+
 <!-- Open Graph -->
 
-<meta property="og:title" content="Works & Public Use References | Nanashino-chan Music">
+<meta property="og:title" content="Works &amp; Public Use References | Nanashino-chan Music">
 <meta property="og:description" content="Public social use references, credibility milestones, visual-use examples, infographics, business fit, and licensing guidance for Nanashino-chan original lo-fi music.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/works.html">
-<meta property="og:image" content="https://nanashino-chan.github.io/site/bazaar-cartier.webp">
+<meta property="og:image" content="https://nanashino-chan.github.io/site/images/og/works-public-use-references.webp">
+<meta property="og:image:secure_url" content="https://nanashino-chan.github.io/site/images/og/works-public-use-references.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:alt" content="Works and public use references thumbnail for Nanashino-chan lo-fi music licensing, brand videos, creators, and commercial video use">
 
 <!-- Twitter -->
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Works & Public Use References | Nanashino-chan Music">
+<meta name="twitter:title" content="Works &amp; Public Use References | Nanashino-chan Music">
 <meta name="twitter:description" content="Explore how Nanashino-chan lo-fi music appears across public social video contexts, brand visuals, creator content, and commercial licensing workflows.">
-<meta name="twitter:image" content="https://nanashino-chan.github.io/site/bazaar-cartier.webp">
+<meta name="twitter:image" content="https://nanashino-chan.github.io/site/images/og/works-public-use-references.webp">
+<meta name="twitter:image:alt" content="Works and public use references thumbnail for Nanashino-chan lo-fi music licensing and business review">
 
 <!-- CSS -->
 
@@ -102,7 +111,7 @@ form-action 'self';
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
   gap: 34px;
   align-items: center;
-  margin-bottom: 38px;
+  margin-bottom: 34px;
 }
 
 .works-eyebrow {
@@ -228,6 +237,70 @@ form-action 'self';
 .works-list li {
   border-bottom: 1px solid rgba(255,255,255,0.08);
   padding: 8px 0;
+}
+
+.works-thumbnail-section {
+  margin: 0 0 62px;
+}
+
+.works-thumbnail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.42fr) minmax(280px, 0.58fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.works-thumbnail-card {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.12), transparent 34%),
+    #101010;
+  border: 1px solid rgba(255,204,0,0.18);
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 18px 52px rgba(0,0,0,0.34);
+}
+
+.works-thumbnail-card.primary {
+  padding: 16px;
+}
+
+.works-thumbnail-card.secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.works-thumbnail-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.09);
+  box-shadow: 0 10px 34px rgba(0,0,0,0.28);
+}
+
+.works-thumbnail-card.secondary .works-thumbnail-image {
+  margin-top: 14px;
+}
+
+.works-thumbnail-card h2 {
+  margin: 0 0 10px;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.works-thumbnail-card p {
+  color: #ccc;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.works-thumbnail-caption {
+  display: block;
+  color: #999;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 12px;
 }
 
 .works-section {
@@ -661,6 +734,7 @@ form-action 'self';
 
 @media (max-width: 980px) {
   .works-hero,
+  .works-thumbnail-grid,
   .works-grid-2,
   .works-grid-3,
   .works-grid-4,
@@ -715,8 +789,21 @@ form-action 'self';
   .works-infographic-card,
   .works-answer-box,
   .works-final,
-  .works-disclaimer {
+  .works-disclaimer,
+  .works-thumbnail-card {
     padding: 20px;
+  }
+
+  .works-thumbnail-card.primary {
+    padding: 12px;
+  }
+
+  .works-thumbnail-card h2 {
+    font-size: 22px;
+  }
+
+  .works-thumbnail-section {
+    margin-bottom: 54px;
   }
 
   .works-timeline-card {
@@ -794,6 +881,27 @@ form-action 'self';
   "name": "Nanashino-chan Works & Public Use References",
   "description": "A business-oriented works page for Nanashino-chan music, including public social use references, credibility milestones, brand and creator contexts, infographics, licensing guidance, and commercial video decision materials.",
   "url": "https://nanashino-chan.github.io/site/works.html",
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://nanashino-chan.github.io/site/images/og/works-public-use-references.webp",
+    "width": 1600,
+    "height": 900,
+    "caption": "Works and public use references thumbnail for Nanashino-chan lo-fi music licensing, brand videos, creators, and commercial video use"
+  },
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "https://nanashino-chan.github.io/site/images/og/works-public-use-references.webp",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://nanashino-chan.github.io/site/images/og/works-public-use-references2.webp",
+      "width": 1600,
+      "height": 900
+    }
+  ],
   "publisher": {
     "@type": "Organization",
     "name": "Nanashino-chan",
@@ -936,7 +1044,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 <div class="works-breadcrumb">
   <a href="/site/index.html">Home</a> →
-  Works & Public Use References
+  Works &amp; Public Use References
 </div>
 
 <main class="works-page">
@@ -947,12 +1055,11 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
   <div>
 
-
 <p class="works-eyebrow">
   Public social use references｜brand visuals｜creators｜business credibility｜licensing
 </p>
 
-<h1>Works & Public Use References for Brands, Creators and Commercial Videos</h1>
+<h1>Works &amp; Public Use References for Brands, Creators and Commercial Videos</h1>
 
 <p class="works-lead">
   Evaluate Nanashino-chan music through public social use references, business credibility milestones, verified-account exposure, international spread, visual-use examples, licensing guidance, and practical infographics.
@@ -970,11 +1077,9 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <a href="/site/contact.html" class="works-btn-dark">Contact / Request Quote</a>
 </div>
 
-
   </div>
 
   <aside class="works-hero-card">
-
 
 <h2>For business review</h2>
 
@@ -995,8 +1100,43 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <a href="/site/about.html" class="works-btn-dark">About</a>
 </div>
 
-
   </aside>
+
+</section>
+
+<section class="works-thumbnail-section" aria-label="Works and public use references thumbnail visuals">
+
+  <div class="works-thumbnail-grid">
+
+
+<div class="works-thumbnail-card primary">
+  <img src="/site/images/og/works-public-use-references.webp" alt="Works and public use references thumbnail for Nanashino-chan lo-fi music licensing, brand videos, creators, and commercial video use" class="works-thumbnail-image" width="1600" height="900" fetchpriority="high">
+  <span class="works-thumbnail-caption">
+    Primary visual for Works &amp; Public Use References. This image summarizes public social references, brand-video fit, creator use, and commercial licensing review without implying endorsement, partnership, or official brand approval.
+  </span>
+</div>
+
+<aside class="works-thumbnail-card secondary">
+  <div>
+    <p class="works-kicker">Global review visual</p>
+    <h2>Public references, business context, and licensing guidance in one place.</h2>
+    <p>
+      This supporting visual highlights global visual contexts, commercial review needs, business-ready music selection, and the difference between public social use references and formal licensing.
+    </p>
+  </div>
+
+  <img src="/site/images/og/works-public-use-references2.webp" alt="Global visual contexts and commercial licensing thumbnail for Nanashino-chan music references and business review" class="works-thumbnail-image" width="1600" height="900" loading="lazy">
+
+  <div class="works-tags">
+    <span class="works-tag">Public References</span>
+    <span class="works-tag">Brand Videos</span>
+    <span class="works-tag">Commercial Licensing</span>
+    <span class="works-tag">Business Review</span>
+  </div>
+</aside>
+
+
+  </div>
 
 </section>
 
