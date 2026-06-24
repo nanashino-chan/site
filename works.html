@@ -1,3 +1,4 @@
+<!-- works.html Part 1 / 3 -->
 
 <!DOCTYPE html>
 
@@ -9,7 +10,7 @@
 
 <title>Works & Public Use References | Nanashino-chan Music for Brands, Creators & Commercial Videos</title>
 
-<meta name="description" content="Explore Nanashino-chan works, public social use references, brand and creator examples, business credibility milestones, licensing guidance, and decision materials for commercial video music use.">
+<meta name="description" content="Explore Nanashino-chan works, public social use references, brand and creator examples, business credibility milestones, licensing guidance, infographics, and decision materials for commercial video music use.">
 
 <meta name="robots" content="index, follow">
 
@@ -59,7 +60,7 @@ form-action 'self';
 <!-- Open Graph -->
 
 <meta property="og:title" content="Works & Public Use References | Nanashino-chan Music">
-<meta property="og:description" content="Public social use references, credibility milestones, visual-use examples, business fit, and licensing guidance for Nanashino-chan original lo-fi music.">
+<meta property="og:description" content="Public social use references, credibility milestones, visual-use examples, infographics, business fit, and licensing guidance for Nanashino-chan original lo-fi music.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/works.html">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/bazaar-cartier.webp">
@@ -101,7 +102,7 @@ form-action 'self';
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
   gap: 34px;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .works-eyebrow {
@@ -146,30 +147,38 @@ form-action 'self';
 
 .works-btn-main,
 .works-btn-sub,
-.works-btn-dark {
+.works-btn-dark,
+.works-btn-white {
   display: inline-block;
   border-radius: 12px;
   padding: 15px 22px;
-  font-weight: 800;
+  font-weight: 900;
   text-decoration: none;
   line-height: 1.2;
 }
 
 .works-btn-main {
   background: #ffcc00;
-  color: #000;
+  color: #000 !important;
+  border: 1px solid #ffcc00;
 }
 
 .works-btn-sub {
-  color: #ffcc00;
+  color: #ffcc00 !important;
   border: 1px solid #ffcc00;
   background: rgba(255,204,0,0.04);
 }
 
 .works-btn-dark {
   background: #111;
-  color: #fff;
+  color: #fff !important;
   border: 1px solid rgba(255,255,255,0.16);
+}
+
+.works-btn-white {
+  background: #fff;
+  color: #000 !important;
+  border: 1px solid #fff;
 }
 
 .works-hero-card,
@@ -180,7 +189,8 @@ form-action 'self';
 .works-warning-box,
 .works-faq-box,
 .works-timeline-card,
-.works-track-card {
+.works-track-card,
+.works-infographic-card {
   background: #111;
   border: 1px solid rgba(255,255,255,0.09);
   border-radius: 18px;
@@ -264,6 +274,7 @@ form-action 'self';
   font-size: 13px;
   font-weight: 800;
   margin: 0 0 10px;
+  letter-spacing: 0.02em;
 }
 
 .works-card h3,
@@ -271,7 +282,8 @@ form-action 'self';
 .works-note-box h3,
 .works-warning-box h3,
 .works-timeline-card h3,
-.works-track-card h3 {
+.works-track-card h3,
+.works-infographic-card h3 {
   margin: 0 0 10px;
 }
 
@@ -282,6 +294,7 @@ form-action 'self';
 .works-faq-box p,
 .works-timeline-card p,
 .works-track-card p,
+.works-infographic-card p,
 .works-card-link span {
   color: #ccc;
   line-height: 1.8;
@@ -364,7 +377,7 @@ form-action 'self';
 .works-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 920px;
+  min-width: 940px;
   background: #111;
 }
 
@@ -393,6 +406,15 @@ form-action 'self';
   color: #ffcc00;
   font-weight: 800;
   text-decoration: none;
+}
+
+.works-url-note {
+  display: block;
+  color: #999;
+  font-size: 12px;
+  line-height: 1.55;
+  margin-top: 5px;
+  word-break: break-all;
 }
 
 .works-badge-yellow,
@@ -468,6 +490,9 @@ form-action 'self';
   width: 18px;
   height: 18px;
   border-radius: 4px;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
 }
 
 .works-featured-grid {
@@ -530,6 +555,57 @@ form-action 'self';
   font-weight: 700;
 }
 
+.works-infographic-card {
+  margin-top: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.1), transparent 34%),
+    #111;
+}
+
+.works-infographic-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.09);
+  box-shadow: 0 12px 34px rgba(0,0,0,0.34);
+  margin-top: 18px;
+}
+
+.works-infographic-caption {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 14px 0 0;
+}
+
+.works-process {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.works-process-step {
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.works-process-step strong {
+  display: block;
+  color: #ffcc00;
+  margin-bottom: 8px;
+}
+
+.works-process-step span {
+  display: block;
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 13px;
+}
+
 .works-final {
   text-align: center;
   padding: 42px 24px;
@@ -577,6 +653,12 @@ form-action 'self';
   display: none;
 }
 
+@media (max-width: 1080px) {
+  .works-process {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 980px) {
   .works-hero,
   .works-grid-2,
@@ -610,12 +692,14 @@ form-action 'self';
 
   .works-btn-main,
   .works-btn-sub,
-  .works-btn-dark {
+  .works-btn-dark,
+  .works-btn-white {
     width: 100%;
     text-align: center;
   }
 
-  .works-stats {
+  .works-stats,
+  .works-process {
     grid-template-columns: 1fr;
   }
 
@@ -628,6 +712,7 @@ form-action 'self';
   .works-faq-box,
   .works-timeline-card,
   .works-track-card,
+  .works-infographic-card,
   .works-answer-box,
   .works-final,
   .works-disclaimer {
@@ -675,55 +760,6 @@ form-action 'self';
     border: 1px solid rgba(255,255,255,0.16);
   }
 }
-  /* Featured Public Visual Context visibility fix */
-.works-case-card .works-cta-row .works-btn-main,
-.works-featured-grid .works-cta-row .works-btn-main {
-background: #ffcc00 !important;
-color: #000 !important;
-border: 1px solid #ffcc00 !important;
-text-decoration: none !important;
-font-weight: 900 !important;
-}
-
-.works-case-card .works-cta-row .works-btn-sub,
-.works-featured-grid .works-cta-row .works-btn-sub {
-background: #ffffff !important;
-color: #000 !important;
-border: 1px solid #ffffff !important;
-text-decoration: none !important;
-font-weight: 900 !important;
-}
-
-.works-case-card .works-cta-row .works-btn-dark,
-.works-featured-grid .works-cta-row .works-btn-dark {
-background: #151515 !important;
-color: #ffffff !important;
-border: 1px solid rgba(255,255,255,0.28) !important;
-text-decoration: none !important;
-font-weight: 900 !important;
-}
-
-.works-featured-grid h3 {
-color: #ffffff !important;
-}
-
-.works-featured-grid p,
-.works-featured-grid li {
-color: #d8d8d8 !important;
-}
-
-.works-featured-grid .works-small-note {
-color: #b8b8b8 !important;
-background: rgba(255,255,255,0.04);
-border: 1px solid rgba(255,255,255,0.08);
-border-radius: 12px;
-padding: 12px 14px;
-}
-
-.works-featured-grid .works-badge-yellow {
-background: #ffcc00 !important;
-color: #000 !important;
-}
 </style>
 
 <!-- Breadcrumb Schema -->
@@ -756,7 +792,7 @@ color: #000 !important;
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Nanashino-chan Works & Public Use References",
-  "description": "A business-oriented works page for Nanashino-chan music, including public social use references, credibility milestones, brand and creator contexts, licensing guidance, and commercial video decision materials.",
+  "description": "A business-oriented works page for Nanashino-chan music, including public social use references, credibility milestones, brand and creator contexts, infographics, licensing guidance, and commercial video decision materials.",
   "url": "https://nanashino-chan.github.io/site/works.html",
   "publisher": {
     "@type": "Organization",
@@ -804,7 +840,7 @@ color: #000 !important;
       "name": "What is this works page for?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This page helps brands, agencies, creators, and business decision makers evaluate Nanashino-chan music through public social use references, credibility milestones, industry fit, music role, licensing guidance, and internal review materials."
+        "text": "This page helps brands, agencies, creators, and business decision makers evaluate Nanashino-chan music through public social use references, credibility milestones, industry fit, music role, infographics, licensing guidance, and internal review materials."
       }
     },
     {
@@ -919,7 +955,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
 <h1>Works & Public Use References for Brands, Creators and Commercial Videos</h1>
 
 <p class="works-lead">
-  Evaluate Nanashino-chan music through public social use references, business credibility milestones, verified-account exposure, international spread, visual-use examples, and licensing guidance.
+  Evaluate Nanashino-chan music through public social use references, business credibility milestones, verified-account exposure, international spread, visual-use examples, licensing guidance, and practical infographics.
 </p>
 
 <p class="works-sub">
@@ -948,10 +984,10 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 <ul class="works-list">
   <li>✔ Public social use references</li>
-  <li>✔ Project timeline and credibility milestones</li>
+  <li>✔ Business credibility milestones</li>
   <li>✔ Industry and regional fit</li>
-  <li>✔ Track recommendations by business use</li>
-  <li>✔ License decision table and internal review materials</li>
+  <li>✔ Infographics for internal explanation</li>
+  <li>✔ License decision table and review materials</li>
 </ul>
 
 <div class="works-cta-row">
@@ -1235,7 +1271,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
     </p>
 
     <div class="works-cta-row">
-      <a href="https://www.instagram.com/reel/DKLejxuPtd-/" target="_blank" rel="noopener noreferrer" class="works-btn-sub">View Public Reel</a>
+      <a href="https://www.instagram.com/reel/DKLejxuPtd-/" target="_blank" rel="noopener noreferrer" class="works-btn-white">View Public Reel</a>
       <a href="/site/licensing.html#pricing" class="works-btn-main">License for Brand Video</a>
     </div>
 
@@ -1248,13 +1284,485 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 </section>
 
-Commercial Creator License / custom review depending on institution use</li>
+<!-- Continue with Part 2 from Public Social Use References -->
+
+<section class="works-section">
+
+  <h2>Public Social Use References Across Brands, Creators and Communities</h2>
+
+  <p class="works-section-lead">
+    These references are organized to help business reviewers understand industry fit, regional spread, account context, track usage, and possible license direction for similar projects.
+  </p>
+
+  <p class="works-small-note">
+    Follower counts, verification status, and public account context may change over time. The entries below should be treated as observed public social references, not as claims of endorsement, sponsorship, partnership, direct client relationship, or approval.
+  </p>
+
+  <div class="works-table-wrap">
+    <table class="works-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Account / Brand</th>
+          <th>Region</th>
+          <th>Approx. followers / status</th>
+          <th>Track</th>
+          <th>Business relevance</th>
+          <th>Public reference</th>
+        </tr>
+      </thead>
+
+
+  <tbody>
+    <tr>
+      <td>Fashion / luxury media</td>
+      <td>Harper’s BAZAAR HK Official Reel</td>
+      <td>Hong Kong</td>
+      <td>370K / verified</td>
+      <td>Smooth Groove</td>
+      <td>Luxury, fashion, jewelry, event, premium short-form visual fit.</td>
+      <td>
+        <a href="https://www.instagram.com/reel/DKLejxuPtd-/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DKLejxuPtd-/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Interior / lifestyle brand</td>
+      <td>Arte Moderna Retrô</td>
+      <td>Brazil</td>
+      <td>600K / verified</td>
+      <td>Smooth Groove</td>
+      <td>High-end interior, lifestyle, product atmosphere, warm visual storytelling.</td>
+      <td>
+        <a href="https://www.instagram.com/reel/DPlsQvcDqpa/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DPlsQvcDqpa/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Fashion brand</td>
+      <td>delight.oficial</td>
+      <td>Brazil</td>
+      <td>310K+ / verified</td>
+      <td>Smooth Groove</td>
+      <td>Women’s fashion, social branding, lifestyle tone, product mood.</td>
+      <td>
+        <a href="https://www.instagram.com/reel/DM6VoXasqTM/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DM6VoXasqTM/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Stationery / product visual context</td>
+      <td>Marina Bertollo Reel featuring Compactor product tags</td>
+      <td>Brazil</td>
+      <td>Creator Reel / visible Compactor-related tags</td>
+      <td>Smooth Groove</td>
+      <td>
+        Stationery, illustration, writing tools, study, school, office, and product-content compatibility.
+        Visible video tags include Compactor-related accounts, but the current collaborator status is not shown.
+      </td>
+      <td>
+        <a href="https://www.instagram.com/reel/DOYvFmwDQbD/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DOYvFmwDQbD/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Corporate / real estate</td>
+      <td>Chuo-Nittochi Co., Ltd. / BAUS</td>
+      <td>Japan</td>
+      <td>Corporate account</td>
+      <td>Smooth Groove</td>
+      <td>Corporate visual, real estate, showroom, calm business communication.</td>
+      <td>
+        <a href="https://www.instagram.com/reel/DLzP-HehrGO/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DLzP-HehrGO/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Interior / lifestyle brand</td>
+      <td>MJ Home Oficial</td>
+      <td>Brazil</td>
+      <td>140K / verified</td>
+      <td>Smooth Groove</td>
+      <td>High-end interior, home lifestyle, design, and soft product presentation.</td>
+      <td>
+        <a href="https://www.instagram.com/reel/DNgykNDSUwE/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DNgykNDSUwE/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Personal brand / business event</td>
+      <td>Hanan Al Sammak</td>
+      <td>UAE</td>
+      <td>270K / verified</td>
+      <td>Smooth Groove</td>
+      <td>Entrepreneurship, event hosting, public speaking, personal brand communication.</td>
+      <td>
+        <a href="https://www.instagram.com/p/DJe-nqbzHQ6/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/p/DJe-nqbzHQ6/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Men’s fashion / influencer</td>
+      <td>Carlos Domord</td>
+      <td>Spain</td>
+      <td>260K / verified</td>
+      <td>Smooth Groove</td>
+      <td>Men’s fashion consulting, style education, personal brand visuals.</td>
+      <td>
+        <a href="https://www.instagram.com/p/DMXxq5HsTFS/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/p/DMXxq5HsTFS/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Singer / actress / lifestyle</td>
+      <td>Femke Meines</td>
+      <td>Netherlands</td>
+      <td>180K / verified</td>
+      <td>Smooth Groove</td>
+      <td>Lifestyle, entertainment, personal brand, public-facing creator content.</td>
+      <td>
+        <a href="https://www.instagram.com/p/DJUB2Bximc-/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/p/DJUB2Bximc-/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Cycling / fitness influencer</td>
+      <td>The Little Explorer / Putri</td>
+      <td>Greece</td>
+      <td>160K / verified</td>
+      <td>Smooth Groove</td>
+      <td>Fitness, cycling, travel, lifestyle, creator short-form video fit.</td>
+      <td>
+        <a href="https://www.instagram.com/reel/DO6pGLjjAbp/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DO6pGLjjAbp/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Beauty education academy</td>
+      <td>Academia de Belleza Rosario</td>
+      <td>Dominican Republic</td>
+      <td>230K / verified</td>
+      <td>Smooth Groove</td>
+      <td>Beauty education, nails, brows, makeup, aesthetics, training institution content.</td>
+      <td>
+        <a href="https://www.instagram.com/reel/DMvLGbfukpW/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DMvLGbfukpW/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Community / creator network</td>
+      <td>unidospelaeucaristiacommaria</td>
+      <td>Brazil</td>
+      <td>370K</td>
+      <td>Smooth Transitions</td>
+      <td>Community content, faith-based social media, recurring public communication.</td>
+      <td>
+        <a href="https://www.instagram.com/reel/DMpgkAnA5Rb/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DMpgkAnA5Rb/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Catholic community</td>
+      <td>Evangelizar, nossa missão</td>
+      <td>Brazil</td>
+      <td>533K</td>
+      <td>Smooth Transitions</td>
+      <td>Community communication, public mission content, soft background support.</td>
+      <td>
+        <a href="https://www.instagram.com/reel/DMc580UgYLx/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DMc580UgYLx/</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Culture / arts community</td>
+      <td>IMCultura / Montevideo Cultura</td>
+      <td>Uruguay</td>
+      <td>83K / verified</td>
+      <td>Stillness Vibes</td>
+      <td>Culture, arts, city communication, institutional visual context.</td>
+      <td>
+        <a href="https://www.instagram.com/reel/DLYgOG-vHCX/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DLYgOG-vHCX/</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+  </div>
+
+</section>
+
+<section class="works-section">
+
+  <h2>Industries and Regions Where the Music Has Appeared</h2>
+
+  <p class="works-section-lead">
+    The public references show that Nanashino-chan music is not limited to one creator niche.
+    The music has appeared across fashion, interior, real estate, stationery, community, culture, education, fitness, public voice, and lifestyle contexts.
+  </p>
+
+  <div class="works-grid-2">
+
+
+<div class="works-card">
+  <p class="works-kicker">Regional spread</p>
+  <h3>Observed international usage contexts</h3>
+
+  <div class="works-table-wrap">
+    <table class="works-table" style="min-width:620px;">
+      <thead>
+        <tr>
+          <th>Region</th>
+          <th>Observed examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Brazil</td>
+          <td>
+            Arte Moderna Retrô, delight.oficial, Marina Bertollo Reel featuring Compactor product tags,
+            MJ Home Oficial, Evangelizar, unidos pela eucaristia com maria
+          </td>
+        </tr>
+        <tr>
+          <td>Hong Kong</td>
+          <td>Harper’s BAZAAR HK Official Reel</td>
+        </tr>
+        <tr>
+          <td>Japan</td>
+          <td>Chuo-Nittochi / BAUS corporate and real estate visual context</td>
+        </tr>
+        <tr>
+          <td>UAE</td>
+          <td>Hanan Al Sammak personal brand / event communication context</td>
+        </tr>
+        <tr>
+          <td>Europe</td>
+          <td>Spain, Netherlands, Greece creator and influencer contexts</td>
+        </tr>
+        <tr>
+          <td>Latin America</td>
+          <td>Dominican Republic beauty education, Uruguay culture / arts community</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<div class="works-card">
+  <p class="works-kicker">Industry spread</p>
+  <h3>Visual categories that fit the catalog</h3>
+
+  <div class="works-table-wrap">
+    <table class="works-table" style="min-width:620px;">
+      <thead>
+        <tr>
+          <th>Industry / category</th>
+          <th>Best visual use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fashion / beauty</td>
+          <td>Lookbooks, product shots, event recaps, personal styling, elegant short-form content.</td>
+        </tr>
+        <tr>
+          <td>Interior / real estate</td>
+          <td>Room tours, showroom visuals, architecture, luxury interiors, lifestyle spaces.</td>
+        </tr>
+        <tr>
+          <td>Stationery / education</td>
+          <td>Writing, study, desk scenes, notebooks, school, professional learning visuals.</td>
+        </tr>
+        <tr>
+          <td>Corporate / B2B</td>
+          <td>Company social posts, product videos, LinkedIn clips, recruitment, internal communication.</td>
+        </tr>
+        <tr>
+          <td>Creator economy</td>
+          <td>Reels, Shorts, TikTok, vlogs, personal brand posts, study videos, fitness and lifestyle edits.</td>
+        </tr>
+        <tr>
+          <td>Community / culture</td>
+          <td>Public communication, community updates, cultural institutions, arts and city-related visuals.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="works-section">
+
+  <h2>Selected Public Use Contexts</h2>
+
+  <p class="works-section-lead">
+    The table above gives the full reference list. These selected case cards show how different types of accounts used the music in different visual environments.
+  </p>
+
+  <div class="works-grid-3">
+
+
+<div class="works-case-card featured">
+  <img src="/site/bazaar-cartier.webp" alt="Harper's BAZAAR HK and Cartier-related visual context using Nanashino-chan music" loading="lazy" width="900" height="900">
+  <p class="works-badge-yellow">LUXURY / FASHION MEDIA</p>
+  <h3>Harper’s BAZAAR HK Official Reel</h3>
+  <p>
+    A public fashion and luxury-related visual context using Smooth Groove.
+    This is the strongest example for premium visual fit, elegant pacing, and brand-adjacent storytelling.
+  </p>
+  <ul>
+    <li>• Region: Hong Kong</li>
+    <li>• Approx. followers: 370K / verified</li>
+    <li>• Track: Smooth Groove</li>
+    <li>• Business meaning: luxury, event, jewelry, editorial, and premium social-video compatibility</li>
+    <li>• Suggested path for similar work: Sync License / custom campaign license</li>
+  </ul>
+  <a href="https://www.instagram.com/reel/DKLejxuPtd-/" target="_blank" rel="noopener noreferrer" class="works-icon-link">
+    <img src="/site/Instagramicon.webp" alt="" loading="lazy" width="18" height="18">
+    View public reference
+  </a>
+</div>
+
+<div class="works-case-card">
+  <img src="/site/arte-moderna.webp" alt="Arte Moderna Retrô interior and lifestyle visual context using Nanashino-chan music" loading="lazy" width="900" height="900">
+  <p class="works-badge-dark">INTERIOR / LIFESTYLE BRAND</p>
+  <h3>Arte Moderna Retrô</h3>
+  <p>
+    A high-following Brazilian interior and lifestyle brand context using Smooth Groove.
+    This shows the track’s fit with warm design, premium interiors, and product atmosphere.
+  </p>
+  <ul>
+    <li>• Region: Brazil</li>
+    <li>• Approx. followers: 600K / verified</li>
+    <li>• Track: Smooth Groove</li>
+    <li>• Business meaning: interior, home, design, furniture, and lifestyle product compatibility</li>
+    <li>• Suggested path for similar work: Commercial Creator License / Sync License depending on promotion</li>
+  </ul>
+  <a href="https://www.instagram.com/reel/DPlsQvcDqpa/" target="_blank" rel="noopener noreferrer" class="works-icon-link">
+    <img src="/site/Instagramicon.webp" alt="" loading="lazy" width="18" height="18">
+    View public reference
+  </a>
+</div>
+
+<div class="works-case-card">
+  <img src="/site/chuo-nittochi.webp" alt="Chuo-Nittochi BAUS real estate and corporate visual context using Nanashino-chan music" loading="lazy" width="900" height="900">
+  <p class="works-badge-dark">CORPORATE / REAL ESTATE</p>
+  <h3>Chuo-Nittochi / BAUS</h3>
+  <p>
+    A Japanese corporate and real estate visual context using Smooth Groove.
+    This shows how calm lo-fi can support business-owned social video without making the content feel too cold or overly corporate.
+  </p>
+  <ul>
+    <li>• Region: Japan</li>
+    <li>• Account context: corporate / real estate</li>
+    <li>• Track: Smooth Groove</li>
+    <li>• Business meaning: real estate, showroom, architecture, urban lifestyle, corporate communication</li>
+    <li>• Suggested path for similar work: Commercial Creator License / Sync License</li>
+  </ul>
+  <a href="https://www.instagram.com/reel/DLzP-HehrGO/" target="_blank" rel="noopener noreferrer" class="works-icon-link">
+    <img src="/site/Instagramicon.webp" alt="" loading="lazy" width="18" height="18">
+    View public reference
+  </a>
+</div>
+
+<div class="works-case-card">
+  <img src="/site/Instagramicon.webp" alt="delight.oficial fashion brand public Reel reference using Smooth Groove" loading="lazy" width="900" height="900">
+  <p class="works-badge-dark">FASHION BRAND</p>
+  <h3>delight.oficial</h3>
+  <p>
+    A Brazilian women’s fashion brand context using Smooth Groove.
+    This supports the idea that the track can soften fashion visuals while keeping the content modern and social-first.
+  </p>
+  <ul>
+    <li>• Region: Brazil</li>
+    <li>• Approx. followers: 310K+ / verified</li>
+    <li>• Track: Smooth Groove</li>
+    <li>• Business meaning: fashion, retail, social branding, lifestyle video</li>
+    <li>• Suggested path for similar work: Commercial Creator License / Sync License</li>
+  </ul>
+  <a href="https://www.instagram.com/reel/DM6VoXasqTM/" target="_blank" rel="noopener noreferrer" class="works-icon-link">
+    <img src="/site/Instagramicon.webp" alt="" loading="lazy" width="18" height="18">
+    View public reference
+  </a>
+</div>
+
+<div class="works-case-card">
+  <img src="/site/Instagramicon.webp" alt="Creator Reel featuring Compactor product tags and stationery illustration context using Smooth Groove" loading="lazy" width="900" height="900">
+  <p class="works-badge-dark">STATIONERY / PRODUCT VISUAL CONTEXT</p>
+
+  <h3>Compactor-tagged Stationery Product Context</h3>
+
+  <p>
+    A creator Reel by Marina Bertollo featuring illustration content and visible Compactor-related product tags.
+    The Reel appears in a stationery and product-visual context connected to Microline Art Color pens.
+  </p>
+
+  <ul>
+    <li>• Publisher context: Creator Reel by Marina Bertollo</li>
+    <li>• Brand context: Compactor-related product tags are visible in the video</li>
+    <li>• Track observed: Smooth Groove</li>
+    <li>• Industry: Stationery / illustration / study / writing products</li>
+    <li>• Verification status: Public visual reference with visible brand tags; current collaborator status is not shown</li>
+    <li>• Business meaning: stationery, education, writing tools, desk visuals, study content, and product-context compatibility</li>
+    <li>• Suggested license path for similar projects: Commercial Creator License or Sync License depending on promotion scope</li>
+  </ul>
+
+  <p class="works-small-note">
+    This entry is shown as a Compactor-tagged stationery product context, not as a current official collaborator post, confirmed brand campaign, direct client relationship, or brand partnership.
+  </p>
+
+  <a href="https://www.instagram.com/reel/DOYvFmwDQbD/" target="_blank" rel="noopener noreferrer" class="works-icon-link">
+    <img src="/site/Instagramicon.webp" alt="" loading="lazy" width="18" height="18">
+    View public reference
+  </a>
+</div>
+
+<div class="works-case-card">
+  <img src="/site/Instagramicon.webp" alt="IMCultura Montevideo Cultura public arts and culture reference using Stillness Vibes" loading="lazy" width="900" height="900">
+  <p class="works-badge-dark">CULTURE / ARTS</p>
+  <h3>IMCultura / Montevideo Cultura</h3>
+  <p>
+    A culture and arts community context using Stillness Vibes.
+    This suggests that the catalog can also support institutional, artistic, and city-related public communication.
+  </p>
+  <ul>
+    <li>• Region: Uruguay</li>
+    <li>• Approx. followers: 83K / verified</li>
+    <li>• Track: Stillness Vibes</li>
+    <li>• Business meaning: arts, public communication, city culture, institutional social content</li>
+    <li>• Suggested path for similar work: Commercial Creator License / custom review depending on institution use</li>
   </ul>
   <a href="https://www.instagram.com/reel/DLYgOG-vHCX/" target="_blank" rel="noopener noreferrer" class="works-icon-link">
     <img src="/site/Instagramicon.webp" alt="" loading="lazy" width="18" height="18">
     View public reference
   </a>
 </div>
+
+
+  </div>
+
+</section>
 
 <section class="works-section">
 
@@ -1348,6 +1856,38 @@ Commercial Creator License / custom review depending on institution use</li>
         </tr>
       </tbody>
     </table>
+  </div>
+
+</section>
+
+<section class="works-section">
+
+  <h2>Infographic: How to Choose the Right Music License</h2>
+
+  <p class="works-section-lead">
+    Use this visual guide when explaining the licensing decision internally. The most important question is not only “where will this be posted?” but also “who is publishing it, is it commercial, and is it part of a paid or client campaign?”
+  </p>
+
+  <div class="works-infographic-card">
+    <h3>License decision flow for creators, brands, agencies, and paid social campaigns</h3>
+    <p>
+      This infographic helps connect project type to license category: personal posts, monetized creator videos, organic brand content, client work, sponsored posts, paid ads, and custom uses.
+    </p>
+
+
+<img
+  src="/site/howtochoose.webp"
+  alt="Infographic explaining how to choose the right music license for creators, brands, agencies, AI videos, and commercial campaigns"
+  loading="lazy"
+  width="1600"
+  height="900"
+  class="works-infographic-image">
+
+<p class="works-infographic-caption">
+  Recommended use on this page: place this infographic before the license decision table so a brand manager or agency producer can understand the decision flow before reading the details.
+</p>
+
+
   </div>
 
 </section>
@@ -1478,6 +2018,9 @@ Commercial Creator License / custom review depending on institution use</li>
 
 </section>
 
+<!-- Continue with Part 3 from Credit-Based Usage vs Commercial Licensing -->
+
+
 <section class="works-section works-warning-box">
 
   <h2>Credit-Based Usage vs Commercial Licensing</h2>
@@ -1495,6 +2038,30 @@ Commercial Creator License / custom review depending on institution use</li>
   <p>
     日本語：クレジット表記やSNSプラットフォーム上の音源利用は、小規模・非商用の投稿には適する場合がありますが、商用動画、広告、クライアント案件、ブランドキャンペーンの正式なライセンスの代替にはなりません。
   </p>
+
+  <div class="works-infographic-card">
+    <h3>Infographic: Why both copyright permission and master rights permission matter</h3>
+
+
+<p>
+  A commercial video project often needs clarity on both the musical composition rights and the master recording rights.
+  This infographic is included as a practical reminder for business reviewers: platform audio availability, credits, or casual social use should not be confused with full commercial permission.
+</p>
+
+<img
+  src="/site/images/infographics/why-both-rights-matter.webp"
+  alt="Infographic explaining why both copyright permission and master rights permission matter when using existing commercial recordings"
+  loading="lazy"
+  width="1600"
+  height="900"
+  class="works-infographic-image">
+
+<p class="works-infographic-caption">
+  For Nanashino-chan original music, direct licensing helps simplify the rights conversation because the music is licensed from the rights holder. However, each project still needs the correct license scope for the intended use.
+</p>
+
+
+  </div>
 
 </section>
 
@@ -1580,7 +2147,7 @@ Commercial Creator License / custom review depending on institution use</li>
       <td>Company / production / platform</td>
       <td>Varies</td>
       <td>Custom license required</td>
-      <td>Do not assume standard creator or sync licenses cover unusual distribution or public performance use.</td>
+      <td>Do not assume standard creator or sync licenses cover unusual distribution, public performance, resale, templates, or embedded software use.</td>
     </tr>
   </tbody>
 </table>
@@ -1604,55 +2171,37 @@ Commercial Creator License / custom review depending on institution use</li>
     A clear licensing process helps agencies, brands, producers, and creators move from track discovery to publication without unnecessary confusion.
   </p>
 
-  <div class="works-grid-3">
+  <div class="works-process" aria-label="Music licensing process">
 
 
-<div class="works-note-box">
-  <p class="works-kicker">Step 1</p>
-  <h3>Choose the track or mood</h3>
-  <p>
-    Start from the commercial track recommendations, music catalog, or a reference use case that matches your visual mood.
-  </p>
+<div class="works-process-step">
+  <strong>1. Choose track</strong>
+  <span>Start from recommended tracks, the music catalog, or a public reference that matches your visual direction.</span>
 </div>
 
-<div class="works-note-box">
-  <p class="works-kicker">Step 2</p>
-  <h3>Define the use</h3>
-  <p>
-    Clarify whether the project is personal, creator, organic business, client work, sponsored, paid advertising, campaign, or custom distribution.
-  </p>
+<div class="works-process-step">
+  <strong>2. Define use</strong>
+  <span>Clarify whether the project is personal, creator, brand-owned, client work, sponsored, paid ad, or custom use.</span>
 </div>
 
-<div class="works-note-box">
-  <p class="works-kicker">Step 3</p>
-  <h3>Select the license type</h3>
-  <p>
-    Choose Personal, Commercial Creator, Sync, or custom license depending on the project scope and publishing context.
-  </p>
+<div class="works-process-step">
+  <strong>3. Select license</strong>
+  <span>Choose Personal, Commercial Creator, Sync, or custom licensing depending on the actual project scope.</span>
 </div>
 
-<div class="works-note-box">
-  <p class="works-kicker">Step 4</p>
-  <h3>Purchase or request a quote</h3>
-  <p>
-    Standard licenses can be purchased online. Custom use, unusual distribution, or campaign uncertainty should go through contact first.
-  </p>
+<div class="works-process-step">
+  <strong>4. Purchase / ask</strong>
+  <span>Buy the standard license online, or contact first when the project has unusual terms or campaign uncertainty.</span>
 </div>
 
-<div class="works-note-box">
-  <p class="works-kicker">Step 5</p>
-  <h3>Save proof of license</h3>
-  <p>
-    Keep the receipt, license terms, track title, project name, campaign period, and client or brand context for internal review.
-  </p>
+<div class="works-process-step">
+  <strong>5. Save proof</strong>
+  <span>Keep the receipt, license terms, track title, project name, campaign period, and client or brand context.</span>
 </div>
 
-<div class="works-note-box">
-  <p class="works-kicker">Step 6</p>
-  <h3>Publish within scope</h3>
-  <p>
-    Publish the content only within the license scope. Reuse, paid promotion, new campaigns, or new platforms may require additional review.
-  </p>
+<div class="works-process-step">
+  <strong>6. Publish in scope</strong>
+  <span>Publish only within the license scope. New campaigns, reuse, paid ads, or new platforms may need review.</span>
 </div>
 
 
@@ -1681,37 +2230,37 @@ Commercial Creator License / custom review depending on institution use</li>
         <tr>
           <td>Licensing page</td>
           <td>Review available license options and understand pricing direction.</td>
-          <td><a href="/site/licensing.html">Open</a></td>
+          <td><a href="/site/licensing.html">Open licensing page</a></td>
         </tr>
         <tr>
           <td>Recommended tracks page</td>
           <td>Choose tracks by commercial video use case before final selection.</td>
-          <td><a href="/site/pages/recommended-tracks-for-commercial-video-use.html">Open</a></td>
+          <td><a href="/site/pages/recommended-tracks-for-commercial-video-use.html">Open recommended tracks</a></td>
         </tr>
         <tr>
           <td>Proof of license guide</td>
           <td>Understand what documentation may be needed for brands, clients, or internal records.</td>
-          <td><a href="/site/pages/proof-of-music-license-for-business.html">Open</a></td>
+          <td><a href="/site/pages/proof-of-music-license-for-business.html">Open proof guide</a></td>
         </tr>
         <tr>
           <td>Commercial vs Sync License guide</td>
           <td>Decide whether organic commercial use or campaign / advertising use is the better license category.</td>
-          <td><a href="/site/pages/commercial-license-vs-sync-license.html">Open</a></td>
+          <td><a href="/site/pages/commercial-license-vs-sync-license.html">Open comparison guide</a></td>
         </tr>
         <tr>
           <td>Music catalog</td>
           <td>Browse the broader Nanashino-chan catalog by mood, genre, use case, and listening context.</td>
-          <td><a href="/site/music.html">Open</a></td>
+          <td><a href="/site/music.html">Open catalog</a></td>
         </tr>
         <tr>
           <td>LinkedIn profile</td>
           <td>Business identity check and professional contact context.</td>
-          <td><a href="https://www.linkedin.com/in/nanashino-chan/" target="_blank" rel="noopener noreferrer">Open</a></td>
+          <td><a href="https://www.linkedin.com/in/nanashino-chan/" target="_blank" rel="noopener noreferrer">Open LinkedIn</a></td>
         </tr>
         <tr>
           <td>Contact page</td>
           <td>Ask about unusual usage, custom licensing, campaign scope, store playback, or project-specific questions.</td>
-          <td><a href="/site/contact.html">Open</a></td>
+          <td><a href="/site/contact.html">Open contact page</a></td>
         </tr>
       </tbody>
     </table>
@@ -1799,7 +2348,7 @@ Commercial Creator License / custom review depending on institution use</li>
 
 <h3>What is this works page for?</h3>
 <p>
-  This page helps brands, agencies, creators, and business decision makers evaluate Nanashino-chan music through public social use references, credibility milestones, industry fit, music role, licensing guidance, and internal review materials.
+  This page helps brands, agencies, creators, and business decision makers evaluate Nanashino-chan music through public social use references, credibility milestones, industry fit, music role, infographics, licensing guidance, and internal review materials.
 </p>
 
 <h3>Do the examples on this page imply endorsement or partnership?</h3>
@@ -1816,6 +2365,12 @@ Commercial Creator License / custom review depending on institution use</li>
 <h3>Does public social use mean the music is free to reuse?</h3>
 <p>
   No. Public social use references show how the music can fit real visual contexts, but each new project still needs the appropriate license for its intended use.
+</p>
+
+<h3>Why is the Compactor-related reference worded carefully?</h3>
+<p>
+  The visible public Reel context shows Compactor-related product tags, but the current collaborator status is not shown.
+  For accuracy, it is described as a creator Reel featuring Compactor product tags, not as a current official collaborator post, confirmed brand campaign, direct client relationship, or brand partnership.
 </p>
 
 <h3>What license is recommended for paid social campaigns?</h3>
@@ -1890,7 +2445,7 @@ Commercial Creator License / custom review depending on institution use</li>
   <h2>Disclaimer</h2>
 
   <p>
-    This page provides general catalog, public social reference, works, use-case, and licensing guidance.
+    This page provides general catalog, public social reference, works, use-case, infographic, and licensing guidance.
     It does not provide legal advice, endorsement claims, partnership claims, platform approval, advertising approval, monetization guarantees, copyright-claim guarantees, takedown prevention guarantees, or account-safety guarantees.
   </p>
 
@@ -1906,7 +2461,7 @@ Commercial Creator License / custom review depending on institution use</li>
   <h2>免責事項</h2>
 
   <p>
-    このページは、Nanashino-chanの音楽が公開SNS上で確認された使用・視覚文脈、作品例、用途例、ライセンス確認に関する一般的な情報を提供するものです。
+    このページは、Nanashino-chanの音楽が公開SNS上で確認された使用・視覚文脈、作品例、用途例、インフォグラフィック、ライセンス確認に関する一般的な情報を提供するものです。
     法的助言、推薦・提携・スポンサー関係・直接取引の主張、プラットフォーム審査、広告審査、収益化、ミュート回避、削除回避、アカウント安全性を保証するものではありません。
   </p>
 
@@ -1950,7 +2505,7 @@ Commercial Creator License / custom review depending on institution use</li>
 </div>
 
 <p class="footer-note">
-  🎧 Public social use references, business review materials, and licensing guidance for Nanashino-chan original lo-fi music.<br>
+  🎧 Public social use references, business review materials, infographics, and licensing guidance for Nanashino-chan original lo-fi music.<br>
   <a href="/site/licensing.html">▶ License this music</a>
 </p>
 
@@ -1961,8 +2516,5 @@ Commercial Creator License / custom review depending on institution use</li>
 
 </body>
 </html>
-
-
-
 
 
