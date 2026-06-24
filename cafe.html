@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -6,41 +7,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
+<title>Cafe Lo-Fi Music | Cozy Coffee Shop Beats for Work, Reading & Videos</title>
 
-<title>Night Café Lo-Fi Music – Cozy Coffee Shop Beats for Work & Relax</title>
-
-<meta name="description" content="Cozy café lo-fi music with warm beats and soft ambience. Perfect for work, study, and relaxing moments. カフェのような落ち着いたLo-Fi音楽。">
+<meta name="description" content="Listen to cozy cafe lo-fi music by Nanashino-chan. Browse warm coffee shop beats for work, reading, study, lifestyle videos, cafe-style Reels, brand visuals, and licensed video use.">
 
 <meta name="robots" content="index, follow">
+
 <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
+default-src 'self';
 
 script-src 'self'
 'unsafe-inline'
-https://www.youtube.com
-https://www.google.com
-https://www.gstatic.com
-https://s.ytimg.com
-https://www.googletagmanager.com
-https://www.google-analytics.com;
+[https://www.youtube.com](https://www.youtube.com)
+[https://www.google.com](https://www.google.com)
+[https://www.gstatic.com](https://www.gstatic.com)
+[https://s.ytimg.com](https://s.ytimg.com)
+[https://www.googletagmanager.com](https://www.googletagmanager.com)
+[https://www.google-analytics.com](https://www.google-analytics.com);
 
 frame-src
-https://www.youtube.com
-https://www.youtube-nocookie.com;
+[https://www.youtube.com](https://www.youtube.com)
+[https://www.youtube-nocookie.com](https://www.youtube-nocookie.com);
 
 connect-src
 'self'
-https://www.youtube.com
-https://i.ytimg.com
-https://www.google-analytics.com
-https://www.googletagmanager.com
-https://www.youtube.com;
+[https://www.youtube.com](https://www.youtube.com)
+[https://i.ytimg.com](https://i.ytimg.com)
+[https://www.google-analytics.com](https://www.google-analytics.com)
+[https://www.googletagmanager.com](https://www.googletagmanager.com);
 
 img-src
 'self'
-https://i.ytimg.com
-https://img.youtube.com
+[https://i.ytimg.com](https://i.ytimg.com)
+[https://img.youtube.com](https://img.youtube.com)
 data:;
 
 style-src
@@ -51,66 +50,723 @@ font-src 'self';
 
 object-src 'none';
 base-uri 'self';
+form-action 'self';
 ">
+
 <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
 
 <link rel="canonical" href="https://nanashino-chan.github.io/site/cafe.html">
+
 <link rel="icon" href="/site/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
 
-<!-- OGP -->
-
-<meta property="og:title" content="Night Café Lo-Fi Music">
-<meta property="og:description" content="Warm and cozy lo-fi beats inspired by café nights.">
+<meta property="og:title" content="Cafe Lo-Fi Music | Cozy Coffee Shop Beats by Nanashino-chan">
+<meta property="og:description" content="Cozy cafe lo-fi music for work, reading, study, lifestyle videos, cafe-style Reels, brand visuals, and licensed creative use.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/cafe.html">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
-<!-- Twitter -->
-
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Night Café Lo-Fi Music">
-<meta name="twitter:description" content="Cozy lo-fi beats for study, work, and relaxation.">
+<meta name="twitter:title" content="Cafe Lo-Fi Music by Nanashino-chan">
+<meta name="twitter:description" content="Cozy coffee shop beats for work, reading, study, lifestyle videos, cafe-style Reels, and licensed creative use.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+.cafe-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 20px 96px;
+}
 
-<link rel="preload"
-      as="image"
-      href="hero-1440.webp"
-      imagesrcset="hero-720.webp 720w, hero-1440.webp 1440w"
-      imagesizes="(max-width: 768px) 100vw, 1200px">
+.cafe-breadcrumb {
+  max-width: 1180px;
+  margin: 22px auto 18px;
+  padding: 0 20px;
+  color: #aaa;
+  font-size: 14px;
+}
 
-<!-- GA（遅延） -->
+.cafe-breadcrumb a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.cafe-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 34px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.cafe-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,204,0,0.35);
+  border-radius: 999px;
+  background: rgba(255,204,0,0.07);
+  color: #ffcc00;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.cafe-hero h1 {
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  margin: 0 0 20px;
+}
+
+.cafe-lead {
+  color: #ddd;
+  font-size: 20px;
+  line-height: 1.75;
+  margin: 0 0 14px;
+}
+
+.cafe-sub {
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.cafe-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.cafe-btn-main,
+.cafe-btn-sub,
+.cafe-btn-dark {
+  display: inline-block;
+  border-radius: 12px;
+  padding: 15px 22px;
+  font-weight: 800;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.cafe-btn-main {
+  background: #ffcc00;
+  color: #000;
+}
+
+.cafe-btn-sub {
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+  background: rgba(255,204,0,0.04);
+}
+
+.cafe-btn-dark {
+  background: #111;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.16);
+}
+
+.cafe-hero-card,
+.cafe-card,
+.cafe-card-link,
+.cafe-track-card,
+.cafe-use-card,
+.cafe-feature-card,
+.cafe-faq-box,
+.cafe-warning-box,
+.cafe-note-box {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.cafe-hero-card {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.16), transparent 36%),
+    linear-gradient(180deg, #151515, #0b0b0b);
+  border: 1px solid rgba(255,204,0,0.22);
+  border-radius: 22px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.3);
+}
+
+.cafe-hero-card h2 {
+  margin: 0 0 12px;
+  font-size: 26px;
+}
+
+.cafe-hero-card p {
+  color: #ccc;
+  line-height: 1.8;
+  margin: 0 0 18px;
+}
+
+.cafe-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 2;
+  color: #ddd;
+}
+
+.cafe-list li {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 8px 0;
+}
+
+.cafe-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 26px 0 64px;
+}
+
+.cafe-stat {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.cafe-stat strong {
+  display: block;
+  color: #ffcc00;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.cafe-stat span {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.cafe-section {
+  margin-bottom: 78px;
+}
+
+.cafe-section h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+}
+
+.cafe-section-lead {
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.85;
+  max-width: 900px;
+  margin: 0;
+}
+
+.cafe-grid-2,
+.cafe-grid-3,
+.cafe-grid-4 {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.cafe-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cafe-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cafe-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cafe-kicker {
+  color: #ffcc00;
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+.cafe-card h3,
+.cafe-track-card h3,
+.cafe-use-card h3,
+.cafe-feature-card h3,
+.cafe-warning-box h3,
+.cafe-note-box h3 {
+  margin: 0 0 10px;
+}
+
+.cafe-card p,
+.cafe-track-card p,
+.cafe-use-card p,
+.cafe-feature-card p,
+.cafe-warning-box p,
+.cafe-note-box p,
+.cafe-faq-box p,
+.cafe-card-link span {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.cafe-card-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.cafe-card-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,204,0,0.42);
+}
+
+.cafe-card-link strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+
+.cafe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+.cafe-tag {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  padding: 6px 9px;
+  color: #ddd;
+  background: rgba(255,255,255,0.04);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cafe-answer-box {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.13), transparent 34%),
+    linear-gradient(180deg, rgba(255,204,0,0.08), rgba(255,204,0,0.025));
+  border: 1px solid rgba(255,204,0,0.28);
+  border-left: 4px solid #ffcc00;
+  border-radius: 20px;
+  padding: 26px;
+}
+
+.cafe-answer-box p {
+  color: #ddd;
+  line-height: 1.85;
+}
+
+.cafe-warning-box {
+  border-left: 4px solid #ffcc00;
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.1), transparent 36%),
+    #101010;
+}
+
+.cafe-table-wrap {
+  overflow-x: auto;
+  margin-top: 28px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+}
+
+.cafe-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+  background: #111;
+}
+
+.cafe-table th,
+.cafe-table td {
+  padding: 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #ccc;
+  line-height: 1.65;
+}
+
+.cafe-table th {
+  color: #ffcc00;
+  background: rgba(255,204,0,0.06);
+  font-weight: 800;
+}
+
+.cafe-table tr:last-child td {
+  border-bottom: none;
+}
+
+.cafe-feature-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 15px;
+}
+
+.cafe-feature-card a,
+.cafe-faq-box a,
+.cafe-note-box a,
+.cafe-card a {
+  color: #ffcc00;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.cafe-track-meta {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.cafe-faq-box h3 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+.cafe-faq-box h3:first-child {
+  margin-top: 0;
+}
+
+.cafe-platform-box {
+  text-align: center;
+  background: #101010;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 22px;
+  padding: 34px 22px;
+}
+
+.cafe-platform-box p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.cafe-platform-buttons,
+.cafe-social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.cafe-platform-buttons a {
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 10px;
+  color: #fff;
+  background: #151515;
+  border: 1px solid rgba(255,255,255,0.12);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.cafe-social-icons a {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.cafe-social-icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.cafe-final {
+  text-align: center;
+  padding: 42px 24px;
+  border: 1px solid rgba(255,204,0,0.22);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top, rgba(255,204,0,0.15), transparent 34%),
+    #101010;
+}
+
+.cafe-final p {
+  color: #ccc;
+  line-height: 1.85;
+  max-width: 820px;
+  margin: 12px auto 0;
+}
+
+.cafe-disclaimer {
+  background: #0d0d0d;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 16px;
+  padding: 20px;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.cafe-mobile-sticky {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .cafe-hero,
+  .cafe-grid-2,
+  .cafe-grid-3,
+  .cafe-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .cafe-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .cafe-page {
+    padding: 22px 16px 104px;
+  }
+
+  .cafe-breadcrumb {
+    padding: 0 16px;
+  }
+
+  .cafe-hero {
+    gap: 22px;
+  }
+
+  .cafe-lead {
+    font-size: 18px;
+  }
+
+  .cafe-btn-main,
+  .cafe-btn-sub,
+  .cafe-btn-dark {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cafe-hero-card,
+  .cafe-card,
+  .cafe-card-link,
+  .cafe-track-card,
+  .cafe-use-card,
+  .cafe-feature-card,
+  .cafe-faq-box,
+  .cafe-warning-box,
+  .cafe-note-box,
+  .cafe-answer-box,
+  .cafe-platform-box,
+  .cafe-final,
+  .cafe-disclaimer {
+    padding: 20px;
+  }
+
+  .cafe-mobile-sticky {
+    position: fixed;
+    z-index: 60;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 9px 12px;
+    background: rgba(5,5,5,0.92);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+  }
+
+  .cafe-mobile-sticky a {
+    display: block;
+    text-align: center;
+    padding: 11px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .cafe-mobile-sticky .listen {
+    background: #ffcc00;
+    color: #000;
+  }
+
+  .cafe-mobile-sticky .license {
+    background: #151515;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.16);
+  }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Cafe Lo-Fi Music by Nanashino-chan",
+  "url": "https://nanashino-chan.github.io/site/cafe.html",
+  "description": "A mood page for Nanashino-chan cafe-style lo-fi, cozy coffee shop beats, jazzhop, chillhop, and background music for videos.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Nanashino-chan",
+    "url": "https://nanashino-chan.github.io/site/"
+  },
+  "about": [
+    "Cafe lo-fi music",
+    "Coffee shop beats",
+    "Cozy background music",
+    "Jazzhop",
+    "Chillhop",
+    "Licensed music for videos"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Nanashino-chan",
+  "url": "https://nanashino-chan.github.io/site/",
+  "genre": [
+    "Cafe Lo-Fi",
+    "Lo-Fi Hip Hop",
+    "Jazzhop",
+    "Chillhop",
+    "Tokyo Lo-Fi"
+  ],
+  "sameAs": [
+    "https://www.youtube.com/@Nanashino-chan",
+    "https://music.apple.com/us/artist/nanashino-chan/1795947895",
+    "https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A",
+    "https://open.spotify.com/album/6mp4X1AUNRPrAlxv01w7Jl",
+    "https://www.instagram.com/nanashino_chan",
+    "https://x.com/nanashinoch",
+    "https://www.tiktok.com/@nanashino_chan"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicPlaylist",
+  "name": "Cafe Lo-Fi Music & Cozy Coffee Shop Beats by Nanashino-chan",
+  "description": "Selected cafe-style lo-fi, jazzhop, chillhop, and cozy background tracks by Nanashino-chan for listening, videos, and licensed creative use.",
+  "url": "https://nanashino-chan.github.io/site/cafe.html",
+  "creator": {
+    "@type": "MusicGroup",
+    "name": "Nanashino-chan"
+  },
+  "track": [
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Groove",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "url": "https://www.youtube.com/watch?v=PnyutlzXem0"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Transitions",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "url": "https://www.youtube.com/watch?v=MBsx4sUtNxs"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Stillness Vibes",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "url": "https://www.youtube.com/watch?v=GRGkJoQGMjs"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is cafe lo-fi music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cafe lo-fi music is cozy background music inspired by coffee shop atmosphere, warm beats, soft instrumental textures, jazzhop, chillhop, and relaxed everyday listening."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is cafe lo-fi the same as jazzhop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cafe lo-fi and jazzhop often overlap. Jazzhop is a genre direction, while cafe lo-fi describes a listening mood or scene, such as coffee shop atmosphere, reading, work, or lifestyle videos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Nanashino-chan cafe lo-fi in videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you choose the correct license for the intended use. Creator videos, brand content, client work, sponsored posts, and paid ads may require different license scopes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I play Nanashino-chan cafe lo-fi inside a physical cafe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Do not assume that a video or creator license covers physical store playback, public performance, venue use, or in-store background music. Contact before using the music in a cafe, restaurant, shop, or public venue."
+      }
+    }
+  ]
+}
+</script>
 
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-let gaLoaded=false;
+
+let gaLoaded = false;
+
 function loadGA(){
- if(gaLoaded) return;
- gaLoaded=true;
- const script=document.createElement('script');
- script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
- script.async=true;
- document.head.appendChild(script);
- gtag('js', new Date());
- gtag('config','G-CLHM36E1P0');
+  if(gaLoaded) return;
+  gaLoaded = true;
+
+  const script = document.createElement('script');
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
+  script.async = true;
+  document.head.appendChild(script);
+
+  gtag('js', new Date());
+  gtag('config','G-CLHM36E1P0');
 }
-window.addEventListener('scroll',loadGA,{once:true});
-window.addEventListener('click',loadGA,{once:true});
-window.addEventListener('mousemove',loadGA,{once:true});
+
+window.addEventListener('scroll', loadGA, { once:true });
+window.addEventListener('click', loadGA, { once:true });
+window.addEventListener('mousemove', loadGA, { once:true });
 </script>
-
-<!-- JS -->
-
-<script src="./js/videos.js"></script>
-<script src="./js/app.js" defer></script>
 
 </head>
 
@@ -120,356 +776,866 @@ window.addEventListener('mousemove',loadGA,{once:true});
 <nav>
   <div class="nav">
 
-    <a href="index.html" class="nav-logo">Home</a>
 
-    <a href="study.html">Study</a>
-    <a href="sleep.html">Sleep</a>
-    <a href="relax.html">Relax</a>
+<a href="index.html" class="nav-logo">Home</a>
+<a href="music.html">Music</a>
+<a href="licensing.html">License</a>
+<a href="today.html" class="nav-cta">▶ Listen Now</a>
 
-    <a href="today.html" class="nav-cta">▶ Listen Now</a>
 
   </div>
 </nav>
 </header>
 
-<section class="today-cta">
-<a href="today.html">🔥 Today’s Best Track</a>
-</section>
+<div class="cafe-mobile-sticky" aria-label="Quick mobile actions">
+  <a href="today.html" class="listen">▶ Listen</a>
+  <a href="licensing.html" class="license">License</a>
+</div>
 
-<!-- HERO -->
+<div class="cafe-breadcrumb">
+  <a href="index.html">Home</a> →
+  <a href="music.html">Music</a> →
+  Cafe Lo-Fi
+</div>
 
-<section style="padding:40px 20px;text-align:center;max-width:800px;margin:0 auto;">
+<main class="cafe-page">
 
-<h1>Cafe Lo-Fi Music for Study, Work & Coffee Shop Ambience</h1>
+<article>
 
-<p><strong>Warm atmosphere. Smooth beats. Focus like a café.</strong></p>
+<section class="cafe-hero">
 
-<p>
-Stream relaxing cafe lo-fi music inspired by coffee shops, soft lighting, and calm environments.<br>
-カフェのような落ち着いた空間で、作業・勉強に集中できるLo-Fi音楽。
+  <div>
+
+
+<p class="cafe-eyebrow">
+  Cafe lo-fi｜coffee shop beats｜cozy jazzhop｜lifestyle videos｜licensed music
 </p>
 
-<p>
-Perfect for <strong>studying, working, reading, and creative sessions</strong>.
-Enjoy smooth jazz-inspired beats and cozy background music designed to improve focus without distractions.
+<h1>Cafe Lo-Fi Music for Cozy Work, Reading & Lifestyle Videos</h1>
+
+<p class="cafe-lead">
+  Listen to cozy cafe lo-fi music by Nanashino-chan — warm coffee shop beats for work, reading, study, lifestyle videos, café-style Reels, brand visuals, and licensed creative use.
 </p>
 
-<!-- GENERATOR -->
-
-<section class="generator-container" style="max-width:900px;margin:0 auto;padding:10px 20px 30px;text-align:center;">
-
-<h2>🎧 Start Listening – Cafe Lo-Fi Music Player</h2>
-
-<p>
-Click play and enter a relaxing coffee shop atmosphere instantly.<br>
-再生するだけで、カフェのような心地よい空間へ。
+<p class="cafe-sub">
+  This page is a mood hub for café-style lo-fi, coffee shop ambience, cozy jazzhop, and warm background music.
+  It is designed for personal listening, content creators, lifestyle videos, product visuals, and brands that need soft instrumental music.
+  <br>
+  Nanashino-chanのカフェ風Lo-Fiを、聴く・探す・動画利用するためのムードページです。
 </p>
 
-<p style="font-size:12px;opacity:0.7;margin-bottom:16px;">
-Ideal for study sessions, remote work, and relaxing breaks.<br>
-勉強・作業・休憩時間に最適なカフェLo-Fi。<br>
-Listen on YouTube (ads may appear depending on your region and device)
-</p>
+<div class="cafe-cta-row">
+  <a href="today.html" class="cafe-btn-main">▶ Start Listening</a>
+  <a href="#recommended-tracks" class="cafe-btn-sub">Recommended Tracks</a>
+  <a href="licensing.html" class="cafe-btn-dark">License Music</a>
+</div>
 
-<div style="max-width:800px;margin:0 auto;">
-
-  <!-- プレイヤー -->
-  <div id="player-cafe" style="width:100%;aspect-ratio:16/9;background:#000;margin-bottom:12px;"></div>
-
-  <!-- コントロール -->
-  <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:10px;">
-
-    <!-- メイン：再生 -->
-    <button onclick="startGenerator('cafe')" style="
-      padding:16px 24px;
-      background:#c79081;
-      color:#fff;
-      border:none;
-      border-radius:8px;
-      font-weight:700;
-      font-size:16px;
-      cursor:pointer;
-      box-shadow:0 4px 12px rgba(0,0,0,0.25);
-    ">
-      ▶ Play Cafe Lo-Fi Music
-    </button>
-
-    <!-- サブ：次の曲 -->
-    <button onclick="nextTrack('cafe')" style="
-      padding:16px 22px;
-      background:#1a1a1a;
-      color:#fff;
-      border:1px solid #333;
-      border-radius:8px;
-      font-size:15px;
-      cursor:pointer;
-    ">
-      ⏭ Next Track
-    </button>
 
   </div>
 
-</div>
-
-<!-- CV導線（Cafe専用） -->
-<div style="margin-top:18px;text-align:center;">
-
-  <p style="font-size:13px;opacity:0.85;margin-bottom:10px;">
-    ✔ Perfect for cafe-style videos, vlogs & background music<br>
-    ✔ Works great for YouTube, TikTok & Instagram<br>
-    ✔ Commercial use available with license
-  </p>
-
-  <a href="licensing.html" style="
-    display:inline-block;
-    padding:14px 22px;
-    background:#ffffff;
-    color:#000;
-    border-radius:8px;
-    font-weight:bold;
-    text-decoration:none;
-  ">
-    ▶ Use This Music in Your Videos
-  </a>
-
-</div>
-
-</section>
+  <aside class="cafe-hero-card">
 
 
-<!-- SEO TEXT（重要追加） -->
-
-<section style="max-width:800px;margin:0 auto;padding:20px;line-height:1.8;">
-
-<h2>What Is Cafe Lo-Fi Music?</h2>
+<h2>Use this page when you want a coffee shop mood</h2>
 
 <p>
-Cafe lo-fi music is a style of chill background music that combines soft beats,
-jazzy elements, and ambient textures to recreate the atmosphere of a quiet coffee shop.
-Often referred to as <strong>coffee shop music</strong> or <strong>lofi cafe beats</strong>,
-this genre is widely used for studying and working.
+  Cafe lo-fi is not only a genre label. It is a listening and visual mood: warm, soft, cozy, and easy to place behind work, reading, lifestyle scenes, and social videos.
 </p>
 
-<h2>Best Cafe Music for Study & Work</h2>
-
-<p>
-Lo-fi cafe music helps improve concentration by providing a consistent rhythm
-without distracting vocals. It is ideal for studying, coding, reading, and remote work.
-</p>
-
-<p>
-Many people use cafe-style background music to simulate a productive environment,
-similar to working in a real coffee shop.
-</p>
-
-<h2>Create a Coffee Shop Atmosphere Anywhere</h2>
-
-<p>
-With the right music, you can recreate a calm and cozy café ambience anywhere —
-at home, in the office, or while traveling.
-</p>
-
-<p>
-Warm tones, soft drums, and subtle melodies create a relaxing environment
-that supports both focus and comfort.
-</p>
-
-<h2>Tokyo-Inspired Cafe Lo-Fi</h2>
-
-<p>
-This collection features lo-fi music inspired by Tokyo nights and urban café culture,
-blending modern city vibes with relaxing coffee shop ambience.
-</p>
-
-<p>
-東京の夜やカフェ文化をイメージしたLo-Fi音楽。
-作業用BGM・勉強用BGMとして、集中とリラックスを自然にサポートします。
-</p>
-
-</section>
-
-
-<!-- INTERNAL LINKS -->
-
-<section style="text-align:center;margin:30px auto;">
-
-<h2>Explore More Lo-Fi Music</h2>
-
-<div class="internal-links">
-
-<a href="study.html">Lo-Fi Study Music for Focus & Productivity</a>
-<a href="relax.html">Relaxing Lo-Fi Music for Stress Relief</a>
-<a href="sleep.html">Lo-Fi Sleep Music for Deep Rest</a>
-<a href="tokyo.html">Tokyo Night Lo-Fi & City Vibes</a>
-
-</div>
-
-</section>
-
-
-<!-- SUB CTA -->
-
-<section style="text-align:center;margin-top:20px;">
-
-<p style="font-size:14px;line-height:1.7;opacity:0.85;">
-Explore more moods and discover different lo-fi atmospheres.<br>
-他のLo-Fiスタイルや雰囲気もチェックできます。
-</p>
-
-<div style="margin-top:12px;">
-
-<a href="tokyo.html" style="
-display:inline-block;
-margin:6px;
-padding:10px 16px;
-border-radius:6px;
-background:#111;
-color:#fff;
-text-decoration:none;
-font-size:14px;
-">
-🌃 Tokyo Night Lo-Fi
-</a>
-
-
-<!-- About（サブCTA） -->
-<a href="about.html" style="
-  display:inline-block;
-  margin:6px;
-  padding:10px 16px;
-  border-radius:6px;
-  border:1px solid #ccc;
-  background:#fff;
-  color:#111;
-  text-decoration:none;
-  font-size:14px;
-">
-      ℹ️ About Nanashino-chan
-    </a>
-
-</div>
-
-</section>
-
-<!-- SEO TEXT -->
-
-<section class="container">
-
-<p>
-Café lo-fi music blends warm tones and soft beats to create a relaxing atmosphere.
-Perfect for productivity, reading, and calm moments.
-</p>
-
-<p>
-暖かい音とゆったりしたビートが心を落ち着かせます。
-作業や読書、リラックスに最適なLo-Fi音楽です。
-</p>
-
-</section>
-
-<!-- CTA -->
-<section class="today-cta">
-<a href="today.html">▶ Play Café Lo-Fi Now</a>
-</section>
-
-<!-- SEO CONTENT -->
-
-<section class="seo-content" style="max-width:800px;margin:0 auto;padding:20px;line-height:1.8;">
-
-<h2>What is Café Lo-Fi?</h2>
-<p>
-A cozy lo-fi style inspired by coffee shops, soft lighting, and relaxed environments.
-カフェの雰囲気を再現した落ち着いたLo-Fiスタイルです。
-</p>
-
-<h2>Perfect for Work & Relaxation</h2>
-<ul>
-<li>Working / 作業</li>
-<li>Studying / 勉強</li>
-<li>Reading / 読書</li>
-<li>Relaxing / リラックス</li>
+<ul class="cafe-list">
+  <li>✔ Cozy coffee shop atmosphere</li>
+  <li>✔ Warm chillhop and jazzy lo-fi textures</li>
+  <li>✔ Reading, desk setup, study, and work mood</li>
+  <li>✔ Café-style Reels, lifestyle videos, and product scenes</li>
+  <li>✔ Direct licensing options for commercial video use</li>
 </ul>
 
-<h2>Comfortable Listening Experience</h2>
-<p>
-Continuous playback helps you stay focused and relaxed.
-途切れずに再生され、集中やリラックスを維持できます。
-</p>
-
-<section class="internal-links">
-
-<a href="study.html">
-Lo-Fi Study Music for Focus
-</a>
-
-<a href="relax.html">
-Relaxing Lo-Fi Music
-</a>
-
-<a href="tokyo.html">
-Tokyo Night Lo-Fi
-</a>
-
-</section>
-
-<!-- PLATFORM -->
-
-</section>
-
-<section class="platform-links">
-
-<h2>Continue Listening on Streaming Platforms</h2>
-
-<p>Listen to lo-fi study music on your favorite platform:</p>
-
-<div class="platform-buttons">
-
-<a href="https://open.spotify.com/album/6mp4X1AUNRPrAlxv01w7Jl" target="_blank" class="btn spotify">
-🎧 Spotify
-</a>
-
-<a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" class="btn apple">
-🍎 Apple Music
-</a>
-
-<a href="https://www.youtube.com/@Nanashino-chan" target="_blank" class="btn youtube">
-▶ YouTube
-</a>
-
+<div class="cafe-cta-row">
+  <a href="music.html" class="cafe-btn-main">Music Catalog</a>
+  <a href="jazzhop.html" class="cafe-btn-sub">Jazzhop</a>
 </div>
 
+
+  </aside>
+
 </section>
+
+<section class="cafe-stats" aria-label="Nanashino-chan cafe lo-fi highlights">
+
+  <div class="cafe-stat">
+    <strong>2,000+</strong>
+    <span>Original Lo-Fi Tracks across cafe, jazzhop, chillhop, study, focus, sleep, relax, Tokyo night, ambient, and creative work moods.</span>
+  </div>
+
+  <div class="cafe-stat">
+    <strong>3,000+</strong>
+    <span>Shazams from listeners discovering Nanashino-chan music in real listening, social, and creator contexts.</span>
+  </div>
+
+  <div class="cafe-stat">
+    <strong>Direct</strong>
+    <span>Licensing options for creator videos, café-style Reels, brand visuals, client work, paid ads, and social campaigns.</span>
+  </div>
+
+</section>
+
+<section class="cafe-section">
+
+  <h2>What Is Cafe Lo-Fi Music?</h2>
+
+  <div class="cafe-answer-box">
+
+
+<p>
+  <strong>Cafe lo-fi music is cozy instrumental background music inspired by coffee shop atmosphere.</strong>
+  It often blends soft drums, warm keys, mellow bass, jazzy chords, vinyl-style texture, and gentle repetition.
+</p>
+
+<p>
+  Unlike a generic lo-fi playlist, cafe lo-fi is usually defined by mood and setting.
+  It feels warm, social, relaxed, and visually friendly, making it useful for coffee shop videos, reading scenes, home café content, desk setup videos, and calm lifestyle visuals.
+</p>
+
+<p>
+  日本語：Cafe Lo-Fiは、カフェの空気感、温かいビート、柔らかいジャズ系コード、落ち着いた空間をイメージしたLo-Fi音楽です。
+  実店舗BGMとしての意味ではなく、カフェ風の雰囲気・動画・作業BGM・読書BGMに向いたムードページとして設計しています。
+</p>
+
+
+  </div>
+
+</section>
+
+<section class="cafe-section">
+
+  <h2>Cafe Lo-Fi vs Jazzhop vs Study Music</h2>
+
+  <p class="cafe-section-lead">
+    Cafe lo-fi overlaps with jazzhop, chillhop, and study music, but the search intent is different.
+    This page focuses on the coffee shop mood and visual use case.
+  </p>
+
+  <div class="cafe-table-wrap">
+    <table class="cafe-table">
+      <thead>
+        <tr>
+          <th>Page / style</th>
+          <th>Main meaning</th>
+          <th>Best for</th>
+          <th>Where to go</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cafe Lo-Fi</td>
+          <td>Coffee shop atmosphere, cozy beats, warm background mood, lifestyle-friendly sound.</td>
+          <td>Café-style videos, reading, desk setups, lifestyle content, product visuals, cozy work.</td>
+          <td>Current page</td>
+        </tr>
+        <tr>
+          <td>Jazzhop</td>
+          <td>Jazzy lo-fi genre with warm chords, soft drums, mellow bass, and smooth musical movement.</td>
+          <td>Jazzy beats, smooth listening, café mood, stylish videos, lifestyle visuals.</td>
+          <td><a href="jazzhop.html" style="color:#ffcc00;font-weight:800;text-decoration:none;">Jazzhop</a></td>
+        </tr>
+        <tr>
+          <td>Study Music</td>
+          <td>Music organized around learning, reading, notes, study sessions, and Study With Me contexts.</td>
+          <td>Studying, reading, exam review, quiet desk work, learning sessions.</td>
+          <td><a href="study.html" style="color:#ffcc00;font-weight:800;text-decoration:none;">Study</a></td>
+        </tr>
+        <tr>
+          <td>Focus Music</td>
+          <td>Music organized around desk work, coding, writing, editing, and task-oriented sessions.</td>
+          <td>Coding, work sessions, planning, writing, editing, productivity videos.</td>
+          <td><a href="focus.html" style="color:#ffcc00;font-weight:800;text-decoration:none;">Focus</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+
+<section class="cafe-section">
+
+  <h2>Nanashino-chan Cafe Lo-Fi Sound</h2>
+
+  <p class="cafe-section-lead">
+    The Nanashino-chan cafe lo-fi sound sits between cozy chillhop, smooth jazzhop, and soft urban atmosphere.
+  </p>
+
+  <div class="cafe-grid-3">
+
+
+<div class="cafe-card">
+  <p class="cafe-kicker">Warmth</p>
+  <h3>Soft keys and warm chords</h3>
+  <p>
+    The sound is built around gentle harmonic movement, warm instrumental textures, and a cozy mood that fits coffee shop-style visuals.
+  </p>
+</div>
+
+<div class="cafe-card">
+  <p class="cafe-kicker">Rhythm</p>
+  <h3>Relaxed drums and mellow groove</h3>
+  <p>
+    The rhythm stays soft and steady, making the tracks suitable for reading, desk work, café mood, and lifestyle background music.
+  </p>
+</div>
+
+<div class="cafe-card">
+  <p class="cafe-kicker">Visual mood</p>
+  <h3>Coffee, books, interiors, and soft light</h3>
+  <p>
+    Cafe lo-fi works well with coffee cups, books, notebooks, cozy rooms, storefronts, interior visuals, and slow everyday scenes.
+  </p>
+</div>
+
+
+  </div>
+
+</section>
+
+<section id="recommended-tracks" class="cafe-section">
+
+  <h2>Recommended Cafe Lo-Fi Tracks</h2>
+
+  <p class="cafe-section-lead">
+    Start with these tracks if you want a cozy coffee shop mood.
+    They are entry points for the Nanashino-chan catalog, not a full track list.
+  </p>
+
+  <div class="cafe-grid-4">
+
+
+<div class="cafe-track-card">
+  <p class="cafe-kicker">Warm first listen</p>
+  <h3>Smooth Groove</h3>
+  <p>
+    Warm chillhop and jazzy lo-fi mood for relaxed work, café-style Reels, lifestyle videos, and soft product scenes.
+  </p>
+  <div class="cafe-tags">
+    <span class="cafe-tag">Cafe</span>
+    <span class="cafe-tag">Warm</span>
+    <span class="cafe-tag">Lifestyle</span>
+  </div>
+  <p class="cafe-track-meta">
+    Good for: coffee visuals, cozy work, soft product scenes, daily creator content.
+  </p>
+</div>
+
+<div class="cafe-track-card">
+  <p class="cafe-kicker">Cozy afternoon</p>
+  <h3>Lazy Afternoon Vibes</h3>
+  <p>
+    A laid-back café mood for slow lifestyle edits, reading, home café scenes, afternoon videos, and relaxed visual pacing.
+  </p>
+  <div class="cafe-tags">
+    <span class="cafe-tag">Cozy</span>
+    <span class="cafe-tag">Afternoon</span>
+    <span class="cafe-tag">Reading</span>
+  </div>
+  <p class="cafe-track-meta">
+    Good for: reading, coffee breaks, home café visuals, warm social posts.
+  </p>
+</div>
+
+<div class="cafe-track-card">
+  <p class="cafe-kicker">Books / stationery</p>
+  <h3>Autumn Pages</h3>
+  <p>
+    Gentle lo-fi for books, stationery, study visuals, handwritten notes, café tables, and seasonal cozy content.
+  </p>
+  <div class="cafe-tags">
+    <span class="cafe-tag">Books</span>
+    <span class="cafe-tag">Study</span>
+    <span class="cafe-tag">Seasonal</span>
+  </div>
+  <p class="cafe-track-meta">
+    Good for: studygram, book Reels, notebook visuals, café table scenes.
+  </p>
+</div>
+
+<div class="cafe-track-card">
+  <p class="cafe-kicker">Night desk</p>
+  <h3>Soft Lights, Quiet Thoughts</h3>
+  <p>
+    Soft café-night mood for quiet rooms, night desks, journaling, slow transitions, and calm creator videos.
+  </p>
+  <div class="cafe-tags">
+    <span class="cafe-tag">Night</span>
+    <span class="cafe-tag">Soft</span>
+    <span class="cafe-tag">Journaling</span>
+  </div>
+  <p class="cafe-track-meta">
+    Good for: evening work, journaling, quiet creator content, slow visual scenes.
+  </p>
+</div>
+
+<div class="cafe-track-card">
+  <p class="cafe-kicker">Clean workflow</p>
+  <h3>Smooth Transitions</h3>
+  <p>
+    Clean background music for workflow visuals, café work sessions, tutorials, product demos, and creator edits.
+  </p>
+  <div class="cafe-tags">
+    <span class="cafe-tag">Work</span>
+    <span class="cafe-tag">Tutorial</span>
+    <span class="cafe-tag">Product</span>
+  </div>
+  <p class="cafe-track-meta">
+    Good for: product demos, work-with-me videos, desk setup, social explainers.
+  </p>
+</div>
+
+<div class="cafe-track-card">
+  <p class="cafe-kicker">Elegant café visual</p>
+  <h3>Diamond Dreams</h3>
+  <p>
+    A polished, elegant track for fashion café mood, beauty shots, refined product visuals, and premium lifestyle content.
+  </p>
+  <div class="cafe-tags">
+    <span class="cafe-tag">Fashion</span>
+    <span class="cafe-tag">Elegant</span>
+    <span class="cafe-tag">Product</span>
+  </div>
+  <p class="cafe-track-meta">
+    Good for: fashion Reels, beauty content, premium lifestyle, elegant product scenes.
+  </p>
+</div>
+
+<div class="cafe-track-card">
+  <p class="cafe-kicker">Quiet atmosphere</p>
+  <h3>Stillness Vibes</h3>
+  <p>
+    A softer background mood for quiet cafés, reflective visuals, calm interiors, books, and low-light lifestyle scenes.
+  </p>
+  <div class="cafe-tags">
+    <span class="cafe-tag">Quiet</span>
+    <span class="cafe-tag">Interior</span>
+    <span class="cafe-tag">Calm</span>
+  </div>
+  <p class="cafe-track-meta">
+    Good for: interior visuals, quiet reading, soft brand moments, reflective content.
+  </p>
+</div>
+
+<div class="cafe-track-card">
+  <p class="cafe-kicker">City café mood</p>
+  <h3>Vaporwave Streets</h3>
+  <p>
+    A Tokyo-inspired city-night mood for neon cafés, night walks, urban lifestyle videos, and stylish short-form content.
+  </p>
+  <div class="cafe-tags">
+    <span class="cafe-tag">Tokyo</span>
+    <span class="cafe-tag">Urban</span>
+    <span class="cafe-tag">Night</span>
+  </div>
+  <p class="cafe-track-meta">
+    Good for: Tokyo cafés, night street edits, neon visuals, urban lifestyle content.
+  </p>
+</div>
+
+
+  </div>
+
+  <div class="cafe-cta-row">
+    <a href="today.html" class="cafe-btn-main">▶ Start Listening</a>
+    <a href="music.html" class="cafe-btn-sub">Browse Music Catalog</a>
+    <a href="pages/recommended-tracks-for-commercial-video-use.html" class="cafe-btn-dark">Commercial Video Tracks</a>
+  </div>
+
+</section>
+
+<section class="cafe-section">
+
+  <h2>Best Uses for Cafe Lo-Fi Music</h2>
+
+  <p class="cafe-section-lead">
+    Cafe lo-fi works best when you want a warm, cozy, everyday atmosphere without overpowering the main activity or visual.
+  </p>
+
+  <div class="cafe-grid-4">
+
+
+<div class="cafe-use-card">
+  <p class="cafe-kicker">Reading</p>
+  <h3>Reading and book content</h3>
+  <p>
+    Use café-style lo-fi for books, reading routines, stationery, journals, library mood, and slow visual pacing.
+  </p>
+</div>
+
+<div class="cafe-use-card">
+  <p class="cafe-kicker">Work</p>
+  <h3>Cozy work sessions</h3>
+  <p>
+    Use warm instrumental music for desk setup videos, work-with-me content, planning, writing, and editing sessions.
+  </p>
+</div>
+
+<div class="cafe-use-card">
+  <p class="cafe-kicker">Lifestyle</p>
+  <h3>Lifestyle videos</h3>
+  <p>
+    Cafe lo-fi fits home routines, coffee scenes, daily vlogs, slow mornings, quiet nights, and cozy creator posts.
+  </p>
+</div>
+
+<div class="cafe-use-card">
+  <p class="cafe-kicker">Café visuals</p>
+  <h3>Coffee shop videos</h3>
+  <p>
+    Use the mood for café Reels, coffee preparation, bakery visuals, menu videos, storefront clips, and soft brand storytelling.
+  </p>
+</div>
+
+<div class="cafe-use-card">
+  <p class="cafe-kicker">Interior</p>
+  <h3>Interior and design</h3>
+  <p>
+    Warm lo-fi supports room tours, furniture, interior products, architecture, real estate, and lifestyle space visuals.
+  </p>
+</div>
+
+<div class="cafe-use-card">
+  <p class="cafe-kicker">Product</p>
+  <h3>Product scenes</h3>
+  <p>
+    Use calm background music for product demos, packaging shots, handmade goods, stationery, coffee products, and soft promotional clips.
+  </p>
+</div>
+
+<div class="cafe-use-card">
+  <p class="cafe-kicker">Social</p>
+  <h3>Instagram and TikTok</h3>
+  <p>
+    Cafe lo-fi works well for short-form visuals where the music should support the mood without stealing attention.
+  </p>
+</div>
+
+<div class="cafe-use-card">
+  <p class="cafe-kicker">Brand</p>
+  <h3>Brand and client videos</h3>
+  <p>
+    For brand visuals, sponsored posts, client work, or paid campaigns, confirm the right license before publishing.
+  </p>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="cafe-section cafe-warning-box">
+
+  <h2>Important: Cafe-Style Videos and Physical Cafe Playback Are Not the Same</h2>
+
+  <p>
+    This page is designed mainly for café-style videos, lifestyle content, social posts, brand visuals, creator content, and commercial video use.
+    Physical store playback is a different type of use.
+  </p>
+
+  <p>
+    Do not assume that a video license, creator license, or sync license automatically covers music played inside a café, restaurant, shop, hotel, salon, event space, or other public venue.
+    For in-store background music, public performance, venue playback, or physical location use, contact before using the music.
+  </p>
+
+  <p>
+    日本語：このページの「Cafe Lo-Fi」は、カフェ風動画・ライフスタイル動画・SNS投稿・ブランド動画向けの意味です。
+    実店舗のBGM、公衆演奏、店舗内再生、施設利用については、通常の動画ライセンスとは別の確認が必要になる場合があります。
+  </p>
+
+  <div class="cafe-cta-row">
+    <a href="contact.html" class="cafe-btn-main">Ask About Store / Venue Use</a>
+    <a href="licensing.html#pricing" class="cafe-btn-sub">View Video License Options</a>
+  </div>
+
+</section>
+
+<section class="cafe-section cafe-warning-box">
+
+  <h2>Cafe Lo-Fi for Videos, Brands, and Commercial Projects</h2>
+
+  <p>
+    If you use Nanashino-chan cafe lo-fi in YouTube videos, Instagram Reels, TikTok videos, product demos, client projects, paid ads, or brand content,
+    choose a license that matches the actual use.
+  </p>
+
+  <p>
+    A track being available on a platform is not the same as having full permission for every commercial use.
+    Platform-library or credit-based usage may be suitable for non-commercial or small-scale projects,
+    but it should not be treated as a substitute for a commercial license, sync license, paid advertising license, client-work license, or brand campaign license.
+  </p>
+
+  <p>
+    日本語：SNS上で選べる音源として表示されていることと、商用動画・収益化動画・広告・クライアント案件で使えることは同じではありません。
+    用途に合ったライセンス確認が必要です。
+  </p>
+
+  <div class="cafe-cta-row">
+    <a href="licensing.html#pricing" class="cafe-btn-main">View License Options</a>
+    <a href="pages/commercial-license-vs-sync-license.html" class="cafe-btn-sub">Commercial vs Sync License</a>
+    <a href="pages/proof-of-music-license-for-business.html" class="cafe-btn-dark">Proof of Music License</a>
+  </div>
+
+</section>
+
+<section class="cafe-section">
+
+  <h2>Real-World Visual Examples</h2>
+
+  <p class="cafe-section-lead">
+    Nanashino-chan tracks have appeared in public social video contexts across fashion, interior, real estate, lifestyle, and visual storytelling.
+  </p>
+
+  <div class="cafe-grid-3">
+
+
+<div class="cafe-feature-card">
+  <img src="bazaar-cartier.webp" alt="Harper's BAZAAR HK and Cartier-related visual example using Nanashino-chan lo-fi music" loading="lazy" width="800" height="450">
+  <p class="cafe-kicker">Fashion / event visual</p>
+  <h3>Harper’s BAZAAR HK × Cartier-related Visual Example</h3>
+  <p>
+    A public social video context showing how soft lo-fi atmosphere can support luxury, fashion, and event-related visuals.
+  </p>
+  <a href="https://www.instagram.com/reel/DKLejxuPtd-/" target="_blank" rel="noopener noreferrer">View example →</a>
+</div>
+
+<div class="cafe-feature-card">
+  <img src="arte-moderna.webp" alt="Arte Moderna Retrô interior and lifestyle visual example using Nanashino-chan lo-fi music" loading="lazy" width="800" height="450">
+  <p class="cafe-kicker">Interior / lifestyle visual</p>
+  <h3>Arte Moderna Retrô</h3>
+  <p>
+    A public interior and lifestyle visual example where lo-fi music supports warm, stylish, and design-oriented content.
+  </p>
+  <a href="https://www.instagram.com/reel/DPlsQvcDqpa/" target="_blank" rel="noopener noreferrer">View example →</a>
+</div>
+
+<div class="cafe-feature-card">
+  <img src="chuo-nittochi.webp" alt="Chuo-Nittochi corporate and real estate visual example using Nanashino-chan lo-fi music" loading="lazy" width="800" height="450">
+  <p class="cafe-kicker">Corporate / real estate visual</p>
+  <h3>Chuo-Nittochi Visual Example</h3>
+  <p>
+    A public corporate and real estate visual context where lo-fi music supports calm, modern, and city-oriented visuals.
+  </p>
+  <a href="https://www.instagram.com/reel/DLzP-HehrGO/" target="_blank" rel="noopener noreferrer">View example →</a>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="cafe-section">
+
+  <h2>Explore Related Lo-Fi Moods</h2>
+
+  <p class="cafe-section-lead">
+    Cafe lo-fi is the coffee shop mood page. Use these related pages when you want a different mood or use case.
+  </p>
+
+  <div class="cafe-grid-3">
+
+
+<a href="jazzhop.html" class="cafe-card-link">
+  <p class="cafe-kicker">Genre</p>
+  <strong>Jazzhop & Jazzy Lo-Fi Beats</strong>
+  <span>For smooth jazz-inspired lo-fi, warm keys, mellow drums, and stylish instrumental background music.</span>
+</a>
+
+<a href="study.html" class="cafe-card-link">
+  <p class="cafe-kicker">Study</p>
+  <strong>Lo-Fi Music for Studying</strong>
+  <span>For reading, notes, learning, exam review, quiet desks, and Study With Me contexts.</span>
+</a>
+
+<a href="focus.html" class="cafe-card-link">
+  <p class="cafe-kicker">Focus</p>
+  <strong>Lo-Fi Music for Focus</strong>
+  <span>For coding, writing, planning, editing, and task-oriented desk sessions.</span>
+</a>
+
+<a href="relax.html" class="cafe-card-link">
+  <p class="cafe-kicker">Relax</p>
+  <strong>Relaxing Lo-Fi Music</strong>
+  <span>For calm evenings, quiet rooms, journaling, and peaceful background listening.</span>
+</a>
+
+<a href="tokyo.html" class="cafe-card-link">
+  <p class="cafe-kicker">Tokyo</p>
+  <strong>Tokyo Night Lo-Fi</strong>
+  <span>For Japanese city atmosphere, night windows, rain, neon visuals, and urban short-form content.</span>
+</a>
+
+<a href="music.html" class="cafe-card-link">
+  <p class="cafe-kicker">Catalog</p>
+  <strong>Original Lo-Fi Music Catalog</strong>
+  <span>Browse Nanashino-chan music by mood, genre, use case, video purpose, and licensing path.</span>
+</a>
+
+
+  </div>
+
+</section>
+
+<section class="cafe-section">
+
+  <h2>Related Guides for Cafe-Style Video Use</h2>
+
+  <p class="cafe-section-lead">
+    Continue with these pages if you want to use cafe lo-fi in social videos, client work, brand content, or paid campaigns.
+  </p>
+
+  <div class="cafe-grid-3">
+
+
+<a href="pages/recommended-tracks-for-commercial-video-use.html" class="cafe-card-link">
+  <p class="cafe-kicker">Track selection</p>
+  <strong>Recommended Tracks for Commercial Video Use</strong>
+  <span>Preview selected Nanashino-chan tracks for brand videos, product demos, social content, and commercial projects.</span>
+</a>
+
+<a href="pages/lofi-music-for-instagram.html" class="cafe-card-link">
+  <p class="cafe-kicker">Instagram</p>
+  <strong>Lo-Fi Music for Instagram Reels</strong>
+  <span>Use music in Reels, sponsored posts, brand content, product videos, and paid social campaigns.</span>
+</a>
+
+<a href="pages/lofi-music-for-tiktok.html" class="cafe-card-link">
+  <p class="cafe-kicker">TikTok</p>
+  <strong>Lo-Fi Music for TikTok</strong>
+  <span>Choose music for TikTok videos, creator content, brand posts, and short-form campaigns.</span>
+</a>
+
+<a href="pages/music-license-for-brand-videos.html" class="cafe-card-link">
+  <p class="cafe-kicker">Brand video</p>
+  <strong>Music License for Brand Videos</strong>
+  <span>Guidance for using music in brand films, product videos, PR content, and business videos.</span>
+</a>
+
+<a href="pages/music-license-for-client-work.html" class="cafe-card-link">
+  <p class="cafe-kicker">Client work</p>
+  <strong>Music License for Client Work</strong>
+  <span>For agencies, freelancers, social managers, and video editors delivering content to clients.</span>
+</a>
+
+<a href="pages/music-license-for-paid-social-ads.html" class="cafe-card-link">
+  <p class="cafe-kicker">Paid ads</p>
+  <strong>Music License for Paid Social Ads</strong>
+  <span>Understand music licensing for paid ads, boosted posts, sponsored content, and campaign videos.</span>
+</a>
+
+
+  </div>
+
+</section>
+
+<section class="cafe-section cafe-platform-box">
+
+  <h2>Continue Listening on Streaming Platforms</h2>
+
+  <p>
+    Streaming platforms are useful for personal listening and discovery.
+    For published videos, business use, advertising, client projects, or store playback, use the licensing or contact pages instead of relying only on platform availability.
+  </p>
+
+  <div class="cafe-platform-buttons">
+    <a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" rel="noopener noreferrer">🍎 Apple Music</a>
+    <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer">▶ YouTube Music</a>
+    <a href="https://open.spotify.com/album/6mp4X1AUNRPrAlxv01w7Jl" target="_blank" rel="noopener noreferrer">🎧 Spotify</a>
+    <a href="https://www.youtube.com/@Nanashino-chan" target="_blank" rel="noopener noreferrer">YouTube Channel</a>
+  </div>
+
+</section>
+
+<section class="cafe-section">
+
+  <h2>FAQ</h2>
+
+  <div class="cafe-faq-box">
+
+
+<h3>What is cafe lo-fi music?</h3>
+<p>
+  Cafe lo-fi music is cozy instrumental background music inspired by coffee shop atmosphere, warm beats, soft keys, mellow bass, jazzhop, chillhop, and relaxed everyday listening.
+</p>
+
+<h3>Is cafe lo-fi the same as jazzhop?</h3>
+<p>
+  They often overlap, but they are not exactly the same. Jazzhop is a genre direction. Cafe lo-fi is more about the listening scene and mood: coffee shops, reading, work, cozy interiors, and lifestyle visuals.
+</p>
+
+<h3>What is Nanashino-chan cafe lo-fi good for?</h3>
+<p>
+  It is suitable for personal listening, reading, work sessions, café-style videos, home café visuals, lifestyle content, product scenes, social videos, and calm visual storytelling.
+</p>
+
+<h3>Can I use Nanashino-chan cafe lo-fi in YouTube videos?</h3>
+<p>
+  Yes, if you choose the correct license for the intended use.
+  Monetized videos, client work, sponsored videos, business content, and paid ads may require different license scopes.
+</p>
+
+<h3>Can I use cafe lo-fi in Instagram Reels or TikTok videos?</h3>
+<p>
+  Yes, but platform availability is not the same as full commercial permission.
+  For sponsored posts, brand content, paid ads, or client work, use the appropriate license before publishing.
+</p>
+
+<h3>Is Nanashino-chan cafe lo-fi copyright-free?</h3>
+<p>
+  No. Nanashino-chan music is original music with licensing options.
+  It should not be described as copyright-free or no-copyright music.
+</p>
+
+<h3>Can I play this music inside a physical café, restaurant, or shop?</h3>
+<p>
+  Do not assume that a video or creator license covers physical store playback, public performance, venue use, or in-store background music.
+  For café, restaurant, retail, hotel, salon, or public venue playback, contact first before use.
+</p>
+
+<h3>Which license should I choose for cafe-style brand videos?</h3>
+<p>
+  For organic brand videos or standard commercial creator use, start with the Commercial Creator License.
+  For paid ads or campaign distribution, start with the 1-Month Sync License or 3-Month Sync License.
+</p>
+
+<h3>Where should I go next?</h3>
+<p>
+  Use <a href="music.html">Music Catalog</a> for the full catalog,
+  <a href="jazzhop.html">Jazzhop</a> for the genre page,
+  <a href="today.html">Listen Now</a> for quick playback,
+  or <a href="licensing.html">License Music</a> for commercial video use.
+</p>
+
+
+  </div>
+
+</section>
+
+<section class="cafe-section cafe-platform-box">
+
+  <h2>Follow Nanashino-chan</h2>
+
+  <p>
+    Follow Nanashino-chan on social and streaming platforms for new music, videos, short-form content, and licensing updates.
+  </p>
+
+  <div class="cafe-social-icons">
+
+
+<a href="https://www.youtube.com/@Nanashino-chan" target="_blank" rel="noopener noreferrer" aria-label="YouTube channel">
+  <img src="youtube.png" alt="YouTube channel Nanashino-chan">
+</a>
+
+<a href="https://x.com/nanashinoch" target="_blank" rel="noopener noreferrer" aria-label="X profile">
+  <img src="twitter.png" alt="Twitter X profile">
+</a>
+
+<a href="https://www.instagram.com/nanashino_chan" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+  <img src="instagram.png" alt="Instagram profile">
+</a>
+
+<a href="https://www.tiktok.com/@nanashino_chan" target="_blank" rel="noopener noreferrer" aria-label="TikTok profile">
+  <img src="tiktok.png" alt="TikTok profile">
+</a>
+
+<a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" rel="noopener noreferrer" aria-label="Apple Music artist page">
+  <img src="apple-music.png" alt="Apple Music artist page">
+</a>
+
+<a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" aria-label="YouTube Music artist page">
+  <img src="youtube-music.png" alt="YouTube Music artist page">
+</a>
+
+
+  </div>
+
+</section>
+
+<section class="cafe-section cafe-final">
+
+  <h2>Listen, Browse, or License Cafe Lo-Fi Music</h2>
+
+  <p>
+    Use this page to explore Nanashino-chan’s cozy cafe lo-fi sound, then continue to the catalog, jazzhop page, social video guides, or licensing options depending on your goal.
+  </p>
+
+  <div class="cafe-cta-row" style="justify-content:center;">
+    <a href="today.html" class="cafe-btn-main">▶ Start Listening</a>
+    <a href="music.html" class="cafe-btn-sub">Browse Music Catalog</a>
+    <a href="licensing.html#pricing" class="cafe-btn-dark">License Music</a>
+  </div>
+
+</section>
+
+<section class="cafe-section cafe-disclaimer">
+
+  <h2>Disclaimer</h2>
+
+  <p>
+    This page provides general music catalog, listening, and licensing guidance.
+    It does not provide legal advice, platform approval, advertising approval, monetization guarantees, copyright-claim guarantees, takedown prevention guarantees, or in-store playback permission.
+  </p>
+
+  <p>
+    A Nanashino-chan license clarifies permission within the stated scope, but platforms may apply their own rules, detection systems, regional restrictions, ad policies, rights checks, and policy updates.
+    For physical store playback, public venue use, restaurant/café playback, retail playback, hotel/salon use, TV, cinema, games, apps, templates, or unusual distribution, contact before use.
+  </p>
+
+  <h2>免責事項</h2>
+
+  <p>
+    このページは、Cafe Lo-Fiのカタログ、試聴、用途選び、ライセンス確認に関する一般的な情報を提供するものです。
+    法的助言、プラットフォーム審査、広告審査、収益化、ミュート回避、削除回避、店舗BGM利用許可を保証するものではありません。
+  </p>
+
+</section>
+
+</article>
+
+</main>
 
 <footer class="site-footer">
 
-<div class="footer-container">
+  <div class="footer-container">
+
 
 <div class="footer-brand">
-<h2>Nanashino-chan</h2>
-<p>Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
-<p>© 2026 Nanashino-chan. All rights reserved.</p>
+  <h2>Nanashino-chan</h2>
+  <p>Original Cafe Lo-Fi, Jazzhop, Chillhop, and Coffee Shop Beats for Listening, Videos, and Licensed Creative Use</p>
+  <p>© 2026 Nanashino-chan. All rights reserved.</p>
 </div>
 
 <div class="footer-links">
-<a href="study.html">Lo-Fi music for studying and focus</a> |
-<a href="relax.html">Relaxing lo-fi music for sleep and stress relief</a> |
-<a href="tokyo.html">Tokyo night lo-fi and Japanese chill beats</a> |
-<a href="jazzhop.html">Smooth jazzhop and jazzy lo-fi beats</a>
+  <a href="music.html">Music Catalog</a> |
+  <a href="jazzhop.html">Jazzhop and Jazzy Lo-Fi</a> |
+  <a href="study.html">Lo-Fi music for studying</a> |
+  <a href="focus.html">Lo-Fi music for focus</a> |
+  <a href="tokyo.html">Tokyo night lo-fi</a> |
+  <a href="pages/recommended-tracks-for-commercial-video-use.html">Recommended Tracks</a>
 </div>
 
 <div class="footer-links-sub">
-<a href="index.html">Home</a> |
-<a href="today.html">Listen Now</a> |
-<a href="faq.html">FAQ</a> |
-<a href="policy.html">Policy</a> |
-<a href="contact.html">Contact</a>
+  <a href="index.html">Home</a> |
+  <a href="about.html">About</a> |
+  <a href="today.html">Listen Now</a> |
+  <a href="music.html">Music</a> |
+  <a href="licensing.html" style="font-weight:bold;">License Music</a> |
+  <a href="faq.html">FAQ</a> |
+  <a href="terms.html">Terms</a> |
+  <a href="commerce.html">Legal</a> |
+  <a href="policy.html">Policy</a> |
+  <a href="contact.html">Contact</a>
 </div>
 
 <p class="footer-note">
-🎧 Cozy vibes. Deep focus. Calm moments.
+  ☕ Cozy cafe lo-fi music for listening, lifestyle videos, brand visuals, and licensed creative use.
 </p>
 
-</div>
+
+  </div>
 
 </footer>
 
