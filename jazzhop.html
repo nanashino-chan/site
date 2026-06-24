@@ -1,35 +1,743 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jazzhop Lo-Fi 🎷 Smooth Jazz Beats & Chill Hip Hop</title>
+<title>Jazzhop Lo-Fi Music | Smooth Jazzy Beats by Nanashino-chan</title>
 
-<meta name="description" content="Smooth jazzhop and lo-fi hip hop beats. Relaxing jazzy music for work, study, and chill time. ジャズ系Lo-Fi音楽。">
+<meta name="description" content="Listen to smooth jazzhop and jazzy lo-fi beats by Nanashino-chan. Browse warm instrumental tracks for study, focus, café mood, creative work, videos, and licensed commercial use.">
+
 <meta name="robots" content="index, follow">
 
 <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  img-src 'self' data: https:;
-  script-src 'self' https://www.googletagmanager.com https://www.youtube.com;
-  style-src 'self' 'unsafe-inline';
-  connect-src 'self' https://www.google-analytics.com;
-  font-src 'self';
-  frame-src https://www.youtube.com https://www.youtube-nocookie.com;
-  base-uri 'self';
-  form-action 'self';
+default-src 'self';
+
+script-src 'self'
+'unsafe-inline'
+[https://www.googletagmanager.com](https://www.googletagmanager.com)
+[https://www.google-analytics.com](https://www.google-analytics.com);
+
+connect-src
+'self'
+[https://www.google-analytics.com](https://www.google-analytics.com)
+[https://www.googletagmanager.com](https://www.googletagmanager.com);
+
+img-src
+'self'
+[https://i.ytimg.com](https://i.ytimg.com)
+[https://img.youtube.com](https://img.youtube.com)
+data:;
+
+style-src
+'self'
+'unsafe-inline';
+
+font-src 'self';
+
+frame-src
+[https://www.youtube.com](https://www.youtube.com)
+[https://www.youtube-nocookie.com](https://www.youtube-nocookie.com);
+
+object-src 'none';
+base-uri 'self';
+form-action 'self';
 ">
 
+<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+
 <link rel="canonical" href="https://nanashino-chan.github.io/site/jazzhop.html">
+
 <link rel="icon" href="/site/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
 
-<link rel="stylesheet" href="style.css">
-<!-- GA（遅延） -->
+<meta property="og:title" content="Jazzhop Lo-Fi Music | Smooth Jazzy Beats by Nanashino-chan">
+<meta property="og:description" content="Smooth jazzhop and jazzy lo-fi beats for café mood, study, focus, creative work, videos, and licensed commercial use.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nanashino-chan.github.io/site/jazzhop.html">
+<meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jazzhop Lo-Fi Music by Nanashino-chan">
+<meta name="twitter:description" content="Browse smooth jazzhop and jazzy lo-fi beats for café mood, study, focus, creative work, and licensed video use.">
+<meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
+
+<link rel="stylesheet" href="/site/style.css">
+
+<style>
+.jazzhop-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 20px 96px;
+}
+
+.jazzhop-breadcrumb {
+  max-width: 1180px;
+  margin: 22px auto 18px;
+  padding: 0 20px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.jazzhop-breadcrumb a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.jazzhop-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 34px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.jazzhop-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,204,0,0.35);
+  border-radius: 999px;
+  background: rgba(255,204,0,0.07);
+  color: #ffcc00;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.jazzhop-hero h1 {
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  margin: 0 0 20px;
+}
+
+.jazzhop-lead {
+  color: #ddd;
+  font-size: 20px;
+  line-height: 1.75;
+  margin: 0 0 14px;
+}
+
+.jazzhop-sub {
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.jazzhop-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.jazzhop-btn-main,
+.jazzhop-btn-sub,
+.jazzhop-btn-dark {
+  display: inline-block;
+  border-radius: 12px;
+  padding: 15px 22px;
+  font-weight: 800;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.jazzhop-btn-main {
+  background: #ffcc00;
+  color: #000;
+}
+
+.jazzhop-btn-sub {
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+  background: rgba(255,204,0,0.04);
+}
+
+.jazzhop-btn-dark {
+  background: #111;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.16);
+}
+
+.jazzhop-hero-card,
+.jazzhop-card,
+.jazzhop-card-link,
+.jazzhop-track-card,
+.jazzhop-use-card,
+.jazzhop-feature-card,
+.jazzhop-faq-box,
+.jazzhop-warning-box,
+.jazzhop-note-box {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.jazzhop-hero-card {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.16), transparent 36%),
+    linear-gradient(180deg, #151515, #0b0b0b);
+  border: 1px solid rgba(255,204,0,0.22);
+  border-radius: 22px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.3);
+}
+
+.jazzhop-hero-card h2 {
+  margin: 0 0 12px;
+  font-size: 26px;
+}
+
+.jazzhop-hero-card p {
+  color: #ccc;
+  line-height: 1.8;
+  margin: 0 0 18px;
+}
+
+.jazzhop-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 2;
+  color: #ddd;
+}
+
+.jazzhop-list li {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 8px 0;
+}
+
+.jazzhop-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 26px 0 64px;
+}
+
+.jazzhop-stat {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.jazzhop-stat strong {
+  display: block;
+  color: #ffcc00;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.jazzhop-stat span {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.jazzhop-section {
+  margin-bottom: 78px;
+}
+
+.jazzhop-section h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+}
+
+.jazzhop-section-lead {
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.85;
+  max-width: 900px;
+  margin: 0;
+}
+
+.jazzhop-grid-2,
+.jazzhop-grid-3,
+.jazzhop-grid-4 {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.jazzhop-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.jazzhop-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.jazzhop-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.jazzhop-kicker {
+  color: #ffcc00;
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+.jazzhop-card h3,
+.jazzhop-track-card h3,
+.jazzhop-use-card h3,
+.jazzhop-feature-card h3,
+.jazzhop-warning-box h3,
+.jazzhop-note-box h3 {
+  margin: 0 0 10px;
+}
+
+.jazzhop-card p,
+.jazzhop-track-card p,
+.jazzhop-use-card p,
+.jazzhop-feature-card p,
+.jazzhop-warning-box p,
+.jazzhop-note-box p,
+.jazzhop-faq-box p,
+.jazzhop-card-link span {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.jazzhop-card-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.jazzhop-card-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,204,0,0.42);
+}
+
+.jazzhop-card-link strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+
+.jazzhop-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+.jazzhop-tag {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  padding: 6px 9px;
+  color: #ddd;
+  background: rgba(255,255,255,0.04);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.jazzhop-answer-box {
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.13), transparent 34%),
+    linear-gradient(180deg, rgba(255,204,0,0.08), rgba(255,204,0,0.025));
+  border: 1px solid rgba(255,204,0,0.28);
+  border-left: 4px solid #ffcc00;
+  border-radius: 20px;
+  padding: 26px;
+}
+
+.jazzhop-answer-box p {
+  color: #ddd;
+  line-height: 1.85;
+}
+
+.jazzhop-warning-box {
+  border-left: 4px solid #ffcc00;
+  background:
+    radial-gradient(circle at top left, rgba(255,204,0,0.1), transparent 36%),
+    #101010;
+}
+
+.jazzhop-table-wrap {
+  overflow-x: auto;
+  margin-top: 28px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+}
+
+.jazzhop-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+  background: #111;
+}
+
+.jazzhop-table th,
+.jazzhop-table td {
+  padding: 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #ccc;
+  line-height: 1.65;
+}
+
+.jazzhop-table th {
+  color: #ffcc00;
+  background: rgba(255,204,0,0.06);
+  font-weight: 800;
+}
+
+.jazzhop-table tr:last-child td {
+  border-bottom: none;
+}
+
+.jazzhop-feature-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 15px;
+}
+
+.jazzhop-feature-card a,
+.jazzhop-faq-box a,
+.jazzhop-note-box a,
+.jazzhop-card a {
+  color: #ffcc00;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.jazzhop-track-meta {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.jazzhop-faq-box h3 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+.jazzhop-faq-box h3:first-child {
+  margin-top: 0;
+}
+
+.jazzhop-platform-box {
+  text-align: center;
+  background: #101010;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 22px;
+  padding: 34px 22px;
+}
+
+.jazzhop-platform-box p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.jazzhop-platform-buttons,
+.jazzhop-social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.jazzhop-platform-buttons a {
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 10px;
+  color: #fff;
+  background: #151515;
+  border: 1px solid rgba(255,255,255,0.12);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.jazzhop-social-icons a {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.jazzhop-social-icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.jazzhop-final {
+  text-align: center;
+  padding: 42px 24px;
+  border: 1px solid rgba(255,204,0,0.22);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top, rgba(255,204,0,0.15), transparent 34%),
+    #101010;
+}
+
+.jazzhop-final p {
+  color: #ccc;
+  line-height: 1.85;
+  max-width: 820px;
+  margin: 12px auto 0;
+}
+
+.jazzhop-disclaimer {
+  background: #0d0d0d;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 16px;
+  padding: 20px;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.jazzhop-mobile-sticky {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .jazzhop-hero,
+  .jazzhop-grid-2,
+  .jazzhop-grid-3,
+  .jazzhop-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .jazzhop-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .jazzhop-page {
+    padding: 22px 16px 104px;
+  }
+
+  .jazzhop-breadcrumb {
+    padding: 0 16px;
+  }
+
+  .jazzhop-hero {
+    gap: 22px;
+  }
+
+  .jazzhop-lead {
+    font-size: 18px;
+  }
+
+  .jazzhop-btn-main,
+  .jazzhop-btn-sub,
+  .jazzhop-btn-dark {
+    width: 100%;
+    text-align: center;
+  }
+
+  .jazzhop-hero-card,
+  .jazzhop-card,
+  .jazzhop-card-link,
+  .jazzhop-track-card,
+  .jazzhop-use-card,
+  .jazzhop-feature-card,
+  .jazzhop-faq-box,
+  .jazzhop-warning-box,
+  .jazzhop-note-box,
+  .jazzhop-answer-box,
+  .jazzhop-platform-box,
+  .jazzhop-final,
+  .jazzhop-disclaimer {
+    padding: 20px;
+  }
+
+  .jazzhop-mobile-sticky {
+    position: fixed;
+    z-index: 60;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 9px 12px;
+    background: rgba(5,5,5,0.92);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+  }
+
+  .jazzhop-mobile-sticky a {
+    display: block;
+    text-align: center;
+    padding: 11px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .jazzhop-mobile-sticky .listen {
+    background: #ffcc00;
+    color: #000;
+  }
+
+  .jazzhop-mobile-sticky .license {
+    background: #151515;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.16);
+  }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Jazzhop Lo-Fi Music by Nanashino-chan",
+  "url": "https://nanashino-chan.github.io/site/jazzhop.html",
+  "description": "A genre page for Nanashino-chan smooth jazzhop, jazzy lo-fi, chillhop, and lo-fi hip hop beats.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Nanashino-chan",
+    "url": "https://nanashino-chan.github.io/site/"
+  },
+  "about": [
+    "Jazzhop",
+    "Jazzy lo-fi",
+    "Lo-fi hip hop",
+    "Chillhop",
+    "Instrumental background music",
+    "Licensed music for videos"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Nanashino-chan",
+  "url": "https://nanashino-chan.github.io/site/",
+  "genre": [
+    "Jazzhop",
+    "Lo-Fi Hip Hop",
+    "Chillhop",
+    "Jazzy Lo-Fi",
+    "Tokyo Lo-Fi"
+  ],
+  "sameAs": [
+    "https://www.youtube.com/@Nanashino-chan",
+    "https://music.apple.com/us/artist/nanashino-chan/1795947895",
+    "https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A",
+    "https://open.spotify.com/album/6mp4X1AUNRPrAlxv01w7Jl",
+    "https://www.instagram.com/nanashino_chan",
+    "https://x.com/nanashinoch",
+    "https://www.tiktok.com/@nanashino_chan"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicPlaylist",
+  "name": "Smooth Jazzhop & Jazzy Lo-Fi Beats by Nanashino-chan",
+  "description": "Selected jazzhop, jazzy lo-fi, chillhop, and lo-fi hip hop tracks by Nanashino-chan for listening, videos, and licensed creative use.",
+  "url": "https://nanashino-chan.github.io/site/jazzhop.html",
+  "creator": {
+    "@type": "MusicGroup",
+    "name": "Nanashino-chan"
+  },
+  "track": [
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Groove",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "url": "https://www.youtube.com/watch?v=PnyutlzXem0"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Smooth Transitions",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "url": "https://www.youtube.com/watch?v=MBsx4sUtNxs"
+    },
+    {
+      "@type": "MusicRecording",
+      "name": "Stillness Vibes",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Nanashino-chan"
+      },
+      "url": "https://www.youtube.com/watch?v=GRGkJoQGMjs"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is jazzhop music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jazzhop is a style that blends lo-fi hip hop rhythm with jazz-inspired harmony, warm keys, soft drums, mellow bass, and relaxed instrumental textures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is jazzhop the same as lo-fi hip hop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jazzhop is closely related to lo-fi hip hop, but it usually emphasizes jazzy chords, piano, saxophone-like textures, swing feel, and smoother harmonic movement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Nanashino-chan jazzhop in videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you choose the correct license for the intended use. Creator videos, brand content, client work, and paid ads may require different license scopes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Nanashino-chan jazzhop copyright-free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Nanashino-chan music is original music with licensing options. It should not be treated as copyright-free or no-copyright music."
+      }
+    }
+  ]
+}
+</script>
+
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -53,121 +761,855 @@ window.addEventListener('scroll', loadGA, { once:true });
 window.addEventListener('click', loadGA, { once:true });
 window.addEventListener('mousemove', loadGA, { once:true });
 </script>
+
 </head>
 
-<main>
+<body>
 
-<section style="padding:40px 20px; text-align:center; max-width:800px; margin:0 auto;">
+<header>
+<nav>
+  <div class="nav">
 
-  <h1 style="font-size:clamp(24px, 5vw, 36px); line-height:1.3; margin-bottom:16px;">
-    Jazzhop Lo-Fi Beats for Study, Work & Cafe Ambience
-  </h1>
 
-  <p style="font-size:clamp(14px, 2.5vw, 18px); line-height:1.7; margin-bottom:16px;">
-    Stream smooth jazzhop and jazzy lo-fi beats designed for studying, deep work, and relaxing moments.
-    This collection blends hip hop rhythms with jazz-inspired melodies to create a calm and focused atmosphere.
-  </p>
+<a href="index.html" class="nav-logo">Home</a>
+<a href="music.html">Music</a>
+<a href="licensing.html">License</a>
+<a href="today.html" class="nav-cta">▶ Listen Now</a>
 
-  <p style="font-size:clamp(14px, 2.5vw, 17px); line-height:1.7; margin-bottom:24px;">
-    Perfect for <strong>study sessions, coding, reading, cafe ambience, and creative work</strong>.
-    Enjoy warm textures, soft drums, and smooth basslines that help you stay productive without distractions.
-  </p>
 
-  <a href="today.html" style="display:inline-block;background:#ffcc00;color:#000;padding:14px 22px;border-radius:8px;font-weight:bold;text-decoration:none;">
-    ▶ Play Jazzhop Lo-Fi Now
-  </a>
+  </div>
+</nav>
+</header>
+
+<div class="jazzhop-mobile-sticky" aria-label="Quick mobile actions">
+  <a href="today.html" class="listen">▶ Listen</a>
+  <a href="licensing.html" class="license">License</a>
+</div>
+
+<div class="jazzhop-breadcrumb">
+  <a href="index.html">Home</a> →
+  <a href="music.html">Music</a> →
+  Jazzhop
+</div>
+
+<main class="jazzhop-page">
+
+<article>
+
+<section class="jazzhop-hero">
+
+  <div>
+
+
+<p class="jazzhop-eyebrow">
+  Jazzhop｜jazzy lo-fi｜lo-fi hip hop｜chillhop｜licensed music
+</p>
+
+<h1>Smooth Jazzhop & Jazzy Lo-Fi Beats</h1>
+
+<p class="jazzhop-lead">
+  Listen to smooth jazzhop and jazzy lo-fi beats by Nanashino-chan — warm instrumental music for café mood, study, work, reading, creative videos, and commercial projects.
+</p>
+
+<p class="jazzhop-sub">
+  This page is the genre hub for Nanashino-chan’s jazz-inspired lo-fi sound.
+  Browse the style, understand how jazzhop differs from chillhop and lo-fi hip hop, choose starting tracks, and find licensing guidance for videos and brand content.
+  <br>
+  Nanashino-chanのジャズ系Lo-Fi / Jazzhopを、聴く・探す・動画利用するためのジャンル親ページです。
+</p>
+
+<div class="jazzhop-cta-row">
+  <a href="today.html" class="jazzhop-btn-main">▶ Start Listening</a>
+  <a href="#recommended-tracks" class="jazzhop-btn-sub">Recommended Tracks</a>
+  <a href="licensing.html" class="jazzhop-btn-dark">License Music</a>
+</div>
+
+
+  </div>
+
+  <aside class="jazzhop-hero-card">
+
+
+<h2>Use this page when you want jazzy lo-fi</h2>
+
+<p>
+  Jazzhop is ideal when you want a smoother, warmer, more musical lo-fi sound than a generic beat playlist.
+</p>
+
+<ul class="jazzhop-list">
+  <li>✔ Warm keys and jazzy chords</li>
+  <li>✔ Soft drums and mellow basslines</li>
+  <li>✔ Café, reading, study, and work atmosphere</li>
+  <li>✔ Lifestyle, brand, and product video use</li>
+  <li>✔ Direct licensing options for commercial projects</li>
+</ul>
+
+<div class="jazzhop-cta-row">
+  <a href="music.html" class="jazzhop-btn-main">Music Catalog</a>
+  <a href="cafe.html" class="jazzhop-btn-sub">Cafe Lo-Fi</a>
+</div>
+
+
+  </aside>
 
 </section>
 
+<section class="jazzhop-stats" aria-label="Nanashino-chan jazzhop highlights">
 
-<!-- 🎧 SEO追加セクション（超重要） -->
+  <div class="jazzhop-stat">
+    <strong>2,000+</strong>
+    <span>Original Lo-Fi Tracks across jazzhop, chillhop, focus, study, sleep, relax, Tokyo night, café, ambient, and creative work moods.</span>
+  </div>
 
-<section style="max-width:800px;margin:0 auto;padding:20px;line-height:1.8;">
+  <div class="jazzhop-stat">
+    <strong>3,000+</strong>
+    <span>Shazams from listeners discovering Nanashino-chan music in real listening, social, and creator contexts.</span>
+  </div>
 
-  <h2>What Is Jazzhop Lo-Fi Music?</h2>
-
-  <p>
-    Jazzhop is a subgenre of lo-fi hip hop that combines jazzy chords, live instrument textures,
-    and boom-bap style beats. Often referred to as <strong>jazzy lo-fi</strong> or
-    <strong>lofi jazz beats</strong>, this style creates a relaxed yet sophisticated sound.
-  </p>
-
-  <p>
-    Unlike standard lo-fi playlists, jazzhop music emphasizes musicality —
-    including piano, saxophone, and subtle swing rhythms — making it ideal for
-    both focused work and enjoyable background listening.
-  </p>
-
-  <h2>Best Jazzhop Beats for Study & Productivity</h2>
-
-  <p>
-    Jazzhop lo-fi beats are widely used as background music for studying, coding,
-    reading, and remote work. The steady tempo and minimal vocals help reduce distractions
-    while maintaining a consistent flow state.
-  </p>
-
-  <p>
-    Whether you're preparing for exams or working on creative projects,
-    these tracks provide a smooth and distraction-free listening experience.
-  </p>
-
-  <h2>Perfect for Cafe Ambience & Relaxation</h2>
-
-  <p>
-    Jazzhop is also popular as <strong>cafe background music</strong>.
-    Its warm and nostalgic sound creates a comfortable atmosphere,
-    similar to a quiet coffee shop or late-night lounge.
-  </p>
-
-  <p>
-    If you enjoy relaxing with music while working or unwinding,
-    jazzhop offers the perfect balance between calmness and rhythm.
-  </p>
-
-  <h2>Tokyo-Inspired Jazzhop Sound</h2>
-
-  <p>
-    This collection features original lo-fi and jazzhop tracks inspired by Tokyo nights —
-    blending urban atmosphere with smooth jazz elements.
-  </p>
-
-  <p>
-    東京の夜の雰囲気とジャズの要素を融合したLo-Fiサウンド。
-    作業用BGM・カフェBGMとして、自然な集中とリラックスをサポートします。
-  </p>
+  <div class="jazzhop-stat">
+    <strong>Direct</strong>
+    <span>Licensing options for creator videos, brand visuals, client work, paid ads, and commercial campaigns.</span>
+  </div>
 
 </section>
 
+<section class="jazzhop-section">
 
-<!-- 🔗 内部リンク強化 -->
+  <h2>What Is Jazzhop Music?</h2>
 
-<section style="text-align:center;margin:30px auto;">
+  <div class="jazzhop-answer-box">
 
-  <h2>Explore More Lo-Fi Music</h2>
 
-  <div class="internal-links">
+<p>
+  <strong>Jazzhop is a lo-fi-adjacent style that blends hip hop rhythm with jazz-inspired harmony and warm instrumental textures.</strong>
+  It often uses soft drums, mellow bass, piano-like chords, saxophone-inspired melodies, vinyl-style texture, and smooth repetition.
+</p>
 
-    <a href="study.html">Lo-Fi Study Music for Focus & Productivity</a>
-    <a href="relax.html">Relaxing Lo-Fi Music for Stress Relief</a>
-    <a href="sleep.html">Lo-Fi Sleep Music for Deep Rest</a>
-    <a href="tokyo.html">Tokyo Night Lo-Fi & City Vibes</a>
+<p>
+  Compared with generic lo-fi hip hop, jazzhop usually feels more musical and harmonically rich.
+  Compared with traditional jazz, it is simpler, loop-based, and easier to use as background music for work, reading, videos, and calm visual scenes.
+</p>
+
+<p>
+  日本語：Jazzhopは、Lo-Fi Hip Hopのリズムに、ジャズのコード感・ピアノ・サックス風メロディ・柔らかいドラムを組み合わせたジャンルです。
+  カフェ、作業、読書、映像BGMに向いた、滑らかで温かい質感が特徴です。
+</p>
+
 
   </div>
 
 </section>
 
-</main>
+<section class="jazzhop-section">
+
+  <h2>Jazzhop vs Chillhop vs Lo-Fi Hip Hop</h2>
+
+  <p class="jazzhop-section-lead">
+    These styles overlap, but each has a slightly different listening purpose and sound profile.
+  </p>
+
+  <div class="jazzhop-table-wrap">
+    <table class="jazzhop-table">
+      <thead>
+        <tr>
+          <th>Style</th>
+          <th>Typical sound</th>
+          <th>Best for</th>
+          <th>Nanashino-chan page</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jazzhop</td>
+          <td>Jazzy chords, warm keys, mellow bass, soft drums, smooth musical movement.</td>
+          <td>Café mood, reading, stylish videos, lifestyle content, warm background listening.</td>
+          <td>Current page</td>
+        </tr>
+        <tr>
+          <td>Chillhop</td>
+          <td>Relaxed hip hop rhythm, smooth loops, soft texture, casual groove.</td>
+          <td>Work sessions, lifestyle scenes, creator videos, relaxed social content.</td>
+          <td><a href="music.html" style="color:#ffcc00;font-weight:800;text-decoration:none;">Music Catalog</a></td>
+        </tr>
+        <tr>
+          <td>Lo-Fi Hip Hop</td>
+          <td>Dusty drums, loop-based texture, instrumental beats, simple repeating patterns.</td>
+          <td>Study, focus, reading, desk work, low-distraction background music.</td>
+          <td><a href="focus.html" style="color:#ffcc00;font-weight:800;text-decoration:none;">Focus</a> / <a href="study.html" style="color:#ffcc00;font-weight:800;text-decoration:none;">Study</a></td>
+        </tr>
+        <tr>
+          <td>Café Lo-Fi</td>
+          <td>Cozy, warm, soft, often jazzhop-adjacent, designed around a coffee shop atmosphere.</td>
+          <td>Café visuals, reading, home café mood, cozy work, lifestyle videos.</td>
+          <td><a href="cafe.html" style="color:#ffcc00;font-weight:800;text-decoration:none;">Cafe Lo-Fi</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+
+<section class="jazzhop-section">
+
+  <h2>Nanashino-chan Jazzhop Sound</h2>
+
+  <p class="jazzhop-section-lead">
+    The Nanashino-chan jazzhop sound sits between warm jazz texture, lo-fi rhythm, and Tokyo-inspired atmosphere.
+  </p>
+
+  <div class="jazzhop-grid-3">
+
+
+<div class="jazzhop-card">
+  <p class="jazzhop-kicker">Harmony</p>
+  <h3>Warm keys and jazzy chords</h3>
+  <p>
+    Smooth chord movement, soft piano-like textures, and gentle melodic phrases give the music a warm, musical character.
+  </p>
+</div>
+
+<div class="jazzhop-card">
+  <p class="jazzhop-kicker">Rhythm</p>
+  <h3>Soft drums and mellow groove</h3>
+  <p>
+    The rhythm stays steady and restrained, making the tracks suitable for background listening, reading, desk work, and visual content.
+  </p>
+</div>
+
+<div class="jazzhop-card">
+  <p class="jazzhop-kicker">Atmosphere</p>
+  <h3>Café, night, and city mood</h3>
+  <p>
+    Many tracks fit coffee shop ambience, quiet city nights, cozy interiors, lifestyle scenes, and smooth creator videos.
+  </p>
+</div>
+
+
+  </div>
+
+</section>
+
+<section id="recommended-tracks" class="jazzhop-section">
+
+  <h2>Recommended Jazzhop & Jazzy Lo-Fi Tracks</h2>
+
+  <p class="jazzhop-section-lead">
+    Start with these tracks if you want to understand Nanashino-chan’s jazzhop side.
+    They are entry points, not the full catalog.
+  </p>
+
+  <div class="jazzhop-grid-4">
+
+
+<div class="jazzhop-track-card">
+  <p class="jazzhop-kicker">Warm first listen</p>
+  <h3>Smooth Groove</h3>
+  <p>
+    Warm chillhop-jazzhop mood for relaxed work, café atmosphere, lifestyle videos, and soft creator content.
+  </p>
+  <div class="jazzhop-tags">
+    <span class="jazzhop-tag">Jazzhop</span>
+    <span class="jazzhop-tag">Warm</span>
+    <span class="jazzhop-tag">Lifestyle</span>
+  </div>
+  <p class="jazzhop-track-meta">
+    Good for: first-time listeners, café mood, product scenes, relaxed desk sessions.
+  </p>
+</div>
+
+<div class="jazzhop-track-card">
+  <p class="jazzhop-kicker">Clean workflow</p>
+  <h3>Smooth Transitions</h3>
+  <p>
+    A clean, practical jazzy-lo-fi track for workflow visuals, desk work, tutorials, product demos, and calm video pacing.
+  </p>
+  <div class="jazzhop-tags">
+    <span class="jazzhop-tag">Work</span>
+    <span class="jazzhop-tag">Product demo</span>
+    <span class="jazzhop-tag">Smooth</span>
+  </div>
+  <p class="jazzhop-track-meta">
+    Good for: workflow Reels, SaaS visuals, editing sessions, agency drafts.
+  </p>
+</div>
+
+<div class="jazzhop-track-card">
+  <p class="jazzhop-kicker">Quiet atmosphere</p>
+  <h3>Stillness Vibes</h3>
+  <p>
+    A softer jazzy lo-fi mood for quiet rooms, reading, night desk content, and reflective visual scenes.
+  </p>
+  <div class="jazzhop-tags">
+    <span class="jazzhop-tag">Quiet</span>
+    <span class="jazzhop-tag">Reading</span>
+    <span class="jazzhop-tag">Night</span>
+  </div>
+  <p class="jazzhop-track-meta">
+    Good for: reading videos, journaling, calm background, soft lifestyle edits.
+  </p>
+</div>
+
+<div class="jazzhop-track-card">
+  <p class="jazzhop-kicker">Cozy café mood</p>
+  <h3>Lazy Afternoon Vibes</h3>
+  <p>
+    A relaxed, cozy track for coffee shop visuals, home café mood, slow lifestyle edits, and warm daily content.
+  </p>
+  <div class="jazzhop-tags">
+    <span class="jazzhop-tag">Cafe</span>
+    <span class="jazzhop-tag">Cozy</span>
+    <span class="jazzhop-tag">Afternoon</span>
+  </div>
+  <p class="jazzhop-track-meta">
+    Good for: café videos, home content, reading, cozy social posts.
+  </p>
+</div>
+
+<div class="jazzhop-track-card">
+  <p class="jazzhop-kicker">Books / stationery</p>
+  <h3>Autumn Pages</h3>
+  <p>
+    Gentle jazzy lo-fi for books, stationery, study visuals, handwritten notes, cozy seasonal scenes, and soft reading content.
+  </p>
+  <div class="jazzhop-tags">
+    <span class="jazzhop-tag">Books</span>
+    <span class="jazzhop-tag">Study</span>
+    <span class="jazzhop-tag">Cozy</span>
+  </div>
+  <p class="jazzhop-track-meta">
+    Good for: studygram, reading posts, seasonal videos, quiet desk scenes.
+  </p>
+</div>
+
+<div class="jazzhop-track-card">
+  <p class="jazzhop-kicker">Elegant visual mood</p>
+  <h3>Diamond Dreams</h3>
+  <p>
+    A polished, elegant jazzhop-adjacent mood for fashion, beauty, product visuals, event edits, and refined social videos.
+  </p>
+  <div class="jazzhop-tags">
+    <span class="jazzhop-tag">Fashion</span>
+    <span class="jazzhop-tag">Elegant</span>
+    <span class="jazzhop-tag">Product</span>
+  </div>
+  <p class="jazzhop-track-meta">
+    Good for: fashion Reels, beauty shots, product scenes, elegant visuals.
+  </p>
+</div>
+
+<div class="jazzhop-track-card">
+  <p class="jazzhop-kicker">Night desk</p>
+  <h3>Soft Lights, Quiet Thoughts</h3>
+  <p>
+    Soft night-desk jazzhop mood for writing, journaling, slow visuals, and low-light creator content.
+  </p>
+  <div class="jazzhop-tags">
+    <span class="jazzhop-tag">Night desk</span>
+    <span class="jazzhop-tag">Soft</span>
+    <span class="jazzhop-tag">Creator</span>
+  </div>
+  <p class="jazzhop-track-meta">
+    Good for: night work, quiet writing, slow transitions, reflective posts.
+  </p>
+</div>
+
+<div class="jazzhop-track-card">
+  <p class="jazzhop-kicker">Urban smooth</p>
+  <h3>Vaporwave Streets</h3>
+  <p>
+    A smoother city-night mood for Tokyo-inspired visuals, low-light edits, and urban short-form content.
+  </p>
+  <div class="jazzhop-tags">
+    <span class="jazzhop-tag">Tokyo</span>
+    <span class="jazzhop-tag">Urban</span>
+    <span class="jazzhop-tag">Night</span>
+  </div>
+  <p class="jazzhop-track-meta">
+    Good for: urban edits, Tokyo night visuals, stylish social content.
+  </p>
+</div>
+
+
+  </div>
+
+  <div class="jazzhop-cta-row">
+    <a href="today.html" class="jazzhop-btn-main">▶ Start Listening</a>
+    <a href="music.html" class="jazzhop-btn-sub">Browse Full Music Catalog</a>
+    <a href="pages/recommended-tracks-for-commercial-video-use.html" class="jazzhop-btn-dark">Commercial Video Tracks</a>
+  </div>
+
+</section>
+
+<section class="jazzhop-section">
+
+  <h2>Best Uses for Jazzhop Lo-Fi</h2>
+
+  <p class="jazzhop-section-lead">
+    Jazzhop works best when you want background music that feels warm, musical, and stylish without overpowering the main activity or visual.
+  </p>
+
+  <div class="jazzhop-grid-4">
+
+
+<div class="jazzhop-use-card">
+  <p class="jazzhop-kicker">Study</p>
+  <h3>Reading and study sessions</h3>
+  <p>
+    Jazzy lo-fi can provide a smooth background for reading, notes, learning, and quiet study sessions.
+  </p>
+</div>
+
+<div class="jazzhop-use-card">
+  <p class="jazzhop-kicker">Work</p>
+  <h3>Desk work and creative tasks</h3>
+  <p>
+    Use soft instrumental jazzhop for writing, editing, planning, coding, and creative desk sessions.
+  </p>
+</div>
+
+<div class="jazzhop-use-card">
+  <p class="jazzhop-kicker">Cafe</p>
+  <h3>Café-style atmosphere</h3>
+  <p>
+    Jazzhop is a natural fit for coffee shop mood, cozy interiors, home café visuals, and lifestyle videos.
+  </p>
+</div>
+
+<div class="jazzhop-use-card">
+  <p class="jazzhop-kicker">Videos</p>
+  <h3>Creator and brand content</h3>
+  <p>
+    Smooth jazzhop can support product scenes, lifestyle Reels, social videos, brand visuals, and client edits.
+  </p>
+</div>
+
+<div class="jazzhop-use-card">
+  <p class="jazzhop-kicker">Fashion</p>
+  <h3>Elegant visual edits</h3>
+  <p>
+    Polished jazzy tracks work well for beauty, fashion, product detail shots, and refined short-form visuals.
+  </p>
+</div>
+
+<div class="jazzhop-use-card">
+  <p class="jazzhop-kicker">Interior</p>
+  <h3>Interior and real estate videos</h3>
+  <p>
+    Warm jazzhop can add a calm, modern mood to room tours, interior reels, architecture, and lifestyle spaces.
+  </p>
+</div>
+
+<div class="jazzhop-use-card">
+  <p class="jazzhop-kicker">Tokyo</p>
+  <h3>Night city mood</h3>
+  <p>
+    Jazzy lo-fi with city atmosphere fits Tokyo nights, neon visuals, rain edits, and urban storytelling.
+  </p>
+</div>
+
+<div class="jazzhop-use-card">
+  <p class="jazzhop-kicker">Commercial</p>
+  <h3>Licensed video use</h3>
+  <p>
+    For brand videos, client work, sponsored posts, or paid campaigns, confirm the right license before publishing.
+  </p>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="jazzhop-section jazzhop-warning-box">
+
+  <h2>Jazzhop for Videos, Brands, and Commercial Projects</h2>
+
+  <p>
+    If you use Nanashino-chan jazzhop in YouTube videos, Instagram Reels, TikTok videos, product demos, client projects, paid ads, or brand content,
+    choose a license that matches the actual use.
+  </p>
+
+  <p>
+    A track being available on a platform is not the same as having full permission for every commercial use.
+    Platform-library or credit-based usage may be suitable for non-commercial or small-scale projects,
+    but it should not be treated as a substitute for a commercial license, sync license, paid advertising license, client-work license, or brand campaign license.
+  </p>
+
+  <p>
+    日本語：SNS上で選べる音源として表示されていることと、商用動画・収益化動画・広告・クライアント案件で使えることは同じではありません。
+    用途に合ったライセンス確認が必要です。
+  </p>
+
+  <div class="jazzhop-cta-row">
+    <a href="licensing.html#pricing" class="jazzhop-btn-main">View License Options</a>
+    <a href="pages/commercial-license-vs-sync-license.html" class="jazzhop-btn-sub">Commercial vs Sync License</a>
+    <a href="pages/proof-of-music-license-for-business.html" class="jazzhop-btn-dark">Proof of Music License</a>
+  </div>
+
+</section>
+
+<section class="jazzhop-section">
+
+  <h2>Real-World Visual Examples</h2>
+
+  <p class="jazzhop-section-lead">
+    Nanashino-chan tracks have appeared in public social video contexts across fashion, interior, real estate, lifestyle, and visual storytelling.
+  </p>
+
+  <div class="jazzhop-grid-3">
+
+
+<div class="jazzhop-feature-card">
+  <img src="bazaar-cartier.webp" alt="Harper's BAZAAR HK and Cartier-related visual example using Nanashino-chan lo-fi music" loading="lazy" width="800" height="450">
+  <p class="jazzhop-kicker">Fashion / event visual</p>
+  <h3>Harper’s BAZAAR HK × Cartier-related Visual Example</h3>
+  <p>
+    A public social video context showing how soft lo-fi atmosphere can support luxury, fashion, and event-related visuals.
+  </p>
+  <a href="https://www.instagram.com/reel/DKLejxuPtd-/" target="_blank" rel="noopener noreferrer">View example →</a>
+</div>
+
+<div class="jazzhop-feature-card">
+  <img src="arte-moderna.webp" alt="Arte Moderna Retrô interior and lifestyle visual example using Nanashino-chan lo-fi music" loading="lazy" width="800" height="450">
+  <p class="jazzhop-kicker">Interior / lifestyle visual</p>
+  <h3>Arte Moderna Retrô</h3>
+  <p>
+    A public interior and lifestyle visual example where lo-fi music supports warm, stylish, and design-oriented content.
+  </p>
+  <a href="https://www.instagram.com/reel/DPlsQvcDqpa/" target="_blank" rel="noopener noreferrer">View example →</a>
+</div>
+
+<div class="jazzhop-feature-card">
+  <img src="chuo-nittochi.webp" alt="Chuo-Nittochi corporate and real estate visual example using Nanashino-chan lo-fi music" loading="lazy" width="800" height="450">
+  <p class="jazzhop-kicker">Corporate / real estate visual</p>
+  <h3>Chuo-Nittochi Visual Example</h3>
+  <p>
+    A public corporate and real estate visual context where lo-fi music supports calm, modern, and city-oriented visuals.
+  </p>
+  <a href="https://www.instagram.com/reel/DLzP-HehrGO/" target="_blank" rel="noopener noreferrer">View example →</a>
+</div>
+
+
+  </div>
+
+</section>
+
+<section class="jazzhop-section">
+
+  <h2>Explore Related Lo-Fi Moods</h2>
+
+  <p class="jazzhop-section-lead">
+    Jazzhop is the genre page. Use these related pages when you want a specific mood or use case.
+  </p>
+
+  <div class="jazzhop-grid-3">
+
+
+<a href="cafe.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">Café mood</p>
+  <strong>Cafe Lo-Fi Music</strong>
+  <span>For cozy café atmosphere, coffee shop visuals, reading, lifestyle videos, and soft work sessions.</span>
+</a>
+
+<a href="study.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">Study</p>
+  <strong>Lo-Fi Music for Studying</strong>
+  <span>For reading, notes, learning, exam review, quiet desks, and Study With Me contexts.</span>
+</a>
+
+<a href="focus.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">Focus</p>
+  <strong>Lo-Fi Music for Focus</strong>
+  <span>For coding, writing, planning, editing, and task-oriented desk sessions.</span>
+</a>
+
+<a href="relax.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">Relax</p>
+  <strong>Relaxing Lo-Fi Music</strong>
+  <span>For calm evenings, quiet rooms, journaling, and peaceful background listening.</span>
+</a>
+
+<a href="tokyo.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">Tokyo</p>
+  <strong>Tokyo Night Lo-Fi</strong>
+  <span>For Japanese city atmosphere, night windows, rain, neon visuals, and urban short-form content.</span>
+</a>
+
+<a href="music.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">Catalog</p>
+  <strong>Original Lo-Fi Music Catalog</strong>
+  <span>Browse Nanashino-chan music by mood, genre, use case, video purpose, and licensing path.</span>
+</a>
+
+
+  </div>
+
+</section>
+
+<section class="jazzhop-section">
+
+  <h2>Related Guides for Jazzhop Video Use</h2>
+
+  <p class="jazzhop-section-lead">
+    Continue with these pages if you want to use jazzhop or jazzy lo-fi in social videos, client work, brand content, or paid campaigns.
+  </p>
+
+  <div class="jazzhop-grid-3">
+
+
+<a href="pages/recommended-tracks-for-commercial-video-use.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">Track selection</p>
+  <strong>Recommended Tracks for Commercial Video Use</strong>
+  <span>Preview selected Nanashino-chan tracks for brand videos, product demos, social content, and commercial projects.</span>
+</a>
+
+<a href="pages/lofi-music-for-instagram.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">Instagram</p>
+  <strong>Lo-Fi Music for Instagram Reels</strong>
+  <span>Use music in Reels, sponsored posts, brand content, product videos, and paid social campaigns.</span>
+</a>
+
+<a href="pages/lofi-music-for-tiktok.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">TikTok</p>
+  <strong>Lo-Fi Music for TikTok</strong>
+  <span>Choose music for TikTok videos, creator content, brand posts, and short-form campaigns.</span>
+</a>
+
+<a href="pages/music-license-for-brand-videos.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">Brand video</p>
+  <strong>Music License for Brand Videos</strong>
+  <span>Guidance for using music in brand films, product videos, PR content, and business videos.</span>
+</a>
+
+<a href="pages/music-license-for-client-work.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">Client work</p>
+  <strong>Music License for Client Work</strong>
+  <span>For agencies, freelancers, social managers, and video editors delivering content to clients.</span>
+</a>
+
+<a href="pages/music-license-for-paid-social-ads.html" class="jazzhop-card-link">
+  <p class="jazzhop-kicker">Paid ads</p>
+  <strong>Music License for Paid Social Ads</strong>
+  <span>Understand music licensing for paid ads, boosted posts, sponsored content, and campaign videos.</span>
+</a>
+
+
+  </div>
+
+</section>
+
+<section class="jazzhop-section jazzhop-platform-box">
+
+  <h2>Continue Listening on Streaming Platforms</h2>
+
+  <p>
+    Streaming platforms are useful for personal listening and discovery.
+    For published videos, business use, advertising, or client projects, use the licensing page instead of relying only on platform availability.
+  </p>
+
+  <div class="jazzhop-platform-buttons">
+    <a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" rel="noopener noreferrer">🍎 Apple Music</a>
+    <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer">▶ YouTube Music</a>
+    <a href="https://open.spotify.com/album/6mp4X1AUNRPrAlxv01w7Jl" target="_blank" rel="noopener noreferrer">🎧 Spotify</a>
+    <a href="https://www.youtube.com/@Nanashino-chan" target="_blank" rel="noopener noreferrer">YouTube Channel</a>
+  </div>
+
+</section>
+
+<section class="jazzhop-section">
+
+  <h2>FAQ</h2>
+
+  <div class="jazzhop-faq-box">
+
+
+<h3>What is jazzhop music?</h3>
+<p>
+  Jazzhop is a style that blends lo-fi hip hop rhythm with jazz-inspired chords, warm keys, mellow bass, soft drums, and relaxed instrumental textures.
+</p>
+
+<h3>Is jazzhop the same as lo-fi hip hop?</h3>
+<p>
+  Jazzhop is closely related to lo-fi hip hop, but it usually emphasizes jazz harmony, piano-like chords, saxophone-style melodies, swing feel, and a smoother musical mood.
+</p>
+
+<h3>What is the difference between jazzhop and chillhop?</h3>
+<p>
+  Chillhop is a broader relaxed hip hop style. Jazzhop is usually more jazz-influenced, with warmer chords, smoother melodic lines, and a café-like atmosphere.
+</p>
+
+<h3>What is Nanashino-chan jazzhop good for?</h3>
+<p>
+  It is suitable for background listening, reading, study, work sessions, café-style mood, lifestyle videos, product scenes, and soft visual storytelling.
+</p>
+
+<h3>Can I use Nanashino-chan jazzhop in YouTube videos?</h3>
+<p>
+  Yes, if you choose the correct license for the intended use.
+  Monetized videos, client work, sponsored videos, business content, and paid ads may require different license scopes.
+</p>
+
+<h3>Can I use jazzhop in Instagram Reels or TikTok videos?</h3>
+<p>
+  Yes, but platform availability is not the same as full commercial permission.
+  For sponsored posts, brand content, paid ads, or client work, use the appropriate license before publishing.
+</p>
+
+<h3>Is Nanashino-chan jazzhop copyright-free?</h3>
+<p>
+  No. Nanashino-chan music is original music with licensing options.
+  It should not be described as copyright-free or no-copyright music.
+</p>
+
+<h3>Which license should I choose for jazzhop in a brand video?</h3>
+<p>
+  For organic brand videos or standard commercial creator use, start with the Commercial Creator License.
+  For paid ads or campaign distribution, start with the 1-Month Sync License or 3-Month Sync License.
+</p>
+
+<h3>Can I use jazzhop as in-store café music?</h3>
+<p>
+  Do not assume that a video or creator license covers physical store playback, public performance, venue use, or in-store background music.
+  For café, restaurant, retail, or public venue playback, contact first before use.
+</p>
+
+<h3>Where should I go next?</h3>
+<p>
+  Use <a href="music.html">Music Catalog</a> for the full catalog,
+  <a href="cafe.html">Cafe Lo-Fi</a> for café-style mood,
+  <a href="today.html">Listen Now</a> for quick playback,
+  or <a href="licensing.html">License Music</a> for commercial use.
+</p>
+
+
+  </div>
+
+</section>
+
+<section class="jazzhop-section jazzhop-platform-box">
+
+  <h2>Follow Nanashino-chan</h2>
+
+  <p>
+    Follow Nanashino-chan on social and streaming platforms for new music, videos, short-form content, and licensing updates.
+  </p>
+
+  <div class="jazzhop-social-icons">
+
+
+<a href="https://www.youtube.com/@Nanashino-chan" target="_blank" rel="noopener noreferrer" aria-label="YouTube channel">
+  <img src="youtube.png" alt="YouTube channel Nanashino-chan">
+</a>
+
+<a href="https://x.com/nanashinoch" target="_blank" rel="noopener noreferrer" aria-label="X profile">
+  <img src="twitter.png" alt="Twitter X profile">
+</a>
+
+<a href="https://www.instagram.com/nanashino_chan" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+  <img src="instagram.png" alt="Instagram profile">
+</a>
+
+<a href="https://www.tiktok.com/@nanashino_chan" target="_blank" rel="noopener noreferrer" aria-label="TikTok profile">
+  <img src="tiktok.png" alt="TikTok profile">
+</a>
+
+<a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" rel="noopener noreferrer" aria-label="Apple Music artist page">
+  <img src="apple-music.png" alt="Apple Music artist page">
+</a>
+
+<a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" aria-label="YouTube Music artist page">
+  <img src="youtube-music.png" alt="YouTube Music artist page">
+</a>
+
+
+  </div>
+
+</section>
+
+<section class="jazzhop-section jazzhop-final">
+
+  <h2>Listen, Browse, or License Smooth Jazzhop</h2>
+
+  <p>
+    Use this page to explore Nanashino-chan’s jazzhop and jazzy lo-fi sound, then continue to the catalog, mood pages, or licensing options depending on your goal.
+  </p>
+
+  <div class="jazzhop-cta-row" style="justify-content:center;">
+    <a href="today.html" class="jazzhop-btn-main">▶ Start Listening</a>
+    <a href="music.html" class="jazzhop-btn-sub">Browse Music Catalog</a>
+    <a href="licensing.html#pricing" class="jazzhop-btn-dark">License Music</a>
+  </div>
+
+</section>
+
+<section class="jazzhop-section jazzhop-disclaimer">
+
+  <h2>Disclaimer</h2>
+
+  <p>
+    This page provides general music catalog, listening, and licensing guidance.
+    It does not provide legal advice, platform approval, advertising approval, monetization guarantees, copyright-claim guarantees, takedown prevention guarantees, or in-store playback permission.
+  </p>
+
+  <p>
+    A Nanashino-chan license clarifies permission within the stated scope, but platforms may apply their own rules, detection systems, regional restrictions, ad policies, rights checks, and policy updates.
+    For physical store playback, public venue use, restaurant/café playback, TV, cinema, games, apps, templates, or unusual distribution, contact before use.
+  </p>
+
+  <h2>免責事項</h2>
+
+  <p>
+    このページは、Jazzhop / Jazzy Lo-Fiのカタログ、試聴、用途選び、ライセンス確認に関する一般的な情報を提供するものです。
+    法的助言、プラットフォーム審査、広告審査、収益化、ミュート回避、削除回避、店舗BGM利用許可を保証するものではありません。
+  </p>
+
+</section>
+
+</article>
+
 </main>
 
-<!-- Footer（そのまま） -->
 <footer class="site-footer">
+
   <div class="footer-container">
-    <div class="footer-brand">
-      <h2>Nanashino-chan</h2>
-      <p>Ad-free Lo-Fi Music for Focus, Relaxation, and Creative Work</p>
-    </div>
+
+
+<div class="footer-brand">
+  <h2>Nanashino-chan</h2>
+  <p>Original Jazzhop, Jazzy Lo-Fi, Chillhop, and Lo-Fi Hip Hop Music for Listening, Videos, and Licensed Creative Use</p>
+  <p>© 2026 Nanashino-chan. All rights reserved.</p>
+</div>
+
+<div class="footer-links">
+  <a href="music.html">Music Catalog</a> |
+  <a href="cafe.html">Cafe Lo-Fi Music</a> |
+  <a href="study.html">Lo-Fi music for studying</a> |
+  <a href="focus.html">Lo-Fi music for focus</a> |
+  <a href="tokyo.html">Tokyo night lo-fi</a> |
+  <a href="pages/recommended-tracks-for-commercial-video-use.html">Recommended Tracks</a>
+</div>
+
+<div class="footer-links-sub">
+  <a href="index.html">Home</a> |
+  <a href="about.html">About</a> |
+  <a href="today.html">Listen Now</a> |
+  <a href="music.html">Music</a> |
+  <a href="licensing.html" style="font-weight:bold;">License Music</a> |
+  <a href="faq.html">FAQ</a> |
+  <a href="terms.html">Terms</a> |
+  <a href="commerce.html">Legal</a> |
+  <a href="policy.html">Policy</a> |
+  <a href="contact.html">Contact</a>
+</div>
+
+<p class="footer-note">
+  🎷 Smooth jazzhop and jazzy lo-fi music for listening, videos, and licensed creative use.
+</p>
+
+
   </div>
+
 </footer>
-<script src="js/app.js"></script>
+
 </body>
 </html>
