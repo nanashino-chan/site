@@ -871,6 +871,21 @@ body.menu-open {
   border-radius: 12px;
   background: #fff;
 }
+.contact-linkedin-btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 9px;
+}
+
+.contact-linkedin-icon {
+width: 20px;
+height: 20px;
+display: inline-block;
+object-fit: contain;
+flex: 0 0 auto;
+}
+
 
 /* ===================================
    18. CARD（統一設計）
