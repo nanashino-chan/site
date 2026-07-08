@@ -1,13 +1,15 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>All Music Licensing Guides & Lo-Fi Music Pages | Nanashino-chan</title>
+<title>All Music Licensing Guides & Commercial Lo-Fi Music Pages | Nanashino-chan</title>
 
-<meta name="description" content="Browse all Nanashino-chan music licensing guides, copyright-safe music pages, sync licensing resources, commercial music guides, UGC music pages, AI video music guides, and lo-fi music use cases.">
+<meta name="description" content="Browse all Nanashino-chan music licensing guides, copyright-safe music pages, platform music guides, commercial music resources, sync licensing explanations, AI video music guides, and lo-fi use case pages.">
 
 <meta name="robots" content="index, follow">
 
@@ -20,20 +22,240 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
 
-<!-- OGP -->
-<meta property="og:title" content="All Music Licensing Guides & Lo-Fi Music Pages | Nanashino-chan">
-<meta property="og:description" content="Explore music licensing guides, copyright-safe music resources, sync licensing pages, commercial use guides, creator music pages, and lo-fi music use cases.">
+<meta property="og:title" content="All Music Licensing Guides & Commercial Lo-Fi Music Pages | Nanashino-chan">
+<meta property="og:description" content="Explore music licensing guides, copyright-safe music resources, platform music explainers, sync licensing pages, commercial use guides, creator music pages, and lo-fi music use cases.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/pages/">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="All Music Licensing Guides & Lo-Fi Music Pages">
-<meta name="twitter:description" content="Find copyright-safe lo-fi music, music licensing guides, commercial music resources, sync licensing explanations, and creator music pages.">
+<meta name="twitter:title" content="All Music Licensing Guides & Commercial Lo-Fi Music Pages">
+<meta name="twitter:description" content="Find copyright-safe lo-fi music, music licensing guides, commercial music resources, platform music rules, sync licensing explanations, AI video music pages, and creator music pages.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 
-<!-- BreadcrumbList Schema -->
+<style>
+.index-hero {
+  text-align:center;
+  margin-bottom:72px;
+}
+
+.index-hero h1 {
+  font-size:46px;
+  line-height:1.2;
+  margin-bottom:20px;
+}
+
+.index-hero p {
+  font-size:19px;
+  line-height:1.8;
+  color:#ccc;
+  max-width:840px;
+  margin:0 auto;
+}
+
+.index-actions {
+  margin-top:34px;
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.index-actions a {
+  display:inline-block;
+  padding:16px 28px;
+  border-radius:10px;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.primary-btn {
+  background:#ffcc00;
+  color:#000;
+}
+
+.secondary-btn {
+  background:#111;
+  color:#fff;
+  border:1px solid #333;
+}
+
+.index-summary {
+  margin-bottom:70px;
+  padding:28px;
+  background:#111;
+  border:1px solid rgba(255,204,0,0.20);
+  border-radius:18px;
+}
+
+.index-summary-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:16px;
+  margin-top:24px;
+}
+
+.index-summary-grid div {
+  background:#181818;
+  border-radius:14px;
+  padding:20px;
+}
+
+.index-summary-grid strong {
+  display:block;
+  font-size:26px;
+  color:#ffcc00;
+  margin-bottom:6px;
+}
+
+.quick-nav {
+  margin-bottom:80px;
+  padding:28px;
+  background:#111;
+  border:1px solid rgba(255,204,0,0.18);
+  border-radius:16px;
+}
+
+.quick-nav-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
+  margin-top:24px;
+}
+
+.quick-nav-grid a {
+  display:block;
+  padding:20px;
+  border-radius:14px;
+  background:#181818;
+  text-decoration:none;
+  color:#fff;
+}
+
+.quick-nav-grid span {
+  display:block;
+  color:#aaa;
+  margin-top:6px;
+  font-size:14px;
+}
+
+.index-section {
+  margin-bottom:82px;
+}
+
+.index-section h2 {
+  font-size:30px;
+  margin-bottom:14px;
+}
+
+.section-intro {
+  line-height:1.9;
+  color:#ccc;
+  max-width:860px;
+}
+
+.page-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+  margin-top:28px;
+}
+
+.page-card {
+  display:block;
+  background:#111;
+  border:1px solid rgba(255,204,0,0.18);
+  border-radius:16px;
+  padding:20px;
+  text-decoration:none;
+  color:#fff;
+  box-shadow:0 8px 28px rgba(0,0,0,0.22);
+}
+
+.page-card strong {
+  display:block;
+  color:#ffcc00;
+  font-size:17px;
+  line-height:1.45;
+  margin-bottom:8px;
+}
+
+.page-card span {
+  display:block;
+  color:#bbb;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.infographic-block {
+  margin:32px 0 40px;
+}
+
+.infographic-block img {
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.28);
+}
+
+.infographic-block figcaption {
+  font-size:14px;
+  color:#aaa;
+  line-height:1.8;
+  margin-top:12px;
+  text-align:center;
+}
+
+.text-link-directory {
+  margin-bottom:80px;
+  padding:24px;
+  border-radius:16px;
+  background:#111;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.text-link-directory p {
+  line-height:2.2;
+  font-size:14px;
+  color:#aaa;
+}
+
+.final-cta {
+  margin-bottom:80px;
+  padding:36px 24px;
+  text-align:center;
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(255,204,0,0.12),rgba(255,204,0,0.03));
+  border:1px solid rgba(255,204,0,0.24);
+}
+
+.final-cta h2 {
+  margin-top:0;
+  color:#ffcc00;
+}
+
+.final-cta p {
+  line-height:1.9;
+  max-width:760px;
+  margin:20px auto;
+  color:#ccc;
+}
+
+@media (max-width: 700px) {
+  .index-hero h1 {
+    font-size:34px;
+  }
+
+  .index-hero p {
+    font-size:17px;
+  }
+
+  .page-grid {
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -55,13 +277,12 @@
 }
 </script>
 
-<!-- CollectionPage Schema -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "CollectionPage",
- "name": "All Music Licensing Guides and Lo-Fi Music Pages",
- "description": "A complete index of Nanashino-chan music licensing guides, copyright-safe music resources, sync licensing articles, commercial music pages, creator music guides, AI video music resources, and lo-fi music use cases.",
+ "name": "All Music Licensing Guides and Commercial Lo-Fi Music Pages",
+ "description": "A complete index of Nanashino-chan music licensing guides, copyright-safe music resources, platform music explainers, sync licensing articles, commercial music pages, creator music guides, AI video music resources, and lo-fi music use cases.",
  "url": "https://nanashino-chan.github.io/site/pages/",
  "publisher": {
   "@type": "Organization",
@@ -78,35 +299,31 @@
 
 <body>
 
-<main style="max-width:1100px;margin:0 auto;padding:40px 20px;">
+<main style="max-width:1120px;margin:0 auto;padding:40px 20px;">
 
-<!-- HERO -->
-<section style="text-align:center;margin-bottom:80px;">
+<section class="index-hero">
 
-<h1 style="font-size:46px;line-height:1.2;margin-bottom:20px;">
-Music Licensing Guides & Lo-Fi Music Pages
+<h1>
+Music Licensing Guides & Commercial Lo-Fi Music Pages
 </h1>
 
-<p style="font-size:19px;line-height:1.8;color:#ccc;max-width:820px;margin:0 auto;">
-Explore Nanashino-chan guides for copyright-safe lo-fi music, music licensing, sync licensing, commercial use, YouTube Content ID, UGC ads, AI videos, podcasts, business videos, and creator-safe music workflows.
+<p>
+Explore Nanashino-chan guides for copyright-safe lo-fi music, commercial music licensing, sync licensing, platform music rules, YouTube Content ID, Instagram / TikTok commercial-use questions, UGC ads, AI videos, podcasts, business videos, and creator-safe music workflows.
 <br>
-音楽ライセンス、商用利用、著作権、Content ID、AI動画、SNS広告、Lo-Fi音楽の用途別ページ一覧です。
+音楽ライセンス、商用利用、著作権、Content ID、AI動画、SNS広告、Instagram / TikTok音源の商用利用誤解、Lo-Fi音楽の用途別ページ一覧です。
 </p>
 
-<div style="margin-top:36px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+<div class="index-actions">
 
-<a href="/site/licensing.html"
-style="display:inline-block;background:#ffcc00;color:#000;padding:16px 28px;border-radius:10px;font-weight:bold;text-decoration:none;">
+<a class="primary-btn" href="/site/licensing.html">
 ► View Licensing Options
 </a>
 
-<a href="/site/music.html"
-style="display:inline-block;background:#111;color:#fff;padding:16px 28px;border-radius:10px;font-weight:bold;text-decoration:none;border:1px solid #333;">
+<a class="secondary-btn" href="/site/music.html">
 ▶ Browse Music
 </a>
 
-<a href="/site/works.html"
-style="display:inline-block;background:#111;color:#fff;padding:16px 28px;border-radius:10px;font-weight:bold;text-decoration:none;border:1px solid #333;">
+<a class="secondary-btn" href="/site/works.html">
 View Real Use Cases
 </a>
 
@@ -114,727 +331,1089 @@ View Real Use Cases
 
 </section>
 
-<!-- QUICK NAVIGATION -->
-<section style="
-margin-bottom:80px;
-padding:28px;
-background:#111;
-border:1px solid rgba(255,204,0,0.18);
-border-radius:16px;
-">
+<section class="index-summary">
 
-<h2 style="margin-top:0;">Start Here</h2>
+<h2 style="margin-top:0;">Complete /pages/ Index</h2>
 
 <p style="line-height:1.9;color:#ccc;">
-Choose the path that matches what you need. This page is organized by intent, not only by article title.
+This index links to every extracted <code>/site/pages/*.html</code> URL from the current page list, so Google and visitors can reach older, newly created, and specialized guide pages from one hub.
 </p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:28px;">
+<div class="index-summary-grid">
 
-<a href="#licensing" style="display:block;padding:22px;border-radius:14px;background:#181818;text-decoration:none;color:#fff;">
-<strong>Need a Music License?</strong><br>
-<span style="color:#bbb;">Commercial, sync, creator, and business licensing</span>
-</a>
+<div>
+<strong>196</strong>
+<span style="color:#bbb;">Extracted HTML guide pages</span>
+</div>
 
-<a href="#copyright" style="display:block;padding:22px;border-radius:14px;background:#181818;text-decoration:none;color:#fff;">
-<strong>Worried About Copyright?</strong><br>
-<span style="color:#bbb;">Content ID, copyright claims, strikes, and music rights</span>
-</a>
+<div>
+<strong>129</strong>
+<span style="color:#bbb;">Pages added that were not linked in the previous index</span>
+</div>
 
-<a href="#social-ugc" style="display:block;padding:22px;border-radius:14px;background:#181818;text-decoration:none;color:#fff;">
-<strong>Creating UGC or Social Ads?</strong><br>
-<span style="color:#bbb;">Instagram UGC ads, TikTok brand deals, influencer campaigns</span>
-</a>
-
-<a href="#ai-youtube" style="display:block;padding:22px;border-radius:14px;background:#181818;text-decoration:none;color:#fff;">
-<strong>Using AI or YouTube Automation?</strong><br>
-<span style="color:#bbb;">AI video, faceless channels, recurring YouTube workflows</span>
-</a>
-
-<a href="#lofi-use-cases" style="display:block;padding:22px;border-radius:14px;background:#181818;text-decoration:none;color:#fff;">
-<strong>Looking for Lo-Fi by Mood?</strong><br>
-<span style="color:#bbb;">Focus, study, coding, sleep, relaxation, productivity</span>
-</a>
-
-<a href="#platforms" style="display:block;padding:22px;border-radius:14px;background:#181818;text-decoration:none;color:#fff;">
-<strong>Need Platform-Specific Help?</strong><br>
-<span style="color:#bbb;">YouTube, TikTok, Instagram, Facebook, Shorts, Reels</span>
-</a>
+<div>
+<strong>9</strong>
+<span style="color:#bbb;">Intent-based sections</span>
+</div>
 
 </div>
 
 </section>
 
-<!-- FEATURED HUBS -->
-<section style="margin-bottom:80px;">
+<section class="quick-nav">
 
-<h2>Recommended Guides</h2>
+<h2 style="margin-top:0;">Find the Right Guide</h2>
 
 <p style="line-height:1.9;color:#ccc;">
-These are the most useful starting points if you are new to music licensing, copyright-safe music, or commercial lo-fi music use.
+Choose by intent: platform music, YouTube copyright, commercial licensing, sync rights, AI video, brand use cases, creator workflows, or lo-fi music by mood.
 </p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px;">
+<div class="quick-nav-grid">
+<a href="#platform-music-social-media-commercial-misunderstandings"><strong>Platform Music, Social Media &amp; Commercial Misunderstandings</strong><span>25 pages</span></a>
+<a href="#youtube-content-id-copyright-problems"><strong>YouTube, Content ID &amp; Copyright Problems</strong><span>28 pages</span></a>
+<a href="#commercial-licensing-pricing-proof"><strong>Commercial Licensing, Pricing &amp; Proof</strong><span>65 pages</span></a>
+<a href="#sync-master-rights-copyright-metadata"><strong>Sync, Master Rights, Copyright &amp; Metadata</strong><span>15 pages</span></a>
+<a href="#ai-video-automation-new-creator-workflows"><strong>AI Video, Automation &amp; New Creator Workflows</strong><span>7 pages</span></a>
+<a href="#brands-agencies-business-industry-use-cases"><strong>Brands, Agencies, Business &amp; Industry Use Cases</strong><span>30 pages</span></a>
+<a href="#creators-podcasts-streamers-video-editors"><strong>Creators, Podcasts, Streamers &amp; Video Editors</strong><span>9 pages</span></a>
+<a href="#lo-fi-music-by-mood-activity-platform"><strong>Lo-Fi Music by Mood, Activity &amp; Platform</strong><span>15 pages</span></a>
+<a href="#other-music-licensing-guides"><strong>Other Music Licensing Guides</strong><span>2 pages</span></a>
+</div>
 
-<a href="/site/licensing.html" style="display:block;background:#ffcc00;color:#000;padding:24px;border-radius:14px;text-decoration:none;">
-<strong>Licensing Options</strong><br>
-<span style="color:#111;">Choose a license for creator, commercial, sync, brand, or custom use.</span>
-</a>
+</section>
 
-<a href="/site/faq.html" style="display:block;background:#111;color:#fff;padding:24px;border-radius:14px;text-decoration:none;">
-<strong>FAQ</strong><br>
-<span style="color:#bbb;">Common questions about using Nanashino-chan music safely.</span>
-</a>
+<section class="index-section">
 
-<a href="/site/pages/music-copyright-faq.html" style="display:block;background:#111;color:#fff;padding:24px;border-radius:14px;text-decoration:none;">
-<strong>Music Copyright FAQ</strong><br>
-<span style="color:#bbb;">Understand music copyright, licensing, Content ID, and commercial use.</span>
-</a>
+<h2>Recommended Starting Points</h2>
 
-<a href="/site/pages/how-music-rights-work.html" style="display:block;background:#111;color:#fff;padding:24px;border-radius:14px;text-decoration:none;">
-<strong>How Music Rights Work</strong><br>
-<span style="color:#bbb;">Master rights, composition rights, sync rights, and commercial use.</span>
-</a>
+<p class="section-intro">
+Start with these pages if you need help choosing music for business videos, platform music, YouTube uploads, Content ID, AI videos, or commercial licensing.
+</p>
 
-<a href="/site/pages/music-licensing-vs-sync-licensing.html" style="display:block;background:#111;color:#fff;padding:24px;border-radius:14px;text-decoration:none;">
-<strong>Music Licensing vs Sync Licensing</strong><br>
-<span style="color:#bbb;">Understand the difference before choosing music for videos or ads.</span>
+<div class="page-grid">
+<a class="page-card" href="/site/pages/can-businesses-use-platform-music.html">
+  <strong>Can Businesses Use Platform Music</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
 </a>
+<a class="page-card" href="/site/pages/youtube-audio-library-vs-commercial-music.html">
+  <strong>YouTube Audio Library vs Commercial Music</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-business-social-media.html">
+  <strong>Music License for Business Social Media</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-licensing-for-commercial-use-guide.html">
+  <strong>Music Licensing for Commercial Use Guide</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/how-to-avoid-content-id-claims.html">
+  <strong>How to Avoid Content ID Claims</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/proof-of-music-license.html">
+  <strong>Proof of Music License</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-documentation-checklist.html">
+  <strong>Music License Documentation Checklist</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/licensed-music-for-ai-commercial-videos.html">
 
-<a href="/site/pages/licensing-process.html" style="display:block;background:#111;color:#fff;padding:24px;border-radius:14px;text-decoration:none;">
-<strong>Licensing Process</strong><br>
-<span style="color:#bbb;">Step-by-step music licensing workflow for creators and businesses.</span>
-</a>
+Part 2です。次は「Part 3」と入力してください。
+
+<strong>Licensed Music for AI Commercial Videos</strong> <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span> </a> <a class="page-card" href="/site/pages/music-for-agencies.html"> <strong>Music for Agencies</strong> <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span> </a>
 
 </div>
 
 </section>
 
-<!-- INFOGRAPHIC: LICENSE DECISION TREE -->
-<section style="margin-bottom:80px;">
-
-<figure style="margin:0;">
+<figure class="infographic-block">
 
 <img
 src="/site/images/infographics/howtochoose.webp"
 alt="Music license decision tree explaining how to choose between personal license, commercial license, and sync license for creators, brands, videos, ads, and client work"
 loading="lazy"
 width="1600"
-height="900"
-style="width:100%;height:auto;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.28);">
+height="900">
 
-<figcaption style="font-size:14px;color:#aaa;line-height:1.8;margin-top:12px;text-align:center;">
+<figcaption>
 Choose the right music license based on personal use, commercial use, sync use, ads, client work, and brand campaigns.
 </figcaption>
 
 </figure>
 
-</section>
-<!-- LICENSING & COMMERCIAL USE -->
-<section id="licensing" style="margin-bottom:80px;">
-
-<h2>Music Licensing & Commercial Use</h2>
-
-<p style="line-height:1.9;color:#ccc;">
-Start here if you need music for YouTube videos, business videos, commercial projects, ads, brand content, client work, or paid campaigns.
-</p>
-<!-- INFOGRAPHIC: LICENSED MUSIC VS FAMOUS SONGS -->
-<figure style="margin:32px 0 36px;">
+<figure class="infographic-block">
 
 <img
-src="/site/images/infographics/licensed-music-vs-famous-songs.webp"
-alt="Licensed music versus famous songs infographic comparing clear commercial rights, fast licensing, predictable cost, proof of license, and legal risk for creators, brands, ads, and commercial videos"
+src="/site/images/infographics/why-both-rights-matter.webp"
+alt="Why both master rights and copyright permission matter when using platform music, Instagram sounds, TikTok sounds, commercial music, ads, and brand videos"
 loading="lazy"
 width="1600"
-height="900"
-style="width:100%;height:auto;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.28);">
+height="900">
 
-<figcaption style="font-size:14px;color:#aaa;line-height:1.8;margin-top:12px;text-align:center;">
-Licensed music can provide clearer rights, faster approval, and more predictable costs than trying to use famous songs in commercial projects.
+<figcaption>
+Platform music access is not always the same as a commercial license. For business use, both master rights and composition / copyright permission may matter.
 </figcaption>
 
 </figure>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px;">
 
-<a href="/site/pages/music-licensing-for-commercial-use-guide.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music Licensing for Commercial Use</strong><br>
-<span style="color:#bbb;">Commercial music licensing for creators, brands, agencies, and businesses.</span>
-</a>
+<section id="platform-music-social-media-commercial-misunderstandings" class="index-section">
 
-<a href="/site/pages/music-license-for-business-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music License for Business Videos</strong><br>
-<span style="color:#bbb;">Music for company videos, product demos, explainers, and brand content.</span>
-</a>
+<h2>Platform Music, Social Media &amp; Commercial Misunderstandings</h2>
 
-<a href="/site/pages/commercial-music-licensing.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Commercial Music Licensing</strong><br>
-<span style="color:#bbb;">Understand commercial use, business use, and licensing scope.</span>
-</a>
-
-<a href="/site/pages/commercial-music-license.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Commercial Music License</strong><br>
-<span style="color:#bbb;">A direct guide to commercial license use cases.</span>
-</a>
-
-<a href="/site/pages/music-for-commercial-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Commercial Videos</strong><br>
-<span style="color:#bbb;">Licensed music for ads, branded videos, and commercial content.</span>
-</a>
-
-<a href="/site/pages/music-for-business-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Business Videos</strong><br>
-<span style="color:#bbb;">Background music for company videos and business communication.</span>
-</a>
-
-<a href="/site/pages/background-music-for-ads.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Background Music for Ads</strong><br>
-<span style="color:#bbb;">Music for advertisements, campaign videos, and paid media.</span>
-</a>
-
-<a href="/site/pages/music-licensing-for-youtube-ads.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music Licensing for YouTube Ads</strong><br>
-<span style="color:#bbb;">Music licensing for YouTube ad campaigns and video ads.</span>
-</a>
-
-<a href="/site/pages/music-for-agencies.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Agencies</strong><br>
-<span style="color:#bbb;">Licensed music for agencies, client work, and campaign delivery.</span>
-</a>
-
-<a href="/site/pages/licensed-lofi-music.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Licensed Lo-Fi Music</strong><br>
-<span style="color:#bbb;">Lo-fi music designed for creator and commercial licensing workflows.</span>
-</a>
-
-<a href="/site/pages/unlimited-music-license-for-creators.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Unlimited Music License for Creators</strong><br>
-<span style="color:#bbb;">Understand unlimited-style music licensing for creator workflows.</span>
-</a>
-
-<a href="/site/pages/affordable-music-licensing-for-creators.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Affordable Music Licensing for Creators</strong><br>
-<span style="color:#bbb;">A practical guide to cost-effective music licensing.</span>
-</a>
-
-</div>
-
-</section>
-
-<!-- SYNC RIGHTS -->
-<section style="margin-bottom:80px;">
-
-<h2>Sync Licensing, Master Rights & Music Rights</h2>
-
-<p style="line-height:1.9;color:#ccc;">
-Use these guides if your project combines music with video, ads, social media clips, AI visuals, films, brand content, or client deliverables.
+<p class="section-intro">
+Instagram, TikTok, platform sounds, business account music, paid social, and social media license risks.
 </p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px;">
-
-<a href="/site/pages/what-is-sync-licensing.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>What Is Sync Licensing?</strong><br>
-<span style="color:#bbb;">Understand music use with video and visual media.</span>
+<div class="page-grid">
+<a class="page-card" href="/site/pages/can-businesses-use-platform-music.html">
+  <strong>Can Businesses Use Platform Music</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
 </a>
-
-<a href="/site/pages/how-sync-licensing-works.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>How Sync Licensing Works</strong><br>
-<span style="color:#bbb;">A workflow guide for videos, ads, AI content, and client projects.</span>
+<a class="page-card" href="/site/pages/can-you-use-famous-songs-on-social-media.html">
+  <strong>Can You Use Famous Songs on Social Media</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
 </a>
-
-<a href="/site/pages/what-are-sync-rights.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>What Are Sync Rights?</strong><br>
-<span style="color:#bbb;">Sync rights for video, advertising, social media, and commercial use.</span>
+<a class="page-card" href="/site/pages/how-music-rights-work-on-social-media.html">
+  <strong>How Music Rights Work on Social Media</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
 </a>
-
-<a href="/site/pages/what-is-master-license.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>What Is a Master License?</strong><br>
-<span style="color:#bbb;">Understand master rights and recorded music licensing.</span>
+<a class="page-card" href="/site/pages/lofi-music-for-facebook.html">
+  <strong>Lo-Fi Music for Facebook</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
 </a>
-
-<a href="/site/pages/how-music-rights-work.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>How Music Rights Work</strong><br>
-<span style="color:#bbb;">Master rights, composition rights, sync rights, and commercial use.</span>
+<a class="page-card" href="/site/pages/lofi-music-for-instagram.html">
+  <strong>Lo-Fi Music for Instagram</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
 </a>
-
-<a href="/site/pages/isrc-code-explained.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>ISRC Code Explained</strong><br>
-<span style="color:#bbb;">Music identification, recording metadata, and licensing documentation.</span>
+<a class="page-card" href="/site/pages/lofi-music-for-tiktok.html">
+  <strong>Lo-Fi Music for TikTok</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
 </a>
-
-<a href="/site/pages/monthly-music-license-subscription-vs-one-time.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Monthly Music License Subscription vs One-Time License</strong><br>
-<span style="color:#bbb;">Compare subscription licensing and one-time licensing workflows.</span>
+<a class="page-card" href="/site/pages/music-for-facebook-ads.html">
+  <strong>Music for Facebook Ads</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
 </a>
-
-<a href="/site/pages/music-subscription-vs-single-track-license.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music Subscription vs Single Track License</strong><br>
-<span style="color:#bbb;">Understand which licensing model fits your project.</span>
+<a class="page-card" href="/site/pages/music-for-influencer-marketing.html">
+  <strong>Music for Influencer Marketing</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
 </a>
-
+<a class="page-card" href="/site/pages/music-for-instagram-ads.html">
+  <strong>Music for Instagram Ads</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-instagram-creators.html">
+  <strong>Music for Instagram Creators</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-instagram-reels-ads.html">
+  <strong>Music for Instagram Reels Ads</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-instagram-reels.html">
+  <strong>Music for Instagram Reels</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-instagram-ugc-ads.html">
+  <strong>Music for Instagram UGC Ads</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-linkedin-videos.html">
+  <strong>Music for LinkedIn Videos</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-short-form-video.html">
+  <strong>Music for Short-Form Video</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-social-media-campaigns.html">
+  <strong>Music for Social Media Campaigns</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-tiktok-ads.html">
+  <strong>Music for TikTok Ads</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-tiktok-brand-deals.html">
+  <strong>Music for TikTok Brand Deals</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-tiktok-creators.html">
+  <strong>Music for TikTok Creators</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-tiktok-videos.html">
+  <strong>Music for TikTok Videos</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-ugc-content.html">
+  <strong>Music for UGC Content</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-ugc-creators-guide.html">
+  <strong>Music for UGC Creators Guide</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-business-social-media.html">
+  <strong>Music License for Business Social Media</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-social-media-guide.html">
+  <strong>Music License Social Media Guide</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/why-instagram-mutes-videos.html">
+  <strong>Why Instagram Mutes Videos</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
 </div>
 
 </section>
 
-<!-- COPYRIGHT & CONTENT ID -->
-<section id="copyright" style="margin-bottom:80px;">
+<section id="youtube-content-id-copyright-problems" class="index-section">
 
-<h2>Copyright, Content ID & Copyright-Safe Music</h2>
+<h2>YouTube, Content ID &amp; Copyright Problems</h2>
 
-<p style="line-height:1.9;color:#ccc;">
-Use these guides if you are worried about copyright claims, Content ID, muted videos, takedowns, copyright strikes, monetization issues, or platform music rules.
-</p>
-<!-- INFOGRAPHIC: COPYRIGHT SAFE MUSIC GUIDE -->
-<figure style="margin:32px 0 36px;">
-
-<img
-src="/site/images/infographics/copyright-safe-music-guide.webp"
-alt="Copyright safe music guide comparing licensed music with risky music sources, copyright claims, Content ID risk, documentation, and monetization safety"
-loading="lazy"
-width="1600"
-height="900"
-style="width:100%;height:auto;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.28);">
-
-<figcaption style="font-size:14px;color:#aaa;line-height:1.8;margin-top:12px;text-align:center;">
-Know the difference between copyright-safe music and risky music sources before publishing videos or social content.
-</figcaption>
-
-</figure>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px;">
-
-<a href="/site/pages/music-copyright-faq.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music Copyright FAQ</strong><br>
-<span style="color:#bbb;">Common questions about copyright, licensing, claims, and commercial use.</span>
-</a>
-
-<a href="/site/pages/copyright-free-lofi-music.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Copyright Free Lo-Fi Music</strong><br>
-<span style="color:#bbb;">Understand what “copyright-free” really means for lo-fi music.</span>
-</a>
-
-<a href="/site/pages/royalty-free-lofi-music.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Royalty Free Lo-Fi Music</strong><br>
-<span style="color:#bbb;">Royalty-free music explained for creators and businesses.</span>
-</a>
-
-<a href="/site/pages/safe-music-for-creators.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Safe Music for Creators</strong><br>
-<span style="color:#bbb;">Music for creators who want fewer copyright and platform issues.</span>
-</a>
-
-<a href="/site/pages/how-to-avoid-copyright-claims.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>How to Avoid Copyright Claims</strong><br>
-<span style="color:#bbb;">Reduce copyright claim risk before publishing videos.</span>
-</a>
-
-<a href="/site/pages/how-to-avoid-content-id-claims.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>How to Avoid Content ID Claims</strong><br>
-<span style="color:#bbb;">Checklist for music use, metadata, documentation, and upload workflows.</span>
-</a>
-
-<a href="/site/pages/youtube-content-id-guide.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>YouTube Content ID Guide</strong><br>
-<span style="color:#bbb;">Understand YouTube music detection, claims, and rights management.</span>
-</a>
-
-<a href="/site/pages/what-is-content-id.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>What Is Content ID?</strong><br>
-<span style="color:#bbb;">A beginner-friendly guide to YouTube’s automated detection system.</span>
-</a>
-
-<a href="/site/pages/what-happens-if-you-use-copyrighted-music.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>What Happens If You Use Copyrighted Music?</strong><br>
-<span style="color:#bbb;">Claims, takedowns, strikes, monetization impact, and legal risk.</span>
-</a>
-
-<a href="/site/pages/how-to-use-music-without-copyright.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>How to Use Music Without Copyright Problems</strong><br>
-<span style="color:#bbb;">A practical guide for safer music use in videos and social content.</span>
-</a>
-
-<a href="/site/pages/how-to-use-music-legally-on-youtube.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>How to Use Music Legally on YouTube</strong><br>
-<span style="color:#bbb;">Legal music use, YouTube uploads, monetization, and license records.</span>
-</a>
-
-<a href="/site/pages/how-to-avoid-copyright-strike-youtube.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>How to Avoid Copyright Strikes on YouTube</strong><br>
-<span style="color:#bbb;">Avoid serious copyright problems before uploading YouTube videos.</span>
-</a>
-
-<a href="/site/pages/can-i-use-music-on-youtube.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Can I Use Music on YouTube?</strong><br>
-<span style="color:#bbb;">Understand what music can be used on YouTube and under what conditions.</span>
-</a>
-
-<a href="/site/pages/can-i-use-music-on-youtube-shorts.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Can I Use Music on YouTube Shorts?</strong><br>
-<span style="color:#bbb;">Music use, Shorts, licensing, and platform audio limitations.</span>
-</a>
-
-<a href="/site/pages/why-instagram-mutes-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Why Instagram Mutes Videos</strong><br>
-<span style="color:#bbb;">Understand Instagram audio muting, music rights, and platform detection.</span>
-</a>
-
-<a href="/site/pages/music-license-social-media-guide.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Social Media Music License Guide</strong><br>
-<span style="color:#bbb;">Music licensing for YouTube, Instagram, TikTok, Facebook, and social ads.</span>
-</a>
-
-</div>
-
-</section>
-
-<!-- YOUTUBE & PLATFORM GUIDES -->
-<section id="platforms" style="margin-bottom:80px;">
-
-<h2>YouTube, TikTok, Instagram & Platform-Specific Guides</h2>
-
-<p style="line-height:1.9;color:#ccc;">
-These pages are useful when you already know the platform where the music will be used.
+<p class="section-intro">
+YouTube music use, Content ID, copyright claims, strikes, demonetization, and monetization safety.
 </p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px;">
-
-<a href="/site/pages/music-for-youtube-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for YouTube Videos</strong><br>
-<span style="color:#bbb;">Background music for YouTube creators, videos, and monetized uploads.</span>
+<div class="page-grid">
+<a class="page-card" href="/site/pages/best-music-licenses-for-youtube-monetization.html">
+  <strong>Best Music Licenses for YouTube Monetization</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
 </a>
-
-<a href="/site/pages/music-license-for-youtube-creators.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music License for YouTube Creators</strong><br>
-<span style="color:#bbb;">What YouTubers should keep as music license proof.</span>
+<a class="page-card" href="/site/pages/can-i-use-music-on-youtube.html">
+  <strong>Can I Use Music on YouTube</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
 </a>
-
-<a href="/site/pages/music-for-youtube-shorts.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for YouTube Shorts</strong><br>
-<span style="color:#bbb;">Music for Shorts, vertical videos, creator clips, and short-form uploads.</span>
+<a class="page-card" href="/site/pages/can-you-use-lofi-music-in-youtube-videos.html">
+  <strong>Can You Use Lo-Fi Music in YouTube Videos</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
 </a>
-
-<a href="/site/pages/lofi-music-for-youtube.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Lo-Fi Music for YouTube</strong><br>
-<span style="color:#bbb;">Lo-fi music for YouTube videos, backgrounds, and creator content.</span>
+<a class="page-card" href="/site/pages/content-id-vs-copyright-strike.html">
+  <strong>Content ID vs Copyright Strike</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
 </a>
-
-<a href="/site/pages/music-for-tiktok-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for TikTok Videos</strong><br>
-<span style="color:#bbb;">Music for TikTok creators, short videos, and social posts.</span>
+<a class="page-card" href="/site/pages/copyright-safe-music-for-youtube.html">
+  <strong>Copyright-Safe Music for YouTube</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
 </a>
-
-<a href="/site/pages/lofi-music-for-tiktok.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Lo-Fi Music for TikTok</strong><br>
-<span style="color:#bbb;">Lo-fi music for TikTok videos and creator workflows.</span>
+<a class="page-card" href="/site/pages/how-content-id-works.html">
+  <strong>How Content ID Works</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
 </a>
-
-<a href="/site/pages/music-for-instagram-reels.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Instagram Reels</strong><br>
-<span style="color:#bbb;">Music for Reels, short-form videos, creator posts, and brand content.</span>
+<a class="page-card" href="/site/pages/how-to-appeal-copyright-claim.html">
+  <strong>How to Appeal Copyright Claim</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
-<a href="/site/pages/lofi-music-for-instagram.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Lo-Fi Music for Instagram</strong><br>
-<span style="color:#bbb;">Lo-fi music for Instagram videos, Reels, and creator posts.</span>
+<a class="page-card" href="/site/pages/how-to-avoid-content-id-claims.html">
+  <strong>How to Avoid Content ID Claims</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
-<a href="/site/pages/lofi-music-for-facebook.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Lo-Fi Music for Facebook</strong><br>
-<span style="color:#bbb;">Music for Facebook videos, posts, and social media use.</span>
+<a class="page-card" href="/site/pages/how-to-avoid-copyright-claims.html">
+  <strong>How to Avoid Copyright Claims</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
-<a href="/site/pages/music-for-streamers.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Streamers</strong><br>
-<span style="color:#bbb;">Music for livestreams, creators, background use, and safe streaming.</span>
+<a class="page-card" href="/site/pages/how-to-avoid-copyright-problems-on-youtube.html">
+  <strong>How to Avoid Copyright Problems on YouTube</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
 </a>
-
+<a class="page-card" href="/site/pages/how-to-avoid-copyright-strike-youtube.html">
+  <strong>How to Avoid Copyright Strike YouTube</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/how-to-remove-copyright-claim-on-youtube.html">
+  <strong>How to Remove Copyright Claim on YouTube</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/how-to-use-music-legally-on-youtube.html">
+  <strong>How to Use Music Legally on YouTube</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-youtube.html">
+  <strong>Lo-Fi Music for YouTube</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-ai-youtube-channels.html">
+  <strong>Music for AI YouTube Channels</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-youtube-automation-channels.html">
+  <strong>Music for YouTube Automation Channels</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-youtube-monetization.html">
+  <strong>Music for YouTube Monetization</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-youtube-shorts.html">
+  <strong>Music for YouTube Shorts</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-youtube-videos.html">
+  <strong>Music for YouTube Videos</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-youtube-creators.html">
+  <strong>Music License for YouTube Creators</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-licensing-for-youtube-ads.html">
+  <strong>Music Licensing for YouTube Ads</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/sync-license-for-youtube.html">
+  <strong>Sync License for YouTube</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/what-is-content-id.html">
+  <strong>What is Content ID</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/which-music-license-is-best-for-youtube.html">
+  <strong>Which Music License is Best for YouTube</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/why-your-video-got-copyright-claim.html">
+  <strong>Why Your Video Got Copyright Claim</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/youtube-audio-library-vs-commercial-music.html">
+  <strong>YouTube Audio Library vs Commercial Music</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/youtube-content-id-guide.html">
+  <strong>YouTube Content ID Guide</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/youtube-demonetization-caused-by-music.html">
+  <strong>YouTube Demonetization Caused by Music</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
 </div>
 
 </section>
 
-<!-- AI VIDEO & YOUTUBE AUTOMATION -->
-<section id="ai-youtube" style="margin-bottom:80px;">
 
-<h2>AI Video, YouTube Automation & Modern Creator Workflows</h2>
+<section id="commercial-licensing-pricing-proof" class="index-section">
 
-<p style="line-height:1.9;color:#ccc;">
-Use these guides if you create AI-generated videos, faceless YouTube videos, automated video workflows, recurring content, or commercial AI video projects.
+<h2>Commercial Licensing, Pricing &amp; Proof</h2>
+
+<p class="section-intro">
+Commercial licenses, creator licenses, pricing, license comparison, documentation, proof of license, and commercial-use workflows.
 </p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px;">
-
-<a href="/site/pages/music-for-ai-video-generators.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for AI Video Generators</strong><br>
-<span style="color:#bbb;">Licensed music for AI-generated visuals and AI video workflows.</span>
+<div class="page-grid">
+<a class="page-card" href="/site/pages/affordable-music-licensing-for-creators.html">
+  <strong>Affordable Music Licensing for Creators</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/ai-video-music-licensing-guide.html">
+  <strong>AI Video Music Licensing Guide</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/commercial-license-vs-sync-license.html">
+  <strong>Commercial License vs Sync License</strong>
+  <span>Music rights, sync licensing, master rights, metadata, and documentation guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/commercial-music-license.html">
+  <strong>Commercial Music License</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/commercial-music-licensing.html">
+  <strong>Commercial Music Licensing</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/commercial-use-music-guide.html">
+  <strong>Commercial Use Music Guide</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/copyright-free-lofi-music.html">
+  <strong>Copyright Free Lo-Fi Music</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/copyright-safe-music-for-ai-videos.html">
+  <strong>Copyright-Safe Music for AI Videos</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/copyright-safe-music-for-brands.html">
+  <strong>Copyright-Safe Music for Brands</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/copyright-safe-music-for-creators.html">
+  <strong>Copyright-Safe Music for Creators</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/faq-commercial-music-license.html">
+  <strong>FAQ Commercial Music License</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/free-music-vs-paid-license-risk.html">
+  <strong>Free Music vs Paid License Risk</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/how-commercial-music-licenses-work.html">
+  <strong>How Commercial Music Licenses Work</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/how-sync-licensing-works.html">
+  <strong>How Sync Licensing Works</strong>
+  <span>Music rights, sync licensing, master rights, metadata, and documentation guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/how-to-choose-music-license-for-videos.html">
+  <strong>How to Choose Music License for Videos</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/how-to-license-music-for-ai-generated-videos.html">
+  <strong>How to License Music for AI Generated Videos</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/how-to-license-music-for-videos.html">
+  <strong>How to License Music for Videos</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/license-comparison.html">
+  <strong>License Comparison</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/licensed-lofi-music.html">
+  <strong>Licensed Lo-Fi Music</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/licensed-music-for-ai-commercial-videos.html">
+  <strong>Licensed Music for AI Commercial Videos</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/licensing-process.html">
+  <strong>Licensing Process</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/monthly-music-license-subscription-vs-one-time.html">
+  <strong>Monthly Music License Subscription vs One-Time</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-commercial-ads.html">
+  <strong>Music for Commercial Ads</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-commercial-projects.html">
+  <strong>Music for Commercial Projects</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-commercial-use.html">
+  <strong>Music for Commercial Use</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-commercial-videos.html">
+  <strong>Music for Commercial Videos</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-contact.html">
+  <strong>Music License Contact</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-documentation-checklist.html">
+  <strong>Music License Documentation Checklist</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-documentation-for-agencies.html">
+  <strong>Music License Documentation for Agencies</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-ads-vs-organic-social.html">
+  <strong>Music License for Ads vs Organic Social</strong>
+  <span>Music guidance for social media, UGC, influencer campaigns, short-form videos, and paid social.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-agencies.html">
+  <strong>Music License for Agencies</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-ai-business-videos.html">
+  <strong>Music License for AI Business Videos</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-brand-content.html">
+  <strong>Music License for Brand Content</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-brand-videos.html">
+  <strong>Music License for Brand Videos</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-brands.html">
+  <strong>Music License for Brands</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-business-videos.html">
+  <strong>Music License for Business Videos</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-client-videos.html">
+  <strong>Music License for Client Videos</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-client-work.html">
+  <strong>Music License for Client Work</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-marketing-campaigns.html">
+  <strong>Music License for Marketing Campaigns</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-paid-social-ads.html">
+  <strong>Music License for Paid Social Ads</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-podcasts.html">
+  <strong>Music License for Podcasts</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-small-business.html">
+  <strong>Music License for Small Business</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-license-for-sponsored-content.html">
+  <strong>Music License for Sponsored Content</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-licensing-for-commercial-use-guide.html">
+  <strong>Music Licensing for Commercial Use Guide</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-licensing-guide-for-creators.html">
+  <strong>Music Licensing Guide for Creators</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-licensing-vs-copyright-free-music.html">
+  <strong>Music Licensing vs Copyright Free Music</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-licensing-vs-sync-licensing.html">
+  <strong>Music Licensing vs Sync Licensing</strong>
+  <span>Music rights, sync licensing, master rights, metadata, and documentation guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-subscription-vs-single-track-license.html">
+  <strong>Music Subscription vs Single Track License</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/pricing-guide.html">
+  <strong>Pricing Guide</strong>
+  <span>A Nanashino-chan guide for music use, licensing, creator content, and commercial video workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/proof-of-music-license-for-business.html">
+  <strong>Proof of Music License for Business</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/proof-of-music-license.html">
+  <strong>Proof of Music License</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/recommended-tracks-for-commercial-video-use.html">
+  <strong>Recommended Tracks for Commercial Video Use</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/royalty-free-lofi-music.html">
+  <strong>Royalty-Free Lo-Fi Music</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/royalty-free-music-for-commercial-use.html">
+  <strong>Royalty-Free Music for Commercial Use</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/royalty-free-vs-copyright-free-music.html">
+  <strong>Royalty-Free vs Copyright Free Music</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/royalty-free-vs-licensed-music.html">
+  <strong>Royalty-Free vs Licensed Music</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
 </a>
 
-<a href="/site/pages/music-for-ai-content-creators.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for AI Content Creators</strong><br>
-<span style="color:#bbb;">Music licensing for AI-assisted creators and automated content workflows.</span>
-</a>
 
-<a href="/site/pages/licensed-music-for-ai-commercial-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Licensed Music for AI Commercial Videos</strong><br>
-<span style="color:#bbb;">Commercial music licensing for AI videos, ads, and client work.</span>
+<a class="page-card" href="/site/pages/safe-music-for-creators.html">
+  <strong>Safe Music for Creators</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
 </a>
-
-<a href="/site/pages/how-to-license-music-for-ai-generated-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>How to License Music for AI-Generated Videos</strong><br>
-<span style="color:#bbb;">Music licensing workflow for AI-generated video content.</span>
+<a class="page-card" href="/site/pages/sync-license-for-ai-generated-ads.html">
+  <strong>Sync License for AI Generated Ads</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
-<a href="/site/pages/licensed-music-for-ai-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Licensed Music for AI Videos</strong><br>
-<span style="color:#bbb;">Music for AI visuals, AI avatars, AI narration, and AI video production.</span>
+<a class="page-card" href="/site/pages/sync-license-for-brand-campaigns.html">
+  <strong>Sync License for Brand Campaigns</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
-<a href="/site/pages/music-for-youtube-automation-channels.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for YouTube Automation Channels</strong><br>
-<span style="color:#bbb;">Licensed music for faceless channels and recurring YouTube workflows.</span>
+<a class="page-card" href="/site/pages/understanding-commercial-music-rights.html">
+  <strong>Understanding Commercial Music Rights</strong>
+  <span>Music rights, sync licensing, master rights, metadata, and documentation guidance.</span>
 </a>
-
+<a class="page-card" href="/site/pages/unlimited-music-license-for-creators.html">
+  <strong>Unlimited Music License for Creators</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/what-is-master-license.html">
+  <strong>What is Master License</strong>
+  <span>Music rights, sync licensing, master rights, metadata, and documentation guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/what-is-sync-licensing.html">
+  <strong>What is Sync Licensing</strong>
+  <span>Music rights, sync licensing, master rights, metadata, and documentation guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/why-creators-need-music-licenses.html">
+  <strong>Why Creators Need Music Licenses</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/why-licensed-music-matters.html">
+  <strong>Why Licensed Music Matters</strong>
+  <span>Commercial music licensing, copyright-safe music, pricing, proof, and license selection guidance.</span>
+</a>
 </div>
 
 </section>
 
-<!-- CREATOR & ROLE-BASED GUIDES -->
-<section style="margin-bottom:80px;">
+<section id="sync-master-rights-copyright-metadata" class="index-section">
 
-<h2>Creator, Business & Role-Based Music Guides</h2>
+<h2>Sync, Master Rights, Copyright &amp; Metadata</h2>
 
-<p style="line-height:1.9;color:#ccc;">
-These pages are organized by who is using the music: creators, marketers, editors, podcasters, agencies, businesses, and client-facing teams.
+<p class="section-intro">
+Sync licensing, master rights, music rights, copyright basics, ISRC, Shazam identification, and rights management.
 </p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px;">
-
-<a href="/site/pages/music-for-content-creators.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Content Creators</strong><br>
-<span style="color:#bbb;">Music for YouTube, TikTok, Instagram, podcasts, and creator videos.</span>
+<div class="page-grid">
+<a class="page-card" href="/site/pages/can-you-use-copyrighted-music-in-ai-videos.html">
+  <strong>Can You Use Copyrighted Music in AI Videos</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
-<a href="/site/pages/music-for-content-marketers.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Content Marketers</strong><br>
-<span style="color:#bbb;">Music for brand content, campaigns, social videos, and marketing workflows.</span>
+<a class="page-card" href="/site/pages/copyright-safe-background-music.html">
+  <strong>Copyright-Safe Background Music</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
 </a>
-
-<a href="/site/pages/music-for-freelance-video-editors.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Freelance Video Editors</strong><br>
-<span style="color:#bbb;">Licensed music for client videos, commercial edits, and paid projects.</span>
+<a class="page-card" href="/site/pages/how-music-copyright-works.html">
+  <strong>How Music Copyright Works</strong>
+  <span>A Nanashino-chan guide for music use, licensing, creator content, and commercial video workflows.</span>
 </a>
-
-<a href="/site/pages/music-for-podcast-intro-outro.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Podcast Intro and Outro</strong><br>
-<span style="color:#bbb;">Licensed lo-fi music for podcasts, trailers, clips, and video podcasts.</span>
+<a class="page-card" href="/site/pages/how-music-rights-work.html">
+  <strong>How Music Rights Work</strong>
+  <span>Music rights, sync licensing, master rights, metadata, and documentation guidance.</span>
 </a>
-
-<a href="/site/pages/music-for-agencies.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Agencies</strong><br>
-<span style="color:#bbb;">Music licensing for agencies, clients, campaigns, and deliverables.</span>
+<a class="page-card" href="/site/pages/how-to-check-if-music-is-copyright-safe.html">
+  <strong>How to Check if Music is Copyright-Safe</strong>
+  <span>A Nanashino-chan guide for music use, licensing, creator content, and commercial video workflows.</span>
 </a>
-
-<a href="/site/pages/music-for-business-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Business Videos</strong><br>
-<span style="color:#bbb;">Music for companies, brand communication, and business content.</span>
+<a class="page-card" href="/site/pages/how-to-use-music-without-copyright.html">
+  <strong>How to Use Music without Copyright</strong>
+  <span>A Nanashino-chan guide for music use, licensing, creator content, and commercial video workflows.</span>
 </a>
-
-<a href="/site/pages/music-for-commercial-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Commercial Videos</strong><br>
-<span style="color:#bbb;">Music for paid campaigns, brand videos, and commercial production.</span>
+<a class="page-card" href="/site/pages/isrc-and-shazam-music-identification.html">
+  <strong>ISRC and Shazam Music Identification</strong>
+  <span>Music rights, sync licensing, master rights, metadata, and documentation guidance.</span>
 </a>
-
-<a href="/site/pages/background-music-for-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Background Music for Videos</strong><br>
-<span style="color:#bbb;">General background music for creator, business, and social videos.</span>
+<a class="page-card" href="/site/pages/isrc-code-explained.html">
+  <strong>ISRC Code Explained</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
+<a class="page-card" href="/site/pages/music-copyright-faq.html">
+  <strong>Music Copyright FAQ</strong>
+  <span>A Nanashino-chan guide for music use, licensing, creator content, and commercial video workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/music-copyright-for-content-creators.html">
+  <strong>Music Copyright for Content Creators</strong>
+  <span>A Nanashino-chan guide for music use, licensing, creator content, and commercial video workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/music-rights-explained.html">
+  <strong>Music Rights Explained</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/music-rights-for-video-creators.html">
+  <strong>Music Rights for Video Creators</strong>
+  <span>Music rights, sync licensing, master rights, metadata, and documentation guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/music-rights-management.html">
+  <strong>Music Rights Management</strong>
+  <span>Music rights, sync licensing, master rights, metadata, and documentation guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/what-are-sync-rights.html">
+  <strong>What are Sync Rights</strong>
+  <span>Music rights, sync licensing, master rights, metadata, and documentation guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/what-happens-if-you-use-copyrighted-music.html">
+  <strong>What Happens if You Use Copyrighted Music</strong>
+  <span>A Nanashino-chan guide for music use, licensing, creator content, and commercial video workflows.</span>
+</a>
 </div>
 
 </section>
 
-<!-- SOCIAL / UGC / INFLUENCER -->
-<section id="social-ugc" style="margin-bottom:80px;">
+<section id="ai-video-automation-new-creator-workflows" class="index-section">
 
-<h2>UGC, Influencer Marketing & Social Ads</h2>
+<h2>AI Video, Automation &amp; New Creator Workflows</h2>
 
-<p style="line-height:1.9;color:#ccc;">
-Use these pages for Instagram UGC ads, TikTok brand deals, sponsored posts, influencer campaigns, creator partnerships, whitelisted ads, Spark Ads, and paid social content.
-</p>
-<!-- INFOGRAPHIC: UGC & INFLUENCER MUSIC RIGHTS MAP -->
-<figure style="margin:32px 0 36px;">
-
-<img
-src="/site/images/infographics/ugc-influencer-music-rights-map.webp"
-alt="UGC and influencer music rights map showing creator posts, brand deals, client delivery, paid ads, multi-platform reuse, commercial use, sync use, platform use, and proof of license"
-loading="lazy"
-width="1600"
-height="900"
-style="width:100%;height:auto;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.28);">
-
-<figcaption style="font-size:14px;color:#aaa;line-height:1.8;margin-top:12px;text-align:center;">
-A practical music rights map for UGC creators, influencer campaigns, brand deals, client delivery, paid ads, and multi-platform reuse.
-</figcaption>
-
-</figure>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px;">
-
-<a href="/site/pages/music-for-ugc-creators-guide.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for UGC Creators Guide</strong><br>
-<span style="color:#bbb;">The main guide for UGC videos, brand deals, and creator content.</span>
-</a>
-
-<a href="/site/pages/music-for-instagram-ugc-ads.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Instagram UGC Ads</strong><br>
-<span style="color:#bbb;">Licensed music for Instagram UGC ads, Reels, and paid social.</span>
-</a>
-
-<a href="/site/pages/music-for-tiktok-brand-deals.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for TikTok Brand Deals</strong><br>
-<span style="color:#bbb;">Music licensing for sponsored TikTok videos and creator campaigns.</span>
-</a>
-
-<a href="/site/pages/music-for-influencer-marketing.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Influencer Marketing</strong><br>
-<span style="color:#bbb;">Licensed music for sponsored posts, creator partnerships, and brand campaigns.</span>
-</a>
-
-<a href="/site/pages/music-for-tiktok-videos.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for TikTok Videos</strong><br>
-<span style="color:#bbb;">Music for TikTok creators and short-form video workflows.</span>
-</a>
-
-<a href="/site/pages/music-for-instagram-reels.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music for Instagram Reels</strong><br>
-<span style="color:#bbb;">Music for Reels, social videos, and short-form creator content.</span>
-</a>
-
-<a href="/site/pages/music-license-social-media-guide.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Social Media Music License Guide</strong><br>
-<span style="color:#bbb;">Understand music licensing for social platforms and campaign use.</span>
-</a>
-
-<a href="/site/pages/background-music-for-ads.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Background Music for Ads</strong><br>
-<span style="color:#bbb;">Music for paid social ads, campaign videos, and promotional content.</span>
-</a>
-
-</div>
-
-</section>
-
-<!-- LO-FI USE CASES -->
-<section id="lofi-use-cases" style="margin-bottom:80px;">
-
-<h2>Lo-Fi Music by Mood, Activity & Use Case</h2>
-
-<p style="line-height:1.9;color:#ccc;">
-Use these pages if you are looking for lo-fi music by mood, activity, or listening purpose.
+<p class="section-intro">
+AI video music, AI-generated content, AI ads, AI product videos, and YouTube automation workflows.
 </p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px;">
-
-<a href="/site/pages/lofi-music-for-focus.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Lo-Fi Music for Focus</strong><br>
-<span style="color:#bbb;">Calm background music for concentration and deep work.</span>
+<div class="page-grid">
+<a class="page-card" href="/site/pages/music-for-ai-ads.html">
+  <strong>Music for AI Ads</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
-<a href="/site/pages/lofi-music-for-studying.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Lo-Fi Music for Studying</strong><br>
-<span style="color:#bbb;">Study-friendly lo-fi music for reading, learning, and homework.</span>
+<a class="page-card" href="/site/pages/music-for-ai-avatar-videos.html">
+  <strong>Music for AI Avatar Videos</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
-<a href="/site/pages/lofi-music-for-coding.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Lo-Fi Music for Coding</strong><br>
-<span style="color:#bbb;">Lo-fi beats for programming, development, and technical work.</span>
+<a class="page-card" href="/site/pages/music-for-ai-content-creators.html">
+  <strong>Music for AI Content Creators</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
-<a href="/site/pages/lofi-music-for-productivity.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Lo-Fi Music for Productivity</strong><br>
-<span style="color:#bbb;">Music for work sessions, daily tasks, and productive routines.</span>
+<a class="page-card" href="/site/pages/music-for-ai-generated-content.html">
+  <strong>Music for AI Generated Content</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
-<a href="/site/pages/lofi-music-for-relaxation.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Lo-Fi Music for Relaxation</strong><br>
-<span style="color:#bbb;">Relaxing lo-fi music for calm moments and slow evenings.</span>
+<a class="page-card" href="/site/pages/music-for-ai-marketing-content.html">
+  <strong>Music for AI Marketing Content</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
-<a href="/site/pages/lofi-music-for-sleep.html" style="display:block;background:#111;padding:22px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Lo-Fi Music for Sleep</strong><br>
-<span style="color:#bbb;">Soft lo-fi music for sleep, rest, and nighttime listening.</span>
+<a class="page-card" href="/site/pages/music-for-ai-product-videos.html">
+  <strong>Music for AI Product Videos</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
 </a>
-
+<a class="page-card" href="/site/pages/music-for-ai-video-generators.html">
+  <strong>Music for AI Video Generators</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
 </div>
 
 </section>
 
-<!-- LISTENING & MUSIC LIBRARY -->
-<section style="margin-bottom:80px;">
+<section id="brands-agencies-business-industry-use-cases" class="index-section">
 
-<h2>Listen to Nanashino-chan Music</h2>
+<h2>Brands, Agencies, Business &amp; Industry Use Cases</h2>
 
-<p style="line-height:1.9;color:#ccc;">
-Start listening directly, browse tracks, or explore real-world use cases.
+<p class="section-intro">
+Music for brands, agencies, client work, product videos, ads, e-commerce, SaaS, real estate, hospitality, fashion, and wellness.
 </p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px;">
-
-<a href="/site/today.html" style="display:block;background:#ffcc00;color:#000;padding:24px;border-radius:14px;text-decoration:none;">
-<strong>Listen Now</strong><br>
-<span style="color:#111;">Play lo-fi music immediately.</span>
+<div class="page-grid">
+<a class="page-card" href="/site/pages/background-music-for-ads.html">
+  <strong>Background Music for Ads</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
 </a>
-
-<a href="/site/music.html" style="display:block;background:#111;color:#fff;padding:24px;border-radius:14px;text-decoration:none;">
-<strong>Music Library</strong><br>
-<span style="color:#bbb;">Browse Nanashino-chan tracks and music pages.</span>
+<a class="page-card" href="/site/pages/background-music-for-brands.html">
+  <strong>Background Music for Brands</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
 </a>
-
-<a href="/site/works.html" style="display:block;background:#111;color:#fff;padding:24px;border-radius:14px;text-decoration:none;">
-<strong>Works</strong><br>
-<span style="color:#bbb;">See real brand and creator use cases.</span>
+<a class="page-card" href="/site/pages/background-music-for-restaurants.html">
+  <strong>Background Music for Restaurants</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
 </a>
-
-<a href="/site/licensing.html" style="display:block;background:#111;color:#fff;padding:24px;border-radius:14px;text-decoration:none;">
-<strong>License Music</strong><br>
-<span style="color:#bbb;">Choose a license for creator, commercial, sync, or brand use.</span>
+<a class="page-card" href="/site/pages/custom-music-for-brands.html">
+  <strong>Custom Music for Brands</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
 </a>
+<a class="page-card" href="/site/pages/lofi-music-for-ads.html">
+  <strong>Lo-Fi Music for Ads</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-business-videos.html">
+  <strong>Lo-Fi Music for Business Videos</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-luxury-brand-videos.html">
+  <strong>Lo-Fi Music for Luxury Brand Videos</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-productivity.html">
+  <strong>Lo-Fi Music for Productivity</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-agency-client-videos.html">
+  <strong>Music for Agency Client Videos</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-agency-videos.html">
+  <strong>Music for Agency Videos</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-b2b-marketing-videos.html">
+  <strong>Music for B2B Marketing Videos</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-brand-content.html">
+  <strong>Music for Brand Content</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-business-videos.html">
+  <strong>Music for Business Videos</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-cafe-restaurant-videos.html">
+  <strong>Music for Cafe Restaurant Videos</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-client-work.html">
+  <strong>Music for Client Work</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-coffee-shops.html">
+  <strong>Music for Coffee Shops</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-corporate-training-videos.html">
+  <strong>Music for Corporate Training Videos</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-ecommerce-advertising.html">
+  <strong>Music for E-commerce Advertising</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-fashion-brand-videos.html">
+  <strong>Music for Fashion Brand Videos</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-hotel-travel-brand-videos.html">
+  <strong>Music for Hotel Travel Brand Videos</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-kickstarter-videos.html">
+  <strong>Music for Kickstarter Videos</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-product-demo-videos.html">
+  <strong>Music for Product Demo Videos</strong>
+  <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-product-videos.html">
+  <strong>Music for Product Videos</strong>
+
+
+<span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span> </a> <a class="page-card" href="/site/pages/music-for-real-estate-videos.html"> <strong>Music for Real Estate Videos</strong> <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span> </a> <a class="page-card" href="/site/pages/music-for-saas-demo-videos.html"> <strong>Music for SaaS Demo Videos</strong> <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span> </a> <a class="page-card" href="/site/pages/music-for-saas-product-videos.html"> <strong>Music for SaaS Product Videos</strong> <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span> </a> <a class="page-card" href="/site/pages/music-for-sponsored-content.html"> <strong>Music for Sponsored Content</strong> <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span> </a> <a class="page-card" href="/site/pages/music-for-sponsored-videos.html"> <strong>Music for Sponsored Videos</strong> <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span> </a> <a class="page-card" href="/site/pages/music-for-startup-videos.html"> <strong>Music for Startup Videos</strong> <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span> </a> <a class="page-card" href="/site/pages/music-for-wellness-brand-videos.html"> <strong>Music for Wellness Brand Videos</strong> <span>Music for business videos, brand content, agencies, client work, ads, and marketing campaigns.</span> </a>
 
 </div>
 
 </section>
 
-<!-- BRAND PROOF / WORKS CTA -->
-<section style="
-margin-bottom:80px;
-padding:32px;
-background:#111;
-border:1px solid rgba(255,204,0,0.22);
-border-radius:18px;
-text-align:center;
-">
+<section id="creators-podcasts-streamers-video-editors" class="index-section">
 
-<h2 style="margin-top:0;">Used in Real Brand & Creator Projects</h2>
+<h2>Creators, Podcasts, Streamers &amp; Video Editors</h2>
 
-<p style="line-height:1.9;color:#ccc;max-width:760px;margin:20px auto;">
-Nanashino-chan music is designed for creators, brands, agencies, marketers, editors, podcasters, AI video makers, and commercial projects that need clearer music licensing options.
+<p class="section-intro">
+Music guidance for content creators, podcasters, streamers, video editors, freelancers, and creator channels.
+</p>
+
+<div class="page-grid">
+<a class="page-card" href="/site/pages/background-music-for-streams.html">
+  <strong>Background Music for Streams</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-content-creators.html">
+  <strong>Music for Content Creators</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-content-marketers.html">
+  <strong>Music for Content Marketers</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-freelance-video-editors.html">
+  <strong>Music for Freelance Video Editors</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-freelancers.html">
+  <strong>Music for Freelancers</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-podcast-creators.html">
+  <strong>Music for Podcast Creators</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-podcast-intro-outro.html">
+  <strong>Music for Podcast Intro Outro</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-streamers.html">
+  <strong>Music for Streamers</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-twitch-streamers.html">
+  <strong>Music for Twitch Streamers</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+</div>
+
+</section>
+
+<section id="lo-fi-music-by-mood-activity-platform" class="index-section">
+
+<h2>Lo-Fi Music by Mood, Activity &amp; Platform</h2>
+
+<p class="section-intro">
+Lo-fi music pages for focus, studying, coding, working, sleep, relaxation, productivity, platforms, and listening contexts.
+</p>
+
+<div class="page-grid">
+<a class="page-card" href="/site/pages/background-music-for-videos.html">
+  <strong>Background Music for Videos</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/japanese-lofi-music.html">
+  <strong>Japanese Lo-Fi Music</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-coding.html">
+  <strong>Lo-Fi Music for Coding</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-creative-work.html">
+  <strong>Lo-Fi Music for Creative Work</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-deep-focus.html">
+  <strong>Lo-Fi Music for Deep Focus</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-focus.html">
+  <strong>Lo-Fi Music for Focus</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-night-playlists.html">
+  <strong>Lo-Fi Music for Night Playlists</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-programming.html">
+  <strong>Lo-Fi Music for Programming</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-reading.html">
+  <strong>Lo-Fi Music for Reading</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-relaxation.html">
+  <strong>Lo-Fi Music for Relaxation</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-sleep.html">
+  <strong>Lo-Fi Music for Sleep</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-studying.html">
+  <strong>Lo-Fi Music for Studying</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/lofi-music-for-working.html">
+  <strong>Lo-Fi Music for Working</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-anxiety-relief.html">
+  <strong>Music for Anxiety Relief</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-night-driving.html">
+  <strong>Music for Night Driving</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+</div>
+
+</section>
+
+<section id="other-music-licensing-guides" class="index-section">
+
+<h2>Other Music Licensing Guides</h2>
+
+<p class="section-intro">
+Additional guides for music use, licensing, content workflows, and Nanashino-chan resources.
+</p>
+
+<div class="page-grid">
+<a class="page-card" href="/site/pages/music-for-agencies.html">
+  <strong>Music for Agencies</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+<a class="page-card" href="/site/pages/music-for-app-demo-videos.html">
+  <strong>Music for App Demo Videos</strong>
+  <span>Lo-fi and background music guidance by platform, mood, activity, and creator use case.</span>
+</a>
+</div>
+
+</section>
+
+<section id="additional-existing-links" class="index-section">
+
+<h2>Additional Existing Links Preserved</h2>
+
+<p class="section-intro">
+These links were present in the current index but were not included in the extracted /pages/ URL list. Keep them only if the pages exist on the live site.
+</p>
+
+<div class="page-grid">
+<a class="page-card" href="/site/pages/can-i-use-music-on-youtube-shorts.html">
+  <strong>Can I Use Music on YouTube Shorts</strong>
+  <span>YouTube music use, Content ID, monetization, copyright, and creator workflow guidance.</span>
+</a>
+<a class="page-card" href="/site/pages/licensed-music-for-ai-videos.html">
+  <strong>Licensed Music for AI Videos</strong>
+  <span>Music licensing guidance for AI video, AI content, automation, and commercial AI workflows.</span>
+</a>
+</div>
+
+</section>
+
+<section class="text-link-directory">
+
+<h2 style="margin-top:0;">Plain Text Link Directory</h2>
+
+<p>
+This fallback text directory repeats all extracted guide links in a compact format for crawlability and manual checking.
+</p>
+
+<p>
+<a href="/site/pages/affordable-music-licensing-for-creators.html">Affordable Music Licensing for Creators</a> |
+<a href="/site/pages/ai-video-music-licensing-guide.html">AI Video Music Licensing Guide</a> |
+<a href="/site/pages/background-music-for-ads.html">Background Music for Ads</a> |
+<a href="/site/pages/background-music-for-brands.html">Background Music for Brands</a> |
+<a href="/site/pages/background-music-for-restaurants.html">Background Music for Restaurants</a> |
+<a href="/site/pages/background-music-for-streams.html">Background Music for Streams</a> |
+<a href="/site/pages/background-music-for-videos.html">Background Music for Videos</a> |
+<a href="/site/pages/best-music-licenses-for-youtube-monetization.html">Best Music Licenses for YouTube Monetization</a> |
+<a href="/site/pages/can-businesses-use-platform-music.html">Can Businesses Use Platform Music</a> |
+<a href="/site/pages/can-i-use-music-on-youtube.html">Can I Use Music on YouTube</a> |
+<a href="/site/pages/can-you-use-copyrighted-music-in-ai-videos.html">Can You Use Copyrighted Music in AI Videos</a> |
+<a href="/site/pages/can-you-use-famous-songs-on-social-media.html">Can You Use Famous Songs on Social Media</a> |
+<a href="/site/pages/can-you-use-lofi-music-in-youtube-videos.html">Can You Use Lo-Fi Music in YouTube Videos</a> |
+<a href="/site/pages/commercial-license-vs-sync-license.html">Commercial License vs Sync License</a> |
+<a href="/site/pages/commercial-music-license.html">Commercial Music License</a> |
+<a href="/site/pages/commercial-music-licensing.html">Commercial Music Licensing</a> |
+<a href="/site/pages/commercial-use-music-guide.html">Commercial Use Music Guide</a> |
+<a href="/site/pages/content-id-vs-copyright-strike.html">Content ID vs Copyright Strike</a> |
+<a href="/site/pages/copyright-free-lofi-music.html">Copyright Free Lo-Fi Music</a> |
+<a href="/site/pages/copyright-safe-background-music.html">Copyright-Safe Background Music</a> |
+<a href="/site/pages/copyright-safe-music-for-ai-videos.html">Copyright-Safe Music for AI Videos</a> |
+<a href="/site/pages/copyright-safe-music-for-brands.html">Copyright-Safe Music for Brands</a> |
+<a href="/site/pages/copyright-safe-music-for-creators.html">Copyright-Safe Music for Creators</a> |
+<a href="/site/pages/copyright-safe-music-for-youtube.html">Copyright-Safe Music for YouTube</a> |
+<a href="/site/pages/custom-music-for-brands.html">Custom Music for Brands</a> |
+<a href="/site/pages/faq-commercial-music-license.html">FAQ Commercial Music License</a> |
+<a href="/site/pages/free-music-vs-paid-license-risk.html">Free Music vs Paid License Risk</a> |
+<a href="/site/pages/how-commercial-music-licenses-work.html">How Commercial Music Licenses Work</a> |
+<a href="/site/pages/how-content-id-works.html">How Content ID Works</a> |
+<a href="/site/pages/how-music-copyright-works.html">How Music Copyright Works</a> |
+<a href="/site/pages/how-music-rights-work-on-social-media.html">How Music Rights Work on Social Media</a> |
+
+Part 6です。これで最後です。
+
+<a href="/site/pages/music-license-for-client-videos.html">Music License for Client Videos</a> | <a href="/site/pages/music-license-for-client-work.html">Music License for Client Work</a> | <a href="/site/pages/music-license-for-marketing-campaigns.html">Music License for Marketing Campaigns</a> | <a href="/site/pages/music-license-for-paid-social-ads.html">Music License for Paid Social Ads</a> | <a href="/site/pages/music-license-for-podcasts.html">Music License for Podcasts</a> | <a href="/site/pages/music-license-for-small-business.html">Music License for Small Business</a> | <a href="/site/pages/music-license-for-sponsored-content.html">Music License for Sponsored Content</a> | <a href="/site/pages/music-license-for-youtube-creators.html">Music License for YouTube Creators</a> | <a href="/site/pages/music-license-social-media-guide.html">Music License Social Media Guide</a> | <a href="/site/pages/music-licensing-for-commercial-use-guide.html">Music Licensing for Commercial Use Guide</a> | <a href="/site/pages/music-licensing-for-youtube-ads.html">Music Licensing for YouTube Ads</a> | <a href="/site/pages/music-licensing-guide-for-creators.html">Music Licensing Guide for Creators</a> | <a href="/site/pages/music-licensing-vs-copyright-free-music.html">Music Licensing vs Copyright Free Music</a> | <a href="/site/pages/music-licensing-vs-sync-licensing.html">Music Licensing vs Sync Licensing</a> | <a href="/site/pages/music-rights-explained.html">Music Rights Explained</a> | <a href="/site/pages/music-rights-for-video-creators.html">Music Rights for Video Creators</a> | <a href="/site/pages/music-rights-management.html">Music Rights Management</a> | <a href="/site/pages/music-subscription-vs-single-track-license.html">Music Subscription vs Single Track License</a> | <a href="/site/pages/pricing-guide.html">Pricing Guide</a> | <a href="/site/pages/proof-of-music-license-for-business.html">Proof of Music License for Business</a> | <a href="/site/pages/proof-of-music-license.html">Proof of Music License</a> | <a href="/site/pages/recommended-tracks-for-commercial-video-use.html">Recommended Tracks for Commercial Video Use</a> | <a href="/site/pages/royalty-free-lofi-music.html">Royalty-Free Lo-Fi Music</a> | <a href="/site/pages/royalty-free-music-for-commercial-use.html">Royalty-Free Music for Commercial Use</a> | <a href="/site/pages/royalty-free-vs-copyright-free-music.html">Royalty-Free vs Copyright Free Music</a> | <a href="/site/pages/royalty-free-vs-licensed-music.html">Royalty-Free vs Licensed Music</a> | <a href="/site/pages/safe-music-for-creators.html">Safe Music for Creators</a> | <a href="/site/pages/sync-license-for-ai-generated-ads.html">Sync License for AI Generated Ads</a> | <a href="/site/pages/sync-license-for-brand-campaigns.html">Sync License for Brand Campaigns</a> | <a href="/site/pages/sync-license-for-youtube.html">Sync License for YouTube</a> | <a href="/site/pages/understanding-commercial-music-rights.html">Understanding Commercial Music Rights</a> | <a href="/site/pages/unlimited-music-license-for-creators.html">Unlimited Music License for Creators</a> | <a href="/site/pages/what-are-sync-rights.html">What are Sync Rights</a> | <a href="/site/pages/what-happens-if-you-use-copyrighted-music.html">What Happens if You Use Copyrighted Music</a> | <a href="/site/pages/what-is-content-id.html">What is Content ID</a> | <a href="/site/pages/what-is-master-license.html">What is Master License</a> | <a href="/site/pages/what-is-sync-licensing.html">What is Sync Licensing</a> | <a href="/site/pages/which-music-license-is-best-for-youtube.html">Which Music License is Best for YouTube</a> | <a href="/site/pages/why-creators-need-music-licenses.html">Why Creators Need Music Licenses</a> | <a href="/site/pages/why-instagram-mutes-videos.html">Why Instagram Mutes Videos</a> | <a href="/site/pages/why-licensed-music-matters.html">Why Licensed Music Matters</a> | <a href="/site/pages/why-your-video-got-copyright-claim.html">Why Your Video Got Copyright Claim</a> | <a href="/site/pages/youtube-audio-library-vs-commercial-music.html">YouTube Audio Library vs Commercial Music</a> | <a href="/site/pages/youtube-content-id-guide.html">YouTube Content ID Guide</a> | <a href="/site/pages/youtube-demonetization-caused-by-music.html">YouTube Demonetization Caused by Music</a>
+
+</p>
+
+<p style="margin-top:22px;color:#ccc;">
+Additional existing links preserved:
 <br>
-Nanashino-chanの楽曲は、実際のブランド・クリエイタープロジェクトでも使用されています。
+<a href="/site/pages/can-i-use-music-on-youtube-shorts.html">Can I Use Music on YouTube Shorts</a> |
+<a href="/site/pages/licensed-music-for-ai-videos.html">Licensed Music for AI Videos</a>
 </p>
-
-<div style="margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-
-<a href="/site/works.html"
-style="display:inline-block;background:#ffcc00;color:#000;padding:16px 28px;border-radius:10px;font-weight:bold;text-decoration:none;">
-► View Real Use Cases
-</a>
-
-<a href="/site/licensing.html"
-style="display:inline-block;background:#181818;color:#fff;padding:16px 28px;border-radius:10px;font-weight:bold;text-decoration:none;border:1px solid #333;">
-View Licensing Options
-</a>
-
-</div>
 
 </section>
 
-<!-- SITE MAP / MAIN LINKS -->
 <section style="margin-bottom:80px;">
 
 <h2>Main Site Pages</h2>
@@ -843,73 +1422,68 @@ View Licensing Options
 Use these links to move back to the main Nanashino-chan site sections.
 </p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:28px;">
+<div class="page-grid">
 
-<a href="/site/index.html" style="display:block;background:#111;padding:20px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Home</strong><br>
-<span style="color:#bbb;">Return to the main site.</span>
+<a class="page-card" href="/site/index.html">
+  <strong>Home</strong>
+  <span>Return to the main site.</span>
 </a>
 
-<a href="/site/today.html" style="display:block;background:#111;padding:20px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Listen Now</strong><br>
-<span style="color:#bbb;">Start playing music.</span>
+<a class="page-card" href="/site/today.html">
+  <strong>Listen Now</strong>
+  <span>Start playing Nanashino-chan lo-fi music.</span>
 </a>
 
-<a href="/site/music.html" style="display:block;background:#111;padding:20px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Music</strong><br>
-<span style="color:#bbb;">Browse music and tracks.</span>
+<a class="page-card" href="/site/music.html">
+  <strong>Music</strong>
+  <span>Browse music and tracks.</span>
 </a>
 
-<a href="/site/licensing.html" style="display:block;background:#111;padding:20px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>License</strong><br>
-<span style="color:#bbb;">Music licensing options.</span>
+<a class="page-card" href="/site/licensing.html">
+  <strong>License Music</strong>
+  <span>Music licensing options for creators, brands, agencies, ads, and campaigns.</span>
 </a>
 
-<a href="/site/faq.html" style="display:block;background:#111;padding:20px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>FAQ</strong><br>
-<span style="color:#bbb;">Frequently asked questions.</span>
+<a class="page-card" href="/site/works.html">
+  <strong>Works</strong>
+  <span>See public brand and creator use references.</span>
 </a>
 
-<a href="/site/contact.html" style="display:block;background:#111;padding:20px;border-radius:14px;text-decoration:none;color:#fff;">
-<strong>Contact</strong><br>
-<span style="color:#bbb;">Ask about licensing or custom use.</span>
+<a class="page-card" href="/site/faq.html">
+  <strong>FAQ</strong>
+  <span>Frequently asked questions about music licensing and safe use.</span>
+</a>
+
+<a class="page-card" href="/site/contact.html">
+  <strong>Contact</strong>
+  <span>Ask about licensing, custom use, or project discussions.</span>
 </a>
 
 </div>
 
 </section>
 
-<!-- FINAL CTA -->
-<section style="
-margin-bottom:80px;
-padding:36px 24px;
-text-align:center;
-border-radius:18px;
-background:linear-gradient(180deg,rgba(255,204,0,0.12),rgba(255,204,0,0.03));
-border:1px solid rgba(255,204,0,0.24);
-">
+<section class="final-cta">
 
-<h2 style="margin-top:0;color:#ffcc00;">
+<h2>
 Create With Clearer Music Licensing
 </h2>
 
-<p style="line-height:1.9;max-width:760px;margin:20px auto;color:#ccc;">
+<p>
 Use copyright-safe lo-fi music for YouTube, TikTok, Instagram, UGC ads, podcasts, AI videos, business videos, commercial campaigns, and creator workflows.
 </p>
 
-<p style="line-height:1.9;max-width:760px;margin:20px auto;color:#ccc;">
+<p>
 動画・SNS・広告・AI動画・ポッドキャスト・商用利用に向けて、用途に合った音楽ライセンスを確認できます。
 </p>
 
-<div style="margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+<div class="index-actions">
 
-<a href="/site/licensing.html"
-style="display:inline-block;background:#ffcc00;color:#000;padding:18px 32px;border-radius:10px;font-weight:bold;text-decoration:none;font-size:18px;">
+<a class="primary-btn" href="/site/licensing.html">
 ► View Licensing Options
 </a>
 
-<a href="/site/today.html"
-style="display:inline-block;background:#111;color:#fff;padding:18px 32px;border-radius:10px;font-weight:bold;text-decoration:none;font-size:18px;border:1px solid #333;">
+<a class="secondary-btn" href="/site/today.html">
 ▶ Listen Now
 </a>
 
@@ -917,7 +1491,6 @@ style="display:inline-block;background:#111;color:#fff;padding:18px 32px;border-
 
 </section>
 
-<!-- INTERNAL TEXT LINKS -->
 <section style="text-align:center;margin-bottom:50px;font-size:14px;line-height:2;color:#aaa;">
 
 <p>Main Pages:</p>
@@ -927,8 +1500,8 @@ style="display:inline-block;background:#111;color:#fff;padding:18px 32px;border-
 <a href="/site/today.html">Listen Now</a> |
 <a href="/site/music.html">Music</a> |
 <a href="/site/licensing.html">License</a> |
-<a href="/site/faq.html">FAQ</a> |
 <a href="/site/works.html">Works</a> |
+<a href="/site/faq.html">FAQ</a> |
 <a href="/site/contact.html">Contact</a>
 </p>
 
@@ -943,7 +1516,6 @@ Legal:
 
 </main>
 
-<!-- FOOTER -->
 <footer class="site-footer">
 <div class="footer-container">
 
@@ -957,6 +1529,7 @@ Legal:
 <a href="/site/today.html">Listen Now</a> |
 <a href="/site/music.html">Music</a> |
 <a href="/site/licensing.html">License Music</a> |
+<a href="/site/works.html">Works</a> |
 <a href="/site/faq.html">FAQ</a> |
 <a href="/site/terms.html">Terms</a> |
 <a href="/site/commerce.html">Legal</a> |
@@ -974,6 +1547,4 @@ Legal:
 
 </body>
 </html>
-
-
 
