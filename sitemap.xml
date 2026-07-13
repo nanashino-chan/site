@@ -751,6 +751,12 @@
     <priority>0.82</priority>
   </url>
   <url>
+    <loc>https://nanashino-chan.github.io/site/pages/music-for-animated-web-series.html</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://nanashino-chan.github.io/site/pages/music-for-anxiety-relief.html</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1058,6 +1064,12 @@
   </url>
   <url>
     <loc>https://nanashino-chan.github.io/site/pages/music-for-ugc-creators-guide.html</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://nanashino-chan.github.io/site/pages/music-for-web-novel-trailers.html</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
