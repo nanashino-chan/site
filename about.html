@@ -9,7 +9,7 @@
 
 <title>About Nanashino-chan | Tokyo Lo-Fi Artist & Music Licensing Project</title>
 
-<meta name="description" content="Meet Nanashino-chan, an independent Tokyo lo-fi artist and music project with 2,000+ original tracks, 3,500+ Shazams, international public-use references, and direct commercial licensing.">
+<meta name="description" content="Meet Nanashino-chan, an independent Tokyo lo-fi music project with 2,000+ original tracks, 3,500+ Shazams, 2,500+ public Instagram Reels, and commercial music licensing for creators, brands, agencies, and AI videos.">
 
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Nanashino-chan">
@@ -21,7 +21,7 @@ default-src 'self';
 script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
 connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
 img-src 'self' data:;
-style-src 'self';
+style-src 'self' 'unsafe-inline';
 font-src 'self';
 object-src 'none';
 base-uri 'self';
@@ -35,18 +35,18 @@ frame-ancestors 'self';
 <link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
 
 <meta property="og:title" content="About Nanashino-chan | Tokyo Lo-Fi Artist & Music Licensing Project">
-<meta property="og:description" content="An independent Tokyo lo-fi artist and music project with 2,000+ original tracks, global discovery signals, public visual-use references, and direct licensing.">
+<meta property="og:description" content="An independent Tokyo lo-fi music project with 2,000+ original tracks, global discovery signals, public visual-use references, and direct commercial licensing.">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/about.html">
 <meta property="og:site_name" content="Nanashino-chan">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="675">
-<meta property="og:image:alt" content="Nanashino-chan, an independent Tokyo lo-fi music artist and project">
+<meta property="og:image:alt" content="Nanashino-chan, an independent Tokyo lo-fi music artist and creative project">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Nanashino-chan | Tokyo Lo-Fi Artist & Music Licensing Project">
-<meta name="twitter:description" content="Original lo-fi, chillhop, and jazzhop for listeners, creators, brands, agencies, and licensed digital content.">
+<meta name="twitter:description" content="Original lo-fi, chillhop, and jazzhop for listeners, creators, brands, agencies, and global digital content.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/nanashino-artist.jpg">
 <meta name="twitter:image:alt" content="Nanashino-chan Tokyo lo-fi music artist and project identity">
 
@@ -71,7 +71,7 @@ frame-ancestors 'self';
         "width": 1200,
         "height": 675
       },
-      "description": "Nanashino-chan is an independent Tokyo lo-fi music artist and project producing original lo-fi, chillhop, and jazzhop for listeners, creators, brands, agencies, and licensed commercial use.",
+      "description": "Nanashino-chan is an independent Tokyo lo-fi music artist and creative project producing original lo-fi, chillhop, and jazzhop music for listeners, creators, brands, agencies, and licensed commercial use.",
       "genre": [
         "Lo-Fi",
         "Lo-Fi Hip Hop",
@@ -109,7 +109,7 @@ frame-ancestors 'self';
       "@id": "https://nanashino-chan.github.io/site/about.html#webpage",
       "url": "https://nanashino-chan.github.io/site/about.html",
       "name": "About Nanashino-chan",
-      "description": "About Nanashino-chan, an independent Tokyo lo-fi artist and music licensing project with an original catalog for listening, visual storytelling, and commercial content.",
+      "description": "About Nanashino-chan, an independent Tokyo lo-fi music artist and music licensing project with an original catalog for listening, visual storytelling, and commercial content.",
       "isPartOf": {
         "@id": "https://nanashino-chan.github.io/site/#website"
       },
@@ -153,7 +153,7 @@ frame-ancestors 'self';
           "name": "Who is Nanashino-chan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nanashino-chan is an independent Tokyo lo-fi music artist and project. The name represents the music artist, the creative project, and the avatar used for its visual identity."
+            "text": "Nanashino-chan is an independent Tokyo lo-fi music artist and creative project. The name represents the music artist, the project identity, and the avatar used for its visual storytelling."
           }
         },
         {
@@ -166,7 +166,7 @@ frame-ancestors 'self';
         },
         {
           "@type": "Question",
-          "name": "Does Nanashino-chan manage the music rights?",
+          "name": "Does Nanashino-chan control the music rights?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Nanashino-chan manages the master recording rights and composition rights for its original catalog, helping make commercial rights review and licensing documentation more straightforward."
@@ -177,7 +177,7 @@ frame-ancestors 'self';
           "name": "Can Nanashino-chan music be licensed for commercial videos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Commercial and sync licensing options are available for eligible creator videos, company content, brand videos, client work, sponsored content, advertising campaigns, and AI-generated video projects."
+            "text": "Yes. Commercial and sync licensing options are available for eligible creator videos, company content, brand videos, client work, sponsored content, advertising campaigns, and AI-generated video projects."
           }
         },
         {
@@ -185,7 +185,7 @@ frame-ancestors 'self';
           "name": "Do public use references imply endorsement or partnership?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Unless separately stated, public references do not imply endorsement, sponsorship, partnership, approval, direct client status, or a formal licensing relationship."
+            "text": "No. Unless separately stated, public references are based on observed public social content and do not imply endorsement, sponsorship, partnership, approval, or a formal client relationship."
           }
         }
       ]
@@ -198,7 +198,7 @@ frame-ancestors 'self';
 window.dataLayer = window.dataLayer || [];
 
 function gtag() {
-  window.dataLayer.push(arguments);
+  dataLayer.push(arguments);
 }
 
 let gaLoaded = false;
@@ -225,7 +225,7 @@ window.addEventListener("touchstart", loadGA, { once: true });
 
 </head>
 
-<body>
+<body class="about-page-body">
 
 <header>
 <nav aria-label="Primary navigation">
@@ -241,157 +241,169 @@ window.addEventListener("touchstart", loadGA, { once: true });
 </nav>
 </header>
 
-<main>
+<main class="about-page">
 
-<section class="about-section">
+<nav class="about-page-breadcrumb" aria-label="Breadcrumb">
+<a href="/site/index.html">Home</a>
+<span aria-hidden="true">/</span>
+<span aria-current="page">About</span>
+</nav>
 
-<h1 class="about-title">About Nanashino-chan</h1>
+<section class="about-page-hero">
 
-<p class="about-tagline">
-Independent Tokyo Lo-Fi Artist, Music Project, Avatar and Licensing IP
+<div class="about-page-hero-grid">
+
+<div class="about-page-hero-copy">
+
+<p class="about-page-eyebrow">Independent music project from Tokyo</p>
+
+<h1>
+Nanashino-chan
+<span>Original Lo-Fi Music for Listening, Visuals and Licensed Content</span>
+</h1>
+
+<p class="about-page-lead">
+Nanashino-chan is an independent Tokyo lo-fi music artist and creative project producing original lo-fi, chillhop, and jazzhop for listeners, creators, brands, agencies, and global digital content.
 </p>
 
-<div class="about-content">
-
-<p>
-Nanashino-chan is an independent Tokyo lo-fi music artist and creative project producing original lo-fi, chillhop, jazzhop, and calm instrumental music for listeners, creators, brands, agencies, and digital content.
+<p class="about-page-note">
+The name represents the music artist, the independent project, and the character-based avatar used to express its visual world.
 </p>
 
-<p>
-The name represents the music artist, the independent project behind the catalog, and the character-based avatar used to express its visual world.
-</p>
-
-<p>
-日本語：Nanashino-chanは、東京を拠点に活動する独立系Lo-Fi音楽アーティスト兼クリエイティブプロジェクトです。音楽を発表するアーティスト名であると同時に、制作・配信・権利管理・ライセンス提供を行うプロジェクト名でもあります。
-</p>
+<div class="about-page-actions">
+<a href="/site/today.html" class="about-page-button about-page-button-primary">Listen to the Music</a>
+<a href="/site/works.html" class="about-page-button about-page-button-secondary">View Public Use References</a>
+<a href="/site/licensing.html" class="about-page-button about-page-button-secondary">Explore Licensing</a>
+</div>
 
 </div>
 
+<figure class="about-page-hero-figure">
 <img
 src="/site/nanashino-artist.jpg"
-class="about-hero-image"
 alt="Nanashino-chan, an independent Tokyo lo-fi music artist and creative project"
 width="1200"
 height="675"
 loading="eager"
 fetchpriority="high">
-
-<p class="about-tagline">
-Original music inspired by Tokyo nights, quiet creative time, and visual storytelling.
-</p>
-
-<div class="internal-links">
-<a href="/site/today.html">Listen to the Music</a>
-<a href="/site/works.html">View Public Use References</a>
-<a href="/site/licensing.html">Explore Licensing</a>
-</div>
-
-</section>
-
-<section class="about-section">
-
-<h2>Nanashino-chan at a Glance</h2>
-
-<div class="proof-block">
-
-<p class="proof-text">
-2,000+ Original Tracks
-</p>
-
-<p class="proof-sub">
-An independently developed catalog spanning lo-fi, chillhop, jazzhop, calm instrumentals, and Tokyo-inspired night sounds.
-</p>
-
-<p class="proof-text">
-3,500+ Shazams
-</p>
-
-<p class="proof-sub">
-Listeners actively searched for Nanashino-chan tracks after hearing the music.
-</p>
-
-<p class="proof-text">
-2,500+ Public Instagram Reels
-</p>
-
-<p class="proof-sub">
-Publicly observable Reels have used Nanashino-chan music across creator, lifestyle, business, culture, and brand-related contexts.
-</p>
-
-<p class="proof-text">
-7,000,000+ Public Social Views
-</p>
-
-<p class="proof-sub">
-Combined views recorded across publicly observable social content featuring Nanashino-chan music.
-</p>
-
-<p class="proof-note">
-Figures reflect project records and publicly observable signals as of July 2026. Counts may continue to change.
-</p>
+<figcaption>
+Nanashino-chan — an independent music artist, project identity, and visual IP inspired by Tokyo nights and quiet creative time.
+</figcaption>
+</figure>
 
 </div>
 
 </section>
 
-<section class="about-section">
+<section class="about-page-stats" aria-label="Nanashino-chan project highlights">
 
-<h2>What Is Nanashino-chan?</h2>
+<div class="about-page-stat">
+<strong>2,000+</strong>
+<span>Original lo-fi, chillhop, jazzhop, and instrumental tracks</span>
+</div>
 
-<div class="about-content">
+<div class="about-page-stat">
+<strong>3,500+</strong>
+<span>Shazam searches generated through listener discovery</span>
+</div>
+
+<div class="about-page-stat">
+<strong>2,500+</strong>
+<span>Public Instagram Reels observed using Nanashino-chan music</span>
+</div>
+
+<div class="about-page-stat">
+<strong>7M+</strong>
+<span>Combined views observed across public social content</span>
+</div>
+
+<p class="about-page-stats-note">
+Figures reflect project records and publicly observable signals as of July 2026. Public use is generally organic and non-sponsored unless separately stated. Counts may continue to change.
+</p>
+
+</section>
+
+<section class="about-page-section" id="what-is-nanashino-chan">
+
+<div class="about-page-heading">
+<p>Identity</p>
+<h2>One name connecting the music, the project, and its visual world</h2>
+</div>
+
+<div class="about-page-copy">
 
 <p>
-Nanashino-chan is first and foremost the artist name used for official music releases, YouTube, YouTube Music, Apple Music, Shazam, and other music-discovery platforms.
+Nanashino-chan is first and foremost a music artist: the name listeners see across official releases, YouTube, YouTube Music, Apple Music, Shazam, and other music-discovery platforms.
 </p>
 
 <p>
-It is also the name of the independent project responsible for music production, digital distribution, catalog management, rights administration, website development, and licensing.
+It is also the name of the independent project that produces and distributes the music, manages the original catalog and its rights, develops the website, and provides licensing routes for visual and commercial content.
 </p>
 
 <p>
-The Nanashino-chan character acts as an avatar for the person behind the activity. It provides a consistent visual identity while keeping the music and its atmosphere at the center of the project.
+The Nanashino-chan character acts as an avatar for the person behind the activity. It gives the project a consistent visual identity without requiring the work to depend on a conventional public-facing personality.
 </p>
 
-<h3>Artist</h3>
-
+<div class="about-page-ja">
+<strong>日本語要約</strong>
 <p>
-The official artist identity used for original releases and audience-facing music activity.
+Nanashino-chanは、東京を拠点に活動する独立系Lo-Fi音楽アーティスト兼クリエイティブプロジェクトです。音楽を発表するアーティスト名であると同時に、制作・配信・権利管理・Web運営・ライセンス提供を行うプロジェクト名でもあります。キャラクターは、活動者本人と音楽の世界観を表すアバターです。
 </p>
+</div>
 
-<h3>Independent Project</h3>
+</div>
 
+<div class="about-page-card-grid">
+
+<article class="about-page-card">
+<span>01 / Music Artist</span>
+<h3>Official music identity</h3>
 <p>
-The production and operating structure behind the catalog, distribution, website, and licensing activity.
+The artist name used for original releases, streaming services, music discovery, and audience-facing activity.
 </p>
+</article>
 
-<h3>Avatar and Visual Identity</h3>
-
+<article class="about-page-card">
+<span>02 / Independent Project</span>
+<h3>Production and operations</h3>
 <p>
-A character-based expression of the creator and the calm, urban world surrounding the music.
+The independent structure behind music creation, distribution, catalog management, publishing, and licensing.
 </p>
+</article>
 
-<h3>Creative IP</h3>
-
+<article class="about-page-card">
+<span>03 / Avatar</span>
+<h3>Character-based expression</h3>
 <p>
-An original music catalog connected with character identity, visual storytelling, public platforms, and commercial licensing.
+A visual identity representing the creator behind the project and the quiet urban world surrounding the music.
 </p>
+</article>
+
+<article class="about-page-card">
+<span>04 / Creative IP</span>
+<h3>Music beyond a single platform</h3>
+<p>
+An original catalog, character identity, visual storytelling system, website, social presence, and licensing model developed together.
+</p>
+</article>
 
 </div>
 
 </section>
 
-<section class="about-section">
+<section class="about-page-section about-page-panel" id="story">
 
-<h2>Origin and Creative Direction</h2>
+<div class="about-page-heading">
+<p>Origin and mission</p>
+<h2>Music designed to support the moment behind the screen</h2>
+</div>
 
-<div class="about-content">
+<div class="about-page-story-grid">
+
+<div class="about-page-copy">
 
 <p>
-Nanashino-chan began YouTube activity in May 2024 and expanded into official digital music distribution in February 2025.
-</p>
-
-<p>
-The project developed from a simple idea: background music can be quiet without becoming anonymous, and practical without losing its emotional identity.
+Nanashino-chan began YouTube activity in May 2024 and expanded into official digital music distribution in February 2025. The project grew from a simple idea: background music can be quiet without being anonymous, and useful without losing its emotional identity.
 </p>
 
 <p>
@@ -399,159 +411,244 @@ The sound is inspired by Tokyo at night—quiet streets, late trains, soft light
 </p>
 
 <p>
-Rather than competing with narration, captions, products, or visual storytelling, the music is intended to sit behind them. Soft drums, warm keys, understated melodies, and controlled arrangements help establish atmosphere while leaving room for the main message.
+Rather than competing with narration, captions, product visuals, or storytelling, the music is intended to sit behind them. Soft drums, warm keys, understated melodies, and controlled arrangements help establish atmosphere while leaving space for the main message.
 </p>
 
 <p>
-日本語：Nanashino-chanが目指しているのは、映像や言葉を支配する音楽ではなく、その背後で空気感、余韻、感情のトーンを支える音楽です。東京の夜や静かな日常をモチーフに、聴くための音楽と、映像の中で機能する音楽の両立を目指しています。
+This approach connects two parts of the project: music for everyday listening and music that can function naturally inside videos, digital media, brand content, and other visual formats.
 </p>
 
-<h3>Independent, with Music-Industry Experience</h3>
+<div class="about-page-ja">
+<strong>制作思想</strong>
+<p>
+Nanashino-chanが目指しているのは、強く主張して映像を支配する音楽ではなく、映像や言葉の背後で空気感、余韻、感情のトーンを支える音楽です。東京の夜や静かな日常をモチーフに、聴くための音楽と、映像の中で機能する音楽の両立を目指しています。
+</p>
+</div>
 
+</div>
+
+<aside class="about-page-side-note">
+<h3>Independent, with music-industry experience</h3>
 <p>
 The project is independently operated from Tokyo by a creator with prior experience working in the record industry and current hands-on experience across music production, digital distribution, rights management, creator-platform operations, and web publishing.
 </p>
+</aside>
 
-</div>
-
-<img
-src="/site/nanashino-chan.webp"
-class="about-image"
-alt="Nanashino-chan visual inspired by Tokyo nights and calm lo-fi music"
-width="1075"
-height="605"
-loading="lazy">
-
-<p class="about-tagline">
-A quiet urban identity connecting original music, Tokyo atmosphere, and visual storytelling.
-</p>
-
-</section>
-
-<section class="about-section">
-
-<h2>The Sound of Nanashino-chan</h2>
-
-<div class="about-content">
-
-<p>
-The Nanashino-chan catalog moves across lo-fi hip hop, chillhop, jazzhop, calm instrumental music, chillwave, and Tokyo-inspired night sounds.
-</p>
-
-<p>
-The common thread is a low-distraction atmosphere with enough melody and texture to remain recognizable. Some tracks lean toward warm piano and jazz harmony, while others use relaxed grooves, city-night synths, soft percussion, or nostalgic textures.
-</p>
-
-<p>
-This range allows the music to support focus, reading, late-night work, cafés, quiet listening, creator videos, product visuals, business communication, and other forms of digital storytelling.
-</p>
-
-<h3>Selected Starting Tracks</h3>
-
-<p>
-<strong>Smooth Groove</strong> — warm, polished lo-fi for lifestyle, interior, fashion, and refined visual content.
-</p>
-
-<p>
-<strong>Vaporwave Streets</strong> — urban synthwave atmosphere for Tokyo visuals, city scenes, technology, and modern edits.
-</p>
-
-<p>
-<strong>Smooth Transitions</strong> — controlled, voice-friendly background music for explainers, product videos, and business content.
-</p>
-
-<p>
-<strong>Stillness Vibes</strong> — quiet instrumental space for culture, reading, reflection, calm communication, and slow visuals.
-</p>
-
-</div>
-
-<div class="internal-links">
-<a href="/site/today.html">Start Listening</a>
-<a href="/site/music.html">Browse the Music Catalog</a>
-<a href="/site/pages/recommended-tracks-for-commercial-video-use.html">Recommended Commercial Tracks</a>
 </div>
 
 </section>
 
-<section class="about-section">
+<section class="about-page-section" id="music">
 
-<h2>Listener Discovery and Public Social Use</h2>
+<div class="about-page-heading">
+<p>The music</p>
+<h2>Calm, urban, warm, and recognizable</h2>
+</div>
 
-<div class="about-content">
+<div class="about-page-copy">
+
+<p>
+The Nanashino-chan catalog moves across lo-fi hip hop, chillhop, jazzhop, calm instrumental music, chillwave, and Tokyo-inspired night sounds. The common thread is a low-distraction atmosphere with enough melody and texture to remain memorable.
+</p>
+
+<p>
+Some tracks lean toward warm piano and jazz harmony. Others use city-night synths, relaxed grooves, soft percussion, or nostalgic textures. This range allows the catalog to support focus, reading, late-night work, quiet listening, and many forms of visual storytelling.
+</p>
+
+</div>
+
+<div class="about-page-card-grid">
+
+<article class="about-page-card">
+<span>Selected Track</span>
+<h3>Smooth Groove</h3>
+<p>
+Warm, polished lo-fi for lifestyle, interior, fashion, and refined visual content.
+</p>
+</article>
+
+<article class="about-page-card">
+<span>Selected Track</span>
+<h3>Vaporwave Streets</h3>
+<p>
+Urban synthwave atmosphere for Tokyo visuals, city scenes, technology, and modern edits.
+</p>
+</article>
+
+<article class="about-page-card">
+<span>Selected Track</span>
+<h3>Smooth Transitions</h3>
+<p>
+Controlled, voice-friendly background music for explainers, product videos, and business content.
+</p>
+</article>
+
+<article class="about-page-card">
+<span>Selected Track</span>
+<h3>Stillness Vibes</h3>
+<p>
+Quiet instrumental space for culture, reading, reflection, calm communication, and slow visuals.
+</p>
+</article>
+
+</div>
+
+<div class="about-page-actions">
+<a href="/site/today.html" class="about-page-button about-page-button-primary">Start Listening</a>
+<a href="/site/music.html" class="about-page-button about-page-button-secondary">Browse the Music Catalog</a>
+<a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="about-page-button about-page-button-secondary">Find Music for a Video</a>
+</div>
+
+</section>
+
+<section class="about-page-section" id="discovery">
+
+<div class="about-page-heading">
+<p>Discovery</p>
+<h2>Listener interest that goes beyond passive playback</h2>
+</div>
+
+<div class="about-page-media-grid">
+
+<div class="about-page-copy">
 
 <p>
 Nanashino-chan music has passed 3,500 Shazam searches. A Shazam search begins when someone hears a track, becomes curious about it, and actively tries to identify the music.
 </p>
 
 <p>
-This makes Shazam different from a passive stream or automatic impression. It provides a useful signal that the sound was noticeable enough for a listener to take another step.
+That makes Shazam different from an automatic impression or passive stream. It provides a useful signal that the sound was noticeable enough for a listener to take another step.
 </p>
 
 <p>
-Nanashino-chan music has also appeared in more than 2,500 publicly observable Instagram Reels, with combined public social views exceeding seven million across recorded examples.
+The music has also appeared in more than 2,500 publicly observable Instagram Reels, with combined public social views exceeding seven million across recorded examples. These signals include audiences and visual contexts in Japan, Hong Kong, Brazil, and other regions.
 </p>
 
+<div class="about-page-ja">
+<strong>日本語要約</strong>
 <p>
-Observed contexts include fashion and luxury media, interiors, lifestyle content, real estate, culture, beauty, creator videos, and business-owned social content in Japan, Hong Kong, Brazil, and other regions.
+Shazam検索は、どこかで曲を聴いた人が興味を持ち、自分で曲名を調べた行動です。3,500回以上のShazam検索に加え、公開確認できたInstagram Reelsは2,500件以上、公開SNS上の累計再生は700万回以上となっています。
 </p>
-
-<p>
-日本語：3,500回以上のShazam検索に加え、公開確認できたInstagram Reelsは2,500件以上、公開SNS上の累計再生は700万回以上となっています。
-</p>
+</div>
 
 </div>
 
-<div class="proof-block">
-
-<p class="proof-text">
-Public Use Does Not Automatically Mean Partnership
-</p>
-
-<p class="proof-sub">
-Unless otherwise stated, usage and discovery signals are based on public, organic, non-sponsored use and publicly available data.
-</p>
-
-<p class="proof-sub">
-Public use does not imply endorsement, sponsorship, partnership, direct client relationship, formal licensing status, or approval by the featured brands, creators, public figures, or organizations.
-</p>
-
-</div>
-
-<figure class="artist-box">
-
+<figure class="about-page-figure">
 <img
 src="/site/shazam3000.webp"
 alt="Nanashino-chan reached the 3000 Shazam search milestone before passing 3500 searches"
-width="741"
-height="1115"
+width="1600"
+height="900"
 loading="lazy">
-
-<figcaption class="proof-note">
+<figcaption>
 This image records the 3,000-search milestone reached in June 2026. The project total has since passed 3,500 Shazam searches.
 </figcaption>
-
 </figure>
 
-<div class="internal-links">
-<a href="/site/works.html">View Works and Public References</a>
-<a href="/site/pages/recommended-tracks-for-commercial-video-use.html">Preview Commercial Tracks</a>
 </div>
 
 </section>
 
-<section class="about-section">
+<section class="about-page-section" id="public-use">
 
-<h2>Rights Management and Music Licensing</h2>
+<div class="about-page-heading">
+<p>Public visual contexts</p>
+<h2>Music discovered across creator, lifestyle, and brand-related content</h2>
+</div>
 
-<div class="about-content">
+<div class="about-page-copy">
 
 <p>
-Nanashino-chan manages both the master recording rights and the composition rights for its original catalog.
+Public social references help show how Nanashino-chan music can function in real visual environments. Observed examples span fashion and luxury media, interiors, lifestyle content, real estate, culture, beauty, creator videos, and other social-first formats.
 </p>
 
 <p>
-This can make commercial rights review more straightforward than licensing music where several labels, publishers, composers, or other third parties must be contacted separately.
+The examples below are selected visual contexts rather than claims of formal partnership. Detailed source links and additional references are organized on the Works page.
+</p>
+
+</div>
+
+<div class="about-page-proof-grid">
+
+<article class="about-page-proof-card">
+<img
+src="/site/bazaar-cartier.webp"
+alt="Harper's BAZAAR Hong Kong public Reel in a Cartier-related visual context featuring Nanashino-chan music"
+width="1075"
+height="605"
+loading="lazy">
+<div>
+<h3>Fashion and luxury media context</h3>
+<p>
+A Harper’s BAZAAR Hong Kong official Reel where Nanashino-chan music appeared in a Cartier-related public visual context.
+</p>
+</div>
+</article>
+
+<article class="about-page-proof-card">
+<img
+src="/site/arte-moderna.webp"
+alt="Arte Moderna Retro public interior and lifestyle Reel featuring Nanashino-chan music"
+width="1075"
+height="605"
+loading="lazy">
+<div>
+<h3>Interior and lifestyle context</h3>
+<p>
+A public Brazilian interior and lifestyle reference showing how warm lo-fi can support design-focused visual storytelling.
+</p>
+</div>
+</article>
+
+<article class="about-page-proof-card">
+<img
+src="/site/chuo-nittochi.webp"
+alt="Japanese corporate real estate public social video context featuring Nanashino-chan music"
+width="1075"
+height="605"
+loading="lazy">
+<div>
+<h3>Corporate and real estate context</h3>
+<p>
+A Japanese business-owned public social video context connecting the music with architecture, property, and corporate communication.
+</p>
+</div>
+</article>
+
+<article class="about-page-card">
+<span>More References</span>
+<h3>International public use</h3>
+<p>
+Additional observed contexts include fashion, stationery, culture, beauty, hospitality, creator content, and lifestyle accounts across multiple regions.
+</p>
+<div class="about-page-actions">
+<a href="/site/works.html" class="about-page-button about-page-button-secondary">View Works and Sources</a>
+</div>
+</article>
+
+</div>
+
+<div class="about-page-disclaimer">
+Unless otherwise stated, usage and discovery signals are based on public, organic, non-sponsored use and publicly available data. Public use does not imply endorsement, sponsorship, partnership, direct client relationship, formal licensing status, or approval by the featured brands, creators, public figures, or organizations.
+</div>
+
+</section>
+
+
+
+<!-- about.html Part 2 / 2 -->
+
+<section class="about-page-section about-page-panel" id="rights-and-licensing">
+
+<div class="about-page-heading">
+<p>Rights and licensing</p>
+<h2>Original music with a more direct path to permission</h2>
+</div>
+
+<div class="about-page-copy">
+
+<p>
+Nanashino-chan manages both the master recording rights and the composition rights for its original catalog. This can make rights review more straightforward than licensing music where several labels, publishers, composers, or other third parties must be contacted separately.
 </p>
 
 <p>
@@ -562,413 +659,545 @@ Commercial and sync licensing options are available for eligible creator videos,
 The appropriate license depends on who is publishing the content, whether paid promotion is involved, the platforms used, the campaign duration, and whether the work is being delivered to a client.
 </p>
 
+<div class="about-page-ja">
+<strong>権利管理について</strong>
 <p>
-日本語：Nanashino-chanでは、オリジナルカタログの原盤権と楽曲著作権をプロジェクト側で管理しています。企業動画、SNS、広告、AI動画、スポンサーコンテンツ、クライアントワークなどで使用する場合は、用途に合ったライセンスをご確認ください。
+Nanashino-chanでは、オリジナルカタログの原盤権と楽曲著作権をプロジェクト側で管理しています。そのため、複数の第三者権利者が関与する楽曲と比較して、商用利用時の確認、記録、ライセンス手続きを比較的シンプルに進めやすい体制です。
 </p>
+</div>
 
 </div>
 
-<div class="internal-links">
-<a href="/site/licensing.html#pricing">Compare License Options</a>
-<a href="/site/pages/commercial-license-vs-sync-license.html">Commercial vs Sync License</a>
-<a href="/site/contact.html">Ask About Your Project</a>
+<div class="about-page-card-grid">
+
+<article class="about-page-card">
+<span>Master Rights</span>
+<h3>Recording permission</h3>
+<p>
+Permission relating to the specific Nanashino-chan recording used in the final video or content.
+</p>
+</article>
+
+<article class="about-page-card">
+<span>Composition Rights</span>
+<h3>Song permission</h3>
+<p>
+Permission relating to the underlying original composition represented by the recording.
+</p>
+</article>
+
+<article class="about-page-card">
+<span>Commercial Creator</span>
+<h3>Organic commercial content</h3>
+<p>
+A typical route for eligible monetized videos, creator businesses, company-owned organic social posts, product videos, and other non-paid commercial publishing.
+</p>
+</article>
+
+<article class="about-page-card">
+<span>Sync License</span>
+<h3>Advertising and campaigns</h3>
+<p>
+A typical route for paid ads, promoted posts, sponsored campaigns, product launches, and time-limited brand campaign use.
+</p>
+</article>
+
 </div>
 
-<div class="proof-block">
+<div class="about-page-actions">
+<a href="/site/licensing.html#pricing" class="about-page-button about-page-button-primary">Compare License Options</a>
+<a href="/site/pages/commercial-license-vs-sync-license.html" class="about-page-button about-page-button-secondary">Commercial vs Sync License</a>
+<a href="/site/contact.html" class="about-page-button about-page-button-secondary">Ask About Your Project</a>
+</div>
 
-<p class="proof-text">
-Platform and Licensing Note
-</p>
-
-<p class="proof-sub">
-A Nanashino-chan license clarifies permission within the stated scope, but platform behavior may vary depending on service rules, account type, region, rights metadata, automated copyright detection, advertising policies, and future policy changes.
-</p>
-
-<p class="proof-note">
-Licensing does not guarantee platform approval, monetization, claim prevention, or uninterrupted availability.
-</p>
-
+<div class="about-page-disclaimer">
+A Nanashino-chan license clarifies permission within the stated scope, but platform behavior may vary depending on service rules, account type, region, rights metadata, automated copyright detection, advertising policies, and future policy changes. Licensing does not guarantee platform approval, monetization, claim prevention, or uninterrupted availability.
 </div>
 
 </section>
 
+<section class="about-page-section" id="milestones">
 
-<!-- about.html Part 2 / 2 -->
+<div class="about-page-heading">
+<p>Milestones</p>
+<h2>From an independent YouTube project to a global music catalog</h2>
+</div>
 
-<section class="about-section">
-
-<h2>Project Milestones</h2>
-
-<div class="about-content">
-
-<h3>May 2024 — YouTube Activity Begins</h3>
+<div class="about-page-copy">
 
 <p>
-Nanashino-chan began publishing and developing its original lo-fi music activity on YouTube.
+Nanashino-chan has developed through a combination of music production, digital distribution, audience discovery, public visual use, creator-platform activity, and direct licensing infrastructure.
 </p>
 
-<h3>February 2025 — Official Digital Distribution</h3>
+</div>
 
+<div class="about-page-timeline">
+
+<article class="about-page-timeline-item">
+<time datetime="2024-05">May 2024</time>
+<div>
+<h3>YouTube activity begins</h3>
 <p>
-The catalog expanded to digital streaming and music-discovery platforms through official DSP distribution.
+Nanashino-chan began publishing and developing its lo-fi music activity on YouTube.
 </p>
+</div>
+</article>
 
-<h3>February 2025 — YouTube Official Artist Channel</h3>
-
+<article class="about-page-timeline-item">
+<time datetime="2025-02">February 2025</time>
+<div>
+<h3>DSP distribution expands</h3>
 <p>
-Nanashino-chan became represented through a YouTube Official Artist Channel and connected official music catalog.
+Official music distribution began across digital streaming and music-discovery platforms.
 </p>
+</div>
+</article>
 
-<h3>May 2025 — International Public Visual Context</h3>
+<article class="about-page-timeline-item">
+<time datetime="2025-02">February 2025</time>
+<div>
+<h3>YouTube Official Artist Channel</h3>
+<p>
+Nanashino-chan became represented through a YouTube Official Artist Channel and connected music catalog.
+</p>
+</div>
+</article>
 
+<article class="about-page-timeline-item">
+<time datetime="2025-05">May 2025</time>
+<div>
+<h3>Luxury-media visual context</h3>
 <p>
 Nanashino-chan music appeared in a Harper’s BAZAAR Hong Kong official Reel in a Cartier-related public visual context.
 </p>
+</div>
+</article>
 
-<h3>March 2026 — Creator Event in Tokyo</h3>
-
-<p>
-The project participated in an invitation-based creator event held at Google Tokyo Shibuya.
-</p>
-
-<h3>March 2026 — 2,000+ Original Tracks</h3>
-
+<article class="about-page-timeline-item">
+<time datetime="2026-03">March 2026</time>
+<div>
+<h3>2,000+ original tracks</h3>
 <p>
 The independently developed catalog passed 2,000 original lo-fi and related instrumental tracks.
 </p>
+</div>
+</article>
 
-<h3>June 2026 — 3,000+ Shazams</h3>
+<article class="about-page-timeline-item">
+<time datetime="2026-03">March 2026</time>
+<div>
+<h3>Creator event in Tokyo</h3>
+<p>
+The project took part in an invitation-based creator event held at Google Tokyo Shibuya.
+</p>
+</div>
+</article>
 
+<article class="about-page-timeline-item">
+<time datetime="2026-06">June 2026</time>
+<div>
+<h3>3,000+ Shazams</h3>
 <p>
 Active listener identification passed the 3,000-search milestone and continued to grow beyond 3,500 searches.
 </p>
+</div>
+</article>
 
-<h3>July 2026 — U-KNOCK 2026 in Japan Summit</h3>
-
+<article class="about-page-timeline-item">
+<time datetime="2026-07">July 2026</time>
+<div>
+<h3>U-KNOCK 2026 participation</h3>
 <p>
-Nanashino-chan participated in a Korea–Japan content-industry summit in Tokyo and introduced its original music IP and licensing model.
+Nanashino-chan participated in a Korea–Japan content-industry summit in Tokyo and introduced its music IP and licensing model.
 </p>
+</div>
+</article>
 
 </div>
 
 </section>
 
-<section class="about-section">
+<section class="about-page-section" id="events">
 
-<h2>Creator and Content-Industry Experience</h2>
+<div class="about-page-heading">
+<p>Industry participation</p>
+<h2>Connecting music with creators, platforms, and international content</h2>
+</div>
 
-<div class="about-content">
+<div class="about-page-copy">
 
 <p>
-Alongside online music activity, Nanashino-chan has participated in selected creator and content-industry events in Tokyo.
+Alongside online music activity, Nanashino-chan has participated in selected creator and content-industry events in Tokyo. These experiences provide opportunities to understand emerging production workflows, exchange ideas, and introduce the project to people working across digital content, creative IP, AI, video, music, and international business.
 </p>
 
 <p>
-These experiences provide opportunities to understand emerging production workflows, exchange ideas, and introduce the project to people working across digital content, creative IP, AI, video, music, and international business.
+Event participation is presented as part of the project’s professional development and industry activity. It should not be interpreted as an endorsement, certification, investment, partnership, or guaranteed business relationship.
 </p>
 
-<h3>Creator Event at Google Tokyo Shibuya</h3>
+</div>
 
+<div class="about-page-event-grid">
+
+<article class="about-page-card">
+<span>Creator Economy / Tokyo</span>
+<h3>Selected Creator Event Experience</h3>
 <p>
-Nanashino-chan participated in an invitation-based creator event held at Google Tokyo Shibuya with approximately 200 participants.
+Nanashino-chan participated in an invitation-based creator event held at Google Tokyo Shibuya with approximately 200 participants. The event created a meeting point between artists, creators, digital platforms, music discovery, and modern content production.
 </p>
 
+<div class="about-page-ja">
+<strong>日本語</strong>
 <p>
-The event created a meeting point between artists, creators, digital platforms, music discovery, and modern content production.
+Google Tokyo Shibuyaで開催された、約200人規模の招待制クリエイターイベントに参加しました。音楽、動画プラットフォーム、クリエイター文化、デジタルコンテンツ制作が交差する場への参加実績として掲載しています。
 </p>
+</div>
+</article>
 
-<p>
-日本語：Google Tokyo Shibuyaで開催された、約200人規模の招待制クリエイターイベントに参加しました。音楽、動画プラットフォーム、クリエイター文化、デジタルコンテンツ制作が交差する場への参加実績として掲載しています。
-</p>
-
+<article class="about-page-card">
+<span>Korea × Japan / Content Industry</span>
 <h3>U-KNOCK 2026 in Japan Summit</h3>
 
 <p>
-In July 2026, Nanashino-chan participated in U-KNOCK 2026 in Japan Summit in Tokyo. The event connected Korean content companies with people and organizations involved in Japanese media, investment, technology, localization, creative IP, and international business development.
+In July 2026, Nanashino-chan participated in U-KNOCK 2026 in Japan Summit in Tokyo. The event connected Korean content companies with Japanese media, investment, and potential business partners across creative IP, video, technology, localization, and international expansion.
 </p>
 
 <p>
 Nanashino-chan introduced its original music catalog, direct licensing structure, and potential applications across AI-generated content, advertising, webtoons, animation, games, social media, and other visual formats.
 </p>
 
+<div class="about-page-ja">
+<strong>日本語</strong>
 <p>
-日本語：2026年7月、東京で開催された「U-KNOCK 2026 in Japan Summit」に参加しました。オリジナル音楽カタログ、原盤権・著作権を管理するライセンス体制、AI動画、広告、Webtoon、アニメーション、ゲーム、SNSなどでの活用可能性を紹介し、日韓コンテンツ産業に関わる参加者と情報交換を行いました。
+2026年7月、東京で開催された「U-KNOCK 2026 in Japan Summit」に参加しました。オリジナル音楽カタログ、原盤権・著作権を管理するライセンス体制、AI動画、広告、Webtoon、アニメーション、ゲーム、SNSなどでの活用可能性を紹介し、日韓コンテンツ産業に関わる参加者と情報交換を行いました。
 </p>
+</div>
+
+<p class="about-page-source-link">
+<a
+href="https://globalops.besuccess.com/uknock/"
+target="_blank"
+rel="noopener noreferrer">
+View official U-KNOCK event information
+</a>
+</p>
+
+</article>
 
 </div>
 
-<div class="video-grid">
+<div class="about-page-event-images">
 
-<article class="video-card">
-
+<figure class="about-page-figure">
 <img
 src="/site/google.webp"
 alt="Nanashino-chan participating in an invitation-based creator event at Google Tokyo Shibuya"
 width="1075"
 height="605"
 loading="lazy">
+<figcaption>
+Creator event at Google Tokyo Shibuya — a meeting point for music, creators, digital platforms, and content production.
+</figcaption>
+</figure>
 
-<div class="card-content">
-
-<h3>Google Tokyo Shibuya</h3>
-
-<p>
-A creator-focused event connecting music, artists, digital platforms, and content production.
-</p>
-
-</div>
-
-</article>
-
-<article class="video-card">
-
+<figure class="about-page-figure">
 <img
 src="/site/The ArtistsNight.webp"
-alt="The Artists' Night creator event held at Google Tokyo for selected artists and creators"
+alt="The Artists' Night creator event held at Google Tokyo with selected artists and creators"
 width="1075"
 height="605"
 loading="lazy">
+<figcaption>
+“The Artists’ Night” — an invitation-based gathering for selected artists and creators.
+</figcaption>
+</figure>
 
-<div class="card-content">
-
-<h3>The Artists’ Night</h3>
-
-<p>
-An invitation-based gathering for selected artists and creators in Tokyo.
-</p>
-
-</div>
-
-</article>
-
-<article class="video-card">
-
+<figure class="about-page-figure about-page-event-image-wide">
 <img
 src="/site/images/og/u-knock-2026-japan-summit.webp"
 alt="Nanashino-chan participating in U-KNOCK 2026 in Japan Summit in Tokyo"
 width="1075"
 height="605"
 loading="lazy">
+<figcaption>
+U-KNOCK 2026 in Japan Summit — a Korea–Japan content-industry event focused on creative IP, business connections, and cross-border collaboration.
+</figcaption>
+</figure>
 
-<div class="card-content">
+</div>
 
-<h3>U-KNOCK 2026 in Japan Summit</h3>
+<div class="about-page-disclaimer">
+Participation does not imply official endorsement, certification, sponsorship, investment, partnership, or guaranteed cooperation by Google, the event organizers, participating companies, or related organizations.
+</div>
 
+<div class="about-page-ja">
+<strong>イベント参加に関する免責</strong>
 <p>
-A Korea–Japan content-industry event focused on creative IP, international business connections, and cross-border collaboration.
+これらのイベントへの参加は、Google、主催・運営団体、参加企業、または関係団体による公認、認定、推薦、スポンサー提供、投資、提携、直接取引、将来の協業を意味するものではありません。
 </p>
+</div>
+
+</section>
+
+<section class="about-page-section" id="uses">
+
+<div class="about-page-heading">
+<p>Use cases</p>
+<h2>Created for listeners—and built to work with visual content</h2>
+</div>
+
+<div class="about-page-copy">
 
 <p>
-<a
-href="https://u-knock.com/2026-in-japan-summit"
-target="_blank"
-rel="noopener noreferrer">
-Official event information
-</a>
+The same musical qualities that support focus and quiet listening can also help creators and businesses establish atmosphere without distracting from narration, captions, products, interviews, or visual storytelling.
 </p>
 
 </div>
 
+<div class="about-page-card-grid">
+
+<article class="about-page-card">
+<span>Listeners</span>
+<h3>Focus and quiet routines</h3>
+<p>
+Lo-fi and jazzhop for studying, reading, coding, desk work, calm evenings, cafés, and low-volume background listening.
+</p>
+</article>
+
+<article class="about-page-card">
+<span>Creators</span>
+<h3>Videos and social content</h3>
+<p>
+Background music options for eligible YouTube videos, Instagram Reels, TikTok videos, podcasts, commentary, reviews, and creator-led content.
+</p>
+</article>
+
+<article class="about-page-card">
+<span>Brands and Agencies</span>
+<h3>Business and campaign visuals</h3>
+<p>
+Music licensing routes for company content, product videos, client work, sponsored content, brand storytelling, and paid campaigns.
+</p>
+</article>
+
+<article class="about-page-card">
+<span>AI and Digital Media</span>
+<h3>New production workflows</h3>
+<p>
+Original background music for eligible AI visuals, AI narration, avatars, product explainers, automated editing, webtoons, animation, and digital content.
+</p>
 </article>
 
 </div>
 
-<div class="proof-block">
+</section>
 
-<p class="proof-text">
-Event Participation Note
-</p>
+<section class="about-page-section" id="explore">
 
-<p class="proof-sub">
-Participation is presented as part of Nanashino-chan’s creator and content-industry activity.
-</p>
+<div class="about-page-heading">
+<p>Explore the project</p>
+<h2>Listen first, review the work, or explore licensing</h2>
+</div>
 
-<p class="proof-sub">
-It does not imply official endorsement, certification, sponsorship, investment, partnership, direct client status, or guaranteed cooperation by Google, the organizers, participating companies, or related organizations.
-</p>
+<div class="about-page-card-grid">
 
-<p class="proof-note">
-イベントへの参加は、主催・運営団体、参加企業、または関係団体による公認、認定、推薦、スポンサー提供、投資、提携、直接取引、将来の協業を意味するものではありません。
+<article class="about-page-card">
+<span>Listen</span>
+<h3>Hear the music</h3>
+<p>
+Start with the site player or browse the wider catalog by mood, use case, and listening context.
 </p>
+<div class="about-page-actions">
+<a href="/site/today.html" class="about-page-button about-page-button-primary">Listen Now</a>
+<a href="/site/music.html" class="about-page-button about-page-button-secondary">Music Catalog</a>
+</div>
+</article>
+
+<article class="about-page-card">
+<span>Review</span>
+<h3>See public references</h3>
+<p>
+Explore source links, business contexts, visual examples, project milestones, and licensing guidance.
+</p>
+<div class="about-page-actions">
+<a href="/site/works.html" class="about-page-button about-page-button-primary">View Works</a>
+</div>
+</article>
+
+<article class="about-page-card">
+<span>License</span>
+<h3>Use the music</h3>
+<p>
+Compare personal, commercial creator, sync, and custom licensing routes before publishing.
+</p>
+<div class="about-page-actions">
+<a href="/site/licensing.html#pricing" class="about-page-button about-page-button-primary">View Licensing</a>
+</div>
+</article>
+
+<article class="about-page-card">
+<span>Contact</span>
+<h3>Discuss a specific project</h3>
+<p>
+Contact Nanashino-chan for unusual usage, campaign scope, client work, custom terms, or track confirmation.
+</p>
+<div class="about-page-actions">
+<a href="/site/contact.html" class="about-page-button about-page-button-secondary">Contact</a>
+</div>
+</article>
 
 </div>
 
 </section>
 
-<section class="about-section">
+<section class="about-page-section" id="faq">
 
-<h2>Who the Music Is For</h2>
-
-<div class="about-content">
-
-<h3>Listeners</h3>
-
-<p>
-Lo-fi and jazzhop for studying, reading, coding, desk work, calm evenings, cafés, and low-volume background listening.
-</p>
-
-<h3>Creators</h3>
-
-<p>
-Music licensing options for eligible YouTube videos, Instagram Reels, TikTok videos, podcasts, reviews, commentary, and creator-led content.
-</p>
-
-<h3>Brands and Agencies</h3>
-
-<p>
-Licensing routes for company content, product videos, client work, sponsored content, brand storytelling, and paid campaigns.
-</p>
-
-<h3>AI and Digital Content Teams</h3>
-
-<p>
-Original background music for eligible AI visuals, AI narration, avatars, product explainers, automated editing, webtoons, animation, games, and digital media.
-</p>
-
+<div class="about-page-heading">
+<p>FAQ</p>
+<h2>Frequently asked questions</h2>
 </div>
 
-</section>
+<div class="about-page-faq">
 
-<section class="about-section">
-
-<h2>Listen to Nanashino-chan Music</h2>
-
-<div class="about-content">
-
-<p>
-You can listen to Nanashino-chan music through the official website player, YouTube, YouTube Music, Apple Music, and other connected artist platforms.
-</p>
-
-<p>
-Start with the main listening page, explore the wider catalog, or save the official artist page on your preferred music service.
-</p>
-
-<p>
-日本語：Nanashino-chanの音楽は、このサイトのプレイヤー、YouTube、YouTube Music、Apple Musicなどで聴くことができます。まずは音楽を試聴し、気に入った楽曲やアーティストページを保存してください。
-</p>
-
-</div>
-
-<div class="internal-links">
-
-<a href="/site/today.html">
-Listen Now
-</a>
-
-<a href="/site/music.html">
-Music Catalog
-</a>
-
-<a
-href="https://www.youtube.com/@Nanashino-chan"
-target="_blank"
-rel="noopener noreferrer">
-YouTube </a>
-
-<a
-href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A"
-target="_blank"
-rel="noopener noreferrer">
-YouTube Music </a>
-
-<a
-href="https://music.apple.com/us/artist/nanashino-chan/1795947895"
-target="_blank"
-rel="noopener noreferrer">
-Apple Music </a>
-
-<a
-href="https://hyperfollow.com/nanashinochanalbums"
-target="_blank"
-rel="noopener noreferrer">
-Full Discography </a>
-
-</div>
-
-</section>
-
-<section class="about-section">
-
-<h2>Frequently Asked Questions</h2>
-
-<div class="about-content">
-
+<article>
 <h3>Who is Nanashino-chan?</h3>
-
 <p>
-Nanashino-chan is an independent Tokyo lo-fi music artist and project. The name represents the music artist, the creative project, and the avatar used for its visual identity.
+Nanashino-chan is an independent Tokyo lo-fi music artist and creative project. The name represents the music artist, the project identity, and the avatar used for its visual storytelling.
 </p>
+</article>
 
+<article>
 <h3>What kind of music does Nanashino-chan create?</h3>
-
 <p>
-Nanashino-chan creates original lo-fi, chillhop, jazzhop, and calm instrumental music inspired by Tokyo nights, quiet city spaces, focused work, and visual storytelling.
+The catalog includes original lo-fi, chillhop, jazzhop, calm instrumental music, and Tokyo-inspired night sounds designed for listening and visual content.
 </p>
+</article>
 
-<h3>Does Nanashino-chan manage the music rights?</h3>
-
+<article>
+<h3>Does Nanashino-chan control the music rights?</h3>
 <p>
 Nanashino-chan manages the master recording rights and composition rights for its original catalog, helping make commercial rights review and licensing documentation more straightforward.
 </p>
+</article>
 
-<h3>Can Nanashino-chan music be licensed for commercial videos?</h3>
-
+<article>
+<h3>Can the music be licensed for commercial videos?</h3>
 <p>
-Commercial and sync licensing options are available for eligible creator videos, company content, brand videos, client work, sponsored content, advertising campaigns, and AI-generated video projects.
+Yes. Commercial and sync licensing options are available for eligible creator videos, company content, client work, sponsored content, brand videos, advertising campaigns, and AI-generated video projects.
 </p>
+</article>
 
-<h3>Can licensed music still be detected by platform systems?</h3>
-
+<article>
+<h3>Can licensed music still be detected by a platform?</h3>
 <p>
-Yes. Automated systems may still detect licensed music. Creators, brands, and agencies should keep the purchase receipt, license certificate, track information, project records, publication dates, platforms, and permitted usage scope.
+Yes. Automated systems may still detect licensed music. Keep your receipt, license certificate, track information, project records, publication dates, platforms, and permitted usage scope.
 </p>
+</article>
 
+<article>
 <h3>Do public use references imply endorsement or partnership?</h3>
-
 <p>
 No. Unless separately stated, public references do not imply endorsement, sponsorship, partnership, approval, direct client status, or a formal licensing relationship.
 </p>
+</article>
 
-<h3>日本語：Nanashino-chanの音楽は商用利用できますか？</h3>
+</div>
 
+<div class="about-page-ja">
+<strong>日本語</strong>
 <p>
-適切なライセンス範囲内で商用利用に対応しています。企業動画、SNS、広告、AI動画、スポンサーコンテンツ、クライアントワークなどで使用する場合は、公開前に用途、媒体、広告配信の有無、期間、利用主体に合ったライセンスをご確認ください。
+Nanashino-chanの音楽は、適切なライセンス範囲内で商用利用に対応しています。企業動画、SNS、広告、AI動画、スポンサーコンテンツ、クライアントワークなどで利用する場合は、公開前に用途、媒体、広告配信の有無、期間、利用主体に合ったライセンスをご確認ください。
 </p>
+</div>
+
+</section>
+
+<section class="about-page-section" id="guides">
+
+<div class="about-page-heading">
+<p>Selected guides</p>
+<h2>Continue with the page that matches your purpose</h2>
+</div>
+
+<div class="about-page-card-grid">
+
+<article class="about-page-card">
+<h3>Commercial Music Licensing</h3>
+<p>
+Understand how music licensing works for creators, brands, agencies, businesses, and commercial projects.
+</p>
+<div class="about-page-actions">
+<a href="/site/pages/music-licensing-for-commercial-use-guide.html" class="about-page-button about-page-button-secondary">Read the Guide</a>
+</div>
+</article>
+
+<article class="about-page-card">
+<h3>Commercial vs Sync License</h3>
+<p>
+Compare organic business publishing with paid advertising, promoted campaigns, and time-limited sync use.
+</p>
+<div class="about-page-actions">
+<a href="/site/pages/commercial-license-vs-sync-license.html" class="about-page-button about-page-button-secondary">Compare Licenses</a>
+</div>
+</article>
+
+<article class="about-page-card">
+<h3>Recommended Commercial Tracks</h3>
+<p>
+Browse selected Nanashino-chan tracks organized for brand, agency, creator, product, and visual use.
+</p>
+<div class="about-page-actions">
+<a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="about-page-button about-page-button-secondary">Browse Tracks</a>
+</div>
+</article>
+
+<article class="about-page-card">
+<h3>Proof of Music License</h3>
+<p>
+Learn what records businesses, agencies, and creators should save when licensing music for content.
+</p>
+<div class="about-page-actions">
+<a href="/site/pages/proof-of-music-license-for-business.html" class="about-page-button about-page-button-secondary">View Documentation Guide</a>
+</div>
+</article>
 
 </div>
 
 </section>
 
-<section class="about-section">
+<section class="about-page-section">
 
-<div class="proof-block">
+<div class="about-page-final">
 
-<h2>Listen, Review the Work, or License the Music</h2>
+<p class="about-page-final-label">Next step</p>
 
-<p class="proof-sub">
-Listen to Nanashino-chan for focus, work, reading, quiet nights, and creative time. If you are evaluating the project, review the public use references. If you want to use the music in content, check the appropriate license before publishing.
+<h2>Find the right way to experience Nanashino-chan music</h2>
+
+<p>
+Listen for focus, work, reading, and quiet nights. Explore public use references if you are evaluating the project, or review licensing options if you want to use the music in videos, advertising, digital media, or client work.
 </p>
 
-<p class="proof-sub">
+<p class="about-page-final-ja">
 音楽として聴く、公開利用実績を確認する、映像や商用コンテンツで使用する。目的に合ったページからNanashino-chanのプロジェクトをご覧ください。
 </p>
 
-<div class="internal-links">
-<a href="/site/today.html">Listen to the Music</a>
-<a href="/site/works.html">View Works</a>
-<a href="/site/licensing.html#pricing">Explore Licensing</a>
-<a href="/site/contact.html">Contact</a>
+<div class="about-page-actions about-page-actions-center">
+<a href="/site/today.html" class="about-page-button about-page-button-primary">Listen to the Music</a>
+<a href="/site/works.html" class="about-page-button about-page-button-secondary">View Works</a>
+<a href="/site/licensing.html#pricing" class="about-page-button about-page-button-secondary">Explore Licensing</a>
 </div>
 
 </div>
 
 </section>
 
-<section class="about-section">
+<section class="about-page-section about-page-follow">
 
+<div class="about-page-heading about-page-heading-center">
+<p>Official channels</p>
 <h2>Follow Nanashino-chan</h2>
+</div>
 
-<p class="about-tagline">
+<p>
 Follow the project, listen to official releases, and confirm Nanashino-chan’s public activity across music and social platforms.
 </p>
 
@@ -1031,37 +1260,45 @@ title="YouTube Music"> <img src="/site/youtube-music.png" alt="YouTube Music"> <
 
 <footer class="site-footer">
 
+<div class="about-page-footer">
+
+<div class="about-page-footer-brand">
 <h2>Nanashino-chan</h2>
-
 <p>
-Independent Tokyo lo-fi music artist and creative project for listeners, visual storytelling, creators, brands, agencies, and licensed commercial use.
+Independent Tokyo lo-fi music artist and creative project producing original music for listeners, visual storytelling, creators, brands, agencies, and licensed commercial use.
 </p>
-
 <p>
 © 2026 Nanashino-chan. All rights reserved.
 </p>
+</div>
 
-<p>
-<a href="/site/index.html">Home</a> |
-<a href="/site/today.html">Listen Now</a> |
-<a href="/site/music.html">Music</a> |
-<a href="/site/works.html">Works</a> |
-<a href="/site/about.html">About</a> |
-<a href="/site/licensing.html">License Music</a> |
-<a href="/site/faq.html">FAQ</a> |
-<a href="/site/terms.html">Terms</a> |
-<a href="/site/commerce.html">Legal</a> |
-<a href="/site/policy.html">Policy</a> |
+<div class="about-page-footer-links">
+<h3>Explore</h3>
+<a href="/site/index.html">Home</a>
+<a href="/site/today.html">Listen Now</a>
+<a href="/site/music.html">Music Catalog</a>
+<a href="/site/works.html">Works</a>
+<a href="/site/about.html">About</a>
+</div>
+
+<div class="about-page-footer-links">
+<h3>Licensing and Support</h3>
+<a href="/site/licensing.html">Music Licensing</a>
+<a href="/site/pages/recommended-tracks-for-commercial-video-use.html">Recommended Tracks</a>
+<a href="/site/faq.html">FAQ</a>
 <a href="/site/contact.html">Contact</a>
-</p>
+<a href="/site/terms.html">Terms</a>
+<a href="/site/policy.html">Policy</a>
+</div>
 
-<p>
-<a href="/site/pages/recommended-tracks-for-commercial-video-use.html">
-Recommended Tracks for Commercial Video Use
-</a>
-</p>
+</div>
 
 </footer>
+
+<div class="about-page-mobile-cta" aria-label="Quick actions">
+<a href="/site/today.html">Listen</a>
+<a href="/site/licensing.html#pricing">Licensing</a>
+</div>
 
 </body>
 </html>
