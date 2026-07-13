@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -19,15 +18,15 @@
 
 <meta http-equiv="Content-Security-Policy" content="
 default-src 'self';
-script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.google.com https://www.gstatic.com https://s.ytimg.com https://www.googletagmanager.com https://www.google-analytics.com;
-frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;
-connect-src 'self' https://i.ytimg.com https://www.google-analytics.com https://www.googletagmanager.com https://www.youtube.com;
-img-src 'self' https://i.ytimg.com https://img.youtube.com data:;
-style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-font-src 'self' https://fonts.gstatic.com;
+script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
+img-src 'self' data:;
+style-src 'self' 'unsafe-inline';
+font-src 'self';
 object-src 'none';
 base-uri 'self';
 form-action 'self';
+frame-ancestors 'self';
 ">
 
 <link rel="icon" href="/site/favicon.ico">
@@ -52,13 +51,6 @@ form-action 'self';
 <meta name="twitter:image:alt" content="Nanashino-chan Tokyo lo-fi music artist and project identity">
 
 <link rel="stylesheet" href="/site/style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -117,7 +109,7 @@ rel="stylesheet">
       "@id": "https://nanashino-chan.github.io/site/about.html#webpage",
       "url": "https://nanashino-chan.github.io/site/about.html",
       "name": "About Nanashino-chan",
-      "description": "About Nanashino-chan, an independent Tokyo lo-fi artist and music licensing project with an original catalog for listening, visual storytelling, and commercial content.",
+      "description": "About Nanashino-chan, an independent Tokyo lo-fi music artist and music licensing project with an original catalog for listening, visual storytelling, and commercial content.",
       "isPartOf": {
         "@id": "https://nanashino-chan.github.io/site/#website"
       },
@@ -193,7 +185,7 @@ rel="stylesheet">
           "name": "Do public use references imply endorsement or partnership?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Unless separately stated, public use references are based on observed public social content and do not imply endorsement, sponsorship, partnership, approval, or a formal client relationship."
+            "text": "No. Unless separately stated, public references are based on observed public social content and do not imply endorsement, sponsorship, partnership, approval, or a formal client relationship."
           }
         }
       ]
@@ -231,819 +223,70 @@ window.addEventListener("mousemove", loadGA, { once: true });
 window.addEventListener("touchstart", loadGA, { once: true });
 </script>
 
-<style>
-:root {
-  --about-bg: #0d0d0f;
-  --about-panel: #151518;
-  --about-panel-soft: #1b1b1f;
-  --about-border: rgba(255, 255, 255, 0.11);
-  --about-text: #f7f7f8;
-  --about-muted: #b9b9c2;
-  --about-yellow: #ffcc00;
-  --about-yellow-soft: rgba(255, 204, 0, 0.12);
-  --about-purple: #a98bff;
-  --about-purple-soft: rgba(169, 139, 255, 0.13);
-  --about-max: 1120px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background:
-    radial-gradient(circle at 15% 0%, rgba(169, 139, 255, 0.09), transparent 32%),
-    radial-gradient(circle at 85% 15%, rgba(255, 204, 0, 0.06), transparent 25%),
-    var(--about-bg);
-  color: var(--about-text);
-  font-family: "Inter", "Noto Sans JP", sans-serif;
-  line-height: 1.75;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-a {
-  color: var(--about-yellow);
-}
-
-a:hover {
-  color: #ffe36d;
-}
-
-.about-nav-wrap {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid var(--about-border);
-  background: rgba(13, 13, 15, 0.92);
-  backdrop-filter: blur(16px);
-}
-
-.about-nav {
-  width: min(calc(100% - 32px), var(--about-max));
-  min-height: 68px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.about-nav-brand {
-  margin-right: auto;
-  color: #fff;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-}
-
-.about-nav a:not(.about-nav-brand):not(.about-nav-cta) {
-  color: #d7d7dc;
-  font-size: 0.94rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.about-nav a:not(.about-nav-brand):not(.about-nav-cta):hover {
-  color: #fff;
-}
-
-.about-nav-cta {
-  padding: 9px 16px;
-  border-radius: 999px;
-  background: var(--about-yellow);
-  color: #111;
-  font-size: 0.9rem;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.about-nav-cta:hover {
-  color: #111;
-  background: #ffe05c;
-}
-
-.about-main {
-  width: min(calc(100% - 40px), var(--about-max));
-  margin: 0 auto;
-  padding: 0 0 90px;
-}
-
-.about-breadcrumb {
-  padding: 24px 0 0;
-  color: #8f8f98;
-  font-size: 0.88rem;
-}
-
-.about-breadcrumb a {
-  color: #bdbdc5;
-  text-decoration: none;
-}
-
-.about-breadcrumb span {
-  margin: 0 8px;
-}
-
-.about-hero {
-  padding: 72px 0 54px;
-}
-
-.about-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 18px;
-  color: var(--about-yellow);
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.about-eyebrow::before {
-  content: "";
-  width: 30px;
-  height: 2px;
-  background: var(--about-yellow);
-}
-
-.about-hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
-  gap: 52px;
-  align-items: center;
-}
-
-.about-title {
-  max-width: 760px;
-  margin: 0;
-  font-size: clamp(2.65rem, 6.7vw, 5.65rem);
-  line-height: 0.98;
-  letter-spacing: -0.065em;
-}
-
-.about-title span {
-  display: block;
-  margin-top: 14px;
-  color: var(--about-yellow);
-  font-size: 0.39em;
-  line-height: 1.2;
-  letter-spacing: -0.025em;
-}
-
-.about-lead {
-  max-width: 720px;
-  margin: 28px 0 0;
-  color: #dedee3;
-  font-size: clamp(1.05rem, 2vw, 1.24rem);
-  line-height: 1.8;
-}
-
-.about-hero-note {
-  margin: 20px 0 0;
-  color: var(--about-muted);
-  font-size: 0.96rem;
-}
-
-.about-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 30px;
-}
-
-.about-button {
-  display: inline-flex;
-  min-height: 48px;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 20px;
-  border: 1px solid var(--about-border);
-  border-radius: 10px;
-  font-weight: 800;
-  line-height: 1.25;
-  text-align: center;
-  text-decoration: none;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-}
-
-.about-button:hover {
-  transform: translateY(-2px);
-}
-
-.about-button-primary {
-  border-color: var(--about-yellow);
-  background: var(--about-yellow);
-  color: #111;
-}
-
-.about-button-primary:hover {
-  background: #ffe05c;
-  color: #111;
-}
-
-.about-button-secondary {
-  background: rgba(255, 255, 255, 0.04);
-  color: #fff;
-}
-
-.about-button-secondary:hover {
-  border-color: rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-}
-
-.about-hero-visual {
-  position: relative;
-  margin: 0;
-}
-
-.about-hero-visual::before {
-  content: "";
-  position: absolute;
-  inset: -12px 18px 18px -12px;
-  z-index: -1;
-  border: 1px solid rgba(255, 204, 0, 0.28);
-  border-radius: 24px;
-}
-
-.about-image {
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--about-border);
-  border-radius: 20px;
-  background: #111;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
-}
-
-.about-caption {
-  margin-top: 12px;
-  color: #9797a0;
-  font-size: 0.82rem;
-  line-height: 1.6;
-}
-
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  overflow: hidden;
-  margin: 0 0 92px;
-  border: 1px solid var(--about-border);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.025);
-}
-
-.about-stat {
-  min-height: 150px;
-  padding: 28px 22px;
-  border-right: 1px solid var(--about-border);
-}
-
-.about-stat:last-child {
-  border-right: 0;
-}
-
-.about-stat strong {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--about-yellow);
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  line-height: 1.1;
-  letter-spacing: -0.04em;
-}
-
-.about-stat span {
-  display: block;
-  color: #d9d9df;
-  font-size: 0.94rem;
-  line-height: 1.55;
-}
-
-.about-stat-source {
-  grid-column: 1 / -1;
-  padding: 13px 20px;
-  border-top: 1px solid var(--about-border);
-  color: #888891;
-  font-size: 0.78rem;
-  line-height: 1.6;
-}
-
-.about-section {
-  margin: 0 0 96px;
-  scroll-margin-top: 90px;
-}
-
-.about-section-heading {
-  display: grid;
-  grid-template-columns: minmax(180px, 0.33fr) minmax(0, 0.67fr);
-  gap: 44px;
-  margin-bottom: 34px;
-  align-items: start;
-}
-
-.about-section-kicker {
-  margin: 4px 0 0;
-  color: var(--about-yellow);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.about-section h2 {
-  margin: 0;
-  font-size: clamp(1.95rem, 4vw, 3.25rem);
-  line-height: 1.15;
-  letter-spacing: -0.045em;
-}
-
-.about-section h3 {
-  margin-top: 0;
-  line-height: 1.35;
-}
-
-.about-copy {
-  max-width: 820px;
-  color: #d2d2d8;
-}
-
-.about-copy p {
-  margin: 0 0 20px;
-}
-
-.about-copy p:last-child {
-  margin-bottom: 0;
-}
-
-.about-ja-summary {
-  margin-top: 28px;
-  padding: 22px 24px;
-  border-left: 3px solid var(--about-purple);
-  border-radius: 0 12px 12px 0;
-  background: var(--about-purple-soft);
-  color: #e5e0f4;
-}
-
-.about-ja-label {
-  display: block;
-  margin-bottom: 8px;
-  color: #c9b9ff;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.about-definition-grid,
-.about-track-grid,
-.about-proof-grid,
-.about-rights-grid,
-.about-event-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 34px;
-}
-
-.about-card {
-  padding: 28px;
-  border: 1px solid var(--about-border);
-  border-radius: 16px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018));
-}
-
-.about-card-number {
-  display: block;
-  margin-bottom: 18px;
-  color: var(--about-yellow);
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
-.about-card h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.about-card p {
-  margin: 0;
-  color: var(--about-muted);
-  font-size: 0.94rem;
-}
-
-.about-panel {
-  padding: clamp(28px, 5vw, 50px);
-  border: 1px solid rgba(255, 204, 0, 0.22);
-  border-radius: 22px;
-  background:
-    linear-gradient(135deg, rgba(255, 204, 0, 0.085), transparent 42%),
-    var(--about-panel);
-}
-
-.about-story-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.64fr) minmax(300px, 0.36fr);
-  gap: 42px;
-  align-items: start;
-}
-
-.about-story-note {
-  padding: 28px;
-  border: 1px solid var(--about-border);
-  border-radius: 16px;
-  background: #101012;
-}
-
-.about-story-note strong {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--about-yellow);
-  font-size: 1.06rem;
-}
-
-.about-story-note p {
-  margin: 0;
-  color: var(--about-muted);
-  font-size: 0.92rem;
-}
-
-.about-track-card strong {
-  display: block;
-  margin-bottom: 7px;
-  color: #fff;
-  font-size: 1.08rem;
-}
-
-.about-track-card span {
-  display: block;
-  color: var(--about-muted);
-  font-size: 0.9rem;
-}
-
-.about-visual-proof {
-  overflow: hidden;
-  padding: 0;
-}
-
-.about-visual-proof img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  border-bottom: 1px solid var(--about-border);
-}
-
-.about-visual-proof-copy {
-  padding: 22px;
-}
-
-.about-visual-proof-copy h3 {
-  margin: 0 0 9px;
-  font-size: 1.05rem;
-}
-
-.about-visual-proof-copy p {
-  margin: 0;
-  color: var(--about-muted);
-  font-size: 0.88rem;
-}
-
-.about-disclaimer {
-  margin-top: 24px;
-  padding: 18px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.025);
-  color: #9c9ca5;
-  font-size: 0.82rem;
-}
-
-.about-discovery-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.58fr) minmax(320px, 0.42fr);
-  gap: 42px;
-  margin-top: 34px;
-  align-items: center;
-}
-
-.about-inline-link {
-  font-weight: 800;
-  text-underline-offset: 3px;
-}
-
-.about-footer {
-  border-top: 1px solid var(--about-border);
-  background: #09090a;
-}
-
-.about-footer-inner {
-  width: min(calc(100% - 40px), var(--about-max));
-  margin: 0 auto;
-  padding: 48px 0 90px;
-}
-
-.about-footer-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr 0.8fr;
-  gap: 38px;
-}
-
-.about-footer h2,
-.about-footer h3 {
-  margin-top: 0;
-}
-
-.about-footer h2 {
-  margin-bottom: 10px;
-  font-size: 1.45rem;
-}
-
-.about-footer h3 {
-  margin-bottom: 12px;
-  color: #fff;
-  font-size: 0.94rem;
-}
-
-.about-footer p {
-  margin: 0;
-  color: #93939c;
-  font-size: 0.86rem;
-}
-
-.about-footer-links {
-  display: grid;
-  gap: 8px;
-}
-
-.about-footer-links a {
-  color: #bdbdc5;
-  font-size: 0.86rem;
-  text-decoration: none;
-}
-
-.about-footer-links a:hover {
-  color: #fff;
-}
-
-.about-mobile-cta {
-  display: none;
-}
-
-@media (max-width: 900px) {
-  .about-nav {
-    gap: 14px;
-  }
-
-  .about-nav a:not(.about-nav-brand):not(.about-nav-cta) {
-    display: none;
-  }
-
-  .about-hero {
-    padding-top: 48px;
-  }
-
-  .about-hero-grid,
-  .about-story-grid,
-  .about-discovery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-hero-grid {
-    gap: 38px;
-  }
-
-  .about-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .about-stat:nth-child(2) {
-    border-right: 0;
-  }
-
-  .about-stat:nth-child(-n+2) {
-    border-bottom: 1px solid var(--about-border);
-  }
-
-  .about-section-heading {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .about-footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .about-footer-brand {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (max-width: 620px) {
-  .about-main {
-    width: min(calc(100% - 28px), var(--about-max));
-    padding-bottom: 64px;
-  }
-
-  .about-nav {
-    width: calc(100% - 28px);
-  }
-
-  .about-nav-cta {
-    padding: 8px 13px;
-    font-size: 0.82rem;
-  }
-
-  .about-hero {
-    padding-bottom: 42px;
-  }
-
-  .about-title {
-    font-size: clamp(2.55rem, 14vw, 4rem);
-  }
-
-  .about-lead {
-    font-size: 1rem;
-  }
-
-  .about-actions {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .about-button {
-    width: 100%;
-  }
-
-  .about-stats {
-    grid-template-columns: 1fr;
-    margin-bottom: 72px;
-  }
-
-  .about-stat {
-    min-height: auto;
-    border-right: 0;
-    border-bottom: 1px solid var(--about-border);
-  }
-
-  .about-stat:nth-child(3) {
-    border-bottom: 1px solid var(--about-border);
-  }
-
-  .about-stat:last-of-type {
-    border-bottom: 0;
-  }
-
-  .about-section {
-    margin-bottom: 72px;
-  }
-
-  .about-definition-grid,
-  .about-track-grid,
-  .about-proof-grid,
-  .about-rights-grid,
-  .about-event-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-card,
-  .about-panel {
-    padding: 24px 20px;
-  }
-
-  .about-ja-summary {
-    padding: 18px;
-  }
-
-  .about-footer-inner {
-    width: calc(100% - 28px);
-    padding-bottom: 105px;
-  }
-
-  .about-footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-footer-brand {
-    grid-column: auto;
-  }
-
-  .about-mobile-cta {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1100;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    padding: 9px 12px;
-    border-top: 1px solid var(--about-border);
-    background: rgba(10, 10, 11, 0.96);
-    backdrop-filter: blur(14px);
-  }
-
-  .about-mobile-cta a {
-    display: flex;
-    min-height: 44px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    font-size: 0.82rem;
-    font-weight: 800;
-    text-decoration: none;
-  }
-
-  .about-mobile-listen {
-    background: #fff;
-    color: #111;
-  }
-
-  .about-mobile-license {
-    background: var(--about-yellow);
-    color: #111;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .about-button {
-    transition: none;
-  }
-}
-</style>
-
 </head>
 
-<body>
+<body class="about-page-body">
 
-<header class="about-nav-wrap">
-<nav class="about-nav" aria-label="Primary navigation">
-<a href="/site/index.html" class="about-nav-brand">Nanashino-chan</a>
+<header>
+<nav aria-label="Primary navigation">
+<div class="nav">
+<a href="/site/index.html">Home</a>
 <a href="/site/music.html">Music</a>
 <a href="/site/works.html">Works</a>
-<a href="/site/licensing.html">Licensing</a>
+<a href="/site/about.html" aria-current="page">About</a>
+<a href="/site/licensing.html">License</a>
 <a href="/site/contact.html">Contact</a>
-<a href="/site/today.html" class="about-nav-cta">Listen Now</a>
+<a href="/site/today.html">▶ Listen Now</a>
+</div>
 </nav>
 </header>
 
-<main class="about-main">
+<main class="about-page">
 
-<nav class="about-breadcrumb" aria-label="Breadcrumb">
+<nav class="about-page-breadcrumb" aria-label="Breadcrumb">
 <a href="/site/index.html">Home</a>
 <span aria-hidden="true">/</span>
 <span aria-current="page">About</span>
 </nav>
 
-<section class="about-hero">
+<section class="about-page-hero">
 
-<div class="about-hero-grid">
+<div class="about-page-hero-grid">
 
-<div>
+<div class="about-page-hero-copy">
 
-<span class="about-eyebrow">Independent music project from Tokyo</span>
+<p class="about-page-eyebrow">Independent music project from Tokyo</p>
 
-<h1 class="about-title">
+<h1>
 Nanashino-chan
 <span>Original Lo-Fi Music for Listening, Visuals and Licensed Content</span>
 </h1>
 
-<p class="about-lead">
+<p class="about-page-lead">
 Nanashino-chan is an independent Tokyo lo-fi music artist and creative project producing original lo-fi, chillhop, and jazzhop for listeners, creators, brands, agencies, and global digital content.
 </p>
 
-<p class="about-hero-note">
-The name represents the music artist, the project identity, and the character-based avatar used to express its visual world.
+<p class="about-page-note">
+The name represents the music artist, the independent project, and the character-based avatar used to express its visual world.
 </p>
 
-<div class="about-actions">
-<a href="/site/today.html" class="about-button about-button-primary">Listen to the Music</a>
-<a href="/site/works.html" class="about-button about-button-secondary">View Public Use References</a>
-<a href="/site/licensing.html" class="about-button about-button-secondary">Explore Licensing</a>
+<div class="about-page-actions">
+<a href="/site/today.html" class="about-page-button about-page-button-primary">Listen to the Music</a>
+<a href="/site/works.html" class="about-page-button about-page-button-secondary">View Public Use References</a>
+<a href="/site/licensing.html" class="about-page-button about-page-button-secondary">Explore Licensing</a>
 </div>
 
 </div>
 
-<figure class="about-hero-visual">
+<figure class="about-page-hero-figure">
 <img
 src="/site/nanashino-artist.jpg"
-class="about-image"
 alt="Nanashino-chan, an independent Tokyo lo-fi music artist and creative project"
 width="1200"
 height="675"
 loading="eager"
 fetchpriority="high">
-<figcaption class="about-caption">
+<figcaption>
 Nanashino-chan — an independent music artist, project identity, and visual IP inspired by Tokyo nights and quiet creative time.
 </figcaption>
 </figure>
@@ -1052,45 +295,45 @@ Nanashino-chan — an independent music artist, project identity, and visual IP 
 
 </section>
 
-<section class="about-stats" aria-label="Nanashino-chan project highlights">
+<section class="about-page-stats" aria-label="Nanashino-chan project highlights">
 
-<div class="about-stat">
+<div class="about-page-stat">
 <strong>2,000+</strong>
 <span>Original lo-fi, chillhop, jazzhop, and instrumental tracks</span>
 </div>
 
-<div class="about-stat">
+<div class="about-page-stat">
 <strong>3,500+</strong>
 <span>Shazam searches generated through listener discovery</span>
 </div>
 
-<div class="about-stat">
+<div class="about-page-stat">
 <strong>2,500+</strong>
 <span>Public Instagram Reels observed using Nanashino-chan music</span>
 </div>
 
-<div class="about-stat">
+<div class="about-page-stat">
 <strong>7M+</strong>
 <span>Combined views observed across public social content</span>
 </div>
 
-<div class="about-stat-source">
+<p class="about-page-stats-note">
 Figures reflect project records and publicly observable signals as of July 2026. Public use is generally organic and non-sponsored unless separately stated. Counts may continue to change.
-</div>
+</p>
 
 </section>
 
-<section class="about-section" id="what-is-nanashino-chan">
+<section class="about-page-section" id="what-is-nanashino-chan">
 
-<div class="about-section-heading">
-<p class="about-section-kicker">Identity</p>
+<div class="about-page-heading">
+<p>Identity</p>
 <h2>One name connecting the music, the project, and its visual world</h2>
 </div>
 
-<div class="about-copy">
+<div class="about-page-copy">
 
 <p>
-Nanashino-chan is first and foremost a music artist: the name listeners see across official releases, YouTube, YouTube Music, Apple Music, Shazam, and other discovery platforms.
+Nanashino-chan is first and foremost a music artist: the name listeners see across official releases, YouTube, YouTube Music, Apple Music, Shazam, and other music-discovery platforms.
 </p>
 
 <p>
@@ -1101,41 +344,43 @@ It is also the name of the independent project that produces and distributes the
 The Nanashino-chan character acts as an avatar for the person behind the activity. It gives the project a consistent visual identity without requiring the work to depend on a conventional public-facing personality.
 </p>
 
-<div class="about-ja-summary">
-<span class="about-ja-label">日本語要約</span>
+<div class="about-page-ja">
+<strong>日本語要約</strong>
+<p>
 Nanashino-chanは、東京を拠点に活動する独立系Lo-Fi音楽アーティスト兼クリエイティブプロジェクトです。音楽を発表するアーティスト名であると同時に、制作・配信・権利管理・Web運営・ライセンス提供を行うプロジェクト名でもあります。キャラクターは、活動者本人と音楽の世界観を表すアバターです。
+</p>
 </div>
 
 </div>
 
-<div class="about-definition-grid">
+<div class="about-page-card-grid">
 
-<article class="about-card">
-<span class="about-card-number">01 / MUSIC ARTIST</span>
+<article class="about-page-card">
+<span>01 / Music Artist</span>
 <h3>Official music identity</h3>
 <p>
 The artist name used for original releases, streaming services, music discovery, and audience-facing activity.
 </p>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">02 / INDEPENDENT PROJECT</span>
+<article class="about-page-card">
+<span>02 / Independent Project</span>
 <h3>Production and operations</h3>
 <p>
 The independent structure behind music creation, distribution, catalog management, publishing, and licensing.
 </p>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">03 / AVATAR</span>
+<article class="about-page-card">
+<span>03 / Avatar</span>
 <h3>Character-based expression</h3>
 <p>
 A visual identity representing the creator behind the project and the quiet urban world surrounding the music.
 </p>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">04 / CREATIVE IP</span>
+<article class="about-page-card">
+<span>04 / Creative IP</span>
 <h3>Music beyond a single platform</h3>
 <p>
 An original catalog, character identity, visual storytelling system, website, social presence, and licensing model developed together.
@@ -1146,18 +391,16 @@ An original catalog, character identity, visual storytelling system, website, so
 
 </section>
 
-<section class="about-section" id="story">
+<section class="about-page-section about-page-panel" id="story">
 
-<div class="about-panel">
-
-<div class="about-section-heading">
-<p class="about-section-kicker">Origin and mission</p>
+<div class="about-page-heading">
+<p>Origin and mission</p>
 <h2>Music designed to support the moment behind the screen</h2>
 </div>
 
-<div class="about-story-grid">
+<div class="about-page-story-grid">
 
-<div class="about-copy">
+<div class="about-page-copy">
 
 <p>
 Nanashino-chan began YouTube activity in May 2024 and expanded into official digital music distribution in February 2025. The project grew from a simple idea: background music can be quiet without being anonymous, and useful without losing its emotional identity.
@@ -1175,15 +418,17 @@ Rather than competing with narration, captions, product visuals, or storytelling
 This approach connects two parts of the project: music for everyday listening and music that can function naturally inside videos, digital media, brand content, and other visual formats.
 </p>
 
-<div class="about-ja-summary">
-<span class="about-ja-label">制作思想</span>
+<div class="about-page-ja">
+<strong>制作思想</strong>
+<p>
 Nanashino-chanが目指しているのは、強く主張して映像を支配する音楽ではなく、映像や言葉の背後で空気感、余韻、感情のトーンを支える音楽です。東京の夜や静かな日常をモチーフに、聴くための音楽と、映像の中で機能する音楽の両立を目指しています。
+</p>
 </div>
 
 </div>
 
-<aside class="about-story-note">
-<strong>Independent, but informed by music-industry experience</strong>
+<aside class="about-page-side-note">
+<h3>Independent, with music-industry experience</h3>
 <p>
 The project is independently operated from Tokyo by a creator with prior experience working in the record industry and current hands-on experience across music production, digital distribution, rights management, creator-platform operations, and web publishing.
 </p>
@@ -1191,18 +436,16 @@ The project is independently operated from Tokyo by a creator with prior experie
 
 </div>
 
-</div>
-
 </section>
 
-<section class="about-section" id="music">
+<section class="about-page-section" id="music">
 
-<div class="about-section-heading">
-<p class="about-section-kicker">The music</p>
+<div class="about-page-heading">
+<p>The music</p>
 <h2>Calm, urban, warm, and recognizable</h2>
 </div>
 
-<div class="about-copy">
+<div class="about-page-copy">
 
 <p>
 The Nanashino-chan catalog moves across lo-fi hip hop, chillhop, jazzhop, calm instrumental music, chillwave, and Tokyo-inspired night sounds. The common thread is a low-distraction atmosphere with enough melody and texture to remain memorable.
@@ -1214,48 +457,60 @@ Some tracks lean toward warm piano and jazz harmony. Others use city-night synth
 
 </div>
 
-<div class="about-track-grid">
+<div class="about-page-card-grid">
 
-<article class="about-card about-track-card">
-<strong>Smooth Groove</strong>
-<span>Warm, polished lo-fi for lifestyle, interior, fashion, and refined visual content.</span>
+<article class="about-page-card">
+<span>Selected Track</span>
+<h3>Smooth Groove</h3>
+<p>
+Warm, polished lo-fi for lifestyle, interior, fashion, and refined visual content.
+</p>
 </article>
 
-<article class="about-card about-track-card">
-<strong>Vaporwave Streets</strong>
-<span>Urban synthwave atmosphere for Tokyo visuals, city scenes, technology, and modern edits.</span>
+<article class="about-page-card">
+<span>Selected Track</span>
+<h3>Vaporwave Streets</h3>
+<p>
+Urban synthwave atmosphere for Tokyo visuals, city scenes, technology, and modern edits.
+</p>
 </article>
 
-<article class="about-card about-track-card">
-<strong>Smooth Transitions</strong>
-<span>Controlled, voice-friendly background music for explainers, product videos, and business content.</span>
+<article class="about-page-card">
+<span>Selected Track</span>
+<h3>Smooth Transitions</h3>
+<p>
+Controlled, voice-friendly background music for explainers, product videos, and business content.
+</p>
 </article>
 
-<article class="about-card about-track-card">
-<strong>Stillness Vibes</strong>
-<span>Quiet instrumental space for culture, reading, reflection, calm communication, and slow visuals.</span>
+<article class="about-page-card">
+<span>Selected Track</span>
+<h3>Stillness Vibes</h3>
+<p>
+Quiet instrumental space for culture, reading, reflection, calm communication, and slow visuals.
+</p>
 </article>
 
 </div>
 
-<div class="about-actions">
-<a href="/site/today.html" class="about-button about-button-primary">Start Listening</a>
-<a href="/site/music.html" class="about-button about-button-secondary">Browse the Music Catalog</a>
-<a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="about-button about-button-secondary">Find Music for a Video</a>
+<div class="about-page-actions">
+<a href="/site/today.html" class="about-page-button about-page-button-primary">Start Listening</a>
+<a href="/site/music.html" class="about-page-button about-page-button-secondary">Browse the Music Catalog</a>
+<a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="about-page-button about-page-button-secondary">Find Music for a Video</a>
 </div>
 
 </section>
 
-<section class="about-section" id="discovery">
+<section class="about-page-section" id="discovery">
 
-<div class="about-section-heading">
-<p class="about-section-kicker">Discovery</p>
+<div class="about-page-heading">
+<p>Discovery</p>
 <h2>Listener interest that goes beyond passive playback</h2>
 </div>
 
-<div class="about-discovery-grid">
+<div class="about-page-media-grid">
 
-<div class="about-copy">
+<div class="about-page-copy">
 
 <p>
 Nanashino-chan music has passed 3,500 Shazam searches. A Shazam search begins when someone hears a track, becomes curious about it, and actively tries to identify the music.
@@ -1269,22 +524,23 @@ That makes Shazam different from an automatic impression or passive stream. It p
 The music has also appeared in more than 2,500 publicly observable Instagram Reels, with combined public social views exceeding seven million across recorded examples. These signals include audiences and visual contexts in Japan, Hong Kong, Brazil, and other regions.
 </p>
 
-<div class="about-ja-summary">
-<span class="about-ja-label">日本語要約</span>
+<div class="about-page-ja">
+<strong>日本語要約</strong>
+<p>
 Shazam検索は、どこかで曲を聴いた人が興味を持ち、自分で曲名を調べた行動です。3,500回以上のShazam検索に加え、公開確認できたInstagram Reelsは2,500件以上、公開SNS上の累計再生は700万回以上となっています。
+</p>
 </div>
 
 </div>
 
-<figure>
+<figure class="about-page-figure">
 <img
 src="/site/shazam3000.webp"
-class="about-image"
 alt="Nanashino-chan reached the 3000 Shazam search milestone before passing 3500 searches"
 width="1600"
 height="900"
 loading="lazy">
-<figcaption class="about-caption">
+<figcaption>
 This image records the 3,000-search milestone reached in June 2026. The project total has since passed 3,500 Shazam searches.
 </figcaption>
 </figure>
@@ -1293,14 +549,14 @@ This image records the 3,000-search milestone reached in June 2026. The project 
 
 </section>
 
-<section class="about-section" id="public-use">
+<section class="about-page-section" id="public-use">
 
-<div class="about-section-heading">
-<p class="about-section-kicker">Public visual contexts</p>
+<div class="about-page-heading">
+<p>Public visual contexts</p>
 <h2>Music discovered across creator, lifestyle, and brand-related content</h2>
 </div>
 
-<div class="about-copy">
+<div class="about-page-copy">
 
 <p>
 Public social references help show how Nanashino-chan music can function in real visual environments. Observed examples span fashion and luxury media, interiors, lifestyle content, real estate, culture, beauty, creator videos, and other social-first formats.
@@ -1312,16 +568,16 @@ The examples below are selected visual contexts rather than claims of formal par
 
 </div>
 
-<div class="about-proof-grid">
+<div class="about-page-proof-grid">
 
-<article class="about-card about-visual-proof">
+<article class="about-page-proof-card">
 <img
 src="/site/bazaar-cartier.webp"
 alt="Harper's BAZAAR Hong Kong public Reel in a Cartier-related visual context featuring Nanashino-chan music"
 width="1075"
 height="605"
 loading="lazy">
-<div class="about-visual-proof-copy">
+<div>
 <h3>Fashion and luxury media context</h3>
 <p>
 A Harper’s BAZAAR Hong Kong official Reel where Nanashino-chan music appeared in a Cartier-related public visual context.
@@ -1329,14 +585,14 @@ A Harper’s BAZAAR Hong Kong official Reel where Nanashino-chan music appeared 
 </div>
 </article>
 
-<article class="about-card about-visual-proof">
+<article class="about-page-proof-card">
 <img
 src="/site/arte-moderna.webp"
 alt="Arte Moderna Retro public interior and lifestyle Reel featuring Nanashino-chan music"
 width="1075"
 height="605"
 loading="lazy">
-<div class="about-visual-proof-copy">
+<div>
 <h3>Interior and lifestyle context</h3>
 <p>
 A public Brazilian interior and lifestyle reference showing how warm lo-fi can support design-focused visual storytelling.
@@ -1344,14 +600,14 @@ A public Brazilian interior and lifestyle reference showing how warm lo-fi can s
 </div>
 </article>
 
-<article class="about-card about-visual-proof">
+<article class="about-page-proof-card">
 <img
 src="/site/chuo-nittochi.webp"
 alt="Japanese corporate real estate public social video context featuring Nanashino-chan music"
 width="1075"
 height="605"
 loading="lazy">
-<div class="about-visual-proof-copy">
+<div>
 <h3>Corporate and real estate context</h3>
 <p>
 A Japanese business-owned public social video context connecting the music with architecture, property, and corporate communication.
@@ -1359,37 +615,37 @@ A Japanese business-owned public social video context connecting the music with 
 </div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">MORE REFERENCES</span>
+<article class="about-page-card">
+<span>More References</span>
 <h3>International public use</h3>
 <p>
 Additional observed contexts include fashion, stationery, culture, beauty, hospitality, creator content, and lifestyle accounts across multiple regions.
 </p>
-<div class="about-actions">
-<a href="/site/works.html" class="about-button about-button-secondary">View Works and Sources</a>
+<div class="about-page-actions">
+<a href="/site/works.html" class="about-page-button about-page-button-secondary">View Works and Sources</a>
 </div>
 </article>
 
 </div>
 
-<div class="about-disclaimer">
+<div class="about-page-disclaimer">
 Unless otherwise stated, usage and discovery signals are based on public, organic, non-sponsored use and publicly available data. Public use does not imply endorsement, sponsorship, partnership, direct client relationship, formal licensing status, or approval by the featured brands, creators, public figures, or organizations.
 </div>
 
 </section>
 
-<!-- RIGHTS AND LICENSING -->
 
-<section class="about-section" id="rights-and-licensing">
 
-<div class="about-panel">
+<!-- about.html Part 2 / 2 -->
 
-<div class="about-section-heading">
-<p class="about-section-kicker">Rights and licensing</p>
+<section class="about-page-section about-page-panel" id="rights-and-licensing">
+
+<div class="about-page-heading">
+<p>Rights and licensing</p>
 <h2>Original music with a more direct path to permission</h2>
 </div>
 
-<div class="about-copy">
+<div class="about-page-copy">
 
 <p>
 Nanashino-chan manages both the master recording rights and the composition rights for its original catalog. This can make rights review more straightforward than licensing music where several labels, publishers, composers, or other third parties must be contacted separately.
@@ -1403,41 +659,43 @@ Commercial and sync licensing options are available for eligible creator videos,
 The appropriate license depends on who is publishing the content, whether paid promotion is involved, the platforms used, the campaign duration, and whether the work is being delivered to a client.
 </p>
 
-<div class="about-ja-summary">
-<span class="about-ja-label">権利管理について</span>
+<div class="about-page-ja">
+<strong>権利管理について</strong>
+<p>
 Nanashino-chanでは、オリジナルカタログの原盤権と楽曲著作権をプロジェクト側で管理しています。そのため、複数の第三者権利者が関与する楽曲と比較して、商用利用時の確認、記録、ライセンス手続きを比較的シンプルに進めやすい体制です。
+</p>
 </div>
 
 </div>
 
-<div class="about-rights-grid">
+<div class="about-page-card-grid">
 
-<article class="about-card">
-<span class="about-card-number">MASTER RIGHTS</span>
+<article class="about-page-card">
+<span>Master Rights</span>
 <h3>Recording permission</h3>
 <p>
 Permission relating to the specific Nanashino-chan recording used in the final video or content.
 </p>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">COMPOSITION RIGHTS</span>
+<article class="about-page-card">
+<span>Composition Rights</span>
 <h3>Song permission</h3>
 <p>
 Permission relating to the underlying original composition represented by the recording.
 </p>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">COMMERCIAL CREATOR</span>
+<article class="about-page-card">
+<span>Commercial Creator</span>
 <h3>Organic commercial content</h3>
 <p>
 A typical route for eligible monetized videos, creator businesses, company-owned organic social posts, product videos, and other non-paid commercial publishing.
 </p>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">SYNC LICENSE</span>
+<article class="about-page-card">
+<span>Sync License</span>
 <h3>Advertising and campaigns</h3>
 <p>
 A typical route for paid ads, promoted posts, sponsored campaigns, product launches, and time-limited brand campaign use.
@@ -1446,30 +704,26 @@ A typical route for paid ads, promoted posts, sponsored campaigns, product launc
 
 </div>
 
-<div class="about-actions">
-<a href="/site/licensing.html#pricing" class="about-button about-button-primary">Compare License Options</a>
-<a href="/site/pages/commercial-license-vs-sync-license.html" class="about-button about-button-secondary">Commercial vs Sync License</a>
-<a href="/site/contact.html" class="about-button about-button-secondary">Ask About Your Project</a>
+<div class="about-page-actions">
+<a href="/site/licensing.html#pricing" class="about-page-button about-page-button-primary">Compare License Options</a>
+<a href="/site/pages/commercial-license-vs-sync-license.html" class="about-page-button about-page-button-secondary">Commercial vs Sync License</a>
+<a href="/site/contact.html" class="about-page-button about-page-button-secondary">Ask About Your Project</a>
 </div>
 
-<div class="about-disclaimer">
+<div class="about-page-disclaimer">
 A Nanashino-chan license clarifies permission within the stated scope, but platform behavior may vary depending on service rules, account type, region, rights metadata, automated copyright detection, advertising policies, and future policy changes. Licensing does not guarantee platform approval, monetization, claim prevention, or uninterrupted availability.
-</div>
-
 </div>
 
 </section>
 
-<!-- PROJECT MILESTONES -->
+<section class="about-page-section" id="milestones">
 
-<section class="about-section" id="milestones">
-
-<div class="about-section-heading">
-<p class="about-section-kicker">Milestones</p>
+<div class="about-page-heading">
+<p>Milestones</p>
 <h2>From an independent YouTube project to a global music catalog</h2>
 </div>
 
-<div class="about-copy">
+<div class="about-page-copy">
 
 <p>
 Nanashino-chan has developed through a combination of music production, digital distribution, audience discovery, public visual use, creator-platform activity, and direct licensing infrastructure.
@@ -1477,86 +731,100 @@ Nanashino-chan has developed through a combination of music production, digital 
 
 </div>
 
-<div class="about-definition-grid">
+<div class="about-page-timeline">
 
-<article class="about-card">
-<span class="about-card-number">MAY 2024</span>
+<article class="about-page-timeline-item">
+<time datetime="2024-05">May 2024</time>
+<div>
 <h3>YouTube activity begins</h3>
 <p>
 Nanashino-chan began publishing and developing its lo-fi music activity on YouTube.
 </p>
+</div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">FEBRUARY 2025</span>
+<article class="about-page-timeline-item">
+<time datetime="2025-02">February 2025</time>
+<div>
 <h3>DSP distribution expands</h3>
 <p>
-Official music distribution began across digital streaming and discovery platforms.
+Official music distribution began across digital streaming and music-discovery platforms.
 </p>
+</div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">FEBRUARY 2025</span>
+<article class="about-page-timeline-item">
+<time datetime="2025-02">February 2025</time>
+<div>
 <h3>YouTube Official Artist Channel</h3>
 <p>
-The project became represented through a YouTube Official Artist Channel and connected music catalog.
+Nanashino-chan became represented through a YouTube Official Artist Channel and connected music catalog.
 </p>
+</div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">MAY 2025</span>
+<article class="about-page-timeline-item">
+<time datetime="2025-05">May 2025</time>
+<div>
 <h3>Luxury-media visual context</h3>
 <p>
 Nanashino-chan music appeared in a Harper’s BAZAAR Hong Kong official Reel in a Cartier-related public visual context.
 </p>
+</div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">MARCH 2026</span>
+<article class="about-page-timeline-item">
+<time datetime="2026-03">March 2026</time>
+<div>
 <h3>2,000+ original tracks</h3>
 <p>
 The independently developed catalog passed 2,000 original lo-fi and related instrumental tracks.
 </p>
+</div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">MARCH 2026</span>
+<article class="about-page-timeline-item">
+<time datetime="2026-03">March 2026</time>
+<div>
 <h3>Creator event in Tokyo</h3>
 <p>
 The project took part in an invitation-based creator event held at Google Tokyo Shibuya.
 </p>
+</div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">JUNE 2026</span>
+<article class="about-page-timeline-item">
+<time datetime="2026-06">June 2026</time>
+<div>
 <h3>3,000+ Shazams</h3>
 <p>
-Active listener identification passed the 3,000-search milestone and continued to grow.
+Active listener identification passed the 3,000-search milestone and continued to grow beyond 3,500 searches.
 </p>
+</div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">JULY 2026</span>
+<article class="about-page-timeline-item">
+<time datetime="2026-07">July 2026</time>
+<div>
 <h3>U-KNOCK 2026 participation</h3>
 <p>
 Nanashino-chan participated in a Korea–Japan content-industry summit in Tokyo and introduced its music IP and licensing model.
 </p>
+</div>
 </article>
 
 </div>
 
 </section>
 
-<!-- INDUSTRY AND CREATOR EVENTS -->
+<section class="about-page-section" id="events">
 
-<section class="about-section" id="events">
-
-<div class="about-section-heading">
-<p class="about-section-kicker">Industry participation</p>
+<div class="about-page-heading">
+<p>Industry participation</p>
 <h2>Connecting music with creators, platforms, and international content</h2>
 </div>
 
-<div class="about-copy">
+<div class="about-page-copy">
 
 <p>
 Alongside online music activity, Nanashino-chan has participated in selected creator and content-industry events in Tokyo. These experiences provide opportunities to understand emerging production workflows, exchange ideas, and introduce the project to people working across digital content, creative IP, AI, video, music, and international business.
@@ -1568,110 +836,116 @@ Event participation is presented as part of the project’s professional develop
 
 </div>
 
-<div class="about-event-grid">
+<div class="about-page-event-grid">
 
-<article class="about-card">
-<span class="about-card-number">CREATOR ECONOMY / TOKYO</span>
+<article class="about-page-card">
+<span>Creator Economy / Tokyo</span>
 <h3>Selected Creator Event Experience</h3>
 <p>
 Nanashino-chan participated in an invitation-based creator event held at Google Tokyo Shibuya with approximately 200 participants. The event created a meeting point between artists, creators, digital platforms, music discovery, and modern content production.
 </p>
 
-<div class="about-ja-summary">
-<span class="about-ja-label">日本語</span>
+<div class="about-page-ja">
+<strong>日本語</strong>
+<p>
 Google Tokyo Shibuyaで開催された、約200人規模の招待制クリエイターイベントに参加しました。音楽、動画プラットフォーム、クリエイター文化、デジタルコンテンツ制作が交差する場への参加実績として掲載しています。
+</p>
 </div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">KOREA × JAPAN / CONTENT INDUSTRY</span>
+<article class="about-page-card">
+<span>Korea × Japan / Content Industry</span>
 <h3>U-KNOCK 2026 in Japan Summit</h3>
+
 <p>
-In July 2026, Nanashino-chan participated in U-KNOCK 2026 in Japan Summit in Tokyo. The summit connected Korean content companies with Japanese media, investment, and potential business partners across areas such as creative IP, video, technology, localization, and international expansion.
+In July 2026, Nanashino-chan participated in U-KNOCK 2026 in Japan Summit in Tokyo. The event connected Korean content companies with Japanese media, investment, and potential business partners across creative IP, video, technology, localization, and international expansion.
 </p>
 
 <p>
 Nanashino-chan introduced its original music catalog, direct licensing structure, and potential applications across AI-generated content, advertising, webtoons, animation, games, social media, and other visual formats.
 </p>
 
-<div class="about-ja-summary">
-<span class="about-ja-label">日本語</span>
+<div class="about-page-ja">
+<strong>日本語</strong>
+<p>
 2026年7月、東京で開催された「U-KNOCK 2026 in Japan Summit」に参加しました。オリジナル音楽カタログ、原盤権・著作権を管理するライセンス体制、AI動画、広告、Webtoon、アニメーション、ゲーム、SNSなどでの活用可能性を紹介し、日韓コンテンツ産業に関わる参加者と情報交換を行いました。
+</p>
 </div>
 
-<p style="margin-top:18px;">
+<p class="about-page-source-link">
 <a
 href="https://globalops.besuccess.com/uknock/"
 target="_blank"
-rel="noopener noreferrer"
-class="about-inline-link">
+rel="noopener noreferrer">
 View official U-KNOCK event information
 </a>
 </p>
+
 </article>
 
 </div>
 
-<figure style="margin:36px 0 0;">
+<div class="about-page-event-images">
+
+<figure class="about-page-figure">
 <img
 src="/site/google.webp"
-class="about-image"
 alt="Nanashino-chan participating in an invitation-based creator event at Google Tokyo Shibuya"
 width="1075"
 height="605"
 loading="lazy">
-<figcaption class="about-caption">
+<figcaption>
 Creator event at Google Tokyo Shibuya — a meeting point for music, creators, digital platforms, and content production.
 </figcaption>
 </figure>
 
-<figure style="margin:36px 0 0;">
+<figure class="about-page-figure">
 <img
 src="/site/The ArtistsNight.webp"
-class="about-image"
 alt="The Artists' Night creator event held at Google Tokyo with selected artists and creators"
 width="1075"
 height="605"
 loading="lazy">
-<figcaption class="about-caption">
+<figcaption>
 “The Artists’ Night” — an invitation-based gathering for selected artists and creators.
 </figcaption>
 </figure>
 
-<figure style="margin:36px 0 0;">
+<figure class="about-page-figure about-page-event-image-wide">
 <img
 src="/site/images/og/u-knock-2026-japan-summit.webp"
-class="about-image"
 alt="Nanashino-chan participating in U-KNOCK 2026 in Japan Summit in Tokyo"
 width="1075"
 height="605"
 loading="lazy">
-<figcaption class="about-caption">
+<figcaption>
 U-KNOCK 2026 in Japan Summit — a Korea–Japan content-industry event focused on creative IP, business connections, and cross-border collaboration.
 </figcaption>
 </figure>
 
-<div class="about-disclaimer">
+</div>
+
+<div class="about-page-disclaimer">
 Participation does not imply official endorsement, certification, sponsorship, investment, partnership, or guaranteed cooperation by Google, the event organizers, participating companies, or related organizations.
 </div>
 
-<div class="about-ja-summary">
-<span class="about-ja-label">イベント参加に関する免責</span>
+<div class="about-page-ja">
+<strong>イベント参加に関する免責</strong>
+<p>
 これらのイベントへの参加は、Google、主催・運営団体、参加企業、または関係団体による公認、認定、推薦、スポンサー提供、投資、提携、直接取引、将来の協業を意味するものではありません。
+</p>
 </div>
 
 </section>
 
-<!-- WHO THE MUSIC IS FOR -->
+<section class="about-page-section" id="uses">
 
-<section class="about-section" id="uses">
-
-<div class="about-section-heading">
-<p class="about-section-kicker">Use cases</p>
+<div class="about-page-heading">
+<p>Use cases</p>
 <h2>Created for listeners—and built to work with visual content</h2>
 </div>
 
-<div class="about-copy">
+<div class="about-page-copy">
 
 <p>
 The same musical qualities that support focus and quiet listening can also help creators and businesses establish atmosphere without distracting from narration, captions, products, interviews, or visual storytelling.
@@ -1679,34 +953,34 @@ The same musical qualities that support focus and quiet listening can also help 
 
 </div>
 
-<div class="about-definition-grid">
+<div class="about-page-card-grid">
 
-<article class="about-card">
-<span class="about-card-number">LISTENERS</span>
+<article class="about-page-card">
+<span>Listeners</span>
 <h3>Focus and quiet routines</h3>
 <p>
 Lo-fi and jazzhop for studying, reading, coding, desk work, calm evenings, cafés, and low-volume background listening.
 </p>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">CREATORS</span>
+<article class="about-page-card">
+<span>Creators</span>
 <h3>Videos and social content</h3>
 <p>
 Background music options for eligible YouTube videos, Instagram Reels, TikTok videos, podcasts, commentary, reviews, and creator-led content.
 </p>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">BRANDS AND AGENCIES</span>
+<article class="about-page-card">
+<span>Brands and Agencies</span>
 <h3>Business and campaign visuals</h3>
 <p>
 Music licensing routes for company content, product videos, client work, sponsored content, brand storytelling, and paid campaigns.
 </p>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">AI AND DIGITAL MEDIA</span>
+<article class="about-page-card">
+<span>AI and Digital Media</span>
 <h3>New production workflows</h3>
 <p>
 Original background music for eligible AI visuals, AI narration, avatars, product explainers, automated editing, webtoons, animation, and digital content.
@@ -1717,59 +991,57 @@ Original background music for eligible AI visuals, AI narration, avatars, produc
 
 </section>
 
-<!-- LISTEN AND EXPLORE -->
+<section class="about-page-section" id="explore">
 
-<section class="about-section" id="explore">
-
-<div class="about-section-heading">
-<p class="about-section-kicker">Explore the project</p>
+<div class="about-page-heading">
+<p>Explore the project</p>
 <h2>Listen first, review the work, or explore licensing</h2>
 </div>
 
-<div class="about-definition-grid">
+<div class="about-page-card-grid">
 
-<article class="about-card">
-<span class="about-card-number">LISTEN</span>
+<article class="about-page-card">
+<span>Listen</span>
 <h3>Hear the music</h3>
 <p>
 Start with the site player or browse the wider catalog by mood, use case, and listening context.
 </p>
-<div class="about-actions">
-<a href="/site/today.html" class="about-button about-button-primary">Listen Now</a>
-<a href="/site/music.html" class="about-button about-button-secondary">Music Catalog</a>
+<div class="about-page-actions">
+<a href="/site/today.html" class="about-page-button about-page-button-primary">Listen Now</a>
+<a href="/site/music.html" class="about-page-button about-page-button-secondary">Music Catalog</a>
 </div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">REVIEW</span>
+<article class="about-page-card">
+<span>Review</span>
 <h3>See public references</h3>
 <p>
 Explore source links, business contexts, visual examples, project milestones, and licensing guidance.
 </p>
-<div class="about-actions">
-<a href="/site/works.html" class="about-button about-button-primary">View Works</a>
+<div class="about-page-actions">
+<a href="/site/works.html" class="about-page-button about-page-button-primary">View Works</a>
 </div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">LICENSE</span>
+<article class="about-page-card">
+<span>License</span>
 <h3>Use the music</h3>
 <p>
 Compare personal, commercial creator, sync, and custom licensing routes before publishing.
 </p>
-<div class="about-actions">
-<a href="/site/licensing.html#pricing" class="about-button about-button-primary">View Licensing</a>
+<div class="about-page-actions">
+<a href="/site/licensing.html#pricing" class="about-page-button about-page-button-primary">View Licensing</a>
 </div>
 </article>
 
-<article class="about-card">
-<span class="about-card-number">CONTACT</span>
+<article class="about-page-card">
+<span>Contact</span>
 <h3>Discuss a specific project</h3>
 <p>
 Contact Nanashino-chan for unusual usage, campaign scope, client work, custom terms, or track confirmation.
 </p>
-<div class="about-actions">
-<a href="/site/contact.html" class="about-button about-button-secondary">Contact</a>
+<div class="about-page-actions">
+<a href="/site/contact.html" class="about-page-button about-page-button-secondary">Contact</a>
 </div>
 </article>
 
@@ -1777,53 +1049,51 @@ Contact Nanashino-chan for unusual usage, campaign scope, client work, custom te
 
 </section>
 
-<!-- FAQ -->
+<section class="about-page-section" id="faq">
 
-<section class="about-section" id="faq">
-
-<div class="about-section-heading">
-<p class="about-section-kicker">FAQ</p>
+<div class="about-page-heading">
+<p>FAQ</p>
 <h2>Frequently asked questions</h2>
 </div>
 
-<div class="about-definition-grid">
+<div class="about-page-faq">
 
-<article class="about-card">
+<article>
 <h3>Who is Nanashino-chan?</h3>
 <p>
 Nanashino-chan is an independent Tokyo lo-fi music artist and creative project. The name represents the music artist, the project identity, and the avatar used for its visual storytelling.
 </p>
 </article>
 
-<article class="about-card">
+<article>
 <h3>What kind of music does Nanashino-chan create?</h3>
 <p>
 The catalog includes original lo-fi, chillhop, jazzhop, calm instrumental music, and Tokyo-inspired night sounds designed for listening and visual content.
 </p>
 </article>
 
-<article class="about-card">
+<article>
 <h3>Does Nanashino-chan control the music rights?</h3>
 <p>
 Nanashino-chan manages the master recording rights and composition rights for its original catalog, helping make commercial rights review and licensing documentation more straightforward.
 </p>
 </article>
 
-<article class="about-card">
+<article>
 <h3>Can the music be licensed for commercial videos?</h3>
 <p>
 Yes. Commercial and sync licensing options are available for eligible creator videos, company content, client work, sponsored content, brand videos, advertising campaigns, and AI-generated video projects.
 </p>
 </article>
 
-<article class="about-card">
+<article>
 <h3>Can licensed music still be detected by a platform?</h3>
 <p>
 Yes. Automated systems may still detect licensed music. Keep your receipt, license certificate, track information, project records, publication dates, platforms, and permitted usage scope.
 </p>
 </article>
 
-<article class="about-card">
+<article>
 <h3>Do public use references imply endorsement or partnership?</h3>
 <p>
 No. Unless separately stated, public references do not imply endorsement, sponsorship, partnership, approval, direct client status, or a formal licensing relationship.
@@ -1832,61 +1102,61 @@ No. Unless separately stated, public references do not imply endorsement, sponso
 
 </div>
 
-<div class="about-ja-summary">
-<span class="about-ja-label">日本語</span>
+<div class="about-page-ja">
+<strong>日本語</strong>
+<p>
 Nanashino-chanの音楽は、適切なライセンス範囲内で商用利用に対応しています。企業動画、SNS、広告、AI動画、スポンサーコンテンツ、クライアントワークなどで利用する場合は、公開前に用途、媒体、広告配信の有無、期間、利用主体に合ったライセンスをご確認ください。
+</p>
 </div>
 
 </section>
 
-<!-- SELECTED GUIDES -->
+<section class="about-page-section" id="guides">
 
-<section class="about-section" id="guides">
-
-<div class="about-section-heading">
-<p class="about-section-kicker">Selected guides</p>
+<div class="about-page-heading">
+<p>Selected guides</p>
 <h2>Continue with the page that matches your purpose</h2>
 </div>
 
-<div class="about-definition-grid">
+<div class="about-page-card-grid">
 
-<article class="about-card">
+<article class="about-page-card">
 <h3>Commercial Music Licensing</h3>
 <p>
 Understand how music licensing works for creators, brands, agencies, businesses, and commercial projects.
 </p>
-<div class="about-actions">
-<a href="/site/pages/music-licensing-for-commercial-use-guide.html" class="about-button about-button-secondary">Read the Guide</a>
+<div class="about-page-actions">
+<a href="/site/pages/music-licensing-for-commercial-use-guide.html" class="about-page-button about-page-button-secondary">Read the Guide</a>
 </div>
 </article>
 
-<article class="about-card">
+<article class="about-page-card">
 <h3>Commercial vs Sync License</h3>
 <p>
 Compare organic business publishing with paid advertising, promoted campaigns, and time-limited sync use.
 </p>
-<div class="about-actions">
-<a href="/site/pages/commercial-license-vs-sync-license.html" class="about-button about-button-secondary">Compare Licenses</a>
+<div class="about-page-actions">
+<a href="/site/pages/commercial-license-vs-sync-license.html" class="about-page-button about-page-button-secondary">Compare Licenses</a>
 </div>
 </article>
 
-<article class="about-card">
+<article class="about-page-card">
 <h3>Recommended Commercial Tracks</h3>
 <p>
 Browse selected Nanashino-chan tracks organized for brand, agency, creator, product, and visual use.
 </p>
-<div class="about-actions">
-<a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="about-button about-button-secondary">Browse Tracks</a>
+<div class="about-page-actions">
+<a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="about-page-button about-page-button-secondary">Browse Tracks</a>
 </div>
 </article>
 
-<article class="about-card">
+<article class="about-page-card">
 <h3>Proof of Music License</h3>
 <p>
 Learn what records businesses, agencies, and creators should save when licensing music for content.
 </p>
-<div class="about-actions">
-<a href="/site/pages/proof-of-music-license-for-business.html" class="about-button about-button-secondary">View Documentation Guide</a>
+<div class="about-page-actions">
+<a href="/site/pages/proof-of-music-license-for-business.html" class="about-page-button about-page-button-secondary">View Documentation Guide</a>
 </div>
 </article>
 
@@ -1894,77 +1164,93 @@ Learn what records businesses, agencies, and creators should save when licensing
 
 </section>
 
-<!-- FINAL CTA -->
+<section class="about-page-section">
 
-<section class="about-section">
+<div class="about-page-final">
 
-<div class="about-panel" style="text-align:center;">
-
-<p class="about-section-kicker">Next step</p>
+<p class="about-page-final-label">Next step</p>
 
 <h2>Find the right way to experience Nanashino-chan music</h2>
 
-<p style="max-width:760px;margin:22px auto 0;color:#c9c9d0;">
+<p>
 Listen for focus, work, reading, and quiet nights. Explore public use references if you are evaluating the project, or review licensing options if you want to use the music in videos, advertising, digital media, or client work.
 </p>
 
-<p style="max-width:760px;margin:18px auto 0;color:#b4aec6;">
+<p class="about-page-final-ja">
 音楽として聴く、公開利用実績を確認する、映像や商用コンテンツで使用する。目的に合ったページからNanashino-chanのプロジェクトをご覧ください。
 </p>
 
-<div class="about-actions" style="justify-content:center;">
-<a href="/site/today.html" class="about-button about-button-primary">Listen to the Music</a>
-<a href="/site/works.html" class="about-button about-button-secondary">View Works</a>
-<a href="/site/licensing.html#pricing" class="about-button about-button-secondary">Explore Licensing</a>
+<div class="about-page-actions about-page-actions-center">
+<a href="/site/today.html" class="about-page-button about-page-button-primary">Listen to the Music</a>
+<a href="/site/works.html" class="about-page-button about-page-button-secondary">View Works</a>
+<a href="/site/licensing.html#pricing" class="about-page-button about-page-button-secondary">Explore Licensing</a>
 </div>
 
 </div>
 
 </section>
 
-<section class="works-section">
+<section class="about-page-section about-page-follow">
 
-</section>
-
-<!-- FOLLOW -->
-
-<section class="about-section" style="text-align:center;">
-
+<div class="about-page-heading about-page-heading-center">
+<p>Official channels</p>
 <h2>Follow Nanashino-chan</h2>
+</div>
 
 <p>
-Follow Nanashino-chan on YouTube, X, Instagram, TikTok, LinkedIn, Apple Music, and YouTube Music.
+Follow the project, listen to official releases, and confirm Nanashino-chan’s public activity across music and social platforms.
 </p>
 
-<div class="social-grid">
+<div class="social">
 
-<a href="https://www.youtube.com/@Nanashino-chan" target="_blank" rel="noopener noreferrer">
-<img src="/site/youtube.png" alt="YouTube channel, Nanashino-chan">
-</a>
+<a
+href="https://www.youtube.com/@Nanashino-chan"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Nanashino-chan on YouTube"
+title="YouTube"> <img src="/site/youtube.png" alt="YouTube"> </a>
 
-<a href="https://x.com/nanashinoch" target="_blank" rel="noopener noreferrer">
-<img src="/site/twitter.png" alt="Twitter X profile, Nanashino-chan">
-</a>
+<a
+href="https://x.com/nanashinoch"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Nanashino-chan on X"
+title="X"> <img src="/site/twitter.png" alt="X"> </a>
 
-<a href="https://www.instagram.com/nanashino_chan" target="_blank" rel="noopener noreferrer">
-<img src="/site/instagram.png" alt="Instagram profile, Nanashino-chan">
-</a>
+<a
+href="https://www.instagram.com/nanashino_chan"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Nanashino-chan on Instagram"
+title="Instagram"> <img src="/site/instagram.png" alt="Instagram"> </a>
 
-<a href="https://www.tiktok.com/@nanashino_chan" target="_blank" rel="noopener noreferrer">
-<img src="/site/tiktok.png" alt="TikTok profile, Nanashino-chan">
-</a>
+<a
+href="https://www.tiktok.com/@nanashino_chan"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Nanashino-chan on TikTok"
+title="TikTok"> <img src="/site/tiktok.png" alt="TikTok"> </a>
 
-<a href="https://www.linkedin.com/in/nanashino-chan/" target="_blank" rel="noopener noreferrer">
-<img src="/site/linkedin.png" alt="LinkedIn profile, Nanashino-chan">
-</a>
+<a
+href="https://www.linkedin.com/in/nanashino-chan/"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Nanashino-chan on LinkedIn"
+title="LinkedIn"> <img src="/site/linkedin.png" alt="LinkedIn"> </a>
 
-<a href="https://music.apple.com/us/artist/nanashino-chan/1795947895" target="_blank" rel="noopener noreferrer">
-<img src="/site/apple-music.png" alt="Apple Music artist page, Nanashino-chan">
-</a>
+<a
+href="https://music.apple.com/us/artist/nanashino-chan/1795947895"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Listen to Nanashino-chan on Apple Music"
+title="Apple Music"> <img src="/site/apple-music.png" alt="Apple Music"> </a>
 
-<a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer">
-<img src="/site/youtube-music.png" alt="YouTube Music artist page, Nanashino-chan">
-</a>
+<a
+href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Listen to Nanashino-chan on YouTube Music"
+title="YouTube Music"> <img src="/site/youtube-music.png" alt="YouTube Music"> </a>
 
 </div>
 
@@ -1972,36 +1258,31 @@ Follow Nanashino-chan on YouTube, X, Instagram, TikTok, LinkedIn, Apple Music, a
 
 </main>
 
-<footer class="about-footer">
+<footer class="site-footer">
 
-<div class="about-footer-inner">
+<div class="about-page-footer">
 
-<div class="about-footer-grid">
-
-<div class="about-footer-brand">
+<div class="about-page-footer-brand">
 <h2>Nanashino-chan</h2>
 <p>
 Independent Tokyo lo-fi music artist and creative project producing original music for listeners, visual storytelling, creators, brands, agencies, and licensed commercial use.
 </p>
-<p style="margin-top:14px;">
+<p>
 © 2026 Nanashino-chan. All rights reserved.
 </p>
 </div>
 
-<div>
+<div class="about-page-footer-links">
 <h3>Explore</h3>
-<div class="about-footer-links">
 <a href="/site/index.html">Home</a>
 <a href="/site/today.html">Listen Now</a>
 <a href="/site/music.html">Music Catalog</a>
 <a href="/site/works.html">Works</a>
 <a href="/site/about.html">About</a>
 </div>
-</div>
 
-<div>
+<div class="about-page-footer-links">
 <h3>Licensing and Support</h3>
-<div class="about-footer-links">
 <a href="/site/licensing.html">Music Licensing</a>
 <a href="/site/pages/recommended-tracks-for-commercial-video-use.html">Recommended Tracks</a>
 <a href="/site/faq.html">FAQ</a>
@@ -2009,23 +1290,16 @@ Independent Tokyo lo-fi music artist and creative project producing original mus
 <a href="/site/terms.html">Terms</a>
 <a href="/site/policy.html">Policy</a>
 </div>
-</div>
-
-</div>
 
 </div>
 
 </footer>
 
-<div class="about-mobile-cta" aria-label="Quick actions">
-<a href="/site/today.html" class="about-mobile-listen">Listen</a>
-<a href="/site/licensing.html#pricing" class="about-mobile-license">Licensing</a>
+<div class="about-page-mobile-cta" aria-label="Quick actions">
+<a href="/site/today.html">Listen</a>
+<a href="/site/licensing.html#pricing">Licensing</a>
 </div>
 
 </body>
 </html>
-
-
-
-
 
