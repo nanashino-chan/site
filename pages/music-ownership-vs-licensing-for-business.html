@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Ownership vs Licensing for Business – Risks & Costs</title>
+<meta name="description" content="Compare music ownership vs licensing for business. Understand rights, costs, brand risks, AI music concerns, administration and commercial license options.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://nanashino-chan.github.io/site/pages/music-ownership-vs-licensing-for-business.html">
+<link rel="stylesheet" href="/site/style.css">
+<link rel="icon" href="/site/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/site/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/site/favicon-512.png">
+<meta property="og:title" content="Music Ownership vs Licensing for Business">
+<meta property="og:description" content="Compare the rights, costs, risks and operational responsibilities of owning music versus licensing it for business content.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nanashino-chan.github.io/site/pages/music-ownership-vs-licensing-for-business.html">
+<meta property="og:image" content="https://nanashino-chan.github.io/site/images/infographics/why-both-rights-matter.webp">
+<meta property="og:image:alt" content="Why composition and master recording permission both matter for commercial music use">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Music Ownership vs Licensing for Business">
+<meta name="twitter:description" content="Should a business own music rights or license music? Compare control, costs, risks, documentation and management responsibilities.">
+<meta name="twitter:image" content="https://nanashino-chan.github.io/site/images/infographics/why-both-rights-matter.webp">
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
+img-src 'self' data:;
+style-src 'self' 'unsafe-inline';
+font-src 'self';
+object-src 'none';
+base-uri 'self';
+form-action 'self';
+">
+<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+
+<style>
+.music-ownership-page{max-width:1180px;margin:0 auto;padding:42px 24px 80px}
+.mo-breadcrumb{color:#aaa;font-size:14px;margin-bottom:34px}
+.mo-breadcrumb a{color:#ffcc00;text-decoration:none}
+.mo-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,430px);gap:38px;align-items:center;margin-bottom:68px}
+.mo-badge{display:inline-block;color:#ffcc00;border:1px solid rgba(255,204,0,.42);background:rgba(255,204,0,.06);border-radius:999px;padding:8px 14px;font-weight:900;font-size:14px;margin:0 0 22px}
+.mo-hero h1{font-size:clamp(40px,6vw,68px);line-height:1.05;letter-spacing:-.045em;margin:0 0 24px}
+.mo-hero-lead{color:#ddd;font-size:20px;line-height:1.8;margin:0 0 18px}
+.mo-hero-sub{color:#aaa;font-size:16px;line-height:1.85;margin:0}
+.mo-cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.mo-primary-btn,.mo-secondary-btn,.mo-dark-btn{display:inline-block;padding:15px 22px;border-radius:12px;font-weight:900;text-decoration:none;line-height:1.25}
+.mo-primary-btn{color:#000;background:#ffcc00;box-shadow:0 10px 28px rgba(255,204,0,.18)}
+.mo-secondary-btn{color:#ffcc00;background:rgba(255,204,0,.04);border:1px solid #ffcc00}
+.mo-dark-btn{color:#fff;background:#111;border:1px solid rgba(255,255,255,.14)}
+.mo-hero-card,.mo-card,.mo-stat,.mo-risk-card,.mo-benefit-card,.mo-process-card,.mo-related-card,.mo-note,.mo-warning,.mo-answer,.mo-infographic,.mo-final-cta,.mo-decision-card{background:#111;border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:25px}
+.mo-hero-card{background:radial-gradient(circle at top left,rgba(255,204,0,.16),transparent 34%),linear-gradient(180deg,#151515,#0b0b0b);border-color:rgba(255,204,0,.24);border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.32)}
+.mo-hero-card h2,.mo-card h3,.mo-risk-card h3,.mo-benefit-card h3,.mo-process-card h3,.mo-decision-card h3{margin-top:0}
+.mo-hero-card p,.mo-hero-card li,.mo-card p,.mo-risk-card p,.mo-benefit-card p,.mo-process-card p,.mo-note p,.mo-note li,.mo-warning p,.mo-warning li,.mo-answer p,.mo-decision-card p,.mo-related-card span{color:#ccc;line-height:1.85}
+.mo-check-list,.mo-cross-list{list-style:none;padding:0;margin:20px 0 0}
+.mo-check-list li,.mo-cross-list li{position:relative;padding-left:28px;margin-bottom:12px;color:#ccc;line-height:1.75}
+.mo-check-list li::before{content:"✓";position:absolute;left:0;color:#ffcc00;font-weight:900}
+.mo-cross-list li::before{content:"×";position:absolute;left:0;color:#ff8a65;font-weight:900}
+.mo-section{margin-bottom:86px}
+.mo-section h2{font-size:clamp(30px,4vw,44px);line-height:1.18;letter-spacing:-.02em;margin:0 0 18px}
+.mo-section-lead{color:#ccc;font-size:18px;line-height:1.9;max-width:920px}
+.mo-grid-2,.mo-grid-3,.mo-grid-4{display:grid;gap:18px;margin-top:30px}
+.mo-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.mo-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.mo-grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.mo-stat{background:radial-gradient(circle at top left,rgba(255,204,0,.12),transparent 34%),#101010;border-color:rgba(255,204,0,.18)}
+.mo-stat strong{display:block;color:#ffcc00;font-size:27px;line-height:1.2;margin-bottom:8px}
+.mo-stat span{color:#cfcfcf;font-size:14px;line-height:1.65}
+.mo-answer,.mo-warning{border-left:4px solid #ffcc00;background:radial-gradient(circle at top left,rgba(255,204,0,.13),transparent 34%),linear-gradient(180deg,rgba(255,204,0,.07),rgba(255,204,0,.025));padding:30px}
+.mo-answer h2,.mo-warning h2{margin-top:0}
+.mo-kicker{color:#ffcc00;font-size:13px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;margin:0 0 10px}
+.mo-table-wrap{overflow-x:auto;margin-top:30px;border-radius:18px}
+.mo-table{width:100%;min-width:820px;border-collapse:collapse}
+.mo-table th,.mo-table td{border:1px solid rgba(255,255,255,.1);padding:16px;text-align:left;vertical-align:top;line-height:1.7}
+.mo-table th{color:#ffcc00;background:rgba(255,204,0,.12)}
+.mo-table td{color:#ccc;background:#101010}
+.mo-table strong{color:#fff}
+.mo-risk-card{border-top:3px solid rgba(255,138,101,.8)}
+.mo-risk-number{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;color:#fff;background:rgba(255,138,101,.18);border:1px solid rgba(255,138,101,.42);font-weight:900;margin-bottom:14px}
+.mo-benefit-card{border-top:3px solid rgba(255,204,0,.72)}
+.mo-benefit-card strong{display:block;color:#ffcc00;font-size:22px;margin-bottom:8px}
+.mo-decision-card.recommended{border-color:rgba(255,204,0,.4);background:radial-gradient(circle at top left,rgba(255,204,0,.13),transparent 34%),#111}
+.mo-infographic{background:radial-gradient(circle at top right,rgba(255,204,0,.12),transparent 32%),#101010;border-radius:24px;padding:32px}
+.mo-infographic img{display:block;width:100%;height:auto;margin-top:24px;border-radius:18px;border:1px solid rgba(255,255,255,.08)}
+.mo-image-link{display:inline-block;color:#ffcc00;font-weight:900;text-decoration:none;margin-top:18px}
+.mo-step-number{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#ffcc00;color:#000;font-weight:900;margin-bottom:14px}
+.mo-note{border-left:4px solid #888;background:#0f0f0f}
+.mo-related-card{display:block;color:#fff;text-decoration:none;transition:transform .2s ease,border-color .2s ease}
+.mo-related-card:hover{transform:translateY(-4px);border-color:rgba(255,204,0,.38)}
+.mo-related-card strong{display:block;color:#fff;margin-bottom:8px}
+.mo-faq details{background:#111;border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:20px 22px;margin-bottom:14px}
+.mo-faq summary{color:#fff;font-weight:900;cursor:pointer;line-height:1.5}
+.mo-faq details p{color:#ccc;line-height:1.85;margin:16px 0 0}
+.mo-final-cta{text-align:center;padding:50px 28px;background:radial-gradient(circle at top,rgba(255,204,0,.18),transparent 34%),linear-gradient(180deg,rgba(255,204,0,.1),rgba(255,204,0,.03));border-color:rgba(255,204,0,.28);border-radius:26px}
+.mo-final-cta p{color:#ccc;font-size:18px;line-height:1.9;max-width:860px;margin:18px auto 0}
+.mo-disclaimer{color:#aaa;font-size:14px;line-height:1.8;margin-top:24px}
+@media(max-width:980px){.mo-hero,.mo-grid-2,.mo-grid-3,.mo-grid-4{grid-template-columns:1fr}}
+@media(max-width:640px){.music-ownership-page{padding:30px 16px 64px}.mo-hero-card,.mo-card,.mo-stat,.mo-risk-card,.mo-benefit-card,.mo-process-card,.mo-related-card,.mo-note,.mo-warning,.mo-answer,.mo-infographic,.mo-final-cta,.mo-decision-card{padding:22px}.mo-primary-btn,.mo-secondary-btn,.mo-dark-btn{width:100%;text-align:center}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://nanashino-chan.github.io/site/index.html"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://nanashino-chan.github.io/site/pages/"},
+    {"@type":"ListItem","position":3,"name":"Music Ownership vs Licensing for Business","item":"https://nanashino-chan.github.io/site/pages/music-ownership-vs-licensing-for-business.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Music Ownership vs Licensing for Business",
+  "description":"A practical comparison of owning music rights and licensing music for business, including cost, control, administration, brand risk, AI music concerns and documentation.",
+  "datePublished":"2026-08-08",
+  "dateModified":"2026-08-08",
+  "author":{"@type":"Organization","name":"Nanashino-chan","url":"https://nanashino-chan.github.io/site/"},
+  "publisher":{"@type":"Organization","name":"Nanashino-chan","logo":{"@type":"ImageObject","url":"https://nanashino-chan.github.io/site/favicon-512.png"}},
+  "image":"https://nanashino-chan.github.io/site/images/infographics/why-both-rights-matter.webp",
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://nanashino-chan.github.io/site/pages/music-ownership-vs-licensing-for-business.html"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Is it better for a business to own or license music?","acceptedAnswer":{"@type":"Answer","text":"Ownership may suit a business that needs a distinctive long-term sonic asset, exclusive control and the resources to manage the rights. Licensing is often more efficient when a business needs music for defined projects, platforms or campaigns without taking on full production and rights-administration responsibilities."}},
+    {"@type":"Question","name":"What does owning a song actually mean?","acceptedAnswer":{"@type":"Answer","text":"Owning a song may involve separate rights in the musical composition and the master recording. A contract must identify which rights are transferred, whether the transfer is exclusive, the territory, duration, permitted uses and any retained rights or third-party contributions."}},
+    {"@type":"Question","name":"What are the risks of owning music rights for a company?","acceptedAnswer":{"@type":"Answer","text":"Possible risks include creative mismatch, unclear chain of title, third-party similarity claims, unauthorized use, false registrations, Content ID disputes, storage and metadata work, takedown decisions and ongoing administrative costs."}},
+    {"@type":"Question","name":"Does owning a recording mean owning the copyright in the composition?","acceptedAnswer":{"@type":"Answer","text":"Not automatically. The master recording and underlying musical composition can be separate rights. A company should confirm both rights and any performer, producer, sample or publisher permissions in writing."}},
+    {"@type":"Question","name":"Is AI-generated music safe for business use?","acceptedAnswer":{"@type":"Answer","text":"AI-generated music is not automatically risk-free. Businesses should review tool terms, commercial-use scope, similarity concerns, human contributions, warranties, indemnities and whether reliable documentation is available."}},
+    {"@type":"Question","name":"Can a company license music instead of buying the rights?","acceptedAnswer":{"@type":"Answer","text":"Yes. A written commercial or synchronization license can authorize specified business uses without transferring ownership. The scope should identify the project, platforms, territory, duration, paid media and final user."}},
+    {"@type":"Question","name":"Does an ISRC prove copyright ownership?","acceptedAnswer":{"@type":"Answer","text":"No. An ISRC is an international identifier for a specific recording. It helps identify and track the recording, but it does not by itself prove copyright ownership or replace a license agreement."}},
+    {"@type":"Question","name":"What documentation should a business keep for licensed music?","acceptedAnswer":{"@type":"Answer","text":"Keep the license terms, receipt, track and artist details, project and client names, platforms, territory, duration, paid-media status, campaign dates and any custom written permission."}}
+  ]
+}
+</script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+let gaLoaded=false;
+function loadGA(){
+  if(gaLoaded)return;
+  gaLoaded=true;
+  const script=document.createElement('script');
+  script.src="https://www.googletagmanager.com/gtag/js?id=G-CLHM36E1P0";
+  script.async=true;
+  document.head.appendChild(script);
+  gtag('js',new Date());
+  gtag('config','G-CLHM36E1P0');
+}
+window.addEventListener('scroll',loadGA,{once:true});
+window.addEventListener('click',loadGA,{once:true});
+window.addEventListener('mousemove',loadGA,{once:true});
+</script>
+</head>
+
+<body>
+<main class="music-ownership-page">
+<nav class="mo-breadcrumb" aria-label="Breadcrumb">
+  <a href="/site/index.html">Home</a> →
+  <a href="/site/pages/">Articles</a> →
+  Music Ownership vs Licensing for Business
+</nav>
+
+<section class="mo-hero">
+  <div>
+    <p class="mo-badge">Music ownership｜commercial licensing｜business rights｜brand risk｜music management</p>
+    <h1>Music Ownership vs Licensing for Business</h1>
+    <p class="mo-hero-lead">
+      Should your company buy and manage music rights—or license the music it needs for a defined project?
+      The right answer depends on exclusivity, long-term strategy, budget, internal resources and actual distribution.
+    </p>
+    <p class="mo-hero-sub">
+      Ownership can create a valuable brand asset, but it can also transfer production, documentation,
+      enforcement and platform-management responsibilities to the company. Licensing can reduce that burden
+      while providing written permission for clearly defined commercial uses.
+    </p>
+    <div class="mo-cta-row">
+      <a href="#comparison" class="mo-primary-btn">Compare Ownership & Licensing</a>
+      <a href="/site/licensing.html#pricing" class="mo-secondary-btn">View License Options</a>
+      <a href="/site/contact.html" class="mo-dark-btn">Discuss a Business Project</a>
+    </div>
+  </div>
+  <aside class="mo-hero-card">
+    <p class="mo-kicker">Decision snapshot</p>
+    <h2>Choose based on the business need</h2>
+    <ul class="mo-check-list">
+      <li><strong>Ownership may fit:</strong> a sonic logo, signature theme or long-term exclusive brand asset.</li>
+      <li><strong>Licensing may fit:</strong> social video, product demos, campaigns, client work and recurring content.</li>
+      <li><strong>Ownership requires:</strong> chain-of-title records, storage, metadata, monitoring and dispute handling.</li>
+      <li><strong>Licensing requires:</strong> written terms matching the use, platforms, territory and duration.</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="mo-grid-4 mo-section" aria-label="Music ownership and licensing highlights">
+  <div class="mo-stat"><strong>2 Rights</strong><span>The composition and master recording can be separate and both may need to be addressed.</span></div>
+  <div class="mo-stat"><strong>Ongoing Work</strong><span>Ownership can involve metadata, registrations, storage, monitoring, claims and enforcement.</span></div>
+  <div class="mo-stat"><strong>Defined Scope</strong><span>Licensing can authorize a project without transferring the underlying music rights.</span></div>
+  <div class="mo-stat"><strong>2,000+</strong><span>Original Nanashino-chan tracks for commercial, sync and custom licensing.</span></div>
+</section>
+
+<section class="mo-section mo-answer">
+  <p class="mo-kicker">Direct answer</p>
+  <h2>Is It Better to Own or License Music for Business?</h2>
+  <p class="mo-section-lead">
+    A business should consider owning music when it must become a distinctive, long-term and potentially exclusive
+    brand asset. A business should consider licensing music when it needs legal permission for defined videos,
+    platforms or campaigns without taking responsibility for producing, registering, distributing and managing the music.
+  </p>
+  <p>
+    Ownership is not automatically safer, and licensing is not automatically more limited. The practical value of either
+    option depends on the contract, chain of title, rights included, permitted uses, exclusivity, duration and territory.
+  </p>
+</section>
+
+<section class="mo-section">
+  <h2>What Does “Owning Music” Actually Mean?</h2>
+  <p class="mo-section-lead">
+    “We own the song” can be dangerously vague. Music commonly involves separate rights, contributors and contracts.
+    Before treating music as a company-owned asset, confirm exactly what has been transferred.
+  </p>
+  <div class="mo-grid-2">
+    <article class="mo-card">
+      <p class="mo-kicker">Underlying work</p>
+      <h3>Composition rights</h3>
+      <p>The composition covers the melody, harmony, lyrics and musical work. A songwriter or publisher may control these rights even when another party owns the recording.</p>
+      <ul class="mo-check-list">
+        <li>Songwriter and composer agreements</li>
+        <li>Publisher interests and splits</li>
+        <li>Samples, interpolations and adaptations</li>
+        <li>Territory, duration and retained rights</li>
+      </ul>
+    </article>
+    <article class="mo-card">
+      <p class="mo-kicker">Recorded performance</p>
+      <h3>Master recording rights</h3>
+      <p>The master right covers a specific recorded version. Producers, performers, studios, labels or production partners may have contractual interests.</p>
+      <ul class="mo-check-list">
+        <li>Producer and performer releases</li>
+        <li>Session-musician permissions</li>
+        <li>Master delivery and source files</li>
+        <li>Distribution and platform obligations</li>
+      </ul>
+    </article>
+  </div>
+  <div class="mo-note" style="margin-top:18px">
+    <h3>Assignment, exclusive license and non-exclusive license are different</h3>
+    <p>
+      A full assignment transfers specified rights. An exclusive license grants exclusivity within its written scope
+      without necessarily transferring ownership. A non-exclusive license allows the rights holder to license the same
+      music to others. The contract—not the invoice label—determines the actual position.
+    </p>
+  </div>
+</section>
+
+<section class="mo-section">
+  <h2>Key Risks When a Company Owns and Manages Music</h2>
+  <p class="mo-section-lead">
+    Buying rights can increase control, but it also makes the music part of the company's operational and reputational
+    responsibility. Evaluate these risks before commissioning, acquiring or registering original music.
+  </p>
+  <div class="mo-grid-3">
+    <article class="mo-risk-card"><span class="mo-risk-number">1</span><h3>Creative mismatch and brand backlash</h3><p>Weak production, an unsuitable mood or culturally insensitive choices can conflict with the brand and attract public criticism.</p></article>
+    <article class="mo-risk-card"><span class="mo-risk-number">2</span><h3>Similarity or infringement allegations</h3><p>A supposedly original work may be challenged for similarity, sampling or copied elements, especially when AI tools, stock loops or unclear sources were used.</p></article>
+    <article class="mo-risk-card"><span class="mo-risk-number">3</span><h3>Unauthorized use and brand dilution</h3><p>Third parties may reuse or falsely claim the music. Association with low-quality, controversial or competing content may require monitoring and enforcement.</p></article>
+    <article class="mo-risk-card"><span class="mo-risk-number">4</span><h3>Administrative cost and workload</h3><p>Files, contracts, registrations, credits, metadata, ISRC records, platform accounts and usage history require maintenance beyond the production fee.</p></article>
+    <article class="mo-risk-card"><span class="mo-risk-number">5</span><h3>Takedown and continuity risk</h3><p>Removing or replacing a track can disrupt old videos, landing pages, campaigns and partner deliverables, creating confusion and loss of trust.</p></article>
+    <article class="mo-risk-card"><span class="mo-risk-number">6</span><h3>False registration and Content ID disputes</h3><p>A third party may register conflicting rights or metadata. The company then needs evidence and a process to challenge incorrect claims.</p></article>
+    <article class="mo-risk-card"><span class="mo-risk-number">7</span><h3>Incomplete chain of title</h3><p>Missing contributor agreements, unclear splits, unlicensed samples or a vendor without transfer authority can undermine ownership.</p></article>
+    <article class="mo-risk-card"><span class="mo-risk-number">8</span><h3>Vendor and employee dependency</h3><p>If the only person who understands the files, registrations or platform accounts leaves, essential administration knowledge may be lost.</p></article>
+    <article class="mo-risk-card"><span class="mo-risk-number">9</span><h3>Enforcement and policy decisions</h3><p>The business must decide when to permit reuse, issue notices, challenge claims, approve partners or tolerate fan and creator use.</p></article>
+  </div>
+</section>
+
+<section class="mo-section mo-warning">
+  <p class="mo-kicker">AI music review</p>
+  <h2>AI-Generated Music Is Not Automatically Risk-Free</h2>
+  <p class="mo-section-lead">
+    An AI tool may allow commercial output under its terms, but that does not necessarily provide exclusivity,
+    a complete chain of title, protection from similarity allegations or acceptance by every platform.
+  </p>
+  <div class="mo-grid-2">
+    <ul class="mo-cross-list">
+      <li>Tool terms may change or differ by subscription level.</li>
+      <li>Outputs may be non-exclusive or similar to other outputs.</li>
+      <li>Human authorship and protectability may vary by jurisdiction.</li>
+      <li>Training-data and source-transparency questions may remain.</li>
+    </ul>
+    <ul class="mo-check-list">
+      <li>Record the tool, plan, date, prompts and human contributions.</li>
+      <li>Review warranties, indemnities and commercial-use limits.</li>
+      <li>Run creative and similarity review before a major release.</li>
+      <li>Seek legal advice for valuable or sensitive brand assets.</li>
+    </ul>
+  </div>
+  <div class="mo-cta-row">
+    <a href="/site/pages/ai-generated-music-risks-for-business.html" class="mo-secondary-btn">Explore AI Music Risk Factors</a>
+  </div>
+</section>
+
+<section class="mo-section" id="comparison">
+  <h2>Music Ownership vs Licensing: Business Comparison</h2>
+  <p class="mo-section-lead">This table compares typical operational characteristics. A specific acquisition or license can differ, so the written agreement always controls.</p>
+  <div class="mo-table-wrap">
+    <table class="mo-table">
+      <thead><tr><th scope="col">Decision factor</th><th scope="col">Owning music rights</th><th scope="col">Licensing music</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Primary purpose</strong></td><td>Create or acquire a long-term company asset.</td><td>Secure permission for defined commercial uses.</td></tr>
+        <tr><td><strong>Upfront cost</strong></td><td>Often includes composition, production, revisions, buyout or assignment fees and legal review.</td><td>Usually based on use, duration, platforms, territory, audience and campaign scope.</td></tr>
+        <tr><td><strong>Exclusivity</strong></td><td>Possible if expressly transferred and all relevant rights are cleared.</td><td>Usually non-exclusive unless exclusivity is negotiated in writing.</td></tr>
+        <tr><td><strong>Creative choice</strong></td><td>Often one commissioned asset or a small custom set.</td><td>Can provide access to a broad catalog and multiple moods.</td></tr>
+        <tr><td><strong>Rights administration</strong></td><td>The company may manage contracts, metadata, registrations, distribution and claims.</td><td>The rights holder retains ownership; the licensee keeps permission records and follows the scope.</td></tr>
+        <tr><td><strong>Platform issues</strong></td><td>The company or administrator handles conflicting claims and registrations.</td><td>The license documents permission; claim support depends on the provider and terms.</td></tr>
+        <tr><td><strong>Third-party reuse</strong></td><td>The company sets and enforces reuse policies within the rights it owns.</td><td>The rights holder may license the track to others unless the license is exclusive.</td></tr>
+        <tr><td><strong>Long-term maintenance</strong></td><td>Storage, contributor records, metadata, monitoring and succession planning may continue.</td><td>The business tracks the license, project, duration and renewal requirements.</td></tr>
+        <tr><td><strong>Best suited to</strong></td><td>Sonic logos, signature themes, permanent brand systems and strategic exclusive assets.</td><td>Brand videos, social content, product demos, client work, campaigns and recurring production.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="mo-section">
+  <h2>The Hidden Cost of Music Ownership</h2>
+  <p class="mo-section-lead">The purchase price is only one part of total cost. Budget for the work required to preserve, use and defend the asset over its useful life.</p>
+  <div class="mo-grid-3">
+    <article class="mo-card">
+      <p class="mo-kicker">Before release</p><h3>Acquisition and clearance</h3>
+      <ul class="mo-check-list"><li>Creative brief and composition</li><li>Production, mixing and mastering</li><li>Revisions and localization</li><li>Contributor contracts and releases</li><li>Sample and source-material clearance</li><li>Legal and brand review</li></ul>
+    </article>
+    <article class="mo-card">
+      <p class="mo-kicker">At publication</p><h3>Delivery and deployment</h3>
+      <ul class="mo-check-list"><li>Master and source-file storage</li><li>Metadata and identifier management</li><li>Distribution account setup</li><li>Platform and territory configuration</li><li>Internal usage guidelines</li><li>Agency and partner handoff</li></ul>
+    </article>
+    <article class="mo-card">
+      <p class="mo-kicker">After release</p><h3>Ongoing administration</h3>
+      <ul class="mo-check-list"><li>Usage logs and access control</li><li>Content ID and claim review</li><li>Unauthorized-use monitoring</li><li>Rights-record retention</li><li>Takedowns and disputes</li><li>Staff and vendor succession</li></ul>
+    </article>
+  </div>
+</section>
+
+<section class="mo-section">
+  <h2>When Ownership or Licensing May Be the Better Choice</h2>
+  <div class="mo-grid-2">
+    <article class="mo-decision-card">
+      <p class="mo-kicker">Consider ownership when</p><h3>The music is a permanent brand asset</h3>
+      <ul class="mo-check-list"><li>You need a distinctive sonic logo or theme.</li><li>Exclusive control is commercially important.</li><li>The asset will be used across years and markets.</li><li>Your budget supports custom creation and legal review.</li><li>A team can administer the rights.</li><li>The contract transfers every necessary right.</li></ul>
+    </article>
+    <article class="mo-decision-card recommended">
+      <p class="mo-kicker">Consider licensing when</p><h3>The music supports defined content</h3>
+      <ul class="mo-check-list"><li>You need music for videos, campaigns or recurring content.</li><li>Creative variety matters more than exclusivity.</li><li>You want predictable permission for a known scope.</li><li>You do not want to manage distribution and registrations.</li><li>You need to move quickly with documentation.</li><li>You prefer to pay for use rather than acquire the asset.</li></ul>
+    </article>
+  </div>
+</section>
+
+<section class="mo-section mo-infographic">
+  <p class="mo-kicker">Rights structure</p>
+  <h2>Commercial Use Can Require Both Composition and Master Permission</h2>
+  <p class="mo-section-lead">
+    Whether a company owns or licenses music, it should confirm the underlying composition and the specific recording.
+    An ISRC helps identify a recording, but it does not replace contracts establishing ownership or permission.
+  </p>
+  <img src="/site/images/infographics/why-both-rights-matter.webp" alt="Infographic explaining why composition copyright permission and master recording permission both matter for commercial music use" loading="lazy" width="1600" height="900">
+  <a href="/site/images/infographics/why-both-rights-matter.webp" target="_blank" rel="noopener noreferrer" class="mo-image-link">Open full-size rights infographic →</a>
+</section>
+
+<section class="mo-section">
+  <h2>How Nanashino-chan Reduces the Music-Management Burden</h2>
+  <p class="mo-section-lead">
+    Nanashino-chan offers a rights-controlled original music catalog for businesses, brands, agencies and creators
+    that need licensed music without acquiring and administering every track as a company-owned asset.
+  </p>
+  <div class="mo-grid-3">
+    <article class="mo-benefit-card"><strong>2,000+ Tracks</strong><h3>Broad original catalog</h3><p>Choose from Lo-Fi, Chillhop, Jazzhop, R&amp;B-inspired, chillwave, synthwave and related moods for different formats and brand environments.</p></article>
+    <article class="mo-benefit-card"><strong>Commercial Use</strong><h3>Business-ready options</h3><p>Commercial, synchronization and custom options support social videos, product demos, websites, client work and advertising.</p></article>
+    <article class="mo-benefit-card"><strong>Written Scope</strong><h3>Formal license documentation</h3><p>Written terms connect the selected track and permitted use to the business project, purchase record and internal or client documentation.</p></article>
+    <article class="mo-benefit-card"><strong>ISRC</strong><h3>Identifiable recordings</h3><p>Distributed recordings use ISRC identifiers where applicable. ISRC identifies a recording; it is not proof of copyright ownership.</p></article>
+    <article class="mo-benefit-card"><strong>Major DSPs</strong><h3>Publicly verifiable releases</h3><p>Music can be reviewed on Apple Music, Spotify and YouTube Music before a business selects a track and license.</p></article>
+    <article class="mo-benefit-card"><strong>Clear Prices</strong><h3>Published and custom options</h3><p>Published options provide transparent starting points, while custom terms can address broader, unusual, long-term or exclusive needs.</p></article>
+  </div>
+</section>
+
+<section class="mo-section">
+  <h2>Catalog Scale, Public Use and Discovery Signals</h2>
+  <p class="mo-section-lead">A large catalog and public releases give businesses more ways to review creative fit. Public references do not imply endorsement, partnership or sponsorship.</p>
+  <div class="mo-grid-4">
+    <div class="mo-stat"><strong>2,000+</strong><span>Original tracks across multiple modern background-music moods.</span></div>
+    <div class="mo-stat"><strong>2,500+</strong><span>Instagram Reels using Nanashino-chan music across brands, creators and public accounts.</span></div>
+    <div class="mo-stat"><strong>4,500+</strong><span>Lifetime Shazams showing active listener discovery across the catalog.</span></div>
+    <div class="mo-stat"><strong>Global</strong><span>Public use and discovery across multiple markets and content formats.</span></div>
+  </div>
+  <div class="mo-note" style="margin-top:18px">
+    <h3>Selected public context</h3>
+    <p>
+      Public references include a Harper’s BAZAAR Hong Kong Reel related to a Cartier event,
+      participation in a creator event at Google Tokyo, and participation in the U-KNOCK 2026 in Japan Summit.
+      These references are context only.
+    </p>
+    <div class="mo-cta-row"><a href="/site/works.html" class="mo-dark-btn">View Works & Public References</a><a href="/site/about.html" class="mo-secondary-btn">About Nanashino-chan</a></div>
+  </div>
+</section>
+
+<section class="mo-section">
+  <h2>Commercial and Sync License Starting Points</h2>
+  <p class="mo-section-lead">Choose the option matching the final use. Paid advertising, multiple platforms, client transfers, broadcast, exclusivity or unusual distribution may require different or custom terms.</p>
+  <div class="mo-grid-3">
+    <article class="mo-decision-card recommended">
+      <p class="mo-kicker">Standard business use</p><h3>Commercial Music License</h3>
+      <p><strong style="color:#ffcc00;font-size:28px">$500</strong></p>
+      <p>For eligible monetized, business and commercial video uses under the published terms.</p>
+      <div class="mo-cta-row"><a href="https://nanashinochan.gumroad.com/l/qhjyhg" target="_blank" rel="noopener noreferrer" class="mo-primary-btn">View Commercial License</a></div>
+    </article>
+    <article class="mo-decision-card">
+      <p class="mo-kicker">Campaign use</p><h3>1-Month Sync License</h3>
+      <p><strong style="color:#ffcc00;font-size:28px">$500</strong></p>
+      <p>A starting option for eligible time-limited advertising, campaign and synchronization uses.</p>
+      <div class="mo-cta-row"><a href="https://nanashinochan.gumroad.com/l/lddwsb" target="_blank" rel="noopener noreferrer" class="mo-secondary-btn">View 1-Month Sync</a></div>
+    </article>
+    <article class="mo-decision-card">
+      <p class="mo-kicker">Extended campaign</p><h3>3-Month Sync License</h3>
+      <p><strong style="color:#ffcc00;font-size:28px">$1,200</strong></p>
+      <p>A longer starting option for eligible paid campaigns requiring a defined three-month period.</p>
+      <div class="mo-cta-row"><a href="https://nanashinochan.gumroad.com/l/zwjyq" target="_blank" rel="noopener noreferrer" class="mo-secondary-btn">View 3-Month Sync</a></div>
+    </article>
+  </div>
+  <div class="mo-note" style="margin-top:18px">
+    <h3>Need custom, long-term or exclusive terms?</h3>
+    <p>Contact Nanashino-chan before purchase for exclusivity, broadcast, multiple brands or clients, unusual distribution, large-scale paid media, sublicensing or app integration.</p>
+    <div class="mo-cta-row"><a href="/site/contact.html" class="mo-dark-btn">Request a Custom Review</a><a href="/site/licensing.html#pricing" class="mo-secondary-btn">Compare All License Options</a></div>
+  </div>
+</section>
+
+<section class="mo-section">
+  <h2>Due Diligence Before Buying or Licensing Music</h2>
+  <p class="mo-section-lead">The same disciplined review helps whether the business is acquiring ownership or purchasing permission.</p>
+  <div class="mo-grid-2">
+    <article class="mo-card">
+      <p class="mo-kicker">Rights and source</p><h3>Confirm who controls what</h3>
+      <ul class="mo-check-list"><li>Composer, producer and master owner</li><li>Composition and master rights included</li><li>Contributor, performer and sample clearance</li><li>AI tools, stock loops or third-party material</li><li>Authority to assign or license rights</li><li>Warranties and dispute procedures</li></ul>
+    </article>
+    <article class="mo-card">
+      <p class="mo-kicker">Use and operations</p><h3>Match the contract to reality</h3>
+      <ul class="mo-check-list"><li>Final company, client and account</li><li>Content type, platforms and formats</li><li>Organic, monetized and paid-media use</li><li>Territory, duration and archive status</li><li>Edits, versions and localization</li><li>Documentation, claims support and renewals</li></ul>
+    </article>
+  </div>
+</section>
+
+<section class="mo-section mo-infographic">
+  <p class="mo-kicker">Practical workflow</p>
+  <h2>How Commercial Music Licensing Works</h2>
+  <p class="mo-section-lead">Define the final use, select music, match the permission and keep documentation with the project. This can be simpler than acquiring and administering a permanent company asset.</p>
+  <img src="/site/images/infographics/music-licensing-process.webp" alt="Commercial music licensing process from project definition and track selection to permission, documentation and publishing" loading="lazy" width="1600" height="900">
+  <a href="/site/images/infographics/music-licensing-process.webp" target="_blank" rel="noopener noreferrer" class="mo-image-link">Open full-size licensing process →</a>
+</section>
+
+<section class="mo-section">
+  <h2>A Four-Step Licensing Workflow for Businesses</h2>
+  <div class="mo-grid-4">
+    <article class="mo-process-card"><span class="mo-step-number">1</span><h3>Define the use</h3><p>Identify the company, project, client, platforms, media type, territory, duration and paid distribution.</p></article>
+    <article class="mo-process-card"><span class="mo-step-number">2</span><h3>Select the music</h3><p>Choose a track supporting the brand, audience, visuals and pacing.</p></article>
+    <article class="mo-process-card"><span class="mo-step-number">3</span><h3>Match the license</h3><p>Choose commercial, sync or custom terms based on final distribution and purpose.</p></article>
+    <article class="mo-process-card"><span class="mo-step-number">4</span><h3>Keep records</h3><p>Save the receipt, terms, track details, project information and custom approvals.</p></article>
+  </div>
+</section>
+
+<section class="mo-section mo-faq">
+  <h2>Music Ownership vs Licensing FAQ</h2>
+  <details><summary>Is it better for a business to own or license music?</summary><p>Ownership may suit a distinctive long-term sonic asset requiring exclusive control. Licensing is often more efficient for defined projects, platforms or campaigns without full rights-administration responsibilities.</p></details>
+  <details><summary>What does owning a song actually mean?</summary><p>Ownership may involve separate composition and master recording rights. The contract should identify the rights transferred, exclusivity, territory, duration, uses and retained or third-party rights.</p></details>
+  <details><summary>What are the risks of owning music rights for a company?</summary><p>Risks can include creative mismatch, unclear chain of title, similarity claims, unauthorized use, false registrations, Content ID disputes, metadata work, takedown decisions and ongoing costs.</p></details>
+  <details><summary>Does owning a recording mean owning the composition copyright?</summary><p>Not automatically. Confirm the master and composition rights, plus performer, producer, sample and publisher permissions, in writing.</p></details>
+  <details><summary>Is AI-generated music safe for business use?</summary><p>AI-generated music is not automatically risk-free. Review tool terms, commercial scope, similarity concerns, human contributions, warranties and documentation before connecting the output to a brand.</p></details>
+  <details><summary>Can a company license music instead of buying the rights?</summary><p>Yes. A written commercial or sync license can authorize specified business uses without transferring ownership. The scope should match the project, platforms, territory, duration, paid media and final user.</p></details>
+  <details><summary>Does an ISRC prove copyright ownership?</summary><p>No. An ISRC identifies a specific recording. It does not by itself prove copyright ownership or replace a license agreement.</p></details>
+  <details><summary>What documentation should a business keep for licensed music?</summary><p>Keep the terms, receipt, track and artist details, project and client names, platforms, territory, duration, paid-media status, campaign dates and custom written permission.</p></details>
+</section>
+
+<section class="mo-section">
+  <h2>Related Business Music Licensing Guides</h2>
+  <div class="mo-grid-3">
+    <a href="/site/pages/commercial-music-license.html" class="mo-related-card"><strong>Commercial Music License</strong><span>Commercial permission for business videos, brand content, monetized media and client work.</span></a>
+    <a href="/site/pages/music-licensing-for-commercial-use-guide.html" class="mo-related-card"><strong>Music Licensing for Commercial Use</strong><span>Rights and workflow behind commercial music use across business content.</span></a>
+    <a href="/site/pages/music-license-for-brand-content.html" class="mo-related-card"><strong>Music License for Brand Content</strong><span>Music permission for organic brand videos, social media and product storytelling.</span></a>
+    <a href="/site/pages/music-license-documentation-for-agencies.html" class="mo-related-card"><strong>Music License Documentation for Agencies</strong><span>Keep permission records connected to the client, project and media plan.</span></a>
+    <a href="/site/pages/ai-generated-music-risks-for-business.html" class="mo-related-card"><strong>AI-Generated Music Risks for Business</strong><span>Assess commercial terms, similarity, documentation and brand risk.</span></a>
+    <a href="/site/pages/why-platform-music-is-not-a-commercial-license.html" class="mo-related-card"><strong>Why Platform Music Is Not a Commercial License</strong><span>App access does not automatically provide broad business permission.</span></a>
+    <a href="/site/pages/music-for-agency-client-videos.html" class="mo-related-card"><strong>Music for Agency Client Videos</strong><span>Match permission to the client, publisher, platforms and distribution plan.</span></a>
+    <a href="/site/licensing.html" class="mo-related-card"><strong>Nanashino-chan Licensing</strong><span>Compare commercial, synchronization, personal and custom options.</span></a>
+    <a href="/site/music.html" class="mo-related-card"><strong>Browse Original Music</strong><span>Preview music before selecting a commercial or campaign license.</span></a>
+  </div>
+</section>
+
+<section class="mo-section mo-final-cta">
+  <p class="mo-kicker">Business music strategy</p>
+  <h2>Own the Music When It Must Be an Asset. License It When It Must Do a Job.</h2>
+  <p>
+    Tell us what you are creating, who will publish it, where it will run and whether it includes paid distribution.
+    Nanashino-chan can help identify a practical licensing starting point without requiring your company to acquire
+    and administer every track it uses.
+  </p>
+  <div class="mo-cta-row" style="justify-content:center">
+    <a href="/site/licensing.html#pricing" class="mo-primary-btn">Compare License Options</a>
+    <a href="/site/music.html" class="mo-secondary-btn">Preview Original Music</a>
+    <a href="/site/contact.html" class="mo-dark-btn">Contact for Custom Terms</a>
+  </div>
+  <p class="mo-disclaimer">General information only; this page is not legal advice. Music rights and AI-related rules vary by contract, jurisdiction and project. The selected license terms and any written project-specific agreement determine permitted use.</p>
+</section>
+</main>
+
+<footer style="text-align:center;padding:40px 20px;font-size:14px;opacity:.85">
+  <p><strong>Nanashino-chan</strong></p>
+  <p>© 2026 Nanashino-chan</p>
+  <p>
+    <a href="/site/index.html">Home</a> |
+    <a href="/site/music.html">Music</a> |
+    <a href="/site/licensing.html">License</a> |
+    <a href="/site/faq.html">FAQ</a> |
+    <a href="/site/terms.html">Terms</a> |
+    <a href="/site/contact.html">Contact</a>
+  </p>
+</footer>
+</body>
+</html>
