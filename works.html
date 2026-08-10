@@ -7,9 +7,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Works &amp; Public Use References | Nanashino-chan Music for Brands, Creators &amp; Commercial Videos</title>
+<title>Works &amp; Public Use References | Nanashino-chan Music</title>
 
-<meta name="description" content="Explore Nanashino-chan works, public social use references, brand and creator examples, business credibility milestones, licensing guidance, infographics, and decision materials for commercial video music use.">
+<meta name="description" content="Explore Nanashino-chan works, public social use references, 5,000+ cumulative Shazams confirmed by an Apple Music milestone notification, and music licensing guidance for brands, agencies, creators, and commercial videos.">
 
 <meta name="robots" content="index, follow">
 
@@ -22,18 +22,18 @@ default-src 'self';
 
 script-src 'self'
 'unsafe-inline'
-[https://www.googletagmanager.com](https://www.googletagmanager.com)
-[https://www.google-analytics.com](https://www.google-analytics.com);
+https://www.googletagmanager.com
+https://www.google-analytics.com;
 
 connect-src
 'self'
-[https://www.google-analytics.com](https://www.google-analytics.com)
-[https://www.googletagmanager.com](https://www.googletagmanager.com);
+https://www.google-analytics.com
+https://www.googletagmanager.com;
 
 img-src
 'self'
-[https://i.ytimg.com](https://i.ytimg.com)
-[https://img.youtube.com](https://img.youtube.com)
+https://i.ytimg.com
+https://img.youtube.com
 data:;
 
 style-src
@@ -63,7 +63,7 @@ form-action 'self';
 <!-- Open Graph -->
 
 <meta property="og:title" content="Works &amp; Public Use References | Nanashino-chan Music">
-<meta property="og:description" content="Public social use references, credibility milestones, visual-use examples, infographics, business fit, and licensing guidance for Nanashino-chan original lo-fi music.">
+<meta property="og:description" content="Public social use references, 5,000+ cumulative Shazams, business credibility milestones, visual-use examples, and licensing guidance for Nanashino-chan original lo-fi music.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nanashino-chan.github.io/site/works.html">
 <meta property="og:image" content="https://nanashino-chan.github.io/site/images/og/works-public-use-references.webp">
@@ -77,7 +77,7 @@ form-action 'self';
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Works &amp; Public Use References | Nanashino-chan Music">
-<meta name="twitter:description" content="Explore how Nanashino-chan lo-fi music appears across public social video contexts, brand visuals, creator content, and commercial licensing workflows.">
+<meta name="twitter:description" content="Explore 5,000+ cumulative Shazams, public social video references, brand visuals, creator content, and commercial licensing guidance for Nanashino-chan music.">
 <meta name="twitter:image" content="https://nanashino-chan.github.io/site/images/og/works-public-use-references.webp">
 <meta name="twitter:image:alt" content="Works and public use references thumbnail for Nanashino-chan lo-fi music licensing and business review">
 
@@ -152,6 +152,10 @@ form-action 'self';
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 26px;
+}
+
+.works-cta-center {
+  justify-content: center;
 }
 
 .works-btn-main,
@@ -583,6 +587,20 @@ form-action 'self';
   box-shadow: 0 10px 34px rgba(0,0,0,0.34);
 }
 
+.works-featured-title {
+  font-size: 32px;
+  line-height: 1.25;
+  margin: 16px 0 14px;
+}
+
+.works-table-context {
+  min-width: 620px;
+}
+
+.works-footer-current {
+  font-weight: bold;
+}
+
 .works-timeline {
   position: relative;
   display: grid;
@@ -879,7 +897,7 @@ form-action 'self';
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Nanashino-chan Works & Public Use References",
-  "description": "A business-oriented works page for Nanashino-chan music, including public social use references, credibility milestones, brand and creator contexts, infographics, licensing guidance, and commercial video decision materials.",
+  "description": "A business-oriented works page for Nanashino-chan music, including 5,000+ cumulative Shazams confirmed by an Apple Music milestone notification, public social use references, brand and creator contexts, licensing guidance, and commercial video decision materials.",
   "url": "https://nanashino-chan.github.io/site/works.html",
   "primaryImageOfPage": {
     "@type": "ImageObject",
@@ -900,6 +918,13 @@ form-action 'self';
       "url": "https://nanashino-chan.github.io/site/images/og/works-public-use-references2.webp",
       "width": 1600,
       "height": 900
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://nanashino-chan.github.io/site/images/og/apple5000shazam.webp",
+      "width": 1920,
+      "height": 1080,
+      "caption": "Apple Music milestone notification graphic documenting 5,000 cumulative Shazams for Nanashino-chan"
     }
   ],
   "publisher": {
@@ -1026,7 +1051,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
 <body>
 
 <header>
-<nav>
+<nav aria-label="Primary navigation">
   <div class="nav">
     <a href="/site/index.html" class="nav-logo">Home</a>
     <a href="/site/music.html">Music</a>
@@ -1037,10 +1062,10 @@ window.addEventListener('mousemove', loadGA, { once:true });
 </nav>
 </header>
 
-<div class="works-mobile-sticky" aria-label="Quick mobile actions">
+<nav class="works-mobile-sticky" aria-label="Quick mobile actions">
   <a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="tracks">Tracks</a>
   <a href="/site/licensing.html" class="license">License</a>
-</div>
+</nav>
 
 <div class="works-breadcrumb">
   <a href="/site/index.html">Home</a> →
@@ -1079,9 +1104,9 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
   </div>
 
-  <aside class="works-hero-card">
+  <aside class="works-hero-card" aria-labelledby="business-review-title">
 
-<h2>For business review</h2>
+<h2 id="business-review-title">For business review</h2>
 
 <p>
   Use this page when you need evidence, context, and practical licensing direction before selecting music for a brand, client, social, AI video, or paid campaign workflow.
@@ -1118,11 +1143,11 @@ window.addEventListener('mousemove', loadGA, { once:true });
   </span>
 </div>
 
-<aside class="works-thumbnail-card secondary">
+<aside class="works-thumbnail-card secondary" aria-labelledby="global-review-title">
   <div>
     <p class="works-kicker">Global review visual</p>
 
-    <h2>Public references, business context, and licensing guidance in one place.</h2>
+    <h2 id="global-review-title">Public references, business context, and licensing guidance in one place.</h2>
 
     <p>
       This supporting visual highlights global visual contexts, commercial review needs, business-ready music selection, and the difference between public social use references and formal licensing.
@@ -1152,7 +1177,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
   <div class="works-stat">
     <strong>5,000+</strong>
-    <span>Shazams reached in June 2026, showing listener discovery beyond passive streaming.</span>
+    <span>Cumulative Shazams confirmed by an Apple Music milestone notification received on August 7, 2026.</span>
   </div>
 
   <div class="works-stat">
@@ -1163,6 +1188,56 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <div class="works-stat">
     <strong>Direct</strong>
     <span>Licensing options for creator videos, business videos, brand content, client work, paid ads, and campaign use.</span>
+  </div>
+
+</section>
+
+<section class="works-section" aria-labelledby="shazam-milestone">
+
+  <h2 id="shazam-milestone">Official Shazam Milestone Notification</h2>
+
+  <p class="works-section-lead">
+    On August 7, 2026, Apple Music notified Nanashino-chan that music released under the project had reached 5,000 cumulative Shazams.
+  </p>
+
+  <div class="works-case-card featured">
+    <div class="works-featured-grid">
+
+      <div>
+        <img
+          src="/site/images/og/apple5000shazam.webp"
+          alt="Apple Music milestone notification graphic documenting 5,000 cumulative Shazams for Nanashino-chan"
+          loading="lazy"
+          width="1920"
+          height="1080"
+          class="works-featured-image">
+      </div>
+
+      <div>
+        <p class="works-badge-yellow">APPLE MUSIC MILESTONE NOTIFICATION</p>
+
+        <h3 class="works-featured-title">
+          5,000 cumulative Shazams
+        </h3>
+
+        <p>
+          A Shazam reflects an active discovery moment: someone heard a track and used Shazam to identify it. This milestone therefore provides a different signal from passive streaming totals and supports the project’s record of discovery through social video, visual content, and international listening contexts.
+        </p>
+
+        <ul>
+          <li>• Milestone: 5,000 cumulative Shazams</li>
+          <li>• Notification received: August 7, 2026</li>
+          <li>• Source: Apple Music milestone notification</li>
+          <li>• Project: Nanashino-chan</li>
+          <li>• Business relevance: measurable listener interest beyond passive plays</li>
+        </ul>
+
+        <p class="works-small-note">
+          This image documents the milestone notification received from Apple Music. It does not imply endorsement, sponsorship, partnership, or a direct commercial relationship with Apple Music or Shazam.
+        </p>
+      </div>
+
+    </div>
   </div>
 
 </section>
@@ -1202,7 +1277,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
         </tr>
         <tr>
           <td>Discovery signal</td>
-          <td>3,000+ Shazams reached in June 2026.</td>
+          <td>5,000+ cumulative Shazams confirmed by an Apple Music milestone notification received on August 7, 2026.</td>
           <td>Shows that listeners actively identify the music by sound, not only through passive streaming.</td>
         </tr>
         <tr>
@@ -1228,7 +1303,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 <section class="works-section">
 
-  <h2>Project Timeline & Business Credibility Milestones</h2>
+  <h2>Project Timeline &amp; Business Credibility Milestones</h2>
 
   <p class="works-section-lead">
     Nanashino-chan has grown from a YouTube-based lo-fi project into a distributed music catalog with public social-use references, verified-account exposure, and measurable listener discovery signals.
@@ -1320,9 +1395,9 @@ window.addEventListener('mousemove', loadGA, { once:true });
 <div class="works-timeline-card">
   <div class="works-date">2026.7</div>
   <div>
-   <h3>Official Invitation to the Korea–Japan Content Industry Cooperation Summit</h3>
+    <h3>U-KNOCK 2026 in Japan Summit</h3>
     <p>
-      Invited to participate in the Korea–Japan Content Industry Cooperation Summit, hosted by the Ministry of Culture, Sports and Tourism (Republic of Korea), organized by KOCCA, and operated by beSUCCESS Media Group. Expanded opportunities for international collaboration in music licensing, creative IP, and cross-border content partnerships.
+      Participated in a Korea–Japan content industry event focused on international networking, creative IP, and cross-border collaboration opportunities.
     </p>
   </div>
 </div>
@@ -1337,11 +1412,11 @@ window.addEventListener('mousemove', loadGA, { once:true });
   </div>
 </div>
 <div class="works-timeline-card">
-  <div class="works-date">2026.8</div>
+  <div class="works-date">2026.8.7</div>
   <div>
-    <h3>5,000+ Shazams</h3>
+    <h3>Apple Music milestone notification: 5,000 cumulative Shazams</h3>
     <p>
-      Continued organic discovery momentum and real-world sound recognition.
+      Apple Music notified Nanashino-chan that music released under the project had reached 5,000 cumulative Shazams, documenting continued active listener discovery beyond passive streaming.
     </p>
   </div>
 </div>
@@ -1371,22 +1446,22 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 <section class="works-section">
 
-  <h2>High-Reach Discovery and Brazil Amplification</h2>
+  <h2>High-Reach Public Exposure and Brazil Context</h2>
 
   <div class="works-answer-box">
 
 
 <p>
-  <strong>Nanashino-chan music appears to have gained broader downstream visibility after a short-term Reel audio usage by Patricia Abravanel, a Brazilian public figure and TV personality with 13M+ followers.</strong>
+  <strong>Nanashino-chan music appeared in a public Reel by Patricia Abravanel, a Brazilian public figure and TV personality with an audience of more than 13 million followers at the time observed.</strong>
 </p>
 
 <p>
-  This should be understood as a high-reach public social exposure and possible discovery-amplification signal, not as an endorsement, official campaign, direct partnership, or confirmed paid usage.
-  After this period, Nanashino-chan tracks were observed across Brazilian brands, creators, communities, lifestyle accounts, interior brands, fashion accounts, and business-related visual content.
+  This is presented as a high-reach public social reference, not as proof that the Reel caused later usage or Shazam activity. It does not imply endorsement, an official campaign, a direct partnership, or confirmed paid use.
+  Separate public references also show Nanashino-chan tracks appearing across Brazilian brands, creators, communities, lifestyle accounts, interior brands, fashion accounts, and business-related visual content.
 </p>
 
 <p>
-  Business meaning: this suggests that the sound can travel across language, region, and industry contexts — especially when paired with short-form social video formats.
+  Business meaning: taken together, these public references demonstrate that the music can fit short-form visual content across different languages, regions, and industries.
 </p>
 
 
@@ -1417,7 +1492,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
     <p class="works-badge-yellow">FEATURED PUBLIC SOCIAL REFERENCE</p>
 
-    <h3 style="font-size:32px;line-height:1.25;margin:16px 0 14px;">
+    <h3 class="works-featured-title">
       Harper’s BAZAAR Hong Kong × Cartier-related Visual Context
     </h3>
 
@@ -1453,9 +1528,6 @@ window.addEventListener('mousemove', loadGA, { once:true });
   </div>
 
 </section>
-
-<!-- Continue with Part 2 from Public Social Use References -->
-
 
 <section class="works-section">
 
@@ -1566,19 +1638,19 @@ window.addEventListener('mousemove', loadGA, { once:true });
       </td>
     </tr>
 
-　　<tr>
-  　　<td>Hand embroidery / social-impact brand</td>
-  　　<td>Pontos e Contos</td>
-  　　<td>Brazil</td>
-  　　<td>183K+ / verified</td>
-  　　<td>Smooth Groove</td>
-  　　<td>Brazilian hand-embroidery, fashion, home décor, cultural heritage, and women-led social impact.</td>
-  　　<td>
-    　　<a href="https://www.instagram.com/reel/DPjJSbQDvlr/" target="_blank" rel="noopener noreferrer">View public reference</a>
-    　　<span class="works-url-note">instagram.com/reel/DPjJSbQDvlr/</span>
-  　　</td>
-　　</tr>
-    
+    <tr>
+      <td>Hand embroidery / social-impact brand</td>
+      <td>Pontos e Contos</td>
+      <td>Brazil</td>
+      <td>183K+ / verified</td>
+      <td>Smooth Groove</td>
+      <td>Brazilian hand embroidery, fashion, home décor, cultural heritage, and women-led social impact.</td>
+      <td>
+        <a href="https://www.instagram.com/reel/DPjJSbQDvlr/" target="_blank" rel="noopener noreferrer">View public reference</a>
+        <span class="works-url-note">instagram.com/reel/DPjJSbQDvlr/</span>
+      </td>
+    </tr>
+
     <tr>
       <td>Personal brand / business event</td>
       <td>Hanan Al Sammak</td>
@@ -1746,7 +1818,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <h3>Observed international usage contexts</h3>
 
   <div class="works-table-wrap">
-    <table class="works-table" style="min-width:620px;">
+    <table class="works-table works-table-context">
       <thead>
         <tr>
           <th>Region</th>
@@ -1792,7 +1864,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <h3>Visual categories that fit the catalog</h3>
 
   <div class="works-table-wrap">
-    <table class="works-table" style="min-width:620px;">
+    <table class="works-table works-table-context">
       <thead>
         <tr>
           <th>Industry / category</th>
@@ -1910,7 +1982,6 @@ window.addEventListener('mousemove', loadGA, { once:true });
 </div>
 
 <div class="works-case-card">
-  <img src="/site/Instagramicon.webp" alt="delight.oficial fashion brand public Reel reference using Smooth Groove" loading="lazy" width="900" height="900">
   <p class="works-badge-dark">FASHION BRAND</p>
   <h3>delight.oficial</h3>
   <p>
@@ -1931,7 +2002,6 @@ window.addEventListener('mousemove', loadGA, { once:true });
 </div>
 
 <div class="works-case-card">
-  <img src="/site/Instagramicon.webp" alt="Creator Reel featuring Compactor product tags and stationery illustration context using Smooth Groove" loading="lazy" width="900" height="900">
   <p class="works-badge-dark">STATIONERY / PRODUCT VISUAL CONTEXT</p>
 
   <h3>Compactor-tagged Stationery Product Context</h3>
@@ -1962,7 +2032,6 @@ window.addEventListener('mousemove', loadGA, { once:true });
 </div>
 
 <div class="works-case-card">
-  <img src="/site/Instagramicon.webp" alt="IMCultura Montevideo Cultura public arts and culture reference using Stillness Vibes" loading="lazy" width="900" height="900">
   <p class="works-badge-dark">CULTURE / ARTS</p>
   <h3>IMCultura / Montevideo Cultura</h3>
   <p>
@@ -2241,9 +2310,6 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 </section>
 
-<!-- Continue with Part 3 from Credit-Based Usage vs Commercial Licensing -->
-
-
 <section class="works-section works-warning-box">
 
   <h2>Credit-Based Usage vs Commercial Licensing</h2>
@@ -2394,7 +2460,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
     A clear licensing process helps agencies, brands, producers, and creators move from track discovery to publication without unnecessary confusion.
   </p>
 
-  <div class="works-process" aria-label="Music licensing process">
+  <div class="works-process">
 
 
 <div class="works-process-step">
@@ -2655,7 +2721,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
     Preview the tracks, identify your use case, choose the correct license, and keep documentation for internal review, client delivery, or campaign records.
   </p>
 
-  <div class="works-cta-row" style="justify-content:center;">
+  <div class="works-cta-row works-cta-center">
     <a href="/site/pages/recommended-tracks-for-commercial-video-use.html" class="works-btn-main">Preview Tracks</a>
     <a href="/site/licensing.html#pricing" class="works-btn-sub">View License Options</a>
     <a href="/site/contact.html" class="works-btn-dark">Contact / Request Quote</a>
@@ -2718,7 +2784,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
   <a href="/site/about.html">About</a> |
   <a href="/site/today.html">Listen Now</a> |
   <a href="/site/music.html">Music</a> |
-  <a href="/site/works.html" style="font-weight:bold;">Works</a> |
+  <a href="/site/works.html" class="works-footer-current">Works</a> |
   <a href="/site/licensing.html">License Music</a> |
   <a href="/site/faq.html">FAQ</a> |
   <a href="/site/terms.html">Terms</a> |
@@ -2739,5 +2805,4 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 </body>
 </html>
-
 
