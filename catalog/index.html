@@ -1,1 +1,1293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="description" content="Browse the Nanashino-chan B2B music catalog. Preview original recordings, verify album and ISRC metadata, and request one-stop music licensing for commercial projects.">
+  <meta name="author" content="Nanashino-chan">
+  <meta name="theme-color" content="#06101b">
+  <link rel="canonical" href="https://nanashino-chan.github.io/site/catalog/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nanashino-chan">
+  <meta property="og:title" content="B2B Music Catalog | Nanashino-chan">
+  <meta property="og:description" content="Search original music by genre and intended use, preview recordings, verify metadata, and request licensing.">
+  <meta property="og:url" content="https://nanashino-chan.github.io/site/catalog/">
+  <meta property="og:image" content="https://nanashino-chan.github.io/site/images/catalog/smooth-jazz-vibes.webp">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="1000">
+  <meta property="og:image:alt" content="Nanashino-chan B2B music catalog artwork">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="B2B Music Catalog | Nanashino-chan">
+  <meta name="twitter:description" content="Original music previews, recording identifiers, and licensing information for brands and creative teams.">
+  <meta name="twitter:image" content="https://nanashino-chan.github.io/site/images/catalog/smooth-jazz-vibes.webp">
+
+  <title>B2B Music Catalog | Nanashino-chan</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://nanashino-chan.github.io/site/catalog/#catalog",
+    "url": "https://nanashino-chan.github.io/site/catalog/",
+    "name": "Nanashino-chan B2B Music Catalog",
+    "description": "A searchable catalog of original Nanashino-chan recordings with album metadata, ISRC identifiers, previews, and licensing information.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Nanashino-chan",
+      "url": "https://nanashino-chan.github.io/site/"
+    },
+    "about": {
+      "@type": "MusicGroup",
+      "name": "Nanashino-chan",
+      "url": "https://nanashino-chan.github.io/site/"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": 1,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://nanashino-chan.github.io/site/catalog/chillhop-lofi-relax-focus.html",
+          "item": {
+            "@type": "MusicAlbum",
+            "name": "Chillhop Lo-Fi Relax & Focus (Instrumental)",
+            "image": "https://nanashino-chan.github.io/site/images/catalog/smooth-jazz-vibes.webp",
+            "datePublished": "2025-02-13",
+            "numTracks": 26,
+            "byArtist": {
+              "@type": "MusicGroup",
+              "name": "Nanashino-chan"
+            }
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #06101b;
+      --bg-soft: #0a1725;
+      --panel: rgba(15, 30, 46, .88);
+      --panel-solid: #0f1e2e;
+      --line: rgba(173, 208, 229, .17);
+      --line-strong: rgba(112, 223, 224, .35);
+      --text: #f4f8fb;
+      --muted: #9fb2c4;
+      --soft: #d8e5ed;
+      --cyan: #72e2df;
+      --cyan-deep: #1aa7af;
+      --violet: #b09bff;
+      --amber: #f1c47b;
+      --green: #75dfae;
+      --danger: #ff9c82;
+      --shadow: 0 30px 80px rgba(0, 0, 0, .32);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        radial-gradient(circle at 10% -10%, rgba(75, 185, 204, .20), transparent 34rem),
+        radial-gradient(circle at 92% 8%, rgba(128, 93, 210, .15), transparent 32rem),
+        linear-gradient(180deg, #06101b 0%, #08131f 52%, #050c14 100%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button, input, select, a { font: inherit; }
+    button, select { color: inherit; }
+    a { color: inherit; }
+
+    .skip-link {
+      position: fixed;
+      left: 16px;
+      top: -80px;
+      z-index: 100;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--cyan);
+      color: #041017;
+      font-weight: 800;
+      transition: top .2s ease;
+    }
+
+    .skip-link:focus { top: 16px; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(6, 16, 27, .80);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      width: min(calc(100% - 36px), var(--max));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 850;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 34px;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan), var(--violet));
+      color: #06101b;
+      box-shadow: 0 0 0 5px rgba(114, 226, 223, .08);
+    }
+
+    .brand-mark svg { width: 18px; height: 18px; }
+
+    .catalog-label {
+      color: var(--muted);
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-link {
+      color: var(--soft);
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .header-link:hover,
+    .header-link[aria-current="page"] { color: var(--cyan); }
+
+    .catalog-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      border: 1px solid rgba(117, 223, 174, .34);
+      border-radius: 999px;
+      background: rgba(117, 223, 174, .09);
+      color: #bff3d8;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .catalog-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .wrap {
+      width: min(calc(100% - 36px), var(--max));
+      margin: 0 auto;
+    }
+
+    .breadcrumbs {
+      padding: 34px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--muted);
+      font-size: .83rem;
+    }
+
+    .breadcrumbs a { text-decoration: none; }
+    .breadcrumbs a:hover { color: var(--cyan); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(310px, .65fr);
+      gap: clamp(36px, 6vw, 86px);
+      align-items: center;
+      padding: clamp(46px, 7vw, 86px) 0 clamp(64px, 9vw, 112px);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 8%;
+      right: -3%;
+      width: min(40vw, 470px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(114,226,223,.17), transparent 48%),
+        conic-gradient(from 10deg, rgba(176,155,255,.24), rgba(114,226,223,.07), rgba(176,155,255,.24));
+      filter: blur(8px);
+      opacity: .76;
+    }
+
+    .eyebrow,
+    .section-kicker {
+      margin: 0 0 17px;
+      color: var(--cyan);
+      font-size: .76rem;
+      font-weight: 850;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { overflow-wrap: anywhere; }
+
+    h1 {
+      max-width: 830px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 7vw, 6.6rem);
+      font-weight: 400;
+      line-height: .92;
+      letter-spacing: -.055em;
+    }
+
+    .hero h1 span {
+      display: block;
+      margin-top: 15px;
+      color: var(--soft);
+      font-family: Inter, ui-sans-serif, sans-serif;
+      font-size: clamp(.95rem, 2vw, 1.34rem);
+      font-weight: 750;
+      line-height: 1.35;
+      letter-spacing: .015em;
+    }
+
+    .hero-summary {
+      max-width: 760px;
+      margin: 27px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.6vw, 1.12rem);
+      line-height: 1.75;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 800;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid rgba(114,226,223,.32);
+      outline-offset: 3px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--cyan), #8ce8c5);
+      color: #041017;
+      box-shadow: 0 12px 32px rgba(74, 218, 211, .17);
+    }
+
+    .btn-secondary {
+      border-color: var(--line);
+      background: rgba(255,255,255,.035);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover { border-color: var(--line-strong); }
+    .btn svg { width: 17px; height: 17px; }
+
+    .hero-panel {
+      position: relative;
+      padding: 28px;
+      border: 1px solid rgba(114,226,223,.22);
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(176,155,255,.16), transparent 15rem),
+        linear-gradient(145deg, rgba(15,34,49,.97), rgba(9,22,35,.97));
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel::before {
+      content: "";
+      display: block;
+      width: 9px;
+      height: 9px;
+      margin-bottom: 22px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 7px rgba(117,223,174,.09);
+    }
+
+    .hero-panel h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -.025em;
+    }
+
+    .hero-panel p {
+      margin: 15px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: .92rem;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 11px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-points li {
+      position: relative;
+      padding-left: 25px;
+      color: var(--soft);
+      font-size: .88rem;
+      line-height: 1.5;
+    }
+
+    .hero-points li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .summary-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+      margin: 0 0 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.025);
+    }
+
+    .summary-item {
+      padding: 22px 24px;
+      border-right: 1px solid var(--line);
+    }
+
+    .summary-item:last-child { border-right: 0; }
+
+    .summary-value {
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.45rem, 3vw, 2.15rem);
+      line-height: 1;
+    }
+
+    .summary-label {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 750;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .catalog-section { padding: 46px 0 84px; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 26px;
+    }
+
+    .section-head h2,
+    .workflow h2,
+    .bottom-cta h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4.8vw, 3.8rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .section-note {
+      max-width: 510px;
+      margin: 0;
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.65;
+    }
+
+    .catalog-tools {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(13, 28, 43, .82);
+      box-shadow: 0 16px 45px rgba(0,0,0,.16);
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: minmax(240px, 1.5fr) repeat(3, minmax(150px, .55fr));
+      gap: 12px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field-label {
+      color: var(--muted);
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .search-wrap { position: relative; }
+
+    .search-wrap svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      color: var(--muted);
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    input,
+    select {
+      width: 100%;
+      height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(3,10,17,.62);
+      color: var(--text);
+      font-size: .9rem;
+    }
+
+    input {
+      padding: 0 14px 0 44px;
+      appearance: none;
+    }
+
+    select {
+      padding: 0 38px 0 13px;
+      color-scheme: dark;
+    }
+
+    input::placeholder { color: #718597; }
+
+    .tool-foot {
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 14px;
+    }
+
+    .result-count {
+      color: var(--soft);
+      font-size: .82rem;
+      font-weight: 750;
+    }
+
+    .reset-button {
+      padding: 7px 0;
+      border: 0;
+      background: transparent;
+      color: var(--cyan);
+      cursor: pointer;
+      font-size: .8rem;
+      font-weight: 800;
+    }
+
+    .reset-button:hover { text-decoration: underline; }
+
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .album-card {
+      min-width: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(176,155,255,.11), transparent 17rem),
+        linear-gradient(180deg, rgba(16,33,49,.96), rgba(10,23,36,.98));
+      box-shadow: 0 22px 55px rgba(0,0,0,.20);
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+
+    .album-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(114,226,223,.35);
+      box-shadow: 0 28px 70px rgba(0,0,0,.28);
+    }
+
+    .cover-link {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      aspect-ratio: 1;
+      background: var(--panel-solid);
+    }
+
+    .cover-link::after {
+      content: "View album";
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      padding: 8px 11px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      background: rgba(4,13,21,.78);
+      color: #fff;
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: opacity .2s ease, transform .2s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .album-card:hover .cover-link::after,
+    .cover-link:focus-visible::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .cover-link img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    .album-card:hover .cover-link img { transform: scale(1.018); }
+
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 23px;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 750;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .card-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #bff3d8;
+    }
+
+    .card-status::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .card-title {
+      margin: 15px 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.5rem, 2.4vw, 2rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -.03em;
+    }
+
+    .card-title a { text-decoration: none; }
+    .card-title a:hover { color: var(--cyan); }
+
+    .card-artist {
+      margin: 11px 0 0;
+      color: var(--soft);
+      font-size: .86rem;
+      font-weight: 750;
+    }
+
+    .card-description {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.65;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 6px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.025);
+      color: #c8d9e5;
+      font-size: .68rem;
+      font-weight: 700;
+    }
+
+    .card-recording-data {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 21px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .recording-data-item span {
+      display: block;
+      color: var(--muted);
+      font-size: .62rem;
+      font-weight: 750;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .recording-data-item strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--soft);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: .76rem;
+      font-weight: 650;
+    }
+
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    .card-actions .btn { min-height: 43px; padding: 0 14px; }
+
+    .icon-button {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.03);
+      color: var(--soft);
+      text-decoration: none;
+      transition: border-color .18s ease, color .18s ease;
+    }
+
+    .icon-button:hover { border-color: var(--line-strong); color: var(--cyan); }
+    .icon-button svg { width: 18px; height: 18px; }
+
+    .empty-state {
+      display: none;
+      margin-top: 28px;
+      padding: 44px 24px;
+      border: 1px dashed rgba(173,208,229,.25);
+      border-radius: var(--radius-lg);
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.65;
+    }
+
+    .empty-state strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    .workflow {
+      padding: 76px 0;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+
+    .workflow-intro {
+      max-width: 750px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .workflow-card {
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.025);
+    }
+
+    .workflow-number {
+      width: 34px;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(114,226,223,.10);
+      color: var(--cyan);
+      font-size: .76rem;
+      font-weight: 850;
+    }
+
+    .workflow-card h3 {
+      margin: 20px 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+    }
+
+    .workflow-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.65;
+    }
+
+    .bottom-cta {
+      position: relative;
+      overflow: hidden;
+      margin: 10px 0 90px;
+      padding: clamp(34px, 6vw, 62px);
+      border: 1px solid rgba(114,226,223,.28);
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(176,155,255,.19), transparent 23rem),
+        linear-gradient(135deg, rgba(12,34,49,.98), rgba(9,22,35,.98));
+      box-shadow: var(--shadow);
+    }
+
+    .bottom-cta p:not(.section-kicker) {
+      max-width: 710px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      background: rgba(3,9,15,.52);
+    }
+
+    .footer-inner {
+      width: min(calc(100% - 36px), var(--max));
+      min-height: 112px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      color: var(--muted);
+      font-size: .8rem;
+      line-height: 1.55;
+    }
+
+    .footer-inner strong { color: var(--soft); }
+
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-panel { max-width: 680px; }
+      .summary-strip { grid-template-columns: repeat(2, 1fr); }
+      .summary-item:nth-child(2) { border-right: 0; }
+      .summary-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .tool-grid { grid-template-columns: 1fr 1fr; }
+      .album-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 720px) {
+      .catalog-label { display: none; }
+      .catalog-badge { display: none; }
+      .header-actions { gap: 10px; }
+      .hero { padding-top: 34px; }
+      .section-head { align-items: start; flex-direction: column; }
+      .tool-grid { grid-template-columns: 1fr; }
+      .album-grid { grid-template-columns: 1fr; }
+      .workflow-grid { grid-template-columns: 1fr; }
+      .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; }
+    }
+
+    @media (max-width: 520px) {
+      .header-inner { width: min(calc(100% - 24px), var(--max)); }
+      .wrap { width: min(calc(100% - 24px), var(--max)); }
+      .brand { font-size: .74rem; letter-spacing: .08em; }
+      .header-link:first-child { display: none; }
+      .summary-strip { grid-template-columns: 1fr; }
+      .summary-item,
+      .summary-item:nth-child(2) {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .summary-item:last-child { border-bottom: 0; }
+      .tool-foot { align-items: flex-start; flex-direction: column; gap: 3px; }
+      .card-actions { grid-template-columns: 1fr auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/site/" aria-label="Nanashino-chan home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+        </span>
+        <span>Nanashino-chan</span>
+      </a>
+      <span class="catalog-label">B2B Music Catalog</span>
+      <div class="header-actions">
+        <a class="header-link" href="/site/catalog/" aria-current="page">Catalog</a>
+        <a class="header-link" href="/site/licensing.html">Licensing</a>
+        <span class="catalog-badge" id="headerCount">1 album</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/site/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Catalog</span>
+      </nav>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Original recordings · Searchable metadata</p>
+          <h1 id="page-title">Find the right sound.<span>Preview the recording, verify the identifiers, and start the licensing conversation.</span></h1>
+          <p class="hero-summary">Explore original Nanashino-chan music for brands, agencies, production teams, editors, and digital creators. Each indexed album page combines listening access with release information, UPC data, track-level ISRC codes, and a direct licensing path.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#catalog-results">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              Explore the catalog
+            </a>
+            <a class="btn btn-secondary" href="/site/licensing.html">View license options</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Catalog benefits">
+          <h2>Built for project review</h2>
+          <p>Move from music discovery to a precise recording reference without searching across distributor dashboards.</p>
+          <ul class="hero-points">
+            <li>Album and track-level recording metadata</li>
+            <li>Searchable ISRC and distribution UPC information</li>
+            <li>Official preview links for listening and shortlisting</li>
+            <li>Direct inquiry path for commercial use</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="summary-strip" aria-label="Catalog summary">
+        <div class="summary-item">
+          <div class="summary-value" id="albumTotal">1</div>
+          <div class="summary-label">Album indexed</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-value" id="trackTotal">26</div>
+          <div class="summary-label">Recordings indexed</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-value">ISRC</div>
+          <div class="summary-label">Track identifiers</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-value">1-stop</div>
+          <div class="summary-label">Licensing inquiry</div>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalog-results" aria-labelledby="catalog-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Search the catalog</p>
+            <h2 id="catalog-title">Albums &amp; recordings</h2>
+          </div>
+          <p class="section-note">Search by album title, genre, use case, mood, label, or UPC. Open an album page to preview individual tracks and verify its complete ISRC list.</p>
+        </div>
+
+        <div class="catalog-tools" role="search" aria-label="Catalog filters">
+          <div class="tool-grid">
+            <label class="field">
+              <span class="field-label">Search</span>
+              <span class="search-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <input id="catalogSearch" type="search" placeholder="Title, genre, mood, UPC…" autocomplete="off">
+              </span>
+            </label>
+
+            <label class="field">
+              <span class="field-label">Genre</span>
+              <select id="genreFilter">
+                <option value="all">All genres</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span class="field-label">Intended use</span>
+              <select id="useFilter">
+                <option value="all">All uses</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span class="field-label">Sort</span>
+              <select id="sortOrder">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest release</option>
+                <option value="oldest">Oldest release</option>
+                <option value="az">Title A–Z</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="tool-foot">
+            <div class="result-count" id="resultCount" aria-live="polite">Showing 1 of 1 album</div>
+            <button class="reset-button" id="resetFilters" type="button">Reset filters</button>
+          </div>
+        </div>
+
+        <div class="album-grid" id="albumGrid"></div>
+
+        <div class="empty-state" id="emptyState">
+          <strong>No matching album found.</strong>
+          Try another keyword or reset the genre and intended-use filters.
+        </div>
+      </section>
+
+      <section class="workflow" aria-labelledby="workflow-title">
+        <p class="section-kicker">From search to permission</p>
+        <h2 id="workflow-title">A clearer review workflow</h2>
+        <p class="workflow-intro">The catalog is designed to help professional users identify the recording first and discuss the required permission with accurate project information.</p>
+
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <span class="workflow-number">01</span>
+            <h3>Discover</h3>
+            <p>Filter albums by genre and intended use, then preview individual recordings on the album page.</p>
+          </article>
+          <article class="workflow-card">
+            <span class="workflow-number">02</span>
+            <h3>Verify</h3>
+            <p>Confirm the exact track title, album, release date, distribution UPC, and track-level ISRC.</p>
+          </article>
+          <article class="workflow-card">
+            <span class="workflow-number">03</span>
+            <h3>Inquire</h3>
+            <p>Send the recording identifier together with the media, territory, term, and intended commercial use.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="bottom-cta" aria-labelledby="cta-title">
+        <p class="section-kicker">Need music for a project?</p>
+        <h2 id="cta-title">Start with the track—or with the brief.</h2>
+        <p>If you already have a recording in mind, include its title or ISRC. If you are still searching, describe the visual style, media, territory, campaign term, and intended use.</p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="/site/licensing.html">Start a licensing inquiry</a>
+          <a class="btn btn-secondary" href="/site/">Visit the official website</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span><strong>Nanashino-chan B2B Music Catalog</strong><br>Recording identification, preview, and licensing information.</span>
+      <span>© <span id="currentYear">2026</span> Nanashino-chan · Recording metadata and licensing reference</span>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      Catalog data
+      Add each new album as one object in this array.
+      When the catalog becomes larger, this array can be moved unchanged to
+      /site/js/catalog-albums.js and assigned to window.NANASHINO_CATALOG_ALBUMS.
+    */
+    const fallbackAlbums = [
+      {
+        featuredOrder: 1,
+        slug: "chillhop-lofi-relax-focus",
+        title: "Chillhop Lo-Fi Relax & Focus (Instrumental)",
+        artist: "Nanashino-chan",
+        label: "8831422 Records CH",
+        href: "/site/catalog/chillhop-lofi-relax-focus.html",
+        cover: "/site/images/catalog/smooth-jazz-vibes.webp",
+        coverAlt: "Cover artwork for Chillhop Lo-Fi Relax & Focus (Instrumental) by Nanashino-chan, featuring the text Smooth Jazz Vibes",
+        releaseDate: "2025-02-13",
+        trackCount: 26,
+        upc: "199082252091",
+        genres: ["Chillhop", "Lo-Fi", "Jazzhop", "Instrumental"],
+        uses: ["Study & Focus", "Relaxation", "Lifestyle", "Brand Content"],
+        moods: ["Calm", "Warm", "Relaxed"],
+        description: "Relaxed Chillhop, smooth Jazzhop textures, and understated Lo-Fi rhythm for focus, café scenes, lifestyle visuals, and brand storytelling."
+      }
+    ];
+
+    const externalAlbums = window.NANASHINO_CATALOG_ALBUMS;
+    const albums = Array.isArray(externalAlbums) && externalAlbums.length
+      ? externalAlbums
+      : fallbackAlbums;
+
+    const searchInput = document.getElementById("catalogSearch");
+    const genreFilter = document.getElementById("genreFilter");
+    const useFilter = document.getElementById("useFilter");
+    const sortOrder = document.getElementById("sortOrder");
+    const resetButton = document.getElementById("resetFilters");
+    const albumGrid = document.getElementById("albumGrid");
+    const emptyState = document.getElementById("emptyState");
+    const resultCount = document.getElementById("resultCount");
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>'"]/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "'": "&#39;",
+        "\"": "&quot;"
+      }[character]));
+    }
+
+    function normalize(value) {
+      return String(value || "")
+        .normalize("NFKD")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+    }
+
+    function uniqueSorted(values) {
+      return [...new Set(values.flat().filter(Boolean))]
+        .sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
+    }
+
+    function addFilterOptions(select, values) {
+      values.forEach(value => {
+        const option = document.createElement("option");
+        option.value = normalize(value);
+        option.textContent = value;
+        select.appendChild(option);
+      });
+    }
+
+    function formatDate(dateString) {
+      const date = new Date(`${dateString}T00:00:00Z`);
+      if (Number.isNaN(date.getTime())) return dateString;
+      return new Intl.DateTimeFormat("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+        timeZone: "UTC"
+      }).format(date);
+    }
+
+    function licenseUrl(album) {
+      return `/site/licensing.html?album=${encodeURIComponent(album.slug)}`;
+    }
+
+    function albumCard(album) {
+      const tags = [...album.genres.slice(0, 3), ...album.uses.slice(0, 2)];
+      return `
+        <article class="album-card">
+          <a class="cover-link" href="${escapeHtml(album.href)}" aria-label="View ${escapeHtml(album.title)}">
+            <img src="${escapeHtml(album.cover)}" alt="${escapeHtml(album.coverAlt)}" width="1000" height="1000" loading="lazy" decoding="async">
+          </a>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>${escapeHtml(formatDate(album.releaseDate))}</span>
+              <span class="card-status">Metadata indexed</span>
+            </div>
+            <h3 class="card-title"><a href="${escapeHtml(album.href)}">${escapeHtml(album.title)}</a></h3>
+            <p class="card-artist">${escapeHtml(album.artist)} · ${escapeHtml(album.label)}</p>
+            <p class="card-description">${escapeHtml(album.description)}</p>
+            <div class="card-tags" aria-label="Genres and intended uses">
+              ${tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}
+            </div>
+            <div class="card-recording-data">
+              <div class="recording-data-item"><span>Tracks</span><strong>${Number(album.trackCount).toLocaleString("en-US")}</strong></div>
+              <div class="recording-data-item"><span>Distribution UPC</span><strong>${escapeHtml(album.upc)}</strong></div>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-primary" href="${escapeHtml(album.href)}">View album &amp; ISRC</a>
+              <a class="icon-button" href="${escapeHtml(licenseUrl(album))}" aria-label="Request licensing for ${escapeHtml(album.title)}" title="Request licensing">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>`;
+    }
+
+    function getFilteredAlbums() {
+      const query = normalize(searchInput.value);
+      const genre = genreFilter.value;
+      const intendedUse = useFilter.value;
+
+      const filtered = albums.filter(album => {
+        const searchable = normalize([
+          album.title,
+          album.artist,
+          album.label,
+          album.upc,
+          album.description,
+          ...album.genres,
+          ...album.uses,
+          ...album.moods
+        ].join(" "));
+
+        const matchesQuery = !query || searchable.includes(query);
+        const matchesGenre = genre === "all" || album.genres.some(value => normalize(value) === genre);
+        const matchesUse = intendedUse === "all" || album.uses.some(value => normalize(value) === intendedUse);
+        return matchesQuery && matchesGenre && matchesUse;
+      });
+
+      return filtered.sort((a, b) => {
+        if (sortOrder.value === "newest") return b.releaseDate.localeCompare(a.releaseDate);
+        if (sortOrder.value === "oldest") return a.releaseDate.localeCompare(b.releaseDate);
+        if (sortOrder.value === "az") return a.title.localeCompare(b.title, "en", { sensitivity: "base" });
+        return (a.featuredOrder ?? 9999) - (b.featuredOrder ?? 9999);
+      });
+    }
+
+    function renderCatalog() {
+      const filtered = getFilteredAlbums();
+      albumGrid.innerHTML = filtered.map(albumCard).join("");
+      emptyState.style.display = filtered.length ? "none" : "block";
+      albumGrid.style.display = filtered.length ? "grid" : "none";
+
+      const noun = albums.length === 1 ? "album" : "albums";
+      resultCount.textContent = `Showing ${filtered.length} of ${albums.length} ${noun}`;
+    }
+
+    function resetFilters() {
+      searchInput.value = "";
+      genreFilter.value = "all";
+      useFilter.value = "all";
+      sortOrder.value = "featured";
+      renderCatalog();
+      searchInput.focus();
+    }
+
+    addFilterOptions(genreFilter, uniqueSorted(albums.map(album => album.genres)));
+    addFilterOptions(useFilter, uniqueSorted(albums.map(album => album.uses)));
+
+    const totalTracks = albums.reduce((sum, album) => sum + Number(album.trackCount || 0), 0);
+    document.getElementById("albumTotal").textContent = albums.length.toLocaleString("en-US");
+    document.getElementById("trackTotal").textContent = totalTracks.toLocaleString("en-US");
+    document.getElementById("headerCount").textContent = `${albums.length} ${albums.length === 1 ? "album" : "albums"}`;
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    [searchInput, genreFilter, useFilter, sortOrder].forEach(control => {
+      control.addEventListener(control === searchInput ? "input" : "change", renderCatalog);
+    });
+    resetButton.addEventListener("click", resetFilters);
+
+    renderCatalog();
+  </script>
+</body>
+</html>
 
