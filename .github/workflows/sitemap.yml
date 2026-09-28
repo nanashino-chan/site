@@ -1,63 +1,80 @@
-name: Generate Sitemap
+name: Build Catalog and Sitemap
 
 on:
   workflow_dispatch:
-
   schedule:
     - cron: "23 */6 * * *"
-
   push:
-    branches:
-      - main
-    paths-ignore:
-      - "sitemap.xml"
+    branches: [main]
+    paths-ignore: ["sitemap.xml"]
+  pull_request:
+    branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: sitemap-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: main
-          persist-credentials: true
-
+          fetch-depth: 0
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
-
-      - name: Generate sitemap
+          node-version: "22"
+      - name: Validate and generate catalog
+        run: node scripts/build-catalog.js
+      - name: Test catalog
+        run: node scripts/test-catalog.js
+      - name: Generate existing sitemap
         run: node js/generate-sitemap.js
-
-      - name: Check generated sitemap
+      - name: Verify sitemap coverage
+        run: node scripts/test-catalog.js --sitemap
+      - name: Commit generated files
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
-          ls -la
-          test -f sitemap.xml
-          echo "---- sitemap URL count ----"
-          grep -c "<loc>" sitemap.xml || true
-          echo "---- check new BtoB page ----"
-          grep -n "music-license-for-brand-videos.html" sitemap.xml || true
-
-      - name: Commit sitemap
-        run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-
-          git add sitemap.xml
-
-          if git diff --cached --quiet; then
-            echo "No sitemap changes"
-            exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog/ js/catalog/ js/b2bvideos.js sitemap.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "auto: build music catalog and sitemap"
+            git push origin HEAD:main
           fi
+      - name: Stage static website
+        run: node scripts/stage-pages.js
+      - name: Upload preview for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview
+          path: _site/
+          include-hidden-files: true
+          retention-days: 7
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && vars.CATALOG_DEPLOY_PAGES == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
 
-          git commit -m "auto: update sitemap"
-          git push origin main
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && vars.CATALOG_DEPLOY_PAGES == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
