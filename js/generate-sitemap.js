@@ -272,6 +272,25 @@ addPage(pages, url, priority, changefreq, filePath);
 });
 }
 
+/* Catalog pages: reuse the existing sitemap generator and keep all other URLs. */
+const catalogDir = path.join(ROOT_DIR, "catalog");
+if (fs.existsSync(catalogDir)) {
+  const sourceDir = path.join(ROOT_DIR, "_catalog", "albums");
+  const catalogFiles = new Set(["index.html", ...fs.readdirSync(sourceDir)
+    .filter(file => file.endsWith(".json"))
+    .map(file => JSON.parse(fs.readFileSync(path.join(sourceDir, file), "utf8")).pageSlug + ".html")]);
+  fs.readdirSync(catalogDir).filter(file => file.endsWith(".html")).sort().forEach(file => {
+    if (!catalogFiles.has(file)) return;
+    const filePath = path.join(catalogDir, file);
+    const content = fs.readFileSync(filePath, "utf8");
+    if (/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(content)) return;
+    const url = file === "index.html" ? "/catalog/" : "/catalog/" + file;
+    const canonical = content.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/i);
+    if (canonical && canonical[1] !== BASE_URL + url) return;
+    addPage(pages, url, file === "index.html" ? "0.85" : "0.75", "monthly", filePath);
+  });
+}
+
 /* =====================================
 Sort Pages
 ===================================== */

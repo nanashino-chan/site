@@ -27,67 +27,7 @@
   <title>B2B Music Catalog | Nanashino-chan</title>
 
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "@id": "https://nanashino-chan.github.io/site/catalog/#catalog",
-  "url": "https://nanashino-chan.github.io/site/catalog/",
-  "name": "Nanashino-chan B2B Music Catalog",
-  "mainEntity": {
-    "@type": "ItemList",
-    "numberOfItems": 3,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://nanashino-chan.github.io/site/catalog/chillhop-lofi-relax-focus.html",
-        "item": {
-          "@type": "MusicAlbum",
-          "name": "Chillhop Lo-Fi Relax & Focus (Instrumental)",
-          "image": "https://nanashino-chan.github.io/site/images/catalog/smooth-jazz-vibes.webp",
-          "datePublished": "2025-02-13",
-          "numTracks": 26,
-          "byArtist": {
-            "@type": "MusicGroup",
-            "name": "Nanashino-chan"
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://nanashino-chan.github.io/site/catalog/lo-fi-synth-grooves-from-the-night.html",
-        "item": {
-          "@type": "MusicAlbum",
-          "name": "Retro Pulse: Lo-Fi Synth Grooves from the Night",
-          "image": "https://nanashino-chan.github.io/site/images/catalog/retro-pulse-synth-groove.webp",
-          "datePublished": "2025-04-30",
-          "numTracks": 24,
-          "byArtist": {
-            "@type": "MusicGroup",
-            "name": "Nanashino-chan"
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://nanashino-chan.github.io/site/catalog/ambient-chill-trap-soothing-beats-for-relaxation.html",
-        "item": {
-          "@type": "MusicAlbum",
-          "name": "Ambient Chill Trap: Soothing Beats for Relaxation",
-          "image": "https://nanashino-chan.github.io/site/images/catalog/ambient-chill-trap.webp",
-          "datePublished": "2025-02-12",
-          "numTracks": 18,
-          "byArtist": {
-            "@type": "MusicGroup",
-            "name": "Nanashino-chan"
-          }
-        }
-      }
-    ]
-  }
-}
+@@SCHEMA@@
   </script>
 
   <style>
@@ -964,7 +904,7 @@
       <div class="header-actions">
         <a class="header-link" href="/site/catalog/" aria-current="page">Catalog</a>
         <a class="header-link" href="/site/licensing.html">Licensing</a>
-        <span class="catalog-badge" id="headerCount">3 albums</span>
+        <span class="catalog-badge" id="headerCount">@@HEADER@@</span>
       </div>
     </div>
   </header>
@@ -1005,11 +945,11 @@
 
       <section class="summary-strip" aria-label="Catalog summary">
         <div class="summary-item">
-          <div class="summary-value" id="albumTotal">3</div>
+          <div class="summary-value" id="albumTotal">@@TOTAL@@</div>
           <div class="summary-label">Album indexed</div>
         </div>
         <div class="summary-item">
-          <div class="summary-value" id="trackTotal">68</div>
+          <div class="summary-value" id="trackTotal">@@TRACKS@@</div>
           <div class="summary-label">Recordings indexed</div>
         </div>
         <div class="summary-item">
@@ -1067,7 +1007,7 @@
           </div>
 
           <div class="tool-foot">
-            <div class="result-count" id="resultCount" aria-live="polite">Showing 3 of 3 albums</div>
+            <div class="result-count" id="resultCount" aria-live="polite">@@RESULT@@</div>
             <button class="reset-button" id="resetFilters" type="button">Reset filters</button>
           </div>
         </div>
@@ -1124,100 +1064,7 @@
   </footer>
 
   <script>
-    const albums = [
-  {
-    "featuredOrder": 1,
-    "slug": "chillhop-lofi-relax-focus-instrumental",
-    "title": "Chillhop Lo-Fi Relax & Focus (Instrumental)",
-    "artist": "Nanashino-chan",
-    "label": "8831422 Records CH",
-    "href": "/site/catalog/chillhop-lofi-relax-focus.html",
-    "cover": "/site/images/catalog/smooth-jazz-vibes.webp",
-    "coverAlt": "Cover artwork for Chillhop Lo-Fi Relax & Focus (Instrumental) by Nanashino-chan",
-    "releaseDate": "2025-02-13",
-    "trackCount": 26,
-    "upc": "199082252091",
-    "genres": [
-      "Chillhop",
-      "Lo-Fi",
-      "Jazzhop",
-      "Instrumental"
-    ],
-    "uses": [
-      "Study & Focus",
-      "Relaxation",
-      "Lifestyle",
-      "Brand Content"
-    ],
-    "moods": [
-      "Calm",
-      "Warm",
-      "Relaxed"
-    ],
-    "description": "Relaxed Chillhop, smooth Jazzhop textures, and understated Lo-Fi rhythm for focus, café scenes, lifestyle visuals, and brand storytelling."
-  },
-  {
-    "featuredOrder": 2,
-    "slug": "retro-pulse-lofi-synth-grooves-from-the-night",
-    "title": "Retro Pulse: Lo-Fi Synth Grooves from the Night",
-    "artist": "Nanashino-chan",
-    "label": "8831422 Records CH",
-    "href": "/site/catalog/lo-fi-synth-grooves-from-the-night.html",
-    "cover": "/site/images/catalog/retro-pulse-synth-groove.webp",
-    "coverAlt": "Cover artwork for Retro Pulse: Lo-Fi Synth Grooves from the Night by Nanashino-chan",
-    "releaseDate": "2025-04-30",
-    "trackCount": 24,
-    "upc": "199337144744",
-    "genres": [
-      "Lo-Fi",
-      "Synth",
-      "Electronic",
-      "Instrumental"
-    ],
-    "uses": [
-      "Brand Content",
-      "Lifestyle",
-      "Night Scenes",
-      "Video Production"
-    ],
-    "moods": [
-      "Retro",
-      "Nocturnal",
-      "Groovy"
-    ],
-    "description": "Retro-flavored Lo-Fi synth grooves for night scenes, lifestyle edits, product visuals, and atmospheric brand storytelling."
-  },
-  {
-    "featuredOrder": 3,
-    "slug": "ambient-chill-trap-soothing-beats-for-relaxation",
-    "title": "Ambient Chill Trap: Soothing Beats for Relaxation",
-    "artist": "Nanashino-chan",
-    "label": "8831422 Records CH",
-    "href": "/site/catalog/ambient-chill-trap-soothing-beats-for-relaxation.html",
-    "cover": "/site/images/catalog/ambient-chill-trap.webp",
-    "coverAlt": "Cover artwork for Ambient Chill Trap: Soothing Beats for Relaxation by Nanashino-chan",
-    "releaseDate": "2025-02-12",
-    "trackCount": 18,
-    "upc": "199082450275",
-    "genres": [
-      "Ambient",
-      "Chill Trap",
-      "Instrumental"
-    ],
-    "uses": [
-      "Relaxation",
-      "Lifestyle",
-      "Brand Content",
-      "Night Scenes"
-    ],
-    "moods": [
-      "Calm",
-      "Relaxed",
-      "Atmospheric"
-    ],
-    "description": "Ambient textures and laid-back chill trap beats for relaxed lifestyle visuals, quiet evening scenes, and understated brand storytelling."
-  }
-];
+    const albums = @@ALBUMS_JSON@@;
 
     const searchInput = document.getElementById("catalogSearch");
     const genreFilter = document.getElementById("genreFilter");
