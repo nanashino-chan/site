@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-09-30",
   "albums": {
     "retro-pulse-lofi-synth-grooves-from-the-night": {
       "slug": "retro-pulse-lofi-synth-grooves-from-the-night",
