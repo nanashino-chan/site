@@ -1299,6 +1299,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
 <div class="cta-row">
   <a href="#listen" class="primary-btn">▶ Start Listening</a>
   <a href="#choose-by-video-type" class="secondary-btn">Choose by Video Type</a>
+  <a href="/site/catalog/" class="dark-btn">Browse the B2B Catalog</a>
   <a href="/site/licensing.html#pricing" class="dark-btn">View License Options</a>
 </div>
 
@@ -1328,9 +1329,9 @@ window.addEventListener('mousemove', loadGA, { once:true });
 </div>
 
 <p class="trust">
-  24 playable previews｜3,000+ Shazam searches｜Direct commercial / sync licensing available
+  24 curated previews｜5,000+ cumulative Shazams (August 2026)｜Direct licensing inquiries
   <br>
-  24曲をページ内で試聴可能｜Shazam検索3,000回以上｜商用・Syncライセンス対応
+  24曲をページ内で試聴可能｜累計Shazam 5,000回以上（2026年8月時点）｜ライセンス相談に対応
 </p>
 
 <div class="benefits">
@@ -1369,13 +1370,13 @@ window.addEventListener('mousemove', loadGA, { once:true });
   </div>
 
   <div class="stat-card">
-    <strong>3,000+</strong>
-    <span>Shazam searches and growing discovery signals.</span>
+    <strong>5,000+</strong>
+    <span>Cumulative Shazams reported in August 2026.</span>
   </div>
 
   <div class="stat-card">
-    <strong>5M+</strong>
-    <span>Estimated views across social media usage and creator discovery.</span>
+    <strong>Album Details</strong>
+    <span>Browse selected albums, recording identifiers, and release metadata in the B2B catalog.</span>
   </div>
 
   <div class="stat-card">
@@ -1470,7 +1471,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
     calm commercial edits, and warm creator videos.
   </p>
   <p>
-    Discovery signal: 1,700+ Instagram Reels and 5M+ estimated views across user-generated usage.
+    Discovery signal: public Instagram Reels featuring this recording. See the linked visual examples below.
   </p>
   <button type="button" class="listen-btn" onclick="selectTrack(0)">▶ Listen</button>
 </div>
@@ -2318,18 +2319,19 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
 <section class="section-block">
 
-  <h2>Browse the Full Catalog</h2>
+  <h2>Explore the B2B Album Catalog</h2>
 
   <p class="section-lead">
-    The embedded player highlights selected commercial-use starting tracks.
-    To search the wider Nanashino-chan catalog, use the official YouTube Music account or Topic page.
+    These 24 tracks are a curated starting point for commercial video projects.
+    To compare selected albums, preview recordings, and check track titles, ISRCs, UPCs,
+    and release dates, visit the B2B Music Catalog. The album catalog is expanding and
+    does not yet include every track featured on this page.
   </p>
 
   <div class="cta-row">
-    <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="primary-btn">▶ YouTube Music</a>
-    <a href="https://www.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="secondary-btn">Open Topic Page</a>
-    <a href="/site/music.html" class="dark-btn">Browse Site Music Page</a>
-    <a href="/site/today.html" class="dark-btn">Listen Now</a>
+    <a href="/site/catalog/" class="primary-btn">Browse Albums &amp; ISRCs</a>
+    <a href="/site/licensing.html" class="secondary-btn">Explore License Options</a>
+    <a href="https://music.youtube.com/channel/UCp5haCnpYEvkF5fVa0jeo2A" target="_blank" rel="noopener noreferrer" class="dark-btn">Listen on YouTube Music</a>
   </div>
 
 </section>
@@ -2462,7 +2464,8 @@ window.addEventListener('mousemove', loadGA, { once:true });
 
   <div class="cta-row" style="justify-content:center;">
     <a href="#listen" class="primary-btn">▶ Listen Again</a>
-    <a href="/site/licensing.html#pricing" class="secondary-btn">View License Plans</a>
+    <a href="/site/catalog/" class="secondary-btn">Browse the B2B Catalog</a>
+    <a href="/site/licensing.html#pricing" class="dark-btn">View License Plans</a>
     <a href="/site/contact.html" class="dark-btn">Contact for Track Advice</a>
   </div>
 
@@ -2506,6 +2509,7 @@ window.addEventListener('mousemove', loadGA, { once:true });
 <div class="footer-links-sub">
 <a href="/site/index.html">Home</a> |
 <a href="/site/today.html">Listen Now</a> |
+<a href="/site/catalog/">B2B Music Catalog</a> |
 <a href="/site/licensing.html">License Music</a> |
 <a href="/site/faq.html">FAQ</a> |
 <a href="/site/terms.html">Terms</a> |
@@ -2858,7 +2862,7 @@ albumTitle.textContent = track.subtitle;
 }
 
 if (thumbnail) {
-thumbnail.src = "[https://img.youtube.com/vi/](https://img.youtube.com/vi/)" + track.videoId + "/hqdefault.jpg";
+thumbnail.src = "https://img.youtube.com/vi/" + encodeURIComponent(track.videoId) + "/hqdefault.jpg";
 thumbnail.alt = track.title + " YouTube thumbnail";
 }
 }
