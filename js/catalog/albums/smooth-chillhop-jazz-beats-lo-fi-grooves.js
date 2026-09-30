@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-01",
   "albums": {
     "smooth-chillhop-jazz-beats-lo-fi-grooves": {
       "slug": "smooth-chillhop-jazz-beats-lo-fi-grooves",

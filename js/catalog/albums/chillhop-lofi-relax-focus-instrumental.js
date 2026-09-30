@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-01",
   "albums": {
     "chillhop-lofi-relax-focus-instrumental": {
       "slug": "chillhop-lofi-relax-focus-instrumental",

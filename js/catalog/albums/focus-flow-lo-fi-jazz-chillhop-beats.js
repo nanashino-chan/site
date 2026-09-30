@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-01",
   "albums": {
     "focus-flow-lo-fi-jazz-chillhop-beats": {
       "slug": "focus-flow-lo-fi-jazz-chillhop-beats",
