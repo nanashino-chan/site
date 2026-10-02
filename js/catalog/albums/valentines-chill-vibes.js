@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-02",
+  "updatedAt": "2026-10-03",
   "albums": {
     "valentines-chill-vibes": {
       "slug": "valentines-chill-vibes",

@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-02",
+  "updatedAt": "2026-10-03",
   "albums": {
     "smooth-lo-fi-beats-study-chill": {
       "slug": "smooth-lo-fi-beats-study-chill",

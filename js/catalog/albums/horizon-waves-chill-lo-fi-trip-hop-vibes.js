@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-02",
+  "updatedAt": "2026-10-03",
   "albums": {
     "horizon-waves-chill-lo-fi-trip-hop-vibes": {
       "slug": "horizon-waves-chill-lo-fi-trip-hop-vibes",
