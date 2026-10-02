@@ -3927,6 +3927,195 @@ const catalog={
           "youtubeId": "ZrwvQT5-edM"
         }
       ]
+    },
+    "lo-fi-beats-inspired-by-progressive-rock": {
+      "slug": "lo-fi-beats-inspired-by-progressive-rock",
+      "title": "Nostalgic Echoes — Lo-Fi Beats Inspired by Progressive Rock",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-05-01",
+      "releaseDate": "2025-05-16",
+      "distributionUpc": "199333122203",
+      "format": "album",
+      "trackCount": 27,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "progressive-rock-inspired",
+        "nostalgia",
+        "reflective",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Echoes of the Past",
+          "isrc": "QZNWU2523601",
+          "youtubeId": "JVVDOD2KHmg"
+        },
+        {
+          "number": 2,
+          "title": "Dreaming Horizons",
+          "isrc": "QZNWU2523602",
+          "youtubeId": "CKNHr5jNEAY"
+        },
+        {
+          "number": 3,
+          "title": "Soft Reverie",
+          "isrc": "QZNWU2523603",
+          "youtubeId": "-S31OedkCbk"
+        },
+        {
+          "number": 4,
+          "title": "Twilight Reflections",
+          "isrc": "QZNWU2523604",
+          "youtubeId": "-XP9xdDlA6U"
+        },
+        {
+          "number": 5,
+          "title": "Distant Whispers",
+          "isrc": "QZNWU2523605",
+          "youtubeId": "koN59Oc2aHU"
+        },
+        {
+          "number": 6,
+          "title": "Cosmic Drift",
+          "isrc": "QZNWU2523606",
+          "youtubeId": "k7Meet038eM"
+        },
+        {
+          "number": 7,
+          "title": "Shimmering Shadows",
+          "isrc": "QZNWU2523607",
+          "youtubeId": "nxSfCqbqd2E"
+        },
+        {
+          "number": 8,
+          "title": "Time Traveler's Lullaby",
+          "isrc": "QZNWU2523608",
+          "youtubeId": "u5DJob8_wa8"
+        },
+        {
+          "number": 9,
+          "title": "Echo Chamber",
+          "isrc": "QZNWU2523609",
+          "youtubeId": "qBqRzO-SIec"
+        },
+        {
+          "number": 10,
+          "title": "Forgotten Worlds",
+          "isrc": "QZNWU2523610",
+          "youtubeId": "H5ii6LMLzSY"
+        },
+        {
+          "number": 11,
+          "title": "Silent Reverberations",
+          "isrc": "QZNWU2523611",
+          "youtubeId": "12-xPG9kN9U"
+        },
+        {
+          "number": 12,
+          "title": "Celestial Waves",
+          "isrc": "QZNWU2523612",
+          "youtubeId": "Fone625Yfqo"
+        },
+        {
+          "number": 13,
+          "title": "Fading Memories",
+          "isrc": "QZNWU2523613",
+          "youtubeId": "r5I7BtfYLIs"
+        },
+        {
+          "number": 14,
+          "title": "Endless Sky",
+          "isrc": "QZNWU2523614",
+          "youtubeId": "DhSg92kCOIg"
+        },
+        {
+          "number": 15,
+          "title": "Echoes of Serenity",
+          "isrc": "QZNWU2523615",
+          "youtubeId": "D1hnrPvHdds"
+        },
+        {
+          "number": 16,
+          "title": "Tranquil Shores",
+          "isrc": "QZNWU2523616",
+          "youtubeId": "nL4fPXgUOcU"
+        },
+        {
+          "number": 17,
+          "title": "Lost in Thought",
+          "isrc": "QZNWU2523617",
+          "youtubeId": "q8nD8qVgUHE"
+        },
+        {
+          "number": 18,
+          "title": "Echoes of the Unknown",
+          "isrc": "QZNWU2523618",
+          "youtubeId": "C8NAp-aP7YA"
+        },
+        {
+          "number": 19,
+          "title": "Parallel Dreams",
+          "isrc": "QZNWU2523619",
+          "youtubeId": "UX-aWaFOkxw"
+        },
+        {
+          "number": 20,
+          "title": "Faint Echoes",
+          "isrc": "QZNWU2523620",
+          "youtubeId": "EkbuibCvcv8"
+        },
+        {
+          "number": 21,
+          "title": "Solitude's Soundscap",
+          "isrc": "QZNWU2523621",
+          "youtubeId": "QO_qKrbu8Ek"
+        },
+        {
+          "number": 22,
+          "title": "Melancholic Winds",
+          "isrc": "QZNWU2523622",
+          "youtubeId": "J5kYEkz_WFw"
+        },
+        {
+          "number": 23,
+          "title": "Endless Reflections",
+          "isrc": "QZNWU2523623",
+          "youtubeId": "dHsmGCrZmDU"
+        },
+        {
+          "number": 24,
+          "title": "Distant Dreams",
+          "isrc": "QZNWU2523624",
+          "youtubeId": "SlMnjPiUqCY"
+        },
+        {
+          "number": 25,
+          "title": "Time Echoes",
+          "isrc": "QZNWU2523625",
+          "youtubeId": "uSO04tdH3Fs"
+        },
+        {
+          "number": 26,
+          "title": "Forgotten Echoes",
+          "isrc": "QZNWU2523626",
+          "youtubeId": "yOucy2C3rUQ"
+        },
+        {
+          "number": 27,
+          "title": "Eternal Nostalgia",
+          "isrc": "QZNWU2523627",
+          "youtubeId": "JHb0DC5TvrI"
+        }
+      ]
     }
   }
 };
