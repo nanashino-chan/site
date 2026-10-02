@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-01",
+  "updatedAt": "2026-10-02",
   "albums": {
     "uplifting-chill-vibes-mellow-beats-for-a-positive-journey": {
       "slug": "uplifting-chill-vibes-mellow-beats-for-a-positive-journey",
