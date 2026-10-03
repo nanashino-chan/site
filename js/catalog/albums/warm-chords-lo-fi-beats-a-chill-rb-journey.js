@@ -1,0 +1,148 @@
+window.registerNanashinoB2B({
+  "schemaVersion": "1.1.0",
+  "updatedAt": "2026-10-03",
+  "albums": {
+    "warm-chords-lo-fi-beats-a-chill-rb-journey": {
+      "slug": "warm-chords-lo-fi-beats-a-chill-rb-journey",
+      "title": "Warm Chords & Lo-Fi Beats: A Chill R&B Journey",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-03-24",
+      "releaseDate": "2025-04-05",
+      "distributionUpc": "199341203185",
+      "format": "album",
+      "trackCount": 19,
+      "instrumental": true,
+      "tags": [
+        "rnb",
+        "lo-fi",
+        "chill",
+        "warm",
+        "mellow",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Midnight Hues",
+          "isrc": "QZK6M2594335",
+          "youtubeId": "dQKnZYOFBds"
+        },
+        {
+          "number": 2,
+          "title": "Velvet Groove",
+          "isrc": "QZK6M2594336",
+          "youtubeId": "YR2PgQm5LXk"
+        },
+        {
+          "number": 3,
+          "title": "Warm Waves",
+          "isrc": "QZK6M2594337",
+          "youtubeId": "cFgekBG7ncU"
+        },
+        {
+          "number": 4,
+          "title": "Soulful Reflections",
+          "isrc": "QZK6M2594338",
+          "youtubeId": "0PYfI9uy0r8"
+        },
+        {
+          "number": 5,
+          "title": "Dreamy Echoes",
+          "isrc": "QZK6M2594339",
+          "youtubeId": "Vm7Ifw5ENCA"
+        },
+        {
+          "number": 6,
+          "title": "Cozy Ambience",
+          "isrc": "QZK6M2594340",
+          "youtubeId": "aYROIYngNgQ"
+        },
+        {
+          "number": 7,
+          "title": "Serene Flow",
+          "isrc": "QZK6M2594341",
+          "youtubeId": "9rI6_Lxvei0"
+        },
+        {
+          "number": 8,
+          "title": "Gentle Breeze",
+          "isrc": "QZK6M2594342",
+          "youtubeId": "TAmEzVbm3gw"
+        },
+        {
+          "number": 9,
+          "title": "Blissful Vibes",
+          "isrc": "QZK6M2594343",
+          "youtubeId": "w5JtCKorDNQ"
+        },
+        {
+          "number": 10,
+          "title": "Smooth Horizons",
+          "isrc": "QZK6M2594344",
+          "youtubeId": "P4zoObuRdHg"
+        },
+        {
+          "number": 11,
+          "title": "Calm Waters",
+          "isrc": "QZK6M2594345",
+          "youtubeId": "P_grZy898Uk"
+        },
+        {
+          "number": 12,
+          "title": "Sunset Chords",
+          "isrc": "QZK6M2594346",
+          "youtubeId": "X8zn0P1rN_E"
+        },
+        {
+          "number": 13,
+          "title": "Relaxing Touch",
+          "isrc": "QZK6M2594347",
+          "youtubeId": "L1LG_ckp3dI"
+        },
+        {
+          "number": 14,
+          "title": "Soft Resonance",
+          "isrc": "QZK6M2594348",
+          "youtubeId": "uAR-eZwCzU4"
+        },
+        {
+          "number": 15,
+          "title": "Melodic Drift",
+          "isrc": "QZK6M2594349",
+          "youtubeId": "Wsrz2oA9U-o"
+        },
+        {
+          "number": 16,
+          "title": "Quiet Moments",
+          "isrc": "QZK6M2594350",
+          "youtubeId": "1dtjjiurLfk"
+        },
+        {
+          "number": 17,
+          "title": "Tranquil Nights",
+          "isrc": "QZK6M2594351",
+          "youtubeId": "n6lG8WNnXtM"
+        },
+        {
+          "number": 18,
+          "title": "Harmonic Glow",
+          "isrc": "QZK6M2594352",
+          "youtubeId": "YfeSZxpJ8LI"
+        },
+        {
+          "number": 19,
+          "title": "Mellow Finale",
+          "isrc": "QZK6M2594353",
+          "youtubeId": "gi_TQH__yIk"
+        }
+      ]
+    }
+  }
+});
