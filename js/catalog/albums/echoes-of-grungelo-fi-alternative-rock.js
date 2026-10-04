@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-03",
+  "updatedAt": "2026-10-04",
   "albums": {
     "echoes-of-grungelo-fi-alternative-rock": {
       "slug": "echoes-of-grungelo-fi-alternative-rock",
