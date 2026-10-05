@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-04",
+  "updatedAt": "2026-10-05",
   "albums": {
     "retro-rewind-nostalgic-synthwave-lo-fi": {
       "slug": "retro-rewind-nostalgic-synthwave-lo-fi",
