@@ -2,7 +2,7 @@
 (function(global){
 const catalog={
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-06",
   "albums": {
     "chillhop-lofi-relax-focus-instrumental": {
       "slug": "chillhop-lofi-relax-focus-instrumental",
@@ -7233,6 +7233,166 @@ const catalog={
           "title": "Whistle's Farewell",
           "isrc": "QZES92583537",
           "youtubeId": "nIy79_HG5-c"
+        }
+      ]
+    },
+    "easter-chillhop-vibes-relaxing-beats": {
+      "slug": "easter-chillhop-vibes-relaxing-beats",
+      "title": "Easter Chillhop Vibes: Relaxing Beats for Springtime Bliss",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-03-27",
+      "releaseDate": "2025-04-14",
+      "distributionUpc": "199340559542",
+      "format": "album",
+      "trackCount": 22,
+      "instrumental": true,
+      "tags": [
+        "chillhop",
+        "easter",
+        "spring",
+        "cozy",
+        "relaxation",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "First Sip",
+          "isrc": "QZK6K2515706",
+          "youtubeId": "fWiXNovZweI"
+        },
+        {
+          "number": 2,
+          "title": "Tea Cup Reverie",
+          "isrc": "QZK6K2515707",
+          "youtubeId": "CdnH-kenP5o"
+        },
+        {
+          "number": 3,
+          "title": "Whiskers & Jazz",
+          "isrc": "QZK6K2515708",
+          "youtubeId": "TdRrdXaaJIA"
+        },
+        {
+          "number": 4,
+          "title": "Gentle Warmth",
+          "isrc": "QZK6K2515709",
+          "youtubeId": "oOszLePJGvg"
+        },
+        {
+          "number": 5,
+          "title": "Soft Whistle Melodies",
+          "isrc": "QZK6K2515710",
+          "youtubeId": "4MoNaQf4IKA"
+        },
+        {
+          "number": 6,
+          "title": "Lazy Afternoon Vibes",
+          "isrc": "QZK6K2515711",
+          "youtubeId": "-RnzftKc7AM"
+        },
+        {
+          "number": 7,
+          "title": "Hopping Through Chords",
+          "isrc": "QZK6K2515712",
+          "youtubeId": "Cc9CX8aC0Y8"
+        },
+        {
+          "number": 8,
+          "title": "Cozy Saxophone Sounds",
+          "isrc": "QZK6K2515713",
+          "youtubeId": "MUNh8VdOkSk"
+        },
+        {
+          "number": 9,
+          "title": "Vinyl Crackle Bliss",
+          "isrc": "QZK6K2515714",
+          "youtubeId": "DHHgT6qFtiY"
+        },
+        {
+          "number": 10,
+          "title": "Serene Brew",
+          "isrc": "QZK6K2515715",
+          "youtubeId": "oksF7fFqGgg"
+        },
+        {
+          "number": 11,
+          "title": "Smooth Basslines",
+          "isrc": "QZK6K2515716",
+          "youtubeId": "v9V0uSRDi4E"
+        },
+        {
+          "number": 12,
+          "title": "Rabbit Jazz Groove",
+          "isrc": "QZK6K2515717",
+          "youtubeId": "bEHn7Dwuguo"
+        },
+        {
+          "number": 13,
+          "title": "Laid-back Melodies",
+          "isrc": "QZK6K2515718",
+          "youtubeId": "0pdDDjPEp2U"
+        },
+        {
+          "number": 14,
+          "title": "Whiskers in the Rain",
+          "isrc": "QZK6K2515719",
+          "youtubeId": "Ulk6HKrxvpA"
+        },
+        {
+          "number": 15,
+          "title": "Sipping Smooth Jazz",
+          "isrc": "QZK6K2515720",
+          "youtubeId": "8E4EhvrEDmM"
+        },
+        {
+          "number": 16,
+          "title": "Soft Keys Serenade",
+          "isrc": "QZK6K2515721",
+          "youtubeId": "WOC2B0CT76k"
+        },
+        {
+          "number": 17,
+          "title": "Cup of Comfort",
+          "isrc": "QZK6K2515722",
+          "youtubeId": "mLDTqM1Q7DY"
+        },
+        {
+          "number": 18,
+          "title": "Bassline Brew",
+          "isrc": "QZK6K2515723",
+          "youtubeId": "HS1LB5X_gs0"
+        },
+        {
+          "number": 19,
+          "title": "Warm Groove Reflections",
+          "isrc": "QZK6K2515724",
+          "youtubeId": "Ha8XvgwkGbY"
+        },
+        {
+          "number": 20,
+          "title": "Afternoon Chill",
+          "isrc": "QZK6K2515725",
+          "youtubeId": "Q-AiyguVvRA"
+        },
+        {
+          "number": 21,
+          "title": "Relaxing Journey",
+          "isrc": "QZK6K2515726",
+          "youtubeId": "hM-JyVyFCSo"
+        },
+        {
+          "number": 22,
+          "title": "Last Sip of Peace",
+          "isrc": "QZK6K2515727",
+          "youtubeId": "1QonmlGZ2B0"
         }
       ]
     }

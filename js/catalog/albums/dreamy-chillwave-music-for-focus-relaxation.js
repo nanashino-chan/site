@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-06",
   "albums": {
     "dreamy-chillwave-music-for-focus-relaxation": {
       "slug": "dreamy-chillwave-music-for-focus-relaxation",

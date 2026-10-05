@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-06",
   "albums": {
     "ambient-chill-trap-soothing-beats-for-relaxation": {
       "slug": "ambient-chill-trap-soothing-beats-for-relaxation",

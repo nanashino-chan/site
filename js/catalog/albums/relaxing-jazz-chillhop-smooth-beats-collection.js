@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-06",
   "albums": {
     "relaxing-jazz-chillhop-smooth-beats-collection": {
       "slug": "relaxing-jazz-chillhop-smooth-beats-collection",
