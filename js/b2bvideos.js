@@ -8534,6 +8534,154 @@ const catalog={
           "youtubeId": "qgI8Y1-fZok"
         }
       ]
+    },
+    "focus-jazz-lo-fi-beats-for-study-work": {
+      "slug": "focus-jazz-lo-fi-beats-for-study-work",
+      "title": "Focus Jazz Lo-Fi Beats for Study, Work & Sleep",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-10-01",
+      "releaseDate": "2025-10-31",
+      "distributionUpc": "199742575102",
+      "format": "album",
+      "trackCount": 20,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "jazz",
+        "study",
+        "work",
+        "evening",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Morning Sketch",
+          "isrc": "QT3F62592715",
+          "youtubeId": "2zvaZTZ86NI"
+        },
+        {
+          "number": 2,
+          "title": "Soft Steps on Pavement",
+          "isrc": "QT3F62592716",
+          "youtubeId": "q0EIToL3nlQ"
+        },
+        {
+          "number": 3,
+          "title": "Warm Coffee & Vinyl Crackle",
+          "isrc": "QT3F62592717",
+          "youtubeId": "Id6rbuBz6y8"
+        },
+        {
+          "number": 4,
+          "title": "Flowing Through Pages",
+          "isrc": "QT3F62592718",
+          "youtubeId": "dEhbm2sAbS8"
+        },
+        {
+          "number": 5,
+          "title": "Dreaming Over Numbers",
+          "isrc": "QT3F62592719",
+          "youtubeId": "QzsP9uqu0v4"
+        },
+        {
+          "number": 6,
+          "title": "Quiet Window Rain",
+          "isrc": "QT3F62592720",
+          "youtubeId": "RagWhVUsl48"
+        },
+        {
+          "number": 7,
+          "title": "Afternoon Haze",
+          "isrc": "QT3F62592721",
+          "youtubeId": "oQln8T7RQCk"
+        },
+        {
+          "number": 8,
+          "title": "Gentle Focus",
+          "isrc": "QT3F62592722",
+          "youtubeId": "fSACEY_nWMc"
+        },
+        {
+          "number": 9,
+          "title": "Serene Transit",
+          "isrc": "QT3F62592723",
+          "youtubeId": "eprWXraARLQ"
+        },
+        {
+          "number": 10,
+          "title": "Coffee Rings and Jazz Things",
+          "isrc": "QT3F62592724",
+          "youtubeId": "kqmThtBO0sM"
+        },
+        {
+          "number": 11,
+          "title": "Thoughts in Sepia",
+          "isrc": "QT3F62592725",
+          "youtubeId": "l-svDEbN7FQ"
+        },
+        {
+          "number": 12,
+          "title": "Lazy River Loops",
+          "isrc": "QT3F62592726",
+          "youtubeId": "6Mh-zGwMEMo"
+        },
+        {
+          "number": 13,
+          "title": "Golden Hour Groove",
+          "isrc": "QT3F62592727",
+          "youtubeId": "akXTLnP8xVQ"
+        },
+        {
+          "number": 14,
+          "title": "Whispering Chime",
+          "isrc": "QT3F62592728",
+          "youtubeId": "-CCDl6HySXI"
+        },
+        {
+          "number": 15,
+          "title": "Peaceful Notebooks",
+          "isrc": "QT3F62592729",
+          "youtubeId": "rlOWiszgYso"
+        },
+        {
+          "number": 16,
+          "title": "Evening Study Mood",
+          "isrc": "QT3F62592730",
+          "youtubeId": "K_nukFIg56E"
+        },
+        {
+          "number": 17,
+          "title": "Blue Ink & Lo-Fi",
+          "isrc": "QT3F62592731",
+          "youtubeId": "DCZqAJpjiXU"
+        },
+        {
+          "number": 18,
+          "title": "Smooth Lines",
+          "isrc": "QT3F62592732",
+          "youtubeId": "OCV4ouZskCQ"
+        },
+        {
+          "number": 19,
+          "title": "19.Wind in the City",
+          "isrc": "QT3F62592733",
+          "youtubeId": "NsfflZd425s"
+        },
+        {
+          "number": 20,
+          "title": "Midnight Jazz Drizzle",
+          "isrc": "QT3F62592734",
+          "youtubeId": "axPWsaUXJyQ"
+        }
+      ]
     }
   }
 };
