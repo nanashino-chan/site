@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://nanashino-chan.github.io/site/catalog/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -141,6 +141,12 @@
   <url>
     <loc>https://nanashino-chan.github.io/site/catalog/gentle-polyrhythm-trance-steady-beats.html</loc>
     <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://nanashino-chan.github.io/site/catalog/glam-lo-fi-evenings.html</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
