@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-06",
+  "updatedAt": "2026-10-08",
   "albums": {
     "midnight-jazzhoplo-fi-grooves-for-late-nights": {
       "slug": "midnight-jazzhoplo-fi-grooves-for-late-nights",

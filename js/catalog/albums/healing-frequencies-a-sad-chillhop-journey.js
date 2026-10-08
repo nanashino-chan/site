@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-06",
+  "updatedAt": "2026-10-08",
   "albums": {
     "healing-frequencies-a-sad-chillhop-journey": {
       "slug": "healing-frequencies-a-sad-chillhop-journey",

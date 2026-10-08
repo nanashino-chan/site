@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-06",
+  "updatedAt": "2026-10-08",
   "albums": {
     "warm-chords-lo-fi-beats-a-chill-rb-journey": {
       "slug": "warm-chords-lo-fi-beats-a-chill-rb-journey",
