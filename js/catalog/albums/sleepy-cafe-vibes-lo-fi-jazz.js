@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-10",
   "albums": {
     "sleepy-cafe-vibes-lo-fi-jazz": {
       "slug": "sleepy-cafe-vibes-lo-fi-jazz",

@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-10",
   "albums": {
     "nostalgic-strings-lo-fi-acoustic-guitar": {
       "slug": "nostalgic-strings-lo-fi-acoustic-guitar",

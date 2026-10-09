@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-10",
   "albums": {
     "rainy-day-reveries-soothing-jazzhop-piano-vibes": {
       "slug": "rainy-day-reveries-soothing-jazzhop-piano-vibes",

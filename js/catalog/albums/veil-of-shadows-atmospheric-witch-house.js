@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-10",
   "albums": {
     "veil-of-shadows-atmospheric-witch-house": {
       "slug": "veil-of-shadows-atmospheric-witch-house",

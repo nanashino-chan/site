@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-10",
   "albums": {
     "focus-jazz-lo-fi-beats-for-study-work": {
       "slug": "focus-jazz-lo-fi-beats-for-study-work",

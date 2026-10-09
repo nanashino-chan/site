@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-10",
   "albums": {
     "calm-lo-fi-jazz-for-focus-unwind": {
       "slug": "calm-lo-fi-jazz-for-focus-unwind",
