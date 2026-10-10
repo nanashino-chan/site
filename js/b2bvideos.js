@@ -11928,6 +11928,143 @@ const catalog={
           "youtubeId": "fz6nhU1_5eU"
         }
       ]
+    },
+    "night-study-lo-fideep-focus-beats": {
+      "slug": "night-study-lo-fideep-focus-beats",
+      "title": "Night Study Lo-Fi:Deep Focus Beats for Late Night Sessions",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-10-06",
+      "releaseDate": "2025-12-12",
+      "distributionUpc": "199743260366",
+      "format": "album",
+      "trackCount": 18,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "study",
+        "focus",
+        "late-night",
+        "work",
+        "calm",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Midnight Focus",
+          "isrc": "QT3F92540522",
+          "youtubeId": "SxQDa3uxulE"
+        },
+        {
+          "number": 2,
+          "title": "Quiet Determination",
+          "isrc": "QT3F92540523",
+          "youtubeId": "RaiOr51MO-0"
+        },
+        {
+          "number": 3,
+          "title": "Dreamy Thoughts",
+          "isrc": "QT3F92540524",
+          "youtubeId": "rCi2UDNEk48"
+        },
+        {
+          "number": 4,
+          "title": "Soft Ambitions",
+          "isrc": "QT3F92540525",
+          "youtubeId": "wsjhgb4fZww"
+        },
+        {
+          "number": 5,
+          "title": "Steady Beats",
+          "isrc": "QT3F92540526",
+          "youtubeId": "slSRbYb92yQ"
+        },
+        {
+          "number": 6,
+          "title": "Flow State",
+          "isrc": "QT3F92540527",
+          "youtubeId": "7SNhOCvjsgU"
+        },
+        {
+          "number": 7,
+          "title": "Calm Rhythms",
+          "isrc": "QT3F92540528",
+          "youtubeId": "XySB1hhsdsU"
+        },
+        {
+          "number": 8,
+          "title": "Moonlit Reflections",
+          "isrc": "QT3F92540529",
+          "youtubeId": "bwC_1pwDKfs"
+        },
+        {
+          "number": 9,
+          "title": "Gentle Persistence",
+          "isrc": "QT3F92540530",
+          "youtubeId": "FCY_txc1MDg"
+        },
+        {
+          "number": 10,
+          "title": "Deep Focus",
+          "isrc": "QT3F92540531",
+          "youtubeId": "86DPdnvXTpU"
+        },
+        {
+          "number": 11,
+          "title": "Nighttime Progress",
+          "isrc": "QT3F92540532",
+          "youtubeId": "LpgJpfuA-ho"
+        },
+        {
+          "number": 12,
+          "title": "Quiet Motivation",
+          "isrc": "QT3F92540533",
+          "youtubeId": "O8kq5-2sAO0"
+        },
+        {
+          "number": 13,
+          "title": "Relaxed Drive",
+          "isrc": "QT3F92540534",
+          "youtubeId": "hyQhA_VbkSU"
+        },
+        {
+          "number": 14,
+          "title": "Peaceful Grind",
+          "isrc": "QT3F92540535",
+          "youtubeId": "fTfkCn7qdsk"
+        },
+        {
+          "number": 15,
+          "title": "Subtle Energy",
+          "isrc": "QT3F92540536",
+          "youtubeId": "PnrmEnlpSzs"
+        },
+        {
+          "number": 16,
+          "title": "Focused Intent",
+          "isrc": "QT3F92540537",
+          "youtubeId": "L-2Qr-9T9ys"
+        },
+        {
+          "number": 17,
+          "title": "Soothing Waves",
+          "isrc": "QT3F92540538",
+          "youtubeId": "kdu4mnhUYiw"
+        },
+        {
+          "number": 18,
+          "title": "Final Stretch",
+          "isrc": "QT3F92540539",
+          "youtubeId": "aqz6I5sEhWI"
+        }
+      ]
     }
   }
 };
