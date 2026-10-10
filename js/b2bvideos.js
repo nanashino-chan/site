@@ -1,7 +1,7 @@
 /* Generated compatibility bundle. */
 (function(global){
 const catalog={
-  "schemaVersion": "1.1.0",
+  "schemaVersion": "1.2.0",
   "updatedAt": "2026-10-11",
   "albums": {
     "chillhop-lofi-relax-focus-instrumental": {

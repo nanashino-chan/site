@@ -1,5 +1,5 @@
 window.registerNanashinoB2B({
-  "schemaVersion": "1.1.0",
+  "schemaVersion": "1.2.0",
   "updatedAt": "2026-10-11",
   "albums": {
     "tokyo-night-cafe-lo-fi-jazzhop-minami-aoyama": {
