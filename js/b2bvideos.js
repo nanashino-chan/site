@@ -14309,7 +14309,7 @@ const catalog={
 
   function getVideoId(isrc) {
     const track = getTrackByIsrc(isrc);
-    return track ? track.youtubeId : null;
+    return track ? track.youtubeId || null : null;
   }
 
   function getAlbumSlugByIsrc(isrc) {
@@ -14318,7 +14318,11 @@ const catalog={
 
   function getAlbumVideoIds(albumSlug) {
     const album = getAlbum(albumSlug);
-    return album ? album.tracks.map((track) => track.youtubeId) : [];
+    return album ? album.tracks.filter((track) => track.youtubeId).map((track) => track.youtubeId) : [];
+  }
+
+  function validAppleMusicUrl(value) {
+    return typeof value === "string" && /^https:\/\/music\.apple\.com\/[a-z]{2}\/album\/[^/?#]+\/\d+$/.test(value);
   }
 
   function validateCatalog() {
@@ -14342,6 +14346,11 @@ const catalog={
         errors.push(`${albumSlug}: trackCount is ${album.trackCount}, but ${album.tracks.length} tracks were found.`);
       }
 
+      if (album.appleMusicUrl !== undefined && !validAppleMusicUrl(album.appleMusicUrl)) {
+        errors.push(`${albumSlug}: invalid Apple Music album URL.`);
+      }
+      const youtubeCount = album.tracks.filter(track => track.youtubeId).length;
+      if (youtubeCount && youtubeCount !== album.tracks.length) errors.push(`${albumSlug}: mixed preview sources.`);
       album.tracks.forEach((track, index) => {
         const expectedNumber = index + 1;
         const normalizedIsrc = normalizeIsrc(track.isrc);
@@ -14363,14 +14372,15 @@ const catalog={
         }
         seenIsrc.add(normalizedIsrc);
 
-        if (!youtubeIdPattern.test(track.youtubeId)) {
+        if (track.youtubeId != null && !youtubeIdPattern.test(track.youtubeId)) {
           errors.push(`${albumSlug} track ${track.number}: invalid YouTube ID ${track.youtubeId}.`);
         }
 
-        if (seenYoutubeIds.has(track.youtubeId)) {
+        if (track.youtubeId != null && seenYoutubeIds.has(track.youtubeId)) {
           errors.push(`${albumSlug} track ${track.number}: duplicate YouTube ID ${track.youtubeId}.`);
         }
-        seenYoutubeIds.add(track.youtubeId);
+        if (track.youtubeId != null) seenYoutubeIds.add(track.youtubeId);
+        else if (!album.appleMusicUrl) errors.push(`${albumSlug} track ${track.number}: missing preview source.`);
       });
     });
 
@@ -14403,7 +14413,7 @@ const catalog={
         albumSlug,
         Object.freeze(
           Object.fromEntries(
-            album.tracks.map((track) => [normalizeIsrc(track.isrc), track.youtubeId])
+            album.tracks.filter((track) => track.youtubeId).map((track) => [normalizeIsrc(track.isrc), track.youtubeId])
           )
         )
       ])
