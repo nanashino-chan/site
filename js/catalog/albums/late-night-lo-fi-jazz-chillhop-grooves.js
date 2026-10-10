@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "albums": {
     "late-night-lo-fi-jazz-chillhop-grooves": {
       "slug": "late-night-lo-fi-jazz-chillhop-grooves",

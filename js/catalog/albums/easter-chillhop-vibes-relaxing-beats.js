@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "albums": {
     "easter-chillhop-vibes-relaxing-beats": {
       "slug": "easter-chillhop-vibes-relaxing-beats",

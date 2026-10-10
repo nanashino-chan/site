@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "albums": {
     "in-flight-relaxationrelax-unwind": {
       "slug": "in-flight-relaxationrelax-unwind",

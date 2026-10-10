@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "albums": {
     "night-study-lo-fideep-focus-beats": {
       "slug": "night-study-lo-fideep-focus-beats",

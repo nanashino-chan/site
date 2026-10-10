@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "albums": {
     "lo-fi-jazz-cafe-music-for-study-work-evening": {
       "slug": "lo-fi-jazz-cafe-music-for-study-work-evening",

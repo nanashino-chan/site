@@ -1,6 +1,6 @@
 window.registerNanashinoB2B({
   "schemaVersion": "1.1.0",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "albums": {
     "coffee-break-lo-fi-jazzhop-tokyo": {
       "slug": "coffee-break-lo-fi-jazzhop-tokyo",
