@@ -1,0 +1,54 @@
+      <section class="player-section" aria-labelledby="player-heading">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Listen before licensing</p>
+            <h2 id="player-heading">Album preview player</h2>
+          </div>
+          <p class="section-note">Select any track below or use the controls to move through the album. One shared player keeps the page fast and makes A/B listening easier.</p>
+        </div>
+
+        <div class="player-shell">
+          <div class="player-stage">
+            <iframe
+              id="catalogPlayer"
+              title="Nanashino-chan album preview"
+              src="about:blank"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="player-panel">
+            <p class="player-label">Now previewing</p>
+            <p class="player-track-count" id="playerTrackCount">Track 01 of @@COUNT@@</p>
+            <h3 class="player-title" id="playerTrackTitle">@@FIRST_TITLE@@</h3>
+            <p class="player-isrc" id="playerIsrc">ISRC @@FIRST_ISRC@@</p>
+
+            <div class="visualizer" aria-hidden="true">
+              <span style="--bar-height:12px;--bar-delay:-.2s"></span><span style="--bar-height:25px;--bar-delay:-.7s"></span><span style="--bar-height:18px;--bar-delay:-.4s"></span><span style="--bar-height:31px;--bar-delay:-.9s"></span><span style="--bar-height:16px;--bar-delay:-.1s"></span><span style="--bar-height:27px;--bar-delay:-.6s"></span><span style="--bar-height:20px;--bar-delay:-.3s"></span><span style="--bar-height:33px;--bar-delay:-.8s"></span><span style="--bar-height:14px;--bar-delay:-.5s"></span><span style="--bar-height:24px;--bar-delay:-.15s"></span><span style="--bar-height:18px;--bar-delay:-.65s"></span><span style="--bar-height:29px;--bar-delay:-.35s"></span>
+            </div>
+
+            <div class="player-controls" aria-label="Album preview controls">
+              <button class="player-control" id="previousTrack" type="button" aria-label="Previous track">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h2v14H6zm3.5 7L18 5v14z"/></svg>
+              </button>
+              <button class="player-control primary" id="randomTrack" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 3h5v5"/><path d="m4 20 17-17"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="m4 4 5 5"/></svg>
+                Random preview
+              </button>
+              <button class="player-control" id="nextTrack" type="button" aria-label="Next track">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 5h2v14h-2zm-1.5 7L6 19V5z"/></svg>
+              </button>
+            </div>
+
+            <div class="player-links">
+              <a id="youtubeLink" href="#" target="_blank" rel="noopener">Open on YouTube ↗</a>
+              <a id="playerLicenseLink" href="/site/licensing.html">License this track →</a>
+            </div>
+          </div>
+
+          <p class="player-disclaimer">Previews are provided through Nanashino-chan’s official YouTube uploads. Availability may depend on YouTube and the viewer’s region.</p>
+        </div>
+      </section>
+
