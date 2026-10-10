@@ -13304,6 +13304,478 @@ const catalog={
           "youtubeId": "XUSgi2d-NDk"
         }
       ]
+    },
+    "tokyo-lo-fi-jazzhop-cafe": {
+      "slug": "tokyo-lo-fi-jazzhop-cafe",
+      "title": "Tokyo Lo-Fi Jazzhop Café – Smooth Piano Sessions",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-12-14",
+      "releaseDate": "2025-12-19",
+      "distributionUpc": "199943120248",
+      "format": "album",
+      "trackCount": 25,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "jazzhop",
+        "piano",
+        "tokyo",
+        "cafe",
+        "night",
+        "focus",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Tokyo Night Intro",
+          "isrc": "QT6FP2534050",
+          "youtubeId": "u9SQYkvl2Co"
+        },
+        {
+          "number": 2,
+          "title": "Café Window Reflections",
+          "isrc": "QT6FP2534051",
+          "youtubeId": "AoTQv875X3I"
+        },
+        {
+          "number": 3,
+          "title": "Midtown Piano Flow",
+          "isrc": "QT6FP2534052",
+          "youtubeId": "PElA1kOw-pw"
+        },
+        {
+          "number": 4,
+          "title": "Chillhop Streets of Aoyama",
+          "isrc": "QT6FP2534053",
+          "youtubeId": "4mV3W7fxoCc"
+        },
+        {
+          "number": 5,
+          "title": "Late Evening Coffee Break",
+          "isrc": "QT6FP2534054",
+          "youtubeId": "OTujTFF8n7g"
+        },
+        {
+          "number": 6,
+          "title": "Warm Light Jazzhop",
+          "isrc": "QT6FP2534055",
+          "youtubeId": "A_SW-niVN2k"
+        },
+        {
+          "number": 7,
+          "title": "Study Mode in Tokyo",
+          "isrc": "QT6FP2534056",
+          "youtubeId": "LPmdc-JruKo"
+        },
+        {
+          "number": 8,
+          "title": "Calm Piano Lounge",
+          "isrc": "QT6FP2534057",
+          "youtubeId": "jAF9M7VfPEo"
+        },
+        {
+          "number": 9,
+          "title": "Night Breeze Lo-Fi",
+          "isrc": "QT6FP2534058",
+          "youtubeId": "Bz5aCH4wLZw"
+        },
+        {
+          "number": 10,
+          "title": "Soft Keys on the Table",
+          "isrc": "QT6FP2534059",
+          "youtubeId": "BHrEmsb3g24"
+        },
+        {
+          "number": 11,
+          "title": "Focus Rhythm Blend",
+          "isrc": "QT6FP2534060",
+          "youtubeId": "wI3UCxhN3cY"
+        },
+        {
+          "number": 12,
+          "title": "Quiet Corner Jazzhop",
+          "isrc": "QT6FP2534061",
+          "youtubeId": "R-S9xNdzYNg"
+        },
+        {
+          "number": 13,
+          "title": "Urban Night Groove",
+          "isrc": "QT6FP2534062",
+          "youtubeId": "ginJRnAQutg"
+        },
+        {
+          "number": 14,
+          "title": "Smooth Piano Crossing",
+          "isrc": "QT6FP2534063",
+          "youtubeId": "E8uzi72Xh7g"
+        },
+        {
+          "number": 15,
+          "title": "Tokyo Midnight Notes",
+          "isrc": "QT6FP2534064",
+          "youtubeId": "0CP3I02TF4U"
+        },
+        {
+          "number": 16,
+          "title": "Café Rain Ambience",
+          "isrc": "QT6FP2534065",
+          "youtubeId": "OP6eLoKHF90"
+        },
+        {
+          "number": 17,
+          "title": "Relaxed Jazzhop Drive",
+          "isrc": "QT6FP2534066",
+          "youtubeId": "rPrkPrFd7XA"
+        },
+        {
+          "number": 18,
+          "title": "Gentle Lo-Fi Melodies",
+          "isrc": "QT6FP2534067",
+          "youtubeId": "DylwKutnngI"
+        },
+        {
+          "number": 19,
+          "title": "Chillhop Desk Session",
+          "isrc": "QT6FP2534068",
+          "youtubeId": "I_-0WehXWDg"
+        },
+        {
+          "number": 20,
+          "title": "Evening Study Groove",
+          "isrc": "QT6FP2534069",
+          "youtubeId": "utDr866BM4w"
+        },
+        {
+          "number": 21,
+          "title": "Nighttime Piano Sketch",
+          "isrc": "QT6FP2534070",
+          "youtubeId": "B241rGLSciI"
+        },
+        {
+          "number": 22,
+          "title": "Calm Focus Beats",
+          "isrc": "QT6FP2534071",
+          "youtubeId": "U0CpdM_GFG8"
+        },
+        {
+          "number": 23,
+          "title": "Soft-Jazz Study Vibes",
+          "isrc": "QT6FP2534072",
+          "youtubeId": "7qqcm8ZzJks"
+        },
+        {
+          "number": 24,
+          "title": "Tokyo Lo-Fi Memories",
+          "isrc": "QT6FP2534073",
+          "youtubeId": "adUad0ncM1s"
+        },
+        {
+          "number": 25,
+          "title": "Closing Night Outro",
+          "isrc": "QT6FP2534074",
+          "youtubeId": "SBkdqPJCmbU"
+        }
+      ]
+    },
+    "summer-night-chillhop": {
+      "slug": "summer-night-chillhop",
+      "title": "Summer Night Chillhop",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-12-08",
+      "releaseDate": "2026-03-06",
+      "distributionUpc": "199945271894",
+      "format": "album",
+      "trackCount": 20,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "chillhop",
+        "summer",
+        "night",
+        "poolside",
+        "travel",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Poolside Twilight",
+          "isrc": "QT6FJ2580922",
+          "youtubeId": "-phPHmpNOko"
+        },
+        {
+          "number": 2,
+          "title": "Fireworks in Her Eyes",
+          "isrc": "QT6FJ2580923",
+          "youtubeId": "wIwtdhBQ_Uw"
+        },
+        {
+          "number": 3,
+          "title": "Evening Breeze Lullaby",
+          "isrc": "QT6FJ2580924",
+          "youtubeId": "edJII66Mm9c"
+        },
+        {
+          "number": 4,
+          "title": "Neon Reflections",
+          "isrc": "QT6FJ2580925",
+          "youtubeId": "lc7SG0QNSfA"
+        },
+        {
+          "number": 5,
+          "title": "Summer Sketches",
+          "isrc": "QT6FJ2580926",
+          "youtubeId": "VY0o4oK1SAo"
+        },
+        {
+          "number": 6,
+          "title": "Float the moon in the pool",
+          "isrc": "QT6FJ2580927",
+          "youtubeId": "yQuACOrTsPY"
+        },
+        {
+          "number": 7,
+          "title": "Distant Crickets",
+          "isrc": "QT6FJ2580928",
+          "youtubeId": "nsTNm315bog"
+        },
+        {
+          "number": 8,
+          "title": "Sunset Vinyl",
+          "isrc": "QT6FJ2580929",
+          "youtubeId": "QKhRcDzmX6k"
+        },
+        {
+          "number": 9,
+          "title": "Beneath the Lanterns",
+          "isrc": "QT6FJ2580930",
+          "youtubeId": "Q3Nc3WlEKyo"
+        },
+        {
+          "number": 10,
+          "title": "Gentle Ripples",
+          "isrc": "QT6FJ2580931",
+          "youtubeId": "DruwTtyKuZM"
+        },
+        {
+          "number": 11,
+          "title": "Starry Horizon",
+          "isrc": "QT6FJ2580932",
+          "youtubeId": "GULBr313G7s"
+        },
+        {
+          "number": 12,
+          "title": "Jazz After Rain",
+          "isrc": "QT6FJ2580933",
+          "youtubeId": "X40w0yKur4k"
+        },
+        {
+          "number": 13,
+          "title": "Silhouettes & Sparkles",
+          "isrc": "QT6FJ2580934",
+          "youtubeId": "wdkOjwSrwSw"
+        },
+        {
+          "number": 14,
+          "title": "Fireflies on Water",
+          "isrc": "QT6FJ2580935",
+          "youtubeId": "9ce1zyS0Bzk"
+        },
+        {
+          "number": 15,
+          "title": "Daydream Fade",
+          "isrc": "QT6FJ2580936",
+          "youtubeId": "e8y5TcWfAco"
+        },
+        {
+          "number": 16,
+          "title": "Echoes of Blue",
+          "isrc": "QT6FJ2580937",
+          "youtubeId": "0BVe9d0NYWg"
+        },
+        {
+          "number": 17,
+          "title": ".Slow Bloom",
+          "isrc": "QT6FJ2580938",
+          "youtubeId": "F0JyZphBRXU"
+        },
+        {
+          "number": 18,
+          "title": "Still Fireworks",
+          "isrc": "QT6FJ2580939",
+          "youtubeId": "bblnByfTCdU"
+        },
+        {
+          "number": 19,
+          "title": "Sleepless Calm",
+          "isrc": "QT6FJ2580940",
+          "youtubeId": "0qklyyJARxI"
+        },
+        {
+          "number": 20,
+          "title": "Goodnight, Summer",
+          "isrc": "QT6FJ2580941",
+          "youtubeId": "d_x5x8vIjZI"
+        }
+      ]
+    },
+    "smooth-jazz-lounge-relaxing-evening-vibes": {
+      "slug": "smooth-jazz-lounge-relaxing-evening-vibes",
+      "title": "Smooth Jazz Lounge: Relaxing Evening Vibes",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-12-13",
+      "releaseDate": "2026-03-27",
+      "distributionUpc": "199943500996",
+      "format": "album",
+      "trackCount": 19,
+      "instrumental": true,
+      "tags": [
+        "smooth jazz",
+        "lounge",
+        "evening",
+        "relaxing",
+        "night",
+        "hospitality",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Evening Breeze",
+          "isrc": "QT6FN2568985",
+          "youtubeId": "ln7_504q8jA"
+        },
+        {
+          "number": 2,
+          "title": "Smooth Reflections",
+          "isrc": "QT6FN2568986",
+          "youtubeId": "AIKSj1hNn7Q"
+        },
+        {
+          "number": 3,
+          "title": "Quiet Night Stroll",
+          "isrc": "QT6FN2568987",
+          "youtubeId": "CmHrmlXg0Nk"
+        },
+        {
+          "number": 4,
+          "title": "Soft Echoes",
+          "isrc": "QT6FN2568988",
+          "youtubeId": "MjJURkc_IEU"
+        },
+        {
+          "number": 5,
+          "title": "Serene Moments",
+          "isrc": "QT6FN2568989",
+          "youtubeId": "RxMuUDIzcbA"
+        },
+        {
+          "number": 6,
+          "title": "Velvet Sunset",
+          "isrc": "QT6FN2568990",
+          "youtubeId": "MFyOZ7k8-d8"
+        },
+        {
+          "number": 7,
+          "title": "Dreamy Waves",
+          "isrc": "QT6FN2568991",
+          "youtubeId": "H5KyQtYAa48"
+        },
+        {
+          "number": 8,
+          "title": "Gentle Flow",
+          "isrc": "QT6FN2568992",
+          "youtubeId": "f2iW2LGCej0"
+        },
+        {
+          "number": 9,
+          "title": "Golden Hour Groove",
+          "isrc": "QT6FN2568993",
+          "youtubeId": "1s0Wx5AUoS0"
+        },
+        {
+          "number": 10,
+          "title": "Chill Horizon",
+          "isrc": "QT6FN2568994",
+          "youtubeId": "ppI2FL6Uzj0"
+        },
+        {
+          "number": 11,
+          "title": "Twilight Serenade",
+          "isrc": "QT6FN2568995",
+          "youtubeId": "7RicAymkVvA"
+        },
+        {
+          "number": 12,
+          "title": "Sax in the City",
+          "isrc": "QT6FN2568996",
+          "youtubeId": "HCzJF21a3QM"
+        },
+        {
+          "number": 13,
+          "title": "Midnight Lounge",
+          "isrc": "QT6FN2568997",
+          "youtubeId": "uz-bVhliM78"
+        },
+        {
+          "number": 14,
+          "title": "Moonlit Melodies",
+          "isrc": "QT6FN2568998",
+          "youtubeId": "fkXrycmd6Xo"
+        },
+        {
+          "number": 15,
+          "title": "Nightfall Vibes",
+          "isrc": "QT6FN2568999",
+          "youtubeId": "WySQLRSxgYo"
+        },
+        {
+          "number": 16,
+          "title": "Evening Reverie",
+          "isrc": "QT6FN2569000",
+          "youtubeId": "EFExqqHt524"
+        },
+        {
+          "number": 17,
+          "title": "Calm Afterglow",
+          "isrc": "QT6FN2569001",
+          "youtubeId": "OQFNnrrW65s"
+        },
+        {
+          "number": 18,
+          "title": "Deep Relaxation",
+          "isrc": "QT6FN2569002",
+          "youtubeId": "jPKZU2pQG4M"
+        },
+        {
+          "number": 19,
+          "title": "Closing Chill",
+          "isrc": "QT6FN2569003",
+          "youtubeId": "3ImLl8erOzw"
+        }
+      ]
     }
   }
 };
