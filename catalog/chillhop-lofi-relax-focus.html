@@ -645,6 +645,8 @@
 
     .btn svg { width: 17px; height: 17px; }
 
+    .apple-player { width: 100%; height: 450px; border: 0; border-radius: 12px; display: block; }
+
     .player-section { margin: 2px 0 32px; }
 
     .player-shell {
@@ -1452,6 +1454,8 @@
         </div>
       </section>
 
+
+
       <section class="stats" aria-label="Album metadata summary">
         <div class="stat">
           <div class="stat-label">Release date</div>
@@ -1509,7 +1513,7 @@
           <div class="table-wrap">
             <table>
               <thead>
-                <tr>
+                <tr id="track-${number}">
                   <th scope="col">No.</th>
                   <th scope="col">Track title</th>
                   <th scope="col">ISRC</th>
@@ -1645,7 +1649,7 @@
     }
 
     function setPlayer(index, autoplay = true) {
-      if (!tracks.length) return;
+      if (!tracks.length || !previewVideoIds.some(Boolean)) return;
       currentTrackIndex = (index + tracks.length) % tracks.length;
       const [number, title, isrc] = tracks[currentTrackIndex];
       const videoId = previewVideoIds[currentTrackIndex];
@@ -1680,16 +1684,16 @@
 
     function render(list) {
       rows.innerHTML = list.map(track => {
-        const [number, title, isrc, status] = track;
+        const [number, title, isrc, status, videoId] = track;
         const statusLabel = status === "review" ? "Title review" : "ISRC ready";
         const query = encodeURIComponent(`${title} (${isrc})`);
         return `
-          <tr>
+          <tr id="track-${number}">
             <td class="track-number">${String(number).padStart(2, "0")}</td>
             <td class="track-title">${escapeHtml(title)}</td>
             <td><div class="isrc-cell"><code>${formatIsrc(isrc)}</code><button class="copy-btn" type="button" data-copy="${isrc}" aria-label="Copy ISRC ${isrc}">${copyIcon()}</button></div></td>
             <td><span class="status ${status === "review" ? "review" : ""}">${statusLabel}</span></td>
-            <td><div class="track-actions"><button class="preview-btn" type="button" data-preview-index="${number - 1}" aria-current="${number - 1 === currentTrackIndex}">${previewIcon()} Preview</button><a class="license-link" href="https://nanashino-chan.github.io/site/licensing.html?track=${query}">License →</a></div></td>
+            <td><div class="track-actions">${videoId ? `<button class="preview-btn" type="button" data-preview-index="${number - 1}" aria-current="${number - 1 === currentTrackIndex}">${previewIcon()} Preview</button>` : `<a class="preview-btn" href="${escapeHtml(catalogAlbum.appleMusicUrl)}" target="_blank" rel="noopener">Album on Apple Music ↗</a>`}<a class="license-link" href="https://nanashino-chan.github.io/site/licensing.html?track=${query}">License →</a></div></td>
           </tr>`;
       }).join("");
       count.textContent = `${list.length} of ${tracks.length} tracks`;
@@ -1745,16 +1749,16 @@
       showToast("Metadata CSV downloaded");
     });
 
-    document.getElementById("previousTrack").addEventListener("click", () => setPlayer(currentTrackIndex - 1, true));
-    document.getElementById("nextTrack").addEventListener("click", () => setPlayer(currentTrackIndex + 1, true));
-    document.getElementById("randomTrack").addEventListener("click", () => {
+    document.getElementById("previousTrack")?.addEventListener("click", () => setPlayer(currentTrackIndex - 1, true));
+    document.getElementById("nextTrack")?.addEventListener("click", () => setPlayer(currentTrackIndex + 1, true));
+    document.getElementById("randomTrack")?.addEventListener("click", () => {
       if (tracks.length < 2) return setPlayer(0, true);
       let randomIndex = currentTrackIndex;
       while (randomIndex === currentTrackIndex) randomIndex = Math.floor(Math.random() * tracks.length);
       setPlayer(randomIndex, true);
     });
 
-    youtubeLink.addEventListener("click", event => {
+    youtubeLink?.addEventListener("click", event => {
       if (youtubeLink.getAttribute("aria-disabled") === "true") event.preventDefault();
     });
 
@@ -1768,9 +1772,9 @@
       console.error("Album track data unavailable:", ALBUM_SLUG);
       search.disabled = true;
       document.getElementById("downloadCsv").disabled = true;
-      document.getElementById("previousTrack").disabled = true;
-      document.getElementById("nextTrack").disabled = true;
-      document.getElementById("randomTrack").disabled = true;
+      if (document.getElementById("previousTrack")) document.getElementById("previousTrack").disabled = true;
+      if (document.getElementById("nextTrack")) document.getElementById("nextTrack").disabled = true;
+      if (document.getElementById("randomTrack")) document.getElementById("randomTrack").disabled = true;
     }
   </script>
 </body>
