@@ -13776,6 +13776,509 @@ const catalog={
           "youtubeId": "3ImLl8erOzw"
         }
       ]
+    },
+    "chillhop-lo-fi-jazz-for-focus-and-relaxation": {
+      "slug": "chillhop-lo-fi-jazz-for-focus-and-relaxation",
+      "title": "Chillhop Lo-Fi Jazz for Focus and Relaxation",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-12-09",
+      "releaseDate": "2026-03-13",
+      "distributionUpc": "199944807742",
+      "format": "album",
+      "trackCount": 24,
+      "instrumental": true,
+      "tags": [
+        "chillhop",
+        "lo-fi",
+        "jazz",
+        "focus",
+        "relaxation",
+        "study",
+        "reading",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Loops of Thought",
+          "isrc": "QT6FK2579103",
+          "youtubeId": "QDwWg7b_9YY"
+        },
+        {
+          "number": 2,
+          "title": "Gentle Notebook Sketches",
+          "isrc": "QT6FK2579104",
+          "youtubeId": "iixp8aiD7WA"
+        },
+        {
+          "number": 3,
+          "title": "Jazz in the Window",
+          "isrc": "QT6FK2579105",
+          "youtubeId": "cPJO_rVsiX4"
+        },
+        {
+          "number": 4,
+          "title": "Rainy Side Street",
+          "isrc": "QT6FK2579106",
+          "youtubeId": "lBmKplzp048"
+        },
+        {
+          "number": 5,
+          "title": "Cinnamon Breeze",
+          "isrc": "QT6FK2579107",
+          "youtubeId": "eRQdVBoa_1o"
+        },
+        {
+          "number": 6,
+          "title": "Echoes of a Quiet Room",
+          "isrc": "QT6FK2579108",
+          "youtubeId": "zx8Q2_3EQC4"
+        },
+        {
+          "number": 7,
+          "title": "Lazy Melody Lane",
+          "isrc": "QT6FK2579109",
+          "youtubeId": "vaqyYQqXVIc"
+        },
+        {
+          "number": 8,
+          "title": "Vinyl Sunset",
+          "isrc": "QT6FK2579110",
+          "youtubeId": "LJs1jsKXgqY"
+        },
+        {
+          "number": 9,
+          "title": "Flickering Desk Lamp",
+          "isrc": "QT6FK2579111",
+          "youtubeId": "3Sgdubq0x6s"
+        },
+        {
+          "number": 10,
+          "title": "Chill Notes & Tea",
+          "isrc": "QT6FK2579112",
+          "youtubeId": "GNMTRYI8Ow0"
+        },
+        {
+          "number": 11,
+          "title": "Doodles in Time",
+          "isrc": "QT6FK2579113",
+          "youtubeId": "YxeGd1OE2V0"
+        },
+        {
+          "number": 12,
+          "title": "Soft Grooves for Solitude",
+          "isrc": "QT6FK2579114",
+          "youtubeId": "-eDmsSHxOJc"
+        },
+        {
+          "number": 13,
+          "title": "Warm Tones & Chill Vibes",
+          "isrc": "QT6FK2579115",
+          "youtubeId": "gL417s2G7aA"
+        },
+        {
+          "number": 14,
+          "title": "Drifting Over Pages",
+          "isrc": "QT6FK2579116",
+          "youtubeId": "y163Qf12MZs"
+        },
+        {
+          "number": 15,
+          "title": "Lo-Fi Lanterns",
+          "isrc": "QT6FK2579117",
+          "youtubeId": "GaB92zXwqFs"
+        },
+        {
+          "number": 16,
+          "title": "Jazz on Repeat",
+          "isrc": "QT6FK2579118",
+          "youtubeId": "2zY_mHmANsE"
+        },
+        {
+          "number": 17,
+          "title": "Cozy Momentum",
+          "isrc": "QT6FK2579119",
+          "youtubeId": "kV6dUDkVFzI"
+        },
+        {
+          "number": 18,
+          "title": "Mellow Scribbles",
+          "isrc": "QT6FK2579120",
+          "youtubeId": "Andwmi8el4Y"
+        },
+        {
+          "number": 19,
+          "title": "Lo-Fi Reflection",
+          "isrc": "QT6FK2579121",
+          "youtubeId": "xc5mk7s6xrc"
+        },
+        {
+          "number": 20,
+          "title": "Twilight Journaling",
+          "isrc": "QT6FK2579122",
+          "youtubeId": "u4rugEIr228"
+        },
+        {
+          "number": 21,
+          "title": "Still Grooving",
+          "isrc": "QT6FK2579123",
+          "youtubeId": "_BMjM1ft64k"
+        },
+        {
+          "number": 22,
+          "title": "Calm Keeps Going",
+          "isrc": "QT6FK2579124",
+          "youtubeId": "XV-bC89O11M"
+        },
+        {
+          "number": 23,
+          "title": "Afterglow Focus",
+          "isrc": "QT6FK2579125",
+          "youtubeId": "eoPFQHUyCtA"
+        },
+        {
+          "number": 24,
+          "title": "Thank You for Listening",
+          "isrc": "QT6FK2579126",
+          "youtubeId": "CP3YJp4heH8"
+        }
+      ]
+    },
+    "future-chill-lo-fi-beats": {
+      "slug": "future-chill-lo-fi-beats",
+      "title": "Future Chill Lo-Fi Beats",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-12-11",
+      "releaseDate": "2026-03-20",
+      "distributionUpc": "199944101260",
+      "format": "album",
+      "trackCount": 21,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "chill",
+        "future",
+        "hope",
+        "renewal",
+        "new beginnings",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Dawn of a New Day",
+          "isrc": "QT6FL2536153",
+          "youtubeId": "3ZfYlxKKLUE"
+        },
+        {
+          "number": 2,
+          "title": "Soft Horizons",
+          "isrc": "QT6FL2536154",
+          "youtubeId": "LAsKowoVbN4"
+        },
+        {
+          "number": 3,
+          "title": "Uplifted Moments",
+          "isrc": "QT6FL2536155",
+          "youtubeId": "nBfQQGL2zgY"
+        },
+        {
+          "number": 4,
+          "title": "Chasing Dreams",
+          "isrc": "QT6FL2536156",
+          "youtubeId": "ooEKh7uAqg8"
+        },
+        {
+          "number": 5,
+          "title": "Bright Pathways",
+          "isrc": "QT6FL2536157",
+          "youtubeId": "TM15DDaJEBw"
+        },
+        {
+          "number": 6,
+          "title": "Serene Reflections",
+          "isrc": "QT6FL2536158",
+          "youtubeId": "FP7X1a-uoB4"
+        },
+        {
+          "number": 7,
+          "title": "Echoes of Renewal",
+          "isrc": "QT6FL2536159",
+          "youtubeId": "SOySQctR4Ys"
+        },
+        {
+          "number": 8,
+          "title": "Fading into Light",
+          "isrc": "QT6FL2536160",
+          "youtubeId": "quLibubcUq4"
+        },
+        {
+          "number": 9,
+          "title": "Calm Currents",
+          "isrc": "QT6FL2536161",
+          "youtubeId": "cTKForNqGys"
+        },
+        {
+          "number": 10,
+          "title": "Boundless Skies",
+          "isrc": "QT6FL2536162",
+          "youtubeId": "M3IfdEWa0PM"
+        },
+        {
+          "number": 11,
+          "title": "Infinite Possibilities",
+          "isrc": "QT6FL2536163",
+          "youtubeId": "NKB2qGeVWuI"
+        },
+        {
+          "number": 12,
+          "title": "Fresh Perspectives",
+          "isrc": "QT6FL2536164",
+          "youtubeId": "_eNNZkt_q-Q"
+        },
+        {
+          "number": 13,
+          "title": "Glowing Visions",
+          "isrc": "QT6FL2536165",
+          "youtubeId": "8Qtl0xU3LKc"
+        },
+        {
+          "number": 14,
+          "title": "Unfolding Futures",
+          "isrc": "QT6FL2536166",
+          "youtubeId": "3JL_GaI3C9g"
+        },
+        {
+          "number": 15,
+          "title": "Floating in Tranquility",
+          "isrc": "QT6FL2536167",
+          "youtubeId": "5SBLbtAsQVs"
+        },
+        {
+          "number": 16,
+          "title": "Peaceful Horizons",
+          "isrc": "QT6FL2536168",
+          "youtubeId": "zjh3R7Tx1JQ"
+        },
+        {
+          "number": 17,
+          "title": "New Beginnings",
+          "isrc": "QT6FL2536169",
+          "youtubeId": "j4Hz6-ip31g"
+        },
+        {
+          "number": 18,
+          "title": "Gentle Transitions",
+          "isrc": "QT6FL2536170",
+          "youtubeId": "mYrpuvaNaUw"
+        },
+        {
+          "number": 19,
+          "title": "Echoes of Hope",
+          "isrc": "QT6FL2536171",
+          "youtubeId": "PeMwkHDM-fw"
+        },
+        {
+          "number": 20,
+          "title": "Beyond the Horizon",
+          "isrc": "QT6FL2536172",
+          "youtubeId": "Q6D-i2GtmT0"
+        },
+        {
+          "number": 21,
+          "title": "Eternal Chill",
+          "isrc": "QT6FL2536173",
+          "youtubeId": "7IX2Udu-iTE"
+        }
+      ]
+    },
+    "night-cafe-lo-fijazzhop-piano": {
+      "slug": "night-cafe-lo-fijazzhop-piano",
+      "title": "Night Café Lo-FiJazzhop Piano",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-12-06",
+      "releaseDate": "2026-02-27",
+      "distributionUpc": "199945825677",
+      "format": "album",
+      "trackCount": 24,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "jazzhop",
+        "piano",
+        "night",
+        "cafe",
+        "coffee",
+        "focus",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Coffee Glow",
+          "isrc": "QT6FH2564064",
+          "youtubeId": "SifJ8-uiCIs"
+        },
+        {
+          "number": 2,
+          "title": "Evening Breeze",
+          "isrc": "QT6FH2564065",
+          "youtubeId": "YxQCxY2gDaQ"
+        },
+        {
+          "number": 3,
+          "title": "Cozy Groove",
+          "isrc": "QT6FH2564066",
+          "youtubeId": "2mAEuF6Nj8g"
+        },
+        {
+          "number": 4,
+          "title": "Moonlight Study",
+          "isrc": "QT6FH2564067",
+          "youtubeId": "XeKgJa-cw6k"
+        },
+        {
+          "number": 5,
+          "title": "Velvet Reflections",
+          "isrc": "QT6FH2564068",
+          "youtubeId": "unsP7WnO75Y"
+        },
+        {
+          "number": 6,
+          "title": "Cup of Tranquility",
+          "isrc": "QT6FH2564069",
+          "youtubeId": "cQcOya8P4zs"
+        },
+        {
+          "number": 7,
+          "title": "Dreamy Vinyl Echoes",
+          "isrc": "QT6FH2564070",
+          "youtubeId": "fVRPIuaJuYo"
+        },
+        {
+          "number": 8,
+          "title": "Quiet Streetlights",
+          "isrc": "QT6FH2564071",
+          "youtubeId": "WrBVchH4dnw"
+        },
+        {
+          "number": 9,
+          "title": "Piano Whispers",
+          "isrc": "QT6FH2564072",
+          "youtubeId": "ERUuaXYq3fU"
+        },
+        {
+          "number": 10,
+          "title": "Soulful Moment",
+          "isrc": "QT6FH2564073",
+          "youtubeId": "jP8nQq3PNb8"
+        },
+        {
+          "number": 11,
+          "title": "Gentle Pulse",
+          "isrc": "QT6FH2564074",
+          "youtubeId": "1dOCuCJ-STI"
+        },
+        {
+          "number": 12,
+          "title": "Lantern Dreams",
+          "isrc": "QT6FH2564075",
+          "youtubeId": "q5g_Fgc9a2s"
+        },
+        {
+          "number": 13,
+          "title": "Moonlit Flow",
+          "isrc": "QT6FH2564076",
+          "youtubeId": "K9QdS2xfi_U"
+        },
+        {
+          "number": 14,
+          "title": "Late Coffee Hours",
+          "isrc": "QT6FH2564077",
+          "youtubeId": "bw7CeMciwEM"
+        },
+        {
+          "number": 15,
+          "title": "Velvet Groove",
+          "isrc": "QT6FH2564078",
+          "youtubeId": "A4dFGirzFZg"
+        },
+        {
+          "number": 16,
+          "title": "Silent Jazzhop",
+          "isrc": "QT6FH2564079",
+          "youtubeId": "qTrHyFCNTTk"
+        },
+        {
+          "number": 17,
+          "title": "Night Breeze",
+          "isrc": "QT6FH2564080",
+          "youtubeId": "AETr-4fXYtE"
+        },
+        {
+          "number": 18,
+          "title": "Gentle Reflections",
+          "isrc": "QT6FH2564081",
+          "youtubeId": "HpMfAS_ibm8"
+        },
+        {
+          "number": 19,
+          "title": "Warmth in Shadows",
+          "isrc": "QT6FH2564082",
+          "youtubeId": "27xMUzAlGyc"
+        },
+        {
+          "number": 20,
+          "title": "Cafe Nostalgia",
+          "isrc": "QT6FH2564083",
+          "youtubeId": "hWyxAEGulBc"
+        },
+        {
+          "number": 21,
+          "title": "Soft Lights",
+          "isrc": "QT6FH2564084",
+          "youtubeId": "0-CAMFmkjhI"
+        },
+        {
+          "number": 22,
+          "title": "Peaceful Path",
+          "isrc": "QT6FH2564085",
+          "youtubeId": "YIgZzZeTKfc"
+        },
+        {
+          "number": 23,
+          "title": "Midnight Jazzflow",
+          "isrc": "QT6FH2564086",
+          "youtubeId": "UoOT8Os629c"
+        },
+        {
+          "number": 24,
+          "title": "Dream Outro",
+          "isrc": "QT6FH2564087",
+          "youtubeId": "Oi43VoE0mC0"
+        }
+      ]
     }
   }
 };

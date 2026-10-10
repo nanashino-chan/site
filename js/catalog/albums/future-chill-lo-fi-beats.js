@@ -1,0 +1,161 @@
+window.registerNanashinoB2B({
+  "schemaVersion": "1.1.0",
+  "updatedAt": "2026-10-11",
+  "albums": {
+    "future-chill-lo-fi-beats": {
+      "slug": "future-chill-lo-fi-beats",
+      "title": "Future Chill Lo-Fi Beats",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-12-11",
+      "releaseDate": "2026-03-20",
+      "distributionUpc": "199944101260",
+      "format": "album",
+      "trackCount": 21,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "chill",
+        "future",
+        "hope",
+        "renewal",
+        "new beginnings",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Dawn of a New Day",
+          "isrc": "QT6FL2536153",
+          "youtubeId": "3ZfYlxKKLUE"
+        },
+        {
+          "number": 2,
+          "title": "Soft Horizons",
+          "isrc": "QT6FL2536154",
+          "youtubeId": "LAsKowoVbN4"
+        },
+        {
+          "number": 3,
+          "title": "Uplifted Moments",
+          "isrc": "QT6FL2536155",
+          "youtubeId": "nBfQQGL2zgY"
+        },
+        {
+          "number": 4,
+          "title": "Chasing Dreams",
+          "isrc": "QT6FL2536156",
+          "youtubeId": "ooEKh7uAqg8"
+        },
+        {
+          "number": 5,
+          "title": "Bright Pathways",
+          "isrc": "QT6FL2536157",
+          "youtubeId": "TM15DDaJEBw"
+        },
+        {
+          "number": 6,
+          "title": "Serene Reflections",
+          "isrc": "QT6FL2536158",
+          "youtubeId": "FP7X1a-uoB4"
+        },
+        {
+          "number": 7,
+          "title": "Echoes of Renewal",
+          "isrc": "QT6FL2536159",
+          "youtubeId": "SOySQctR4Ys"
+        },
+        {
+          "number": 8,
+          "title": "Fading into Light",
+          "isrc": "QT6FL2536160",
+          "youtubeId": "quLibubcUq4"
+        },
+        {
+          "number": 9,
+          "title": "Calm Currents",
+          "isrc": "QT6FL2536161",
+          "youtubeId": "cTKForNqGys"
+        },
+        {
+          "number": 10,
+          "title": "Boundless Skies",
+          "isrc": "QT6FL2536162",
+          "youtubeId": "M3IfdEWa0PM"
+        },
+        {
+          "number": 11,
+          "title": "Infinite Possibilities",
+          "isrc": "QT6FL2536163",
+          "youtubeId": "NKB2qGeVWuI"
+        },
+        {
+          "number": 12,
+          "title": "Fresh Perspectives",
+          "isrc": "QT6FL2536164",
+          "youtubeId": "_eNNZkt_q-Q"
+        },
+        {
+          "number": 13,
+          "title": "Glowing Visions",
+          "isrc": "QT6FL2536165",
+          "youtubeId": "8Qtl0xU3LKc"
+        },
+        {
+          "number": 14,
+          "title": "Unfolding Futures",
+          "isrc": "QT6FL2536166",
+          "youtubeId": "3JL_GaI3C9g"
+        },
+        {
+          "number": 15,
+          "title": "Floating in Tranquility",
+          "isrc": "QT6FL2536167",
+          "youtubeId": "5SBLbtAsQVs"
+        },
+        {
+          "number": 16,
+          "title": "Peaceful Horizons",
+          "isrc": "QT6FL2536168",
+          "youtubeId": "zjh3R7Tx1JQ"
+        },
+        {
+          "number": 17,
+          "title": "New Beginnings",
+          "isrc": "QT6FL2536169",
+          "youtubeId": "j4Hz6-ip31g"
+        },
+        {
+          "number": 18,
+          "title": "Gentle Transitions",
+          "isrc": "QT6FL2536170",
+          "youtubeId": "mYrpuvaNaUw"
+        },
+        {
+          "number": 19,
+          "title": "Echoes of Hope",
+          "isrc": "QT6FL2536171",
+          "youtubeId": "PeMwkHDM-fw"
+        },
+        {
+          "number": 20,
+          "title": "Beyond the Horizon",
+          "isrc": "QT6FL2536172",
+          "youtubeId": "Q6D-i2GtmT0"
+        },
+        {
+          "number": 21,
+          "title": "Eternal Chill",
+          "isrc": "QT6FL2536173",
+          "youtubeId": "7IX2Udu-iTE"
+        }
+      ]
+    }
+  }
+});
