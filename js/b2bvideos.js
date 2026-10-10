@@ -12065,6 +12065,137 @@ const catalog={
           "youtubeId": "aqz6I5sEhWI"
         }
       ]
+    },
+    "smooth-lo-fi-beats-relax-with-warm-jazz": {
+      "slug": "smooth-lo-fi-beats-relax-with-warm-jazz",
+      "title": "Smooth Lo-Fi Beats: Relax with Warm Jazz Chords & Cozy Vibes",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-10-06",
+      "releaseDate": "2025-11-28",
+      "distributionUpc": "199743267266",
+      "format": "album",
+      "trackCount": 17,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "jazz",
+        "warm",
+        "cozy",
+        "winter",
+        "relaxation",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Midnight Serenade",
+          "isrc": "QT3F92589901",
+          "youtubeId": "TIMJbnXLn3g"
+        },
+        {
+          "number": 2,
+          "title": "Warm Piano Reflections",
+          "isrc": "QT3F92589902",
+          "youtubeId": "tresrUhipS8"
+        },
+        {
+          "number": 3,
+          "title": "Velvet Saxophone Dreams",
+          "isrc": "QT3F92589903",
+          "youtubeId": "ljKDnJ2GExY"
+        },
+        {
+          "number": 4,
+          "title": "Cozy Vinyl Crackles",
+          "isrc": "QT3F92589904",
+          "youtubeId": "FLxaqqa7JWo"
+        },
+        {
+          "number": 5,
+          "title": "Winter Night Chill",
+          "isrc": "QT3F92589905",
+          "youtubeId": "xR2IjkZhIA0"
+        },
+        {
+          "number": 6,
+          "title": "Gentle Jazz Grooves",
+          "isrc": "QT3F92589906",
+          "youtubeId": "tIvgZ5w5ovc"
+        },
+        {
+          "number": 7,
+          "title": "Moonlight Melodies",
+          "isrc": "QT3F92589907",
+          "youtubeId": "OiAMPvSrEIA"
+        },
+        {
+          "number": 8,
+          "title": "Smooth Vibes",
+          "isrc": "QT3F92589908",
+          "youtubeId": "_xrtqxKe9qk"
+        },
+        {
+          "number": 9,
+          "title": "Distant Sax Echoes",
+          "isrc": "QT3F92589909",
+          "youtubeId": "WVyZKnxDvsI"
+        },
+        {
+          "number": 10,
+          "title": "Relaxing Piano Chords",
+          "isrc": "QT3F92589910",
+          "youtubeId": "r0mG_-nAZ7Y"
+        },
+        {
+          "number": 11,
+          "title": "Soft Drum Beats",
+          "isrc": "QT3F92589911",
+          "youtubeId": "i0MHE_XoXu4"
+        },
+        {
+          "number": 12,
+          "title": "Mellow Bassline Flow",
+          "isrc": "QT3F92589912",
+          "youtubeId": "5qJB5rjaeDU"
+        },
+        {
+          "number": 13,
+          "title": "Snowy Evening Soundscape",
+          "isrc": "QT3F92589913",
+          "youtubeId": "0lFWwv2Wv1k"
+        },
+        {
+          "number": 14,
+          "title": "Tranquil Jazz Atmosphere",
+          "isrc": "QT3F92589914",
+          "youtubeId": "jg2PXVD_Oec"
+        },
+        {
+          "number": 15,
+          "title": "Laid-Back Winter Rhythms",
+          "isrc": "QT3F92589915",
+          "youtubeId": "hoxJzYLaHew"
+        },
+        {
+          "number": 16,
+          "title": "Cozy Corner Chill",
+          "isrc": "QT3F92589916",
+          "youtubeId": "6MoZdPyNA2Y"
+        },
+        {
+          "number": 17,
+          "title": "Last Call for Relaxation",
+          "isrc": "QT3F92589917",
+          "youtubeId": "09YATr2FHCM"
+        }
+      ]
     }
   }
 };
