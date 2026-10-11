@@ -49,6 +49,12 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://nanashino-chan.github.io/site/catalog/aoyama-night-caf-lo-fi-jazzhop-sessions.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://nanashino-chan.github.io/site/catalog/calm-flow-minimal-instrumental.html</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -129,6 +135,12 @@
   <url>
     <loc>https://nanashino-chan.github.io/site/catalog/cozy-lo-fi-jazz-warm-lo-fi-jazz.html</loc>
     <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://nanashino-chan.github.io/site/catalog/daikanyama-night-cafe-lo-fi-jazzhop.html</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>

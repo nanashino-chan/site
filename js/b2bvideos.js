@@ -14425,6 +14425,305 @@ const catalog={
           "isrc": "QT6FG2550110"
         }
       ]
+    },
+    "aoyama-night-caf-lo-fi-jazzhop-sessions": {
+      "slug": "aoyama-night-caf-lo-fi-jazzhop-sessions",
+      "title": "Aoyama Night Café: Lo-Fi Jazzhop Sessions",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-12-05",
+      "releaseDate": "2026-02-13",
+      "distributionUpc": "199946275082",
+      "format": "album",
+      "trackCount": 22,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "jazzhop",
+        "aoyama",
+        "tokyo",
+        "night",
+        "cafe",
+        "study",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "appleMusicUrl": "https://music.apple.com/us/album/aoyama-night-caf%C3%A9-lo-fi-jazzhop-sessions/1858855316",
+      "tracks": [
+        {
+          "number": 1,
+          "title": "1.Aoyama Night Prelude",
+          "isrc": "QT6FF2568664"
+        },
+        {
+          "number": 2,
+          "title": "Coffee Steam Glow",
+          "isrc": "QT6FF2568665"
+        },
+        {
+          "number": 3,
+          "title": "Silent Street Corners",
+          "isrc": "QT6FF2568666"
+        },
+        {
+          "number": 4,
+          "title": "Midnight Piano Drizzle",
+          "isrc": "QT6FF2568667"
+        },
+        {
+          "number": 5,
+          "title": "Warm Cup Hideaway",
+          "isrc": "QT6FF2568668"
+        },
+        {
+          "number": 6,
+          "title": "Soft Light Reflections",
+          "isrc": "QT6FF2568669"
+        },
+        {
+          "number": 7,
+          "title": "Jazzhop Stroll in Aoyama",
+          "isrc": "QT6FF2568670"
+        },
+        {
+          "number": 8,
+          "title": "Quiet Table Whisper",
+          "isrc": "QT6FF2568671"
+        },
+        {
+          "number": 9,
+          "title": "Gentle Espresso Moments",
+          "isrc": "QT6FF2568672"
+        },
+        {
+          "number": 10,
+          "title": "Moonlit Café Window",
+          "isrc": "QT6FF2568673"
+        },
+        {
+          "number": 11,
+          "title": "Evening Calm Sketches",
+          "isrc": "QT6FF2568674"
+        },
+        {
+          "number": 12,
+          "title": "Night Breeze Reverie",
+          "isrc": "QT6FF2568675"
+        },
+        {
+          "number": 13,
+          "title": "Cozy Vinyl Stories",
+          "isrc": "QT6FF2568676"
+        },
+        {
+          "number": 14,
+          "title": ".Slow Glow Walkway",
+          "isrc": "QT6FF2568677"
+        },
+        {
+          "number": 15,
+          "title": "Soft Steps in the Night",
+          "isrc": "QT6FF2568678"
+        },
+        {
+          "number": 16,
+          "title": "Lo-Fi Lantern Haze",
+          "isrc": "QT6FF2568679"
+        },
+        {
+          "number": 17,
+          "title": "Blue Hour Jazzhop",
+          "isrc": "QT6FF2568680"
+        },
+        {
+          "number": 18,
+          "title": "Late Night Comfort Cup",
+          "isrc": "QT6FF2568681"
+        },
+        {
+          "number": 19,
+          "title": "Closing Time Serenade",
+          "isrc": "QT6FF2568682"
+        },
+        {
+          "number": 20,
+          "title": "Last Train Reflections",
+          "isrc": "QT6FF2568683"
+        },
+        {
+          "number": 21,
+          "title": "Gentle Nightfare",
+          "isrc": "QT6FF2568684"
+        },
+        {
+          "number": 22,
+          "title": "Good Night Aoyama",
+          "isrc": "QT6FF2568685"
+        }
+      ]
+    },
+    "daikanyama-night-cafe-lo-fi-jazzhop": {
+      "slug": "daikanyama-night-cafe-lo-fi-jazzhop",
+      "title": "Daikanyama Night Café: Lo-Fi Jazzhop for Study, Focus & Relax",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2026-01-21",
+      "releaseDate": "2026-04-03",
+      "distributionUpc": "821513426053",
+      "format": "album",
+      "trackCount": 25,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "jazzhop",
+        "daikanyama",
+        "tokyo",
+        "night",
+        "cafe",
+        "study",
+        "focus",
+        "relax",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "appleMusicUrl": "https://music.apple.com/us/album/daikanyama-night-caf%C3%A9-lo-fi-jazzhop-for-study-focus-relax/1870943674",
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Daikanyama Night Walk",
+          "isrc": "QZES62685145"
+        },
+        {
+          "number": 2,
+          "title": "Warm Lights on Old Streets",
+          "isrc": "QZES62685146"
+        },
+        {
+          "number": 3,
+          "title": "After Closing Time",
+          "isrc": "QZES62685147"
+        },
+        {
+          "number": 4,
+          "title": "Quiet Corners of the City",
+          "isrc": "QZES62685148"
+        },
+        {
+          "number": 5,
+          "title": "Vinyl Echoes",
+          "isrc": "QZES62685149"
+        },
+        {
+          "number": 6,
+          "title": "Mellow Steps",
+          "isrc": "QZES62685150"
+        },
+        {
+          "number": 7,
+          "title": "Soft Neon Reflections",
+          "isrc": "QZES62685151"
+        },
+        {
+          "number": 8,
+          "title": "Late Café Conversations",
+          "isrc": "QZES62685152"
+        },
+        {
+          "number": 9,
+          "title": "Jazzy Side Alley",
+          "isrc": "QZES62685153"
+        },
+        {
+          "number": 10,
+          "title": "Midnight Piano Flow",
+          "isrc": "QZES62685154"
+        },
+        {
+          "number": 11,
+          "title": ".Slow Signals",
+          "isrc": "QZES62685155"
+        },
+        {
+          "number": 12,
+          "title": "Calm Between Buildings",
+          "isrc": "QZES62685156"
+        },
+        {
+          "number": 13,
+          "title": "Lo-Fi After Hours",
+          "isrc": "QZES62685157"
+        },
+        {
+          "number": 14,
+          "title": "Distant Traffic Glow",
+          "isrc": "QZES62685158"
+        },
+        {
+          "number": 15,
+          "title": "Smooth Organ Breeze",
+          "isrc": "QZES62685159"
+        },
+        {
+          "number": 16,
+          "title": "Night Air in Daikanyama",
+          "isrc": "QZES62685160"
+        },
+        {
+          "number": 17,
+          "title": "Cozy Loop Session",
+          "isrc": "QZES62685161"
+        },
+        {
+          "number": 18,
+          "title": "Reflections on Glass",
+          "isrc": "QZES62685162"
+        },
+        {
+          "number": 19,
+          "title": "Gentle City Pulse",
+          "isrc": "QZES62685163"
+        },
+        {
+          "number": 20,
+          "title": "Late Train Home",
+          "isrc": "QZES62685164"
+        },
+        {
+          "number": 21,
+          "title": "Soft Focus State",
+          "isrc": "QZES62685165"
+        },
+        {
+          "number": 22,
+          "title": "Jazzhop Reverie",
+          "isrc": "QZES62685166"
+        },
+        {
+          "number": 23,
+          "title": "Quiet Streets, Warm Beats",
+          "isrc": "QZES62685167"
+        },
+        {
+          "number": 24,
+          "title": "Last Light of the Night",
+          "isrc": "QZES62685168"
+        },
+        {
+          "number": 25,
+          "title": "Fade into Dawn",
+          "isrc": "QZES62685169"
+        }
+      ]
     }
   }
 };

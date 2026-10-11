@@ -1,0 +1,147 @@
+window.registerNanashinoB2B({
+  "schemaVersion": "1.2.0",
+  "updatedAt": "2026-10-11",
+  "albums": {
+    "aoyama-night-caf-lo-fi-jazzhop-sessions": {
+      "slug": "aoyama-night-caf-lo-fi-jazzhop-sessions",
+      "title": "Aoyama Night Café: Lo-Fi Jazzhop Sessions",
+      "artist": "Nanashino-chan",
+      "label": "8831422 Records CH",
+      "uploadDate": "2025-12-05",
+      "releaseDate": "2026-02-13",
+      "distributionUpc": "199946275082",
+      "format": "album",
+      "trackCount": 22,
+      "instrumental": true,
+      "tags": [
+        "lo-fi",
+        "jazzhop",
+        "aoyama",
+        "tokyo",
+        "night",
+        "cafe",
+        "study",
+        "instrumental"
+      ],
+      "rights": {
+        "masterRecording": "directly-managed",
+        "composition": "directly-managed",
+        "oneStopLicensing": true,
+        "licensingUrl": "https://nanashino-chan.github.io/site/licensing.html"
+      },
+      "appleMusicUrl": "https://music.apple.com/us/album/aoyama-night-caf%C3%A9-lo-fi-jazzhop-sessions/1858855316",
+      "tracks": [
+        {
+          "number": 1,
+          "title": "1.Aoyama Night Prelude",
+          "isrc": "QT6FF2568664"
+        },
+        {
+          "number": 2,
+          "title": "Coffee Steam Glow",
+          "isrc": "QT6FF2568665"
+        },
+        {
+          "number": 3,
+          "title": "Silent Street Corners",
+          "isrc": "QT6FF2568666"
+        },
+        {
+          "number": 4,
+          "title": "Midnight Piano Drizzle",
+          "isrc": "QT6FF2568667"
+        },
+        {
+          "number": 5,
+          "title": "Warm Cup Hideaway",
+          "isrc": "QT6FF2568668"
+        },
+        {
+          "number": 6,
+          "title": "Soft Light Reflections",
+          "isrc": "QT6FF2568669"
+        },
+        {
+          "number": 7,
+          "title": "Jazzhop Stroll in Aoyama",
+          "isrc": "QT6FF2568670"
+        },
+        {
+          "number": 8,
+          "title": "Quiet Table Whisper",
+          "isrc": "QT6FF2568671"
+        },
+        {
+          "number": 9,
+          "title": "Gentle Espresso Moments",
+          "isrc": "QT6FF2568672"
+        },
+        {
+          "number": 10,
+          "title": "Moonlit Café Window",
+          "isrc": "QT6FF2568673"
+        },
+        {
+          "number": 11,
+          "title": "Evening Calm Sketches",
+          "isrc": "QT6FF2568674"
+        },
+        {
+          "number": 12,
+          "title": "Night Breeze Reverie",
+          "isrc": "QT6FF2568675"
+        },
+        {
+          "number": 13,
+          "title": "Cozy Vinyl Stories",
+          "isrc": "QT6FF2568676"
+        },
+        {
+          "number": 14,
+          "title": ".Slow Glow Walkway",
+          "isrc": "QT6FF2568677"
+        },
+        {
+          "number": 15,
+          "title": "Soft Steps in the Night",
+          "isrc": "QT6FF2568678"
+        },
+        {
+          "number": 16,
+          "title": "Lo-Fi Lantern Haze",
+          "isrc": "QT6FF2568679"
+        },
+        {
+          "number": 17,
+          "title": "Blue Hour Jazzhop",
+          "isrc": "QT6FF2568680"
+        },
+        {
+          "number": 18,
+          "title": "Late Night Comfort Cup",
+          "isrc": "QT6FF2568681"
+        },
+        {
+          "number": 19,
+          "title": "Closing Time Serenade",
+          "isrc": "QT6FF2568682"
+        },
+        {
+          "number": 20,
+          "title": "Last Train Reflections",
+          "isrc": "QT6FF2568683"
+        },
+        {
+          "number": 21,
+          "title": "Gentle Nightfare",
+          "isrc": "QT6FF2568684"
+        },
+        {
+          "number": 22,
+          "title": "Good Night Aoyama",
+          "isrc": "QT6FF2568685"
+        }
+      ]
+    }
+  }
+});
