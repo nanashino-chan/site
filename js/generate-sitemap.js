@@ -291,6 +291,19 @@ if (fs.existsSync(catalogDir)) {
   });
 }
 
+/* Independent listener album pages (English / Japanese). */
+const listenerDir = path.join(ROOT_DIR, "albums");
+if (fs.existsSync(listenerDir)) {
+  fs.readdirSync(listenerDir).filter(file => file.endsWith(".html")).sort().forEach(file => {
+    const filePath = path.join(listenerDir, file);
+    const content = fs.readFileSync(filePath, "utf8");
+    if (/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(content)) return;
+    const url = "/albums/" + file;
+    if (!content.includes('rel="canonical" href="' + BASE_URL + url + '"')) throw new Error("Listener canonical mismatch: " + file);
+    addPage(pages, url, "0.75", "monthly", filePath);
+  });
+}
+
 /* =====================================
 Sort Pages
 ===================================== */
