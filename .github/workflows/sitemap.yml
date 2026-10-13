@@ -35,16 +35,22 @@ jobs:
         run: node scripts/build-catalog.js
       - name: Test catalog
         run: node scripts/test-catalog.js
+      - name: Generate listener album pages
+        run: python3 scripts/build-discover.py
       - name: Generate existing sitemap
         run: node js/generate-sitemap.js
       - name: Verify sitemap coverage
         run: node scripts/test-catalog.js --sitemap
+      - name: Test listener pages and compatibility
+        run: |
+          python3 scripts/test-discover.py
+          node scripts/test-discover-behavior.cjs
       - name: Commit generated files
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add catalog/ js/catalog/ js/b2bvideos.js sitemap.xml
+          git add catalog/ js/catalog/ js/b2bvideos.js albums/ discover.html discover-ja.html sitemap.xml
           if ! git diff --cached --quiet; then
             git commit -m "auto: build music catalog and sitemap"
             git push origin HEAD:main
