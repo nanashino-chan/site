@@ -35,9 +35,45 @@
 
 <link rel="stylesheet" href="/site/style.css">
 
+<style>
+.copyright-guide {
+  box-sizing: border-box;
+  width: min(100%, 860px);
+  margin: 0 auto;
+  padding: 56px 24px 24px;
+  text-align: left;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+.copyright-guide * { box-sizing: border-box; }
+.copyright-guide header { margin-bottom: 40px; }
+.copyright-guide h1 {
+  margin: 0 0 24px;
+  font-size: clamp(1.8rem, 4.5vw, 2.75rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+.copyright-guide h2 {
+  margin: 0 0 20px;
+  font-size: clamp(1.3rem, 3vw, 1.65rem);
+  line-height: 1.4;
+}
+.copyright-guide p { margin: 0 0 20px; color: #dedede; }
+.copyright-guide section { padding: 32px 0; border-top: 1px solid #383838; }
+.copyright-guide ol { margin: 0 0 24px; padding-left: 1.5em; }
+.copyright-guide li { margin-bottom: 20px; padding-left: 0.35em; color: #dedede; }
+.copyright-guide strong { color: #fff; }
+.copyright-guide a { color: #ffdc73; text-decoration: underline; text-underline-offset: 4px; }
+.copyright-guide a:hover { color: #fff0bd; }
+.copyright-guide a:focus-visible { outline: 2px solid #ffdc73; outline-offset: 4px; }
+@media (max-width: 600px) {
+  .copyright-guide { padding: 32px 20px 16px; line-height: 1.8; }
+  .copyright-guide section { padding: 26px 0; }
+}
+</style>
 </head>
 <body>
-<main>
+<main class="copyright-guide">
 <article>
   <header>
     <h1>How to Reduce YouTube Content ID Claims for Background Music</h1>
